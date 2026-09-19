@@ -1,0 +1,147 @@
+{
+ "n_cases": 576,
+ "note": "FLARE23 cases with a CT in the release copy; predicted graph = semi-oracle AUSAM (build_predicted_corpus_flare23.py); reference graph = corpus_flare23_kg.json",
+ "rows": [
+  {
+   "family": "Q2 organ-specific lookup (pooled liver/kidney/pancreas/spleen)",
+   "N_T": 260,
+   "N_F": 2036,
+   "N_U": 8,
+   "precision": 0.981,
+   "recall": 0.944,
+   "F1": 0.962,
+   "indet_rate": 0.003,
+   "indet_rate_by_dataset": {
+    "flare23": 0.003
+   },
+   "n_scored_TF_pairs": 2296
+  },
+  {
+   "family": "Q3 phenotype retrieval: largest burden bin (pooled)",
+   "N_T": 92,
+   "N_F": 2204,
+   "N_U": 8,
+   "precision": 0.967,
+   "recall": 0.978,
+   "F1": 0.973,
+   "indet_rate": 0.003,
+   "indet_rate_by_dataset": {
+    "flare23": 0.003
+   },
+   "n_scored_TF_pairs": 2296
+  },
+  {
+   "family": "Q4a compositional: hepatic>5cm AND renal lesion",
+   "N_T": 0,
+   "N_F": 576,
+   "N_U": 0,
+   "precision": null,
+   "recall": null,
+   "F1": null,
+   "indet_rate": 0.0,
+   "indet_rate_by_dataset": {
+    "flare23": 0.0
+   },
+   "n_scored_TF_pairs": 576
+  },
+  {
+   "family": "Q4b compositional: hepatic>5cm AND splenic lesion",
+   "N_T": 0,
+   "N_F": 575,
+   "N_U": 1,
+   "precision": null,
+   "recall": null,
+   "F1": null,
+   "indet_rate": 0.002,
+   "indet_rate_by_dataset": {
+    "flare23": 0.002
+   },
+   "n_scored_TF_pairs": 574
+  },
+  {
+   "family": "Q5 cross-organ involvement (>=2 organs)",
+   "N_T": 2,
+   "N_F": 573,
+   "N_U": 1,
+   "precision": 0.0,
+   "recall": null,
+   "F1": null,
+   "indet_rate": 0.002,
+   "indet_rate_by_dataset": {
+    "flare23": 0.002
+   },
+   "n_scored_TF_pairs": 575
+  },
+  {
+   "family": "Q7a high tumor burden (observed anatomy)",
+   "N_T": 92,
+   "N_F": 484,
+   "N_U": 0,
+   "precision": 0.989,
+   "recall": 1.0,
+   "F1": 0.995,
+   "indet_rate": 0.0,
+   "indet_rate_by_dataset": {
+    "flare23": 0.0
+   },
+   "n_scored_TF_pairs": 576
+  },
+  {
+   "family": "Q7b multifocal disease in one organ (pooled)",
+   "N_T": 42,
+   "N_F": 2254,
+   "N_U": 8,
+   "precision": 0.881,
+   "recall": 0.552,
+   "F1": 0.679,
+   "indet_rate": 0.003,
+   "indet_rate_by_dataset": {
+    "flare23": 0.003
+   },
+   "n_scored_TF_pairs": 2296
+  }
+ ],
+ "reference_counts": {
+  "Q2 organ-specific lookup (pooled liver/kidney/pancreas/spleen)": {
+   "T": 270,
+   "F": 2026,
+   "U": 8
+  },
+  "Q3 phenotype retrieval: largest burden bin (pooled)": {
+   "T": 91,
+   "F": 2205,
+   "U": 8
+  },
+  "Q4a compositional: hepatic>5cm AND renal lesion": {
+   "T": 0,
+   "F": 576,
+   "U": 0
+  },
+  "Q4b compositional: hepatic>5cm AND splenic lesion": {
+   "T": 0,
+   "F": 574,
+   "U": 2
+  },
+  "Q5 cross-organ involvement (>=2 organs)": {
+   "T": 0,
+   "F": 575,
+   "U": 1
+  },
+  "Q7a high tumor burden (observed anatomy)": {
+   "T": 91,
+   "F": 485,
+   "U": 0
+  },
+  "Q7b multifocal disease in one organ (pooled)": {
+   "T": 67,
+   "F": 2229,
+   "U": 8
+  }
+ },
+ "macro_over_evaluable": {
+  "macro_P": 0.954,
+  "macro_R": 0.868,
+  "macro_F1": 0.902,
+  "n_evaluable_families": 4
+ }
+}

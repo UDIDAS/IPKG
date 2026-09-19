@@ -1,0 +1,12 @@
+numpy
+scipy
+scikit-image
+scikit-learn
+nibabel
+rdflib
+pandas
+# GPU stages (Level C) additionally:
+# torch
+# torchvision
+# transformers>=5
+# huggingface_hub

@@ -1,0 +1,7 @@
+PREFIX mmkg: <http://example.org/mmkg/schema/>
+SELECT ?case ?organType ?count ?vol
+WHERE { ?c a mmkg:ImagingCase ; mmkg:case_id ?case ; mmkg:depicts_organ ?o .
+        ?l mmkg:located_in ?o ; mmkg:lesionMultiplicity "multifocal" ;
+           mmkg:lesion_count ?count ; mmkg:gt_volume_cm3 ?vol .
+        ?o a ?organType . FILTER(?organType != mmkg:Organ) }
+ORDER BY DESC(?count) LIMIT 15

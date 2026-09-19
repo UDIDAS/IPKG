@@ -1,0 +1,3805 @@
+{
+ "note": "Full LiTS <-> FLARE23 overlap census (v11 item 4): how many of the 131 LiTS volumes appear\ninside FLARE23 \u2014 the count the Limitations sentence needs. Extends the query-only extended\naudit (lits_extended_audit.json) to ALL 131 volumes, replacing/confirming KS's geometry screen.\n\nScreen (local, from already-computed signatures):\n  T2 physical \u2014 native Task03 liver volume within 1 % AND tumor volume within 2 % (or both\n     tumor-free) of a FLARE23 GT record (corpus_flare23_kg.json, 1,312 cases); Task03 volumes\n     from lits_geometry_map.json native counts x native voxel volume.\n  T1 geometry \u2014 same native shape AND spacing (1e-3) as a shipped predicted-mask header\n     (576 of 1,312 have masks in the release copy).\nConfirmation: every screened candidate's GT label is streamed from the Drive Metadata.zip\n(ranged zip reads, index /path/to/staging/metadata_zip_index.json) and compared voxel-exactly\n(tumor label 14 vs Task03 label 2; shape; spacing).\n\nNon-query twins STAY in the 1,347 pool: no query duplicates them, and each is unique within\nthe pool (the other 110 LiTS volumes are not corpus members) \u2014 this census only feeds the\ndata-overlap statement.\n-> results/audit/lits_flare23_overlap_census.json",
+ "n_lits_volumes_screened": 131,
+ "n_candidates": 407,
+ "n_confirmed": 114,
+ "n_rejected": 293,
+ "n_distinct_lits_volumes_in_flare23": 114,
+ "confirmed": {
+  "FLARE23_0008": {
+   "volume": "volume-105",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 0.011
+  },
+  "FLARE23_0037": {
+   "volume": "volume-70",
+   "basis": "prior extended audit (query twin)",
+   "tests": [
+    "T1",
+    "T2"
+   ]
+  },
+  "FLARE23_0048": {
+   "volume": "volume-79",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 9085,
+   "task03_tumor_vox": 9085,
+   "liver_delta_pct": 0.516
+  },
+  "FLARE23_0051": {
+   "volume": "volume-75",
+   "basis": "prior extended audit (query twin)",
+   "tests": [
+    "T1",
+    "T2"
+   ]
+  },
+  "FLARE23_0098": {
+   "volume": "volume-89",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_0101": {
+   "volume": "volume-116",
+   "basis": "prior extended audit (query twin)",
+   "tests": [
+    "T1",
+    "T2"
+   ]
+  },
+  "FLARE23_0102": {
+   "volume": "volume-64",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 179093,
+   "task03_tumor_vox": 179093,
+   "liver_delta_pct": 0.673
+  },
+  "FLARE23_0106": {
+   "volume": "volume-125",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 754,
+   "task03_tumor_vox": 754,
+   "liver_delta_pct": 0.138
+  },
+  "FLARE23_0119": {
+   "volume": "volume-37",
+   "basis": "prior extended audit (query twin)",
+   "tests": [
+    "T2"
+   ]
+  },
+  "FLARE23_0120": {
+   "volume": "volume-21",
+   "basis": "prior extended audit (query twin)",
+   "tests": [
+    "T1",
+    "T2"
+   ]
+  },
+  "FLARE23_0148": {
+   "volume": "volume-97",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 725310,
+   "task03_tumor_vox": 725310,
+   "liver_delta_pct": 0.001
+  },
+  "FLARE23_0187": {
+   "volume": "volume-120",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 5231,
+   "task03_tumor_vox": 5231,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_0246": {
+   "volume": "volume-111",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 7300,
+   "task03_tumor_vox": 7300,
+   "liver_delta_pct": 0.006
+  },
+  "FLARE23_0253": {
+   "volume": "volume-3",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 2793,
+   "task03_tumor_vox": 2793,
+   "liver_delta_pct": 0.084
+  },
+  "FLARE23_0263": {
+   "volume": "volume-26",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 51809,
+   "task03_tumor_vox": 51809,
+   "liver_delta_pct": 0.243
+  },
+  "FLARE23_0267": {
+   "volume": "volume-65",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 1670,
+   "task03_tumor_vox": 1670,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_0302": {
+   "volume": "volume-12",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 790,
+   "task03_tumor_vox": 790,
+   "liver_delta_pct": 0.873
+  },
+  "FLARE23_0327": {
+   "volume": "volume-58",
+   "tests": [
+    "T1"
+   ],
+   "flare_tumor_vox": 1443,
+   "task03_tumor_vox": 1443,
+   "liver_delta_pct": 2.256
+  },
+  "FLARE23_0329": {
+   "volume": "volume-121",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 2123,
+   "task03_tumor_vox": 2123,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_0367": {
+   "volume": "volume-10",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 24310,
+   "task03_tumor_vox": 24310,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_0403": {
+   "volume": "volume-13",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 23651,
+   "task03_tumor_vox": 23651,
+   "liver_delta_pct": 0.097
+  },
+  "FLARE23_0416": {
+   "volume": "volume-11",
+   "basis": "prior extended audit (query twin)",
+   "tests": [
+    "T1",
+    "T2"
+   ]
+  },
+  "FLARE23_0445": {
+   "volume": "volume-39",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 348986,
+   "task03_tumor_vox": 348986,
+   "liver_delta_pct": 0.032
+  },
+  "FLARE23_0459": {
+   "volume": "volume-74",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 37144,
+   "task03_tumor_vox": 37144,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_0487": {
+   "volume": "volume-78",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 12265,
+   "task03_tumor_vox": 12265,
+   "liver_delta_pct": 0.164
+  },
+  "FLARE23_0493": {
+   "volume": "volume-103",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 75787,
+   "task03_tumor_vox": 75787,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_0514": {
+   "volume": "volume-114",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_0544": {
+   "volume": "volume-47",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_0563": {
+   "volume": "volume-5",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 540,
+   "task03_tumor_vox": 540,
+   "liver_delta_pct": 0.009
+  },
+  "FLARE23_0573": {
+   "volume": "volume-45",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 4539,
+   "task03_tumor_vox": 4539,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_0644": {
+   "volume": "volume-28",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 214268,
+   "task03_tumor_vox": 214268,
+   "liver_delta_pct": 0.002
+  },
+  "FLARE23_0680": {
+   "volume": "volume-128",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 326553,
+   "task03_tumor_vox": 326553,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_0689": {
+   "volume": "volume-96",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 40533,
+   "task03_tumor_vox": 40533,
+   "liver_delta_pct": 0.005
+  },
+  "FLARE23_0700": {
+   "volume": "volume-90",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 250893,
+   "task03_tumor_vox": 250893,
+   "liver_delta_pct": 0.011
+  },
+  "FLARE23_0729": {
+   "volume": "volume-94",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 62525,
+   "task03_tumor_vox": 62525,
+   "liver_delta_pct": 0.01
+  },
+  "FLARE23_0730": {
+   "volume": "volume-124",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 72092,
+   "task03_tumor_vox": 72092,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_0736": {
+   "volume": "volume-87",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_0778": {
+   "volume": "volume-73",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 592,
+   "task03_tumor_vox": 592,
+   "liver_delta_pct": 0.733
+  },
+  "FLARE23_0795": {
+   "volume": "volume-2",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 14131,
+   "task03_tumor_vox": 14131,
+   "liver_delta_pct": 0.297
+  },
+  "FLARE23_0869": {
+   "volume": "volume-48",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 35478,
+   "task03_tumor_vox": 35478,
+   "liver_delta_pct": 0.649
+  },
+  "FLARE23_0902": {
+   "volume": "volume-71",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 142741,
+   "task03_tumor_vox": 142741,
+   "liver_delta_pct": 0.119
+  },
+  "FLARE23_0913": {
+   "volume": "volume-107",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 5953,
+   "task03_tumor_vox": 5953,
+   "liver_delta_pct": 0.096
+  },
+  "FLARE23_0943": {
+   "volume": "volume-30",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 14252,
+   "task03_tumor_vox": 14252,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_0964": {
+   "volume": "volume-66",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 2333,
+   "task03_tumor_vox": 2333,
+   "liver_delta_pct": 0.056
+  },
+  "FLARE23_0994": {
+   "volume": "volume-123",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 228251,
+   "task03_tumor_vox": 228251,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_1001": {
+   "volume": "volume-53",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 2261,
+   "task03_tumor_vox": 2261,
+   "liver_delta_pct": 0.38
+  },
+  "FLARE23_1018": {
+   "volume": "volume-92",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 2632,
+   "task03_tumor_vox": 2632,
+   "liver_delta_pct": 0.001
+  },
+  "FLARE23_1026": {
+   "volume": "volume-38",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_1027": {
+   "volume": "volume-76",
+   "basis": "prior extended audit (query twin)",
+   "tests": [
+    "T1"
+   ]
+  },
+  "FLARE23_1064": {
+   "volume": "volume-88",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 254141,
+   "task03_tumor_vox": 254141,
+   "liver_delta_pct": 0.392
+  },
+  "FLARE23_1077": {
+   "volume": "volume-72",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 22364,
+   "task03_tumor_vox": 22364,
+   "liver_delta_pct": 0.098
+  },
+  "FLARE23_1082": {
+   "volume": "volume-33",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 434721,
+   "task03_tumor_vox": 434721,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_1097": {
+   "volume": "volume-56",
+   "tests": [
+    "T1"
+   ],
+   "flare_tumor_vox": 268297,
+   "task03_tumor_vox": 268297,
+   "liver_delta_pct": 1.385
+  },
+  "FLARE23_1107": {
+   "volume": "volume-20",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 1669,
+   "task03_tumor_vox": 1669,
+   "liver_delta_pct": 0.019
+  },
+  "FLARE23_1115": {
+   "volume": "volume-51",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 124895,
+   "task03_tumor_vox": 124895,
+   "liver_delta_pct": 0.288
+  },
+  "FLARE23_1195": {
+   "volume": "volume-129",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 1909785,
+   "task03_tumor_vox": 1909785,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_1218": {
+   "volume": "volume-34",
+   "tests": [
+    "T1"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 47.81
+  },
+  "FLARE23_1233": {
+   "volume": "volume-14",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 2612,
+   "task03_tumor_vox": 2612,
+   "liver_delta_pct": 0.153
+  },
+  "FLARE23_1254": {
+   "volume": "volume-8",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 20827,
+   "task03_tumor_vox": 20827,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_1286": {
+   "volume": "volume-29",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 14062,
+   "task03_tumor_vox": 14062,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_1293": {
+   "volume": "volume-85",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 15544,
+   "task03_tumor_vox": 15544,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_1347": {
+   "volume": "volume-112",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 1181,
+   "task03_tumor_vox": 1181,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_1390": {
+   "volume": "volume-98",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 608639,
+   "task03_tumor_vox": 608639,
+   "liver_delta_pct": 0.024
+  },
+  "FLARE23_1408": {
+   "volume": "volume-67",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 525,
+   "task03_tumor_vox": 525,
+   "liver_delta_pct": 0.279
+  },
+  "FLARE23_1430": {
+   "volume": "volume-42",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 1638,
+   "task03_tumor_vox": 1638,
+   "liver_delta_pct": 0.041
+  },
+  "FLARE23_1436": {
+   "volume": "volume-22",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 9424,
+   "task03_tumor_vox": 9424,
+   "liver_delta_pct": 0.483
+  },
+  "FLARE23_1438": {
+   "volume": "volume-68",
+   "basis": "prior extended audit (query twin)",
+   "tests": [
+    "T1",
+    "T2"
+   ]
+  },
+  "FLARE23_1452": {
+   "volume": "volume-126",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 5090,
+   "task03_tumor_vox": 5090,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_1453": {
+   "volume": "volume-63",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 688,
+   "task03_tumor_vox": 688,
+   "liver_delta_pct": 0.906
+  },
+  "FLARE23_1470": {
+   "volume": "volume-31",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 6736,
+   "task03_tumor_vox": 6736,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_1474": {
+   "volume": "volume-17",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 37676,
+   "task03_tumor_vox": 37676,
+   "liver_delta_pct": 0.432
+  },
+  "FLARE23_1495": {
+   "volume": "volume-86",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 6051,
+   "task03_tumor_vox": 6051,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_1524": {
+   "volume": "volume-110",
+   "basis": "prior extended audit (query twin)",
+   "tests": [
+    "T2"
+   ]
+  },
+  "FLARE23_1530": {
+   "volume": "volume-99",
+   "basis": "prior extended audit (query twin)",
+   "tests": [
+    "T2"
+   ]
+  },
+  "FLARE23_1542": {
+   "volume": "volume-106",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 0.093
+  },
+  "FLARE23_1548": {
+   "volume": "volume-46",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 41416,
+   "task03_tumor_vox": 41416,
+   "liver_delta_pct": 0.028
+  },
+  "FLARE23_1567": {
+   "volume": "volume-16",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 373122,
+   "task03_tumor_vox": 373122,
+   "liver_delta_pct": 0.057
+  },
+  "FLARE23_1575": {
+   "volume": "volume-93",
+   "basis": "prior extended audit (query twin)",
+   "tests": [
+    "T2"
+   ]
+  },
+  "FLARE23_1578": {
+   "volume": "volume-32",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_1581": {
+   "volume": "volume-118",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 419119,
+   "task03_tumor_vox": 419119,
+   "liver_delta_pct": 0.007
+  },
+  "FLARE23_1598": {
+   "volume": "volume-69",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 3113,
+   "task03_tumor_vox": 3113,
+   "liver_delta_pct": 0.014
+  },
+  "FLARE23_1622": {
+   "volume": "volume-80",
+   "basis": "prior extended audit (query twin)",
+   "tests": [
+    "T2"
+   ]
+  },
+  "FLARE23_1661": {
+   "volume": "volume-130",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 1383692,
+   "task03_tumor_vox": 1383692,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_1680": {
+   "volume": "volume-60",
+   "tests": [
+    "T1"
+   ],
+   "flare_tumor_vox": 11368,
+   "task03_tumor_vox": 11368,
+   "liver_delta_pct": 2.096
+  },
+  "FLARE23_1687": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 0.002
+  },
+  "FLARE23_1758": {
+   "volume": "volume-1",
+   "tests": [
+    "T1"
+   ],
+   "flare_tumor_vox": 7194,
+   "task03_tumor_vox": 7194,
+   "liver_delta_pct": 3.824
+  },
+  "FLARE23_1775": {
+   "volume": "volume-18",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 10210,
+   "task03_tumor_vox": 10210,
+   "liver_delta_pct": 0.869
+  },
+  "FLARE23_1782": {
+   "volume": "volume-119",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_1786": {
+   "volume": "volume-24",
+   "basis": "prior extended audit (query twin)",
+   "tests": [
+    "T2"
+   ]
+  },
+  "FLARE23_1791": {
+   "volume": "volume-19",
+   "basis": "prior extended audit (query twin)",
+   "tests": [
+    "T1",
+    "T2"
+   ]
+  },
+  "FLARE23_1854": {
+   "volume": "volume-82",
+   "basis": "prior extended audit (query twin)",
+   "tests": [
+    "T2"
+   ]
+  },
+  "FLARE23_1858": {
+   "volume": "volume-15",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 875,
+   "task03_tumor_vox": 875,
+   "liver_delta_pct": 0.112
+  },
+  "FLARE23_1891": {
+   "volume": "volume-35",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 20318,
+   "task03_tumor_vox": 20318,
+   "liver_delta_pct": 0.002
+  },
+  "FLARE23_1922": {
+   "volume": "volume-102",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 47754,
+   "task03_tumor_vox": 47754,
+   "liver_delta_pct": 0.07
+  },
+  "FLARE23_1926": {
+   "volume": "volume-4",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 1516253,
+   "task03_tumor_vox": 1516253,
+   "liver_delta_pct": 0.021
+  },
+  "FLARE23_1930": {
+   "volume": "volume-43",
+   "basis": "prior extended audit (query twin)",
+   "tests": [
+    "T2"
+   ]
+  },
+  "FLARE23_1960": {
+   "volume": "volume-44",
+   "basis": "prior extended audit (query twin)",
+   "tests": [
+    "T1",
+    "T2"
+   ]
+  },
+  "FLARE23_1988": {
+   "volume": "volume-104",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 275918,
+   "task03_tumor_vox": 275918,
+   "liver_delta_pct": 0.007
+  },
+  "FLARE23_1998": {
+   "volume": "volume-9",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 22179,
+   "task03_tumor_vox": 22179,
+   "liver_delta_pct": 0.153
+  },
+  "FLARE23_1999": {
+   "volume": "volume-109",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 72822,
+   "task03_tumor_vox": 72822,
+   "liver_delta_pct": 0.03
+  },
+  "FLARE23_2002": {
+   "volume": "volume-59",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 697,
+   "task03_tumor_vox": 697,
+   "liver_delta_pct": 0.669
+  },
+  "FLARE23_2003": {
+   "volume": "volume-81",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 5130,
+   "task03_tumor_vox": 5130,
+   "liver_delta_pct": 0.12
+  },
+  "FLARE23_2007": {
+   "volume": "volume-95",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 2581,
+   "task03_tumor_vox": 2581,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_2023": {
+   "volume": "volume-7",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 32422,
+   "task03_tumor_vox": 32422,
+   "liver_delta_pct": 0.071
+  },
+  "FLARE23_2078": {
+   "volume": "volume-77",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 4234,
+   "task03_tumor_vox": 4234,
+   "liver_delta_pct": 0.659
+  },
+  "FLARE23_2092": {
+   "volume": "volume-117",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 1034092,
+   "task03_tumor_vox": 1034092,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_2100": {
+   "volume": "volume-101",
+   "basis": "prior extended audit (query twin)",
+   "tests": [
+    "T2"
+   ]
+  },
+  "FLARE23_2106": {
+   "volume": "volume-40",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 122480,
+   "task03_tumor_vox": 122480,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_2111": {
+   "volume": "volume-23",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 42904,
+   "task03_tumor_vox": 42904,
+   "liver_delta_pct": 0.408
+  },
+  "FLARE23_2130": {
+   "volume": "volume-27",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 187743,
+   "task03_tumor_vox": 187743,
+   "liver_delta_pct": 0.429
+  },
+  "FLARE23_2135": {
+   "volume": "volume-122",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 79803,
+   "task03_tumor_vox": 79803,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_2145": {
+   "volume": "volume-113",
+   "basis": "prior extended audit (query twin)",
+   "tests": [
+    "T1",
+    "T2"
+   ]
+  },
+  "FLARE23_2175": {
+   "volume": "volume-6",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 31467,
+   "task03_tumor_vox": 31467,
+   "liver_delta_pct": 0.0
+  },
+  "FLARE23_2190": {
+   "volume": "volume-108",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 1455033,
+   "task03_tumor_vox": 1455033,
+   "liver_delta_pct": 0.013
+  }
+ },
+ "rejected": {
+  "FLARE23_0004": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 12751,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 47.889
+  },
+  "FLARE23_0006": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 79.137
+  },
+  "FLARE23_0007": {
+   "volume": "volume-47",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 3601,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 39.221
+  },
+  "FLARE23_0020": {
+   "volume": "volume-38",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 5916,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 59.729
+  },
+  "FLARE23_0038": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 27.986
+  },
+  "FLARE23_0057": {
+   "volume": "volume-105",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 76.136
+  },
+  "FLARE23_0060": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 2813,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 46.353
+  },
+  "FLARE23_0064": {
+   "volume": "volume-105",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 81.403
+  },
+  "FLARE23_0065": {
+   "volume": "volume-114",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 84.757
+  },
+  "FLARE23_0067": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 1662,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 37.835
+  },
+  "FLARE23_0068": {
+   "volume": "volume-38",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 32.02
+  },
+  "FLARE23_0070": {
+   "volume": "volume-38",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 1748,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 53.634
+  },
+  "FLARE23_0092": {
+   "volume": "volume-114",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 75.569
+  },
+  "FLARE23_0093": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 39.827
+  },
+  "FLARE23_0116": {
+   "volume": "volume-105",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 5093,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 66.898
+  },
+  "FLARE23_0118": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 23959,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 58.575
+  },
+  "FLARE23_0123": {
+   "volume": "volume-47",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 44.598
+  },
+  "FLARE23_0141": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 254275,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 395.816
+  },
+  "FLARE23_0162": {
+   "volume": "volume-47",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 2778,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 13.118
+  },
+  "FLARE23_0163": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 82.004
+  },
+  "FLARE23_0170": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 22847,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 84.972
+  },
+  "FLARE23_0179": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 48.63
+  },
+  "FLARE23_0182": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 3028,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 79.935
+  },
+  "FLARE23_0184": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 87.51
+  },
+  "FLARE23_0197": {
+   "volume": "volume-47",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 4.211
+  },
+  "FLARE23_0202": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 49.114
+  },
+  "FLARE23_0205": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 65.229
+  },
+  "FLARE23_0226": {
+   "volume": "volume-114",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 13980,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 88.349
+  },
+  "FLARE23_0236": {
+   "volume": "volume-38",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 6327,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 33.898
+  },
+  "FLARE23_0255": {
+   "volume": "volume-105",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 5089,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 74.216
+  },
+  "FLARE23_0262": {
+   "volume": "volume-47",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 8857,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 27.835
+  },
+  "FLARE23_0274": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 80.136
+  },
+  "FLARE23_0277": {
+   "volume": "volume-38",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 26.508
+  },
+  "FLARE23_0282": {
+   "volume": "volume-114",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 61414,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 78.518
+  },
+  "FLARE23_0285": {
+   "volume": "volume-87",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 2443,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 75.371
+  },
+  "FLARE23_0287": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 129.015
+  },
+  "FLARE23_0301": {
+   "volume": "volume-38",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 70.493
+  },
+  "FLARE23_0304": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 2782,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 77.92
+  },
+  "FLARE23_0307": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 42619,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 34.506
+  },
+  "FLARE23_0313": {
+   "volume": "volume-87",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 79.159
+  },
+  "FLARE23_0317": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 7367,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 71.981
+  },
+  "FLARE23_0319": {
+   "volume": "volume-32",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 52.434
+  },
+  "FLARE23_0328": {
+   "volume": "volume-114",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 85.8
+  },
+  "FLARE23_0338": {
+   "volume": "volume-47",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 200109,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 176.463
+  },
+  "FLARE23_0356": {
+   "volume": "volume-105",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 61.894
+  },
+  "FLARE23_0369": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 43.885
+  },
+  "FLARE23_0388": {
+   "volume": "volume-32",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 58.243
+  },
+  "FLARE23_0409": {
+   "volume": "volume-103",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 39484,
+   "task03_tumor_vox": 75787,
+   "liver_delta_pct": 48.374
+  },
+  "FLARE23_0418": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 83.177
+  },
+  "FLARE23_0425": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 588,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 50.382
+  },
+  "FLARE23_0436": {
+   "volume": "volume-38",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 75.425
+  },
+  "FLARE23_0443": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 47.061
+  },
+  "FLARE23_0453": {
+   "volume": "volume-32",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 48.42
+  },
+  "FLARE23_0458": {
+   "volume": "volume-47",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 4144,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 29.23
+  },
+  "FLARE23_0470": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 6425,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 75.73
+  },
+  "FLARE23_0486": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 4443,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 78.282
+  },
+  "FLARE23_0506": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 76.929
+  },
+  "FLARE23_0513": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 25.269
+  },
+  "FLARE23_0516": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 63.061
+  },
+  "FLARE23_0526": {
+   "volume": "volume-38",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 63.682
+  },
+  "FLARE23_0531": {
+   "volume": "volume-114",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 4590,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 87.671
+  },
+  "FLARE23_0535": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 2222,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 51.423
+  },
+  "FLARE23_0547": {
+   "volume": "volume-32",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 35253,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 72.4
+  },
+  "FLARE23_0549": {
+   "volume": "volume-106",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 71.543
+  },
+  "FLARE23_0550": {
+   "volume": "volume-105",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 74.482
+  },
+  "FLARE23_0551": {
+   "volume": "volume-105",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 201986,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 80.742
+  },
+  "FLARE23_0581": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 14.338
+  },
+  "FLARE23_0586": {
+   "volume": "volume-89",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 2621,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 75.853
+  },
+  "FLARE23_0598": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 77.138
+  },
+  "FLARE23_0612": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 4549,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 39.396
+  },
+  "FLARE23_0616": {
+   "volume": "volume-38",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 25.065
+  },
+  "FLARE23_0622": {
+   "volume": "volume-38",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 46.702
+  },
+  "FLARE23_0623": {
+   "volume": "volume-89",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 46.751
+  },
+  "FLARE23_0627": {
+   "volume": "volume-32",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 7051,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 48.569
+  },
+  "FLARE23_0655": {
+   "volume": "volume-114",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 69.748
+  },
+  "FLARE23_0656": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 48.482
+  },
+  "FLARE23_0682": {
+   "volume": "volume-89",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 75.99
+  },
+  "FLARE23_0683": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 46.742
+  },
+  "FLARE23_0685": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 61.948
+  },
+  "FLARE23_0696": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 26865,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 67.379
+  },
+  "FLARE23_0698": {
+   "volume": "volume-38",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 3593,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 43.641
+  },
+  "FLARE23_0705": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 45.886
+  },
+  "FLARE23_0706": {
+   "volume": "volume-105",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 65.197
+  },
+  "FLARE23_0708": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 26.898
+  },
+  "FLARE23_0709": {
+   "volume": "volume-119",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 198.329
+  },
+  "FLARE23_0715": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 19.526
+  },
+  "FLARE23_0719": {
+   "volume": "volume-119",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 46100,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 43.969
+  },
+  "FLARE23_0722": {
+   "volume": "volume-87",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 1374,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 81.987
+  },
+  "FLARE23_0737": {
+   "volume": "volume-38",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 186.627
+  },
+  "FLARE23_0742": {
+   "volume": "volume-47",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 58.156
+  },
+  "FLARE23_0770": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 41.587
+  },
+  "FLARE23_0771": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 63.512
+  },
+  "FLARE23_0779": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 70.729
+  },
+  "FLARE23_0785": {
+   "volume": "volume-105",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 79.279
+  },
+  "FLARE23_0789": {
+   "volume": "volume-89",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 3037,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 86.86
+  },
+  "FLARE23_0808": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 8.193
+  },
+  "FLARE23_0815": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 1043,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 30.614
+  },
+  "FLARE23_0831": {
+   "volume": "volume-89",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 68.298
+  },
+  "FLARE23_0845": {
+   "volume": "volume-119",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 1565,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 72.251
+  },
+  "FLARE23_0854": {
+   "volume": "volume-87",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 65.435
+  },
+  "FLARE23_0861": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 23.716
+  },
+  "FLARE23_0864": {
+   "volume": "volume-32",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 165.2
+  },
+  "FLARE23_0868": {
+   "volume": "volume-47",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 13.7
+  },
+  "FLARE23_0872": {
+   "volume": "volume-105",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 79.127
+  },
+  "FLARE23_0884": {
+   "volume": "volume-114",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 1644,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 58.984
+  },
+  "FLARE23_0886": {
+   "volume": "volume-91",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 2811,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 75.983
+  },
+  "FLARE23_0915": {
+   "volume": "volume-89",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 81.316
+  },
+  "FLARE23_0921": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 13.659
+  },
+  "FLARE23_0922": {
+   "volume": "volume-114",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 7434,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 69.924
+  },
+  "FLARE23_0925": {
+   "volume": "volume-47",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 36.637
+  },
+  "FLARE23_0928": {
+   "volume": "volume-47",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 707,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 51.411
+  },
+  "FLARE23_0930": {
+   "volume": "volume-106",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 57.382
+  },
+  "FLARE23_0940": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 29709,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 44.78
+  },
+  "FLARE23_0950": {
+   "volume": "volume-105",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 74.197
+  },
+  "FLARE23_0963": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 56.475
+  },
+  "FLARE23_0966": {
+   "volume": "volume-32",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 45.79
+  },
+  "FLARE23_0969": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 42.751
+  },
+  "FLARE23_0986": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 5679,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 63.931
+  },
+  "FLARE23_0989": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 71.937
+  },
+  "FLARE23_0995": {
+   "volume": "volume-47",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 69.228
+  },
+  "FLARE23_1004": {
+   "volume": "volume-89",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 84.966
+  },
+  "FLARE23_1020": {
+   "volume": "volume-105",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 43.302
+  },
+  "FLARE23_1025": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 49.518
+  },
+  "FLARE23_1038": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 4837,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 66.214
+  },
+  "FLARE23_1045": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 42.859
+  },
+  "FLARE23_1051": {
+   "volume": "volume-38",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 3164,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 54.571
+  },
+  "FLARE23_1058": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 90.487
+  },
+  "FLARE23_1072": {
+   "volume": "volume-119",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 58.957
+  },
+  "FLARE23_1080": {
+   "volume": "volume-114",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 28448,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 64.236
+  },
+  "FLARE23_1110": {
+   "volume": "volume-38",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 81.544
+  },
+  "FLARE23_1123": {
+   "volume": "volume-114",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 39.591
+  },
+  "FLARE23_1124": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 1195,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 43.732
+  },
+  "FLARE23_1136": {
+   "volume": "volume-119",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 4020,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 55.248
+  },
+  "FLARE23_1144": {
+   "volume": "volume-87",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 4516,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 62.992
+  },
+  "FLARE23_1163": {
+   "volume": "volume-89",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 88.167
+  },
+  "FLARE23_1164": {
+   "volume": "volume-106",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 14.038
+  },
+  "FLARE23_1172": {
+   "volume": "volume-89",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 75.468
+  },
+  "FLARE23_1182": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 62.2
+  },
+  "FLARE23_1184": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 78.77
+  },
+  "FLARE23_1185": {
+   "volume": "volume-38",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 401,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 53.685
+  },
+  "FLARE23_1192": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 85.21
+  },
+  "FLARE23_1194": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 27.888
+  },
+  "FLARE23_1199": {
+   "volume": "volume-64",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 541305,
+   "task03_tumor_vox": 179093,
+   "liver_delta_pct": 199.109
+  },
+  "FLARE23_1200": {
+   "volume": "volume-38",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 445,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 58.153
+  },
+  "FLARE23_1216": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 59.855
+  },
+  "FLARE23_1217": {
+   "volume": "volume-105",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 67.401
+  },
+  "FLARE23_1222": {
+   "volume": "volume-114",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 24055,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 89.827
+  },
+  "FLARE23_1231": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 62.599
+  },
+  "FLARE23_1236": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 1823,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 69.636
+  },
+  "FLARE23_1243": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 78.893
+  },
+  "FLARE23_1256": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 2571,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 80.895
+  },
+  "FLARE23_1262": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 67.108
+  },
+  "FLARE23_1263": {
+   "volume": "volume-32",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 30.894
+  },
+  "FLARE23_1280": {
+   "volume": "volume-114",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 53.928
+  },
+  "FLARE23_1309": {
+   "volume": "volume-32",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 5995,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 57.135
+  },
+  "FLARE23_1310": {
+   "volume": "volume-114",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 73.05
+  },
+  "FLARE23_1311": {
+   "volume": "volume-47",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 526,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 42.908
+  },
+  "FLARE23_1312": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 3615,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 53.47
+  },
+  "FLARE23_1313": {
+   "volume": "volume-119",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 85648,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 62.569
+  },
+  "FLARE23_1314": {
+   "volume": "volume-32",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 400797,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 25.831
+  },
+  "FLARE23_1327": {
+   "volume": "volume-89",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 1190,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 76.613
+  },
+  "FLARE23_1340": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 46.337
+  },
+  "FLARE23_1350": {
+   "volume": "volume-47",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 32.547
+  },
+  "FLARE23_1353": {
+   "volume": "volume-47",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 6556,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 18.462
+  },
+  "FLARE23_1356": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 2569,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 32.603
+  },
+  "FLARE23_1359": {
+   "volume": "volume-114",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 41.917
+  },
+  "FLARE23_1361": {
+   "volume": "volume-89",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 81.736
+  },
+  "FLARE23_1368": {
+   "volume": "volume-32",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 58.013
+  },
+  "FLARE23_1375": {
+   "volume": "volume-38",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 407,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 35.359
+  },
+  "FLARE23_1377": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 1275,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 72.892
+  },
+  "FLARE23_1381": {
+   "volume": "volume-91",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 81.276
+  },
+  "FLARE23_1409": {
+   "volume": "volume-119",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 15.37
+  },
+  "FLARE23_1411": {
+   "volume": "volume-114",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 15382,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 53.341
+  },
+  "FLARE23_1414": {
+   "volume": "volume-89",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 80.109
+  },
+  "FLARE23_1417": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 64.606
+  },
+  "FLARE23_1429": {
+   "volume": "volume-114",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 79.685
+  },
+  "FLARE23_1437": {
+   "volume": "volume-47",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 69.175
+  },
+  "FLARE23_1440": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 7232,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 20.343
+  },
+  "FLARE23_1443": {
+   "volume": "volume-47",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 47.168
+  },
+  "FLARE23_1445": {
+   "volume": "volume-105",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 1246,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 83.59
+  },
+  "FLARE23_1447": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 65.839
+  },
+  "FLARE23_1465": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 1186,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 40.962
+  },
+  "FLARE23_1467": {
+   "volume": "volume-89",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 46.256
+  },
+  "FLARE23_1477": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 39.962
+  },
+  "FLARE23_1481": {
+   "volume": "volume-38",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 6059,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 7.874
+  },
+  "FLARE23_1485": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 40.238
+  },
+  "FLARE23_1488": {
+   "volume": "volume-114",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 72.715
+  },
+  "FLARE23_1489": {
+   "volume": "volume-87",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 13389,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 83.153
+  },
+  "FLARE23_1497": {
+   "volume": "volume-105",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 8777,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 85.545
+  },
+  "FLARE23_1513": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 240.085
+  },
+  "FLARE23_1515": {
+   "volume": "volume-114",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 47.81
+  },
+  "FLARE23_1516": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 50.409
+  },
+  "FLARE23_1518": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 6.932
+  },
+  "FLARE23_1536": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 64032,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 56.187
+  },
+  "FLARE23_1540": {
+   "volume": "volume-114",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 48.826
+  },
+  "FLARE23_1541": {
+   "volume": "volume-105",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 18656,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 82.754
+  },
+  "FLARE23_1554": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 23203,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 19.074
+  },
+  "FLARE23_1571": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 86.691
+  },
+  "FLARE23_1577": {
+   "volume": "volume-47",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 2543,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 34.294
+  },
+  "FLARE23_1582": {
+   "volume": "volume-47",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 49.773
+  },
+  "FLARE23_1587": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 1471,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 45.976
+  },
+  "FLARE23_1588": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 137.65
+  },
+  "FLARE23_1589": {
+   "volume": "volume-38",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 4640,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 19.587
+  },
+  "FLARE23_1602": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 76.969
+  },
+  "FLARE23_1612": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 17.154
+  },
+  "FLARE23_1617": {
+   "volume": "volume-114",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 2232,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 75.971
+  },
+  "FLARE23_1619": {
+   "volume": "volume-32",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 144.194
+  },
+  "FLARE23_1621": {
+   "volume": "volume-89",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 79.904
+  },
+  "FLARE23_1634": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 146.237
+  },
+  "FLARE23_1638": {
+   "volume": "volume-38",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 3364,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 25.555
+  },
+  "FLARE23_1639": {
+   "volume": "volume-105",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 3287,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 74.195
+  },
+  "FLARE23_1641": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 46.674
+  },
+  "FLARE23_1645": {
+   "volume": "volume-47",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 46.17
+  },
+  "FLARE23_1648": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 41.765
+  },
+  "FLARE23_1649": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 50.397
+  },
+  "FLARE23_1651": {
+   "volume": "volume-105",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 1024,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 71.45
+  },
+  "FLARE23_1655": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 76.612
+  },
+  "FLARE23_1656": {
+   "volume": "volume-114",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 15.565
+  },
+  "FLARE23_1667": {
+   "volume": "volume-47",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 9244,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 31.466
+  },
+  "FLARE23_1675": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 49.981
+  },
+  "FLARE23_1677": {
+   "volume": "volume-114",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 6687,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 75.544
+  },
+  "FLARE23_1679": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 2733,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 72.973
+  },
+  "FLARE23_1686": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 21205,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 7.789
+  },
+  "FLARE23_1733": {
+   "volume": "volume-89",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 87.557
+  },
+  "FLARE23_1740": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 51305,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 65.099
+  },
+  "FLARE23_1748": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 46.105
+  },
+  "FLARE23_1754": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 77.43
+  },
+  "FLARE23_1783": {
+   "volume": "volume-105",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 19950,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 75.146
+  },
+  "FLARE23_1809": {
+   "volume": "volume-119",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 262.552
+  },
+  "FLARE23_1810": {
+   "volume": "volume-38",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 21874,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 27.67
+  },
+  "FLARE23_1815": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 2326,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 68.869
+  },
+  "FLARE23_1816": {
+   "volume": "volume-91",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 7304,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 64.099
+  },
+  "FLARE23_1817": {
+   "volume": "volume-114",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 2592,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 82.352
+  },
+  "FLARE23_1823": {
+   "volume": "volume-38",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 44.816
+  },
+  "FLARE23_1827": {
+   "volume": "volume-38",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 6964,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 18.316
+  },
+  "FLARE23_1829": {
+   "volume": "volume-41",
+   "tests": [
+    "T1",
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 70.28
+  },
+  "FLARE23_1830": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 117414,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 1.283
+  },
+  "FLARE23_1831": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 17436,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 78.331
+  },
+  "FLARE23_1833": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 72.31
+  },
+  "FLARE23_1841": {
+   "volume": "volume-47",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 4645,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 25.722
+  },
+  "FLARE23_1846": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 67.231
+  },
+  "FLARE23_1848": {
+   "volume": "volume-47",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 53.161
+  },
+  "FLARE23_1855": {
+   "volume": "volume-105",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 76733,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 57.868
+  },
+  "FLARE23_1863": {
+   "volume": "volume-114",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 32883,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 83.185
+  },
+  "FLARE23_1866": {
+   "volume": "volume-32",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 65.718
+  },
+  "FLARE23_1870": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 914,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 81.336
+  },
+  "FLARE23_1876": {
+   "volume": "volume-47",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 7480,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 30.019
+  },
+  "FLARE23_1879": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 8944,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 64.852
+  },
+  "FLARE23_1889": {
+   "volume": "volume-87",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 85.209
+  },
+  "FLARE23_1896": {
+   "volume": "volume-38",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 3.994
+  },
+  "FLARE23_1909": {
+   "volume": "volume-114",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 4280,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 74.04
+  },
+  "FLARE23_1919": {
+   "volume": "volume-91",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 6347,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 72.388
+  },
+  "FLARE23_1935": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 63.186
+  },
+  "FLARE23_1942": {
+   "volume": "volume-47",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 31.094
+  },
+  "FLARE23_1952": {
+   "volume": "volume-89",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 76.573
+  },
+  "FLARE23_1955": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 47.04
+  },
+  "FLARE23_1965": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 9060,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 71.668
+  },
+  "FLARE23_1968": {
+   "volume": "volume-38",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 70.649
+  },
+  "FLARE23_1987": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 20737,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 47.33
+  },
+  "FLARE23_2004": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 78.694
+  },
+  "FLARE23_2006": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 66780,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 59.322
+  },
+  "FLARE23_2008": {
+   "volume": "volume-38",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 123.318
+  },
+  "FLARE23_2009": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 1387,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 71.151
+  },
+  "FLARE23_2013": {
+   "volume": "volume-114",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 75.95
+  },
+  "FLARE23_2014": {
+   "volume": "volume-34",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 42940,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 24.688
+  },
+  "FLARE23_2019": {
+   "volume": "volume-105",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 2203,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 72.914
+  },
+  "FLARE23_2020": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 47.458
+  },
+  "FLARE23_2033": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 40720,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 3.328
+  },
+  "FLARE23_2034": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 41478,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 5.528
+  },
+  "FLARE23_2036": {
+   "volume": "volume-32",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 1524105,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 185.917
+  },
+  "FLARE23_2040": {
+   "volume": "volume-114",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 13165,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 62.68
+  },
+  "FLARE23_2053": {
+   "volume": "volume-105",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 5261,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 69.144
+  },
+  "FLARE23_2058": {
+   "volume": "volume-89",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 78.059
+  },
+  "FLARE23_2071": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 51.444
+  },
+  "FLARE23_2098": {
+   "volume": "volume-38",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 51.671
+  },
+  "FLARE23_2101": {
+   "volume": "volume-41",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 49.861
+  },
+  "FLARE23_2119": {
+   "volume": "volume-91",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 6939,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 59.831
+  },
+  "FLARE23_2144": {
+   "volume": "volume-47",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 44.486
+  },
+  "FLARE23_2152": {
+   "volume": "volume-47",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 7.249
+  },
+  "FLARE23_2153": {
+   "volume": "volume-74",
+   "tests": [
+    "T1"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 37144,
+   "liver_delta_pct": 0.414
+  },
+  "FLARE23_2157": {
+   "volume": "volume-105",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 50.58
+  },
+  "FLARE23_2159": {
+   "volume": "volume-87",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 70.843
+  },
+  "FLARE23_2160": {
+   "volume": "volume-47",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 6717,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 38.28
+  },
+  "FLARE23_2165": {
+   "volume": "volume-114",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 33.191
+  },
+  "FLARE23_2167": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 76.018
+  },
+  "FLARE23_2171": {
+   "volume": "volume-47",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 35.867
+  },
+  "FLARE23_2172": {
+   "volume": "volume-105",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 4295,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 63.536
+  },
+  "FLARE23_2173": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 72.76
+  },
+  "FLARE23_2174": {
+   "volume": "volume-47",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 47.051
+  },
+  "FLARE23_2176": {
+   "volume": "volume-47",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 52.106
+  },
+  "FLARE23_2177": {
+   "volume": "volume-114",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 81078,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 87.034
+  },
+  "FLARE23_2182": {
+   "volume": "volume-38",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 47.971
+  },
+  "FLARE23_2189": {
+   "volume": "volume-115",
+   "tests": [
+    "T2"
+   ],
+   "flare_tumor_vox": 0,
+   "task03_tumor_vox": 0,
+   "liver_delta_pct": 24.736
+  }
+ },
+ "query_twins_among_confirmed": [
+  "FLARE23_0037",
+  "FLARE23_0051",
+  "FLARE23_0101",
+  "FLARE23_0119",
+  "FLARE23_0120",
+  "FLARE23_0416",
+  "FLARE23_1027",
+  "FLARE23_1438",
+  "FLARE23_1524",
+  "FLARE23_1530",
+  "FLARE23_1575",
+  "FLARE23_1622",
+  "FLARE23_1786",
+  "FLARE23_1791",
+  "FLARE23_1854",
+  "FLARE23_1930",
+  "FLARE23_1960",
+  "FLARE23_2100",
+  "FLARE23_2145"
+ ],
+ "confirmed_still_in_1347_pool_nonquery": [
+  "FLARE23_0008",
+  "FLARE23_0048",
+  "FLARE23_0098",
+  "FLARE23_0106",
+  "FLARE23_0148",
+  "FLARE23_0187",
+  "FLARE23_0246",
+  "FLARE23_0253",
+  "FLARE23_0263",
+  "FLARE23_0267",
+  "FLARE23_0302",
+  "FLARE23_0327",
+  "FLARE23_0329",
+  "FLARE23_0367",
+  "FLARE23_0403",
+  "FLARE23_0445",
+  "FLARE23_0459",
+  "FLARE23_0487",
+  "FLARE23_0493",
+  "FLARE23_0514",
+  "FLARE23_0544",
+  "FLARE23_0563",
+  "FLARE23_0573",
+  "FLARE23_0644",
+  "FLARE23_0680",
+  "FLARE23_0689",
+  "FLARE23_0700",
+  "FLARE23_0729",
+  "FLARE23_0730",
+  "FLARE23_0736",
+  "FLARE23_0778",
+  "FLARE23_0795",
+  "FLARE23_0869",
+  "FLARE23_0902",
+  "FLARE23_0913",
+  "FLARE23_0943",
+  "FLARE23_0964",
+  "FLARE23_0994",
+  "FLARE23_1001",
+  "FLARE23_1018",
+  "FLARE23_1026",
+  "FLARE23_1064",
+  "FLARE23_1077",
+  "FLARE23_1082",
+  "FLARE23_1097",
+  "FLARE23_1107",
+  "FLARE23_1115",
+  "FLARE23_1195",
+  "FLARE23_1218",
+  "FLARE23_1233",
+  "FLARE23_1254",
+  "FLARE23_1286",
+  "FLARE23_1293",
+  "FLARE23_1347",
+  "FLARE23_1390",
+  "FLARE23_1408",
+  "FLARE23_1430",
+  "FLARE23_1436",
+  "FLARE23_1452",
+  "FLARE23_1453",
+  "FLARE23_1470",
+  "FLARE23_1474",
+  "FLARE23_1495",
+  "FLARE23_1542",
+  "FLARE23_1548",
+  "FLARE23_1567",
+  "FLARE23_1578",
+  "FLARE23_1581",
+  "FLARE23_1598",
+  "FLARE23_1661",
+  "FLARE23_1680",
+  "FLARE23_1687",
+  "FLARE23_1758",
+  "FLARE23_1775",
+  "FLARE23_1782",
+  "FLARE23_1858",
+  "FLARE23_1891",
+  "FLARE23_1922",
+  "FLARE23_1926",
+  "FLARE23_1988",
+  "FLARE23_1998",
+  "FLARE23_1999",
+  "FLARE23_2002",
+  "FLARE23_2003",
+  "FLARE23_2007",
+  "FLARE23_2023",
+  "FLARE23_2078",
+  "FLARE23_2092",
+  "FLARE23_2106",
+  "FLARE23_2111",
+  "FLARE23_2130",
+  "FLARE23_2135",
+  "FLARE23_2175",
+  "FLARE23_2190"
+ ],
+ "limitations_sentence_numbers": {
+  "lits_volumes_with_a_flare23_twin": 114,
+  "of_131_screened": 131,
+  "flare23_cases_that_are_lits_sourced": 114,
+  "of_which_query_twins_removed_from_pool": 20,
+  "note": "FLARE23_0102 (= volume-64) is counted in the removals: confirmed 09-15b, removed then."
+ }
+}

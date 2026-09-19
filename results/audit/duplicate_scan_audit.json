@@ -1,0 +1,2222 @@
+{
+ "n_queries": 113,
+ "n_flare23_signatures": 1312,
+ "n_flare23_corpus": 1312,
+ "pairs_flagged": [
+  {
+   "query": "case_00175",
+   "dataset": "kits",
+   "flare23": "flare23_FLARE23_0939",
+   "organ": "kidney",
+   "tests": {
+    "T1_exact_geometry": false,
+    "T2_physical": true,
+    "T3_invariant": false,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     107,
+     512,
+     512
+    ],
+    "organ_vox": 163503,
+    "tumor_vox": 7497,
+    "ratio": 0.04585236968129025,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     673
+    ],
+    "organ_vox": 1189908,
+    "tumor_vox": 54148,
+    "ratio": 0.045506039122352314,
+    "n_tumor_comp": 16
+   }
+  },
+  {
+   "query": "pancreas_015",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0284",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     87
+    ],
+    "organ_vox": 58307,
+    "tumor_vox": 6115,
+    "ratio": 0.10487591541324369,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     87
+    ],
+    "organ_vox": 58307,
+    "tumor_vox": 5671,
+    "ratio": 0.09726104927367211,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_019",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_1639",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": false
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     85
+    ],
+    "organ_vox": 47794,
+    "tumor_vox": 3287,
+    "ratio": 0.06877432313679542,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     85
+    ],
+    "organ_vox": 47794,
+    "tumor_vox": 2777,
+    "ratio": 0.05810352763945265,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_019",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_2172",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": false,
+    "T2_physical": false,
+    "T3_invariant": true,
+    "T4_hu_confirm": false
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     85
+    ],
+    "organ_vox": 47794,
+    "tumor_vox": 3287,
+    "ratio": 0.06877432313679542,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     103
+    ],
+    "organ_vox": 43967,
+    "tumor_vox": 3018,
+    "ratio": 0.06864239088407215,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_041",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_2125",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": false
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     137
+    ],
+    "organ_vox": 141691,
+    "tumor_vox": 2112,
+    "ratio": 0.01490567502523096,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     137
+    ],
+    "organ_vox": 141691,
+    "tumor_vox": 1971,
+    "ratio": 0.013910551834626052,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_045",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0040",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     41
+    ],
+    "organ_vox": 18468,
+    "tumor_vox": 2923,
+    "ratio": 0.15827377084687025,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     41
+    ],
+    "organ_vox": 18468,
+    "tumor_vox": 2404,
+    "ratio": 0.13017110677929392,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_048",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_1309",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     121
+    ],
+    "organ_vox": 38600,
+    "tumor_vox": 5995,
+    "ratio": 0.15531088082901554,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     121
+    ],
+    "organ_vox": 38600,
+    "tumor_vox": 4407,
+    "ratio": 0.11417098445595855,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_049",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0951",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     87
+    ],
+    "organ_vox": 106621,
+    "tumor_vox": 4744,
+    "ratio": 0.04449404901473443,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     87
+    ],
+    "organ_vox": 106621,
+    "tumor_vox": 4534,
+    "ratio": 0.04252445578263194,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_049",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_1632",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": false,
+    "T2_physical": false,
+    "T3_invariant": true,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     87
+    ],
+    "organ_vox": 106621,
+    "tumor_vox": 4744,
+    "ratio": 0.04449404901473443,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     104
+    ],
+    "organ_vox": 71062,
+    "tumor_vox": 3159,
+    "ratio": 0.0444541386394979,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_056",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0350",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     84
+    ],
+    "organ_vox": 35272,
+    "tumor_vox": 2369,
+    "ratio": 0.067163755953731,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     84
+    ],
+    "organ_vox": 35272,
+    "tumor_vox": 1795,
+    "ratio": 0.05089022454071218,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_064",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0191",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     93
+    ],
+    "organ_vox": 52283,
+    "tumor_vox": 9042,
+    "ratio": 0.17294340416579002,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     93
+    ],
+    "organ_vox": 52283,
+    "tumor_vox": 5239,
+    "ratio": 0.1002046554329323,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_078",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_2015",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": true,
+    "T3_invariant": true,
+    "T4_hu_confirm": false
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     76
+    ],
+    "organ_vox": 70014,
+    "tumor_vox": 1220,
+    "ratio": 0.017425086411289172,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     76
+    ],
+    "organ_vox": 70014,
+    "tumor_vox": 1220,
+    "ratio": 0.017425086411289172,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_083",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_2119",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     83
+    ],
+    "organ_vox": 75257,
+    "tumor_vox": 6939,
+    "ratio": 0.09220404746402328,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     83
+    ],
+    "organ_vox": 75257,
+    "tumor_vox": 5076,
+    "ratio": 0.06744887518769019,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_084",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0593",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": true,
+    "T3_invariant": false,
+    "T4_hu_confirm": false
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     82
+    ],
+    "organ_vox": 76710,
+    "tumor_vox": 973,
+    "ratio": 0.012684135054099857,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     82
+    ],
+    "organ_vox": 76657,
+    "tumor_vox": 960,
+    "ratio": 0.012523318157506817,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_096",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0624",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     108
+    ],
+    "organ_vox": 70118,
+    "tumor_vox": 14131,
+    "ratio": 0.201531703699478,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     108
+    ],
+    "organ_vox": 70118,
+    "tumor_vox": 8935,
+    "ratio": 0.12742804985880943,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_101",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0896",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": false,
+    "T2_physical": false,
+    "T3_invariant": true,
+    "T4_hu_confirm": false
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     98
+    ],
+    "organ_vox": 47602,
+    "tumor_vox": 3123,
+    "ratio": 0.06560648712238981,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     95
+    ],
+    "organ_vox": 44077,
+    "tumor_vox": 2865,
+    "ratio": 0.0649998865621526,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_101",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_1039",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     98
+    ],
+    "organ_vox": 47602,
+    "tumor_vox": 3123,
+    "ratio": 0.06560648712238981,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     98
+    ],
+    "organ_vox": 47602,
+    "tumor_vox": 2913,
+    "ratio": 0.06119490777698416,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_107",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0819",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": true,
+    "T3_invariant": true,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     102
+    ],
+    "organ_vox": 48770,
+    "tumor_vox": 2084,
+    "ratio": 0.04273118720524913,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     102
+    ],
+    "organ_vox": 48770,
+    "tumor_vox": 2084,
+    "ratio": 0.04273118720524913,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_107",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_1774",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": false,
+    "T2_physical": true,
+    "T3_invariant": false,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     102
+    ],
+    "organ_vox": 48770,
+    "tumor_vox": 2084,
+    "ratio": 0.04273118720524913,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     91
+    ],
+    "organ_vox": 54314,
+    "tumor_vox": 2264,
+    "ratio": 0.04168354383768458,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_110",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0096",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": true,
+    "T3_invariant": true,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     98
+    ],
+    "organ_vox": 72042,
+    "tumor_vox": 1074,
+    "ratio": 0.0149079703506288,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     98
+    ],
+    "organ_vox": 72042,
+    "tumor_vox": 1074,
+    "ratio": 0.0149079703506288,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_119",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0674",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": false
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     85
+    ],
+    "organ_vox": 51646,
+    "tumor_vox": 7572,
+    "ratio": 0.14661348410331876,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     85
+    ],
+    "organ_vox": 51505,
+    "tumor_vox": 4308,
+    "ratio": 0.08364236481894961,
+    "n_tumor_comp": 2
+   }
+  },
+  {
+   "query": "pancreas_122",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0042",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": false,
+    "T2_physical": true,
+    "T3_invariant": false,
+    "T4_hu_confirm": false
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     97
+    ],
+    "organ_vox": 36878,
+    "tumor_vox": 4516,
+    "ratio": 0.12245783393893378,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     115
+    ],
+    "organ_vox": 46328,
+    "tumor_vox": 5658,
+    "ratio": 0.12212916594715939,
+    "n_tumor_comp": 2
+   }
+  },
+  {
+   "query": "pancreas_122",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_1144",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     97
+    ],
+    "organ_vox": 36878,
+    "tumor_vox": 4516,
+    "ratio": 0.12245783393893378,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     97
+    ],
+    "organ_vox": 36878,
+    "tumor_vox": 3756,
+    "ratio": 0.10184934107055697,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_125",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_1312",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     102
+    ],
+    "organ_vox": 78343,
+    "tumor_vox": 3615,
+    "ratio": 0.04614324189780836,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     102
+    ],
+    "organ_vox": 78343,
+    "tumor_vox": 2816,
+    "ratio": 0.035944500465899955,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_127",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0346",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     126
+    ],
+    "organ_vox": 97983,
+    "tumor_vox": 5075,
+    "ratio": 0.051794699080452734,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     126
+    ],
+    "organ_vox": 97983,
+    "tumor_vox": 3890,
+    "ratio": 0.039700764418317463,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_137",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0156",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": false
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     85
+    ],
+    "organ_vox": 61155,
+    "tumor_vox": 3547,
+    "ratio": 0.05800016351892732,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     85
+    ],
+    "organ_vox": 61155,
+    "tumor_vox": 2943,
+    "ratio": 0.04812362030905077,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_149",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_1014",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     77
+    ],
+    "organ_vox": 59175,
+    "tumor_vox": 5419,
+    "ratio": 0.0915758343895226,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     77
+    ],
+    "organ_vox": 59175,
+    "tumor_vox": 3850,
+    "ratio": 0.06506125897760878,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_157",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0889",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": true,
+    "T3_invariant": true,
+    "T4_hu_confirm": false
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     77
+    ],
+    "organ_vox": 77551,
+    "tumor_vox": 2686,
+    "ratio": 0.03463527227244007,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     77
+    ],
+    "organ_vox": 77551,
+    "tumor_vox": 2686,
+    "ratio": 0.03463527227244007,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_172",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_1723",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": true,
+    "T3_invariant": true,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     95
+    ],
+    "organ_vox": 88942,
+    "tumor_vox": 1298,
+    "ratio": 0.014593780216320748,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     95
+    ],
+    "organ_vox": 88942,
+    "tumor_vox": 1298,
+    "ratio": 0.014593780216320748,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_191",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0971",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     57
+    ],
+    "organ_vox": 45174,
+    "tumor_vox": 6609,
+    "ratio": 0.14630096958427413,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     57
+    ],
+    "organ_vox": 45174,
+    "tumor_vox": 4517,
+    "ratio": 0.09999114534909462,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_200",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_1826",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": false
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     89
+    ],
+    "organ_vox": 46058,
+    "tumor_vox": 2706,
+    "ratio": 0.058752008337313824,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     89
+    ],
+    "organ_vox": 46058,
+    "tumor_vox": 1775,
+    "ratio": 0.03853836467063268,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_210",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_1842",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     93
+    ],
+    "organ_vox": 37349,
+    "tumor_vox": 1779,
+    "ratio": 0.04763179737074621,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     93
+    ],
+    "organ_vox": 37349,
+    "tumor_vox": 1563,
+    "ratio": 0.04184851000026774,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_218",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0751",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": false
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     99
+    ],
+    "organ_vox": 41547,
+    "tumor_vox": 1601,
+    "ratio": 0.03853467157676848,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     99
+    ],
+    "organ_vox": 41547,
+    "tumor_vox": 1096,
+    "ratio": 0.0263797626784124,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_226",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0332",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": false
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     104
+    ],
+    "organ_vox": 28219,
+    "tumor_vox": 3344,
+    "ratio": 0.11850171870016656,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     104
+    ],
+    "organ_vox": 28219,
+    "tumor_vox": 2504,
+    "ratio": 0.08873454055778023,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_235",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_1236",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": false
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     84
+    ],
+    "organ_vox": 47536,
+    "tumor_vox": 1823,
+    "ratio": 0.03834988219454729,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     84
+    ],
+    "organ_vox": 47536,
+    "tumor_vox": 1751,
+    "ratio": 0.036835240659710534,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_239",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_1552",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     92
+    ],
+    "organ_vox": 44945,
+    "tumor_vox": 1611,
+    "ratio": 0.03584380910001112,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     92
+    ],
+    "organ_vox": 44945,
+    "tumor_vox": 1248,
+    "ratio": 0.027767271109133386,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_241",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0312",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     99
+    ],
+    "organ_vox": 35728,
+    "tumor_vox": 4530,
+    "ratio": 0.12679131213613973,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     99
+    ],
+    "organ_vox": 35728,
+    "tumor_vox": 3670,
+    "ratio": 0.1027205553067622,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_241",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_1951",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": false,
+    "T2_physical": false,
+    "T3_invariant": true,
+    "T4_hu_confirm": false
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     99
+    ],
+    "organ_vox": 35728,
+    "tumor_vox": 4530,
+    "ratio": 0.12679131213613973,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     76
+    ],
+    "organ_vox": 13709,
+    "tumor_vox": 1721,
+    "ratio": 0.1255379677584069,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_242",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_1081",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": true,
+    "T3_invariant": true,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     101
+    ],
+    "organ_vox": 36453,
+    "tumor_vox": 405,
+    "ratio": 0.011110196691630318,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     101
+    ],
+    "organ_vox": 36453,
+    "tumor_vox": 405,
+    "ratio": 0.011110196691630318,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_256",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0521",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     89
+    ],
+    "organ_vox": 34905,
+    "tumor_vox": 3584,
+    "ratio": 0.10267869932674402,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     89
+    ],
+    "organ_vox": 34905,
+    "tumor_vox": 2892,
+    "ratio": 0.08285345938977223,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_258",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_1638",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     79
+    ],
+    "organ_vox": 78609,
+    "tumor_vox": 3364,
+    "ratio": 0.04279408210255823,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     79
+    ],
+    "organ_vox": 78607,
+    "tumor_vox": 2885,
+    "ratio": 0.03670156601829354,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_259",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0698",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     88
+    ],
+    "organ_vox": 24678,
+    "tumor_vox": 3593,
+    "ratio": 0.14559526703946835,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     88
+    ],
+    "organ_vox": 24678,
+    "tumor_vox": 2995,
+    "ratio": 0.12136315746819029,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_275",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0592",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     105
+    ],
+    "organ_vox": 42769,
+    "tumor_vox": 10961,
+    "ratio": 0.256283756926746,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     105
+    ],
+    "organ_vox": 42767,
+    "tumor_vox": 6874,
+    "ratio": 0.16073140505529965,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_285",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_1629",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": true,
+    "T3_invariant": true,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     113
+    ],
+    "organ_vox": 30846,
+    "tumor_vox": 1389,
+    "ratio": 0.045030149776308113,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     113
+    ],
+    "organ_vox": 30846,
+    "tumor_vox": 1389,
+    "ratio": 0.045030149776308113,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_289",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0641",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     96
+    ],
+    "organ_vox": 59448,
+    "tumor_vox": 4550,
+    "ratio": 0.0765374781321491,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     96
+    ],
+    "organ_vox": 59448,
+    "tumor_vox": 4392,
+    "ratio": 0.07387969317723052,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_301",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_1651",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     83
+    ],
+    "organ_vox": 17838,
+    "tumor_vox": 1024,
+    "ratio": 0.05740553873752663,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     83
+    ],
+    "organ_vox": 17838,
+    "tumor_vox": 867,
+    "ratio": 0.04860410359905819,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_315",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_1867",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": false
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     93
+    ],
+    "organ_vox": 36531,
+    "tumor_vox": 3262,
+    "ratio": 0.08929402425337385,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     93
+    ],
+    "organ_vox": 36531,
+    "tumor_vox": 2590,
+    "ratio": 0.07089868878486764,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_327",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0283",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": false
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     99
+    ],
+    "organ_vox": 40170,
+    "tumor_vox": 1920,
+    "ratio": 0.04779686333084392,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     99
+    ],
+    "organ_vox": 40170,
+    "tumor_vox": 1785,
+    "ratio": 0.04443614637789395,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_327",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_1213",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": false,
+    "T2_physical": false,
+    "T3_invariant": true,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     99
+    ],
+    "organ_vox": 40170,
+    "tumor_vox": 1920,
+    "ratio": 0.04779686333084392,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     79
+    ],
+    "organ_vox": 56571,
+    "tumor_vox": 2697,
+    "ratio": 0.047674603595481785,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_330",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0612",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": false
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     89
+    ],
+    "organ_vox": 20393,
+    "tumor_vox": 4549,
+    "ratio": 0.22306673858676998,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     89
+    ],
+    "organ_vox": 20393,
+    "tumor_vox": 2824,
+    "ratio": 0.13847888981513265,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_336",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0151",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     92
+    ],
+    "organ_vox": 33873,
+    "tumor_vox": 2983,
+    "ratio": 0.08806423995512651,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     92
+    ],
+    "organ_vox": 33873,
+    "tumor_vox": 2775,
+    "ratio": 0.08192365600921088,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_339",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0070",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": false
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     105
+    ],
+    "organ_vox": 34108,
+    "tumor_vox": 1748,
+    "ratio": 0.05124897384777765,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     105
+    ],
+    "organ_vox": 34108,
+    "tumor_vox": 1135,
+    "ratio": 0.03327665063914624,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_346",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_1215",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     103
+    ],
+    "organ_vox": 12535,
+    "tumor_vox": 688,
+    "ratio": 0.05488631830873554,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     103
+    ],
+    "organ_vox": 12535,
+    "tumor_vox": 477,
+    "ratio": 0.03805345033905066,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_348",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_1327",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": true,
+    "T3_invariant": true,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     89
+    ],
+    "organ_vox": 33372,
+    "tumor_vox": 1190,
+    "ratio": 0.03565863598226058,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     89
+    ],
+    "organ_vox": 33372,
+    "tumor_vox": 1190,
+    "ratio": 0.03565863598226058,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_356",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0448",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": false
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     84
+    ],
+    "organ_vox": 48396,
+    "tumor_vox": 2205,
+    "ratio": 0.045561616662534096,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     84
+    ],
+    "organ_vox": 48386,
+    "tumor_vox": 2040,
+    "ratio": 0.04216095564832803,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_366",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0071",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     121
+    ],
+    "organ_vox": 65053,
+    "tumor_vox": 2487,
+    "ratio": 0.038230366009253995,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     121
+    ],
+    "organ_vox": 65053,
+    "tumor_vox": 1367,
+    "ratio": 0.02101363503604753,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_369",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0285",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": false
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     97
+    ],
+    "organ_vox": 58604,
+    "tumor_vox": 2443,
+    "ratio": 0.041686574295269944,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     97
+    ],
+    "organ_vox": 58604,
+    "tumor_vox": 2081,
+    "ratio": 0.035509521534366255,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_377",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0054",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": false
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     55
+    ],
+    "organ_vox": 10549,
+    "tumor_vox": 12934,
+    "ratio": 1.2260877808323063,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     55
+    ],
+    "organ_vox": 10549,
+    "tumor_vox": 8109,
+    "ratio": 0.7686984548298417,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_378",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0860",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": true,
+    "T3_invariant": true,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     93
+    ],
+    "organ_vox": 49853,
+    "tumor_vox": 868,
+    "ratio": 0.017411188895352335,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     93
+    ],
+    "organ_vox": 49853,
+    "tumor_vox": 865,
+    "ratio": 0.01735101197520711,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_393",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_1256",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": false
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     119
+    ],
+    "organ_vox": 60281,
+    "tumor_vox": 2571,
+    "ratio": 0.042650254640765745,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     119
+    ],
+    "organ_vox": 60268,
+    "tumor_vox": 2140,
+    "ratio": 0.03550806398088538,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_399",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_2051",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": false
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     58
+    ],
+    "organ_vox": 14659,
+    "tumor_vox": 2682,
+    "ratio": 0.18295927416604135,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     58
+    ],
+    "organ_vox": 14659,
+    "tumor_vox": 1861,
+    "ratio": 0.12695272528821885,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_404",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_1643",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": false
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     105
+    ],
+    "organ_vox": 31535,
+    "tumor_vox": 1272,
+    "ratio": 0.040336134453781515,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     105
+    ],
+    "organ_vox": 31535,
+    "tumor_vox": 1168,
+    "ratio": 0.0370382115110195,
+    "n_tumor_comp": 1
+   }
+  },
+  {
+   "query": "pancreas_418",
+   "dataset": "msd",
+   "flare23": "flare23_FLARE23_0237",
+   "organ": "pancreas",
+   "tests": {
+    "T1_exact_geometry": true,
+    "T2_physical": false,
+    "T3_invariant": false,
+    "T4_hu_confirm": null
+   },
+   "query_sig": {
+    "shape": [
+     512,
+     512,
+     44
+    ],
+    "organ_vox": 29415,
+    "tumor_vox": 1102,
+    "ratio": 0.037463878973312936,
+    "n_tumor_comp": 1
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     44
+    ],
+    "organ_vox": 29415,
+    "tumor_vox": 1071,
+    "ratio": 0.03640999490056094,
+    "n_tumor_comp": 1
+   }
+  }
+ ],
+ "twins_confirmed": [
+  "flare23_FLARE23_0040",
+  "flare23_FLARE23_0042",
+  "flare23_FLARE23_0054",
+  "flare23_FLARE23_0070",
+  "flare23_FLARE23_0071",
+  "flare23_FLARE23_0096",
+  "flare23_FLARE23_0151",
+  "flare23_FLARE23_0156",
+  "flare23_FLARE23_0191",
+  "flare23_FLARE23_0237",
+  "flare23_FLARE23_0283",
+  "flare23_FLARE23_0284",
+  "flare23_FLARE23_0285",
+  "flare23_FLARE23_0312",
+  "flare23_FLARE23_0332",
+  "flare23_FLARE23_0346",
+  "flare23_FLARE23_0350",
+  "flare23_FLARE23_0448",
+  "flare23_FLARE23_0521",
+  "flare23_FLARE23_0592",
+  "flare23_FLARE23_0593",
+  "flare23_FLARE23_0612",
+  "flare23_FLARE23_0624",
+  "flare23_FLARE23_0641",
+  "flare23_FLARE23_0674",
+  "flare23_FLARE23_0698",
+  "flare23_FLARE23_0751",
+  "flare23_FLARE23_0819",
+  "flare23_FLARE23_0860",
+  "flare23_FLARE23_0889",
+  "flare23_FLARE23_0939",
+  "flare23_FLARE23_0951",
+  "flare23_FLARE23_0971",
+  "flare23_FLARE23_1014",
+  "flare23_FLARE23_1039",
+  "flare23_FLARE23_1081",
+  "flare23_FLARE23_1144",
+  "flare23_FLARE23_1215",
+  "flare23_FLARE23_1236",
+  "flare23_FLARE23_1256",
+  "flare23_FLARE23_1309",
+  "flare23_FLARE23_1312",
+  "flare23_FLARE23_1327",
+  "flare23_FLARE23_1552",
+  "flare23_FLARE23_1629",
+  "flare23_FLARE23_1638",
+  "flare23_FLARE23_1639",
+  "flare23_FLARE23_1643",
+  "flare23_FLARE23_1651",
+  "flare23_FLARE23_1723",
+  "flare23_FLARE23_1774",
+  "flare23_FLARE23_1826",
+  "flare23_FLARE23_1842",
+  "flare23_FLARE23_1867",
+  "flare23_FLARE23_2015",
+  "flare23_FLARE23_2051",
+  "flare23_FLARE23_2119",
+  "flare23_FLARE23_2125"
+ ],
+ "invariant_candidates_unconfirmed": [
+  "flare23_FLARE23_1213",
+  "flare23_FLARE23_1632"
+ ],
+ "definitions": "Duplicate-scan audit of the 1,425-case retrieval pool: are any of the 113 single-organ queries (KiTS23 36,\nLiTS 21, MSD Pancreas 56) the same scan as one of the 1,312 FLARE23 candidates?  FLARE23 was assembled from\npublic sources that include those collections, so twins would inflate the large-pool results (Tables 9-11).\n\nSignatures per case, from the reference masks:\n  * header: shape, spacing (LiTS .npy derivatives carry no header \u2014 geometry-based tests are skipped for them)\n  * organ voxels, tumor voxels (tumor within the organ's 3-voxel dilation for FLARE23), tumor/organ voxel RATIO\n    (spacing-invariant), number of tumor components, organ bounding-box aspect ratios (spacing-invariant per axis\n    only if spacing matches; we use the in-plane aspect, which survives isotropic in-plane resampling)\n  * physical organ / tumor volume (cm3) where a header exists\nTests, per (query, FLARE23 candidate) pair with the query's organ:\n  T1 exact geometry: same shape AND same spacing (1e-3) AND organ voxels within 0.5 %          -> certain twin\n  T2 physical:       organ volume within 1 % AND tumor volume within 2 % (both physical)          -> strong\n  T3 invariant:      tumor/organ ratio within 1 % AND same component count AND in-plane aspect within 2 % -> candidate\n  T4 HU confirm:     for pairs with both CTs in the radiomics cache, organ HU mean/std within 1 %   -> confirmation\nOutput: results/audit/duplicate_scan_audit.json  (all T1/T2 pairs, T3 candidates with their T4 status, and the\nlist of FLARE23 case ids to drop from the pool).",
+ "manually_confirmed_twins": [
+  {
+   "flare23": "flare23_FLARE23_0102",
+   "source": "LiTS (MSD-Task03 liver_64)",
+   "basis": "external confirmation (the study lead, 2026-09-15); not detectable by T1/T2 locally - LiTS copies carry no headers",
+   "action": "removed from corpus_flare23_kg_dedup.json (1,254 -> 1,253; pool 1,366)"
+  }
+ ]
+}

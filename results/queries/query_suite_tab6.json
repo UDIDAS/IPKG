@@ -1,0 +1,248 @@
+{
+ "cohort_113": {
+  "n_cases": 113,
+  "rows": [
+   {
+    "family": "Q2 organ-specific lookup (pooled liver/kidney/pancreas)",
+    "N_T": 109,
+    "N_F": 4,
+    "N_U": 226,
+    "precision": 1.0,
+    "recall": 0.965,
+    "F1": 0.982,
+    "indet_rate": 0.667,
+    "indet_rate_by_dataset": {
+     "kits": 0.667,
+     "msd": 0.667,
+     "lits": 0.667
+    },
+    "n_scored_TF_pairs": 113
+   },
+   {
+    "family": "Q3 phenotype retrieval: largest burden bin (pooled)",
+    "N_T": 37,
+    "N_F": 76,
+    "N_U": 226,
+    "precision": 1.0,
+    "recall": 0.974,
+    "F1": 0.987,
+    "indet_rate": 0.667,
+    "indet_rate_by_dataset": {
+     "kits": 0.667,
+     "msd": 0.667,
+     "lits": 0.667
+    },
+    "n_scored_TF_pairs": 113
+   },
+   {
+    "family": "Q4a compositional: hepatic>5cm AND renal lesion",
+    "N_T": 0,
+    "N_F": 16,
+    "N_U": 97,
+    "precision": null,
+    "recall": null,
+    "F1": null,
+    "indet_rate": 0.858,
+    "indet_rate_by_dataset": {
+     "kits": 0.972,
+     "msd": 1.0,
+     "lits": 0.286
+    },
+    "n_scored_TF_pairs": 15
+   },
+   {
+    "family": "Q4b compositional: hepatic>5cm AND splenic lesion",
+    "N_T": 0,
+    "N_F": 15,
+    "N_U": 98,
+    "precision": null,
+    "recall": null,
+    "F1": null,
+    "indet_rate": 0.867,
+    "indet_rate_by_dataset": {
+     "kits": 1.0,
+     "msd": 1.0,
+     "lits": 0.286
+    },
+    "n_scored_TF_pairs": 15
+   },
+   {
+    "family": "Q5 cross-organ involvement (>=2 organs)",
+    "N_T": 0,
+    "N_F": 0,
+    "N_U": 113,
+    "precision": null,
+    "recall": null,
+    "F1": null,
+    "indet_rate": 1.0,
+    "indet_rate_by_dataset": {
+     "kits": 1.0,
+     "msd": 1.0,
+     "lits": 1.0
+    },
+    "n_scored_TF_pairs": 0
+   },
+   {
+    "family": "Q7a high tumor burden (observed anatomy)",
+    "N_T": 37,
+    "N_F": 76,
+    "N_U": 0,
+    "precision": 1.0,
+    "recall": 0.974,
+    "F1": 0.987,
+    "indet_rate": 0.0,
+    "indet_rate_by_dataset": {
+     "kits": 0.0,
+     "msd": 0.0,
+     "lits": 0.0
+    },
+    "n_scored_TF_pairs": 113
+   },
+   {
+    "family": "Q7b multifocal disease in one organ (pooled)",
+    "N_T": 16,
+    "N_F": 97,
+    "N_U": 226,
+    "precision": 0.938,
+    "recall": 0.682,
+    "F1": 0.789,
+    "indet_rate": 0.667,
+    "indet_rate_by_dataset": {
+     "kits": 0.667,
+     "msd": 0.667,
+     "lits": 0.667
+    },
+    "n_scored_TF_pairs": 113
+   }
+  ],
+  "macro_over_evaluable": {
+   "macro_P": 0.984,
+   "macro_R": 0.899,
+   "macro_F1": 0.936,
+   "n_evaluable_families": 4
+  }
+ },
+ "flare23_reference_counts": {
+  "Q4a hepatic>5cm AND renal lesion": {
+   "N_T": 0,
+   "N_F": 1312,
+   "N_U": 0,
+   "indet_rate": 0.0
+  },
+  "Q4b hepatic>5cm AND splenic lesion": {
+   "N_T": 0,
+   "N_F": 1310,
+   "N_U": 2,
+   "indet_rate": 0.002
+  },
+  "Q5 cross-organ involvement (>=2 organs)": {
+   "N_T": 0,
+   "N_F": 1311,
+   "N_U": 1,
+   "indet_rate": 0.001
+  },
+  "Q7a high tumor burden": {
+   "N_T": 203,
+   "N_F": 1109,
+   "N_U": 0,
+   "indet_rate": 0.0
+  }
+ },
+ "q9_similar_case_retrieval": "see results/retrieval/retrieval_tab7_primary.json / _tab8_stress.json",
+ "q10_latency_sparql_ms": {
+  "flare23 (1,312 cases)": {
+   "n_triples": 85475,
+   "graph_load_ms": 2799,
+   "per_query_median_ms": {
+    "01_cohort_summary": 1109.8,
+    "02_tumor_burden_by_organ": 91.7,
+    "03_high_burden_tumors": 4728.1,
+    "04_pancreatic_tumors": 13894.9,
+    "05_kidney_tumors": 27417.4,
+    "06_multifocal_tumors": 3218.5,
+    "07_largest_tumors": 301.7,
+    "08_multi_organ_cases": 219.6,
+    "09_tumor_with_ontology_grounding": 302.5,
+    "10_tumor_to_organ_volume_ratio": 401.0
+   },
+   "across_queries": {
+    "median_ms": 755.4,
+    "IQR_ms": [
+     301.7,
+     4728.1
+    ]
+   }
+  },
+  "predicted_kits": {
+   "n_triples": 1505,
+   "graph_load_ms": 48,
+   "per_query_median_ms": {
+    "01_cohort_summary": 13.2,
+    "02_tumor_burden_by_organ": 13.0,
+    "03_high_burden_tumors": 10.6,
+    "04_pancreatic_tumors": 8.2,
+    "05_kidney_tumors": 8.2,
+    "06_multifocal_tumors": 10.5,
+    "07_largest_tumors": 11.5,
+    "08_multi_organ_cases": 11.6,
+    "09_tumor_with_ontology_grounding": 12.1,
+    "10_tumor_to_organ_volume_ratio": 16.8
+   },
+   "across_queries": {
+    "median_ms": 11.6,
+    "IQR_ms": [
+     10.5,
+     13.0
+    ]
+   }
+  },
+  "predicted_lits": {
+   "n_triples": 1064,
+   "graph_load_ms": 33,
+   "per_query_median_ms": {
+    "01_cohort_summary": 13.3,
+    "02_tumor_burden_by_organ": 12.9,
+    "03_high_burden_tumors": 10.6,
+    "04_pancreatic_tumors": 8.2,
+    "05_kidney_tumors": 8.1,
+    "06_multifocal_tumors": 10.5,
+    "07_largest_tumors": 11.1,
+    "08_multi_organ_cases": 10.4,
+    "09_tumor_with_ontology_grounding": 11.6,
+    "10_tumor_to_organ_volume_ratio": 16.3
+   },
+   "across_queries": {
+    "median_ms": 10.8,
+    "IQR_ms": [
+     10.4,
+     12.9
+    ]
+   }
+  },
+  "predicted_msd": {
+   "n_triples": 2165,
+   "graph_load_ms": 345,
+   "per_query_median_ms": {
+    "01_cohort_summary": 13.6,
+    "02_tumor_burden_by_organ": 13.5,
+    "03_high_burden_tumors": 10.9,
+    "04_pancreatic_tumors": 36.1,
+    "05_kidney_tumors": 8.4,
+    "06_multifocal_tumors": 10.5,
+    "07_largest_tumors": 13.5,
+    "08_multi_organ_cases": 13.5,
+    "09_tumor_with_ontology_grounding": 13.8,
+    "10_tumor_to_organ_volume_ratio": 17.4
+   },
+   "across_queries": {
+    "median_ms": 13.5,
+    "IQR_ms": [
+     10.9,
+     13.8
+    ]
+   }
+  }
+ },
+ "not_evaluated": "Q6 spatial subregion, Q8 rare-case discovery (out of scope per draft); P/R/F1 for Q4a/Q4b/Q5 on FLARE23 needs predicted FLARE23 graphs (GPU rerun).",
+ "note_2026_09_16": "cohort_113 verdict sections recomputed with the REAL LiTS volumes (MSD Task03 headers, results/audit/lits_geometry_map.json) - Q4a/Q4b no longer use pseudo-volumes. q10_latency_sparql_ms kept from the 2026-09-13 run: the shipped graphs are unchanged and that measurement was taken on an idle machine (a 09-16 remeasure under 12 busy cores gave 888 ms median for flare23 - load artifact, discarded)."
+}

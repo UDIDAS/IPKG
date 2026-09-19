@@ -1,0 +1,2438 @@
+{
+ "n_queries": 109,
+ "n_lesion_free_flare23_candidates": 704,
+ "mean_relevant_per_query": 100.0,
+ "aggregate": {
+  "ii": {
+   "AP": 0.999,
+   "P@10": 1.0,
+   "relevant_ranks_median": 50.523,
+   "relevant_ranks_max": 100.697,
+   "first_lesion_free_flare23_rank": 249.945,
+   "relevant_below_first_lesion_free": 0.0,
+   "lesion_free_in_top10": 0.0
+  },
+  "iii_prime": {
+   "AP": 0.757,
+   "P@10": 0.997,
+   "relevant_ranks_median": 60.33,
+   "relevant_ranks_max": 1257.835,
+   "first_lesion_free_flare23_rank": 221.294,
+   "relevant_below_first_lesion_free": 19.872,
+   "lesion_free_in_top10": 0.0
+  }
+ },
+ "iii_prime_fraction_of_relevant_displaced_below_first_lesion_free": {
+  "mean": 0.236,
+  "median": 0.214
+ },
+ "iii_prime_first_displaced_relevant_rank": {
+  "n_queries_with_displacement": 109,
+  "median": 914.0,
+  "IQR": [
+   912.0,
+   1002.0
+  ],
+  "min": 825
+ },
+ "per_query": {
+  "case_00006": {
+   "n_relevant": 62,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 31.5,
+    "relevant_ranks_max": 62,
+    "first_lesion_free_flare23_rank": 192,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.6182440030806938,
+    "P@10": 1.0,
+    "relevant_ranks_median": 31.5,
+    "relevant_ranks_max": 1348,
+    "first_lesion_free_flare23_rank": 166,
+    "relevant_below_first_lesion_free": 25,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 912
+  },
+  "case_00008": {
+   "n_relevant": 109,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 55.0,
+    "relevant_ranks_max": 109,
+    "first_lesion_free_flare23_rank": 231,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.811360864539069,
+    "P@10": 1.0,
+    "relevant_ranks_median": 55.0,
+    "relevant_ranks_max": 935,
+    "first_lesion_free_flare23_rank": 206,
+    "relevant_below_first_lesion_free": 23,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 913
+  },
+  "case_00017": {
+   "n_relevant": 61,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 31.0,
+    "relevant_ranks_max": 61,
+    "first_lesion_free_flare23_rank": 192,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.6276251496019856,
+    "P@10": 1.0,
+    "relevant_ranks_median": 31.0,
+    "relevant_ranks_max": 935,
+    "first_lesion_free_flare23_rank": 166,
+    "relevant_below_first_lesion_free": 24,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 912
+  },
+  "case_00018": {
+   "n_relevant": 82,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 41.5,
+    "relevant_ranks_max": 82,
+    "first_lesion_free_flare23_rank": 195,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.7638479508830402,
+    "P@10": 1.0,
+    "relevant_ranks_median": 41.5,
+    "relevant_ranks_max": 934,
+    "first_lesion_free_flare23_rank": 171,
+    "relevant_below_first_lesion_free": 21,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 914
+  },
+  "case_00021": {
+   "n_relevant": 82,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 41.5,
+    "relevant_ranks_max": 82,
+    "first_lesion_free_flare23_rank": 195,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.7638479508830402,
+    "P@10": 1.0,
+    "relevant_ranks_median": 41.5,
+    "relevant_ranks_max": 934,
+    "first_lesion_free_flare23_rank": 171,
+    "relevant_below_first_lesion_free": 21,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 914
+  },
+  "case_00024": {
+   "n_relevant": 110,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 55.5,
+    "relevant_ranks_max": 110,
+    "first_lesion_free_flare23_rank": 231,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.804726696442234,
+    "P@10": 1.0,
+    "relevant_ranks_median": 55.5,
+    "relevant_ranks_max": 1348,
+    "first_lesion_free_flare23_rank": 206,
+    "relevant_below_first_lesion_free": 24,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 913
+  },
+  "case_00030": {
+   "n_relevant": 109,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 55.0,
+    "relevant_ranks_max": 109,
+    "first_lesion_free_flare23_rank": 231,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.811360864539069,
+    "P@10": 1.0,
+    "relevant_ranks_median": 55.0,
+    "relevant_ranks_max": 935,
+    "first_lesion_free_flare23_rank": 206,
+    "relevant_below_first_lesion_free": 23,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 913
+  },
+  "case_00035": {
+   "n_relevant": 62,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 31.5,
+    "relevant_ranks_max": 62,
+    "first_lesion_free_flare23_rank": 192,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.6182440030806938,
+    "P@10": 1.0,
+    "relevant_ranks_median": 31.5,
+    "relevant_ranks_max": 1348,
+    "first_lesion_free_flare23_rank": 166,
+    "relevant_below_first_lesion_free": 25,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 912
+  },
+  "case_00039": {
+   "n_relevant": 61,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 31.0,
+    "relevant_ranks_max": 61,
+    "first_lesion_free_flare23_rank": 192,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.6276251496019856,
+    "P@10": 1.0,
+    "relevant_ranks_median": 31.0,
+    "relevant_ranks_max": 935,
+    "first_lesion_free_flare23_rank": 166,
+    "relevant_below_first_lesion_free": 24,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 912
+  },
+  "case_00042": {
+   "n_relevant": 110,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 55.5,
+    "relevant_ranks_max": 110,
+    "first_lesion_free_flare23_rank": 231,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.804726696442234,
+    "P@10": 1.0,
+    "relevant_ranks_median": 55.5,
+    "relevant_ranks_max": 1348,
+    "first_lesion_free_flare23_rank": 206,
+    "relevant_below_first_lesion_free": 24,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 913
+  },
+  "case_00043": {
+   "n_relevant": 83,
+   "ii": {
+    "AP": 0.9998565691336776,
+    "P@10": 1.0,
+    "relevant_ranks_median": 42.0,
+    "relevant_ranks_max": 84,
+    "first_lesion_free_flare23_rank": 195,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.7553868032856149,
+    "P@10": 1.0,
+    "relevant_ranks_median": 42.0,
+    "relevant_ranks_max": 1348,
+    "first_lesion_free_flare23_rank": 171,
+    "relevant_below_first_lesion_free": 22,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 914
+  },
+  "case_00057": {
+   "n_relevant": 109,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 55.0,
+    "relevant_ranks_max": 109,
+    "first_lesion_free_flare23_rank": 231,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.811360864539069,
+    "P@10": 1.0,
+    "relevant_ranks_median": 55.0,
+    "relevant_ranks_max": 935,
+    "first_lesion_free_flare23_rank": 206,
+    "relevant_below_first_lesion_free": 23,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 913
+  },
+  "case_00060": {
+   "n_relevant": 83,
+   "ii": {
+    "AP": 0.9998565691336776,
+    "P@10": 1.0,
+    "relevant_ranks_median": 42.0,
+    "relevant_ranks_max": 84,
+    "first_lesion_free_flare23_rank": 195,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.7553868032856149,
+    "P@10": 1.0,
+    "relevant_ranks_median": 42.0,
+    "relevant_ranks_max": 1348,
+    "first_lesion_free_flare23_rank": 171,
+    "relevant_below_first_lesion_free": 22,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 914
+  },
+  "case_00067": {
+   "n_relevant": 110,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 55.5,
+    "relevant_ranks_max": 110,
+    "first_lesion_free_flare23_rank": 231,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.804726696442234,
+    "P@10": 1.0,
+    "relevant_ranks_median": 55.5,
+    "relevant_ranks_max": 1348,
+    "first_lesion_free_flare23_rank": 206,
+    "relevant_below_first_lesion_free": 24,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 913
+  },
+  "case_00075": {
+   "n_relevant": 61,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 31.0,
+    "relevant_ranks_max": 61,
+    "first_lesion_free_flare23_rank": 192,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.6276251496019856,
+    "P@10": 1.0,
+    "relevant_ranks_median": 31.0,
+    "relevant_ranks_max": 935,
+    "first_lesion_free_flare23_rank": 166,
+    "relevant_below_first_lesion_free": 24,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 912
+  },
+  "case_00079": {
+   "n_relevant": 109,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 55.0,
+    "relevant_ranks_max": 109,
+    "first_lesion_free_flare23_rank": 231,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.811360864539069,
+    "P@10": 1.0,
+    "relevant_ranks_median": 55.0,
+    "relevant_ranks_max": 935,
+    "first_lesion_free_flare23_rank": 206,
+    "relevant_below_first_lesion_free": 23,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 913
+  },
+  "case_00083": {
+   "n_relevant": 62,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 31.5,
+    "relevant_ranks_max": 62,
+    "first_lesion_free_flare23_rank": 192,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.6182440030806938,
+    "P@10": 1.0,
+    "relevant_ranks_median": 31.5,
+    "relevant_ranks_max": 1348,
+    "first_lesion_free_flare23_rank": 166,
+    "relevant_below_first_lesion_free": 25,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 912
+  },
+  "case_00086": {
+   "n_relevant": 83,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 42.0,
+    "relevant_ranks_max": 83,
+    "first_lesion_free_flare23_rank": 195,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.7553873540204052,
+    "P@10": 1.0,
+    "relevant_ranks_median": 42.0,
+    "relevant_ranks_max": 1347,
+    "first_lesion_free_flare23_rank": 171,
+    "relevant_below_first_lesion_free": 22,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 914
+  },
+  "case_00087": {
+   "n_relevant": 82,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 41.5,
+    "relevant_ranks_max": 82,
+    "first_lesion_free_flare23_rank": 195,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.7638479508830402,
+    "P@10": 1.0,
+    "relevant_ranks_median": 41.5,
+    "relevant_ranks_max": 934,
+    "first_lesion_free_flare23_rank": 171,
+    "relevant_below_first_lesion_free": 21,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 914
+  },
+  "case_00090": {
+   "n_relevant": 110,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 55.5,
+    "relevant_ranks_max": 110,
+    "first_lesion_free_flare23_rank": 231,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.804726696442234,
+    "P@10": 1.0,
+    "relevant_ranks_median": 55.5,
+    "relevant_ranks_max": 1348,
+    "first_lesion_free_flare23_rank": 206,
+    "relevant_below_first_lesion_free": 24,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 913
+  },
+  "case_00092": {
+   "n_relevant": 109,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 55.0,
+    "relevant_ranks_max": 109,
+    "first_lesion_free_flare23_rank": 231,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.811360864539069,
+    "P@10": 1.0,
+    "relevant_ranks_median": 55.0,
+    "relevant_ranks_max": 935,
+    "first_lesion_free_flare23_rank": 206,
+    "relevant_below_first_lesion_free": 23,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 913
+  },
+  "case_00095": {
+   "n_relevant": 56,
+   "ii": {
+    "AP": 0.9950598943595548,
+    "P@10": 1.0,
+    "relevant_ranks_median": 28.5,
+    "relevant_ranks_max": 63,
+    "first_lesion_free_flare23_rank": 160,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.7452311205473369,
+    "P@10": 1.0,
+    "relevant_ranks_median": 28.5,
+    "relevant_ranks_max": 1336,
+    "first_lesion_free_flare23_rank": 125,
+    "relevant_below_first_lesion_free": 15,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 903
+  },
+  "case_00103": {
+   "n_relevant": 82,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 41.5,
+    "relevant_ranks_max": 82,
+    "first_lesion_free_flare23_rank": 195,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.7638479508830402,
+    "P@10": 1.0,
+    "relevant_ranks_median": 41.5,
+    "relevant_ranks_max": 934,
+    "first_lesion_free_flare23_rank": 171,
+    "relevant_below_first_lesion_free": 21,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 914
+  },
+  "case_00105": {
+   "n_relevant": 82,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 41.5,
+    "relevant_ranks_max": 82,
+    "first_lesion_free_flare23_rank": 195,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.7638479508830402,
+    "P@10": 1.0,
+    "relevant_ranks_median": 41.5,
+    "relevant_ranks_max": 934,
+    "first_lesion_free_flare23_rank": 171,
+    "relevant_below_first_lesion_free": 21,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 914
+  },
+  "case_00120": {
+   "n_relevant": 47,
+   "ii": {
+    "AP": 0.9722850678393212,
+    "P@10": 1.0,
+    "relevant_ranks_median": 24.0,
+    "relevant_ranks_max": 61,
+    "first_lesion_free_flare23_rank": 192,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.6097547358410886,
+    "P@10": 1.0,
+    "relevant_ranks_median": 24.0,
+    "relevant_ranks_max": 1347,
+    "first_lesion_free_flare23_rank": 157,
+    "relevant_below_first_lesion_free": 19,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 903
+  },
+  "case_00124": {
+   "n_relevant": 61,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 31.0,
+    "relevant_ranks_max": 61,
+    "first_lesion_free_flare23_rank": 192,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.6276251496019856,
+    "P@10": 1.0,
+    "relevant_ranks_median": 31.0,
+    "relevant_ranks_max": 935,
+    "first_lesion_free_flare23_rank": 166,
+    "relevant_below_first_lesion_free": 24,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 912
+  },
+  "case_00128": {
+   "n_relevant": 61,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 31.0,
+    "relevant_ranks_max": 61,
+    "first_lesion_free_flare23_rank": 192,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.6276251496019856,
+    "P@10": 1.0,
+    "relevant_ranks_median": 31.0,
+    "relevant_ranks_max": 935,
+    "first_lesion_free_flare23_rank": 166,
+    "relevant_below_first_lesion_free": 24,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 912
+  },
+  "case_00146": {
+   "n_relevant": 82,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 41.5,
+    "relevant_ranks_max": 82,
+    "first_lesion_free_flare23_rank": 195,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.7638479508830402,
+    "P@10": 1.0,
+    "relevant_ranks_median": 41.5,
+    "relevant_ranks_max": 934,
+    "first_lesion_free_flare23_rank": 171,
+    "relevant_below_first_lesion_free": 21,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 914
+  },
+  "case_00148": {
+   "n_relevant": 61,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 31.0,
+    "relevant_ranks_max": 61,
+    "first_lesion_free_flare23_rank": 192,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.6276251496019856,
+    "P@10": 1.0,
+    "relevant_ranks_median": 31.0,
+    "relevant_ranks_max": 935,
+    "first_lesion_free_flare23_rank": 166,
+    "relevant_below_first_lesion_free": 24,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 912
+  },
+  "case_00149": {
+   "n_relevant": 109,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 55.0,
+    "relevant_ranks_max": 109,
+    "first_lesion_free_flare23_rank": 231,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.811360864539069,
+    "P@10": 1.0,
+    "relevant_ranks_median": 55.0,
+    "relevant_ranks_max": 935,
+    "first_lesion_free_flare23_rank": 206,
+    "relevant_below_first_lesion_free": 23,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 913
+  },
+  "case_00152": {
+   "n_relevant": 61,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 31.0,
+    "relevant_ranks_max": 61,
+    "first_lesion_free_flare23_rank": 192,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.6276251496019856,
+    "P@10": 1.0,
+    "relevant_ranks_median": 31.0,
+    "relevant_ranks_max": 935,
+    "first_lesion_free_flare23_rank": 166,
+    "relevant_below_first_lesion_free": 24,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 912
+  },
+  "case_00154": {
+   "n_relevant": 83,
+   "ii": {
+    "AP": 0.9998565691336776,
+    "P@10": 1.0,
+    "relevant_ranks_median": 42.0,
+    "relevant_ranks_max": 84,
+    "first_lesion_free_flare23_rank": 195,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.7553868032856149,
+    "P@10": 1.0,
+    "relevant_ranks_median": 42.0,
+    "relevant_ranks_max": 1348,
+    "first_lesion_free_flare23_rank": 171,
+    "relevant_below_first_lesion_free": 22,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 914
+  },
+  "case_00160": {
+   "n_relevant": 109,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 55.0,
+    "relevant_ranks_max": 109,
+    "first_lesion_free_flare23_rank": 231,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.811360864539069,
+    "P@10": 1.0,
+    "relevant_ranks_median": 55.0,
+    "relevant_ranks_max": 935,
+    "first_lesion_free_flare23_rank": 206,
+    "relevant_below_first_lesion_free": 23,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 913
+  },
+  "case_00162": {
+   "n_relevant": 83,
+   "ii": {
+    "AP": 0.9998565691336776,
+    "P@10": 1.0,
+    "relevant_ranks_median": 42.0,
+    "relevant_ranks_max": 84,
+    "first_lesion_free_flare23_rank": 195,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.7553868032856149,
+    "P@10": 1.0,
+    "relevant_ranks_median": 42.0,
+    "relevant_ranks_max": 1348,
+    "first_lesion_free_flare23_rank": 171,
+    "relevant_below_first_lesion_free": 22,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 914
+  },
+  "case_00175": {
+   "n_relevant": 83,
+   "ii": {
+    "AP": 0.9998565691336776,
+    "P@10": 1.0,
+    "relevant_ranks_median": 42.0,
+    "relevant_ranks_max": 84,
+    "first_lesion_free_flare23_rank": 195,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.7553868032856149,
+    "P@10": 1.0,
+    "relevant_ranks_median": 42.0,
+    "relevant_ranks_max": 1348,
+    "first_lesion_free_flare23_rank": 171,
+    "relevant_below_first_lesion_free": 22,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 914
+  },
+  "volume-101": {
+   "n_relevant": 68,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 34.5,
+    "relevant_ranks_max": 68,
+    "first_lesion_free_flare23_rank": 120,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8362892861856541,
+    "P@10": 1.0,
+    "relevant_ranks_median": 34.5,
+    "relevant_ranks_max": 1332,
+    "first_lesion_free_flare23_rank": 104,
+    "relevant_below_first_lesion_free": 12,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 830
+  },
+  "volume-11": {
+   "n_relevant": 36,
+   "ii": {
+    "AP": 0.9978632478632478,
+    "P@10": 1.0,
+    "relevant_ranks_median": 18.5,
+    "relevant_ranks_max": 39,
+    "first_lesion_free_flare23_rank": 120,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.7313967919217552,
+    "P@10": 1.0,
+    "relevant_ranks_median": 18.5,
+    "relevant_ranks_max": 1335,
+    "first_lesion_free_flare23_rank": 106,
+    "relevant_below_first_lesion_free": 10,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 832
+  },
+  "volume-110": {
+   "n_relevant": 68,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 34.5,
+    "relevant_ranks_max": 68,
+    "first_lesion_free_flare23_rank": 120,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8362892861856541,
+    "P@10": 1.0,
+    "relevant_ranks_median": 34.5,
+    "relevant_ranks_max": 1332,
+    "first_lesion_free_flare23_rank": 104,
+    "relevant_below_first_lesion_free": 12,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 830
+  },
+  "volume-113": {
+   "n_relevant": 36,
+   "ii": {
+    "AP": 0.9978632478632478,
+    "P@10": 1.0,
+    "relevant_ranks_median": 18.5,
+    "relevant_ranks_max": 39,
+    "first_lesion_free_flare23_rank": 120,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.7313967919217552,
+    "P@10": 1.0,
+    "relevant_ranks_median": 18.5,
+    "relevant_ranks_max": 1335,
+    "first_lesion_free_flare23_rank": 106,
+    "relevant_below_first_lesion_free": 10,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 832
+  },
+  "volume-116": {
+   "n_relevant": 64,
+   "ii": {
+    "AP": 0.9975937009415853,
+    "P@10": 1.0,
+    "relevant_ranks_median": 32.5,
+    "relevant_ranks_max": 67,
+    "first_lesion_free_flare23_rank": 120,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8227188417683811,
+    "P@10": 1.0,
+    "relevant_ranks_median": 32.5,
+    "relevant_ranks_max": 1331,
+    "first_lesion_free_flare23_rank": 100,
+    "relevant_below_first_lesion_free": 12,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 826
+  },
+  "volume-19": {
+   "n_relevant": 35,
+   "ii": {
+    "AP": 0.9954277585856532,
+    "P@10": 1.0,
+    "relevant_ranks_median": 18.0,
+    "relevant_ranks_max": 38,
+    "first_lesion_free_flare23_rank": 120,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.7515200442113067,
+    "P@10": 1.0,
+    "relevant_ranks_median": 18.0,
+    "relevant_ranks_max": 1334,
+    "first_lesion_free_flare23_rank": 106,
+    "relevant_below_first_lesion_free": 9,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 832
+  },
+  "volume-21": {
+   "n_relevant": 36,
+   "ii": {
+    "AP": 0.9978632478632478,
+    "P@10": 1.0,
+    "relevant_ranks_median": 18.5,
+    "relevant_ranks_max": 39,
+    "first_lesion_free_flare23_rank": 120,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.7313967919217552,
+    "P@10": 1.0,
+    "relevant_ranks_median": 18.5,
+    "relevant_ranks_max": 1335,
+    "first_lesion_free_flare23_rank": 106,
+    "relevant_below_first_lesion_free": 10,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 832
+  },
+  "volume-24": {
+   "n_relevant": 35,
+   "ii": {
+    "AP": 0.9912881481960428,
+    "P@10": 1.0,
+    "relevant_ranks_median": 18.0,
+    "relevant_ranks_max": 38,
+    "first_lesion_free_flare23_rank": 74,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.6379424439237997,
+    "P@10": 1.0,
+    "relevant_ranks_median": 18.0,
+    "relevant_ranks_max": 1335,
+    "first_lesion_free_flare23_rank": 57,
+    "relevant_below_first_lesion_free": 13,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 828
+  },
+  "volume-37": {
+   "n_relevant": 36,
+   "ii": {
+    "AP": 0.9978632478632478,
+    "P@10": 1.0,
+    "relevant_ranks_median": 18.5,
+    "relevant_ranks_max": 39,
+    "first_lesion_free_flare23_rank": 120,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.7313967919217552,
+    "P@10": 1.0,
+    "relevant_ranks_median": 18.5,
+    "relevant_ranks_max": 1335,
+    "first_lesion_free_flare23_rank": 106,
+    "relevant_below_first_lesion_free": 10,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 832
+  },
+  "volume-43": {
+   "n_relevant": 26,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 13.5,
+    "relevant_ranks_max": 26,
+    "first_lesion_free_flare23_rank": 74,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8506975541470381,
+    "P@10": 1.0,
+    "relevant_ranks_median": 13.5,
+    "relevant_ranks_max": 831,
+    "first_lesion_free_flare23_rank": 57,
+    "relevant_below_first_lesion_free": 4,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 828
+  },
+  "volume-44": {
+   "n_relevant": 69,
+   "ii": {
+    "AP": 0.9991776747441169,
+    "P@10": 1.0,
+    "relevant_ranks_median": 35.0,
+    "relevant_ranks_max": 71,
+    "first_lesion_free_flare23_rank": 120,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.824917106022833,
+    "P@10": 1.0,
+    "relevant_ranks_median": 35.0,
+    "relevant_ranks_max": 1335,
+    "first_lesion_free_flare23_rank": 104,
+    "relevant_below_first_lesion_free": 13,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 830
+  },
+  "volume-49": {
+   "n_relevant": 37,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 19.0,
+    "relevant_ranks_max": 37,
+    "first_lesion_free_flare23_rank": 132,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.5828415445976489,
+    "P@10": 1.0,
+    "relevant_ranks_median": 19.0,
+    "relevant_ranks_max": 842,
+    "first_lesion_free_flare23_rank": 113,
+    "relevant_below_first_lesion_free": 16,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 827
+  },
+  "volume-54": {
+   "n_relevant": 25,
+   "ii": {
+    "AP": 0.9984615384615384,
+    "P@10": 1.0,
+    "relevant_ranks_median": 13.0,
+    "relevant_ranks_max": 26,
+    "first_lesion_free_flare23_rank": 74,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.7656444243739009,
+    "P@10": 1.0,
+    "relevant_ranks_median": 13.0,
+    "relevant_ranks_max": 1323,
+    "first_lesion_free_flare23_rank": 54,
+    "relevant_below_first_lesion_free": 6,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 825
+  },
+  "volume-68": {
+   "n_relevant": 29,
+   "ii": {
+    "AP": 0.983554089043849,
+    "P@10": 1.0,
+    "relevant_ranks_median": 15.0,
+    "relevant_ranks_max": 35,
+    "first_lesion_free_flare23_rank": 74,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.7648715972179727,
+    "P@10": 1.0,
+    "relevant_ranks_median": 15.0,
+    "relevant_ranks_max": 1332,
+    "first_lesion_free_flare23_rank": 57,
+    "relevant_below_first_lesion_free": 7,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 828
+  },
+  "volume-70": {
+   "n_relevant": 35,
+   "ii": {
+    "AP": 0.9954277585856532,
+    "P@10": 1.0,
+    "relevant_ranks_median": 18.0,
+    "relevant_ranks_max": 38,
+    "first_lesion_free_flare23_rank": 120,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.7515200442113067,
+    "P@10": 1.0,
+    "relevant_ranks_median": 18.0,
+    "relevant_ranks_max": 1334,
+    "first_lesion_free_flare23_rank": 106,
+    "relevant_below_first_lesion_free": 9,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 832
+  },
+  "volume-75": {
+   "n_relevant": 29,
+   "ii": {
+    "AP": 0.983554089043849,
+    "P@10": 1.0,
+    "relevant_ranks_median": 15.0,
+    "relevant_ranks_max": 35,
+    "first_lesion_free_flare23_rank": 74,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.7648715972179727,
+    "P@10": 1.0,
+    "relevant_ranks_median": 15.0,
+    "relevant_ranks_max": 1332,
+    "first_lesion_free_flare23_rank": 57,
+    "relevant_below_first_lesion_free": 7,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 828
+  },
+  "volume-76": {
+   "n_relevant": 68,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 34.5,
+    "relevant_ranks_max": 68,
+    "first_lesion_free_flare23_rank": 120,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8362892861856541,
+    "P@10": 1.0,
+    "relevant_ranks_median": 34.5,
+    "relevant_ranks_max": 1332,
+    "first_lesion_free_flare23_rank": 104,
+    "relevant_below_first_lesion_free": 12,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 830
+  },
+  "volume-80": {
+   "n_relevant": 36,
+   "ii": {
+    "AP": 0.9978632478632478,
+    "P@10": 1.0,
+    "relevant_ranks_median": 18.5,
+    "relevant_ranks_max": 39,
+    "first_lesion_free_flare23_rank": 120,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.7313967919217552,
+    "P@10": 1.0,
+    "relevant_ranks_median": 18.5,
+    "relevant_ranks_max": 1335,
+    "first_lesion_free_flare23_rank": 106,
+    "relevant_below_first_lesion_free": 10,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 832
+  },
+  "volume-82": {
+   "n_relevant": 23,
+   "ii": {
+    "AP": 0.9873134112264547,
+    "P@10": 1.0,
+    "relevant_ranks_median": 12.0,
+    "relevant_ranks_max": 26,
+    "first_lesion_free_flare23_rank": 106,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.31457715705811634,
+    "P@10": 0.7,
+    "relevant_ranks_median": 830.0,
+    "relevant_ranks_max": 1335,
+    "first_lesion_free_flare23_rank": 86,
+    "relevant_below_first_lesion_free": 16,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 826
+  },
+  "volume-93": {
+   "n_relevant": 68,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 34.5,
+    "relevant_ranks_max": 68,
+    "first_lesion_free_flare23_rank": 120,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8362892861856541,
+    "P@10": 1.0,
+    "relevant_ranks_median": 34.5,
+    "relevant_ranks_max": 1332,
+    "first_lesion_free_flare23_rank": 104,
+    "relevant_below_first_lesion_free": 12,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 830
+  },
+  "volume-99": {
+   "n_relevant": 37,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 19.0,
+    "relevant_ranks_max": 37,
+    "first_lesion_free_flare23_rank": 132,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.5828415445976489,
+    "P@10": 1.0,
+    "relevant_ranks_median": 19.0,
+    "relevant_ranks_max": 842,
+    "first_lesion_free_flare23_rank": 113,
+    "relevant_below_first_lesion_free": 16,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 827
+  },
+  "pancreas_015": {
+   "n_relevant": 71,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 36.0,
+    "relevant_ranks_max": 71,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.6329500555086017,
+    "P@10": 1.0,
+    "relevant_ranks_median": 36.0,
+    "relevant_ranks_max": 1355,
+    "first_lesion_free_flare23_rank": 299,
+    "relevant_below_first_lesion_free": 24,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 1002
+  },
+  "pancreas_019": {
+   "n_relevant": 163,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 82.0,
+    "relevant_ranks_max": 163,
+    "first_lesion_free_flare23_rank": 337,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8603348945965809,
+    "P@10": 1.0,
+    "relevant_ranks_median": 82.0,
+    "relevant_ranks_max": 1356,
+    "first_lesion_free_flare23_rank": 308,
+    "relevant_below_first_lesion_free": 19,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 1008
+  },
+  "pancreas_041": {
+   "n_relevant": 157,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 79.0,
+    "relevant_ranks_max": 157,
+    "first_lesion_free_flare23_rank": 337,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8180481906919868,
+    "P@10": 1.0,
+    "relevant_ranks_median": 79.0,
+    "relevant_ranks_max": 1350,
+    "first_lesion_free_flare23_rank": 296,
+    "relevant_below_first_lesion_free": 25,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 996
+  },
+  "pancreas_045": {
+   "n_relevant": 162,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 81.5,
+    "relevant_ranks_max": 162,
+    "first_lesion_free_flare23_rank": 337,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8469907227852718,
+    "P@10": 1.0,
+    "relevant_ranks_median": 81.5,
+    "relevant_ranks_max": 1355,
+    "first_lesion_free_flare23_rank": 299,
+    "relevant_below_first_lesion_free": 27,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 999
+  },
+  "pancreas_048": {
+   "n_relevant": 71,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 36.0,
+    "relevant_ranks_max": 71,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.6329500555086017,
+    "P@10": 1.0,
+    "relevant_ranks_median": 36.0,
+    "relevant_ranks_max": 1355,
+    "first_lesion_free_flare23_rank": 299,
+    "relevant_below_first_lesion_free": 24,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 1002
+  },
+  "pancreas_049": {
+   "n_relevant": 70,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 35.5,
+    "relevant_ranks_max": 70,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.6548421575075261,
+    "P@10": 1.0,
+    "relevant_ranks_median": 35.5,
+    "relevant_ranks_max": 1354,
+    "first_lesion_free_flare23_rank": 307,
+    "relevant_below_first_lesion_free": 15,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 1010
+  },
+  "pancreas_056": {
+   "n_relevant": 183,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 92.0,
+    "relevant_ranks_max": 183,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8180114717975673,
+    "P@10": 1.0,
+    "relevant_ranks_median": 92.0,
+    "relevant_ranks_max": 1360,
+    "first_lesion_free_flare23_rank": 293,
+    "relevant_below_first_lesion_free": 35,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 996
+  },
+  "pancreas_064": {
+   "n_relevant": 70,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 35.5,
+    "relevant_ranks_max": 70,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.6548421575075261,
+    "P@10": 1.0,
+    "relevant_ranks_median": 35.5,
+    "relevant_ranks_max": 1354,
+    "first_lesion_free_flare23_rank": 307,
+    "relevant_below_first_lesion_free": 15,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 1010
+  },
+  "pancreas_078": {
+   "n_relevant": 159,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 80.0,
+    "relevant_ranks_max": 159,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.9201296282712368,
+    "P@10": 1.0,
+    "relevant_ranks_median": 80.0,
+    "relevant_ranks_max": 1336,
+    "first_lesion_free_flare23_rank": 291,
+    "relevant_below_first_lesion_free": 13,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 994
+  },
+  "pancreas_083": {
+   "n_relevant": 71,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 36.0,
+    "relevant_ranks_max": 71,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.6329500555086017,
+    "P@10": 1.0,
+    "relevant_ranks_median": 36.0,
+    "relevant_ranks_max": 1355,
+    "first_lesion_free_flare23_rank": 299,
+    "relevant_below_first_lesion_free": 24,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 1002
+  },
+  "pancreas_096": {
+   "n_relevant": 71,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 36.0,
+    "relevant_ranks_max": 71,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.6329500555086017,
+    "P@10": 1.0,
+    "relevant_ranks_median": 36.0,
+    "relevant_ranks_max": 1355,
+    "first_lesion_free_flare23_rank": 299,
+    "relevant_below_first_lesion_free": 24,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 1002
+  },
+  "pancreas_101": {
+   "n_relevant": 162,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 81.5,
+    "relevant_ranks_max": 162,
+    "first_lesion_free_flare23_rank": 337,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8469907227852718,
+    "P@10": 1.0,
+    "relevant_ranks_median": 81.5,
+    "relevant_ranks_max": 1355,
+    "first_lesion_free_flare23_rank": 299,
+    "relevant_below_first_lesion_free": 27,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 999
+  },
+  "pancreas_107": {
+   "n_relevant": 184,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 92.5,
+    "relevant_ranks_max": 184,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8359948061375134,
+    "P@10": 1.0,
+    "relevant_ranks_median": 92.5,
+    "relevant_ranks_max": 1361,
+    "first_lesion_free_flare23_rank": 304,
+    "relevant_below_first_lesion_free": 25,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 1007
+  },
+  "pancreas_110": {
+   "n_relevant": 159,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 80.0,
+    "relevant_ranks_max": 159,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.9201296282712368,
+    "P@10": 1.0,
+    "relevant_ranks_median": 80.0,
+    "relevant_ranks_max": 1336,
+    "first_lesion_free_flare23_rank": 291,
+    "relevant_below_first_lesion_free": 13,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 994
+  },
+  "pancreas_119": {
+   "n_relevant": 71,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 36.0,
+    "relevant_ranks_max": 71,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.6329500555086017,
+    "P@10": 1.0,
+    "relevant_ranks_median": 36.0,
+    "relevant_ranks_max": 1355,
+    "first_lesion_free_flare23_rank": 299,
+    "relevant_below_first_lesion_free": 24,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 1002
+  },
+  "pancreas_122": {
+   "n_relevant": 71,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 36.0,
+    "relevant_ranks_max": 71,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.6329500555086017,
+    "P@10": 1.0,
+    "relevant_ranks_median": 36.0,
+    "relevant_ranks_max": 1355,
+    "first_lesion_free_flare23_rank": 299,
+    "relevant_below_first_lesion_free": 24,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 1002
+  },
+  "pancreas_125": {
+   "n_relevant": 70,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 35.5,
+    "relevant_ranks_max": 70,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.6548421575075261,
+    "P@10": 1.0,
+    "relevant_ranks_median": 35.5,
+    "relevant_ranks_max": 1354,
+    "first_lesion_free_flare23_rank": 307,
+    "relevant_below_first_lesion_free": 15,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 1010
+  },
+  "pancreas_127": {
+   "n_relevant": 71,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 36.0,
+    "relevant_ranks_max": 71,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.6329500555086017,
+    "P@10": 1.0,
+    "relevant_ranks_median": 36.0,
+    "relevant_ranks_max": 1355,
+    "first_lesion_free_flare23_rank": 299,
+    "relevant_below_first_lesion_free": 24,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 1002
+  },
+  "pancreas_137": {
+   "n_relevant": 163,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 82.0,
+    "relevant_ranks_max": 163,
+    "first_lesion_free_flare23_rank": 337,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8603348945965809,
+    "P@10": 1.0,
+    "relevant_ranks_median": 82.0,
+    "relevant_ranks_max": 1356,
+    "first_lesion_free_flare23_rank": 308,
+    "relevant_below_first_lesion_free": 19,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 1008
+  },
+  "pancreas_149": {
+   "n_relevant": 70,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 35.5,
+    "relevant_ranks_max": 70,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.6548421575075261,
+    "P@10": 1.0,
+    "relevant_ranks_median": 35.5,
+    "relevant_ranks_max": 1354,
+    "first_lesion_free_flare23_rank": 307,
+    "relevant_below_first_lesion_free": 15,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 1010
+  },
+  "pancreas_157": {
+   "n_relevant": 163,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 82.0,
+    "relevant_ranks_max": 163,
+    "first_lesion_free_flare23_rank": 337,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8603348945965809,
+    "P@10": 1.0,
+    "relevant_ranks_median": 82.0,
+    "relevant_ranks_max": 1356,
+    "first_lesion_free_flare23_rank": 308,
+    "relevant_below_first_lesion_free": 19,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 1008
+  },
+  "pancreas_172": {
+   "n_relevant": 165,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 83.0,
+    "relevant_ranks_max": 165,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8910817325068308,
+    "P@10": 1.0,
+    "relevant_ranks_median": 83.0,
+    "relevant_ranks_max": 1342,
+    "first_lesion_free_flare23_rank": 291,
+    "relevant_below_first_lesion_free": 19,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 994
+  },
+  "pancreas_191": {
+   "n_relevant": 71,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 36.0,
+    "relevant_ranks_max": 71,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.6329500555086017,
+    "P@10": 1.0,
+    "relevant_ranks_median": 36.0,
+    "relevant_ranks_max": 1355,
+    "first_lesion_free_flare23_rank": 299,
+    "relevant_below_first_lesion_free": 24,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 1002
+  },
+  "pancreas_200": {
+   "n_relevant": 163,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 82.0,
+    "relevant_ranks_max": 163,
+    "first_lesion_free_flare23_rank": 337,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8603348945965809,
+    "P@10": 1.0,
+    "relevant_ranks_median": 82.0,
+    "relevant_ranks_max": 1356,
+    "first_lesion_free_flare23_rank": 308,
+    "relevant_below_first_lesion_free": 19,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 1008
+  },
+  "pancreas_201": {
+   "n_relevant": 68,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 34.5,
+    "relevant_ranks_max": 68,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.4381798403290251,
+    "P@10": 1.0,
+    "relevant_ranks_median": 285.5,
+    "relevant_ranks_max": 1352,
+    "first_lesion_free_flare23_rank": 291,
+    "relevant_below_first_lesion_free": 29,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 994
+  },
+  "pancreas_210": {
+   "n_relevant": 165,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 83.0,
+    "relevant_ranks_max": 165,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8910817325068308,
+    "P@10": 1.0,
+    "relevant_ranks_median": 83.0,
+    "relevant_ranks_max": 1342,
+    "first_lesion_free_flare23_rank": 291,
+    "relevant_below_first_lesion_free": 19,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 994
+  },
+  "pancreas_218": {
+   "n_relevant": 170,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 85.5,
+    "relevant_ranks_max": 170,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8727552309055111,
+    "P@10": 1.0,
+    "relevant_ranks_median": 85.5,
+    "relevant_ranks_max": 1347,
+    "first_lesion_free_flare23_rank": 293,
+    "relevant_below_first_lesion_free": 22,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 996
+  },
+  "pancreas_226": {
+   "n_relevant": 163,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 82.0,
+    "relevant_ranks_max": 163,
+    "first_lesion_free_flare23_rank": 337,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8603348945965809,
+    "P@10": 1.0,
+    "relevant_ranks_median": 82.0,
+    "relevant_ranks_max": 1356,
+    "first_lesion_free_flare23_rank": 308,
+    "relevant_below_first_lesion_free": 19,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 1008
+  },
+  "pancreas_235": {
+   "n_relevant": 165,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 83.0,
+    "relevant_ranks_max": 165,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8910817325068308,
+    "P@10": 1.0,
+    "relevant_ranks_median": 83.0,
+    "relevant_ranks_max": 1342,
+    "first_lesion_free_flare23_rank": 291,
+    "relevant_below_first_lesion_free": 19,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 994
+  },
+  "pancreas_239": {
+   "n_relevant": 183,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 92.0,
+    "relevant_ranks_max": 183,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8318333178904479,
+    "P@10": 1.0,
+    "relevant_ranks_median": 92.0,
+    "relevant_ranks_max": 1360,
+    "first_lesion_free_flare23_rank": 300,
+    "relevant_below_first_lesion_free": 28,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 1003
+  },
+  "pancreas_241": {
+   "n_relevant": 71,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 36.0,
+    "relevant_ranks_max": 71,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.6329500555086017,
+    "P@10": 1.0,
+    "relevant_ranks_median": 36.0,
+    "relevant_ranks_max": 1355,
+    "first_lesion_free_flare23_rank": 299,
+    "relevant_below_first_lesion_free": 24,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 1002
+  },
+  "pancreas_256": {
+   "n_relevant": 162,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 81.5,
+    "relevant_ranks_max": 162,
+    "first_lesion_free_flare23_rank": 337,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8469907227852718,
+    "P@10": 1.0,
+    "relevant_ranks_median": 81.5,
+    "relevant_ranks_max": 1355,
+    "first_lesion_free_flare23_rank": 299,
+    "relevant_below_first_lesion_free": 27,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 999
+  },
+  "pancreas_258": {
+   "n_relevant": 157,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 79.0,
+    "relevant_ranks_max": 157,
+    "first_lesion_free_flare23_rank": 337,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8061154507199102,
+    "P@10": 1.0,
+    "relevant_ranks_median": 79.0,
+    "relevant_ranks_max": 1350,
+    "first_lesion_free_flare23_rank": 290,
+    "relevant_below_first_lesion_free": 31,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 990
+  },
+  "pancreas_259": {
+   "n_relevant": 148,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 74.5,
+    "relevant_ranks_max": 148,
+    "first_lesion_free_flare23_rank": 337,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8524153527021519,
+    "P@10": 1.0,
+    "relevant_ranks_median": 74.5,
+    "relevant_ranks_max": 1341,
+    "first_lesion_free_flare23_rank": 292,
+    "relevant_below_first_lesion_free": 20,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 992
+  },
+  "pancreas_275": {
+   "n_relevant": 70,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 35.5,
+    "relevant_ranks_max": 70,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.6548421575075261,
+    "P@10": 1.0,
+    "relevant_ranks_median": 35.5,
+    "relevant_ranks_max": 1354,
+    "first_lesion_free_flare23_rank": 307,
+    "relevant_below_first_lesion_free": 15,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 1010
+  },
+  "pancreas_285": {
+   "n_relevant": 183,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 92.0,
+    "relevant_ranks_max": 183,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8180114717975673,
+    "P@10": 1.0,
+    "relevant_ranks_median": 92.0,
+    "relevant_ranks_max": 1360,
+    "first_lesion_free_flare23_rank": 293,
+    "relevant_below_first_lesion_free": 35,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 996
+  },
+  "pancreas_289": {
+   "n_relevant": 70,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 35.5,
+    "relevant_ranks_max": 70,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.6548421575075261,
+    "P@10": 1.0,
+    "relevant_ranks_median": 35.5,
+    "relevant_ranks_max": 1354,
+    "first_lesion_free_flare23_rank": 307,
+    "relevant_below_first_lesion_free": 15,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 1010
+  },
+  "pancreas_301": {
+   "n_relevant": 170,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 85.5,
+    "relevant_ranks_max": 170,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8727552309055111,
+    "P@10": 1.0,
+    "relevant_ranks_median": 85.5,
+    "relevant_ranks_max": 1347,
+    "first_lesion_free_flare23_rank": 293,
+    "relevant_below_first_lesion_free": 22,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 996
+  },
+  "pancreas_315": {
+   "n_relevant": 163,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 82.0,
+    "relevant_ranks_max": 163,
+    "first_lesion_free_flare23_rank": 337,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8603348945965809,
+    "P@10": 1.0,
+    "relevant_ranks_median": 82.0,
+    "relevant_ranks_max": 1356,
+    "first_lesion_free_flare23_rank": 308,
+    "relevant_below_first_lesion_free": 19,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 1008
+  },
+  "pancreas_327": {
+   "n_relevant": 183,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 92.0,
+    "relevant_ranks_max": 183,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8318333178904479,
+    "P@10": 1.0,
+    "relevant_ranks_median": 92.0,
+    "relevant_ranks_max": 1360,
+    "first_lesion_free_flare23_rank": 300,
+    "relevant_below_first_lesion_free": 28,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 1003
+  },
+  "pancreas_330": {
+   "n_relevant": 70,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 35.5,
+    "relevant_ranks_max": 70,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.6548421575075261,
+    "P@10": 1.0,
+    "relevant_ranks_median": 35.5,
+    "relevant_ranks_max": 1354,
+    "first_lesion_free_flare23_rank": 307,
+    "relevant_below_first_lesion_free": 15,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 1010
+  },
+  "pancreas_336": {
+   "n_relevant": 163,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 82.0,
+    "relevant_ranks_max": 163,
+    "first_lesion_free_flare23_rank": 337,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8603348945965809,
+    "P@10": 1.0,
+    "relevant_ranks_median": 82.0,
+    "relevant_ranks_max": 1356,
+    "first_lesion_free_flare23_rank": 308,
+    "relevant_below_first_lesion_free": 19,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 1008
+  },
+  "pancreas_339": {
+   "n_relevant": 184,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 92.5,
+    "relevant_ranks_max": 184,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8359948061375134,
+    "P@10": 1.0,
+    "relevant_ranks_median": 92.5,
+    "relevant_ranks_max": 1361,
+    "first_lesion_free_flare23_rank": 304,
+    "relevant_below_first_lesion_free": 25,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 1007
+  },
+  "pancreas_348": {
+   "n_relevant": 159,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 80.0,
+    "relevant_ranks_max": 159,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.9201296282712368,
+    "P@10": 1.0,
+    "relevant_ranks_median": 80.0,
+    "relevant_ranks_max": 1336,
+    "first_lesion_free_flare23_rank": 291,
+    "relevant_below_first_lesion_free": 13,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 994
+  },
+  "pancreas_356": {
+   "n_relevant": 163,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 82.0,
+    "relevant_ranks_max": 163,
+    "first_lesion_free_flare23_rank": 337,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8603348945965809,
+    "P@10": 1.0,
+    "relevant_ranks_median": 82.0,
+    "relevant_ranks_max": 1356,
+    "first_lesion_free_flare23_rank": 308,
+    "relevant_below_first_lesion_free": 19,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 1008
+  },
+  "pancreas_366": {
+   "n_relevant": 162,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 81.5,
+    "relevant_ranks_max": 162,
+    "first_lesion_free_flare23_rank": 337,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8469907227852718,
+    "P@10": 1.0,
+    "relevant_ranks_median": 81.5,
+    "relevant_ranks_max": 1355,
+    "first_lesion_free_flare23_rank": 299,
+    "relevant_below_first_lesion_free": 27,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 999
+  },
+  "pancreas_369": {
+   "n_relevant": 163,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 82.0,
+    "relevant_ranks_max": 163,
+    "first_lesion_free_flare23_rank": 337,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8603348945965809,
+    "P@10": 1.0,
+    "relevant_ranks_median": 82.0,
+    "relevant_ranks_max": 1356,
+    "first_lesion_free_flare23_rank": 308,
+    "relevant_below_first_lesion_free": 19,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 1008
+  },
+  "pancreas_377": {
+   "n_relevant": 70,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 35.5,
+    "relevant_ranks_max": 70,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.6548421575075261,
+    "P@10": 1.0,
+    "relevant_ranks_median": 35.5,
+    "relevant_ranks_max": 1354,
+    "first_lesion_free_flare23_rank": 307,
+    "relevant_below_first_lesion_free": 15,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 1010
+  },
+  "pancreas_378": {
+   "n_relevant": 165,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 83.0,
+    "relevant_ranks_max": 165,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8910817325068308,
+    "P@10": 1.0,
+    "relevant_ranks_median": 83.0,
+    "relevant_ranks_max": 1342,
+    "first_lesion_free_flare23_rank": 291,
+    "relevant_below_first_lesion_free": 19,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 994
+  },
+  "pancreas_393": {
+   "n_relevant": 163,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 82.0,
+    "relevant_ranks_max": 163,
+    "first_lesion_free_flare23_rank": 337,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8603348945965809,
+    "P@10": 1.0,
+    "relevant_ranks_median": 82.0,
+    "relevant_ranks_max": 1356,
+    "first_lesion_free_flare23_rank": 308,
+    "relevant_below_first_lesion_free": 19,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 1008
+  },
+  "pancreas_399": {
+   "n_relevant": 162,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 81.5,
+    "relevant_ranks_max": 162,
+    "first_lesion_free_flare23_rank": 337,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8469907227852718,
+    "P@10": 1.0,
+    "relevant_ranks_median": 81.5,
+    "relevant_ranks_max": 1355,
+    "first_lesion_free_flare23_rank": 299,
+    "relevant_below_first_lesion_free": 27,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 999
+  },
+  "pancreas_404": {
+   "n_relevant": 184,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 92.5,
+    "relevant_ranks_max": 184,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8359948061375134,
+    "P@10": 1.0,
+    "relevant_ranks_median": 92.5,
+    "relevant_ranks_max": 1361,
+    "first_lesion_free_flare23_rank": 304,
+    "relevant_below_first_lesion_free": 25,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 1007
+  },
+  "pancreas_418": {
+   "n_relevant": 170,
+   "ii": {
+    "AP": 1.0,
+    "P@10": 1.0,
+    "relevant_ranks_median": 85.5,
+    "relevant_ranks_max": 170,
+    "first_lesion_free_flare23_rank": 335,
+    "relevant_below_first_lesion_free": 0,
+    "lesion_free_in_top10": 0
+   },
+   "iii_prime": {
+    "AP": 0.8727552309055111,
+    "P@10": 1.0,
+    "relevant_ranks_median": 85.5,
+    "relevant_ranks_max": 1347,
+    "first_lesion_free_flare23_rank": 293,
+    "relevant_below_first_lesion_free": 22,
+    "lesion_free_in_top10": 0
+   },
+   "first_displaced_relevant_rank_iii_prime": 996
+  }
+ }
+}

@@ -1,0 +1,630 @@
+{
+ "note": "Extended duplicate audit over the 21 LiTS queries (queue item 2) \u2014 activates now that the\nLiTS geometry is recovered (lits_geometry_map.py / MSD Task03 headers).\n\nTests per (LiTS query, FLARE23 candidate), same definitions as duplicate_scan_audit.py:\n  T1 exact geometry: same native shape AND spacing (1e-3). Run against the shipped predicted\n     FLARE23 mask headers (576 of 1,312 \u2014 the cases with masks in the release copy; the\n     organ-voxel +-0.5 % clause needs GT labels, streamable from the Drive Metadata.zip for\n     any hit). The known FLARE23 twin of the LiTS family, FLARE23_0102 (= liver_64 =\n     volume-64), is already OUT of the de-duplicated pool and volume-64 is not a query.\n  T2 physical: liver volume within 1 % AND tumor volume within 2 % (both physical), against\n     ALL 1,312 GT-KG FLARE23 records (corpus_flare23_kg.json) using the REAL LiTS volumes.\n\nAny pair passing either test is flagged for confirmation; none flagged -> the 1,366-case\nde-duplicated pool stands for the LiTS queries.\n-> results/audit/lits_extended_audit.json",
+ "n_queries": 21,
+ "n_flare23_headers_checked": 576,
+ "n_flare23_gt_records": 1312,
+ "known_prior_twin": "FLARE23_0102 = liver_64 = volume-64 (not a query; already out of the pool)",
+ "pairs_flagged": [
+  {
+   "query": "volume-101",
+   "flare23": "flare23_FLARE23_2100",
+   "test": "T2_physical",
+   "q_organ_cm3": 2255.56,
+   "f_organ_cm3": 2255.56,
+   "q_tumor_cm3": 131.69,
+   "f_tumor_cm3": 131.69,
+   "in_dedup_pool": true
+  },
+  {
+   "query": "volume-11",
+   "flare23": "flare23_FLARE23_0416",
+   "test": "T1_exact_geometry",
+   "shape": [
+    512,
+    512,
+    466
+   ],
+   "spacing": [
+    0.671875,
+    0.671875,
+    1.0
+   ],
+   "in_dedup_pool": true
+  },
+  {
+   "query": "volume-11",
+   "flare23": "flare23_FLARE23_0416",
+   "test": "T2_physical",
+   "q_organ_cm3": 1468.66,
+   "f_organ_cm3": 1468.66,
+   "q_tumor_cm3": 4.76,
+   "f_tumor_cm3": 4.76,
+   "in_dedup_pool": true
+  },
+  {
+   "query": "volume-110",
+   "flare23": "flare23_FLARE23_1524",
+   "test": "T2_physical",
+   "q_organ_cm3": 1284.74,
+   "f_organ_cm3": 1284.74,
+   "q_tumor_cm3": 51.59,
+   "f_tumor_cm3": 51.59,
+   "in_dedup_pool": true
+  },
+  {
+   "query": "volume-113",
+   "flare23": "flare23_FLARE23_2145",
+   "test": "T1_exact_geometry",
+   "shape": [
+    512,
+    512,
+    836
+   ],
+   "spacing": [
+    0.781000018119812,
+    0.781000018119812,
+    0.800000011920929
+   ],
+   "in_dedup_pool": true
+  },
+  {
+   "query": "volume-113",
+   "flare23": "flare23_FLARE23_2145",
+   "test": "T2_physical",
+   "q_organ_cm3": 1603.5,
+   "f_organ_cm3": 1603.5,
+   "q_tumor_cm3": 41.12,
+   "f_tumor_cm3": 41.12,
+   "in_dedup_pool": true
+  },
+  {
+   "query": "volume-116",
+   "flare23": "flare23_FLARE23_0101",
+   "test": "T1_exact_geometry",
+   "shape": [
+    512,
+    512,
+    908
+   ],
+   "spacing": [
+    0.7890625,
+    0.7890625,
+    0.699999988079071
+   ],
+   "in_dedup_pool": true
+  },
+  {
+   "query": "volume-116",
+   "flare23": "flare23_FLARE23_0101",
+   "test": "T2_physical",
+   "q_organ_cm3": 1590.78,
+   "f_organ_cm3": 1590.78,
+   "q_tumor_cm3": 266.35,
+   "f_tumor_cm3": 266.35,
+   "in_dedup_pool": true
+  },
+  {
+   "query": "volume-19",
+   "flare23": "flare23_FLARE23_1791",
+   "test": "T1_exact_geometry",
+   "shape": [
+    512,
+    512,
+    547
+   ],
+   "spacing": [
+    0.751953125,
+    0.751953125,
+    0.7999879717826843
+   ],
+   "in_dedup_pool": true
+  },
+  {
+   "query": "volume-19",
+   "flare23": "flare23_FLARE23_1791",
+   "test": "T2_physical",
+   "q_organ_cm3": 1746.73,
+   "f_organ_cm3": 1739.44,
+   "q_tumor_cm3": 8.38,
+   "f_tumor_cm3": 8.38,
+   "in_dedup_pool": true
+  },
+  {
+   "query": "volume-21",
+   "flare23": "flare23_FLARE23_0120",
+   "test": "T1_exact_geometry",
+   "shape": [
+    512,
+    512,
+    437
+   ],
+   "spacing": [
+    0.767578125,
+    0.767578125,
+    1.0
+   ],
+   "in_dedup_pool": true
+  },
+  {
+   "query": "volume-21",
+   "flare23": "flare23_FLARE23_0120",
+   "test": "T2_physical",
+   "q_organ_cm3": 1761.04,
+   "f_organ_cm3": 1771.53,
+   "q_tumor_cm3": 21.37,
+   "f_tumor_cm3": 21.37,
+   "in_dedup_pool": true
+  },
+  {
+   "query": "volume-24",
+   "flare23": "flare23_FLARE23_1786",
+   "test": "T2_physical",
+   "q_organ_cm3": 1373.9,
+   "f_organ_cm3": 1379.54,
+   "q_tumor_cm3": 0.96,
+   "f_tumor_cm3": 0.96,
+   "in_dedup_pool": true
+  },
+  {
+   "query": "volume-37",
+   "flare23": "flare23_FLARE23_0119",
+   "test": "T2_physical",
+   "q_organ_cm3": 1857.04,
+   "f_organ_cm3": 1857.04,
+   "q_tumor_cm3": 14.98,
+   "f_tumor_cm3": 14.98,
+   "in_dedup_pool": true
+  },
+  {
+   "query": "volume-43",
+   "flare23": "flare23_FLARE23_1930",
+   "test": "T2_physical",
+   "q_organ_cm3": 2709.85,
+   "f_organ_cm3": 2720.71,
+   "q_tumor_cm3": 7.34,
+   "f_tumor_cm3": 7.34,
+   "in_dedup_pool": true
+  },
+  {
+   "query": "volume-44",
+   "flare23": "flare23_FLARE23_1960",
+   "test": "T1_exact_geometry",
+   "shape": [
+    512,
+    512,
+    119
+   ],
+   "spacing": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "in_dedup_pool": true
+  },
+  {
+   "query": "volume-44",
+   "flare23": "flare23_FLARE23_1960",
+   "test": "T2_physical",
+   "q_organ_cm3": 1920.51,
+   "f_organ_cm3": 1920.51,
+   "q_tumor_cm3": 185.99,
+   "f_tumor_cm3": 185.99,
+   "in_dedup_pool": true
+  },
+  {
+   "query": "volume-68",
+   "flare23": "flare23_FLARE23_1438",
+   "test": "T1_exact_geometry",
+   "shape": [
+    512,
+    512,
+    266
+   ],
+   "spacing": [
+    0.6660159826278687,
+    0.6660159826278687,
+    2.49993896484375
+   ],
+   "in_dedup_pool": true
+  },
+  {
+   "query": "volume-68",
+   "flare23": "flare23_FLARE23_1438",
+   "test": "T2_physical",
+   "q_organ_cm3": 1402.57,
+   "f_organ_cm3": 1402.57,
+   "q_tumor_cm3": 5.42,
+   "f_tumor_cm3": 5.42,
+   "in_dedup_pool": true
+  },
+  {
+   "query": "volume-70",
+   "flare23": "flare23_FLARE23_0037",
+   "test": "T1_exact_geometry",
+   "shape": [
+    512,
+    512,
+    333
+   ],
+   "spacing": [
+    0.5976560115814209,
+    0.5976560115814209,
+    1.25
+   ],
+   "in_dedup_pool": true
+  },
+  {
+   "query": "volume-70",
+   "flare23": "flare23_FLARE23_0037",
+   "test": "T2_physical",
+   "q_organ_cm3": 1001.27,
+   "f_organ_cm3": 1004.37,
+   "q_tumor_cm3": 53.88,
+   "f_tumor_cm3": 53.88,
+   "in_dedup_pool": true
+  },
+  {
+   "query": "volume-75",
+   "flare23": "flare23_FLARE23_0051",
+   "test": "T1_exact_geometry",
+   "shape": [
+    512,
+    512,
+    89
+   ],
+   "spacing": [
+    0.7578125,
+    0.7578125,
+    5.0
+   ],
+   "in_dedup_pool": true
+  },
+  {
+   "query": "volume-75",
+   "flare23": "flare23_FLARE23_0051",
+   "test": "T2_physical",
+   "q_organ_cm3": 1749.07,
+   "f_organ_cm3": 1749.05,
+   "q_tumor_cm3": 7.76,
+   "f_tumor_cm3": 7.76,
+   "in_dedup_pool": true
+  },
+  {
+   "query": "volume-76",
+   "flare23": "flare23_FLARE23_1027",
+   "test": "T1_exact_geometry",
+   "shape": [
+    512,
+    512,
+    168
+   ],
+   "spacing": [
+    0.7421879768371582,
+    0.7421879768371582,
+    2.5
+   ],
+   "in_dedup_pool": true
+  },
+  {
+   "query": "volume-80",
+   "flare23": "flare23_FLARE23_1622",
+   "test": "T2_physical",
+   "q_organ_cm3": 1304.56,
+   "f_organ_cm3": 1304.56,
+   "q_tumor_cm3": 82.5,
+   "f_tumor_cm3": 82.5,
+   "in_dedup_pool": true
+  },
+  {
+   "query": "volume-82",
+   "flare23": "flare23_FLARE23_1854",
+   "test": "T2_physical",
+   "q_organ_cm3": 1478.84,
+   "f_organ_cm3": 1476.31,
+   "q_tumor_cm3": 44.31,
+   "f_tumor_cm3": 44.31,
+   "in_dedup_pool": true
+  },
+  {
+   "query": "volume-93",
+   "flare23": "flare23_FLARE23_1575",
+   "test": "T2_physical",
+   "q_organ_cm3": 1504.25,
+   "f_organ_cm3": 1503.36,
+   "q_tumor_cm3": 122.04,
+   "f_tumor_cm3": 122.04,
+   "in_dedup_pool": true
+  },
+  {
+   "query": "volume-99",
+   "flare23": "flare23_FLARE23_1530",
+   "test": "T2_physical",
+   "q_organ_cm3": 1572.74,
+   "f_organ_cm3": 1572.74,
+   "q_tumor_cm3": 5.23,
+   "f_tumor_cm3": 5.23,
+   "in_dedup_pool": true
+  }
+ ],
+ "new_twins_in_dedup_pool": [
+  "flare23_FLARE23_0037",
+  "flare23_FLARE23_0051",
+  "flare23_FLARE23_0101",
+  "flare23_FLARE23_0119",
+  "flare23_FLARE23_0120",
+  "flare23_FLARE23_0416",
+  "flare23_FLARE23_1027",
+  "flare23_FLARE23_1438",
+  "flare23_FLARE23_1524",
+  "flare23_FLARE23_1530",
+  "flare23_FLARE23_1575",
+  "flare23_FLARE23_1622",
+  "flare23_FLARE23_1786",
+  "flare23_FLARE23_1791",
+  "flare23_FLARE23_1854",
+  "flare23_FLARE23_1930",
+  "flare23_FLARE23_1960",
+  "flare23_FLARE23_2100",
+  "flare23_FLARE23_2145"
+ ],
+ "verdict": "19 of the 21 LiTS queries have voxel-exact FLARE23 twins in the 1,366-case pool (FLARE23 was assembled from public sets incl. LiTS) -> RE-DEDUP: pool 1,366 -> 1,347.",
+ "gt_label_confirmation": {
+  "method": "GT labels streamed from Drive Metadata.zip (ranged zip reads); per candidate: shape, spacing, liver (label 1) and tumor (FLARE 14 vs Task03 2) voxel counts vs the mapped Task03 label.",
+  "results": {
+   "FLARE23_0037": {
+    "query": "volume-70",
+    "task03": "liver_70",
+    "same_shape": true,
+    "same_spacing": true,
+    "flare_liver_vox": 2249486,
+    "task03_liver_vox": 2242523,
+    "flare_tumor_vox": 120665,
+    "task03_tumor_vox": 120665,
+    "tumor_exact": true,
+    "liver_delta_pct": 0.31
+   },
+   "FLARE23_0051": {
+    "query": "volume-75",
+    "task03": "liver_75",
+    "same_shape": true,
+    "same_spacing": true,
+    "flare_liver_vox": 609127,
+    "task03_liver_vox": 609134,
+    "flare_tumor_vox": 2703,
+    "task03_tumor_vox": 2703,
+    "tumor_exact": true,
+    "liver_delta_pct": 0.001
+   },
+   "FLARE23_0101": {
+    "query": "volume-116",
+    "task03": "liver_116",
+    "same_shape": true,
+    "same_spacing": true,
+    "flare_liver_vox": 3649978,
+    "task03_liver_vox": 3649978,
+    "flare_tumor_vox": 611132,
+    "task03_tumor_vox": 611132,
+    "tumor_exact": true,
+    "liver_delta_pct": 0.0
+   },
+   "FLARE23_0119": {
+    "query": "volume-37",
+    "task03": "liver_37",
+    "same_shape": true,
+    "same_spacing": true,
+    "flare_liver_vox": 1857041,
+    "task03_liver_vox": 1857041,
+    "flare_tumor_vox": 14981,
+    "task03_tumor_vox": 14981,
+    "tumor_exact": true,
+    "liver_delta_pct": 0.0
+   },
+   "FLARE23_0120": {
+    "query": "volume-21",
+    "task03": "liver_21",
+    "same_shape": true,
+    "same_spacing": true,
+    "flare_liver_vox": 3006786,
+    "task03_liver_vox": 2988990,
+    "flare_tumor_vox": 36271,
+    "task03_tumor_vox": 36271,
+    "tumor_exact": true,
+    "liver_delta_pct": 0.595
+   },
+   "FLARE23_0416": {
+    "query": "volume-11",
+    "task03": "liver_11",
+    "same_shape": true,
+    "same_spacing": true,
+    "flare_liver_vox": 3253446,
+    "task03_liver_vox": 3253446,
+    "flare_tumor_vox": 10549,
+    "task03_tumor_vox": 10549,
+    "tumor_exact": true,
+    "liver_delta_pct": 0.0
+   },
+   "FLARE23_1027": {
+    "query": "volume-76",
+    "task03": "liver_76",
+    "same_shape": true,
+    "same_spacing": true,
+    "flare_liver_vox": 1259239,
+    "task03_liver_vox": 1242705,
+    "flare_tumor_vox": 193508,
+    "task03_tumor_vox": 193508,
+    "tumor_exact": true,
+    "liver_delta_pct": 1.33
+   },
+   "FLARE23_1438": {
+    "query": "volume-68",
+    "task03": "liver_68",
+    "same_shape": true,
+    "same_spacing": true,
+    "flare_liver_vox": 1264814,
+    "task03_liver_vox": 1264814,
+    "flare_tumor_vox": 4888,
+    "task03_tumor_vox": 4888,
+    "tumor_exact": true,
+    "liver_delta_pct": 0.0
+   },
+   "FLARE23_1524": {
+    "query": "volume-110",
+    "task03": "liver_110",
+    "same_shape": true,
+    "same_spacing": true,
+    "flare_liver_vox": 3097837,
+    "task03_liver_vox": 3097843,
+    "flare_tumor_vox": 124406,
+    "task03_tumor_vox": 124406,
+    "tumor_exact": true,
+    "liver_delta_pct": 0.0
+   },
+   "FLARE23_1530": {
+    "query": "volume-99",
+    "task03": "liver_99",
+    "same_shape": true,
+    "same_spacing": true,
+    "flare_liver_vox": 3681199,
+    "task03_liver_vox": 3681200,
+    "flare_tumor_vox": 12253,
+    "task03_tumor_vox": 12253,
+    "tumor_exact": true,
+    "liver_delta_pct": 0.0
+   },
+   "FLARE23_1575": {
+    "query": "volume-93",
+    "task03": "liver_93",
+    "same_shape": true,
+    "same_spacing": true,
+    "flare_liver_vox": 4288011,
+    "task03_liver_vox": 4290558,
+    "flare_tumor_vox": 348088,
+    "task03_tumor_vox": 348088,
+    "tumor_exact": true,
+    "liver_delta_pct": 0.059
+   },
+   "FLARE23_1622": {
+    "query": "volume-80",
+    "task03": "liver_80",
+    "same_shape": true,
+    "same_spacing": true,
+    "flare_liver_vox": 1395850,
+    "task03_liver_vox": 1395850,
+    "flare_tumor_vox": 88269,
+    "task03_tumor_vox": 88269,
+    "tumor_exact": true,
+    "liver_delta_pct": 0.0
+   },
+   "FLARE23_1786": {
+    "query": "volume-24",
+    "task03": "liver_24",
+    "same_shape": true,
+    "same_spacing": true,
+    "flare_liver_vox": 2049255,
+    "task03_liver_vox": 2040878,
+    "flare_tumor_vox": 1422,
+    "task03_tumor_vox": 1422,
+    "tumor_exact": true,
+    "liver_delta_pct": 0.41
+   },
+   "FLARE23_1791": {
+    "query": "volume-19",
+    "task03": "liver_19",
+    "same_shape": true,
+    "same_spacing": true,
+    "flare_liver_vox": 3845420,
+    "task03_liver_vox": 3861552,
+    "flare_tumor_vox": 18528,
+    "task03_tumor_vox": 18528,
+    "tumor_exact": true,
+    "liver_delta_pct": 0.418
+   },
+   "FLARE23_1854": {
+    "query": "volume-82",
+    "task03": "liver_82",
+    "same_shape": true,
+    "same_spacing": true,
+    "flare_liver_vox": 4718295,
+    "task03_liver_vox": 4726373,
+    "flare_tumor_vox": 141610,
+    "task03_tumor_vox": 141610,
+    "tumor_exact": true,
+    "liver_delta_pct": 0.171
+   },
+   "FLARE23_1930": {
+    "query": "volume-43",
+    "task03": "liver_43",
+    "same_shape": true,
+    "same_spacing": true,
+    "flare_liver_vox": 2720707,
+    "task03_liver_vox": 2709848,
+    "flare_tumor_vox": 7337,
+    "task03_tumor_vox": 7337,
+    "tumor_exact": true,
+    "liver_delta_pct": 0.401
+   },
+   "FLARE23_1960": {
+    "query": "volume-44",
+    "task03": "liver_44",
+    "same_shape": true,
+    "same_spacing": true,
+    "flare_liver_vox": 1920507,
+    "task03_liver_vox": 1920507,
+    "flare_tumor_vox": 185990,
+    "task03_tumor_vox": 185990,
+    "tumor_exact": true,
+    "liver_delta_pct": 0.0
+   },
+   "FLARE23_2100": {
+    "query": "volume-101",
+    "task03": "liver_101",
+    "same_shape": true,
+    "same_spacing": true,
+    "flare_liver_vox": 6481591,
+    "task03_liver_vox": 6481591,
+    "flare_tumor_vox": 378439,
+    "task03_tumor_vox": 378439,
+    "tumor_exact": true,
+    "liver_delta_pct": 0.0
+   },
+   "FLARE23_2145": {
+    "query": "volume-113",
+    "task03": "liver_113",
+    "same_shape": true,
+    "same_spacing": true,
+    "flare_liver_vox": 3286066,
+    "task03_liver_vox": 3286066,
+    "flare_tumor_vox": 84270,
+    "task03_tumor_vox": 84270,
+    "tumor_exact": true,
+    "liver_delta_pct": 0.0
+   }
+  },
+  "summary": "ALL 19 candidates confirmed: identical shape+spacing, tumor voxel counts EXACTLY equal; liver deltas <=1.33% (FLARE23 liver re-annotation; volume-76/FLARE23_1027 exceeded the 1% T2 organ tolerance for this reason and was caught by T1)."
+ },
+ "twins_confirmed": [
+  "flare23_FLARE23_0037",
+  "flare23_FLARE23_0051",
+  "flare23_FLARE23_0101",
+  "flare23_FLARE23_0119",
+  "flare23_FLARE23_0120",
+  "flare23_FLARE23_0416",
+  "flare23_FLARE23_1027",
+  "flare23_FLARE23_1438",
+  "flare23_FLARE23_1524",
+  "flare23_FLARE23_1530",
+  "flare23_FLARE23_1575",
+  "flare23_FLARE23_1622",
+  "flare23_FLARE23_1786",
+  "flare23_FLARE23_1791",
+  "flare23_FLARE23_1854",
+  "flare23_FLARE23_1930",
+  "flare23_FLARE23_1960",
+  "flare23_FLARE23_2100",
+  "flare23_FLARE23_2145"
+ ],
+ "queries_without_twin": [
+  "volume-49",
+  "volume-54"
+ ]
+}

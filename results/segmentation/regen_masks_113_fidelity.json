@@ -1,0 +1,29 @@
+{
+ "note": "Regenerate the 113-cohort single-organ PREDICTED masks locally (v11 item 2, predicted half).\n\nThe frozen masks behind corpus_predicted_{kits,lits,msd}.json are unavailable (KiTS/MSD on the\nDelta store, LiTS gone entirely), so the containment-v2 re-extraction regenerates them with the\nsame SEMI-ORACLE protocol as build_predicted_corpus.py \u2014 per labeled slice (GT structure\n>= 50 px at 256^2): GT box + 3 px pad, text prompt, predict at 256^2, resize back to the native\nslice \u2014 on the locally available weights:\n    organ pass: base facebook/sam3 (text = organ name)\n    tumor pass: base + the FLARE23-only tumor expert (~/hmmkg_ckpts/sam3_tumor_flare_only.pth)\nThe 2026-09-16 Drive round measured the FLARE expert within ~0.007 DSC of the per-dataset\nexperts under this protocol (LiTS 0.778 vs 0.785, MSD 0.815 vs 0.818, KiTS 0.903 vs 0.910), and\nper-case fidelity vs the FROZEN corpora is recorded here (has_tumor concordance, organ/tumor\nvoxel ratios) so the downstream containment estimate carries its own validation.\n\nDatasets/grids (matching the frozen corpora): kits native (slice axis 0), msd native (axis 2),\nlits = the 256^2 liver-slab npy grid (axis 0) \u2014 the grid the frozen LiTS corpus was built on.\nMasks are saved EXCLUSIVE (organ 1, tumor 2, tumor wins) for the delivered extractor; the raw\nindependent organ/tumor voxel counts (and their overlap) go to the per-case sidecar JSON.\n\n  HF_TOKEN=... python regen_predicted_masks_113.py [--datasets kits lits msd] [--batch 8]\n-> /path/to/staging/acm_data/masks_predicted_113_regen/{ds}/{cid}.nii.gz + {cid}.json\n-> results/segmentation/regen_masks_113_fidelity.json (summary)",
+ "summary": {
+  "kits": {
+   "n": 36,
+   "has_tumor_concordance": "36/36",
+   "tumor_vox_median_ratio_regen_over_frozen": 1.067,
+   "tumor_vox_corr": 0.9995,
+   "mean_dice_organ_gt": 0.844,
+   "mean_dice_tumor_gt": 0.878
+  },
+  "lits": {
+   "n": 21,
+   "has_tumor_concordance": "21/21",
+   "tumor_vox_median_ratio_regen_over_frozen": 1.132,
+   "tumor_vox_corr": 0.9421,
+   "mean_dice_organ_gt": 0.948,
+   "mean_dice_tumor_gt": 0.679
+  },
+  "msd": {
+   "n": 56,
+   "has_tumor_concordance": "56/56",
+   "tumor_vox_median_ratio_regen_over_frozen": 1.185,
+   "tumor_vox_corr": 0.9821,
+   "mean_dice_organ_gt": 0.792,
+   "mean_dice_tumor_gt": 0.808
+  }
+ }
+}

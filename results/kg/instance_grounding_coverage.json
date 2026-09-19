@@ -1,0 +1,65 @@
+{
+ "note": "fraction of organ / lesion instance nodes with a mapped_to_concept edge, per shipped graph (after the renal-tumor / pooled-kidney grounding of 2026-09-14; before it the KiTS predicted graph had 0/36 organs and 0/35 lesions grounded and the FLARE23 graph 0/202 kidney lesions)",
+ "graphs": {
+  "unified_mmkg": {
+   "Organ": {
+    "nodes": 907,
+    "grounded": 907,
+    "coverage": 1.0
+   },
+   "Lesion": {
+    "nodes": 388,
+    "grounded": 388,
+    "coverage": 1.0
+   }
+  },
+  "unified_mmkg_flare23": {
+   "Organ": {
+    "nodes": 8501,
+    "grounded": 8501,
+    "coverage": 1.0
+   },
+   "Lesion": {
+    "nodes": 608,
+    "grounded": 608,
+    "coverage": 1.0
+   }
+  },
+  "unified_mmkg_predicted_kits": {
+   "Organ": {
+    "nodes": 36,
+    "grounded": 36,
+    "coverage": 1.0
+   },
+   "Lesion": {
+    "nodes": 35,
+    "grounded": 35,
+    "coverage": 1.0
+   }
+  },
+  "unified_mmkg_predicted_lits": {
+   "Organ": {
+    "nodes": 21,
+    "grounded": 21,
+    "coverage": 1.0
+   },
+   "Lesion": {
+    "nodes": 21,
+    "grounded": 21,
+    "coverage": 1.0
+   }
+  },
+  "unified_mmkg_predicted_msd": {
+   "Organ": {
+    "nodes": 56,
+    "grounded": 56,
+    "coverage": 1.0
+   },
+   "Lesion": {
+    "nodes": 53,
+    "grounded": 53,
+    "coverage": 1.0
+   }
+  }
+ }
+}

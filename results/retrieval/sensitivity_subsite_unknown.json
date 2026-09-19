@@ -1,0 +1,19 @@
+{
+ "note": "Sensitivity of the proposed configuration (ii) to the pancreatic sub-site convention: FLARE23 records carry\nanatomic_location = 'unknown', which feat_agree() scores as a mismatch against an MSD query's head/body/tail.\nHere 'unknown' on either side makes the sub-site feature not applicable (dropped from the per-organ mean) and\nTabs 7 / 8 / 9(b) are recomputed.  Output: results/retrieval/sensitivity_subsite_unknown.json",
+ "rows": {
+  "(ii) as published": {
+   "tab7_mAP": 0.972,
+   "tab8_mAP": 0.999,
+   "tab8_P@10": 1.0,
+   "tab9b_mAP": 1.0,
+   "tab9b_P@10": 0.997
+  },
+  "(ii) sub-site n/a when unknown": {
+   "tab7_mAP": 0.972,
+   "tab8_mAP": 0.999,
+   "tab8_P@10": 1.0,
+   "tab9b_mAP": 1.0,
+   "tab9b_P@10": 0.997
+  }
+ }
+}

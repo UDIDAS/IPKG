@@ -1,0 +1,5 @@
+PREFIX mmkg: <http://example.org/mmkg/schema/>
+SELECT ?organType ?burden (COUNT(?l) AS ?n)
+WHERE { ?l a mmkg:Lesion ; mmkg:tumorBurden ?burden ; mmkg:located_in ?o .
+        ?o a ?organType . FILTER(?organType != mmkg:Organ) }
+GROUP BY ?organType ?burden ORDER BY ?organType DESC(?n)

@@ -1,0 +1,84 @@
+{
+ "n_cases": 576,
+ "n_components": 749,
+ "component_agreement": 0.9853,
+ "n_app_distance_ties": 41,
+ "disagreement_census": {
+  "liver->kidney:other": 7,
+  "pancreas->liver:other": 3,
+  "pancreas->kidney:other": 1
+ },
+ "cases_with_hosttumor_flips": [
+  {
+   "case": "FLARE23_0488",
+   "organs": {
+    "liver": 2,
+    "kidney": 2
+   }
+  },
+  {
+   "case": "FLARE23_0617",
+   "organs": {
+    "liver": 1,
+    "kidney": 1
+   }
+  },
+  {
+   "case": "FLARE23_0700",
+   "organs": {
+    "liver": 1,
+    "kidney": 1
+   }
+  },
+  {
+   "case": "FLARE23_0775",
+   "organs": {
+    "liver": 1,
+    "pancreas": 1
+   }
+  },
+  {
+   "case": "FLARE23_0878",
+   "organs": {
+    "liver": 1,
+    "kidney": 1
+   }
+  },
+  {
+   "case": "FLARE23_1208",
+   "organs": {
+    "liver": 1,
+    "pancreas": 1
+   }
+  },
+  {
+   "case": "FLARE23_1352",
+   "organs": {
+    "liver": 1,
+    "pancreas": 1
+   }
+  },
+  {
+   "case": "FLARE23_1988",
+   "organs": {
+    "liver": 1,
+    "kidney": 1
+   }
+  },
+  {
+   "case": "FLARE23_2092",
+   "organs": {
+    "liver": 1,
+    "kidney": 1
+   }
+  },
+  {
+   "case": "FLARE23_2172",
+   "organs": {
+    "pancreas": 1,
+    "kidney": 1
+   }
+  }
+ ],
+ "rules": "Host-assignment agreement check: app rule vs pipeline Eq. 3, on the frozen predicted\nFLARE23 masks \u2014 coauthor review item, prepared 2026-09-15. RUNS WHERE THE MASKS LIVE (cluster or\na machine with masks_predicted_flare23.zip extracted); CPU only.\n\nThe two rules are NOT identical in form, so agreement is an empirical question:\n  * Pipeline Eq. 3 (the evaluated extractor, app_handoff/extract_phenotypes.py): each tumor\n    connected component is attributed to the ONE organ whose 3-VOXEL binary dilation overlaps\n    it most (argmax, competitive across organs; zero-overlap components stay unattributed).\n    On anisotropic grids the reach is anisotropic: 3 voxels of 2 mm slices = 6 mm in z.\n  * App rule (segx_measure.host_attach_tolerance_mm / host_split): a component belongs to the\n    host organ when its minimum surface distance is <= max(2.0 mm, 1.05 * max(spacing)) \u2014\n    metric, isotropic, per-host threshold (2.1 mm on 2 mm-slice scans).\n  Disagreements are expected exactly for components sitting 2.1\u20136 mm from an organ in z, and\n  for components near TWO organs (argmax vs per-host threshold can differ).\n\n  When two organs sit at exactly the same minimum distance (within tolerance), the app-rule\n  host is broken alphabetically (deterministic; fixed 2026-09-16 \u2014 the earlier set-iteration\n  tie-break made the result PYTHONHASHSEED-dependent by a few components per run;\n  n_app_distance_ties in the output counts affected components)."
+}

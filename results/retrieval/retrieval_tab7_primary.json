@@ -1,0 +1,151 @@
+{
+ "n_queries": 113,
+ "relevance": "reference-derived (GT-mask phenotypes), query and candidate",
+ "universe": [
+  "liver",
+  "spleen",
+  "pancreas",
+  "kidney"
+ ],
+ "stats": "B_boot=5000, B_perm=20000, Holm family F1",
+ "rows": {
+  "(i) Reference phenotypes + gamma (upper bound)": {
+   "n_queries": 113,
+   "P@5": 1.0,
+   "P@10": 0.996,
+   "mAP": 0.992,
+   "nDCG": 0.999,
+   "spurious@10": 0.0,
+   "mismatch@10": 0.0,
+   "dmAP_vs_ii": {
+    "n_common": 113,
+    "delta": 0.02,
+    "ci95": [
+     0.014,
+     0.025
+    ],
+    "p_raw": 4.999750012499375e-05,
+    "p_holm": 0.00015
+   }
+  },
+  "(ii) Predicted phenotypes + gamma (proposed)": {
+   "n_queries": 113,
+   "P@5": 1.0,
+   "P@10": 0.992,
+   "mAP": 0.972,
+   "nDCG": 0.996,
+   "spurious@10": 0.0,
+   "mismatch@10": 0.0
+  },
+  "(iii) Predicted, coverage-blind (no gamma)": {
+   "n_queries": 113,
+   "P@5": 0.984,
+   "P@10": 0.969,
+   "mAP": 0.933,
+   "nDCG": 0.977,
+   "spurious@10": 0.023,
+   "mismatch@10": 0.02,
+   "dmAP_vs_ii": {
+    "n_common": 113,
+    "delta": -0.039,
+    "ci95": [
+     -0.06,
+     -0.021
+    ],
+    "p_raw": 4.999750012499375e-05,
+    "p_holm": 0.0001
+   }
+  },
+  "(iv) Predicted, organ-agnostic baseline": {
+   "n_queries": 113,
+   "P@5": 0.478,
+   "P@10": 0.436,
+   "mAP": 0.493,
+   "nDCG": 0.439,
+   "spurious@10": 0.564,
+   "mismatch@10": 0.55,
+   "dmAP_vs_ii": {
+    "n_common": 113,
+    "delta": -0.479,
+    "ci95": [
+     -0.51,
+     -0.447
+    ],
+    "p_raw": 4.999750012499375e-05,
+    "p_holm": 5e-05
+   }
+  }
+ },
+ "baseline_rows_aggregate_only": {
+  "(v-vii) radiomics (organ-agnostic)": {
+   "P@5": 0.834,
+   "P@10": 0.804,
+   "mAP": 0.715,
+   "nDCG": 0.819,
+   "spurious@10": 0.159,
+   "n_queries": 113,
+   "mismatch@10": null,
+   "dmAP_vs_ii": "TBD - needs per-query rerun (CT data)"
+  },
+  "(v-vii) radiomics_organ_conditioned": {
+   "P@5": 0.956,
+   "P@10": 0.953,
+   "mAP": 0.954,
+   "nDCG": 0.951,
+   "spurious@10": 0.0,
+   "n_queries": 113,
+   "mismatch@10": null,
+   "dmAP_vs_ii": "TBD - needs per-query rerun (CT data)"
+  },
+  "(v-vii) image_embedding (organ-agnostic)": {
+   "P@5": 0.885,
+   "P@10": 0.84,
+   "mAP": 0.709,
+   "nDCG": 0.855,
+   "spurious@10": 0.087,
+   "n_queries": 113,
+   "mismatch@10": null,
+   "dmAP_vs_ii": "TBD - needs per-query rerun (CT data)"
+  },
+  "(v-vii) image_embedding_organ_conditioned": {
+   "P@5": 0.917,
+   "P@10": 0.913,
+   "mAP": 0.925,
+   "nDCG": 0.914,
+   "spurious@10": 0.0,
+   "n_queries": 113,
+   "mismatch@10": null,
+   "dmAP_vs_ii": "TBD - needs per-query rerun (CT data)"
+  }
+ },
+ "legacy_v6_reproduction": {
+  "note": "Stored retrieval_on_predicted.json rows 3-4 reproduce ONLY under the legacy universe (right/left kidney, no pooled kidney) + msd,lits,kits file order: KiTS queries then score 0 for every candidate under coverage-blind/base and the metrics ride on tie order. Rows here are that reproduction; the corrected-universe rows above supersede them.",
+  "universe": [
+   "liver",
+   "spleen",
+   "pancreas",
+   "right_kidney",
+   "left_kidney"
+  ],
+  "rows": {
+   "3_PREDICTED_no_gamma (coverage_blind)": {
+    "n_queries": 113,
+    "P@5": 0.681,
+    "P@10": 0.673,
+    "mAP": 0.714,
+    "nDCG": 0.676,
+    "spurious@10": 0.32,
+    "mismatch@10": 0.294
+   },
+   "4_PREDICTED_base (organ-agnostic)": {
+    "n_queries": 113,
+    "P@5": 0.598,
+    "P@10": 0.535,
+    "mAP": 0.524,
+    "nDCG": 0.558,
+    "spurious@10": 0.465,
+    "mismatch@10": 0.453
+   }
+  }
+ }
+}

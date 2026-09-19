@@ -1,0 +1,22 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "n_queries": 20,
+  "n_pairs": 467,
+  "cohen_kappa_expert_vs_automatic": 0.256,
+  "raw_agreement": 0.628,
+  "expert_relevance_mAP": 0.79,
+  "automatic_relevance_mAP": 0.998,
+  "n_scored_queries": 20,
+  "diagnostics": {
+    "n_kappa_pairs": 320,
+    "auto_positive_rate": 0.5,
+    "llm_positive_rate": 0.128,
+    "confusion": {
+      "auto1_llm1": 41,
+      "auto1_llm0": 119,
+      "auto0_llm1": 0,
+      "auto0_llm0": 160
+    }
+  },
+  "caveat": "LLM-as-expert judge = Qwen/Qwen2.5-7B-Instruct. Interpret with the diagnostics: low \u03ba reflects (dis)agreement between holistic LLM judgment and the STRICT automatic relevance rule (exact match on all 4 tumor categoricals), not necessarily model weakness."
+}

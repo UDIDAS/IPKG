@@ -1,0 +1,3368 @@
+{
+ "note": "Containment re-extraction from the frozen 576 predicted FLARE23 masks (queue item 4). Rule: organ := organ UNION tumor-in-organ, implemented as slice-wise (axial) fill_holes of the exclusive organ mask, then contained iff >=90 % of the organ's attributed tumor lies within the 3-voxel dilation of the restored organ (the original extractor's tolerance). The frozen corpus is degenerate (every tumor row 'boundary': exclusive labels make (tum & om)=0). Attribution winner-take-all reproduced verbatim; tumor_voxels asserted against the frozen corpus.",
+ "masks": "/path/to/staging/acm_data/flare23_masks/masks_predicted_flare23",
+ "n_masks": 576,
+ "n_tumor_rows": 260,
+ "containment_old": {
+  "boundary": 260
+ },
+ "containment_v2": {
+  "boundary": 155,
+  "contained": 105
+ },
+ "containment_v2_by_organ": {
+  "kidney": {
+   "boundary": 87,
+   "contained": 9
+  },
+  "liver": {
+   "boundary": 30,
+   "contained": 16
+  },
+  "pancreas": {
+   "contained": 80,
+   "boundary": 38
+  }
+ },
+ "containment_v2_fill3d_sensitivity": {
+  "boundary": 184,
+  "contained": 76
+ },
+ "n_flips": 105,
+ "flips": [
+  {
+   "case": "FLARE23_0016",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_0042",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_0048",
+   "organ": "liver",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.9488
+  },
+  {
+   "case": "FLARE23_0051",
+   "organ": "liver",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_0120",
+   "organ": "liver",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.9178
+  },
+  {
+   "case": "FLARE23_0143",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_0156",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_0162",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_0185",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_0246",
+   "organ": "liver",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_0253",
+   "organ": "liver",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.9513
+  },
+  {
+   "case": "FLARE23_0283",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_0299",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.994
+  },
+  {
+   "case": "FLARE23_0332",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_0365",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.9332
+  },
+  {
+   "case": "FLARE23_0413",
+   "organ": "kidney",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_0416",
+   "organ": "liver",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_0419",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_0431",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.9167
+  },
+  {
+   "case": "FLARE23_0448",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_0458",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.9367
+  },
+  {
+   "case": "FLARE23_0488",
+   "organ": "liver",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_0504",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_0511",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.9405
+  },
+  {
+   "case": "FLARE23_0520",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.9802
+  },
+  {
+   "case": "FLARE23_0533",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_0536",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_0540",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.9726
+  },
+  {
+   "case": "FLARE23_0586",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_0734",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_0751",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_0758",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_0787",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_0797",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_0835",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.9003
+  },
+  {
+   "case": "FLARE23_0845",
+   "organ": "kidney",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.9973
+  },
+  {
+   "case": "FLARE23_0850",
+   "organ": "kidney",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.987
+  },
+  {
+   "case": "FLARE23_0862",
+   "organ": "kidney",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.9993
+  },
+  {
+   "case": "FLARE23_0889",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_0896",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_0909",
+   "organ": "kidney",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_0927",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_0981",
+   "organ": "kidney",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.9233
+  },
+  {
+   "case": "FLARE23_1003",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.9214
+  },
+  {
+   "case": "FLARE23_1037",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1041",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1054",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1069",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1117",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.9646
+  },
+  {
+   "case": "FLARE23_1136",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.9502
+  },
+  {
+   "case": "FLARE23_1153",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1159",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1208",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.9576
+  },
+  {
+   "case": "FLARE23_1212",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1233",
+   "organ": "liver",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1236",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1256",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1363",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1405",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1438",
+   "organ": "liver",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1454",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.9603
+  },
+  {
+   "case": "FLARE23_1465",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1466",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.9339
+  },
+  {
+   "case": "FLARE23_1470",
+   "organ": "liver",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1482",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1492",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1520",
+   "organ": "kidney",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.9097
+  },
+  {
+   "case": "FLARE23_1564",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.9011
+  },
+  {
+   "case": "FLARE23_1577",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1583",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1617",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1639",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1667",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1678",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.9964
+  },
+  {
+   "case": "FLARE23_1680",
+   "organ": "liver",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1683",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1685",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1722",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.9987
+  },
+  {
+   "case": "FLARE23_1732",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1734",
+   "organ": "kidney",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1758",
+   "organ": "liver",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1760",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.9973
+  },
+  {
+   "case": "FLARE23_1775",
+   "organ": "liver",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1791",
+   "organ": "liver",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1801",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.9646
+  },
+  {
+   "case": "FLARE23_1817",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.9357
+  },
+  {
+   "case": "FLARE23_1820",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1856",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1867",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.998
+  },
+  {
+   "case": "FLARE23_1899",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1906",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.9481
+  },
+  {
+   "case": "FLARE23_1909",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1947",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1951",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_1991",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.9571
+  },
+  {
+   "case": "FLARE23_1994",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.9957
+  },
+  {
+   "case": "FLARE23_1998",
+   "organ": "liver",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_2003",
+   "organ": "liver",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_2009",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_2015",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_2019",
+   "organ": "kidney",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_2065",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_2069",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 1.0
+  },
+  {
+   "case": "FLARE23_2102",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.9402
+  },
+  {
+   "case": "FLARE23_2125",
+   "organ": "pancreas",
+   "old": "boundary",
+   "new": "contained",
+   "frac": 0.9276
+  }
+ ],
+ "attribution_mismatches": [],
+ "per_case": {
+  "FLARE23_0003": {
+   "kidney": {
+    "tumor_voxels": 29948,
+    "frac_fill2d_dil3": 0.8786,
+    "frac_fill3d_dil3": 0.4485,
+    "frac_fill2d_nodil": 0.48,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0016": {
+   "pancreas": {
+    "tumor_voxels": 212,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 1.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_0037": {
+   "liver": {
+    "tumor_voxels": 118468,
+    "frac_fill2d_dil3": 0.531,
+    "frac_fill3d_dil3": 0.3485,
+    "frac_fill2d_nodil": 0.1957,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0042": {
+   "pancreas": {
+    "tumor_voxels": 6600,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 0.8065,
+    "frac_fill2d_nodil": 0.7715,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0048": {
+   "liver": {
+    "tumor_voxels": 8528,
+    "frac_fill2d_dil3": 0.9488,
+    "frac_fill3d_dil3": 0.9417,
+    "frac_fill2d_nodil": 0.3701,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_0051": {
+   "liver": {
+    "tumor_voxels": 2032,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 0.0984,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_0054": {
+   "pancreas": {
+    "tumor_voxels": 12848,
+    "frac_fill2d_dil3": 0.6002,
+    "frac_fill3d_dil3": 0.5412,
+    "frac_fill2d_nodil": 0.0215,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0060": {
+   "kidney": {
+    "tumor_voxels": 1736,
+    "frac_fill2d_dil3": 0.856,
+    "frac_fill3d_dil3": 0.856,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0070": {
+   "pancreas": {
+    "tumor_voxels": 1860,
+    "frac_fill2d_dil3": 0.5968,
+    "frac_fill3d_dil3": 0.5968,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0081": {
+   "kidney": {
+    "tumor_voxels": 176576,
+    "frac_fill2d_dil3": 0.1454,
+    "frac_fill3d_dil3": 0.1454,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0097": {
+   "kidney": {
+    "tumor_voxels": 6560,
+    "frac_fill2d_dil3": 0.4017,
+    "frac_fill3d_dil3": 0.4017,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0101": {
+   "liver": {
+    "tumor_voxels": 616368,
+    "frac_fill2d_dil3": 0.215,
+    "frac_fill3d_dil3": 0.2086,
+    "frac_fill2d_nodil": 0.0033,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0102": {
+   "liver": {
+    "tumor_voxels": 180016,
+    "frac_fill2d_dil3": 0.4368,
+    "frac_fill3d_dil3": 0.2466,
+    "frac_fill2d_nodil": 0.1945,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0118": {
+   "kidney": {
+    "tumor_voxels": 23792,
+    "frac_fill2d_dil3": 0.2072,
+    "frac_fill3d_dil3": 0.2072,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0120": {
+   "liver": {
+    "tumor_voxels": 37424,
+    "frac_fill2d_dil3": 0.9178,
+    "frac_fill3d_dil3": 0.7079,
+    "frac_fill2d_nodil": 0.5628,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0126": {
+   "kidney": {
+    "tumor_voxels": 57152,
+    "frac_fill2d_dil3": 0.2958,
+    "frac_fill3d_dil3": 0.2958,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0133": {
+   "kidney": {
+    "tumor_voxels": 17088,
+    "frac_fill2d_dil3": 0.332,
+    "frac_fill3d_dil3": 0.332,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0143": {
+   "pancreas": {
+    "tumor_voxels": 1752,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 0.7991,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_0146": {
+   "kidney": {
+    "tumor_voxels": 3660,
+    "frac_fill2d_dil3": 0.7049,
+    "frac_fill3d_dil3": 0.6579,
+    "frac_fill2d_nodil": 0.0623,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0156": {
+   "pancreas": {
+    "tumor_voxels": 3528,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 1.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_0162": {
+   "pancreas": {
+    "tumor_voxels": 2764,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 0.822,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_0167": {
+   "kidney": {
+    "tumor_voxels": 45176,
+    "frac_fill2d_dil3": 0.272,
+    "frac_fill3d_dil3": 0.2144,
+    "frac_fill2d_nodil": 0.0696,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0185": {
+   "pancreas": {
+    "tumor_voxels": 1400,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 0.1971,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_0212": {
+   "kidney": {
+    "tumor_voxels": 263140,
+    "frac_fill2d_dil3": 0.1507,
+    "frac_fill3d_dil3": 0.1506,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0226": {
+   "kidney": {
+    "tumor_voxels": 13740,
+    "frac_fill2d_dil3": 0.4708,
+    "frac_fill3d_dil3": 0.4708,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0236": {
+   "kidney": {
+    "tumor_voxels": 5796,
+    "frac_fill2d_dil3": 0.4058,
+    "frac_fill3d_dil3": 0.4058,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0239": {
+   "kidney": {
+    "tumor_voxels": 108096,
+    "frac_fill2d_dil3": 0.179,
+    "frac_fill3d_dil3": 0.179,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0246": {
+   "liver": {
+    "tumor_voxels": 340,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 0.3412,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_0253": {
+   "liver": {
+    "tumor_voxels": 2156,
+    "frac_fill2d_dil3": 0.9513,
+    "frac_fill3d_dil3": 0.8789,
+    "frac_fill2d_nodil": 0.2282,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0255": {
+   "pancreas": {
+    "tumor_voxels": 5944,
+    "frac_fill2d_dil3": 0.7355,
+    "frac_fill3d_dil3": 0.7355,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0262": {
+   "pancreas": {
+    "tumor_voxels": 8852,
+    "frac_fill2d_dil3": 0.8351,
+    "frac_fill3d_dil3": 0.6857,
+    "frac_fill2d_nodil": 0.1401,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0283": {
+   "pancreas": {
+    "tumor_voxels": 1604,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 0.4115,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_0285": {
+   "pancreas": {
+    "tumor_voxels": 2144,
+    "frac_fill2d_dil3": 0.7663,
+    "frac_fill3d_dil3": 0.7663,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0286": {
+   "kidney": {
+    "tumor_voxels": 1826992,
+    "frac_fill2d_dil3": 0.037,
+    "frac_fill3d_dil3": 0.0365,
+    "frac_fill2d_nodil": 0.0005,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0299": {
+   "pancreas": {
+    "tumor_voxels": 3476,
+    "frac_fill2d_dil3": 0.994,
+    "frac_fill3d_dil3": 0.9255,
+    "frac_fill2d_nodil": 0.153,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_0309": {
+   "kidney": {
+    "tumor_voxels": 1700,
+    "frac_fill2d_dil3": 0.6876,
+    "frac_fill3d_dil3": 0.6876,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0332": {
+   "pancreas": {
+    "tumor_voxels": 3416,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 0.8252,
+    "frac_fill2d_nodil": 0.3653,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0338": {
+   "kidney": {
+    "tumor_voxels": 198024,
+    "frac_fill2d_dil3": 0.0805,
+    "frac_fill3d_dil3": 0.0805,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0341": {
+   "kidney": {
+    "tumor_voxels": 2480,
+    "frac_fill2d_dil3": 0.8101,
+    "frac_fill3d_dil3": 0.8101,
+    "frac_fill2d_nodil": 0.1194,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0357": {
+   "kidney": {
+    "tumor_voxels": 7424,
+    "frac_fill2d_dil3": 0.3545,
+    "frac_fill3d_dil3": 0.3545,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0365": {
+   "pancreas": {
+    "tumor_voxels": 4760,
+    "frac_fill2d_dil3": 0.9332,
+    "frac_fill3d_dil3": 0.9332,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_0373": {
+   "kidney": {
+    "tumor_voxels": 26420,
+    "frac_fill2d_dil3": 0.5062,
+    "frac_fill3d_dil3": 0.506,
+    "frac_fill2d_nodil": 0.0002,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0403": {
+   "liver": {
+    "tumor_voxels": 20424,
+    "frac_fill2d_dil3": 0.8255,
+    "frac_fill3d_dil3": 0.5797,
+    "frac_fill2d_nodil": 0.3619,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0405": {
+   "kidney": {
+    "tumor_voxels": 757272,
+    "frac_fill2d_dil3": 0.0452,
+    "frac_fill3d_dil3": 0.0452,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0413": {
+   "kidney": {
+    "tumor_voxels": 3032,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 0.3694,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_0416": {
+   "liver": {
+    "tumor_voxels": 9844,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 1.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_0419": {
+   "pancreas": {
+    "tumor_voxels": 8552,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 0.6776,
+    "frac_fill2d_nodil": 0.6506,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0421": {
+   "kidney": {
+    "tumor_voxels": 4736,
+    "frac_fill2d_dil3": 0.6558,
+    "frac_fill3d_dil3": 0.6558,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0431": {
+   "pancreas": {
+    "tumor_voxels": 2808,
+    "frac_fill2d_dil3": 0.9167,
+    "frac_fill3d_dil3": 0.9167,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_0437": {
+   "kidney": {
+    "tumor_voxels": 16528,
+    "frac_fill2d_dil3": 0.2564,
+    "frac_fill3d_dil3": 0.2564,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0448": {
+   "pancreas": {
+    "tumor_voxels": 2328,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 0.4192,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_0458": {
+   "pancreas": {
+    "tumor_voxels": 4060,
+    "frac_fill2d_dil3": 0.9367,
+    "frac_fill3d_dil3": 0.8273,
+    "frac_fill2d_nodil": 0.0759,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0463": {
+   "kidney": {
+    "tumor_voxels": 56684,
+    "frac_fill2d_dil3": 0.2249,
+    "frac_fill3d_dil3": 0.2249,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0466": {
+   "pancreas": {
+    "tumor_voxels": 5228,
+    "frac_fill2d_dil3": 0.6274,
+    "frac_fill3d_dil3": 0.627,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0470": {
+   "kidney": {
+    "tumor_voxels": 5996,
+    "frac_fill2d_dil3": 0.4136,
+    "frac_fill3d_dil3": 0.4136,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0473": {
+   "kidney": {
+    "tumor_voxels": 19600,
+    "frac_fill2d_dil3": 0.3063,
+    "frac_fill3d_dil3": 0.3063,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0487": {
+   "liver": {
+    "tumor_voxels": 11112,
+    "frac_fill2d_dil3": 0.7951,
+    "frac_fill3d_dil3": 0.6809,
+    "frac_fill2d_nodil": 0.3981,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0488": {
+   "liver": {
+    "tumor_voxels": 36,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   },
+   "kidney": {
+    "tumor_voxels": 69744,
+    "frac_fill2d_dil3": 0.4195,
+    "frac_fill3d_dil3": 0.4195,
+    "frac_fill2d_nodil": 0.0039,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0504": {
+   "pancreas": {
+    "tumor_voxels": 736,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 1.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_0511": {
+   "pancreas": {
+    "tumor_voxels": 1412,
+    "frac_fill2d_dil3": 0.9405,
+    "frac_fill3d_dil3": 0.9405,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_0518": {
+   "kidney": {
+    "tumor_voxels": 5132,
+    "frac_fill2d_dil3": 0.5074,
+    "frac_fill3d_dil3": 0.5074,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0520": {
+   "pancreas": {
+    "tumor_voxels": 2932,
+    "frac_fill2d_dil3": 0.9802,
+    "frac_fill3d_dil3": 0.9802,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_0523": {
+   "kidney": {
+    "tumor_voxels": 8472,
+    "frac_fill2d_dil3": 0.5013,
+    "frac_fill3d_dil3": 0.5013,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0533": {
+   "pancreas": {
+    "tumor_voxels": 6716,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 0.6833,
+    "frac_fill2d_nodil": 0.5366,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0536": {
+   "pancreas": {
+    "tumor_voxels": 12792,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 0.6889,
+    "frac_fill2d_nodil": 0.4362,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0540": {
+   "pancreas": {
+    "tumor_voxels": 4812,
+    "frac_fill2d_dil3": 0.9726,
+    "frac_fill3d_dil3": 0.7355,
+    "frac_fill2d_nodil": 0.3757,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0572": {
+   "pancreas": {
+    "tumor_voxels": 2524,
+    "frac_fill2d_dil3": 0.7845,
+    "frac_fill3d_dil3": 0.7845,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0586": {
+   "pancreas": {
+    "tumor_voxels": 2648,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 0.4592,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_0590": {
+   "kidney": {
+    "tumor_voxels": 2180,
+    "frac_fill2d_dil3": 0.8445,
+    "frac_fill3d_dil3": 0.8445,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0612": {
+   "pancreas": {
+    "tumor_voxels": 4260,
+    "frac_fill2d_dil3": 0.6627,
+    "frac_fill3d_dil3": 0.6627,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0617": {
+   "liver": {
+    "tumor_voxels": 201140,
+    "frac_fill2d_dil3": 0.1384,
+    "frac_fill3d_dil3": 0.1384,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0674": {
+   "pancreas": {
+    "tumor_voxels": 7228,
+    "frac_fill2d_dil3": 0.5322,
+    "frac_fill3d_dil3": 0.5322,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0680": {
+   "liver": {
+    "tumor_voxels": 333348,
+    "frac_fill2d_dil3": 0.8972,
+    "frac_fill3d_dil3": 0.4342,
+    "frac_fill2d_nodil": 0.614,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0689": {
+   "liver": {
+    "tumor_voxels": 30788,
+    "frac_fill2d_dil3": 0.8573,
+    "frac_fill3d_dil3": 0.7297,
+    "frac_fill2d_nodil": 0.4382,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0696": {
+   "kidney": {
+    "tumor_voxels": 26804,
+    "frac_fill2d_dil3": 0.527,
+    "frac_fill3d_dil3": 0.527,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0700": {
+   "liver": {
+    "tumor_voxels": 231512,
+    "frac_fill2d_dil3": 0.3583,
+    "frac_fill3d_dil3": 0.3173,
+    "frac_fill2d_nodil": 0.0591,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0719": {
+   "kidney": {
+    "tumor_voxels": 45936,
+    "frac_fill2d_dil3": 0.2978,
+    "frac_fill3d_dil3": 0.2978,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0728": {
+   "kidney": {
+    "tumor_voxels": 18520,
+    "frac_fill2d_dil3": 0.2175,
+    "frac_fill3d_dil3": 0.2175,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0734": {
+   "kidney": {
+    "tumor_voxels": 21320,
+    "frac_fill2d_dil3": 0.3424,
+    "frac_fill3d_dil3": 0.342,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   },
+   "pancreas": {
+    "tumor_voxels": 4,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_0744": {
+   "kidney": {
+    "tumor_voxels": 98800,
+    "frac_fill2d_dil3": 0.1002,
+    "frac_fill3d_dil3": 0.1002,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0751": {
+   "pancreas": {
+    "tumor_voxels": 1240,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 0.8339,
+    "frac_fill2d_nodil": 1.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0758": {
+   "pancreas": {
+    "tumor_voxels": 3328,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 0.9414,
+    "frac_fill2d_nodil": 0.7897,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_0766": {
+   "pancreas": {
+    "tumor_voxels": 9760,
+    "frac_fill2d_dil3": 0.4404,
+    "frac_fill3d_dil3": 0.4404,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0775": {
+   "pancreas": {
+    "tumor_voxels": 12180,
+    "frac_fill2d_dil3": 0.4108,
+    "frac_fill3d_dil3": 0.4108,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0782": {
+   "kidney": {
+    "tumor_voxels": 62436,
+    "frac_fill2d_dil3": 0.3229,
+    "frac_fill3d_dil3": 0.2973,
+    "frac_fill2d_nodil": 0.0327,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0787": {
+   "pancreas": {
+    "tumor_voxels": 2452,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 0.9984,
+    "frac_fill2d_nodil": 0.1941,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_0797": {
+   "pancreas": {
+    "tumor_voxels": 1932,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 1.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_0802": {
+   "kidney": {
+    "tumor_voxels": 54880,
+    "frac_fill2d_dil3": 0.1702,
+    "frac_fill3d_dil3": 0.1702,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0835": {
+   "pancreas": {
+    "tumor_voxels": 2468,
+    "frac_fill2d_dil3": 0.9003,
+    "frac_fill3d_dil3": 0.9003,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_0839": {
+   "pancreas": {
+    "tumor_voxels": 1128,
+    "frac_fill2d_dil3": 0.3307,
+    "frac_fill3d_dil3": 0.3307,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0845": {
+   "kidney": {
+    "tumor_voxels": 1468,
+    "frac_fill2d_dil3": 0.9973,
+    "frac_fill3d_dil3": 0.985,
+    "frac_fill2d_nodil": 0.1798,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_0850": {
+   "kidney": {
+    "tumor_voxels": 1380,
+    "frac_fill2d_dil3": 0.987,
+    "frac_fill3d_dil3": 0.987,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_0853": {
+   "kidney": {
+    "tumor_voxels": 1168,
+    "frac_fill2d_dil3": 0.8707,
+    "frac_fill3d_dil3": 0.8707,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0859": {
+   "pancreas": {
+    "tumor_voxels": 1828,
+    "frac_fill2d_dil3": 0.8397,
+    "frac_fill3d_dil3": 0.8397,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0862": {
+   "kidney": {
+    "tumor_voxels": 5560,
+    "frac_fill2d_dil3": 0.9993,
+    "frac_fill3d_dil3": 0.9987,
+    "frac_fill2d_nodil": 0.6439,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_0878": {
+   "liver": {
+    "tumor_voxels": 132252,
+    "frac_fill2d_dil3": 0.1183,
+    "frac_fill3d_dil3": 0.1183,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0883": {
+   "kidney": {
+    "tumor_voxels": 292168,
+    "frac_fill2d_dil3": 0.0898,
+    "frac_fill3d_dil3": 0.0893,
+    "frac_fill2d_nodil": 0.0005,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0886": {
+   "kidney": {
+    "tumor_voxels": 2740,
+    "frac_fill2d_dil3": 0.8653,
+    "frac_fill3d_dil3": 0.7872,
+    "frac_fill2d_nodil": 0.0818,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0889": {
+   "pancreas": {
+    "tumor_voxels": 2684,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 1.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_0896": {
+   "pancreas": {
+    "tumor_voxels": 3800,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 0.8466,
+    "frac_fill2d_nodil": 0.3074,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0909": {
+   "kidney": {
+    "tumor_voxels": 2008,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 0.9756,
+    "frac_fill2d_nodil": 0.508,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_0910": {
+   "kidney": {
+    "tumor_voxels": 2228,
+    "frac_fill2d_dil3": 0.5794,
+    "frac_fill3d_dil3": 0.5794,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0916": {
+   "kidney": {
+    "tumor_voxels": 94280,
+    "frac_fill2d_dil3": 0.1921,
+    "frac_fill3d_dil3": 0.1762,
+    "frac_fill2d_nodil": 0.0168,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0919": {
+   "kidney": {
+    "tumor_voxels": 7320,
+    "frac_fill2d_dil3": 0.4933,
+    "frac_fill3d_dil3": 0.4933,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0922": {
+   "kidney": {
+    "tumor_voxels": 7404,
+    "frac_fill2d_dil3": 0.445,
+    "frac_fill3d_dil3": 0.4218,
+    "frac_fill2d_nodil": 0.0232,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0927": {
+   "pancreas": {
+    "tumor_voxels": 412,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_0934": {
+   "kidney": {
+    "tumor_voxels": 300064,
+    "frac_fill2d_dil3": 0.0947,
+    "frac_fill3d_dil3": 0.0947,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0938": {
+   "kidney": {
+    "tumor_voxels": 208844,
+    "frac_fill2d_dil3": 0.1091,
+    "frac_fill3d_dil3": 0.1091,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0960": {
+   "kidney": {
+    "tumor_voxels": 66264,
+    "frac_fill2d_dil3": 0.2733,
+    "frac_fill3d_dil3": 0.2729,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0973": {
+   "kidney": {
+    "tumor_voxels": 30820,
+    "frac_fill2d_dil3": 0.2162,
+    "frac_fill3d_dil3": 0.2158,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0981": {
+   "kidney": {
+    "tumor_voxels": 2828,
+    "frac_fill2d_dil3": 0.9233,
+    "frac_fill3d_dil3": 0.9233,
+    "frac_fill2d_nodil": 0.1075,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_0994": {
+   "liver": {
+    "tumor_voxels": 260424,
+    "frac_fill2d_dil3": 0.6249,
+    "frac_fill3d_dil3": 0.4281,
+    "frac_fill2d_nodil": 0.3154,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_0998": {
+   "kidney": {
+    "tumor_voxels": 15784,
+    "frac_fill2d_dil3": 0.6024,
+    "frac_fill3d_dil3": 0.5895,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1003": {
+   "pancreas": {
+    "tumor_voxels": 5228,
+    "frac_fill2d_dil3": 0.9214,
+    "frac_fill3d_dil3": 0.7599,
+    "frac_fill2d_nodil": 0.3474,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1013": {
+   "kidney": {
+    "tumor_voxels": 44368,
+    "frac_fill2d_dil3": 0.2008,
+    "frac_fill3d_dil3": 0.1687,
+    "frac_fill2d_nodil": 0.0297,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1027": {
+   "liver": {
+    "tumor_voxels": 194032,
+    "frac_fill2d_dil3": 0.5721,
+    "frac_fill3d_dil3": 0.4846,
+    "frac_fill2d_nodil": 0.2541,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1037": {
+   "pancreas": {
+    "tumor_voxels": 556,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 1.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1038": {
+   "kidney": {
+    "tumor_voxels": 4352,
+    "frac_fill2d_dil3": 0.5866,
+    "frac_fill3d_dil3": 0.5866,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1041": {
+   "pancreas": {
+    "tumor_voxels": 2760,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 0.9391,
+    "frac_fill2d_nodil": 0.5812,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1051": {
+   "kidney": {
+    "tumor_voxels": 3104,
+    "frac_fill2d_dil3": 0.4965,
+    "frac_fill3d_dil3": 0.4965,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1054": {
+   "pancreas": {
+    "tumor_voxels": 1688,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 0.9425,
+    "frac_fill2d_nodil": 0.6303,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1063": {
+   "kidney": {
+    "tumor_voxels": 4836,
+    "frac_fill2d_dil3": 0.3832,
+    "frac_fill3d_dil3": 0.3832,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1069": {
+   "pancreas": {
+    "tumor_voxels": 688,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 0.6686,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1082": {
+   "liver": {
+    "tumor_voxels": 423824,
+    "frac_fill2d_dil3": 0.5253,
+    "frac_fill3d_dil3": 0.4187,
+    "frac_fill2d_nodil": 0.1523,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1087": {
+   "kidney": {
+    "tumor_voxels": 55492,
+    "frac_fill2d_dil3": 0.1928,
+    "frac_fill3d_dil3": 0.1928,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1097": {
+   "liver": {
+    "tumor_voxels": 273340,
+    "frac_fill2d_dil3": 0.1805,
+    "frac_fill3d_dil3": 0.1718,
+    "frac_fill2d_nodil": 0.0091,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1111": {
+   "kidney": {
+    "tumor_voxels": 12260,
+    "frac_fill2d_dil3": 0.3148,
+    "frac_fill3d_dil3": 0.3148,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1117": {
+   "pancreas": {
+    "tumor_voxels": 5116,
+    "frac_fill2d_dil3": 0.9646,
+    "frac_fill3d_dil3": 0.9646,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1136": {
+   "pancreas": {
+    "tumor_voxels": 3876,
+    "frac_fill2d_dil3": 0.9502,
+    "frac_fill3d_dil3": 0.8354,
+    "frac_fill2d_nodil": 0.1631,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1153": {
+   "pancreas": {
+    "tumor_voxels": 4248,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 0.8743,
+    "frac_fill2d_nodil": 0.3597,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1156": {
+   "kidney": {
+    "tumor_voxels": 29108,
+    "frac_fill2d_dil3": 0.3861,
+    "frac_fill3d_dil3": 0.3861,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1159": {
+   "pancreas": {
+    "tumor_voxels": 5560,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 0.9511,
+    "frac_fill2d_nodil": 0.823,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1195": {
+   "liver": {
+    "tumor_voxels": 1943808,
+    "frac_fill2d_dil3": 0.5963,
+    "frac_fill3d_dil3": 0.1933,
+    "frac_fill2d_nodil": 0.4479,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1199": {
+   "liver": {
+    "tumor_voxels": 563884,
+    "frac_fill2d_dil3": 0.8595,
+    "frac_fill3d_dil3": 0.4286,
+    "frac_fill2d_nodil": 0.5657,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1208": {
+   "pancreas": {
+    "tumor_voxels": 6912,
+    "frac_fill2d_dil3": 0.9576,
+    "frac_fill3d_dil3": 0.6719,
+    "frac_fill2d_nodil": 0.1395,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1212": {
+   "pancreas": {
+    "tumor_voxels": 2932,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 1.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1225": {
+   "pancreas": {
+    "tumor_voxels": 4604,
+    "frac_fill2d_dil3": 0.573,
+    "frac_fill3d_dil3": 0.573,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1233": {
+   "liver": {
+    "tumor_voxels": 1820,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 1.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1236": {
+   "pancreas": {
+    "tumor_voxels": 1588,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 0.1486,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1246": {
+   "kidney": {
+    "tumor_voxels": 139068,
+    "frac_fill2d_dil3": 0.2409,
+    "frac_fill3d_dil3": 0.2409,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1250": {
+   "liver": {
+    "tumor_voxels": 4768,
+    "frac_fill2d_dil3": 0.4505,
+    "frac_fill3d_dil3": 0.4505,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1256": {
+   "pancreas": {
+    "tumor_voxels": 2120,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 0.933,
+    "frac_fill2d_nodil": 0.6057,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1274": {
+   "kidney": {
+    "tumor_voxels": 7832,
+    "frac_fill2d_dil3": 0.3278,
+    "frac_fill3d_dil3": 0.3255,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1285": {
+   "pancreas": {
+    "tumor_voxels": 20060,
+    "frac_fill2d_dil3": 0.4479,
+    "frac_fill3d_dil3": 0.4479,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1286": {
+   "liver": {
+    "tumor_voxels": 12672,
+    "frac_fill2d_dil3": 0.3919,
+    "frac_fill3d_dil3": 0.3919,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1289": {
+   "pancreas": {
+    "tumor_voxels": 5020,
+    "frac_fill2d_dil3": 0.8697,
+    "frac_fill3d_dil3": 0.8167,
+    "frac_fill2d_nodil": 0.0677,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1293": {
+   "liver": {
+    "tumor_voxels": 12820,
+    "frac_fill2d_dil3": 0.7275,
+    "frac_fill3d_dil3": 0.7182,
+    "frac_fill2d_nodil": 0.3682,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1299": {
+   "pancreas": {
+    "tumor_voxels": 2788,
+    "frac_fill2d_dil3": 0.8207,
+    "frac_fill3d_dil3": 0.8207,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1313": {
+   "kidney": {
+    "tumor_voxels": 84960,
+    "frac_fill2d_dil3": 0.0881,
+    "frac_fill3d_dil3": 0.0881,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1324": {
+   "kidney": {
+    "tumor_voxels": 93136,
+    "frac_fill2d_dil3": 0.2503,
+    "frac_fill3d_dil3": 0.2132,
+    "frac_fill2d_nodil": 0.0376,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1334": {
+   "kidney": {
+    "tumor_voxels": 7148,
+    "frac_fill2d_dil3": 0.2706,
+    "frac_fill3d_dil3": 0.2706,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1338": {
+   "kidney": {
+    "tumor_voxels": 5904,
+    "frac_fill2d_dil3": 0.696,
+    "frac_fill3d_dil3": 0.696,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1352": {
+   "pancreas": {
+    "tumor_voxels": 5284,
+    "frac_fill2d_dil3": 0.6007,
+    "frac_fill3d_dil3": 0.5636,
+    "frac_fill2d_nodil": 0.0371,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1363": {
+   "pancreas": {
+    "tumor_voxels": 5808,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 0.9568,
+    "frac_fill2d_nodil": 0.0923,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1373": {
+   "kidney": {
+    "tumor_voxels": 419684,
+    "frac_fill2d_dil3": 0.1556,
+    "frac_fill3d_dil3": 0.1556,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1388": {
+   "pancreas": {
+    "tumor_voxels": 24476,
+    "frac_fill2d_dil3": 0.5653,
+    "frac_fill3d_dil3": 0.4518,
+    "frac_fill2d_nodil": 0.0547,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1392": {
+   "kidney": {
+    "tumor_voxels": 8504,
+    "frac_fill2d_dil3": 0.4532,
+    "frac_fill3d_dil3": 0.4532,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1400": {
+   "kidney": {
+    "tumor_voxels": 6988,
+    "frac_fill2d_dil3": 0.7311,
+    "frac_fill3d_dil3": 0.6916,
+    "frac_fill2d_nodil": 0.0406,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1405": {
+   "pancreas": {
+    "tumor_voxels": 1128,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 0.9956,
+    "frac_fill2d_nodil": 0.3794,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1428": {
+   "pancreas": {
+    "tumor_voxels": 4524,
+    "frac_fill2d_dil3": 0.5486,
+    "frac_fill3d_dil3": 0.5042,
+    "frac_fill2d_nodil": 0.0575,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1438": {
+   "liver": {
+    "tumor_voxels": 4852,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 1.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1441": {
+   "kidney": {
+    "tumor_voxels": 38924,
+    "frac_fill2d_dil3": 0.3268,
+    "frac_fill3d_dil3": 0.3268,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1448": {
+   "pancreas": {
+    "tumor_voxels": 4820,
+    "frac_fill2d_dil3": 0.6359,
+    "frac_fill3d_dil3": 0.6359,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1454": {
+   "pancreas": {
+    "tumor_voxels": 1108,
+    "frac_fill2d_dil3": 0.9603,
+    "frac_fill3d_dil3": 0.9603,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1465": {
+   "pancreas": {
+    "tumor_voxels": 1132,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 0.8304,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1466": {
+   "pancreas": {
+    "tumor_voxels": 2556,
+    "frac_fill2d_dil3": 0.9339,
+    "frac_fill3d_dil3": 0.6753,
+    "frac_fill2d_nodil": 0.3239,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1470": {
+   "liver": {
+    "tumor_voxels": 5008,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 0.9842,
+    "frac_fill2d_nodil": 0.8738,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1482": {
+   "pancreas": {
+    "tumor_voxels": 940,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 0.7872,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1492": {
+   "pancreas": {
+    "tumor_voxels": 2432,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 0.8104,
+    "frac_fill2d_nodil": 0.4622,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1497": {
+   "kidney": {
+    "tumor_voxels": 9068,
+    "frac_fill2d_dil3": 0.4389,
+    "frac_fill3d_dil3": 0.4389,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1507": {
+   "kidney": {
+    "tumor_voxels": 1120,
+    "frac_fill2d_dil3": 0.4875,
+    "frac_fill3d_dil3": 0.4875,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1512": {
+   "kidney": {
+    "tumor_voxels": 4500,
+    "frac_fill2d_dil3": 0.4411,
+    "frac_fill3d_dil3": 0.4411,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1520": {
+   "kidney": {
+    "tumor_voxels": 3300,
+    "frac_fill2d_dil3": 0.9097,
+    "frac_fill3d_dil3": 0.9097,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1536": {
+   "pancreas": {
+    "tumor_voxels": 64576,
+    "frac_fill2d_dil3": 0.125,
+    "frac_fill3d_dil3": 0.125,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1556": {
+   "pancreas": {
+    "tumor_voxels": 12004,
+    "frac_fill2d_dil3": 0.8675,
+    "frac_fill3d_dil3": 0.8179,
+    "frac_fill2d_nodil": 0.081,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1564": {
+   "pancreas": {
+    "tumor_voxels": 4184,
+    "frac_fill2d_dil3": 0.9011,
+    "frac_fill3d_dil3": 0.696,
+    "frac_fill2d_nodil": 0.3776,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1567": {
+   "liver": {
+    "tumor_voxels": 385292,
+    "frac_fill2d_dil3": 0.8002,
+    "frac_fill3d_dil3": 0.3015,
+    "frac_fill2d_nodil": 0.5321,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1577": {
+   "pancreas": {
+    "tumor_voxels": 2116,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 0.9419,
+    "frac_fill2d_nodil": 0.6087,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1583": {
+   "pancreas": {
+    "tumor_voxels": 1212,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 0.5941,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1589": {
+   "kidney": {
+    "tumor_voxels": 4468,
+    "frac_fill2d_dil3": 0.8556,
+    "frac_fill3d_dil3": 0.855,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1596": {
+   "kidney": {
+    "tumor_voxels": 82700,
+    "frac_fill2d_dil3": 0.1617,
+    "frac_fill3d_dil3": 0.1617,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1617": {
+   "pancreas": {
+    "tumor_voxels": 1868,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 1.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1618": {
+   "kidney": {
+    "tumor_voxels": 985660,
+    "frac_fill2d_dil3": 0.0627,
+    "frac_fill3d_dil3": 0.0627,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1620": {
+   "kidney": {
+    "tumor_voxels": 275048,
+    "frac_fill2d_dil3": 0.0775,
+    "frac_fill3d_dil3": 0.0775,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1630": {
+   "kidney": {
+    "tumor_voxels": 17384,
+    "frac_fill2d_dil3": 0.4298,
+    "frac_fill3d_dil3": 0.3573,
+    "frac_fill2d_nodil": 0.0734,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1639": {
+   "pancreas": {
+    "tumor_voxels": 3388,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 0.8483,
+    "frac_fill2d_nodil": 1.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1643": {
+   "pancreas": {
+    "tumor_voxels": 968,
+    "frac_fill2d_dil3": 0.7882,
+    "frac_fill3d_dil3": 0.7882,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1650": {
+   "pancreas": {
+    "tumor_voxels": 198036,
+    "frac_fill2d_dil3": 0.0795,
+    "frac_fill3d_dil3": 0.0795,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1661": {
+   "liver": {
+    "tumor_voxels": 881972,
+    "frac_fill2d_dil3": 0.1548,
+    "frac_fill3d_dil3": 0.1444,
+    "frac_fill2d_nodil": 0.0426,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1662": {
+   "kidney": {
+    "tumor_voxels": 13208,
+    "frac_fill2d_dil3": 0.4686,
+    "frac_fill3d_dil3": 0.468,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1667": {
+   "pancreas": {
+    "tumor_voxels": 9256,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 0.7634,
+    "frac_fill2d_nodil": 0.9019,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1678": {
+   "pancreas": {
+    "tumor_voxels": 8000,
+    "frac_fill2d_dil3": 0.9964,
+    "frac_fill3d_dil3": 0.8704,
+    "frac_fill2d_nodil": 0.3335,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1680": {
+   "liver": {
+    "tumor_voxels": 11536,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 1.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1683": {
+   "pancreas": {
+    "tumor_voxels": 688,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1685": {
+   "pancreas": {
+    "tumor_voxels": 1432,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 0.9951,
+    "frac_fill2d_nodil": 0.676,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1686": {
+   "kidney": {
+    "tumor_voxels": 20936,
+    "frac_fill2d_dil3": 0.3041,
+    "frac_fill3d_dil3": 0.3041,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1695": {
+   "pancreas": {
+    "tumor_voxels": 13660,
+    "frac_fill2d_dil3": 0.6044,
+    "frac_fill3d_dil3": 0.6044,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1722": {
+   "pancreas": {
+    "tumor_voxels": 9436,
+    "frac_fill2d_dil3": 0.9987,
+    "frac_fill3d_dil3": 0.7781,
+    "frac_fill2d_nodil": 0.0975,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1724": {
+   "pancreas": {
+    "tumor_voxels": 1568,
+    "frac_fill2d_dil3": 0.8935,
+    "frac_fill3d_dil3": 0.8935,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1732": {
+   "pancreas": {
+    "tumor_voxels": 1128,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 1.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1734": {
+   "kidney": {
+    "tumor_voxels": 16856,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 0.6216,
+    "frac_fill2d_nodil": 0.448,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1741": {
+   "kidney": {
+    "tumor_voxels": 73048,
+    "frac_fill2d_dil3": 0.2638,
+    "frac_fill3d_dil3": 0.2638,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1758": {
+   "liver": {
+    "tumor_voxels": 7508,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 0.9642,
+    "frac_fill2d_nodil": 0.6356,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1760": {
+   "pancreas": {
+    "tumor_voxels": 1132,
+    "frac_fill2d_dil3": 0.9973,
+    "frac_fill3d_dil3": 0.9973,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1775": {
+   "liver": {
+    "tumor_voxels": 7836,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 1.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1791": {
+   "liver": {
+    "tumor_voxels": 27800,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 0.7458,
+    "frac_fill2d_nodil": 0.8997,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1794": {
+   "kidney": {
+    "tumor_voxels": 752704,
+    "frac_fill2d_dil3": 0.0936,
+    "frac_fill3d_dil3": 0.0651,
+    "frac_fill2d_nodil": 0.0234,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1801": {
+   "pancreas": {
+    "tumor_voxels": 26864,
+    "frac_fill2d_dil3": 0.9646,
+    "frac_fill3d_dil3": 0.4929,
+    "frac_fill2d_nodil": 0.4093,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1817": {
+   "pancreas": {
+    "tumor_voxels": 2456,
+    "frac_fill2d_dil3": 0.9357,
+    "frac_fill3d_dil3": 0.9357,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1820": {
+   "pancreas": {
+    "tumor_voxels": 10888,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 0.6824,
+    "frac_fill2d_nodil": 0.4012,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1826": {
+   "pancreas": {
+    "tumor_voxels": 3316,
+    "frac_fill2d_dil3": 0.7756,
+    "frac_fill3d_dil3": 0.7756,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1830": {
+   "kidney": {
+    "tumor_voxels": 117444,
+    "frac_fill2d_dil3": 0.0882,
+    "frac_fill3d_dil3": 0.0882,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1855": {
+   "pancreas": {
+    "tumor_voxels": 79136,
+    "frac_fill2d_dil3": 0.1428,
+    "frac_fill3d_dil3": 0.1428,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1856": {
+   "pancreas": {
+    "tumor_voxels": 1536,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1867": {
+   "pancreas": {
+    "tumor_voxels": 2548,
+    "frac_fill2d_dil3": 0.998,
+    "frac_fill3d_dil3": 0.998,
+    "frac_fill2d_nodil": 0.0958,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1877": {
+   "kidney": {
+    "tumor_voxels": 1956,
+    "frac_fill2d_dil3": 0.8937,
+    "frac_fill3d_dil3": 0.8937,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1899": {
+   "pancreas": {
+    "tumor_voxels": 4012,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 0.9088,
+    "frac_fill2d_nodil": 0.5902,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1905": {
+   "kidney": {
+    "tumor_voxels": 29368,
+    "frac_fill2d_dil3": 0.1797,
+    "frac_fill3d_dil3": 0.1797,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1906": {
+   "pancreas": {
+    "tumor_voxels": 3780,
+    "frac_fill2d_dil3": 0.9481,
+    "frac_fill3d_dil3": 0.8873,
+    "frac_fill2d_nodil": 0.0593,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1909": {
+   "pancreas": {
+    "tumor_voxels": 3796,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 0.8451,
+    "frac_fill2d_nodil": 0.9062,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1915": {
+   "pancreas": {
+    "tumor_voxels": 3308,
+    "frac_fill2d_dil3": 0.6354,
+    "frac_fill3d_dil3": 0.6354,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1919": {
+   "pancreas": {
+    "tumor_voxels": 5444,
+    "frac_fill2d_dil3": 0.84,
+    "frac_fill3d_dil3": 0.8148,
+    "frac_fill2d_nodil": 0.2675,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1922": {
+   "liver": {
+    "tumor_voxels": 43800,
+    "frac_fill2d_dil3": 0.4632,
+    "frac_fill3d_dil3": 0.3773,
+    "frac_fill2d_nodil": 0.1147,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1932": {
+   "pancreas": {
+    "tumor_voxels": 2380,
+    "frac_fill2d_dil3": 0.7681,
+    "frac_fill3d_dil3": 0.7681,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1947": {
+   "pancreas": {
+    "tumor_voxels": 1004,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 1.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1951": {
+   "pancreas": {
+    "tumor_voxels": 1440,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 0.6583,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1960": {
+   "liver": {
+    "tumor_voxels": 193548,
+    "frac_fill2d_dil3": 0.4225,
+    "frac_fill3d_dil3": 0.2794,
+    "frac_fill2d_nodil": 0.0438,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1965": {
+   "pancreas": {
+    "tumor_voxels": 9468,
+    "frac_fill2d_dil3": 0.7191,
+    "frac_fill3d_dil3": 0.6802,
+    "frac_fill2d_nodil": 0.0401,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1981": {
+   "pancreas": {
+    "tumor_voxels": 1496,
+    "frac_fill2d_dil3": 0.5842,
+    "frac_fill3d_dil3": 0.5842,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1988": {
+   "liver": {
+    "tumor_voxels": 278816,
+    "frac_fill2d_dil3": 0.1315,
+    "frac_fill3d_dil3": 0.1307,
+    "frac_fill2d_nodil": 0.0034,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1991": {
+   "pancreas": {
+    "tumor_voxels": 16080,
+    "frac_fill2d_dil3": 0.9571,
+    "frac_fill3d_dil3": 0.7035,
+    "frac_fill2d_nodil": 0.2353,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_1994": {
+   "pancreas": {
+    "tumor_voxels": 2796,
+    "frac_fill2d_dil3": 0.9957,
+    "frac_fill3d_dil3": 0.956,
+    "frac_fill2d_nodil": 0.1016,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_1998": {
+   "liver": {
+    "tumor_voxels": 19068,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 0.9593,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_2003": {
+   "liver": {
+    "tumor_voxels": 4416,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 1.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_2006": {
+   "kidney": {
+    "tumor_voxels": 67044,
+    "frac_fill2d_dil3": 0.3005,
+    "frac_fill3d_dil3": 0.3005,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_2009": {
+   "pancreas": {
+    "tumor_voxels": 1576,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 0.4036,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_2015": {
+   "pancreas": {
+    "tumor_voxels": 1216,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 0.9803,
+    "frac_fill2d_nodil": 0.1743,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_2019": {
+   "kidney": {
+    "tumor_voxels": 2232,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 1.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_2034": {
+   "kidney": {
+    "tumor_voxels": 42260,
+    "frac_fill2d_dil3": 0.226,
+    "frac_fill3d_dil3": 0.226,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_2051": {
+   "pancreas": {
+    "tumor_voxels": 2420,
+    "frac_fill2d_dil3": 0.7959,
+    "frac_fill3d_dil3": 0.7959,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_2060": {
+   "kidney": {
+    "tumor_voxels": 11032,
+    "frac_fill2d_dil3": 0.5014,
+    "frac_fill3d_dil3": 0.5014,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_2065": {
+   "pancreas": {
+    "tumor_voxels": 1148,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 1.0,
+    "frac_fill2d_nodil": 0.1986,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_2069": {
+   "pancreas": {
+    "tumor_voxels": 4932,
+    "frac_fill2d_dil3": 1.0,
+    "frac_fill3d_dil3": 0.9475,
+    "frac_fill2d_nodil": 0.1655,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_2073": {
+   "pancreas": {
+    "tumor_voxels": 780,
+    "frac_fill2d_dil3": 0.8615,
+    "frac_fill3d_dil3": 0.8615,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_2092": {
+   "liver": {
+    "tumor_voxels": 1043972,
+    "frac_fill2d_dil3": 0.4835,
+    "frac_fill3d_dil3": 0.3543,
+    "frac_fill2d_nodil": 0.2129,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_2102": {
+   "pancreas": {
+    "tumor_voxels": 4364,
+    "frac_fill2d_dil3": 0.9402,
+    "frac_fill3d_dil3": 0.9402,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_2111": {
+   "liver": {
+    "tumor_voxels": 46192,
+    "frac_fill2d_dil3": 0.651,
+    "frac_fill3d_dil3": 0.2203,
+    "frac_fill2d_nodil": 0.4764,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_2117": {
+   "kidney": {
+    "tumor_voxels": 15800,
+    "frac_fill2d_dil3": 0.4,
+    "frac_fill3d_dil3": 0.4,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_2123": {
+   "pancreas": {
+    "tumor_voxels": 2928,
+    "frac_fill2d_dil3": 0.7363,
+    "frac_fill3d_dil3": 0.7363,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_2125": {
+   "pancreas": {
+    "tumor_voxels": 2308,
+    "frac_fill2d_dil3": 0.9276,
+    "frac_fill3d_dil3": 0.9276,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "contained",
+    "containment_v2_fill3d": "contained"
+   }
+  },
+  "FLARE23_2126": {
+   "kidney": {
+    "tumor_voxels": 254544,
+    "frac_fill2d_dil3": 0.0708,
+    "frac_fill3d_dil3": 0.0671,
+    "frac_fill2d_nodil": 0.0044,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_2130": {
+   "liver": {
+    "tumor_voxels": 198332,
+    "frac_fill2d_dil3": 0.8035,
+    "frac_fill3d_dil3": 0.4226,
+    "frac_fill2d_nodil": 0.4365,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_2135": {
+   "liver": {
+    "tumor_voxels": 78704,
+    "frac_fill2d_dil3": 0.6048,
+    "frac_fill3d_dil3": 0.4739,
+    "frac_fill2d_nodil": 0.3006,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_2145": {
+   "liver": {
+    "tumor_voxels": 85656,
+    "frac_fill2d_dil3": 0.6683,
+    "frac_fill3d_dil3": 0.5531,
+    "frac_fill2d_nodil": 0.1619,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_2172": {
+   "pancreas": {
+    "tumor_voxels": 4444,
+    "frac_fill2d_dil3": 0.5369,
+    "frac_fill3d_dil3": 0.5369,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_2177": {
+   "kidney": {
+    "tumor_voxels": 77652,
+    "frac_fill2d_dil3": 0.0632,
+    "frac_fill3d_dil3": 0.0632,
+    "frac_fill2d_nodil": 0.0,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_2190": {
+   "liver": {
+    "tumor_voxels": 1555904,
+    "frac_fill2d_dil3": 0.6811,
+    "frac_fill3d_dil3": 0.4709,
+    "frac_fill2d_nodil": 0.3029,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  },
+  "FLARE23_2196": {
+   "kidney": {
+    "tumor_voxels": 7596,
+    "frac_fill2d_dil3": 0.6838,
+    "frac_fill3d_dil3": 0.5581,
+    "frac_fill2d_nodil": 0.0995,
+    "containment_v2": "boundary",
+    "containment_v2_fill3d": "boundary"
+   }
+  }
+ }
+}

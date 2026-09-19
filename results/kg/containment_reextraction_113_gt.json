@@ -1,0 +1,34 @@
+{
+ "note": "Containment v2 for the 113-cohort GT corpora (v11 item 2, the locally-runnable half).\n\nTable 11's containment precision compares PREDICTED statements against GT statements \u2014 both\nsides are degenerate ('boundary' everywhere, exclusive-label artifact). The predicted side\nneeds the frozen single-organ predicted masks (Delta); the GT side is computable now from:\n  kits \u2014 staged native GT (/scratch .../kits_vol/<case>/segmentation.nii.gz; kidney 1, tumor 2,\n         cyst 3 dropped; slice axis 0)\n  msd  \u2014 MSD Pancreas labelsTr staged from Drive (pancreas 1, tumor 2; slice axis 2)\n  lits \u2014 MSD Task03 labelsTr via the identity mapping (liver 1, tumor 2; slice axis 2 \u2014 the\n         native grid, NOT the npy slab, so the lits preset's fill_axis 0 does not apply)\n\nThe rule is the DELIVERED extractor itself (app_handoff/extract_phenotypes.py, containment fix\n2026-09-16): >=90 % of the attributed tumor within the 3-voxel dilation of the slice-wise\nhole-filled organ. Only the containment field is taken; corpora are written as SIDE FILES\n(corpus_gt_*_containment_v2.json) because retrieval relevance uses containment \u2014 the frozen\ncorpora and all frozen retrieval numbers stay untouched.\n-> results/kg/containment_reextraction_113_gt.json + corpora/corpus_gt_{kits,lits,msd}_containment_v2.json",
+ "summary": {
+  "kits": {
+   "old": {
+    "boundary": 36
+   },
+   "v2": {
+    "contained": 2,
+    "boundary": 34
+   }
+  },
+  "lits": {
+   "old": {
+    "boundary": 21
+   },
+   "v2": {
+    "boundary": 11,
+    "contained": 10
+   }
+  },
+  "msd": {
+   "old": {
+    "boundary": 56
+   },
+   "v2": {
+    "contained": 43,
+    "boundary": 13
+   }
+  }
+ },
+ "has_tumor_mismatches": [],
+ "predicted_side": "still Delta-gated (frozen single-organ predicted masks); Table 11's containment precision recomputes when both sides are v2."
+}

@@ -1,0 +1,4 @@
+PREFIX mmkg: <http://example.org/mmkg/schema/>
+SELECT ?organ (COUNT(?o) AS ?n) (ROUND(AVG(?v)) AS ?avg_cm3)
+WHERE { ?o a mmkg:Organ ; a ?organ ; mmkg:gt_volume_cm3 ?v . FILTER(?organ != mmkg:Organ) }
+GROUP BY ?organ ORDER BY DESC(?n)

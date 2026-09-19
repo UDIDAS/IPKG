@@ -1,0 +1,80 @@
+{
+ "lits_gt_131": {
+  "n_masks": 131,
+  "n_with_tumor": 118,
+  "components_6conn": 1037,
+  "components_26conn": 908,
+  "pct_more_at_6conn": 14.2,
+  "multiplicity_flips_6_vs_26": 1,
+  "flip_cases": [
+   "liver_14 (2->1)"
+  ]
+ },
+ "kits_gt_36": {
+  "n_masks": 36,
+  "n_with_tumor": 36,
+  "components_6conn": 84,
+  "components_26conn": 50,
+  "pct_more_at_6conn": 68.0,
+  "multiplicity_flips_6_vs_26": 2,
+  "flip_cases": [
+   "segmentation (4->1)",
+   "segmentation (3->1)"
+  ]
+ },
+ "msd_gt_56": {
+  "n_masks": 56,
+  "n_with_tumor": 56,
+  "components_6conn": 56,
+  "components_26conn": 56,
+  "pct_more_at_6conn": 0.0,
+  "multiplicity_flips_6_vs_26": 0,
+  "flip_cases": []
+ },
+ "flare23_gt_cached": {
+  "n_masks": 407,
+  "n_with_tumor": 225,
+  "components_6conn": 1128,
+  "components_26conn": 978,
+  "pct_more_at_6conn": 15.3,
+  "multiplicity_flips_6_vs_26": 4,
+  "flip_cases": [
+   "FLARE23_0141 (6->1)",
+   "FLARE23_0338 (5->1)",
+   "FLARE23_1314 (2->1)",
+   "FLARE23_1233 (2->1)"
+  ]
+ },
+ "flare23_predicted_576": {
+  "n_masks": 576,
+  "n_with_tumor": 258,
+  "components_6conn": 749,
+  "components_26conn": 733,
+  "pct_more_at_6conn": 2.2,
+  "multiplicity_flips_6_vs_26": 1,
+  "flip_cases": [
+   "FLARE23_2051 (2->1)"
+  ]
+ },
+ "cohort113_predicted_regen": {
+  "n_masks": 113,
+  "n_with_tumor": 109,
+  "components_6conn": 369,
+  "components_26conn": 351,
+  "pct_more_at_6conn": 5.1,
+  "multiplicity_flips_6_vs_26": 0,
+  "flip_cases": []
+ },
+ "table11_multiplicity_sensitivity_113": {
+  "6conn_both": {
+   "n": 109,
+   "multiplicity_agreement": 0.853
+  },
+  "26conn_both": {
+   "n": 109,
+   "multiplicity_agreement": 0.853
+  },
+  "note": "Predicted (regenerated masks) vs GT multiplicity agreement with both sides at the same connectivity; the frozen Table 11 row (0.927) is both-at-6 on the frozen masks \u2014 this measures the CHOICE's effect, not a replacement value."
+ },
+ "note": "D4 (v12): the application counts tumor components at one connectivity while the pipeline's\n`ndimage.label` default is 6-connectivity (faces only) \u2014 the draft cites 1,037 vs 908 components\non LiTS and asks: align the application to 26 or state the difference in \u00a73.11.\n\nThis quantifies the decision on every mask set we hold: total tumor components at 6- vs\n26-connectivity, per-case multiplicity flips (solitary <-> multifocal, the ONLY pipeline\nstatement that depends on the choice), and the Table 11 multiplicity-precision row recomputed\nwith BOTH sides at 26 (vs the frozen both-at-6).\n\nMask sets: GT \u2014 LiTS (131 native Task03 labels), KiTS (36), MSD (56), FLARE23 (cached GT labels);\npredicted \u2014 FLARE23 (576 frozen semi-oracle), 113-cohort (regenerated).\n-> results/kg/connectivity_sensitivity.json"
+}

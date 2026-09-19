@@ -1,0 +1,557 @@
+{
+ "note": "JOINT single-pass Q10 workflow timing on the 36 KiTS test volumes: per case load -> preprocess -> semi-oracle SAM3 segmentation (GT-box prompts, kidney + tumor passes, batch 8) -> delivered extractor (kits preset, fixed voxel terciles) -> kg_build_graph.py (once) -> 10 stock SPARQL queries (5 reps, rdflib). End-to-end per case = stages + graph_build/n + median query. Hardware: one dedicated NVIDIA RTX A6000 (48 GB), single worker. Weights: organ = base facebook/sam3, tumor = base + FLARE23-only expert overlay - the per-dataset AUSAM checkpoints live on the Delta store (unreachable); latency is architecture-bound so the timing transfers, but per-case Dice here is a sanity check only, NOT a paper number.",
+ "n_cases": 36,
+ "model_load_s_once": 18.7,
+ "per_case": {
+  "case_00006": {
+   "load_s": 1.53,
+   "preprocess_s": 2.53,
+   "seg_organ_s": 11.17,
+   "seg_tumor_s": 4.25,
+   "extract_s": 3.13,
+   "n_slices_organ": 35,
+   "n_slices_tumor": 9,
+   "n_slices_vol": 157,
+   "dice_organ_sanity": 0.9316,
+   "dice_tumor_sanity": 0.8656
+  },
+  "case_00008": {
+   "load_s": 2.25,
+   "preprocess_s": 4.3,
+   "seg_organ_s": 17.41,
+   "seg_tumor_s": 11.82,
+   "extract_s": 4.8,
+   "n_slices_organ": 55,
+   "n_slices_tumor": 37,
+   "n_slices_vol": 227,
+   "dice_organ_sanity": 0.6099,
+   "dice_tumor_sanity": 0.9612
+  },
+  "case_00017": {
+   "load_s": 1.02,
+   "preprocess_s": 1.65,
+   "seg_organ_s": 8.19,
+   "seg_tumor_s": 2.49,
+   "extract_s": 1.78,
+   "n_slices_organ": 26,
+   "n_slices_tumor": 5,
+   "n_slices_vol": 97,
+   "dice_organ_sanity": 0.9334,
+   "dice_tumor_sanity": 0.8355
+  },
+  "case_00018": {
+   "load_s": 1.05,
+   "preprocess_s": 1.9,
+   "seg_organ_s": 13.69,
+   "seg_tumor_s": 4.93,
+   "extract_s": 2.37,
+   "n_slices_organ": 46,
+   "n_slices_tumor": 13,
+   "n_slices_vol": 121,
+   "dice_organ_sanity": 0.9081,
+   "dice_tumor_sanity": 0.9059
+  },
+  "case_00021": {
+   "load_s": 0.34,
+   "preprocess_s": 0.6,
+   "seg_organ_s": 6.13,
+   "seg_tumor_s": 2.49,
+   "extract_s": 0.67,
+   "n_slices_organ": 20,
+   "n_slices_tumor": 8,
+   "n_slices_vol": 38,
+   "dice_organ_sanity": 0.9006,
+   "dice_tumor_sanity": 0.7912
+  },
+  "case_00024": {
+   "load_s": 0.88,
+   "preprocess_s": 1.28,
+   "seg_organ_s": 6.44,
+   "seg_tumor_s": 4.05,
+   "extract_s": 1.53,
+   "n_slices_organ": 20,
+   "n_slices_tumor": 12,
+   "n_slices_vol": 85,
+   "dice_organ_sanity": 0.8554,
+   "dice_tumor_sanity": 0.9698
+  },
+  "case_00030": {
+   "load_s": 0.35,
+   "preprocess_s": 0.51,
+   "seg_organ_s": 8.24,
+   "seg_tumor_s": 8.75,
+   "extract_s": 0.64,
+   "n_slices_organ": 30,
+   "n_slices_tumor": 32,
+   "n_slices_vol": 38,
+   "dice_organ_sanity": 0.253,
+   "dice_tumor_sanity": 0.9698
+  },
+  "case_00035": {
+   "load_s": 0.8,
+   "preprocess_s": 1.29,
+   "seg_organ_s": 7.68,
+   "seg_tumor_s": 2.92,
+   "extract_s": 1.61,
+   "n_slices_organ": 26,
+   "n_slices_tumor": 7,
+   "n_slices_vol": 98,
+   "dice_organ_sanity": 0.9048,
+   "dice_tumor_sanity": 0.8411
+  },
+  "case_00039": {
+   "load_s": 0.79,
+   "preprocess_s": 1.27,
+   "seg_organ_s": 7.54,
+   "seg_tumor_s": 1.96,
+   "extract_s": 1.57,
+   "n_slices_organ": 26,
+   "n_slices_tumor": 4,
+   "n_slices_vol": 90,
+   "dice_organ_sanity": 0.9385,
+   "dice_tumor_sanity": 0.8742
+  },
+  "case_00042": {
+   "load_s": 2.74,
+   "preprocess_s": 5.8,
+   "seg_organ_s": 28.6,
+   "seg_tumor_s": 39.81,
+   "extract_s": 6.1,
+   "n_slices_organ": 101,
+   "n_slices_tumor": 142,
+   "n_slices_vol": 301,
+   "dice_organ_sanity": 0.5814,
+   "dice_tumor_sanity": 0.9824
+  },
+  "case_00043": {
+   "load_s": 1.55,
+   "preprocess_s": 2.72,
+   "seg_organ_s": 13.16,
+   "seg_tumor_s": 4.28,
+   "extract_s": 3.87,
+   "n_slices_organ": 41,
+   "n_slices_tumor": 9,
+   "n_slices_vol": 172,
+   "dice_organ_sanity": 0.9495,
+   "dice_tumor_sanity": 0.9106
+  },
+  "case_00057": {
+   "load_s": 0.78,
+   "preprocess_s": 1.18,
+   "seg_organ_s": 11.64,
+   "seg_tumor_s": 7.13,
+   "extract_s": 1.51,
+   "n_slices_organ": 40,
+   "n_slices_tumor": 23,
+   "n_slices_vol": 80,
+   "dice_organ_sanity": 0.792,
+   "dice_tumor_sanity": 0.8743
+  },
+  "case_00060": {
+   "load_s": 1.28,
+   "preprocess_s": 2.28,
+   "seg_organ_s": 9.89,
+   "seg_tumor_s": 4.79,
+   "extract_s": 2.98,
+   "n_slices_organ": 31,
+   "n_slices_tumor": 12,
+   "n_slices_vol": 145,
+   "dice_organ_sanity": 0.8708,
+   "dice_tumor_sanity": 0.8889
+  },
+  "case_00067": {
+   "load_s": 2.6,
+   "preprocess_s": 5.15,
+   "seg_organ_s": 41.45,
+   "seg_tumor_s": 37.09,
+   "extract_s": 5.99,
+   "n_slices_organ": 147,
+   "n_slices_tumor": 125,
+   "n_slices_vol": 285,
+   "dice_organ_sanity": 0.3675,
+   "dice_tumor_sanity": 0.9826
+  },
+  "case_00075": {
+   "load_s": 0.89,
+   "preprocess_s": 1.27,
+   "seg_organ_s": 6.94,
+   "seg_tumor_s": 1.88,
+   "extract_s": 1.59,
+   "n_slices_organ": 23,
+   "n_slices_tumor": 3,
+   "n_slices_vol": 90,
+   "dice_organ_sanity": 0.9389,
+   "dice_tumor_sanity": 0.7792
+  },
+  "case_00079": {
+   "load_s": 1.17,
+   "preprocess_s": 1.82,
+   "seg_organ_s": 8.37,
+   "seg_tumor_s": 6.07,
+   "extract_s": 2.49,
+   "n_slices_organ": 26,
+   "n_slices_tumor": 18,
+   "n_slices_vol": 124,
+   "dice_organ_sanity": 0.6735,
+   "dice_tumor_sanity": 0.9425
+  },
+  "case_00083": {
+   "load_s": 0.81,
+   "preprocess_s": 1.73,
+   "seg_organ_s": 12.89,
+   "seg_tumor_s": 4.09,
+   "extract_s": 1.89,
+   "n_slices_organ": 45,
+   "n_slices_tumor": 11,
+   "n_slices_vol": 94,
+   "dice_organ_sanity": 0.9377,
+   "dice_tumor_sanity": 0.7178
+  },
+  "case_00086": {
+   "load_s": 1.63,
+   "preprocess_s": 2.8,
+   "seg_organ_s": 14.88,
+   "seg_tumor_s": 6.51,
+   "extract_s": 3.93,
+   "n_slices_organ": 48,
+   "n_slices_tumor": 14,
+   "n_slices_vol": 199,
+   "dice_organ_sanity": 0.9399,
+   "dice_tumor_sanity": 0.8605
+  },
+  "case_00087": {
+   "load_s": 0.49,
+   "preprocess_s": 0.66,
+   "seg_organ_s": 5.71,
+   "seg_tumor_s": 3.03,
+   "extract_s": 0.89,
+   "n_slices_organ": 20,
+   "n_slices_tumor": 9,
+   "n_slices_vol": 49,
+   "dice_organ_sanity": 0.9171,
+   "dice_tumor_sanity": 0.8853
+  },
+  "case_00090": {
+   "load_s": 0.71,
+   "preprocess_s": 1.3,
+   "seg_organ_s": 10.04,
+   "seg_tumor_s": 5.88,
+   "extract_s": 1.24,
+   "n_slices_organ": 35,
+   "n_slices_tumor": 21,
+   "n_slices_vol": 76,
+   "dice_organ_sanity": 0.7604,
+   "dice_tumor_sanity": 0.9159
+  },
+  "case_00092": {
+   "load_s": 0.91,
+   "preprocess_s": 1.42,
+   "seg_organ_s": 7.43,
+   "seg_tumor_s": 6.96,
+   "extract_s": 1.58,
+   "n_slices_organ": 26,
+   "n_slices_tumor": 24,
+   "n_slices_vol": 98,
+   "dice_organ_sanity": 0.7357,
+   "dice_tumor_sanity": 0.9474
+  },
+  "case_00095": {
+   "load_s": 2.64,
+   "preprocess_s": 4.8,
+   "seg_organ_s": 19.87,
+   "seg_tumor_s": 9.05,
+   "extract_s": 5.93,
+   "n_slices_organ": 80,
+   "n_slices_tumor": 32,
+   "n_slices_vol": 314,
+   "dice_organ_sanity": 0.8991,
+   "dice_tumor_sanity": 0.9268
+  },
+  "case_00103": {
+   "load_s": 5.58,
+   "preprocess_s": 9.21,
+   "seg_organ_s": 55.04,
+   "seg_tumor_s": 12.56,
+   "extract_s": 11.65,
+   "n_slices_organ": 255,
+   "n_slices_tumor": 33,
+   "n_slices_vol": 665,
+   "dice_organ_sanity": 0.9285,
+   "dice_tumor_sanity": 0.7369
+  },
+  "case_00105": {
+   "load_s": 1.24,
+   "preprocess_s": 1.62,
+   "seg_organ_s": 7.51,
+   "seg_tumor_s": 4.26,
+   "extract_s": 2.44,
+   "n_slices_organ": 34,
+   "n_slices_tumor": 16,
+   "n_slices_vol": 153,
+   "dice_organ_sanity": 0.8668,
+   "dice_tumor_sanity": 0.929
+  },
+  "case_00120": {
+   "load_s": 2.37,
+   "preprocess_s": 3.42,
+   "seg_organ_s": 19.56,
+   "seg_tumor_s": 4.13,
+   "extract_s": 4.64,
+   "n_slices_organ": 93,
+   "n_slices_tumor": 9,
+   "n_slices_vol": 285,
+   "dice_organ_sanity": 0.9253,
+   "dice_tumor_sanity": 0.6464
+  },
+  "case_00124": {
+   "load_s": 2.01,
+   "preprocess_s": 3.45,
+   "seg_organ_s": 10.9,
+   "seg_tumor_s": 3.35,
+   "extract_s": 4.28,
+   "n_slices_organ": 48,
+   "n_slices_tumor": 6,
+   "n_slices_vol": 262,
+   "dice_organ_sanity": 0.9351,
+   "dice_tumor_sanity": 0.8873
+  },
+  "case_00128": {
+   "load_s": 1.59,
+   "preprocess_s": 2.06,
+   "seg_organ_s": 9.76,
+   "seg_tumor_s": 3.8,
+   "extract_s": 3.42,
+   "n_slices_organ": 43,
+   "n_slices_tumor": 11,
+   "n_slices_vol": 206,
+   "dice_organ_sanity": 0.933,
+   "dice_tumor_sanity": 0.8281
+  },
+  "case_00146": {
+   "load_s": 4.89,
+   "preprocess_s": 6.47,
+   "seg_organ_s": 71.29,
+   "seg_tumor_s": 19.14,
+   "extract_s": 13.46,
+   "n_slices_organ": 243,
+   "n_slices_tumor": 44,
+   "n_slices_vol": 591,
+   "dice_organ_sanity": 0.9497,
+   "dice_tumor_sanity": 0.8982
+  },
+  "case_00148": {
+   "load_s": 0.4,
+   "preprocess_s": 0.61,
+   "seg_organ_s": 8.02,
+   "seg_tumor_s": 2.08,
+   "extract_s": 0.6,
+   "n_slices_organ": 28,
+   "n_slices_tumor": 6,
+   "n_slices_vol": 36,
+   "dice_organ_sanity": 0.9524,
+   "dice_tumor_sanity": 0.9068
+  },
+  "case_00149": {
+   "load_s": 0.95,
+   "preprocess_s": 1.57,
+   "seg_organ_s": 14.2,
+   "seg_tumor_s": 9.35,
+   "extract_s": 2.15,
+   "n_slices_organ": 50,
+   "n_slices_tumor": 30,
+   "n_slices_vol": 97,
+   "dice_organ_sanity": 0.8238,
+   "dice_tumor_sanity": 0.9518
+  },
+  "case_00152": {
+   "load_s": 0.38,
+   "preprocess_s": 0.66,
+   "seg_organ_s": 6.48,
+   "seg_tumor_s": 1.81,
+   "extract_s": 0.77,
+   "n_slices_organ": 24,
+   "n_slices_tumor": 5,
+   "n_slices_vol": 38,
+   "dice_organ_sanity": 0.9232,
+   "dice_tumor_sanity": 0.7701
+  },
+  "case_00154": {
+   "load_s": 4.39,
+   "preprocess_s": 11.62,
+   "seg_organ_s": 58.05,
+   "seg_tumor_s": 19.9,
+   "extract_s": 10.71,
+   "n_slices_organ": 197,
+   "n_slices_tumor": 52,
+   "n_slices_vol": 470,
+   "dice_organ_sanity": 0.9066,
+   "dice_tumor_sanity": 0.9202
+  },
+  "case_00160": {
+   "load_s": 4.03,
+   "preprocess_s": 5.54,
+   "seg_organ_s": 33.24,
+   "seg_tumor_s": 14.68,
+   "extract_s": 8.56,
+   "n_slices_organ": 114,
+   "n_slices_tumor": 46,
+   "n_slices_vol": 252,
+   "dice_organ_sanity": 0.9101,
+   "dice_tumor_sanity": 0.8272
+  },
+  "case_00162": {
+   "load_s": 0.98,
+   "preprocess_s": 1.57,
+   "seg_organ_s": 6.85,
+   "seg_tumor_s": 3.43,
+   "extract_s": 1.64,
+   "n_slices_organ": 20,
+   "n_slices_tumor": 9,
+   "n_slices_vol": 94,
+   "dice_organ_sanity": 0.9105,
+   "dice_tumor_sanity": 0.9334
+  },
+  "case_00165": {
+   "load_s": 6.47,
+   "preprocess_s": 18.16,
+   "seg_organ_s": 43.76,
+   "seg_tumor_s": 8.8,
+   "extract_s": 9.08,
+   "n_slices_organ": 126,
+   "n_slices_tumor": 0,
+   "n_slices_vol": 734,
+   "dice_organ_sanity": 0.9043,
+   "dice_tumor_sanity": 0.0
+  },
+  "case_00175": {
+   "load_s": 1.11,
+   "preprocess_s": 1.67,
+   "seg_organ_s": 7.8,
+   "seg_tumor_s": 3.88,
+   "extract_s": 2.35,
+   "n_slices_organ": 24,
+   "n_slices_tumor": 9,
+   "n_slices_vol": 107,
+   "dice_organ_sanity": 0.9234,
+   "dice_tumor_sanity": 0.8664
+  }
+ },
+ "stage_summary_s": {
+  "load_s": {
+   "median": 1.14,
+   "IQR": [
+    0.81,
+    2.28
+   ],
+   "n": 36
+  },
+  "preprocess_s": {
+   "median": 1.77,
+   "IQR": [
+    1.29,
+    3.66
+   ],
+   "n": 36
+  },
+  "seg_organ_s": {
+   "median": 10.47,
+   "IQR": [
+    7.64,
+    17.95
+   ],
+   "n": 36
+  },
+  "seg_tumor_s": {
+   "median": 4.54,
+   "IQR": [
+    3.41,
+    8.86
+   ],
+   "n": 36
+  },
+  "extract_s": {
+   "median": 2.41,
+   "IQR": [
+    1.58,
+    4.68
+   ],
+   "n": 36
+  }
+ },
+ "segmentation_total_s": {
+  "median": 15.67,
+  "IQR": [
+   10.66,
+   25.0
+  ],
+  "n": 36
+ },
+ "graph_build_s_cohort": 0.46,
+ "graph_load_ms": 57,
+ "n_triples": 1464,
+ "sparql_per_query_median_ms": {
+  "01_cohort_summary": 16.6,
+  "02_tumor_burden_by_organ": 16.1,
+  "03_high_burden_tumors": 12.7,
+  "04_pancreatic_tumors": 9.6,
+  "05_kidney_tumors": 9.5,
+  "06_multifocal_tumors": 11.9,
+  "07_largest_tumors": 13.8,
+  "08_multi_organ_cases": 14.1,
+  "09_tumor_with_ontology_grounding": 14.3,
+  "10_tumor_to_organ_volume_ratio": 20.1
+ },
+ "sparql_across_queries_ms": {
+  "median": 13.9,
+  "IQR": [
+   12.1,
+   15.7
+  ]
+ },
+ "end_to_end_per_case_s": {
+  "median": 21.34,
+  "IQR": [
+   15.0,
+   35.77
+  ],
+  "n": 36
+ },
+ "end_to_end_by_case_s": {
+  "case_00006": 22.64,
+  "case_00008": 40.61,
+  "case_00017": 15.16,
+  "case_00018": 23.97,
+  "case_00021": 10.26,
+  "case_00024": 14.21,
+  "case_00030": 18.52,
+  "case_00035": 14.33,
+  "case_00039": 13.16,
+  "case_00042": 83.08,
+  "case_00043": 25.61,
+  "case_00057": 22.27,
+  "case_00060": 21.25,
+  "case_00067": 92.31,
+  "case_00075": 12.6,
+  "case_00079": 19.95,
+  "case_00083": 21.44,
+  "case_00086": 29.78,
+  "case_00087": 10.81,
+  "case_00090": 19.2,
+  "case_00092": 18.33,
+  "case_00095": 42.32,
+  "case_00103": 94.07,
+  "case_00105": 17.1,
+  "case_00120": 34.15,
+  "case_00124": 24.02,
+  "case_00128": 20.66,
+  "case_00146": 115.28,
+  "case_00148": 11.74,
+  "case_00149": 28.25,
+  "case_00152": 10.13,
+  "case_00154": 104.7,
+  "case_00160": 66.08,
+  "case_00162": 14.5,
+  "case_00165": 86.3,
+  "case_00175": 16.84
+ }
+}

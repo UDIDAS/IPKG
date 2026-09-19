@@ -1,0 +1,1309 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix inst: <http://example.org/mmkg/instance/> .
+@prefix mmkg: <http://example.org/mmkg/schema/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+inst:case_volume-101 a mmkg:ImagingCase ;
+    mmkg:case_id "volume-101" ;
+    mmkg:dataset "lits" ;
+    mmkg:depicts_organ inst:organ_volume-101_liver ;
+    mmkg:from_dataset inst:dataset_lits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_volume-101 .
+
+inst:case_volume-11 a mmkg:ImagingCase ;
+    mmkg:case_id "volume-11" ;
+    mmkg:dataset "lits" ;
+    mmkg:depicts_organ inst:organ_volume-11_liver ;
+    mmkg:from_dataset inst:dataset_lits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_volume-11 .
+
+inst:case_volume-110 a mmkg:ImagingCase ;
+    mmkg:case_id "volume-110" ;
+    mmkg:dataset "lits" ;
+    mmkg:depicts_organ inst:organ_volume-110_liver ;
+    mmkg:from_dataset inst:dataset_lits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_volume-110 .
+
+inst:case_volume-113 a mmkg:ImagingCase ;
+    mmkg:case_id "volume-113" ;
+    mmkg:dataset "lits" ;
+    mmkg:depicts_organ inst:organ_volume-113_liver ;
+    mmkg:from_dataset inst:dataset_lits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_volume-113 .
+
+inst:case_volume-116 a mmkg:ImagingCase ;
+    mmkg:case_id "volume-116" ;
+    mmkg:dataset "lits" ;
+    mmkg:depicts_organ inst:organ_volume-116_liver ;
+    mmkg:from_dataset inst:dataset_lits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_volume-116 .
+
+inst:case_volume-19 a mmkg:ImagingCase ;
+    mmkg:case_id "volume-19" ;
+    mmkg:dataset "lits" ;
+    mmkg:depicts_organ inst:organ_volume-19_liver ;
+    mmkg:from_dataset inst:dataset_lits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_volume-19 .
+
+inst:case_volume-21 a mmkg:ImagingCase ;
+    mmkg:case_id "volume-21" ;
+    mmkg:dataset "lits" ;
+    mmkg:depicts_organ inst:organ_volume-21_liver ;
+    mmkg:from_dataset inst:dataset_lits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_volume-21 .
+
+inst:case_volume-24 a mmkg:ImagingCase ;
+    mmkg:case_id "volume-24" ;
+    mmkg:dataset "lits" ;
+    mmkg:depicts_organ inst:organ_volume-24_liver ;
+    mmkg:from_dataset inst:dataset_lits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_volume-24 .
+
+inst:case_volume-37 a mmkg:ImagingCase ;
+    mmkg:case_id "volume-37" ;
+    mmkg:dataset "lits" ;
+    mmkg:depicts_organ inst:organ_volume-37_liver ;
+    mmkg:from_dataset inst:dataset_lits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_volume-37 .
+
+inst:case_volume-43 a mmkg:ImagingCase ;
+    mmkg:case_id "volume-43" ;
+    mmkg:dataset "lits" ;
+    mmkg:depicts_organ inst:organ_volume-43_liver ;
+    mmkg:from_dataset inst:dataset_lits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_volume-43 .
+
+inst:case_volume-44 a mmkg:ImagingCase ;
+    mmkg:case_id "volume-44" ;
+    mmkg:dataset "lits" ;
+    mmkg:depicts_organ inst:organ_volume-44_liver ;
+    mmkg:from_dataset inst:dataset_lits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_volume-44 .
+
+inst:case_volume-49 a mmkg:ImagingCase ;
+    mmkg:case_id "volume-49" ;
+    mmkg:dataset "lits" ;
+    mmkg:depicts_organ inst:organ_volume-49_liver ;
+    mmkg:from_dataset inst:dataset_lits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_volume-49 .
+
+inst:case_volume-54 a mmkg:ImagingCase ;
+    mmkg:case_id "volume-54" ;
+    mmkg:dataset "lits" ;
+    mmkg:depicts_organ inst:organ_volume-54_liver ;
+    mmkg:from_dataset inst:dataset_lits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_volume-54 .
+
+inst:case_volume-68 a mmkg:ImagingCase ;
+    mmkg:case_id "volume-68" ;
+    mmkg:dataset "lits" ;
+    mmkg:depicts_organ inst:organ_volume-68_liver ;
+    mmkg:from_dataset inst:dataset_lits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_volume-68 .
+
+inst:case_volume-70 a mmkg:ImagingCase ;
+    mmkg:case_id "volume-70" ;
+    mmkg:dataset "lits" ;
+    mmkg:depicts_organ inst:organ_volume-70_liver ;
+    mmkg:from_dataset inst:dataset_lits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_volume-70 .
+
+inst:case_volume-75 a mmkg:ImagingCase ;
+    mmkg:case_id "volume-75" ;
+    mmkg:dataset "lits" ;
+    mmkg:depicts_organ inst:organ_volume-75_liver ;
+    mmkg:from_dataset inst:dataset_lits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_volume-75 .
+
+inst:case_volume-76 a mmkg:ImagingCase ;
+    mmkg:case_id "volume-76" ;
+    mmkg:dataset "lits" ;
+    mmkg:depicts_organ inst:organ_volume-76_liver ;
+    mmkg:from_dataset inst:dataset_lits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_volume-76 .
+
+inst:case_volume-80 a mmkg:ImagingCase ;
+    mmkg:case_id "volume-80" ;
+    mmkg:dataset "lits" ;
+    mmkg:depicts_organ inst:organ_volume-80_liver ;
+    mmkg:from_dataset inst:dataset_lits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_volume-80 .
+
+inst:case_volume-82 a mmkg:ImagingCase ;
+    mmkg:case_id "volume-82" ;
+    mmkg:dataset "lits" ;
+    mmkg:depicts_organ inst:organ_volume-82_liver ;
+    mmkg:from_dataset inst:dataset_lits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_volume-82 .
+
+inst:case_volume-93 a mmkg:ImagingCase ;
+    mmkg:case_id "volume-93" ;
+    mmkg:dataset "lits" ;
+    mmkg:depicts_organ inst:organ_volume-93_liver ;
+    mmkg:from_dataset inst:dataset_lits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_volume-93 .
+
+inst:case_volume-99 a mmkg:ImagingCase ;
+    mmkg:case_id "volume-99" ;
+    mmkg:dataset "lits" ;
+    mmkg:depicts_organ inst:organ_volume-99_liver ;
+    mmkg:from_dataset inst:dataset_lits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_volume-99 .
+
+inst:concept_NCIt_C12392 a mmkg:OntologyConcept ;
+    mmkg:code "C12392" ;
+    mmkg:display "Liver" ;
+    mmkg:system "NCIt" .
+
+inst:concept_NCIt_C12393 a mmkg:OntologyConcept ;
+    mmkg:code "C12393" ;
+    mmkg:display "Pancreas" ;
+    mmkg:system "NCIt" .
+
+inst:concept_NCIt_C12415 a mmkg:OntologyConcept ;
+    mmkg:code "C12415" ;
+    mmkg:display "Kidney" ;
+    mmkg:system "NCIt" .
+
+inst:concept_NCIt_C12432 a mmkg:OntologyConcept ;
+    mmkg:code "C12432" ;
+    mmkg:display "Spleen" ;
+    mmkg:system "NCIt" .
+
+inst:concept_NCIt_C3099 a mmkg:OntologyConcept ;
+    mmkg:code "C3099" ;
+    mmkg:display "Hepatocellular Carcinoma" ;
+    mmkg:system "NCIt" .
+
+inst:concept_NCIt_C3150 a mmkg:OntologyConcept ;
+    mmkg:code "C3150" ;
+    mmkg:display "Kidney Neoplasm" ;
+    mmkg:system "NCIt" .
+
+inst:concept_NCIt_C3305 a mmkg:OntologyConcept ;
+    mmkg:code "C3305" ;
+    mmkg:display "Pancreatic Neoplasm" ;
+    mmkg:system "NCIt" .
+
+inst:concept_SNOMEDCT_126880001 a mmkg:OntologyConcept ;
+    mmkg:code "126880001" ;
+    mmkg:display "Neoplasm of kidney" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_15776009 a mmkg:OntologyConcept ;
+    mmkg:code "15776009" ;
+    mmkg:display "Pancreatic structure" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_18639004 a mmkg:OntologyConcept ;
+    mmkg:code "18639004" ;
+    mmkg:display "Left kidney structure" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_258261001 a mmkg:OntologyConcept ;
+    mmkg:code "258261001" ;
+    mmkg:display "Tumour volume" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_263605001 a mmkg:OntologyConcept ;
+    mmkg:code "263605001" ;
+    mmkg:display "Tumor size" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_372003004 a mmkg:OntologyConcept ;
+    mmkg:code "372003004" ;
+    mmkg:display "Primary malignant neoplasm of pancreas" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_409771002 a mmkg:OntologyConcept ;
+    mmkg:code "409771002" ;
+    mmkg:display "Tumour invasion by direct extension from organ of origin to adjacent organ" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_64033007 a mmkg:OntologyConcept ;
+    mmkg:code "64033007" ;
+    mmkg:display "Kidney structure" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_78961009 a mmkg:OntologyConcept ;
+    mmkg:code "78961009" ;
+    mmkg:display "Splenic structure" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_9846003 a mmkg:OntologyConcept ;
+    mmkg:code "9846003" ;
+    mmkg:display "Right kidney structure" ;
+    mmkg:system "SNOMED CT" .
+
+<http://example.org/mmkg/schema> a owl:Ontology ;
+    dcterms:title "Imaging Phenotype KG Schema (SAM3 segmentation hand-off)" ;
+    rdfs:comment "T-Box for imaging cases, organs, lesions and phenotypes derived from SAM3 segmentation. Domain classes carry skos:exactMatch to SNOMED CT / NCIt / FMA / RadLex concepts. Aligned with acm_mmkg schema.py v2.0 conventions." ;
+    owl:versionInfo "1.0" .
+
+mmkg:CrossOrganExtension a owl:Class ;
+    rdfs:label "Cross-organ extension" ;
+    mmkg:mapped_to_concept mmkg:concept_CrossOrganExtension_409771002 ;
+    rdfs:subClassOf mmkg:Observation ;
+    skos:exactMatch <http://snomed.info/id/409771002> .
+
+mmkg:Pancreas a owl:Class ;
+    rdfs:label "Pancreas" ;
+    mmkg:mapped_to_concept mmkg:concept_Pancreas_15776009,
+        mmkg:concept_Pancreas_C12393 ;
+    rdfs:subClassOf mmkg:Organ ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C12393>,
+        <http://snomed.info/id/15776009> .
+
+mmkg:PancreaticTumor a owl:Class ;
+    rdfs:label "Pancreatic tumor" ;
+    mmkg:mapped_to_concept mmkg:concept_PancreaticTumor_372003004,
+        mmkg:concept_PancreaticTumor_C3305 ;
+    rdfs:subClassOf mmkg:Lesion ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C3305>,
+        <http://snomed.info/id/372003004> .
+
+mmkg:RenalTumor a owl:Class ;
+    rdfs:label "Renal tumor" ;
+    mmkg:mapped_to_concept mmkg:concept_RenalTumor_126880001,
+        mmkg:concept_RenalTumor_C3150 ;
+    rdfs:subClassOf mmkg:Lesion ;
+    skos:definition "Tumor located in the right or left kidney." .
+
+mmkg:TumorDiameter a owl:Class ;
+    rdfs:label "Tumor diameter" ;
+    mmkg:mapped_to_concept mmkg:concept_TumorDiameter_263605001 ;
+    rdfs:subClassOf mmkg:Observation ;
+    skos:exactMatch <http://snomed.info/id/263605001> .
+
+mmkg:TumorVolume a owl:Class ;
+    rdfs:label "Tumor volume" ;
+    mmkg:mapped_to_concept mmkg:concept_TumorVolume_258261001 ;
+    rdfs:subClassOf mmkg:Observation ;
+    skos:exactMatch <http://snomed.info/id/258261001> .
+
+mmkg:anatomic_location a owl:DatatypeProperty ;
+    rdfs:label "anatomic_location" ;
+    rdfs:range xsd:string .
+
+mmkg:case_id a owl:DatatypeProperty ;
+    rdfs:label "case_id" ;
+    rdfs:range xsd:string .
+
+mmkg:code a owl:AnnotationProperty ;
+    rdfs:label "code" .
+
+mmkg:dataset a owl:DatatypeProperty ;
+    rdfs:label "dataset" ;
+    rdfs:range xsd:string .
+
+mmkg:depicts_organ a owl:ObjectProperty ;
+    rdfs:label "depicts_organ" ;
+    rdfs:domain mmkg:Series ;
+    rdfs:range mmkg:Organ .
+
+mmkg:diameter_mm a owl:DatatypeProperty ;
+    rdfs:label "diameter_mm" ;
+    rdfs:range xsd:float .
+
+mmkg:dice_score a owl:DatatypeProperty ;
+    rdfs:label "dice_score" ;
+    rdfs:range xsd:float .
+
+mmkg:display a owl:AnnotationProperty ;
+    rdfs:label "display" .
+
+mmkg:has_lesion a owl:ObjectProperty ;
+    rdfs:label "has_lesion" ;
+    rdfs:domain mmkg:Series ;
+    rdfs:range mmkg:Lesion .
+
+mmkg:has_observation a owl:ObjectProperty ;
+    rdfs:label "has_observation" ;
+    rdfs:domain mmkg:Lesion ;
+    rdfs:range mmkg:Observation .
+
+mmkg:has_series a owl:ObjectProperty ;
+    rdfs:label "has_series" ;
+    rdfs:domain mmkg:Study ;
+    rdfs:range mmkg:Series .
+
+mmkg:has_study a owl:ObjectProperty ;
+    rdfs:label "has_study" ;
+    rdfs:domain mmkg:ImagingCase ;
+    rdfs:range mmkg:Study .
+
+mmkg:is_tumor a owl:DatatypeProperty ;
+    rdfs:label "is_tumor" ;
+    rdfs:range xsd:boolean .
+
+mmkg:lesion_count a owl:DatatypeProperty ;
+    rdfs:label "lesion_count" ;
+    rdfs:range xsd:integer .
+
+mmkg:located_in a owl:ObjectProperty ;
+    rdfs:label "located_in" ;
+    rdfs:domain mmkg:Lesion ;
+    rdfs:range mmkg:AnatomicSite .
+
+mmkg:mapped_to_concept a owl:ObjectProperty ;
+    rdfs:label "mapped_to_concept" ;
+    rdfs:range mmkg:OntologyConcept .
+
+mmkg:modality a owl:DatatypeProperty ;
+    rdfs:label "modality" ;
+    rdfs:range xsd:string .
+
+mmkg:overlaps_organ a owl:ObjectProperty ;
+    rdfs:label "overlaps_organ" ;
+    rdfs:domain mmkg:Lesion ;
+    rdfs:range mmkg:Organ .
+
+mmkg:part_of a owl:ObjectProperty ;
+    rdfs:label "part_of" ;
+    rdfs:domain mmkg:AnatomicSite ;
+    rdfs:range mmkg:Organ .
+
+mmkg:source_of_segmentation a owl:DatatypeProperty ;
+    rdfs:label "source_of_segmentation" ;
+    rdfs:range xsd:string .
+
+mmkg:system a owl:AnnotationProperty ;
+    rdfs:label "system" .
+
+mmkg:volume_cm3 a owl:DatatypeProperty ;
+    rdfs:label "volume_cm3" ;
+    rdfs:range xsd:float .
+
+inst:concept_SNOMEDCT_362201006 a mmkg:OntologyConcept ;
+    mmkg:code "362201006" ;
+    mmkg:display "Entire head of pancreas" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_40133006 a mmkg:OntologyConcept ;
+    mmkg:code "40133006" ;
+    mmkg:display "Structure of body of pancreas" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_73239005 a mmkg:OntologyConcept ;
+    mmkg:code "73239005" ;
+    mmkg:display "Structure of tail of pancreas" ;
+    mmkg:system "SNOMED CT" .
+
+inst:lesion_volume-101_liver a mmkg:Lesion,
+        mmkg:LiverTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_volume-101_liver_burden_cat,
+        inst:obs_volume-101_liver_containment,
+        inst:obs_volume-101_liver_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_volume-101_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_93870000 ;
+    mmkg:volume_cm3 "106.28"^^xsd:float .
+
+inst:lesion_volume-110_liver a mmkg:Lesion,
+        mmkg:LiverTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_volume-110_liver_burden_cat,
+        inst:obs_volume-110_liver_containment,
+        inst:obs_volume-110_liver_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_volume-110_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_93870000 ;
+    mmkg:volume_cm3 "31.1"^^xsd:float .
+
+inst:lesion_volume-113_liver a mmkg:Lesion,
+        mmkg:LiverTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_volume-113_liver_burden_cat,
+        inst:obs_volume-113_liver_containment,
+        inst:obs_volume-113_liver_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_volume-113_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_93870000 ;
+    mmkg:volume_cm3 "22.76"^^xsd:float .
+
+inst:lesion_volume-116_liver a mmkg:Lesion,
+        mmkg:LiverTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_volume-116_liver_burden_cat,
+        inst:obs_volume-116_liver_containment,
+        inst:obs_volume-116_liver_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_volume-116_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_93870000 ;
+    mmkg:volume_cm3 "75.1"^^xsd:float .
+
+inst:lesion_volume-11_liver a mmkg:Lesion,
+        mmkg:LiverTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_volume-11_liver_burden_cat,
+        inst:obs_volume-11_liver_containment,
+        inst:obs_volume-11_liver_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_volume-11_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_93870000 ;
+    mmkg:volume_cm3 "2.76"^^xsd:float .
+
+inst:lesion_volume-19_liver a mmkg:Lesion,
+        mmkg:LiverTumor ;
+    mmkg:at_site inst:site_head ;
+    mmkg:has_observation inst:obs_volume-19_liver_burden_cat,
+        inst:obs_volume-19_liver_containment,
+        inst:obs_volume-19_liver_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_volume-19_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_93870000 ;
+    mmkg:volume_cm3 "6.71"^^xsd:float .
+
+inst:lesion_volume-21_liver a mmkg:Lesion,
+        mmkg:LiverTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_volume-21_liver_burden_cat,
+        inst:obs_volume-21_liver_containment,
+        inst:obs_volume-21_liver_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_volume-21_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_93870000 ;
+    mmkg:volume_cm3 "9.8"^^xsd:float .
+
+inst:lesion_volume-24_liver a mmkg:Lesion,
+        mmkg:LiverTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_volume-24_liver_burden_cat,
+        inst:obs_volume-24_liver_containment,
+        inst:obs_volume-24_liver_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_volume-24_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_93870000 ;
+    mmkg:volume_cm3 "0.36"^^xsd:float .
+
+inst:lesion_volume-37_liver a mmkg:Lesion,
+        mmkg:LiverTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_volume-37_liver_burden_cat,
+        inst:obs_volume-37_liver_containment,
+        inst:obs_volume-37_liver_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_volume-37_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_93870000 ;
+    mmkg:volume_cm3 "2.98"^^xsd:float .
+
+inst:lesion_volume-43_liver a mmkg:Lesion,
+        mmkg:LiverTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_volume-43_liver_burden_cat,
+        inst:obs_volume-43_liver_containment,
+        inst:obs_volume-43_liver_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_volume-43_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_93870000 ;
+    mmkg:volume_cm3 "1.58"^^xsd:float .
+
+inst:lesion_volume-44_liver a mmkg:Lesion,
+        mmkg:LiverTumor ;
+    mmkg:at_site inst:site_head ;
+    mmkg:has_observation inst:obs_volume-44_liver_burden_cat,
+        inst:obs_volume-44_liver_containment,
+        inst:obs_volume-44_liver_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_volume-44_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_93870000 ;
+    mmkg:volume_cm3 "32.36"^^xsd:float .
+
+inst:lesion_volume-49_liver a mmkg:Lesion,
+        mmkg:LiverTumor ;
+    mmkg:at_site inst:site_head ;
+    mmkg:has_observation inst:obs_volume-49_liver_burden_cat,
+        inst:obs_volume-49_liver_containment,
+        inst:obs_volume-49_liver_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_volume-49_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_93870000 ;
+    mmkg:volume_cm3 "1.7"^^xsd:float .
+
+inst:lesion_volume-54_liver a mmkg:Lesion,
+        mmkg:LiverTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_volume-54_liver_burden_cat,
+        inst:obs_volume-54_liver_containment,
+        inst:obs_volume-54_liver_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_volume-54_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_93870000 ;
+    mmkg:volume_cm3 "0.04"^^xsd:float .
+
+inst:lesion_volume-68_liver a mmkg:Lesion,
+        mmkg:LiverTumor ;
+    mmkg:at_site inst:site_head ;
+    mmkg:has_observation inst:obs_volume-68_liver_burden_cat,
+        inst:obs_volume-68_liver_containment,
+        inst:obs_volume-68_liver_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_volume-68_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_93870000 ;
+    mmkg:volume_cm3 "1.19"^^xsd:float .
+
+inst:lesion_volume-70_liver a mmkg:Lesion,
+        mmkg:LiverTumor ;
+    mmkg:at_site inst:site_head ;
+    mmkg:has_observation inst:obs_volume-70_liver_burden_cat,
+        inst:obs_volume-70_liver_containment,
+        inst:obs_volume-70_liver_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_volume-70_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_93870000 ;
+    mmkg:volume_cm3 "28.19"^^xsd:float .
+
+inst:lesion_volume-75_liver a mmkg:Lesion,
+        mmkg:LiverTumor ;
+    mmkg:at_site inst:site_head ;
+    mmkg:has_observation inst:obs_volume-75_liver_burden_cat,
+        inst:obs_volume-75_liver_containment,
+        inst:obs_volume-75_liver_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_volume-75_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_93870000 ;
+    mmkg:volume_cm3 "0.57"^^xsd:float .
+
+inst:lesion_volume-76_liver a mmkg:Lesion,
+        mmkg:LiverTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_volume-76_liver_burden_cat,
+        inst:obs_volume-76_liver_containment,
+        inst:obs_volume-76_liver_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_volume-76_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_93870000 ;
+    mmkg:volume_cm3 "48.36"^^xsd:float .
+
+inst:lesion_volume-80_liver a mmkg:Lesion,
+        mmkg:LiverTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_volume-80_liver_burden_cat,
+        inst:obs_volume-80_liver_containment,
+        inst:obs_volume-80_liver_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_volume-80_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_93870000 ;
+    mmkg:volume_cm3 "20.98"^^xsd:float .
+
+inst:lesion_volume-82_liver a mmkg:Lesion,
+        mmkg:LiverTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_volume-82_liver_burden_cat,
+        inst:obs_volume-82_liver_containment,
+        inst:obs_volume-82_liver_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_volume-82_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_93870000 ;
+    mmkg:volume_cm3 "34.62"^^xsd:float .
+
+inst:lesion_volume-93_liver a mmkg:Lesion,
+        mmkg:LiverTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_volume-93_liver_burden_cat,
+        inst:obs_volume-93_liver_containment,
+        inst:obs_volume-93_liver_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_volume-93_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_93870000 ;
+    mmkg:volume_cm3 "90.74"^^xsd:float .
+
+inst:lesion_volume-99_liver a mmkg:Lesion,
+        mmkg:LiverTumor ;
+    mmkg:at_site inst:site_head ;
+    mmkg:has_observation inst:obs_volume-99_liver_burden_cat,
+        inst:obs_volume-99_liver_containment,
+        inst:obs_volume-99_liver_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_volume-99_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_93870000 ;
+    mmkg:volume_cm3 "1.76"^^xsd:float .
+
+inst:obs_volume-101_liver_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_volume-101_liver_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_volume-101_liver_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "multifocal" .
+
+inst:obs_volume-110_liver_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_volume-110_liver_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_volume-110_liver_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "multifocal" .
+
+inst:obs_volume-113_liver_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_volume-113_liver_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_volume-113_liver_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "multifocal" .
+
+inst:obs_volume-116_liver_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_volume-116_liver_containment a mmkg:OrganContainment ;
+    mmkg:value "contained" .
+
+inst:obs_volume-116_liver_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "multifocal" .
+
+inst:obs_volume-11_liver_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_volume-11_liver_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_volume-11_liver_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "multifocal" .
+
+inst:obs_volume-19_liver_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_volume-19_liver_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_volume-19_liver_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "multifocal" .
+
+inst:obs_volume-21_liver_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_volume-21_liver_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_volume-21_liver_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "multifocal" .
+
+inst:obs_volume-24_liver_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_volume-24_liver_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_volume-24_liver_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_volume-37_liver_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_volume-37_liver_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_volume-37_liver_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "multifocal" .
+
+inst:obs_volume-43_liver_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_volume-43_liver_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_volume-43_liver_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_volume-44_liver_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_volume-44_liver_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_volume-44_liver_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "multifocal" .
+
+inst:obs_volume-49_liver_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_volume-49_liver_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_volume-49_liver_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "multifocal" .
+
+inst:obs_volume-54_liver_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_volume-54_liver_containment a mmkg:OrganContainment ;
+    mmkg:value "contained" .
+
+inst:obs_volume-54_liver_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_volume-68_liver_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_volume-68_liver_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_volume-68_liver_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_volume-70_liver_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_volume-70_liver_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_volume-70_liver_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "multifocal" .
+
+inst:obs_volume-75_liver_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_volume-75_liver_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_volume-75_liver_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_volume-76_liver_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_volume-76_liver_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_volume-76_liver_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "multifocal" .
+
+inst:obs_volume-80_liver_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_volume-80_liver_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_volume-80_liver_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "multifocal" .
+
+inst:obs_volume-82_liver_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_volume-82_liver_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_volume-82_liver_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_volume-93_liver_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_volume-93_liver_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_volume-93_liver_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "multifocal" .
+
+inst:obs_volume-99_liver_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_volume-99_liver_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_volume-99_liver_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "multifocal" .
+
+inst:patient_volume-101 a mmkg:Patient ;
+    mmkg:patient_id "volume-101" .
+
+inst:patient_volume-11 a mmkg:Patient ;
+    mmkg:patient_id "volume-11" .
+
+inst:patient_volume-110 a mmkg:Patient ;
+    mmkg:patient_id "volume-110" .
+
+inst:patient_volume-113 a mmkg:Patient ;
+    mmkg:patient_id "volume-113" .
+
+inst:patient_volume-116 a mmkg:Patient ;
+    mmkg:patient_id "volume-116" .
+
+inst:patient_volume-19 a mmkg:Patient ;
+    mmkg:patient_id "volume-19" .
+
+inst:patient_volume-21 a mmkg:Patient ;
+    mmkg:patient_id "volume-21" .
+
+inst:patient_volume-24 a mmkg:Patient ;
+    mmkg:patient_id "volume-24" .
+
+inst:patient_volume-37 a mmkg:Patient ;
+    mmkg:patient_id "volume-37" .
+
+inst:patient_volume-43 a mmkg:Patient ;
+    mmkg:patient_id "volume-43" .
+
+inst:patient_volume-44 a mmkg:Patient ;
+    mmkg:patient_id "volume-44" .
+
+inst:patient_volume-49 a mmkg:Patient ;
+    mmkg:patient_id "volume-49" .
+
+inst:patient_volume-54 a mmkg:Patient ;
+    mmkg:patient_id "volume-54" .
+
+inst:patient_volume-68 a mmkg:Patient ;
+    mmkg:patient_id "volume-68" .
+
+inst:patient_volume-70 a mmkg:Patient ;
+    mmkg:patient_id "volume-70" .
+
+inst:patient_volume-75 a mmkg:Patient ;
+    mmkg:patient_id "volume-75" .
+
+inst:patient_volume-76 a mmkg:Patient ;
+    mmkg:patient_id "volume-76" .
+
+inst:patient_volume-80 a mmkg:Patient ;
+    mmkg:patient_id "volume-80" .
+
+inst:patient_volume-82 a mmkg:Patient ;
+    mmkg:patient_id "volume-82" .
+
+inst:patient_volume-93 a mmkg:Patient ;
+    mmkg:patient_id "volume-93" .
+
+inst:patient_volume-99 a mmkg:Patient ;
+    mmkg:patient_id "volume-99" .
+
+inst:site_tail a mmkg:PancreaticTail ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_73239005 .
+
+mmkg:PancreaticBody a owl:Class ;
+    rdfs:label "Body of pancreas" ;
+    mmkg:mapped_to_concept mmkg:concept_PancreaticBody_40133006 ;
+    rdfs:subClassOf mmkg:AnatomicSite ;
+    skos:exactMatch <http://snomed.info/id/40133006> .
+
+mmkg:PancreaticHead a owl:Class ;
+    rdfs:label "Head of pancreas" ;
+    mmkg:mapped_to_concept mmkg:concept_PancreaticHead_362201006 ;
+    rdfs:subClassOf mmkg:AnatomicSite ;
+    skos:exactMatch <http://snomed.info/id/362201006> .
+
+mmkg:PancreaticTail a owl:Class ;
+    rdfs:label "Tail of pancreas" ;
+    mmkg:mapped_to_concept mmkg:concept_PancreaticTail_73239005 ;
+    rdfs:subClassOf mmkg:AnatomicSite ;
+    skos:exactMatch <http://snomed.info/id/73239005> .
+
+mmkg:concept_CrossOrganExtension_409771002 a mmkg:OntologyConcept ;
+    mmkg:code "409771002" ;
+    mmkg:display "Tumour invasion by direct extension from organ of origin to adjacent organ" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/409771002> .
+
+mmkg:concept_LiverTumor_93870000 a mmkg:OntologyConcept ;
+    mmkg:code "93870000" ;
+    mmkg:display "Malignant neoplasm of liver" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/93870000> .
+
+mmkg:concept_LiverTumor_C3099 a mmkg:OntologyConcept ;
+    mmkg:code "C3099" ;
+    mmkg:display "Hepatocellular Carcinoma" ;
+    mmkg:system "NCIt" ;
+    rdfs:isDefinedBy <https://ncithesaurus.nci.nih.gov> ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/NCIT_C3099> .
+
+mmkg:concept_Liver_10200004 a mmkg:OntologyConcept ;
+    mmkg:code "10200004" ;
+    mmkg:display "Liver structure" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/10200004> .
+
+mmkg:concept_Liver_C12392 a mmkg:OntologyConcept ;
+    mmkg:code "C12392" ;
+    mmkg:display "Liver" ;
+    mmkg:system "NCIt" ;
+    rdfs:isDefinedBy <https://ncithesaurus.nci.nih.gov> ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/NCIT_C12392> .
+
+mmkg:concept_Pancreas_15776009 a mmkg:OntologyConcept ;
+    mmkg:code "15776009" ;
+    mmkg:display "Pancreatic structure" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/15776009> .
+
+mmkg:concept_Pancreas_C12393 a mmkg:OntologyConcept ;
+    mmkg:code "C12393" ;
+    mmkg:display "Pancreas" ;
+    mmkg:system "NCIt" ;
+    rdfs:isDefinedBy <https://ncithesaurus.nci.nih.gov> ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/NCIT_C12393> .
+
+mmkg:concept_PancreaticBody_40133006 a mmkg:OntologyConcept ;
+    mmkg:code "40133006" ;
+    mmkg:display "Structure of body of pancreas" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/40133006> .
+
+mmkg:concept_PancreaticHead_362201006 a mmkg:OntologyConcept ;
+    mmkg:code "362201006" ;
+    mmkg:display "Entire head of pancreas" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/362201006> .
+
+mmkg:concept_PancreaticTail_73239005 a mmkg:OntologyConcept ;
+    mmkg:code "73239005" ;
+    mmkg:display "Structure of tail of pancreas" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/73239005> .
+
+mmkg:concept_PancreaticTumor_372003004 a mmkg:OntologyConcept ;
+    mmkg:code "372003004" ;
+    mmkg:display "Primary malignant neoplasm of pancreas" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/372003004> .
+
+mmkg:concept_PancreaticTumor_C3305 a mmkg:OntologyConcept ;
+    mmkg:code "C3305" ;
+    mmkg:display "Pancreatic Neoplasm" ;
+    mmkg:system "NCIt" ;
+    rdfs:isDefinedBy <https://ncithesaurus.nci.nih.gov> ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/NCIT_C3305> .
+
+mmkg:concept_RenalTumor_126880001 a mmkg:OntologyConcept ;
+    mmkg:code "126880001" ;
+    mmkg:display "Neoplasm of kidney" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/126880001> .
+
+mmkg:concept_RenalTumor_C3150 a mmkg:OntologyConcept ;
+    mmkg:code "C3150" ;
+    mmkg:display "Kidney Neoplasm" ;
+    mmkg:system "NCIt" ;
+    rdfs:isDefinedBy <https://ncithesaurus.nci.nih.gov> ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/NCIT_C3150> .
+
+mmkg:concept_TumorBurden_C28384 a mmkg:OntologyConcept ;
+    mmkg:code "C28384" ;
+    mmkg:display "Tumor Burden" ;
+    mmkg:system "NCIt" ;
+    rdfs:isDefinedBy <https://ncithesaurus.nci.nih.gov> ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/NCIT_C28384> .
+
+mmkg:concept_TumorDiameter_263605001 a mmkg:OntologyConcept ;
+    mmkg:code "263605001" ;
+    mmkg:display "Tumor size" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/263605001> .
+
+mmkg:concept_TumorVolume_258261001 a mmkg:OntologyConcept ;
+    mmkg:code "258261001" ;
+    mmkg:display "Tumour volume" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/258261001> .
+
+inst:organ_volume-101_liver a mmkg:Liver,
+        mmkg:Organ ;
+    mmkg:display "liver" ;
+    mmkg:has_lesion inst:lesion_volume-101_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_10200004 ;
+    mmkg:volume_cm3 "1685.96"^^xsd:float .
+
+inst:organ_volume-110_liver a mmkg:Liver,
+        mmkg:Organ ;
+    mmkg:display "liver" ;
+    mmkg:has_lesion inst:lesion_volume-110_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_10200004 ;
+    mmkg:volume_cm3 "804.83"^^xsd:float .
+
+inst:organ_volume-113_liver a mmkg:Liver,
+        mmkg:Organ ;
+    mmkg:display "liver" ;
+    mmkg:has_lesion inst:lesion_volume-113_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_10200004 ;
+    mmkg:volume_cm3 "843.44"^^xsd:float .
+
+inst:organ_volume-116_liver a mmkg:Liver,
+        mmkg:Organ ;
+    mmkg:display "liver" ;
+    mmkg:has_lesion inst:lesion_volume-116_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_10200004 ;
+    mmkg:volume_cm3 "1080.38"^^xsd:float .
+
+inst:organ_volume-11_liver a mmkg:Liver,
+        mmkg:Organ ;
+    mmkg:display "liver" ;
+    mmkg:has_lesion inst:lesion_volume-11_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_10200004 ;
+    mmkg:volume_cm3 "838.71"^^xsd:float .
+
+inst:organ_volume-19_liver a mmkg:Liver,
+        mmkg:Organ ;
+    mmkg:display "liver" ;
+    mmkg:has_lesion inst:lesion_volume-19_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_10200004 ;
+    mmkg:volume_cm3 "971.52"^^xsd:float .
+
+inst:organ_volume-21_liver a mmkg:Liver,
+        mmkg:Organ ;
+    mmkg:display "liver" ;
+    mmkg:has_lesion inst:lesion_volume-21_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_10200004 ;
+    mmkg:volume_cm3 "762.87"^^xsd:float .
+
+inst:organ_volume-24_liver a mmkg:Liver,
+        mmkg:Organ ;
+    mmkg:display "liver" ;
+    mmkg:has_lesion inst:lesion_volume-24_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_10200004 ;
+    mmkg:volume_cm3 "520.47"^^xsd:float .
+
+inst:organ_volume-37_liver a mmkg:Liver,
+        mmkg:Organ ;
+    mmkg:display "liver" ;
+    mmkg:has_lesion inst:lesion_volume-37_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_10200004 ;
+    mmkg:volume_cm3 "460.93"^^xsd:float .
+
+inst:organ_volume-43_liver a mmkg:Liver,
+        mmkg:Organ ;
+    mmkg:display "liver" ;
+    mmkg:has_lesion inst:lesion_volume-43_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_10200004 ;
+    mmkg:volume_cm3 "683.66"^^xsd:float .
+
+inst:organ_volume-44_liver a mmkg:Liver,
+        mmkg:Organ ;
+    mmkg:display "liver" ;
+    mmkg:has_lesion inst:lesion_volume-44_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_10200004 ;
+    mmkg:volume_cm3 "502.02"^^xsd:float .
+
+inst:organ_volume-49_liver a mmkg:Liver,
+        mmkg:Organ ;
+    mmkg:display "liver" ;
+    mmkg:has_lesion inst:lesion_volume-49_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_10200004 ;
+    mmkg:volume_cm3 "175.12"^^xsd:float .
+
+inst:organ_volume-54_liver a mmkg:Liver,
+        mmkg:Organ ;
+    mmkg:display "liver" ;
+    mmkg:has_lesion inst:lesion_volume-54_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_10200004 ;
+    mmkg:volume_cm3 "132.32"^^xsd:float .
+
+inst:organ_volume-68_liver a mmkg:Liver,
+        mmkg:Organ ;
+    mmkg:display "liver" ;
+    mmkg:has_lesion inst:lesion_volume-68_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_10200004 ;
+    mmkg:volume_cm3 "307.38"^^xsd:float .
+
+inst:organ_volume-70_liver a mmkg:Liver,
+        mmkg:Organ ;
+    mmkg:display "liver" ;
+    mmkg:has_lesion inst:lesion_volume-70_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_10200004 ;
+    mmkg:volume_cm3 "578.32"^^xsd:float .
+
+inst:organ_volume-75_liver a mmkg:Liver,
+        mmkg:Organ ;
+    mmkg:display "liver" ;
+    mmkg:has_lesion inst:lesion_volume-75_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_10200004 ;
+    mmkg:volume_cm3 "148.13"^^xsd:float .
+
+inst:organ_volume-76_liver a mmkg:Liver,
+        mmkg:Organ ;
+    mmkg:display "liver" ;
+    mmkg:has_lesion inst:lesion_volume-76_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_10200004 ;
+    mmkg:volume_cm3 "312.99"^^xsd:float .
+
+inst:organ_volume-80_liver a mmkg:Liver,
+        mmkg:Organ ;
+    mmkg:display "liver" ;
+    mmkg:has_lesion inst:lesion_volume-80_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_10200004 ;
+    mmkg:volume_cm3 "353.73"^^xsd:float .
+
+inst:organ_volume-82_liver a mmkg:Liver,
+        mmkg:Organ ;
+    mmkg:display "liver" ;
+    mmkg:has_lesion inst:lesion_volume-82_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_10200004 ;
+    mmkg:volume_cm3 "1162.92"^^xsd:float .
+
+inst:organ_volume-93_liver a mmkg:Liver,
+        mmkg:Organ ;
+    mmkg:display "liver" ;
+    mmkg:has_lesion inst:lesion_volume-93_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_10200004 ;
+    mmkg:volume_cm3 "1110.09"^^xsd:float .
+
+inst:organ_volume-99_liver a mmkg:Liver,
+        mmkg:Organ ;
+    mmkg:display "liver" ;
+    mmkg:has_lesion inst:lesion_volume-99_liver ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_10200004 ;
+    mmkg:volume_cm3 "936.7"^^xsd:float .
+
+mmkg:Anatomy a owl:Class ;
+    rdfs:label "Anatomy" .
+
+mmkg:Study a owl:Class ;
+    rdfs:label "Study" .
+
+mmkg:Series a owl:Class ;
+    rdfs:label "Series" .
+
+mmkg:AnatomicSite a owl:Class ;
+    rdfs:label "AnatomicSite" ;
+    rdfs:subClassOf mmkg:Anatomy .
+
+inst:site_head a mmkg:PancreaticHead ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_362201006 .
+
+mmkg:Observation a owl:Class ;
+    rdfs:label "Observation" .
+
+inst:site_body a mmkg:PancreaticBody ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_40133006 .
+
+inst:concept_NCIt_C28384 a mmkg:OntologyConcept ;
+    mmkg:code "C28384" ;
+    mmkg:display "Tumor Burden" ;
+    mmkg:system "NCIt" .
+
+inst:concept_SNOMEDCT_10200004 a mmkg:OntologyConcept ;
+    mmkg:code "10200004" ;
+    mmkg:display "Liver structure" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_93870000 a mmkg:OntologyConcept ;
+    mmkg:code "93870000" ;
+    mmkg:display "Malignant neoplasm of liver" ;
+    mmkg:system "SNOMED CT" .
+
+inst:dataset_lits a mmkg:Dataset .
+
+mmkg:LesionMultiplicity a owl:Class ;
+    rdfs:label "Lesion multiplicity" ;
+    rdfs:subClassOf mmkg:Observation .
+
+mmkg:Liver a owl:Class ;
+    rdfs:label "Liver" ;
+    mmkg:mapped_to_concept mmkg:concept_Liver_10200004,
+        mmkg:concept_Liver_C12392 ;
+    rdfs:subClassOf mmkg:Organ ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C12392>,
+        <http://snomed.info/id/10200004> .
+
+mmkg:LiverTumor a owl:Class ;
+    rdfs:label "Liver tumor" ;
+    mmkg:mapped_to_concept mmkg:concept_LiverTumor_93870000,
+        mmkg:concept_LiverTumor_C3099 ;
+    rdfs:subClassOf mmkg:Lesion ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C3099>,
+        <http://snomed.info/id/93870000> .
+
+mmkg:OrganContainment a owl:Class ;
+    rdfs:label "Organ containment" ;
+    rdfs:subClassOf mmkg:Observation .
+
+mmkg:TumorBurden a owl:Class ;
+    rdfs:label "Tumor burden" ;
+    mmkg:mapped_to_concept mmkg:concept_TumorBurden_C28384 ;
+    rdfs:subClassOf mmkg:Observation ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C28384> .
+
+mmkg:ImagingCase a owl:Class ;
+    rdfs:label "ImagingCase" .
+
+mmkg:Organ a owl:Class ;
+    rdfs:label "Organ" ;
+    rdfs:subClassOf mmkg:Anatomy .
+
+mmkg:Lesion a owl:Class ;
+    rdfs:label "Lesion" .
+
+mmkg:OntologyConcept a owl:Class ;
+    rdfs:label "OntologyConcept" .
+

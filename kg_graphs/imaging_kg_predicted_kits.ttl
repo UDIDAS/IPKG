@@ -1,0 +1,1851 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix inst: <http://example.org/mmkg/instance/> .
+@prefix mmkg: <http://example.org/mmkg/schema/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+inst:case_case_00006 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00006" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00006_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00006 .
+
+inst:case_case_00008 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00008" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00008_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00008 .
+
+inst:case_case_00017 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00017" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00017_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00017 .
+
+inst:case_case_00018 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00018" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00018_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00018 .
+
+inst:case_case_00021 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00021" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00021_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00021 .
+
+inst:case_case_00024 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00024" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00024_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00024 .
+
+inst:case_case_00030 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00030" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00030_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00030 .
+
+inst:case_case_00035 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00035" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00035_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00035 .
+
+inst:case_case_00039 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00039" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00039_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00039 .
+
+inst:case_case_00042 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00042" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00042_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00042 .
+
+inst:case_case_00043 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00043" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00043_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00043 .
+
+inst:case_case_00057 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00057" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00057_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00057 .
+
+inst:case_case_00060 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00060" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00060_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00060 .
+
+inst:case_case_00067 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00067" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00067_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00067 .
+
+inst:case_case_00075 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00075" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00075_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00075 .
+
+inst:case_case_00079 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00079" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00079_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00079 .
+
+inst:case_case_00083 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00083" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00083_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00083 .
+
+inst:case_case_00086 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00086" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00086_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00086 .
+
+inst:case_case_00087 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00087" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00087_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00087 .
+
+inst:case_case_00090 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00090" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00090_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00090 .
+
+inst:case_case_00092 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00092" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00092_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00092 .
+
+inst:case_case_00095 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00095" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00095_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00095 .
+
+inst:case_case_00103 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00103" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00103_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00103 .
+
+inst:case_case_00105 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00105" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00105_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00105 .
+
+inst:case_case_00120 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00120" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00120_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00120 .
+
+inst:case_case_00124 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00124" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00124_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00124 .
+
+inst:case_case_00128 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00128" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00128_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00128 .
+
+inst:case_case_00146 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00146" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00146_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00146 .
+
+inst:case_case_00148 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00148" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00148_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00148 .
+
+inst:case_case_00149 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00149" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00149_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00149 .
+
+inst:case_case_00152 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00152" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00152_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00152 .
+
+inst:case_case_00154 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00154" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00154_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00154 .
+
+inst:case_case_00160 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00160" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00160_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00160 .
+
+inst:case_case_00162 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00162" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00162_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00162 .
+
+inst:case_case_00165 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00165" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00165_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00165 .
+
+inst:case_case_00175 a mmkg:ImagingCase ;
+    mmkg:case_id "case_00175" ;
+    mmkg:dataset "kits" ;
+    mmkg:depicts_organ inst:organ_case_00175_kidney ;
+    mmkg:from_dataset inst:dataset_kits ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_case_00175 .
+
+inst:concept_NCIt_C12392 a mmkg:OntologyConcept ;
+    mmkg:code "C12392" ;
+    mmkg:display "Liver" ;
+    mmkg:system "NCIt" .
+
+inst:concept_NCIt_C12393 a mmkg:OntologyConcept ;
+    mmkg:code "C12393" ;
+    mmkg:display "Pancreas" ;
+    mmkg:system "NCIt" .
+
+inst:concept_NCIt_C12415 a mmkg:OntologyConcept ;
+    mmkg:code "C12415" ;
+    mmkg:display "Kidney" ;
+    mmkg:system "NCIt" .
+
+inst:concept_NCIt_C12432 a mmkg:OntologyConcept ;
+    mmkg:code "C12432" ;
+    mmkg:display "Spleen" ;
+    mmkg:system "NCIt" .
+
+inst:concept_NCIt_C3099 a mmkg:OntologyConcept ;
+    mmkg:code "C3099" ;
+    mmkg:display "Hepatocellular Carcinoma" ;
+    mmkg:system "NCIt" .
+
+inst:concept_NCIt_C3150 a mmkg:OntologyConcept ;
+    mmkg:code "C3150" ;
+    mmkg:display "Kidney Neoplasm" ;
+    mmkg:system "NCIt" .
+
+inst:concept_NCIt_C3305 a mmkg:OntologyConcept ;
+    mmkg:code "C3305" ;
+    mmkg:display "Pancreatic Neoplasm" ;
+    mmkg:system "NCIt" .
+
+inst:concept_SNOMEDCT_10200004 a mmkg:OntologyConcept ;
+    mmkg:code "10200004" ;
+    mmkg:display "Liver structure" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_15776009 a mmkg:OntologyConcept ;
+    mmkg:code "15776009" ;
+    mmkg:display "Pancreatic structure" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_18639004 a mmkg:OntologyConcept ;
+    mmkg:code "18639004" ;
+    mmkg:display "Left kidney structure" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_258261001 a mmkg:OntologyConcept ;
+    mmkg:code "258261001" ;
+    mmkg:display "Tumour volume" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_263605001 a mmkg:OntologyConcept ;
+    mmkg:code "263605001" ;
+    mmkg:display "Tumor size" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_372003004 a mmkg:OntologyConcept ;
+    mmkg:code "372003004" ;
+    mmkg:display "Primary malignant neoplasm of pancreas" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_409771002 a mmkg:OntologyConcept ;
+    mmkg:code "409771002" ;
+    mmkg:display "Tumour invasion by direct extension from organ of origin to adjacent organ" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_78961009 a mmkg:OntologyConcept ;
+    mmkg:code "78961009" ;
+    mmkg:display "Splenic structure" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_93870000 a mmkg:OntologyConcept ;
+    mmkg:code "93870000" ;
+    mmkg:display "Malignant neoplasm of liver" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_9846003 a mmkg:OntologyConcept ;
+    mmkg:code "9846003" ;
+    mmkg:display "Right kidney structure" ;
+    mmkg:system "SNOMED CT" .
+
+<http://example.org/mmkg/schema> a owl:Ontology ;
+    dcterms:title "Imaging Phenotype KG Schema (SAM3 segmentation hand-off)" ;
+    rdfs:comment "T-Box for imaging cases, organs, lesions and phenotypes derived from SAM3 segmentation. Domain classes carry skos:exactMatch to SNOMED CT / NCIt / FMA / RadLex concepts. Aligned with acm_mmkg schema.py v2.0 conventions." ;
+    owl:versionInfo "1.0" .
+
+mmkg:CrossOrganExtension a owl:Class ;
+    rdfs:label "Cross-organ extension" ;
+    mmkg:mapped_to_concept mmkg:concept_CrossOrganExtension_409771002 ;
+    rdfs:subClassOf mmkg:Observation ;
+    skos:exactMatch <http://snomed.info/id/409771002> .
+
+mmkg:Liver a owl:Class ;
+    rdfs:label "Liver" ;
+    mmkg:mapped_to_concept mmkg:concept_Liver_10200004,
+        mmkg:concept_Liver_C12392 ;
+    rdfs:subClassOf mmkg:Organ ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C12392>,
+        <http://snomed.info/id/10200004> .
+
+mmkg:LiverTumor a owl:Class ;
+    rdfs:label "Liver tumor" ;
+    mmkg:mapped_to_concept mmkg:concept_LiverTumor_93870000,
+        mmkg:concept_LiverTumor_C3099 ;
+    rdfs:subClassOf mmkg:Lesion ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C3099>,
+        <http://snomed.info/id/93870000> .
+
+mmkg:Pancreas a owl:Class ;
+    rdfs:label "Pancreas" ;
+    mmkg:mapped_to_concept mmkg:concept_Pancreas_15776009,
+        mmkg:concept_Pancreas_C12393 ;
+    rdfs:subClassOf mmkg:Organ ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C12393>,
+        <http://snomed.info/id/15776009> .
+
+mmkg:PancreaticTumor a owl:Class ;
+    rdfs:label "Pancreatic tumor" ;
+    mmkg:mapped_to_concept mmkg:concept_PancreaticTumor_372003004,
+        mmkg:concept_PancreaticTumor_C3305 ;
+    rdfs:subClassOf mmkg:Lesion ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C3305>,
+        <http://snomed.info/id/372003004> .
+
+mmkg:TumorDiameter a owl:Class ;
+    rdfs:label "Tumor diameter" ;
+    mmkg:mapped_to_concept mmkg:concept_TumorDiameter_263605001 ;
+    rdfs:subClassOf mmkg:Observation ;
+    skos:exactMatch <http://snomed.info/id/263605001> .
+
+mmkg:TumorVolume a owl:Class ;
+    rdfs:label "Tumor volume" ;
+    mmkg:mapped_to_concept mmkg:concept_TumorVolume_258261001 ;
+    rdfs:subClassOf mmkg:Observation ;
+    skos:exactMatch <http://snomed.info/id/258261001> .
+
+mmkg:anatomic_location a owl:DatatypeProperty ;
+    rdfs:label "anatomic_location" ;
+    rdfs:range xsd:string .
+
+mmkg:case_id a owl:DatatypeProperty ;
+    rdfs:label "case_id" ;
+    rdfs:range xsd:string .
+
+mmkg:code a owl:AnnotationProperty ;
+    rdfs:label "code" .
+
+mmkg:dataset a owl:DatatypeProperty ;
+    rdfs:label "dataset" ;
+    rdfs:range xsd:string .
+
+mmkg:depicts_organ a owl:ObjectProperty ;
+    rdfs:label "depicts_organ" ;
+    rdfs:domain mmkg:Series ;
+    rdfs:range mmkg:Organ .
+
+mmkg:diameter_mm a owl:DatatypeProperty ;
+    rdfs:label "diameter_mm" ;
+    rdfs:range xsd:float .
+
+mmkg:dice_score a owl:DatatypeProperty ;
+    rdfs:label "dice_score" ;
+    rdfs:range xsd:float .
+
+mmkg:display a owl:AnnotationProperty ;
+    rdfs:label "display" .
+
+mmkg:has_lesion a owl:ObjectProperty ;
+    rdfs:label "has_lesion" ;
+    rdfs:domain mmkg:Series ;
+    rdfs:range mmkg:Lesion .
+
+mmkg:has_observation a owl:ObjectProperty ;
+    rdfs:label "has_observation" ;
+    rdfs:domain mmkg:Lesion ;
+    rdfs:range mmkg:Observation .
+
+mmkg:has_series a owl:ObjectProperty ;
+    rdfs:label "has_series" ;
+    rdfs:domain mmkg:Study ;
+    rdfs:range mmkg:Series .
+
+mmkg:has_study a owl:ObjectProperty ;
+    rdfs:label "has_study" ;
+    rdfs:domain mmkg:ImagingCase ;
+    rdfs:range mmkg:Study .
+
+mmkg:is_tumor a owl:DatatypeProperty ;
+    rdfs:label "is_tumor" ;
+    rdfs:range xsd:boolean .
+
+mmkg:lesion_count a owl:DatatypeProperty ;
+    rdfs:label "lesion_count" ;
+    rdfs:range xsd:integer .
+
+mmkg:located_in a owl:ObjectProperty ;
+    rdfs:label "located_in" ;
+    rdfs:domain mmkg:Lesion ;
+    rdfs:range mmkg:AnatomicSite .
+
+mmkg:mapped_to_concept a owl:ObjectProperty ;
+    rdfs:label "mapped_to_concept" ;
+    rdfs:range mmkg:OntologyConcept .
+
+mmkg:modality a owl:DatatypeProperty ;
+    rdfs:label "modality" ;
+    rdfs:range xsd:string .
+
+mmkg:overlaps_organ a owl:ObjectProperty ;
+    rdfs:label "overlaps_organ" ;
+    rdfs:domain mmkg:Lesion ;
+    rdfs:range mmkg:Organ .
+
+mmkg:part_of a owl:ObjectProperty ;
+    rdfs:label "part_of" ;
+    rdfs:domain mmkg:AnatomicSite ;
+    rdfs:range mmkg:Organ .
+
+mmkg:source_of_segmentation a owl:DatatypeProperty ;
+    rdfs:label "source_of_segmentation" ;
+    rdfs:range xsd:string .
+
+mmkg:system a owl:AnnotationProperty ;
+    rdfs:label "system" .
+
+mmkg:volume_cm3 a owl:DatatypeProperty ;
+    rdfs:label "volume_cm3" ;
+    rdfs:range xsd:float .
+
+inst:concept_SNOMEDCT_362201006 a mmkg:OntologyConcept ;
+    mmkg:code "362201006" ;
+    mmkg:display "Entire head of pancreas" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_40133006 a mmkg:OntologyConcept ;
+    mmkg:code "40133006" ;
+    mmkg:display "Structure of body of pancreas" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_73239005 a mmkg:OntologyConcept ;
+    mmkg:code "73239005" ;
+    mmkg:display "Structure of tail of pancreas" ;
+    mmkg:system "SNOMED CT" .
+
+inst:lesion_case_00006_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_case_00006_kidney_burden_cat,
+        inst:obs_case_00006_kidney_containment,
+        inst:obs_case_00006_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00006_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "10.41"^^xsd:float .
+
+inst:lesion_case_00008_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_case_00008_kidney_burden_cat,
+        inst:obs_case_00008_kidney_containment,
+        inst:obs_case_00008_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00008_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "569.86"^^xsd:float .
+
+inst:lesion_case_00017_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_head ;
+    mmkg:has_observation inst:obs_case_00017_kidney_burden_cat,
+        inst:obs_case_00017_kidney_containment,
+        inst:obs_case_00017_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00017_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "6.01"^^xsd:float .
+
+inst:lesion_case_00018_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_case_00018_kidney_burden_cat,
+        inst:obs_case_00018_kidney_containment,
+        inst:obs_case_00018_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00018_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "17.46"^^xsd:float .
+
+inst:lesion_case_00021_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_case_00021_kidney_burden_cat,
+        inst:obs_case_00021_kidney_containment,
+        inst:obs_case_00021_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00021_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "24.75"^^xsd:float .
+
+inst:lesion_case_00024_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_head ;
+    mmkg:has_observation inst:obs_case_00024_kidney_burden_cat,
+        inst:obs_case_00024_kidney_containment,
+        inst:obs_case_00024_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00024_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "116.19"^^xsd:float .
+
+inst:lesion_case_00030_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_case_00030_kidney_burden_cat,
+        inst:obs_case_00030_kidney_containment,
+        inst:obs_case_00030_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00030_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "1420.27"^^xsd:float .
+
+inst:lesion_case_00035_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_case_00035_kidney_burden_cat,
+        inst:obs_case_00035_kidney_containment,
+        inst:obs_case_00035_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00035_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "22.75"^^xsd:float .
+
+inst:lesion_case_00039_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_head ;
+    mmkg:has_observation inst:obs_case_00039_kidney_burden_cat,
+        inst:obs_case_00039_kidney_containment,
+        inst:obs_case_00039_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00039_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "5.76"^^xsd:float .
+
+inst:lesion_case_00042_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_head ;
+    mmkg:has_observation inst:obs_case_00042_kidney_burden_cat,
+        inst:obs_case_00042_kidney_containment,
+        inst:obs_case_00042_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00042_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "1363.65"^^xsd:float .
+
+inst:lesion_case_00043_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_head ;
+    mmkg:has_observation inst:obs_case_00043_kidney_burden_cat,
+        inst:obs_case_00043_kidney_containment,
+        inst:obs_case_00043_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00043_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "11.16"^^xsd:float .
+
+inst:lesion_case_00057_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_case_00057_kidney_burden_cat,
+        inst:obs_case_00057_kidney_containment,
+        inst:obs_case_00057_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00057_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "111.58"^^xsd:float .
+
+inst:lesion_case_00060_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_head ;
+    mmkg:has_observation inst:obs_case_00060_kidney_burden_cat,
+        inst:obs_case_00060_kidney_containment,
+        inst:obs_case_00060_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00060_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "34.08"^^xsd:float .
+
+inst:lesion_case_00067_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_head ;
+    mmkg:has_observation inst:obs_case_00067_kidney_burden_cat,
+        inst:obs_case_00067_kidney_containment,
+        inst:obs_case_00067_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00067_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "1040.2"^^xsd:float .
+
+inst:lesion_case_00075_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_head ;
+    mmkg:has_observation inst:obs_case_00075_kidney_burden_cat,
+        inst:obs_case_00075_kidney_containment,
+        inst:obs_case_00075_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00075_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "4.06"^^xsd:float .
+
+inst:lesion_case_00079_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_case_00079_kidney_burden_cat,
+        inst:obs_case_00079_kidney_containment,
+        inst:obs_case_00079_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00079_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "358.24"^^xsd:float .
+
+inst:lesion_case_00083_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_case_00083_kidney_burden_cat,
+        inst:obs_case_00083_kidney_containment,
+        inst:obs_case_00083_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00083_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "12.27"^^xsd:float .
+
+inst:lesion_case_00086_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_case_00086_kidney_burden_cat,
+        inst:obs_case_00086_kidney_containment,
+        inst:obs_case_00086_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00086_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "29.55"^^xsd:float .
+
+inst:lesion_case_00087_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_case_00087_kidney_burden_cat,
+        inst:obs_case_00087_kidney_containment,
+        inst:obs_case_00087_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00087_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "36.41"^^xsd:float .
+
+inst:lesion_case_00090_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_head ;
+    mmkg:has_observation inst:obs_case_00090_kidney_burden_cat,
+        inst:obs_case_00090_kidney_containment,
+        inst:obs_case_00090_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00090_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "94.42"^^xsd:float .
+
+inst:lesion_case_00092_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_case_00092_kidney_burden_cat,
+        inst:obs_case_00092_kidney_containment,
+        inst:obs_case_00092_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00092_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "488.54"^^xsd:float .
+
+inst:lesion_case_00095_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_case_00095_kidney_burden_cat,
+        inst:obs_case_00095_kidney_containment,
+        inst:obs_case_00095_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00095_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "61.05"^^xsd:float .
+
+inst:lesion_case_00103_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_case_00103_kidney_burden_cat,
+        inst:obs_case_00103_kidney_containment,
+        inst:obs_case_00103_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00103_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "4.07"^^xsd:float .
+
+inst:lesion_case_00105_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_case_00105_kidney_burden_cat,
+        inst:obs_case_00105_kidney_containment,
+        inst:obs_case_00105_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00105_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "55.25"^^xsd:float .
+
+inst:lesion_case_00120_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_head ;
+    mmkg:has_observation inst:obs_case_00120_kidney_burden_cat,
+        inst:obs_case_00120_kidney_containment,
+        inst:obs_case_00120_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00120_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "1.72"^^xsd:float .
+
+inst:lesion_case_00124_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_head ;
+    mmkg:has_observation inst:obs_case_00124_kidney_burden_cat,
+        inst:obs_case_00124_kidney_containment,
+        inst:obs_case_00124_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00124_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "4.91"^^xsd:float .
+
+inst:lesion_case_00128_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_case_00128_kidney_burden_cat,
+        inst:obs_case_00128_kidney_containment,
+        inst:obs_case_00128_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00128_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "11.76"^^xsd:float .
+
+inst:lesion_case_00146_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_case_00146_kidney_burden_cat,
+        inst:obs_case_00146_kidney_containment,
+        inst:obs_case_00146_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00146_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "10.5"^^xsd:float .
+
+inst:lesion_case_00148_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_case_00148_kidney_burden_cat,
+        inst:obs_case_00148_kidney_containment,
+        inst:obs_case_00148_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00148_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "24.26"^^xsd:float .
+
+inst:lesion_case_00149_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_case_00149_kidney_burden_cat,
+        inst:obs_case_00149_kidney_containment,
+        inst:obs_case_00149_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00149_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "211.76"^^xsd:float .
+
+inst:lesion_case_00152_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_case_00152_kidney_burden_cat,
+        inst:obs_case_00152_kidney_containment,
+        inst:obs_case_00152_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00152_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "10.65"^^xsd:float .
+
+inst:lesion_case_00154_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_head ;
+    mmkg:has_observation inst:obs_case_00154_kidney_burden_cat,
+        inst:obs_case_00154_kidney_containment,
+        inst:obs_case_00154_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00154_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "16.33"^^xsd:float .
+
+inst:lesion_case_00160_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_case_00160_kidney_burden_cat,
+        inst:obs_case_00160_kidney_containment,
+        inst:obs_case_00160_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00160_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "49.02"^^xsd:float .
+
+inst:lesion_case_00162_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_head ;
+    mmkg:has_observation inst:obs_case_00162_kidney_burden_cat,
+        inst:obs_case_00162_kidney_containment,
+        inst:obs_case_00162_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00162_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "29.69"^^xsd:float .
+
+inst:lesion_case_00175_kidney a mmkg:Lesion,
+        mmkg:RenalTumor ;
+    mmkg:at_site inst:site_head ;
+    mmkg:has_observation inst:obs_case_00175_kidney_burden_cat,
+        inst:obs_case_00175_kidney_containment,
+        inst:obs_case_00175_kidney_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_case_00175_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_126880001 ;
+    mmkg:volume_cm3 "18.93"^^xsd:float .
+
+inst:obs_case_00006_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_case_00006_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00006_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00008_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_case_00008_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00008_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00017_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_case_00017_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00017_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00018_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_case_00018_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00018_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00021_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_case_00021_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00021_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00024_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_case_00024_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00024_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00030_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_case_00030_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00030_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00035_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_case_00035_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00035_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00039_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_case_00039_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00039_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00042_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_case_00042_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00042_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00043_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_case_00043_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00043_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00057_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_case_00057_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00057_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00060_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_case_00060_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00060_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00067_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_case_00067_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00067_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00075_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_case_00075_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00075_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00079_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_case_00079_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00079_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00083_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_case_00083_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00083_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00086_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_case_00086_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00086_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00087_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_case_00087_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00087_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00090_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_case_00090_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00090_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00092_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_case_00092_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00092_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00095_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_case_00095_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00095_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "multifocal" .
+
+inst:obs_case_00103_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_case_00103_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00103_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00105_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_case_00105_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00105_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00120_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_case_00120_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "contained" .
+
+inst:obs_case_00120_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00124_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_case_00124_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00124_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00128_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_case_00128_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00128_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00146_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_case_00146_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00146_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00148_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_case_00148_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00148_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00149_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_case_00149_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00149_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00152_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_case_00152_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00152_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00154_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_case_00154_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00154_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00160_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_case_00160_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00160_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00162_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_case_00162_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00162_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_case_00175_kidney_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_case_00175_kidney_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_case_00175_kidney_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:organ_case_00165_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "333.95"^^xsd:float .
+
+inst:patient_case_00006 a mmkg:Patient ;
+    mmkg:patient_id "case_00006" .
+
+inst:patient_case_00008 a mmkg:Patient ;
+    mmkg:patient_id "case_00008" .
+
+inst:patient_case_00017 a mmkg:Patient ;
+    mmkg:patient_id "case_00017" .
+
+inst:patient_case_00018 a mmkg:Patient ;
+    mmkg:patient_id "case_00018" .
+
+inst:patient_case_00021 a mmkg:Patient ;
+    mmkg:patient_id "case_00021" .
+
+inst:patient_case_00024 a mmkg:Patient ;
+    mmkg:patient_id "case_00024" .
+
+inst:patient_case_00030 a mmkg:Patient ;
+    mmkg:patient_id "case_00030" .
+
+inst:patient_case_00035 a mmkg:Patient ;
+    mmkg:patient_id "case_00035" .
+
+inst:patient_case_00039 a mmkg:Patient ;
+    mmkg:patient_id "case_00039" .
+
+inst:patient_case_00042 a mmkg:Patient ;
+    mmkg:patient_id "case_00042" .
+
+inst:patient_case_00043 a mmkg:Patient ;
+    mmkg:patient_id "case_00043" .
+
+inst:patient_case_00057 a mmkg:Patient ;
+    mmkg:patient_id "case_00057" .
+
+inst:patient_case_00060 a mmkg:Patient ;
+    mmkg:patient_id "case_00060" .
+
+inst:patient_case_00067 a mmkg:Patient ;
+    mmkg:patient_id "case_00067" .
+
+inst:patient_case_00075 a mmkg:Patient ;
+    mmkg:patient_id "case_00075" .
+
+inst:patient_case_00079 a mmkg:Patient ;
+    mmkg:patient_id "case_00079" .
+
+inst:patient_case_00083 a mmkg:Patient ;
+    mmkg:patient_id "case_00083" .
+
+inst:patient_case_00086 a mmkg:Patient ;
+    mmkg:patient_id "case_00086" .
+
+inst:patient_case_00087 a mmkg:Patient ;
+    mmkg:patient_id "case_00087" .
+
+inst:patient_case_00090 a mmkg:Patient ;
+    mmkg:patient_id "case_00090" .
+
+inst:patient_case_00092 a mmkg:Patient ;
+    mmkg:patient_id "case_00092" .
+
+inst:patient_case_00095 a mmkg:Patient ;
+    mmkg:patient_id "case_00095" .
+
+inst:patient_case_00103 a mmkg:Patient ;
+    mmkg:patient_id "case_00103" .
+
+inst:patient_case_00105 a mmkg:Patient ;
+    mmkg:patient_id "case_00105" .
+
+inst:patient_case_00120 a mmkg:Patient ;
+    mmkg:patient_id "case_00120" .
+
+inst:patient_case_00124 a mmkg:Patient ;
+    mmkg:patient_id "case_00124" .
+
+inst:patient_case_00128 a mmkg:Patient ;
+    mmkg:patient_id "case_00128" .
+
+inst:patient_case_00146 a mmkg:Patient ;
+    mmkg:patient_id "case_00146" .
+
+inst:patient_case_00148 a mmkg:Patient ;
+    mmkg:patient_id "case_00148" .
+
+inst:patient_case_00149 a mmkg:Patient ;
+    mmkg:patient_id "case_00149" .
+
+inst:patient_case_00152 a mmkg:Patient ;
+    mmkg:patient_id "case_00152" .
+
+inst:patient_case_00154 a mmkg:Patient ;
+    mmkg:patient_id "case_00154" .
+
+inst:patient_case_00160 a mmkg:Patient ;
+    mmkg:patient_id "case_00160" .
+
+inst:patient_case_00162 a mmkg:Patient ;
+    mmkg:patient_id "case_00162" .
+
+inst:patient_case_00165 a mmkg:Patient ;
+    mmkg:patient_id "case_00165" .
+
+inst:patient_case_00175 a mmkg:Patient ;
+    mmkg:patient_id "case_00175" .
+
+mmkg:PancreaticBody a owl:Class ;
+    rdfs:label "Body of pancreas" ;
+    mmkg:mapped_to_concept mmkg:concept_PancreaticBody_40133006 ;
+    rdfs:subClassOf mmkg:AnatomicSite ;
+    skos:exactMatch <http://snomed.info/id/40133006> .
+
+mmkg:PancreaticHead a owl:Class ;
+    rdfs:label "Head of pancreas" ;
+    mmkg:mapped_to_concept mmkg:concept_PancreaticHead_362201006 ;
+    rdfs:subClassOf mmkg:AnatomicSite ;
+    skos:exactMatch <http://snomed.info/id/362201006> .
+
+mmkg:PancreaticTail a owl:Class ;
+    rdfs:label "Tail of pancreas" ;
+    mmkg:mapped_to_concept mmkg:concept_PancreaticTail_73239005 ;
+    rdfs:subClassOf mmkg:AnatomicSite ;
+    skos:exactMatch <http://snomed.info/id/73239005> .
+
+mmkg:concept_CrossOrganExtension_409771002 a mmkg:OntologyConcept ;
+    mmkg:code "409771002" ;
+    mmkg:display "Tumour invasion by direct extension from organ of origin to adjacent organ" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/409771002> .
+
+mmkg:concept_LiverTumor_93870000 a mmkg:OntologyConcept ;
+    mmkg:code "93870000" ;
+    mmkg:display "Malignant neoplasm of liver" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/93870000> .
+
+mmkg:concept_LiverTumor_C3099 a mmkg:OntologyConcept ;
+    mmkg:code "C3099" ;
+    mmkg:display "Hepatocellular Carcinoma" ;
+    mmkg:system "NCIt" ;
+    rdfs:isDefinedBy <https://ncithesaurus.nci.nih.gov> ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/NCIT_C3099> .
+
+mmkg:concept_Liver_10200004 a mmkg:OntologyConcept ;
+    mmkg:code "10200004" ;
+    mmkg:display "Liver structure" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/10200004> .
+
+mmkg:concept_Liver_C12392 a mmkg:OntologyConcept ;
+    mmkg:code "C12392" ;
+    mmkg:display "Liver" ;
+    mmkg:system "NCIt" ;
+    rdfs:isDefinedBy <https://ncithesaurus.nci.nih.gov> ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/NCIT_C12392> .
+
+mmkg:concept_Pancreas_15776009 a mmkg:OntologyConcept ;
+    mmkg:code "15776009" ;
+    mmkg:display "Pancreatic structure" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/15776009> .
+
+mmkg:concept_Pancreas_C12393 a mmkg:OntologyConcept ;
+    mmkg:code "C12393" ;
+    mmkg:display "Pancreas" ;
+    mmkg:system "NCIt" ;
+    rdfs:isDefinedBy <https://ncithesaurus.nci.nih.gov> ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/NCIT_C12393> .
+
+mmkg:concept_PancreaticBody_40133006 a mmkg:OntologyConcept ;
+    mmkg:code "40133006" ;
+    mmkg:display "Structure of body of pancreas" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/40133006> .
+
+mmkg:concept_PancreaticHead_362201006 a mmkg:OntologyConcept ;
+    mmkg:code "362201006" ;
+    mmkg:display "Entire head of pancreas" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/362201006> .
+
+mmkg:concept_PancreaticTail_73239005 a mmkg:OntologyConcept ;
+    mmkg:code "73239005" ;
+    mmkg:display "Structure of tail of pancreas" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/73239005> .
+
+mmkg:concept_PancreaticTumor_372003004 a mmkg:OntologyConcept ;
+    mmkg:code "372003004" ;
+    mmkg:display "Primary malignant neoplasm of pancreas" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/372003004> .
+
+mmkg:concept_PancreaticTumor_C3305 a mmkg:OntologyConcept ;
+    mmkg:code "C3305" ;
+    mmkg:display "Pancreatic Neoplasm" ;
+    mmkg:system "NCIt" ;
+    rdfs:isDefinedBy <https://ncithesaurus.nci.nih.gov> ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/NCIT_C3305> .
+
+mmkg:concept_RenalTumor_126880001 a mmkg:OntologyConcept ;
+    mmkg:code "126880001" ;
+    mmkg:display "Neoplasm of kidney" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/126880001> .
+
+mmkg:concept_RenalTumor_C3150 a mmkg:OntologyConcept ;
+    mmkg:code "C3150" ;
+    mmkg:display "Kidney Neoplasm" ;
+    mmkg:system "NCIt" ;
+    rdfs:isDefinedBy <https://ncithesaurus.nci.nih.gov> ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/NCIT_C3150> .
+
+mmkg:concept_TumorBurden_C28384 a mmkg:OntologyConcept ;
+    mmkg:code "C28384" ;
+    mmkg:display "Tumor Burden" ;
+    mmkg:system "NCIt" ;
+    rdfs:isDefinedBy <https://ncithesaurus.nci.nih.gov> ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/NCIT_C28384> .
+
+mmkg:concept_TumorDiameter_263605001 a mmkg:OntologyConcept ;
+    mmkg:code "263605001" ;
+    mmkg:display "Tumor size" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/263605001> .
+
+mmkg:concept_TumorVolume_258261001 a mmkg:OntologyConcept ;
+    mmkg:code "258261001" ;
+    mmkg:display "Tumour volume" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/258261001> .
+
+inst:organ_case_00006_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00006_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "383.85"^^xsd:float .
+
+inst:organ_case_00008_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00008_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "501.31"^^xsd:float .
+
+inst:organ_case_00017_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00017_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "401.93"^^xsd:float .
+
+inst:organ_case_00018_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00018_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "443.82"^^xsd:float .
+
+inst:organ_case_00021_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00021_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "328.18"^^xsd:float .
+
+inst:organ_case_00024_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00024_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "316.62"^^xsd:float .
+
+inst:organ_case_00030_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00030_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "266.33"^^xsd:float .
+
+inst:organ_case_00035_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00035_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "486.17"^^xsd:float .
+
+inst:organ_case_00039_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00039_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "340.9"^^xsd:float .
+
+inst:organ_case_00042_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00042_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "378.49"^^xsd:float .
+
+inst:organ_case_00043_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00043_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "353.75"^^xsd:float .
+
+inst:organ_case_00057_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00057_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "352.33"^^xsd:float .
+
+inst:organ_case_00060_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00060_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "292.91"^^xsd:float .
+
+inst:organ_case_00067_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00067_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "268.39"^^xsd:float .
+
+inst:organ_case_00075_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00075_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "332.25"^^xsd:float .
+
+inst:organ_case_00079_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00079_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "276.88"^^xsd:float .
+
+inst:organ_case_00083_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00083_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "661.61"^^xsd:float .
+
+inst:organ_case_00086_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00086_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "497.63"^^xsd:float .
+
+inst:organ_case_00087_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00087_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "425.11"^^xsd:float .
+
+inst:organ_case_00090_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00090_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "206.41"^^xsd:float .
+
+inst:organ_case_00092_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00092_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "433.22"^^xsd:float .
+
+inst:organ_case_00095_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00095_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "352.68"^^xsd:float .
+
+inst:organ_case_00103_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00103_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "285.17"^^xsd:float .
+
+inst:organ_case_00105_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00105_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "295.07"^^xsd:float .
+
+inst:organ_case_00120_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00120_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "234.72"^^xsd:float .
+
+inst:organ_case_00124_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00124_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "429.99"^^xsd:float .
+
+inst:organ_case_00128_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00128_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "469.97"^^xsd:float .
+
+inst:organ_case_00146_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00146_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "441.21"^^xsd:float .
+
+inst:organ_case_00148_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00148_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "521.81"^^xsd:float .
+
+inst:organ_case_00149_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00149_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "558.92"^^xsd:float .
+
+inst:organ_case_00152_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00152_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "368.29"^^xsd:float .
+
+inst:organ_case_00154_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00154_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "354.61"^^xsd:float .
+
+inst:organ_case_00160_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00160_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "408.28"^^xsd:float .
+
+inst:organ_case_00162_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00162_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "204.54"^^xsd:float .
+
+inst:organ_case_00175_kidney a mmkg:Organ ;
+    mmkg:display "kidney" ;
+    mmkg:has_lesion inst:lesion_case_00175_kidney ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_64033007 ;
+    mmkg:volume_cm3 "440.54"^^xsd:float .
+
+mmkg:Anatomy a owl:Class ;
+    rdfs:label "Anatomy" .
+
+mmkg:Study a owl:Class ;
+    rdfs:label "Study" .
+
+mmkg:Series a owl:Class ;
+    rdfs:label "Series" .
+
+mmkg:AnatomicSite a owl:Class ;
+    rdfs:label "AnatomicSite" ;
+    rdfs:subClassOf mmkg:Anatomy .
+
+mmkg:Observation a owl:Class ;
+    rdfs:label "Observation" .
+
+inst:site_body a mmkg:PancreaticBody ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_40133006 .
+
+inst:site_tail a mmkg:PancreaticTail ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_73239005 .
+
+inst:site_head a mmkg:PancreaticHead ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_362201006 .
+
+inst:concept_NCIt_C28384 a mmkg:OntologyConcept ;
+    mmkg:code "C28384" ;
+    mmkg:display "Tumor Burden" ;
+    mmkg:system "NCIt" .
+
+inst:concept_SNOMEDCT_126880001 a mmkg:OntologyConcept ;
+    mmkg:code "126880001" ;
+    mmkg:display "Neoplasm of kidney" ;
+    mmkg:system "SNOMED CT" .
+
+mmkg:LesionMultiplicity a owl:Class ;
+    rdfs:label "Lesion multiplicity" ;
+    rdfs:subClassOf mmkg:Observation .
+
+mmkg:OrganContainment a owl:Class ;
+    rdfs:label "Organ containment" ;
+    rdfs:subClassOf mmkg:Observation .
+
+mmkg:RenalTumor a owl:Class ;
+    rdfs:label "Renal tumor" ;
+    mmkg:mapped_to_concept mmkg:concept_RenalTumor_126880001,
+        mmkg:concept_RenalTumor_C3150 ;
+    rdfs:subClassOf mmkg:Lesion ;
+    skos:definition "Tumor located in the right or left kidney." .
+
+mmkg:TumorBurden a owl:Class ;
+    rdfs:label "Tumor burden" ;
+    mmkg:mapped_to_concept mmkg:concept_TumorBurden_C28384 ;
+    rdfs:subClassOf mmkg:Observation ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C28384> .
+
+inst:concept_SNOMEDCT_64033007 a mmkg:OntologyConcept ;
+    mmkg:code "64033007" ;
+    mmkg:display "Kidney structure" ;
+    mmkg:system "SNOMED CT" .
+
+inst:dataset_kits a mmkg:Dataset .
+
+mmkg:ImagingCase a owl:Class ;
+    rdfs:label "ImagingCase" .
+
+mmkg:OntologyConcept a owl:Class ;
+    rdfs:label "OntologyConcept" .
+
+mmkg:Organ a owl:Class ;
+    rdfs:label "Organ" ;
+    rdfs:subClassOf mmkg:Anatomy .
+
+mmkg:Lesion a owl:Class ;
+    rdfs:label "Lesion" .
+

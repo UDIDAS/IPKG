@@ -1,0 +1,133 @@
+{
+ "graphs_scanned": [
+  "unified_mmkg.json",
+  "unified_mmkg_flare23.json",
+  "unified_mmkg_predicted_kits.json",
+  "unified_mmkg_predicted_lits.json",
+  "unified_mmkg_predicted_msd.json"
+ ],
+ "n_graph_codes": 39,
+ "declared_codes_missing_from_graphs": [],
+ "graph_codes_not_declared_extended_organs": {
+  "NCIt C12263": [
+   "Duodenum"
+  ],
+  "NCIt C12377": [
+   "Gallbladder"
+  ],
+  "NCIt C12389": [
+   "Esophagus"
+  ],
+  "NCIt C12391": [
+   "Stomach"
+  ],
+  "NCIt C12420": [
+   "Kidney"
+  ],
+  "NCIt C12421": [
+   "Kidney"
+  ],
+  "NCIt C12666": [
+   "AdrenalGland"
+  ],
+  "NCIt C12683": [
+   "Aorta"
+  ],
+  "NCIt C12685": [
+   "InferiorVenaCava"
+  ],
+  "SNOMED CT 15825003": [
+   "Aorta"
+  ],
+  "SNOMED CT 23451007": [
+   "AdrenalGland"
+  ],
+  "SNOMED CT 28231008": [
+   "Gallbladder"
+  ],
+  "SNOMED CT 32849002": [
+   "Esophagus"
+  ],
+  "SNOMED CT 38848004": [
+   "Duodenum"
+  ],
+  "SNOMED CT 64131007": [
+   "InferiorVenaCava"
+  ],
+  "SNOMED CT 69695003": [
+   "Stomach"
+  ]
+ },
+ "graph_codes_not_declared_UNEXPECTED": {},
+ "orphan_concept_nodes_no_mapping_edge": {
+  "NCIt C12420": [
+   "Kidney"
+  ],
+  "NCIt C12683": [
+   "Aorta"
+  ],
+  "NCIt C12685": [
+   "InferiorVenaCava"
+  ],
+  "NCIt C12666": [
+   "AdrenalGland"
+  ],
+  "NCIt C12377": [
+   "Gallbladder"
+  ],
+  "NCIt C12389": [
+   "Esophagus"
+  ],
+  "NCIt C12391": [
+   "Stomach"
+  ],
+  "NCIt C12263": [
+   "Duodenum"
+  ],
+  "NCIt C12421": [
+   "Kidney"
+  ]
+ },
+ "renal_keys_json": {
+  "Organ::Right kidney": [
+   "SNOMED CT 9846003"
+  ],
+  "Organ::Left kidney": [
+   "SNOMED CT 18639004"
+  ],
+  "Organ::Kidney": [
+   "NCIt C12415",
+   "SNOMED CT 64033007"
+  ],
+  "Lesion::Renal tumor": [
+   "NCIt C3150",
+   "SNOMED CT 126880001"
+  ]
+ },
+ "renal_codes_in_graphs": [
+  "NCIt C12415 (Kidney)",
+  "NCIt C12420 (Kidney)",
+  "NCIt C12421 (Kidney)",
+  "NCIt C12666 (AdrenalGland)",
+  "NCIt C3150 (RenalTumor/Kidney Neoplasm)",
+  "SNOMED CT 126880001 (RenalTumor/Neoplasm of kidney)",
+  "SNOMED CT 18639004 (Kidney/Left kidney structure)",
+  "SNOMED CT 23451007 (AdrenalGland)",
+  "SNOMED CT 64033007 (Kidney structure)",
+  "SNOMED CT 9846003 (Kidney/Right kidney structure)"
+ ],
+ "table5_grouping": {
+  "anatomical incl. sub-sites": "8/8",
+  "lesion types": "3/3",
+  "categorical phenotype nodes": "2/4",
+  "total_coded": "13/15",
+  "pooled_kidney (retrieval unit, excluded)": true,
+  "literal_backed (not phenotype nodes)": [
+   "Observation::Tumor diameter",
+   "Observation::Tumor volume"
+  ],
+  "concept_keys": 18,
+  "codes": 23
+ },
+ "verdict": "MATCH - ontology_mappings.json is a faithful export of the rebuilt graphs; 13/15 confirmed"
+}

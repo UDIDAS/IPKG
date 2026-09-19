@@ -1,0 +1,2643 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix inst: <http://example.org/mmkg/instance/> .
+@prefix mmkg: <http://example.org/mmkg/schema/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+inst:case_pancreas_015 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_015" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_015_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_015 .
+
+inst:case_pancreas_019 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_019" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_019_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_019 .
+
+inst:case_pancreas_041 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_041" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_041_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_041 .
+
+inst:case_pancreas_045 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_045" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_045_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_045 .
+
+inst:case_pancreas_048 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_048" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_048_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_048 .
+
+inst:case_pancreas_049 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_049" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_049_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_049 .
+
+inst:case_pancreas_056 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_056" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_056_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_056 .
+
+inst:case_pancreas_064 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_064" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_064_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_064 .
+
+inst:case_pancreas_078 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_078" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_078_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_078 .
+
+inst:case_pancreas_083 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_083" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_083_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_083 .
+
+inst:case_pancreas_084 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_084" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_084_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_084 .
+
+inst:case_pancreas_096 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_096" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_096_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_096 .
+
+inst:case_pancreas_101 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_101" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_101_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_101 .
+
+inst:case_pancreas_107 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_107" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_107_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_107 .
+
+inst:case_pancreas_110 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_110" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_110_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_110 .
+
+inst:case_pancreas_119 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_119" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_119_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_119 .
+
+inst:case_pancreas_122 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_122" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_122_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_122 .
+
+inst:case_pancreas_125 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_125" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_125_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_125 .
+
+inst:case_pancreas_127 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_127" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_127_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_127 .
+
+inst:case_pancreas_137 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_137" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_137_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_137 .
+
+inst:case_pancreas_149 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_149" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_149_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_149 .
+
+inst:case_pancreas_157 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_157" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_157_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_157 .
+
+inst:case_pancreas_172 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_172" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_172_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_172 .
+
+inst:case_pancreas_191 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_191" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_191_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_191 .
+
+inst:case_pancreas_200 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_200" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_200_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_200 .
+
+inst:case_pancreas_201 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_201" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_201_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_201 .
+
+inst:case_pancreas_210 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_210" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_210_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_210 .
+
+inst:case_pancreas_218 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_218" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_218_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_218 .
+
+inst:case_pancreas_226 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_226" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_226_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_226 .
+
+inst:case_pancreas_235 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_235" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_235_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_235 .
+
+inst:case_pancreas_239 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_239" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_239_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_239 .
+
+inst:case_pancreas_241 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_241" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_241_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_241 .
+
+inst:case_pancreas_242 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_242" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_242_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_242 .
+
+inst:case_pancreas_256 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_256" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_256_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_256 .
+
+inst:case_pancreas_258 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_258" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_258_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_258 .
+
+inst:case_pancreas_259 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_259" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_259_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_259 .
+
+inst:case_pancreas_275 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_275" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_275_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_275 .
+
+inst:case_pancreas_285 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_285" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_285_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_285 .
+
+inst:case_pancreas_289 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_289" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_289_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_289 .
+
+inst:case_pancreas_301 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_301" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_301_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_301 .
+
+inst:case_pancreas_315 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_315" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_315_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_315 .
+
+inst:case_pancreas_327 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_327" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_327_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_327 .
+
+inst:case_pancreas_330 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_330" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_330_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_330 .
+
+inst:case_pancreas_336 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_336" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_336_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_336 .
+
+inst:case_pancreas_339 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_339" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_339_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_339 .
+
+inst:case_pancreas_346 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_346" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_346_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_346 .
+
+inst:case_pancreas_348 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_348" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_348_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_348 .
+
+inst:case_pancreas_356 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_356" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_356_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_356 .
+
+inst:case_pancreas_366 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_366" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_366_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_366 .
+
+inst:case_pancreas_369 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_369" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_369_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_369 .
+
+inst:case_pancreas_377 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_377" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_377_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_377 .
+
+inst:case_pancreas_378 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_378" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_378_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_378 .
+
+inst:case_pancreas_393 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_393" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_393_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_393 .
+
+inst:case_pancreas_399 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_399" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_399_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_399 .
+
+inst:case_pancreas_404 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_404" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_404_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_404 .
+
+inst:case_pancreas_418 a mmkg:ImagingCase ;
+    mmkg:case_id "pancreas_418" ;
+    mmkg:dataset "msd" ;
+    mmkg:depicts_organ inst:organ_pancreas_418_pancreas ;
+    mmkg:from_dataset inst:dataset_msd ;
+    mmkg:granularity "volume" ;
+    mmkg:modality "CT" ;
+    mmkg:of_patient inst:patient_pancreas_418 .
+
+inst:concept_NCIt_C12392 a mmkg:OntologyConcept ;
+    mmkg:code "C12392" ;
+    mmkg:display "Liver" ;
+    mmkg:system "NCIt" .
+
+inst:concept_NCIt_C12393 a mmkg:OntologyConcept ;
+    mmkg:code "C12393" ;
+    mmkg:display "Pancreas" ;
+    mmkg:system "NCIt" .
+
+inst:concept_NCIt_C12415 a mmkg:OntologyConcept ;
+    mmkg:code "C12415" ;
+    mmkg:display "Kidney" ;
+    mmkg:system "NCIt" .
+
+inst:concept_NCIt_C12432 a mmkg:OntologyConcept ;
+    mmkg:code "C12432" ;
+    mmkg:display "Spleen" ;
+    mmkg:system "NCIt" .
+
+inst:concept_NCIt_C3099 a mmkg:OntologyConcept ;
+    mmkg:code "C3099" ;
+    mmkg:display "Hepatocellular Carcinoma" ;
+    mmkg:system "NCIt" .
+
+inst:concept_NCIt_C3150 a mmkg:OntologyConcept ;
+    mmkg:code "C3150" ;
+    mmkg:display "Kidney Neoplasm" ;
+    mmkg:system "NCIt" .
+
+inst:concept_NCIt_C3305 a mmkg:OntologyConcept ;
+    mmkg:code "C3305" ;
+    mmkg:display "Pancreatic Neoplasm" ;
+    mmkg:system "NCIt" .
+
+inst:concept_SNOMEDCT_10200004 a mmkg:OntologyConcept ;
+    mmkg:code "10200004" ;
+    mmkg:display "Liver structure" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_126880001 a mmkg:OntologyConcept ;
+    mmkg:code "126880001" ;
+    mmkg:display "Neoplasm of kidney" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_18639004 a mmkg:OntologyConcept ;
+    mmkg:code "18639004" ;
+    mmkg:display "Left kidney structure" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_258261001 a mmkg:OntologyConcept ;
+    mmkg:code "258261001" ;
+    mmkg:display "Tumour volume" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_263605001 a mmkg:OntologyConcept ;
+    mmkg:code "263605001" ;
+    mmkg:display "Tumor size" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_409771002 a mmkg:OntologyConcept ;
+    mmkg:code "409771002" ;
+    mmkg:display "Tumour invasion by direct extension from organ of origin to adjacent organ" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_64033007 a mmkg:OntologyConcept ;
+    mmkg:code "64033007" ;
+    mmkg:display "Kidney structure" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_78961009 a mmkg:OntologyConcept ;
+    mmkg:code "78961009" ;
+    mmkg:display "Splenic structure" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_93870000 a mmkg:OntologyConcept ;
+    mmkg:code "93870000" ;
+    mmkg:display "Malignant neoplasm of liver" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_9846003 a mmkg:OntologyConcept ;
+    mmkg:code "9846003" ;
+    mmkg:display "Right kidney structure" ;
+    mmkg:system "SNOMED CT" .
+
+<http://example.org/mmkg/schema> a owl:Ontology ;
+    dcterms:title "Imaging Phenotype KG Schema (SAM3 segmentation hand-off)" ;
+    rdfs:comment "T-Box for imaging cases, organs, lesions and phenotypes derived from SAM3 segmentation. Domain classes carry skos:exactMatch to SNOMED CT / NCIt / FMA / RadLex concepts. Aligned with acm_mmkg schema.py v2.0 conventions." ;
+    owl:versionInfo "1.0" .
+
+mmkg:CrossOrganExtension a owl:Class ;
+    rdfs:label "Cross-organ extension" ;
+    mmkg:mapped_to_concept mmkg:concept_CrossOrganExtension_409771002 ;
+    rdfs:subClassOf mmkg:Observation ;
+    skos:exactMatch <http://snomed.info/id/409771002> .
+
+mmkg:Liver a owl:Class ;
+    rdfs:label "Liver" ;
+    mmkg:mapped_to_concept mmkg:concept_Liver_10200004,
+        mmkg:concept_Liver_C12392 ;
+    rdfs:subClassOf mmkg:Organ ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C12392>,
+        <http://snomed.info/id/10200004> .
+
+mmkg:LiverTumor a owl:Class ;
+    rdfs:label "Liver tumor" ;
+    mmkg:mapped_to_concept mmkg:concept_LiverTumor_93870000,
+        mmkg:concept_LiverTumor_C3099 ;
+    rdfs:subClassOf mmkg:Lesion ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C3099>,
+        <http://snomed.info/id/93870000> .
+
+mmkg:RenalTumor a owl:Class ;
+    rdfs:label "Renal tumor" ;
+    mmkg:mapped_to_concept mmkg:concept_RenalTumor_126880001,
+        mmkg:concept_RenalTumor_C3150 ;
+    rdfs:subClassOf mmkg:Lesion ;
+    skos:definition "Tumor located in the right or left kidney." .
+
+mmkg:TumorDiameter a owl:Class ;
+    rdfs:label "Tumor diameter" ;
+    mmkg:mapped_to_concept mmkg:concept_TumorDiameter_263605001 ;
+    rdfs:subClassOf mmkg:Observation ;
+    skos:exactMatch <http://snomed.info/id/263605001> .
+
+mmkg:TumorVolume a owl:Class ;
+    rdfs:label "Tumor volume" ;
+    mmkg:mapped_to_concept mmkg:concept_TumorVolume_258261001 ;
+    rdfs:subClassOf mmkg:Observation ;
+    skos:exactMatch <http://snomed.info/id/258261001> .
+
+mmkg:anatomic_location a owl:DatatypeProperty ;
+    rdfs:label "anatomic_location" ;
+    rdfs:range xsd:string .
+
+mmkg:case_id a owl:DatatypeProperty ;
+    rdfs:label "case_id" ;
+    rdfs:range xsd:string .
+
+mmkg:code a owl:AnnotationProperty ;
+    rdfs:label "code" .
+
+mmkg:dataset a owl:DatatypeProperty ;
+    rdfs:label "dataset" ;
+    rdfs:range xsd:string .
+
+mmkg:depicts_organ a owl:ObjectProperty ;
+    rdfs:label "depicts_organ" ;
+    rdfs:domain mmkg:Series ;
+    rdfs:range mmkg:Organ .
+
+mmkg:diameter_mm a owl:DatatypeProperty ;
+    rdfs:label "diameter_mm" ;
+    rdfs:range xsd:float .
+
+mmkg:dice_score a owl:DatatypeProperty ;
+    rdfs:label "dice_score" ;
+    rdfs:range xsd:float .
+
+mmkg:display a owl:AnnotationProperty ;
+    rdfs:label "display" .
+
+mmkg:has_lesion a owl:ObjectProperty ;
+    rdfs:label "has_lesion" ;
+    rdfs:domain mmkg:Series ;
+    rdfs:range mmkg:Lesion .
+
+mmkg:has_observation a owl:ObjectProperty ;
+    rdfs:label "has_observation" ;
+    rdfs:domain mmkg:Lesion ;
+    rdfs:range mmkg:Observation .
+
+mmkg:has_series a owl:ObjectProperty ;
+    rdfs:label "has_series" ;
+    rdfs:domain mmkg:Study ;
+    rdfs:range mmkg:Series .
+
+mmkg:has_study a owl:ObjectProperty ;
+    rdfs:label "has_study" ;
+    rdfs:domain mmkg:ImagingCase ;
+    rdfs:range mmkg:Study .
+
+mmkg:is_tumor a owl:DatatypeProperty ;
+    rdfs:label "is_tumor" ;
+    rdfs:range xsd:boolean .
+
+mmkg:lesion_count a owl:DatatypeProperty ;
+    rdfs:label "lesion_count" ;
+    rdfs:range xsd:integer .
+
+mmkg:located_in a owl:ObjectProperty ;
+    rdfs:label "located_in" ;
+    rdfs:domain mmkg:Lesion ;
+    rdfs:range mmkg:AnatomicSite .
+
+mmkg:mapped_to_concept a owl:ObjectProperty ;
+    rdfs:label "mapped_to_concept" ;
+    rdfs:range mmkg:OntologyConcept .
+
+mmkg:modality a owl:DatatypeProperty ;
+    rdfs:label "modality" ;
+    rdfs:range xsd:string .
+
+mmkg:overlaps_organ a owl:ObjectProperty ;
+    rdfs:label "overlaps_organ" ;
+    rdfs:domain mmkg:Lesion ;
+    rdfs:range mmkg:Organ .
+
+mmkg:part_of a owl:ObjectProperty ;
+    rdfs:label "part_of" ;
+    rdfs:domain mmkg:AnatomicSite ;
+    rdfs:range mmkg:Organ .
+
+mmkg:source_of_segmentation a owl:DatatypeProperty ;
+    rdfs:label "source_of_segmentation" ;
+    rdfs:range xsd:string .
+
+mmkg:system a owl:AnnotationProperty ;
+    rdfs:label "system" .
+
+mmkg:volume_cm3 a owl:DatatypeProperty ;
+    rdfs:label "volume_cm3" ;
+    rdfs:range xsd:float .
+
+inst:concept_SNOMEDCT_362201006 a mmkg:OntologyConcept ;
+    mmkg:code "362201006" ;
+    mmkg:display "Entire head of pancreas" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_40133006 a mmkg:OntologyConcept ;
+    mmkg:code "40133006" ;
+    mmkg:display "Structure of body of pancreas" ;
+    mmkg:system "SNOMED CT" .
+
+inst:concept_SNOMEDCT_73239005 a mmkg:OntologyConcept ;
+    mmkg:code "73239005" ;
+    mmkg:display "Structure of tail of pancreas" ;
+    mmkg:system "SNOMED CT" .
+
+inst:lesion_pancreas_015_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_pancreas_015_pancreas_burden_cat,
+        inst:obs_pancreas_015_pancreas_containment,
+        inst:obs_pancreas_015_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_015_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "8.45"^^xsd:float .
+
+inst:lesion_pancreas_019_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_pancreas_019_pancreas_burden_cat,
+        inst:obs_pancreas_019_pancreas_containment,
+        inst:obs_pancreas_019_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_019_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "6.2"^^xsd:float .
+
+inst:lesion_pancreas_041_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_pancreas_041_pancreas_burden_cat,
+        inst:obs_pancreas_041_pancreas_containment,
+        inst:obs_pancreas_041_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_041_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "1.87"^^xsd:float .
+
+inst:lesion_pancreas_045_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_head ;
+    mmkg:has_observation inst:obs_pancreas_045_pancreas_burden_cat,
+        inst:obs_pancreas_045_pancreas_containment,
+        inst:obs_pancreas_045_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_045_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "8.94"^^xsd:float .
+
+inst:lesion_pancreas_048_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_pancreas_048_pancreas_burden_cat,
+        inst:obs_pancreas_048_pancreas_containment,
+        inst:obs_pancreas_048_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_048_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "13.88"^^xsd:float .
+
+inst:lesion_pancreas_049_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_pancreas_049_pancreas_burden_cat,
+        inst:obs_pancreas_049_pancreas_containment,
+        inst:obs_pancreas_049_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_049_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "7.37"^^xsd:float .
+
+inst:lesion_pancreas_056_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_head ;
+    mmkg:has_observation inst:obs_pancreas_056_pancreas_burden_cat,
+        inst:obs_pancreas_056_pancreas_containment,
+        inst:obs_pancreas_056_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_056_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "2.72"^^xsd:float .
+
+inst:lesion_pancreas_064_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_pancreas_064_pancreas_burden_cat,
+        inst:obs_pancreas_064_pancreas_containment,
+        inst:obs_pancreas_064_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_064_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "17.54"^^xsd:float .
+
+inst:lesion_pancreas_078_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_head ;
+    mmkg:has_observation inst:obs_pancreas_078_pancreas_burden_cat,
+        inst:obs_pancreas_078_pancreas_containment,
+        inst:obs_pancreas_078_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_078_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "1.51"^^xsd:float .
+
+inst:lesion_pancreas_083_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_pancreas_083_pancreas_burden_cat,
+        inst:obs_pancreas_083_pancreas_containment,
+        inst:obs_pancreas_083_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_083_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "10.58"^^xsd:float .
+
+inst:lesion_pancreas_096_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_pancreas_096_pancreas_burden_cat,
+        inst:obs_pancreas_096_pancreas_containment,
+        inst:obs_pancreas_096_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_096_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "30.53"^^xsd:float .
+
+inst:lesion_pancreas_101_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_head ;
+    mmkg:has_observation inst:obs_pancreas_101_pancreas_burden_cat,
+        inst:obs_pancreas_101_pancreas_containment,
+        inst:obs_pancreas_101_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_101_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "8.42"^^xsd:float .
+
+inst:lesion_pancreas_107_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_pancreas_107_pancreas_burden_cat,
+        inst:obs_pancreas_107_pancreas_containment,
+        inst:obs_pancreas_107_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_107_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "2.59"^^xsd:float .
+
+inst:lesion_pancreas_110_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_head ;
+    mmkg:has_observation inst:obs_pancreas_110_pancreas_burden_cat,
+        inst:obs_pancreas_110_pancreas_containment,
+        inst:obs_pancreas_110_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_110_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "1.47"^^xsd:float .
+
+inst:lesion_pancreas_119_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_pancreas_119_pancreas_burden_cat,
+        inst:obs_pancreas_119_pancreas_containment,
+        inst:obs_pancreas_119_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_119_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "14.84"^^xsd:float .
+
+inst:lesion_pancreas_122_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_pancreas_122_pancreas_burden_cat,
+        inst:obs_pancreas_122_pancreas_containment,
+        inst:obs_pancreas_122_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_122_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "6.7"^^xsd:float .
+
+inst:lesion_pancreas_125_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_pancreas_125_pancreas_burden_cat,
+        inst:obs_pancreas_125_pancreas_containment,
+        inst:obs_pancreas_125_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_125_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "7.59"^^xsd:float .
+
+inst:lesion_pancreas_127_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_pancreas_127_pancreas_burden_cat,
+        inst:obs_pancreas_127_pancreas_containment,
+        inst:obs_pancreas_127_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_127_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "8.67"^^xsd:float .
+
+inst:lesion_pancreas_137_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_pancreas_137_pancreas_burden_cat,
+        inst:obs_pancreas_137_pancreas_containment,
+        inst:obs_pancreas_137_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_137_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "5.84"^^xsd:float .
+
+inst:lesion_pancreas_149_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_pancreas_149_pancreas_burden_cat,
+        inst:obs_pancreas_149_pancreas_containment,
+        inst:obs_pancreas_149_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_149_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "8.16"^^xsd:float .
+
+inst:lesion_pancreas_157_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_pancreas_157_pancreas_burden_cat,
+        inst:obs_pancreas_157_pancreas_containment,
+        inst:obs_pancreas_157_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_157_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "3.87"^^xsd:float .
+
+inst:lesion_pancreas_172_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_pancreas_172_pancreas_burden_cat,
+        inst:obs_pancreas_172_pancreas_containment,
+        inst:obs_pancreas_172_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_172_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "1.53"^^xsd:float .
+
+inst:lesion_pancreas_191_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_pancreas_191_pancreas_burden_cat,
+        inst:obs_pancreas_191_pancreas_containment,
+        inst:obs_pancreas_191_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_191_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "8.76"^^xsd:float .
+
+inst:lesion_pancreas_200_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_pancreas_200_pancreas_burden_cat,
+        inst:obs_pancreas_200_pancreas_containment,
+        inst:obs_pancreas_200_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_200_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "6.03"^^xsd:float .
+
+inst:lesion_pancreas_201_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_pancreas_201_pancreas_burden_cat,
+        inst:obs_pancreas_201_pancreas_containment,
+        inst:obs_pancreas_201_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_201_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "4.61"^^xsd:float .
+
+inst:lesion_pancreas_210_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_pancreas_210_pancreas_burden_cat,
+        inst:obs_pancreas_210_pancreas_containment,
+        inst:obs_pancreas_210_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_210_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "2.69"^^xsd:float .
+
+inst:lesion_pancreas_218_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_pancreas_218_pancreas_burden_cat,
+        inst:obs_pancreas_218_pancreas_containment,
+        inst:obs_pancreas_218_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_218_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "1.56"^^xsd:float .
+
+inst:lesion_pancreas_226_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_pancreas_226_pancreas_burden_cat,
+        inst:obs_pancreas_226_pancreas_containment,
+        inst:obs_pancreas_226_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_226_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "5.65"^^xsd:float .
+
+inst:lesion_pancreas_235_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_pancreas_235_pancreas_burden_cat,
+        inst:obs_pancreas_235_pancreas_containment,
+        inst:obs_pancreas_235_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_235_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "2.07"^^xsd:float .
+
+inst:lesion_pancreas_239_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_pancreas_239_pancreas_burden_cat,
+        inst:obs_pancreas_239_pancreas_containment,
+        inst:obs_pancreas_239_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_239_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "1.71"^^xsd:float .
+
+inst:lesion_pancreas_241_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_pancreas_241_pancreas_burden_cat,
+        inst:obs_pancreas_241_pancreas_containment,
+        inst:obs_pancreas_241_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_241_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "8.09"^^xsd:float .
+
+inst:lesion_pancreas_256_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_head ;
+    mmkg:has_observation inst:obs_pancreas_256_pancreas_burden_cat,
+        inst:obs_pancreas_256_pancreas_containment,
+        inst:obs_pancreas_256_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_256_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "5.17"^^xsd:float .
+
+inst:lesion_pancreas_258_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_pancreas_258_pancreas_burden_cat,
+        inst:obs_pancreas_258_pancreas_containment,
+        inst:obs_pancreas_258_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_258_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "4.13"^^xsd:float .
+
+inst:lesion_pancreas_259_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_head ;
+    mmkg:has_observation inst:obs_pancreas_259_pancreas_burden_cat,
+        inst:obs_pancreas_259_pancreas_containment,
+        inst:obs_pancreas_259_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_259_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "6.12"^^xsd:float .
+
+inst:lesion_pancreas_275_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_pancreas_275_pancreas_burden_cat,
+        inst:obs_pancreas_275_pancreas_containment,
+        inst:obs_pancreas_275_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_275_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "16.06"^^xsd:float .
+
+inst:lesion_pancreas_285_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_head ;
+    mmkg:has_observation inst:obs_pancreas_285_pancreas_burden_cat,
+        inst:obs_pancreas_285_pancreas_containment,
+        inst:obs_pancreas_285_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_285_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "1.85"^^xsd:float .
+
+inst:lesion_pancreas_289_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_pancreas_289_pancreas_burden_cat,
+        inst:obs_pancreas_289_pancreas_containment,
+        inst:obs_pancreas_289_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_289_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "4.81"^^xsd:float .
+
+inst:lesion_pancreas_301_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_pancreas_301_pancreas_burden_cat,
+        inst:obs_pancreas_301_pancreas_containment,
+        inst:obs_pancreas_301_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_301_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "0.7"^^xsd:float .
+
+inst:lesion_pancreas_315_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_pancreas_315_pancreas_burden_cat,
+        inst:obs_pancreas_315_pancreas_containment,
+        inst:obs_pancreas_315_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_315_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "4.41"^^xsd:float .
+
+inst:lesion_pancreas_327_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_pancreas_327_pancreas_burden_cat,
+        inst:obs_pancreas_327_pancreas_containment,
+        inst:obs_pancreas_327_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_327_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "3.87"^^xsd:float .
+
+inst:lesion_pancreas_330_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_pancreas_330_pancreas_burden_cat,
+        inst:obs_pancreas_330_pancreas_containment,
+        inst:obs_pancreas_330_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_330_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "6.98"^^xsd:float .
+
+inst:lesion_pancreas_336_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_pancreas_336_pancreas_burden_cat,
+        inst:obs_pancreas_336_pancreas_containment,
+        inst:obs_pancreas_336_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_336_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "5.15"^^xsd:float .
+
+inst:lesion_pancreas_339_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_pancreas_339_pancreas_burden_cat,
+        inst:obs_pancreas_339_pancreas_containment,
+        inst:obs_pancreas_339_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_339_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "3.37"^^xsd:float .
+
+inst:lesion_pancreas_348_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_head ;
+    mmkg:has_observation inst:obs_pancreas_348_pancreas_burden_cat,
+        inst:obs_pancreas_348_pancreas_containment,
+        inst:obs_pancreas_348_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_348_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "1.65"^^xsd:float .
+
+inst:lesion_pancreas_356_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_pancreas_356_pancreas_burden_cat,
+        inst:obs_pancreas_356_pancreas_containment,
+        inst:obs_pancreas_356_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_356_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "4.59"^^xsd:float .
+
+inst:lesion_pancreas_366_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_head ;
+    mmkg:has_observation inst:obs_pancreas_366_pancreas_burden_cat,
+        inst:obs_pancreas_366_pancreas_containment,
+        inst:obs_pancreas_366_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_366_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "4.13"^^xsd:float .
+
+inst:lesion_pancreas_369_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_pancreas_369_pancreas_burden_cat,
+        inst:obs_pancreas_369_pancreas_containment,
+        inst:obs_pancreas_369_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_369_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "5.25"^^xsd:float .
+
+inst:lesion_pancreas_377_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_pancreas_377_pancreas_burden_cat,
+        inst:obs_pancreas_377_pancreas_containment,
+        inst:obs_pancreas_377_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_377_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "49.38"^^xsd:float .
+
+inst:lesion_pancreas_378_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_body ;
+    mmkg:has_observation inst:obs_pancreas_378_pancreas_burden_cat,
+        inst:obs_pancreas_378_pancreas_containment,
+        inst:obs_pancreas_378_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_378_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "1.18"^^xsd:float .
+
+inst:lesion_pancreas_393_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_pancreas_393_pancreas_burden_cat,
+        inst:obs_pancreas_393_pancreas_containment,
+        inst:obs_pancreas_393_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_393_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "5.06"^^xsd:float .
+
+inst:lesion_pancreas_399_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_head ;
+    mmkg:has_observation inst:obs_pancreas_399_pancreas_burden_cat,
+        inst:obs_pancreas_399_pancreas_containment,
+        inst:obs_pancreas_399_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_399_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "9.95"^^xsd:float .
+
+inst:lesion_pancreas_404_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_pancreas_404_pancreas_burden_cat,
+        inst:obs_pancreas_404_pancreas_containment,
+        inst:obs_pancreas_404_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_404_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "1.9"^^xsd:float .
+
+inst:lesion_pancreas_418_pancreas a mmkg:Lesion,
+        mmkg:PancreaticTumor ;
+    mmkg:at_site inst:site_tail ;
+    mmkg:has_observation inst:obs_pancreas_418_pancreas_burden_cat,
+        inst:obs_pancreas_418_pancreas_containment,
+        inst:obs_pancreas_418_pancreas_multiplicity ;
+    mmkg:is_tumor true ;
+    mmkg:located_in inst:organ_pancreas_418_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_372003004 ;
+    mmkg:volume_cm3 "1.61"^^xsd:float .
+
+inst:obs_pancreas_015_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_pancreas_015_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_015_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_019_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_pancreas_019_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_019_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_041_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_pancreas_041_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "contained" .
+
+inst:obs_pancreas_041_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_045_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_pancreas_045_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_045_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_048_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_pancreas_048_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_048_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_049_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_pancreas_049_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_049_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_056_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_pancreas_056_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_056_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_064_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_pancreas_064_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_064_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_078_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_pancreas_078_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "contained" .
+
+inst:obs_pancreas_078_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_083_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_pancreas_083_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_083_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_096_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_pancreas_096_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_096_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_101_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_pancreas_101_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_101_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_107_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_pancreas_107_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_107_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_110_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_pancreas_110_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "contained" .
+
+inst:obs_pancreas_110_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_119_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_pancreas_119_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_119_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_122_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_pancreas_122_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_122_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_125_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_pancreas_125_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_125_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_127_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_pancreas_127_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_127_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_137_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_pancreas_137_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_137_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_149_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_pancreas_149_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_149_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_157_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_pancreas_157_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_157_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_172_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_pancreas_172_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "contained" .
+
+inst:obs_pancreas_172_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_191_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_pancreas_191_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_191_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_200_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_pancreas_200_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_200_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_201_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_pancreas_201_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "contained" .
+
+inst:obs_pancreas_201_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_210_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_pancreas_210_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "contained" .
+
+inst:obs_pancreas_210_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_218_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_pancreas_218_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "contained" .
+
+inst:obs_pancreas_218_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_226_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_pancreas_226_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_226_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_235_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_pancreas_235_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "contained" .
+
+inst:obs_pancreas_235_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_239_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_pancreas_239_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_239_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_241_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_pancreas_241_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_241_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_256_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_pancreas_256_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_256_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_258_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_pancreas_258_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "contained" .
+
+inst:obs_pancreas_258_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_259_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_pancreas_259_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "contained" .
+
+inst:obs_pancreas_259_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_275_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_pancreas_275_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_275_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_285_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_pancreas_285_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_285_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_289_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_pancreas_289_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_289_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_301_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_pancreas_301_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "contained" .
+
+inst:obs_pancreas_301_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_315_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_pancreas_315_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_315_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_327_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_pancreas_327_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_327_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_330_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_pancreas_330_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_330_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_336_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_pancreas_336_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_336_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_339_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_pancreas_339_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_339_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_348_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_pancreas_348_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "contained" .
+
+inst:obs_pancreas_348_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_356_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_pancreas_356_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_356_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_366_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_pancreas_366_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_366_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_369_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_pancreas_369_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_369_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_377_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "high" .
+
+inst:obs_pancreas_377_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_377_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_378_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_pancreas_378_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "contained" .
+
+inst:obs_pancreas_378_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_393_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_pancreas_393_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_393_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_399_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "medium" .
+
+inst:obs_pancreas_399_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_399_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_404_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_pancreas_404_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "boundary" .
+
+inst:obs_pancreas_404_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:obs_pancreas_418_pancreas_burden_cat a mmkg:TumorBurden ;
+    mmkg:mapped_to_concept inst:concept_NCIt_C28384 ;
+    mmkg:value "low" .
+
+inst:obs_pancreas_418_pancreas_containment a mmkg:OrganContainment ;
+    mmkg:value "contained" .
+
+inst:obs_pancreas_418_pancreas_multiplicity a mmkg:LesionMultiplicity ;
+    mmkg:value "solitary" .
+
+inst:organ_pancreas_084_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "103.67"^^xsd:float .
+
+inst:organ_pancreas_242_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "75.78"^^xsd:float .
+
+inst:organ_pancreas_346_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "27.52"^^xsd:float .
+
+inst:patient_pancreas_015 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_015" .
+
+inst:patient_pancreas_019 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_019" .
+
+inst:patient_pancreas_041 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_041" .
+
+inst:patient_pancreas_045 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_045" .
+
+inst:patient_pancreas_048 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_048" .
+
+inst:patient_pancreas_049 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_049" .
+
+inst:patient_pancreas_056 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_056" .
+
+inst:patient_pancreas_064 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_064" .
+
+inst:patient_pancreas_078 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_078" .
+
+inst:patient_pancreas_083 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_083" .
+
+inst:patient_pancreas_084 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_084" .
+
+inst:patient_pancreas_096 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_096" .
+
+inst:patient_pancreas_101 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_101" .
+
+inst:patient_pancreas_107 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_107" .
+
+inst:patient_pancreas_110 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_110" .
+
+inst:patient_pancreas_119 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_119" .
+
+inst:patient_pancreas_122 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_122" .
+
+inst:patient_pancreas_125 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_125" .
+
+inst:patient_pancreas_127 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_127" .
+
+inst:patient_pancreas_137 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_137" .
+
+inst:patient_pancreas_149 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_149" .
+
+inst:patient_pancreas_157 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_157" .
+
+inst:patient_pancreas_172 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_172" .
+
+inst:patient_pancreas_191 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_191" .
+
+inst:patient_pancreas_200 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_200" .
+
+inst:patient_pancreas_201 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_201" .
+
+inst:patient_pancreas_210 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_210" .
+
+inst:patient_pancreas_218 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_218" .
+
+inst:patient_pancreas_226 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_226" .
+
+inst:patient_pancreas_235 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_235" .
+
+inst:patient_pancreas_239 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_239" .
+
+inst:patient_pancreas_241 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_241" .
+
+inst:patient_pancreas_242 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_242" .
+
+inst:patient_pancreas_256 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_256" .
+
+inst:patient_pancreas_258 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_258" .
+
+inst:patient_pancreas_259 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_259" .
+
+inst:patient_pancreas_275 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_275" .
+
+inst:patient_pancreas_285 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_285" .
+
+inst:patient_pancreas_289 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_289" .
+
+inst:patient_pancreas_301 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_301" .
+
+inst:patient_pancreas_315 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_315" .
+
+inst:patient_pancreas_327 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_327" .
+
+inst:patient_pancreas_330 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_330" .
+
+inst:patient_pancreas_336 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_336" .
+
+inst:patient_pancreas_339 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_339" .
+
+inst:patient_pancreas_346 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_346" .
+
+inst:patient_pancreas_348 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_348" .
+
+inst:patient_pancreas_356 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_356" .
+
+inst:patient_pancreas_366 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_366" .
+
+inst:patient_pancreas_369 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_369" .
+
+inst:patient_pancreas_377 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_377" .
+
+inst:patient_pancreas_378 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_378" .
+
+inst:patient_pancreas_393 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_393" .
+
+inst:patient_pancreas_399 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_399" .
+
+inst:patient_pancreas_404 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_404" .
+
+inst:patient_pancreas_418 a mmkg:Patient ;
+    mmkg:patient_id "pancreas_418" .
+
+mmkg:PancreaticBody a owl:Class ;
+    rdfs:label "Body of pancreas" ;
+    mmkg:mapped_to_concept mmkg:concept_PancreaticBody_40133006 ;
+    rdfs:subClassOf mmkg:AnatomicSite ;
+    skos:exactMatch <http://snomed.info/id/40133006> .
+
+mmkg:PancreaticHead a owl:Class ;
+    rdfs:label "Head of pancreas" ;
+    mmkg:mapped_to_concept mmkg:concept_PancreaticHead_362201006 ;
+    rdfs:subClassOf mmkg:AnatomicSite ;
+    skos:exactMatch <http://snomed.info/id/362201006> .
+
+mmkg:PancreaticTail a owl:Class ;
+    rdfs:label "Tail of pancreas" ;
+    mmkg:mapped_to_concept mmkg:concept_PancreaticTail_73239005 ;
+    rdfs:subClassOf mmkg:AnatomicSite ;
+    skos:exactMatch <http://snomed.info/id/73239005> .
+
+mmkg:concept_CrossOrganExtension_409771002 a mmkg:OntologyConcept ;
+    mmkg:code "409771002" ;
+    mmkg:display "Tumour invasion by direct extension from organ of origin to adjacent organ" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/409771002> .
+
+mmkg:concept_LiverTumor_93870000 a mmkg:OntologyConcept ;
+    mmkg:code "93870000" ;
+    mmkg:display "Malignant neoplasm of liver" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/93870000> .
+
+mmkg:concept_LiverTumor_C3099 a mmkg:OntologyConcept ;
+    mmkg:code "C3099" ;
+    mmkg:display "Hepatocellular Carcinoma" ;
+    mmkg:system "NCIt" ;
+    rdfs:isDefinedBy <https://ncithesaurus.nci.nih.gov> ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/NCIT_C3099> .
+
+mmkg:concept_Liver_10200004 a mmkg:OntologyConcept ;
+    mmkg:code "10200004" ;
+    mmkg:display "Liver structure" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/10200004> .
+
+mmkg:concept_Liver_C12392 a mmkg:OntologyConcept ;
+    mmkg:code "C12392" ;
+    mmkg:display "Liver" ;
+    mmkg:system "NCIt" ;
+    rdfs:isDefinedBy <https://ncithesaurus.nci.nih.gov> ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/NCIT_C12392> .
+
+mmkg:concept_Pancreas_15776009 a mmkg:OntologyConcept ;
+    mmkg:code "15776009" ;
+    mmkg:display "Pancreatic structure" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/15776009> .
+
+mmkg:concept_Pancreas_C12393 a mmkg:OntologyConcept ;
+    mmkg:code "C12393" ;
+    mmkg:display "Pancreas" ;
+    mmkg:system "NCIt" ;
+    rdfs:isDefinedBy <https://ncithesaurus.nci.nih.gov> ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/NCIT_C12393> .
+
+mmkg:concept_PancreaticBody_40133006 a mmkg:OntologyConcept ;
+    mmkg:code "40133006" ;
+    mmkg:display "Structure of body of pancreas" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/40133006> .
+
+mmkg:concept_PancreaticHead_362201006 a mmkg:OntologyConcept ;
+    mmkg:code "362201006" ;
+    mmkg:display "Entire head of pancreas" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/362201006> .
+
+mmkg:concept_PancreaticTail_73239005 a mmkg:OntologyConcept ;
+    mmkg:code "73239005" ;
+    mmkg:display "Structure of tail of pancreas" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/73239005> .
+
+mmkg:concept_PancreaticTumor_372003004 a mmkg:OntologyConcept ;
+    mmkg:code "372003004" ;
+    mmkg:display "Primary malignant neoplasm of pancreas" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/372003004> .
+
+mmkg:concept_PancreaticTumor_C3305 a mmkg:OntologyConcept ;
+    mmkg:code "C3305" ;
+    mmkg:display "Pancreatic Neoplasm" ;
+    mmkg:system "NCIt" ;
+    rdfs:isDefinedBy <https://ncithesaurus.nci.nih.gov> ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/NCIT_C3305> .
+
+mmkg:concept_RenalTumor_126880001 a mmkg:OntologyConcept ;
+    mmkg:code "126880001" ;
+    mmkg:display "Neoplasm of kidney" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/126880001> .
+
+mmkg:concept_RenalTumor_C3150 a mmkg:OntologyConcept ;
+    mmkg:code "C3150" ;
+    mmkg:display "Kidney Neoplasm" ;
+    mmkg:system "NCIt" ;
+    rdfs:isDefinedBy <https://ncithesaurus.nci.nih.gov> ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/NCIT_C3150> .
+
+mmkg:concept_TumorBurden_C28384 a mmkg:OntologyConcept ;
+    mmkg:code "C28384" ;
+    mmkg:display "Tumor Burden" ;
+    mmkg:system "NCIt" ;
+    rdfs:isDefinedBy <https://ncithesaurus.nci.nih.gov> ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/NCIT_C28384> .
+
+mmkg:concept_TumorDiameter_263605001 a mmkg:OntologyConcept ;
+    mmkg:code "263605001" ;
+    mmkg:display "Tumor size" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/263605001> .
+
+mmkg:concept_TumorVolume_258261001 a mmkg:OntologyConcept ;
+    mmkg:code "258261001" ;
+    mmkg:display "Tumour volume" ;
+    mmkg:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/258261001> .
+
+inst:organ_pancreas_015_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_015_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "86.6"^^xsd:float .
+
+inst:organ_pancreas_019_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_019_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "90.94"^^xsd:float .
+
+inst:organ_pancreas_041_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_041_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "135.02"^^xsd:float .
+
+inst:organ_pancreas_045_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_045_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "73.8"^^xsd:float .
+
+inst:organ_pancreas_048_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_048_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "100.77"^^xsd:float .
+
+inst:organ_pancreas_049_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_049_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "175.41"^^xsd:float .
+
+inst:organ_pancreas_056_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_056_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "57.11"^^xsd:float .
+
+inst:organ_pancreas_064_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_064_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "111.47"^^xsd:float .
+
+inst:organ_pancreas_078_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_078_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "88.58"^^xsd:float .
+
+inst:organ_pancreas_083_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_083_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "119.54"^^xsd:float .
+
+inst:organ_pancreas_096_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_096_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "177.42"^^xsd:float .
+
+inst:organ_pancreas_101_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_101_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "144.63"^^xsd:float .
+
+inst:organ_pancreas_107_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_107_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "74.87"^^xsd:float .
+
+inst:organ_pancreas_110_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_110_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "177.85"^^xsd:float .
+
+inst:organ_pancreas_119_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_119_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "109.52"^^xsd:float .
+
+inst:organ_pancreas_122_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_122_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "60.24"^^xsd:float .
+
+inst:organ_pancreas_125_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_125_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "176.24"^^xsd:float .
+
+inst:organ_pancreas_127_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_127_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "196.18"^^xsd:float .
+
+inst:organ_pancreas_137_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_137_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "103.09"^^xsd:float .
+
+inst:organ_pancreas_149_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_149_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "92.41"^^xsd:float .
+
+inst:organ_pancreas_157_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_157_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "118.87"^^xsd:float .
+
+inst:organ_pancreas_172_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_172_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "149.57"^^xsd:float .
+
+inst:organ_pancreas_191_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_191_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "70.27"^^xsd:float .
+
+inst:organ_pancreas_200_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_200_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "108.65"^^xsd:float .
+
+inst:organ_pancreas_201_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_201_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "41.04"^^xsd:float .
+
+inst:organ_pancreas_210_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_210_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "84.79"^^xsd:float .
+
+inst:organ_pancreas_218_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_218_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "62.5"^^xsd:float .
+
+inst:organ_pancreas_226_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_226_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "55.14"^^xsd:float .
+
+inst:organ_pancreas_235_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_235_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "79.94"^^xsd:float .
+
+inst:organ_pancreas_239_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_239_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "60.16"^^xsd:float .
+
+inst:organ_pancreas_241_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_241_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "60.17"^^xsd:float .
+
+inst:organ_pancreas_256_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_256_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "56.79"^^xsd:float .
+
+inst:organ_pancreas_258_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_258_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "128.73"^^xsd:float .
+
+inst:organ_pancreas_259_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_259_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "54.27"^^xsd:float .
+
+inst:organ_pancreas_275_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_275_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "70.48"^^xsd:float .
+
+inst:organ_pancreas_285_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_285_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "62.25"^^xsd:float .
+
+inst:organ_pancreas_289_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_289_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "74.08"^^xsd:float .
+
+inst:organ_pancreas_301_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_301_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "38.84"^^xsd:float .
+
+inst:organ_pancreas_315_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_315_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "81.73"^^xsd:float .
+
+inst:organ_pancreas_327_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_327_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "112.4"^^xsd:float .
+
+inst:organ_pancreas_330_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_330_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "41.95"^^xsd:float .
+
+inst:organ_pancreas_336_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_336_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "81.97"^^xsd:float .
+
+inst:organ_pancreas_339_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_339_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "88.05"^^xsd:float .
+
+inst:organ_pancreas_348_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_348_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "52.57"^^xsd:float .
+
+inst:organ_pancreas_356_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_356_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "116.93"^^xsd:float .
+
+inst:organ_pancreas_366_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_366_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "134.83"^^xsd:float .
+
+inst:organ_pancreas_369_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_369_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "160.41"^^xsd:float .
+
+inst:organ_pancreas_377_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_377_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "61.42"^^xsd:float .
+
+inst:organ_pancreas_378_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_378_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "79.5"^^xsd:float .
+
+inst:organ_pancreas_393_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_393_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "156.61"^^xsd:float .
+
+inst:organ_pancreas_399_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_399_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "91.69"^^xsd:float .
+
+inst:organ_pancreas_404_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_404_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "67.21"^^xsd:float .
+
+inst:organ_pancreas_418_pancreas a mmkg:Organ,
+        mmkg:Pancreas ;
+    mmkg:display "pancreas" ;
+    mmkg:has_lesion inst:lesion_pancreas_418_pancreas ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_15776009 ;
+    mmkg:volume_cm3 "84.93"^^xsd:float .
+
+mmkg:Anatomy a owl:Class ;
+    rdfs:label "Anatomy" .
+
+mmkg:Study a owl:Class ;
+    rdfs:label "Study" .
+
+mmkg:Series a owl:Class ;
+    rdfs:label "Series" .
+
+mmkg:AnatomicSite a owl:Class ;
+    rdfs:label "AnatomicSite" ;
+    rdfs:subClassOf mmkg:Anatomy .
+
+mmkg:Observation a owl:Class ;
+    rdfs:label "Observation" .
+
+inst:site_head a mmkg:PancreaticHead ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_362201006 .
+
+inst:site_body a mmkg:PancreaticBody ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_40133006 .
+
+inst:site_tail a mmkg:PancreaticTail ;
+    mmkg:mapped_to_concept inst:concept_SNOMEDCT_73239005 .
+
+mmkg:OntologyConcept a owl:Class ;
+    rdfs:label "OntologyConcept" .
+
+inst:concept_NCIt_C28384 a mmkg:OntologyConcept ;
+    mmkg:code "C28384" ;
+    mmkg:display "Tumor Burden" ;
+    mmkg:system "NCIt" .
+
+inst:concept_SNOMEDCT_372003004 a mmkg:OntologyConcept ;
+    mmkg:code "372003004" ;
+    mmkg:display "Primary malignant neoplasm of pancreas" ;
+    mmkg:system "SNOMED CT" .
+
+mmkg:LesionMultiplicity a owl:Class ;
+    rdfs:label "Lesion multiplicity" ;
+    rdfs:subClassOf mmkg:Observation .
+
+mmkg:OrganContainment a owl:Class ;
+    rdfs:label "Organ containment" ;
+    rdfs:subClassOf mmkg:Observation .
+
+mmkg:PancreaticTumor a owl:Class ;
+    rdfs:label "Pancreatic tumor" ;
+    mmkg:mapped_to_concept mmkg:concept_PancreaticTumor_372003004,
+        mmkg:concept_PancreaticTumor_C3305 ;
+    rdfs:subClassOf mmkg:Lesion ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C3305>,
+        <http://snomed.info/id/372003004> .
+
+mmkg:TumorBurden a owl:Class ;
+    rdfs:label "Tumor burden" ;
+    mmkg:mapped_to_concept mmkg:concept_TumorBurden_C28384 ;
+    rdfs:subClassOf mmkg:Observation ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C28384> .
+
+inst:concept_SNOMEDCT_15776009 a mmkg:OntologyConcept ;
+    mmkg:code "15776009" ;
+    mmkg:display "Pancreatic structure" ;
+    mmkg:system "SNOMED CT" .
+
+inst:dataset_msd a mmkg:Dataset .
+
+mmkg:Pancreas a owl:Class ;
+    rdfs:label "Pancreas" ;
+    mmkg:mapped_to_concept mmkg:concept_Pancreas_15776009,
+        mmkg:concept_Pancreas_C12393 ;
+    rdfs:subClassOf mmkg:Organ ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C12393>,
+        <http://snomed.info/id/15776009> .
+
+mmkg:ImagingCase a owl:Class ;
+    rdfs:label "ImagingCase" .
+
+mmkg:Lesion a owl:Class ;
+    rdfs:label "Lesion" .
+
+mmkg:Organ a owl:Class ;
+    rdfs:label "Organ" ;
+    rdfs:subClassOf mmkg:Anatomy .
+

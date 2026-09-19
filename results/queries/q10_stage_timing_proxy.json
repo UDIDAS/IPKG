@@ -1,0 +1,29 @@
+{
+ "note": "Stage-wise timing PROXY for Q10 measured on the pipeline scripts on one NVIDIA A40 (shared with other jobs; 2 workers per GPU) \u2014 NOT the deployed application's upload-to-report latency, which remains app-side.",
+ "segmentation_autonomous_box_free_per_case_s": {
+  "n": 52,
+  "median_s": 284.6,
+  "IQR_s": [
+   181.4,
+   657.5
+  ]
+ },
+ "segmentation_semi_oracle_per_case_s": {
+  "n": 576,
+  "median_s": 74.8,
+  "IQR_s": [
+   57.7,
+   128.8
+  ]
+ },
+ "graph_construction_per_case_s": {
+  "note": "phenotype extraction + record assembly (build_predicted_corpus_flare23.py assemble): ~10-15 s per case single-process CPU; kg_build_graph.py for a 576-case corpus: seconds"
+ },
+ "sparql_query_stage_ms": {
+  "median_ms": 755.4,
+  "IQR_ms": [
+   301.7,
+   4728.1
+  ]
+ }
+}

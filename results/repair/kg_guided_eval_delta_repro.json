@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "liver": {
+      "n": 40,
+      "raw": 0.801,
+      "kg_repaired": 0.844
+    },
+    "right_kidney": {
+      "n": 40,
+      "raw": 0.471,
+      "kg_repaired": 0.562
+    },
+    "spleen": {
+      "n": 40,
+      "raw": 0.603,
+      "kg_repaired": 0.765
+    },
+    "pancreas": {
+      "n": 40,
+      "raw": 0.301,
+      "kg_repaired": 0.443
+    },
+    "left_kidney": {
+      "n": 40,
+      "raw": 0.489,
+      "kg_repaired": 0.762
+    },
+    "tumor": {
+      "n": 40,
+      "raw": 0.278,
+      "kg_repaired": 0.283
+    }
+  }
+}

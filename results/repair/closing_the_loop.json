@@ -1,0 +1,42 @@
+{
+  "n_cases": 40,
+  "node_fidelity_MAPE_pct": {
+    "raw": 119.81,
+    "repaired": 29.65,
+    "delta": -90.15,
+    "n_organ_obs": 200
+  },
+  "retrieval_mAP": {
+    "raw_graph": 0.587,
+    "repaired_graph": 0.393,
+    "gt_graph_upper_bound": 0.918
+  },
+  "dice": {
+    "liver": {
+      "raw": 0.804,
+      "repaired": 0.847,
+      "n": 40
+    },
+    "right_kidney": {
+      "raw": 0.474,
+      "repaired": 0.562,
+      "n": 40
+    },
+    "spleen": {
+      "raw": 0.607,
+      "repaired": 0.764,
+      "n": 40
+    },
+    "pancreas": {
+      "raw": 0.302,
+      "repaired": 0.419,
+      "n": 40
+    },
+    "left_kidney": {
+      "raw": 0.489,
+      "repaired": 0.772,
+      "n": 40
+    }
+  },
+  "interpretation": "loop closes if repaired MAPE < raw MAPE and repaired mAP > raw mAP (toward GT upper bound)."
+}

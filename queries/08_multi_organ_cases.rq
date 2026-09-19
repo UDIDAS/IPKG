@@ -1,0 +1,4 @@
+PREFIX mmkg: <http://example.org/mmkg/schema/>
+SELECT ?case (COUNT(?o) AS ?n_organs)
+WHERE { ?c a mmkg:ImagingCase ; mmkg:case_id ?case ; mmkg:depicts_organ ?o . }
+GROUP BY ?case ORDER BY DESC(?n_organs) LIMIT 10

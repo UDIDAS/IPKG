@@ -1,0 +1,86 @@
+{
+ "note": "Containment v2 for the 113-cohort PREDICTED corpora \u2014 from the locally REGENERATED masks\n(scripts/segmentation/regen_predicted_masks_113.py; the frozen masks are unreachable: KiTS/MSD\non Delta, LiTS gone). Completes the last open pipeline item: Table 11's containment cell.\n\nRule = the delivered extractor (app_handoff/extract_phenotypes.py, fixed 2026-09-16): >=90 % of\nthe attributed tumor within the 3-voxel dilation of the slice-wise hole-filled organ. Dataset\npresets give the fill axis (kits 0, lits 0 \u2014 the npy slab grid the frozen corpus used, msd 2).\n\nREGENERATED-MASK CAVEAT, and how it is contained: the weights differ from the per-dataset AUSAM\ncheckpoints (organ = base facebook/sam3, tumor = the FLARE23 expert, both GT-box semi-oracle),\nso per-case fidelity vs the FROZEN corpora is enforced \u2014 the v2 containment is adopted ONLY\nwhere the regenerated record agrees with the frozen record on has_tumor; disagreeing cases keep\ntheir frozen value and are listed. Fidelity summary: results/segmentation/regen_masks_113_fidelity.json.\n\nAlso recomputes the Table 11 statement-precision containment row (summ_metrics.py method,\nverbatim conditioning: containment counts only where the predicted record asserts a tumor)\nagainst the v2 GT side (corpora/containment_v2/corpus_gt_*_containment_v2.json), giving the\ndraft's \u00a75 containment-precision replacement for the frozen 0.844.\n\n-> results/kg/containment_reextraction_113_predicted.json\n-> corpora/containment_v2/corpus_predicted_{kits,lits,msd}_containment_v2.json",
+ "summary_containment": {
+  "kits": {
+   "old": {
+    "boundary": 34,
+    "contained": 1,
+    "none": 1
+   },
+   "v2": {
+    "boundary": 34,
+    "contained": 1,
+    "none": 1
+   }
+  },
+  "lits": {
+   "old": {
+    "boundary": 19,
+    "contained": 2
+   },
+   "v2": {
+    "boundary": 11,
+    "contained": 10
+   }
+  },
+  "msd": {
+   "old": {
+    "boundary": 39,
+    "contained": 14,
+    "none": 3
+   },
+   "v2": {
+    "contained": 45,
+    "boundary": 8,
+    "none": 3
+   }
+  }
+ },
+ "kept_frozen_on_has_tumor_mismatch": [],
+ "regen_fidelity": {
+  "kits": {
+   "n": 36,
+   "has_tumor_concordance": "36/36",
+   "tumor_vox_median_ratio_regen_over_frozen": 1.067,
+   "tumor_vox_corr": 0.9995,
+   "mean_dice_organ_gt": 0.844,
+   "mean_dice_tumor_gt": 0.878
+  },
+  "lits": {
+   "n": 21,
+   "has_tumor_concordance": "21/21",
+   "tumor_vox_median_ratio_regen_over_frozen": 1.132,
+   "tumor_vox_corr": 0.9421,
+   "mean_dice_organ_gt": 0.948,
+   "mean_dice_tumor_gt": 0.679
+  },
+  "msd": {
+   "n": 56,
+   "has_tumor_concordance": "56/56",
+   "tumor_vox_median_ratio_regen_over_frozen": 1.185,
+   "tumor_vox_corr": 0.9821,
+   "mean_dice_organ_gt": 0.792,
+   "mean_dice_tumor_gt": 0.808
+  }
+ },
+ "table11_containment_precision_v2": {
+  "precision": 0.872,
+  "n_statements": 109,
+  "per_dataset": {
+   "kits": {
+    "precision": 0.914,
+    "n": 35
+   },
+   "lits": {
+    "precision": 0.905,
+    "n": 21
+   },
+   "msd": {
+    "precision": 0.83,
+    "n": 53
+   }
+  },
+  "frozen_value_replaced": 0.844,
+  "method": "summ_metrics.py conditioning verbatim: containment statements counted only where the predicted record asserts a tumor; scored vs the v2 GT record of the same case."
+ }
+}

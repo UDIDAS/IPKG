@@ -1,0 +1,343 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mm: <http://example.org/mmkg/schema/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/mmkg/schema> a owl:Ontology ;
+    dcterms:title "Imaging Phenotype KG Schema (SAM3 segmentation hand-off)" ;
+    rdfs:comment "T-Box for imaging cases, organs, lesions and phenotypes derived from SAM3 segmentation. Domain classes carry skos:exactMatch to SNOMED CT / NCIt / FMA / RadLex concepts. Aligned with acm_mmkg schema.py v2.0 conventions." ;
+    owl:versionInfo "1.0" .
+
+mm:CrossOrganExtension a owl:Class ;
+    rdfs:label "Cross-organ extension" ;
+    mm:mapped_to_concept mm:concept_CrossOrganExtension_409771002 ;
+    rdfs:subClassOf mm:Observation ;
+    skos:exactMatch <http://snomed.info/id/409771002> .
+
+mm:LesionMultiplicity a owl:Class ;
+    rdfs:label "Lesion multiplicity" ;
+    rdfs:subClassOf mm:Observation .
+
+mm:Liver a owl:Class ;
+    rdfs:label "Liver" ;
+    mm:mapped_to_concept mm:concept_Liver_10200004,
+        mm:concept_Liver_C12392 ;
+    rdfs:subClassOf mm:Organ ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C12392>,
+        <http://snomed.info/id/10200004> .
+
+mm:LiverTumor a owl:Class ;
+    rdfs:label "Liver tumor" ;
+    mm:mapped_to_concept mm:concept_LiverTumor_93870000,
+        mm:concept_LiverTumor_C3099 ;
+    rdfs:subClassOf mm:Lesion ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C3099>,
+        <http://snomed.info/id/93870000> .
+
+mm:OrganContainment a owl:Class ;
+    rdfs:label "Organ containment" ;
+    rdfs:subClassOf mm:Observation .
+
+mm:Pancreas a owl:Class ;
+    rdfs:label "Pancreas" ;
+    mm:mapped_to_concept mm:concept_Pancreas_15776009,
+        mm:concept_Pancreas_C12393 ;
+    rdfs:subClassOf mm:Organ ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C12393>,
+        <http://snomed.info/id/15776009> .
+
+mm:PancreaticBody a owl:Class ;
+    rdfs:label "Body of pancreas" ;
+    mm:mapped_to_concept mm:concept_PancreaticBody_40133006 ;
+    rdfs:subClassOf mm:AnatomicSite ;
+    skos:exactMatch <http://snomed.info/id/40133006> .
+
+mm:PancreaticHead a owl:Class ;
+    rdfs:label "Head of pancreas" ;
+    mm:mapped_to_concept mm:concept_PancreaticHead_362201006 ;
+    rdfs:subClassOf mm:AnatomicSite ;
+    skos:exactMatch <http://snomed.info/id/362201006> .
+
+mm:PancreaticTail a owl:Class ;
+    rdfs:label "Tail of pancreas" ;
+    mm:mapped_to_concept mm:concept_PancreaticTail_73239005 ;
+    rdfs:subClassOf mm:AnatomicSite ;
+    skos:exactMatch <http://snomed.info/id/73239005> .
+
+mm:PancreaticTumor a owl:Class ;
+    rdfs:label "Pancreatic tumor" ;
+    mm:mapped_to_concept mm:concept_PancreaticTumor_372003004,
+        mm:concept_PancreaticTumor_C3305 ;
+    rdfs:subClassOf mm:Lesion ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C3305>,
+        <http://snomed.info/id/372003004> .
+
+mm:TumorBurden a owl:Class ;
+    rdfs:label "Tumor burden" ;
+    mm:mapped_to_concept mm:concept_TumorBurden_C28384 ;
+    rdfs:subClassOf mm:Observation ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C28384> .
+
+mm:TumorDiameter a owl:Class ;
+    rdfs:label "Tumor diameter" ;
+    mm:mapped_to_concept mm:concept_TumorDiameter_263605001 ;
+    rdfs:subClassOf mm:Observation ;
+    skos:exactMatch <http://snomed.info/id/263605001> .
+
+mm:TumorVolume a owl:Class ;
+    rdfs:label "Tumor volume" ;
+    mm:mapped_to_concept mm:concept_TumorVolume_258261001 ;
+    rdfs:subClassOf mm:Observation ;
+    skos:exactMatch <http://snomed.info/id/258261001> .
+
+mm:anatomic_location a owl:DatatypeProperty ;
+    rdfs:label "anatomic_location" ;
+    rdfs:range xsd:string .
+
+mm:case_id a owl:DatatypeProperty ;
+    rdfs:label "case_id" ;
+    rdfs:range xsd:string .
+
+mm:code a owl:AnnotationProperty ;
+    rdfs:label "code" .
+
+mm:dataset a owl:DatatypeProperty ;
+    rdfs:label "dataset" ;
+    rdfs:range xsd:string .
+
+mm:depicts_organ a owl:ObjectProperty ;
+    rdfs:label "depicts_organ" ;
+    rdfs:domain mm:Series ;
+    rdfs:range mm:Organ .
+
+mm:diameter_mm a owl:DatatypeProperty ;
+    rdfs:label "diameter_mm" ;
+    rdfs:range xsd:float .
+
+mm:dice_score a owl:DatatypeProperty ;
+    rdfs:label "dice_score" ;
+    rdfs:range xsd:float .
+
+mm:display a owl:AnnotationProperty ;
+    rdfs:label "display" .
+
+mm:has_lesion a owl:ObjectProperty ;
+    rdfs:label "has_lesion" ;
+    rdfs:domain mm:Series ;
+    rdfs:range mm:Lesion .
+
+mm:has_observation a owl:ObjectProperty ;
+    rdfs:label "has_observation" ;
+    rdfs:domain mm:Lesion ;
+    rdfs:range mm:Observation .
+
+mm:has_series a owl:ObjectProperty ;
+    rdfs:label "has_series" ;
+    rdfs:domain mm:Study ;
+    rdfs:range mm:Series .
+
+mm:has_study a owl:ObjectProperty ;
+    rdfs:label "has_study" ;
+    rdfs:domain mm:ImagingCase ;
+    rdfs:range mm:Study .
+
+mm:is_tumor a owl:DatatypeProperty ;
+    rdfs:label "is_tumor" ;
+    rdfs:range xsd:boolean .
+
+mm:lesion_count a owl:DatatypeProperty ;
+    rdfs:label "lesion_count" ;
+    rdfs:range xsd:integer .
+
+mm:located_in a owl:ObjectProperty ;
+    rdfs:label "located_in" ;
+    rdfs:domain mm:Lesion ;
+    rdfs:range mm:AnatomicSite .
+
+mm:mapped_to_concept a owl:ObjectProperty ;
+    rdfs:label "mapped_to_concept" ;
+    rdfs:range mm:OntologyConcept .
+
+mm:modality a owl:DatatypeProperty ;
+    rdfs:label "modality" ;
+    rdfs:range xsd:string .
+
+mm:overlaps_organ a owl:ObjectProperty ;
+    rdfs:label "overlaps_organ" ;
+    rdfs:domain mm:Lesion ;
+    rdfs:range mm:Organ .
+
+mm:part_of a owl:ObjectProperty ;
+    rdfs:label "part_of" ;
+    rdfs:domain mm:AnatomicSite ;
+    rdfs:range mm:Organ .
+
+mm:source_of_segmentation a owl:DatatypeProperty ;
+    rdfs:label "source_of_segmentation" ;
+    rdfs:range xsd:string .
+
+mm:system a owl:AnnotationProperty ;
+    rdfs:label "system" .
+
+mm:volume_cm3 a owl:DatatypeProperty ;
+    rdfs:label "volume_cm3" ;
+    rdfs:range xsd:float .
+
+mm:ImagingCase a owl:Class ;
+    rdfs:label "ImagingCase" .
+
+mm:concept_CrossOrganExtension_409771002 a mm:OntologyConcept ;
+    mm:code "409771002" ;
+    mm:display "Tumour invasion by direct extension from organ of origin to adjacent organ" ;
+    mm:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/409771002> .
+
+mm:concept_LiverTumor_93870000 a mm:OntologyConcept ;
+    mm:code "93870000" ;
+    mm:display "Malignant neoplasm of liver" ;
+    mm:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/93870000> .
+
+mm:concept_LiverTumor_C3099 a mm:OntologyConcept ;
+    mm:code "C3099" ;
+    mm:display "Hepatocellular Carcinoma" ;
+    mm:system "NCIt" ;
+    rdfs:isDefinedBy <https://ncithesaurus.nci.nih.gov> ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/NCIT_C3099> .
+
+mm:concept_Liver_10200004 a mm:OntologyConcept ;
+    mm:code "10200004" ;
+    mm:display "Liver structure" ;
+    mm:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/10200004> .
+
+mm:concept_Liver_C12392 a mm:OntologyConcept ;
+    mm:code "C12392" ;
+    mm:display "Liver" ;
+    mm:system "NCIt" ;
+    rdfs:isDefinedBy <https://ncithesaurus.nci.nih.gov> ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/NCIT_C12392> .
+
+mm:concept_Pancreas_15776009 a mm:OntologyConcept ;
+    mm:code "15776009" ;
+    mm:display "Pancreatic structure" ;
+    mm:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/15776009> .
+
+mm:concept_Pancreas_C12393 a mm:OntologyConcept ;
+    mm:code "C12393" ;
+    mm:display "Pancreas" ;
+    mm:system "NCIt" ;
+    rdfs:isDefinedBy <https://ncithesaurus.nci.nih.gov> ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/NCIT_C12393> .
+
+mm:concept_PancreaticBody_40133006 a mm:OntologyConcept ;
+    mm:code "40133006" ;
+    mm:display "Structure of body of pancreas" ;
+    mm:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/40133006> .
+
+mm:concept_PancreaticHead_362201006 a mm:OntologyConcept ;
+    mm:code "362201006" ;
+    mm:display "Entire head of pancreas" ;
+    mm:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/362201006> .
+
+mm:concept_PancreaticTail_73239005 a mm:OntologyConcept ;
+    mm:code "73239005" ;
+    mm:display "Structure of tail of pancreas" ;
+    mm:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/73239005> .
+
+mm:concept_PancreaticTumor_372003004 a mm:OntologyConcept ;
+    mm:code "372003004" ;
+    mm:display "Primary malignant neoplasm of pancreas" ;
+    mm:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/372003004> .
+
+mm:concept_PancreaticTumor_C3305 a mm:OntologyConcept ;
+    mm:code "C3305" ;
+    mm:display "Pancreatic Neoplasm" ;
+    mm:system "NCIt" ;
+    rdfs:isDefinedBy <https://ncithesaurus.nci.nih.gov> ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/NCIT_C3305> .
+
+mm:concept_TumorBurden_C28384 a mm:OntologyConcept ;
+    mm:code "C28384" ;
+    mm:display "Tumor Burden" ;
+    mm:system "NCIt" ;
+    rdfs:isDefinedBy <https://ncithesaurus.nci.nih.gov> ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/NCIT_C28384> .
+
+mm:concept_TumorDiameter_263605001 a mm:OntologyConcept ;
+    mm:code "263605001" ;
+    mm:display "Tumor size" ;
+    mm:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/263605001> .
+
+mm:concept_TumorVolume_258261001 a mm:OntologyConcept ;
+    mm:code "258261001" ;
+    mm:display "Tumour volume" ;
+    mm:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/258261001> .
+
+mm:Anatomy a owl:Class ;
+    rdfs:label "Anatomy" .
+
+mm:Study a owl:Class ;
+    rdfs:label "Study" .
+
+mm:Series a owl:Class ;
+    rdfs:label "Series" .
+
+mm:AnatomicSite a owl:Class ;
+    rdfs:label "AnatomicSite" ;
+    rdfs:subClassOf mm:Anatomy .
+
+mm:Organ a owl:Class ;
+    rdfs:label "Organ" ;
+    rdfs:subClassOf mm:Anatomy .
+
+mm:Lesion a owl:Class ;
+    rdfs:label "Lesion" .
+
+mm:Observation a owl:Class ;
+    rdfs:label "Observation" .
+
+mm:OntologyConcept a owl:Class ;
+    rdfs:label "OntologyConcept" .
+
+
+# --- added 2026-09-14: renal tumor lesion class + verified concepts (parallel to LiverTumor / PancreaticTumor)
+mm:RenalTumor a owl:Class ;
+    rdfs:label "Renal tumor" ;
+    mm:mapped_to_concept mm:concept_RenalTumor_126880001,
+        mm:concept_RenalTumor_C3150 ;
+    rdfs:subClassOf mm:Lesion ;
+    skos:definition "Tumor located in the right or left kidney." .
+
+mm:concept_RenalTumor_126880001 a mm:OntologyConcept ;
+    mm:code "126880001" ;
+    mm:display "Neoplasm of kidney" ;
+    mm:system "SNOMED CT" ;
+    rdfs:isDefinedBy <https://www.snomed.org/snomed-ct> ;
+    rdfs:seeAlso <http://snomed.info/id/126880001> .
+
+mm:concept_RenalTumor_C3150 a mm:OntologyConcept ;
+    mm:code "C3150" ;
+    mm:display "Kidney Neoplasm" ;
+    mm:system "NCIt" ;
+    rdfs:isDefinedBy <https://ncithesaurus.nci.nih.gov> ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/NCIT_C3150> .

@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+
+# manuscript drafts and working plans stay local (reports/results only on GitHub)
+docs/*.pdf
+docs/*_plan*.md
+docs/*_todo_*.md
+_drive_upload_*/

@@ -1,0 +1,7 @@
+PREFIX mmkg: <http://example.org/mmkg/schema/>
+SELECT ?case ?burden ?mult ?vol
+WHERE { ?c a mmkg:ImagingCase ; mmkg:case_id ?case ; mmkg:depicts_organ ?o .
+        ?o a mmkg:Kidney .
+        ?l mmkg:located_in ?o ; mmkg:tumorBurden ?burden ;
+           mmkg:lesionMultiplicity ?mult ; mmkg:gt_volume_cm3 ?vol . }
+ORDER BY DESC(?vol) LIMIT 15

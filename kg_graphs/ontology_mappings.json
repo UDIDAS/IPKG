@@ -1,0 +1,162 @@
+{
+ "mappings": {
+  "Organ::Pancreas": {
+   "SNOMED CT": {
+    "system": "SNOMED CT",
+    "code": "15776009",
+    "display": "Pancreatic structure"
+   },
+   "NCIt": {
+    "system": "NCIt",
+    "code": "C12393",
+    "display": "Pancreas"
+   }
+  },
+  "Organ::Liver": {
+   "SNOMED CT": {
+    "system": "SNOMED CT",
+    "code": "10200004",
+    "display": "Liver structure"
+   },
+   "NCIt": {
+    "system": "NCIt",
+    "code": "C12392",
+    "display": "Liver"
+   }
+  },
+  "AnatomicSite::Head of pancreas": {
+   "SNOMED CT": {
+    "system": "SNOMED CT",
+    "code": "362201006",
+    "display": "Entire head of pancreas"
+   }
+  },
+  "AnatomicSite::Body of pancreas": {
+   "SNOMED CT": {
+    "system": "SNOMED CT",
+    "code": "40133006",
+    "display": "Structure of body of pancreas"
+   }
+  },
+  "AnatomicSite::Tail of pancreas": {
+   "SNOMED CT": {
+    "system": "SNOMED CT",
+    "code": "73239005",
+    "display": "Structure of tail of pancreas"
+   }
+  },
+  "Lesion::Pancreatic tumor": {
+   "SNOMED CT": {
+    "system": "SNOMED CT",
+    "code": "372003004",
+    "display": "Primary malignant neoplasm of pancreas"
+   },
+   "NCIt": {
+    "system": "NCIt",
+    "code": "C3305",
+    "display": "Pancreatic Neoplasm"
+   }
+  },
+  "Lesion::Liver tumor": {
+   "SNOMED CT": {
+    "system": "SNOMED CT",
+    "code": "93870000",
+    "display": "Malignant neoplasm of liver"
+   },
+   "NCIt": {
+    "system": "NCIt",
+    "code": "C3099",
+    "display": "Hepatocellular Carcinoma"
+   }
+  },
+  "Observation::Tumor diameter": {
+   "SNOMED CT": {
+    "system": "SNOMED CT",
+    "code": "263605001",
+    "display": "Tumor size"
+   }
+  },
+  "Observation::Tumor volume": {
+   "SNOMED CT": {
+    "system": "SNOMED CT",
+    "code": "258261001",
+    "display": "Tumour volume"
+   }
+  },
+  "Observation::Tumor burden": {
+   "NCIt": {
+    "system": "NCIt",
+    "code": "C28384",
+    "display": "Tumor Burden"
+   }
+  },
+  "Observation::Lesion multiplicity": {},
+  "Observation::Organ containment": {},
+  "Observation::Cross-organ extension": {
+   "SNOMED CT": {
+    "system": "SNOMED CT",
+    "code": "409771002",
+    "display": "Tumour invasion by direct extension from organ of origin to adjacent organ"
+   }
+  },
+  "Organ::Spleen": {
+   "SNOMED CT": {
+    "system": "SNOMED CT",
+    "code": "78961009",
+    "display": "Splenic structure"
+   },
+   "NCIt": {
+    "system": "NCIt",
+    "code": "C12432",
+    "display": "Spleen"
+   }
+  },
+  "Organ::Right kidney": {
+   "SNOMED CT": {
+    "system": "SNOMED CT",
+    "code": "9846003",
+    "display": "Right kidney structure"
+   }
+  },
+  "Organ::Left kidney": {
+   "SNOMED CT": {
+    "system": "SNOMED CT",
+    "code": "18639004",
+    "display": "Left kidney structure"
+   }
+  },
+  "Organ::Kidney": {
+   "SNOMED CT": {
+    "system": "SNOMED CT",
+    "code": "64033007",
+    "display": "Kidney structure"
+   },
+   "NCIt": {
+    "system": "NCIt",
+    "code": "C12415",
+    "display": "Kidney"
+   }
+  },
+  "Lesion::Renal tumor": {
+   "SNOMED CT": {
+    "system": "SNOMED CT",
+    "code": "126880001",
+    "display": "Neoplasm of kidney"
+   },
+   "NCIt": {
+    "system": "NCIt",
+    "code": "C3150",
+    "display": "Kidney Neoplasm"
+   }
+  }
+ },
+ "stats": {
+  "concepts": 18,
+  "codes": 23,
+  "by_system": {
+   "SNOMED CT": 15,
+   "NCIt": 8
+  },
+  "note": "2026-09-15: supplemental FLARE organs (spleen, right/left kidney, side-agnostic kidney) and the renal-tumor lesion concept (SNOMED CT 126880001 / NCIt C3150, verified by lookup) merged into this file, which is now the single source read by kg_build_graph.py. Table 5 groups: anatomical structures + sub-sites 8/8 (liver, pancreas, spleen, right/left kidney, 3 pancreatic sub-sites; the pooled 'Organ::Kidney' is the retrieval unit, not an additional structure), lesion types 3/3, categorical phenotype nodes 2/4 (burden, cross-organ extension coded; multiplicity, containment local; tumor diameter/volume are literals, not nodes) = 13/15."
+ }
+}

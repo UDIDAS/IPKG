@@ -1,0 +1,113 @@
+{
+ "pool_size": 1425,
+ "universe": [
+  "liver",
+  "spleen",
+  "pancreas",
+  "kidney"
+ ],
+ "queries": [
+  {
+   "title": "Pancreas -> FLARE23, contained tumor",
+   "query": "pancreas_041",
+   "query_phenotype": {
+    "burden_cat": "medium",
+    "multiplicity": "solitary",
+    "containment": "contained",
+    "anatomic_location": "tail"
+   },
+   "proposed": {
+    "first_flare23_rank": 40,
+    "first_relevant_flare23_rank": 40,
+    "rank_within_flare23_only": 1,
+    "single_organ_candidates_above": 39,
+    "n_relevant_flare23_candidates": 118,
+    "n_ranked": 1366
+   },
+   "coverage_blind": {
+    "first_flare23_rank": 53,
+    "first_relevant_flare23_rank": 53,
+    "rank_within_flare23_only": 1,
+    "single_organ_candidates_above": 52,
+    "n_relevant_flare23_candidates": 118,
+    "n_ranked": 1424
+   },
+   "imputed_absent": {
+    "first_flare23_rank": 3,
+    "first_relevant_flare23_rank": 3,
+    "rank_within_flare23_only": 1,
+    "single_organ_candidates_above": 2,
+    "n_relevant_flare23_candidates": 118,
+    "n_ranked": 1424
+   }
+  },
+  {
+   "title": "LiTS -> FLARE23, multifocal liver",
+   "query": "volume-101",
+   "query_phenotype": {
+    "burden_cat": "high",
+    "multiplicity": "multifocal",
+    "containment": "boundary",
+    "anatomic_location": "body"
+   },
+   "proposed": {
+    "first_flare23_rank": 16,
+    "first_relevant_flare23_rank": 16,
+    "rank_within_flare23_only": 1,
+    "single_organ_candidates_above": 15,
+    "n_relevant_flare23_candidates": 52,
+    "n_ranked": 1331
+   },
+   "coverage_blind": {
+    "first_flare23_rank": 20,
+    "first_relevant_flare23_rank": 20,
+    "rank_within_flare23_only": 1,
+    "single_organ_candidates_above": 19,
+    "n_relevant_flare23_candidates": 52,
+    "n_ranked": 1424
+   },
+   "imputed_absent": {
+    "first_flare23_rank": 5,
+    "first_relevant_flare23_rank": 5,
+    "rank_within_flare23_only": 1,
+    "single_organ_candidates_above": 4,
+    "n_relevant_flare23_candidates": 52,
+    "n_ranked": 1424
+   }
+  },
+  {
+   "title": "Pancreas -> FLARE23, high burden",
+   "query": "pancreas_015",
+   "query_phenotype": {
+    "burden_cat": "high",
+    "multiplicity": "solitary",
+    "containment": "boundary",
+    "anatomic_location": "body"
+   },
+   "proposed": {
+    "first_flare23_rank": 45,
+    "first_relevant_flare23_rank": 45,
+    "rank_within_flare23_only": 1,
+    "single_organ_candidates_above": 44,
+    "n_relevant_flare23_candidates": 27,
+    "n_ranked": 1366
+   },
+   "coverage_blind": {
+    "first_flare23_rank": 53,
+    "first_relevant_flare23_rank": 53,
+    "rank_within_flare23_only": 1,
+    "single_organ_candidates_above": 52,
+    "n_relevant_flare23_candidates": 27,
+    "n_ranked": 1424
+   },
+   "imputed_absent": {
+    "first_flare23_rank": 17,
+    "first_relevant_flare23_rank": 17,
+    "rank_within_flare23_only": 1,
+    "single_organ_candidates_above": 16,
+    "n_relevant_flare23_candidates": 27,
+    "n_ranked": 1424
+   }
+  }
+ ]
+}

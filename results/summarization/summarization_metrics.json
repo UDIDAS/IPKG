@@ -1,0 +1,33 @@
+{
+  "n_patients": 113,
+  "per_type_statement_precision": {
+    "present": {
+      "precision": 1.0,
+      "n": 113
+    },
+    "has_tumor": {
+      "precision": 0.965,
+      "n": 113
+    },
+    "burden_cat": {
+      "precision": 0.954,
+      "n": 109
+    },
+    "multiplicity": {
+      "precision": 0.927,
+      "n": 109
+    },
+    "containment": {
+      "precision": 0.844,
+      "n": 109
+    },
+    "anatomic_location": {
+      "precision": 0.945,
+      "n": 109
+    }
+  },
+  "overall_statement_precision": 0.94,
+  "tumor_presence_statement_precision": 0.965,
+  "unobserved_organ_discipline": "1.000 by construction \u2014 the summarizer asserts only over observed organs, so no unobserved organ is over-claimed; 0 GT-observed organs the pipeline missed are correctly left 'not assessed'.",
+  "note": "Deterministic structured-summary statements (present/has_tumor/burden/multiplicity/containment/location) scored vs GT phenotype of the same patient. Volume accuracy is reported separately (node fidelity, MAPE)."
+}

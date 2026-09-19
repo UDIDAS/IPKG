@@ -1,0 +1,3048 @@
+{
+ "note": "LiTS real volumes (gating item 5 / queue item 1): recover per-case geometry for the LiTS\ncases from MSD Task03_Liver (the public LiTS release WITH NIfTI headers), then rebuild the\nLiTS corpora with physical volumes.\n\nThe shipped LiTS data are 256x256 .npy volumes with NO headers (pseudo-volumes, 1 mm iso\nassumed) and are LIVER-SLAB CROPS: every npy slice contains liver, so npy z-extent < native\nz-extent. The mapping volume-N -> liver_M is recovered from LABELS alone:\n\n  the npy per-slice liver-area profile is slid (both z-directions) over the native Task03\n  per-slice profile; a match requires correlation >= 0.999 at the best offset AND the\n  in-window area scale ~ (X/256)*(Y/256) (= 4 for 512x512 natives, tolerance 3.4-4.6).\n  The numbering turned out to be IDENTITY (volume-N = liver_N), so identity is tested first\n  (accepted at correlation >= 0.9995) and a full search over all 131 candidates (accepted\n  only with a >= 0.003 gap to the runner-up) is the fallback. Offset and z-flip per case are\n  recorded.\n\nCross-check: the dedup-audit anchor FLARE23_0102 = liver_64 \u2014 the staged predicted FLARE23\nmask header (shape/spacing) is compared against liver_64's header, and the volume-N that maps\nto liver_64 is reported.",
+ "n_mapped": 131,
+ "n_ambiguous": 0,
+ "mapping": {
+  "volume-0": {
+   "liver": "liver_0",
+   "corr": 0.999994,
+   "z_flipped": false,
+   "slab_offset": 45,
+   "area_scale": 3.959,
+   "shape_native": [
+    512,
+    512,
+    75
+   ],
+   "spacing": [
+    0.703125,
+    0.703125,
+    5.0
+   ],
+   "npy_slices": 28,
+   "gt_liver_vox_native": 550036,
+   "gt_liver_union_vox_native": 552627,
+   "gt_tumor_vox_native": 2591,
+   "npy_liver_vox": 138634,
+   "npy_tumor_vox": 704
+  },
+  "volume-1": {
+   "liver": "liver_1",
+   "corr": 0.999995,
+   "z_flipped": false,
+   "slab_offset": 45,
+   "area_scale": 3.962,
+   "shape_native": [
+    512,
+    512,
+    123
+   ],
+   "spacing": [
+    0.6757810115814209,
+    0.6757810115814209,
+    5.0
+   ],
+   "npy_slices": 28,
+   "gt_liver_vox_native": 643779,
+   "gt_liver_union_vox_native": 650973,
+   "gt_tumor_vox_native": 7194,
+   "npy_liver_vox": 162340,
+   "npy_tumor_vox": 1840
+  },
+  "volume-10": {
+   "liver": "liver_10",
+   "corr": 0.999992,
+   "z_flipped": false,
+   "slab_offset": 295,
+   "area_scale": 3.963,
+   "shape_native": [
+    512,
+    512,
+    501
+   ],
+   "spacing": [
+    0.76953125,
+    0.76953125,
+    1.0
+   ],
+   "npy_slices": 180,
+   "gt_liver_vox_native": 2857366,
+   "gt_liver_union_vox_native": 2881676,
+   "gt_tumor_vox_native": 24310,
+   "npy_liver_vox": 720865,
+   "npy_tumor_vox": 6391
+  },
+  "volume-100": {
+   "liver": "liver_100",
+   "corr": 0.999994,
+   "z_flipped": false,
+   "slab_offset": 387,
+   "area_scale": 3.963,
+   "shape_native": [
+    512,
+    512,
+    685
+   ],
+   "spacing": [
+    0.6992188096046448,
+    0.6992188096046448,
+    0.6999999284744263
+   ],
+   "npy_slices": 275,
+   "gt_liver_vox_native": 5003071,
+   "gt_liver_union_vox_native": 6572760,
+   "gt_tumor_vox_native": 1569689,
+   "npy_liver_vox": 1261034,
+   "npy_tumor_vox": 395541
+  },
+  "volume-101": {
+   "liver": "liver_101",
+   "corr": 0.999996,
+   "z_flipped": false,
+   "slab_offset": 387,
+   "area_scale": 3.963,
+   "shape_native": [
+    512,
+    512,
+    683
+   ],
+   "spacing": [
+    0.705078125,
+    0.705078125,
+    0.699999988079071
+   ],
+   "npy_slices": 258,
+   "gt_liver_vox_native": 6481591,
+   "gt_liver_union_vox_native": 6860030,
+   "gt_tumor_vox_native": 378439,
+   "npy_liver_vox": 1632126,
+   "npy_tumor_vox": 97346
+  },
+  "volume-102": {
+   "liver": "liver_102",
+   "corr": 0.999998,
+   "z_flipped": false,
+   "slab_offset": 322,
+   "area_scale": 3.954,
+   "shape_native": [
+    512,
+    512,
+    677
+   ],
+   "spacing": [
+    0.716796875,
+    0.716796875,
+    0.6999852061271667
+   ],
+   "npy_slices": 312,
+   "gt_liver_vox_native": 5061264,
+   "gt_liver_union_vox_native": 5109018,
+   "gt_tumor_vox_native": 47754,
+   "npy_liver_vox": 1275420,
+   "npy_tumor_vox": 12232
+  },
+  "volume-103": {
+   "liver": "liver_103",
+   "corr": 0.999996,
+   "z_flipped": false,
+   "slab_offset": 422,
+   "area_scale": 3.956,
+   "shape_native": [
+    512,
+    512,
+    683
+   ],
+   "spacing": [
+    0.8554688096046448,
+    0.8554688096046448,
+    0.699999988079071
+   ],
+   "npy_slices": 213,
+   "gt_liver_vox_native": 2374639,
+   "gt_liver_union_vox_native": 2450426,
+   "gt_tumor_vox_native": 75787,
+   "npy_liver_vox": 599705,
+   "npy_tumor_vox": 19436
+  },
+  "volume-104": {
+   "liver": "liver_104",
+   "corr": 0.999986,
+   "z_flipped": false,
+   "slab_offset": 273,
+   "area_scale": 3.951,
+   "shape_native": [
+    512,
+    512,
+    781
+   ],
+   "spacing": [
+    0.781000018119812,
+    0.781000018119812,
+    0.800000011920929
+   ],
+   "npy_slices": 193,
+   "gt_liver_vox_native": 2951625,
+   "gt_liver_union_vox_native": 3227543,
+   "gt_tumor_vox_native": 275918,
+   "npy_liver_vox": 746320,
+   "npy_tumor_vox": 69679
+  },
+  "volume-105": {
+   "liver": "liver_105",
+   "corr": 0.999996,
+   "z_flipped": false,
+   "slab_offset": 387,
+   "area_scale": 3.959,
+   "shape_native": [
+    512,
+    512,
+    986
+   ],
+   "spacing": [
+    0.84375,
+    0.84375,
+    0.699999988079071
+   ],
+   "npy_slices": 238,
+   "gt_liver_vox_native": 3520581,
+   "gt_liver_union_vox_native": 3520581,
+   "gt_tumor_vox_native": 0,
+   "npy_liver_vox": 888450,
+   "npy_tumor_vox": 0
+  },
+  "volume-106": {
+   "liver": "liver_106",
+   "corr": 0.999996,
+   "z_flipped": false,
+   "slab_offset": 326,
+   "area_scale": 3.958,
+   "shape_native": [
+    512,
+    512,
+    771
+   ],
+   "spacing": [
+    0.7289999723434448,
+    0.7289999723434448,
+    0.800000011920929
+   ],
+   "npy_slices": 167,
+   "gt_liver_vox_native": 2312280,
+   "gt_liver_union_vox_native": 2312280,
+   "gt_tumor_vox_native": 0,
+   "npy_liver_vox": 583825,
+   "npy_tumor_vox": 0
+  },
+  "volume-107": {
+   "liver": "liver_107",
+   "corr": 0.999996,
+   "z_flipped": false,
+   "slab_offset": 266,
+   "area_scale": 3.958,
+   "shape_native": [
+    512,
+    512,
+    771
+   ],
+   "spacing": [
+    0.7820000052452087,
+    0.7820000052452087,
+    0.800000011920929
+   ],
+   "npy_slices": 247,
+   "gt_liver_vox_native": 3140434,
+   "gt_liver_union_vox_native": 3146387,
+   "gt_tumor_vox_native": 5953,
+   "npy_liver_vox": 792526,
+   "npy_tumor_vox": 1625
+  },
+  "volume-108": {
+   "liver": "liver_108",
+   "corr": 0.999995,
+   "z_flipped": false,
+   "slab_offset": 412,
+   "area_scale": 3.961,
+   "shape_native": [
+    512,
+    512,
+    856
+   ],
+   "spacing": [
+    0.7289999723434448,
+    0.7289999723434448,
+    0.800000011920929
+   ],
+   "npy_slices": 204,
+   "gt_liver_vox_native": 3402280,
+   "gt_liver_union_vox_native": 4857313,
+   "gt_tumor_vox_native": 1455033,
+   "npy_liver_vox": 850473,
+   "npy_tumor_vox": 375065
+  },
+  "volume-109": {
+   "liver": "liver_109",
+   "corr": 0.999998,
+   "z_flipped": false,
+   "slab_offset": 288,
+   "area_scale": 3.962,
+   "shape_native": [
+    512,
+    512,
+    756
+   ],
+   "spacing": [
+    0.7630000114440918,
+    0.7630000114440918,
+    0.800000011920929
+   ],
+   "npy_slices": 193,
+   "gt_liver_vox_native": 3120254,
+   "gt_liver_union_vox_native": 3193076,
+   "gt_tumor_vox_native": 72822,
+   "npy_liver_vox": 786772,
+   "npy_tumor_vox": 19095
+  },
+  "volume-11": {
+   "liver": "liver_11",
+   "corr": 0.999997,
+   "z_flipped": false,
+   "slab_offset": 272,
+   "area_scale": 3.96,
+   "shape_native": [
+    512,
+    512,
+    466
+   ],
+   "spacing": [
+    0.671875,
+    0.671875,
+    1.0
+   ],
+   "npy_slices": 166,
+   "gt_liver_vox_native": 3253446,
+   "gt_liver_union_vox_native": 3263995,
+   "gt_tumor_vox_native": 10549,
+   "npy_liver_vox": 821333,
+   "npy_tumor_vox": 2831
+  },
+  "volume-110": {
+   "liver": "liver_110",
+   "corr": 0.999995,
+   "z_flipped": false,
+   "slab_offset": 344,
+   "area_scale": 3.958,
+   "shape_native": [
+    512,
+    512,
+    816
+   ],
+   "spacing": [
+    0.7200000286102295,
+    0.7200000286102295,
+    0.800000011920929
+   ],
+   "npy_slices": 188,
+   "gt_liver_vox_native": 3097843,
+   "gt_liver_union_vox_native": 3222249,
+   "gt_tumor_vox_native": 124406,
+   "npy_liver_vox": 780804,
+   "npy_tumor_vox": 32307
+  },
+  "volume-111": {
+   "liver": "liver_111",
+   "corr": 0.999997,
+   "z_flipped": false,
+   "slab_offset": 231,
+   "area_scale": 3.96,
+   "shape_native": [
+    512,
+    512,
+    761
+   ],
+   "spacing": [
+    0.7820000052452087,
+    0.7820000052452087,
+    0.800000011920929
+   ],
+   "npy_slices": 232,
+   "gt_liver_vox_native": 4599573,
+   "gt_liver_union_vox_native": 4606873,
+   "gt_tumor_vox_native": 7300,
+   "npy_liver_vox": 1160094,
+   "npy_tumor_vox": 1983
+  },
+  "volume-112": {
+   "liver": "liver_112",
+   "corr": 0.999999,
+   "z_flipped": false,
+   "slab_offset": 291,
+   "area_scale": 3.962,
+   "shape_native": [
+    512,
+    512,
+    751
+   ],
+   "spacing": [
+    0.6399999856948853,
+    0.6399999856948853,
+    0.800000011920929
+   ],
+   "npy_slices": 190,
+   "gt_liver_vox_native": 3976313,
+   "gt_liver_union_vox_native": 3977494,
+   "gt_tumor_vox_native": 1181,
+   "npy_liver_vox": 1002385,
+   "npy_tumor_vox": 328
+  },
+  "volume-113": {
+   "liver": "liver_113",
+   "corr": 0.999995,
+   "z_flipped": false,
+   "slab_offset": 409,
+   "area_scale": 3.963,
+   "shape_native": [
+    512,
+    512,
+    836
+   ],
+   "spacing": [
+    0.781000018119812,
+    0.781000018119812,
+    0.800000011920929
+   ],
+   "npy_slices": 169,
+   "gt_liver_vox_native": 3286066,
+   "gt_liver_union_vox_native": 3370336,
+   "gt_tumor_vox_native": 84270,
+   "npy_liver_vox": 828020,
+   "npy_tumor_vox": 21776
+  },
+  "volume-114": {
+   "liver": "liver_114",
+   "corr": 0.999996,
+   "z_flipped": false,
+   "slab_offset": 364,
+   "area_scale": 3.96,
+   "shape_native": [
+    512,
+    512,
+    846
+   ],
+   "spacing": [
+    0.7820000052452087,
+    0.7820000052452087,
+    0.800000011920929
+   ],
+   "npy_slices": 214,
+   "gt_liver_vox_native": 3696170,
+   "gt_liver_union_vox_native": 3696170,
+   "gt_tumor_vox_native": 0,
+   "npy_liver_vox": 932500,
+   "npy_tumor_vox": 0
+  },
+  "volume-115": {
+   "liver": "liver_115",
+   "corr": 0.999996,
+   "z_flipped": false,
+   "slab_offset": 411,
+   "area_scale": 3.956,
+   "shape_native": [
+    512,
+    512,
+    846
+   ],
+   "spacing": [
+    0.7559999823570251,
+    0.7559999823570251,
+    0.800000011920929
+   ],
+   "npy_slices": 185,
+   "gt_liver_vox_native": 3309518,
+   "gt_liver_union_vox_native": 3309518,
+   "gt_tumor_vox_native": 0,
+   "npy_liver_vox": 835428,
+   "npy_tumor_vox": 0
+  },
+  "volume-116": {
+   "liver": "liver_116",
+   "corr": 0.999997,
+   "z_flipped": false,
+   "slab_offset": 447,
+   "area_scale": 3.96,
+   "shape_native": [
+    512,
+    512,
+    908
+   ],
+   "spacing": [
+    0.7890625,
+    0.7890625,
+    0.699999988079071
+   ],
+   "npy_slices": 218,
+   "gt_liver_vox_native": 3649978,
+   "gt_liver_union_vox_native": 4261110,
+   "gt_tumor_vox_native": 611132,
+   "npy_liver_vox": 920618,
+   "npy_tumor_vox": 154250
+  },
+  "volume-117": {
+   "liver": "liver_117",
+   "corr": 0.999998,
+   "z_flipped": false,
+   "slab_offset": 278,
+   "area_scale": 3.96,
+   "shape_native": [
+    512,
+    512,
+    836
+   ],
+   "spacing": [
+    0.6800000071525574,
+    0.6800000071525574,
+    0.800000011920929
+   ],
+   "npy_slices": 259,
+   "gt_liver_vox_native": 4009641,
+   "gt_liver_union_vox_native": 5043733,
+   "gt_tumor_vox_native": 1034092,
+   "npy_liver_vox": 1008451,
+   "npy_tumor_vox": 264150
+  },
+  "volume-118": {
+   "liver": "liver_118",
+   "corr": 0.999997,
+   "z_flipped": false,
+   "slab_offset": 196,
+   "area_scale": 3.966,
+   "shape_native": [
+    512,
+    512,
+    427
+   ],
+   "spacing": [
+    0.744140625,
+    0.744140625,
+    1.5
+   ],
+   "npy_slices": 121,
+   "gt_liver_vox_native": 2138650,
+   "gt_liver_union_vox_native": 2557769,
+   "gt_tumor_vox_native": 419119,
+   "npy_liver_vox": 538214,
+   "npy_tumor_vox": 106185
+  },
+  "volume-119": {
+   "liver": "liver_119",
+   "corr": 0.999996,
+   "z_flipped": false,
+   "slab_offset": 201,
+   "area_scale": 3.959,
+   "shape_native": [
+    512,
+    512,
+    461
+   ],
+   "spacing": [
+    0.84375,
+    0.84375,
+    1.5
+   ],
+   "npy_slices": 131,
+   "gt_liver_vox_native": 2360092,
+   "gt_liver_union_vox_native": 2360092,
+   "gt_tumor_vox_native": 0,
+   "npy_liver_vox": 595190,
+   "npy_tumor_vox": 0
+  },
+  "volume-12": {
+   "liver": "liver_12",
+   "corr": 0.999998,
+   "z_flipped": false,
+   "slab_offset": 265,
+   "area_scale": 3.971,
+   "shape_native": [
+    512,
+    512,
+    455
+   ],
+   "spacing": [
+    0.654296875,
+    0.654296875,
+    1.0
+   ],
+   "npy_slices": 188,
+   "gt_liver_vox_native": 4205057,
+   "gt_liver_union_vox_native": 4205847,
+   "gt_tumor_vox_native": 790,
+   "npy_liver_vox": 1058620,
+   "npy_tumor_vox": 214
+  },
+  "volume-120": {
+   "liver": "liver_120",
+   "corr": 0.999995,
+   "z_flipped": false,
+   "slab_offset": 153,
+   "area_scale": 3.954,
+   "shape_native": [
+    512,
+    512,
+    424
+   ],
+   "spacing": [
+    0.744140625,
+    0.744140625,
+    1.5
+   ],
+   "npy_slices": 119,
+   "gt_liver_vox_native": 1910010,
+   "gt_liver_union_vox_native": 1915241,
+   "gt_tumor_vox_native": 5231,
+   "npy_liver_vox": 482398,
+   "npy_tumor_vox": 1390
+  },
+  "volume-121": {
+   "liver": "liver_121",
+   "corr": 0.999996,
+   "z_flipped": false,
+   "slab_offset": 204,
+   "area_scale": 3.96,
+   "shape_native": [
+    512,
+    512,
+    463
+   ],
+   "spacing": [
+    0.794921875,
+    0.794921875,
+    1.5
+   ],
+   "npy_slices": 112,
+   "gt_liver_vox_native": 1905575,
+   "gt_liver_union_vox_native": 1907698,
+   "gt_tumor_vox_native": 2123,
+   "npy_liver_vox": 481065,
+   "npy_tumor_vox": 571
+  },
+  "volume-122": {
+   "liver": "liver_122",
+   "corr": 0.999997,
+   "z_flipped": false,
+   "slab_offset": 156,
+   "area_scale": 3.954,
+   "shape_native": [
+    512,
+    512,
+    422
+   ],
+   "spacing": [
+    0.689453125,
+    0.689453125,
+    1.5
+   ],
+   "npy_slices": 117,
+   "gt_liver_vox_native": 1775382,
+   "gt_liver_union_vox_native": 1855185,
+   "gt_tumor_vox_native": 79803,
+   "npy_liver_vox": 448163,
+   "npy_tumor_vox": 20542
+  },
+  "volume-123": {
+   "liver": "liver_123",
+   "corr": 0.999995,
+   "z_flipped": false,
+   "slab_offset": 185,
+   "area_scale": 3.97,
+   "shape_native": [
+    512,
+    512,
+    432
+   ],
+   "spacing": [
+    0.748046875,
+    0.748046875,
+    1.5
+   ],
+   "npy_slices": 114,
+   "gt_liver_vox_native": 2662589,
+   "gt_liver_union_vox_native": 2890840,
+   "gt_tumor_vox_native": 228251,
+   "npy_liver_vox": 670093,
+   "npy_tumor_vox": 58422
+  },
+  "volume-124": {
+   "liver": "liver_124",
+   "corr": 0.999995,
+   "z_flipped": false,
+   "slab_offset": 165,
+   "area_scale": 3.954,
+   "shape_native": [
+    512,
+    512,
+    407
+   ],
+   "spacing": [
+    0.6992188096046448,
+    0.6992188096046448,
+    1.5
+   ],
+   "npy_slices": 111,
+   "gt_liver_vox_native": 1423640,
+   "gt_liver_union_vox_native": 1495732,
+   "gt_tumor_vox_native": 72092,
+   "npy_liver_vox": 359314,
+   "npy_tumor_vox": 18512
+  },
+  "volume-125": {
+   "liver": "liver_125",
+   "corr": 0.999994,
+   "z_flipped": false,
+   "slab_offset": 163,
+   "area_scale": 3.964,
+   "shape_native": [
+    512,
+    512,
+    410
+   ],
+   "spacing": [
+    0.712890625,
+    0.712890625,
+    1.5
+   ],
+   "npy_slices": 111,
+   "gt_liver_vox_native": 2126819,
+   "gt_liver_union_vox_native": 2127573,
+   "gt_tumor_vox_native": 754,
+   "npy_liver_vox": 536176,
+   "npy_tumor_vox": 206
+  },
+  "volume-126": {
+   "liver": "liver_126",
+   "corr": 0.999995,
+   "z_flipped": false,
+   "slab_offset": 176,
+   "area_scale": 3.967,
+   "shape_native": [
+    512,
+    512,
+    401
+   ],
+   "spacing": [
+    0.6640625,
+    0.6640625,
+    1.5
+   ],
+   "npy_slices": 112,
+   "gt_liver_vox_native": 2658803,
+   "gt_liver_union_vox_native": 2663893,
+   "gt_tumor_vox_native": 5090,
+   "npy_liver_vox": 669960,
+   "npy_tumor_vox": 1289
+  },
+  "volume-127": {
+   "liver": "liver_127",
+   "corr": 0.999996,
+   "z_flipped": false,
+   "slab_offset": 477,
+   "area_scale": 3.965,
+   "shape_native": [
+    512,
+    512,
+    987
+   ],
+   "spacing": [
+    0.771484375,
+    0.771484375,
+    0.699999988079071
+   ],
+   "npy_slices": 226,
+   "gt_liver_vox_native": 3915126,
+   "gt_liver_union_vox_native": 3915424,
+   "gt_tumor_vox_native": 298,
+   "npy_liver_vox": 987054,
+   "npy_tumor_vox": 80
+  },
+  "volume-128": {
+   "liver": "liver_128",
+   "corr": 0.999996,
+   "z_flipped": false,
+   "slab_offset": 300,
+   "area_scale": 3.957,
+   "shape_native": [
+    512,
+    512,
+    654
+   ],
+   "spacing": [
+    0.78125,
+    0.78125,
+    0.699999988079071
+   ],
+   "npy_slices": 291,
+   "gt_liver_vox_native": 5218227,
+   "gt_liver_union_vox_native": 5544780,
+   "gt_tumor_vox_native": 326553,
+   "npy_liver_vox": 1314499,
+   "npy_tumor_vox": 84118
+  },
+  "volume-129": {
+   "liver": "liver_129",
+   "corr": 0.999996,
+   "z_flipped": false,
+   "slab_offset": 37,
+   "area_scale": 3.971,
+   "shape_native": [
+    512,
+    512,
+    338
+   ],
+   "spacing": [
+    0.705078125,
+    0.705078125,
+    0.699999988079071
+   ],
+   "npy_slices": 276,
+   "gt_liver_vox_native": 7623450,
+   "gt_liver_union_vox_native": 9533235,
+   "gt_tumor_vox_native": 1909785,
+   "npy_liver_vox": 1915932,
+   "npy_tumor_vox": 483921
+  },
+  "volume-13": {
+   "liver": "liver_13",
+   "corr": 0.999995,
+   "z_flipped": false,
+   "slab_offset": 273,
+   "area_scale": 3.95,
+   "shape_native": [
+    512,
+    512,
+    605
+   ],
+   "spacing": [
+    0.84765625,
+    0.84765625,
+    1.0
+   ],
+   "npy_slices": 140,
+   "gt_liver_vox_native": 1876901,
+   "gt_liver_union_vox_native": 1900552,
+   "gt_tumor_vox_native": 23651,
+   "npy_liver_vox": 473760,
+   "npy_tumor_vox": 6269
+  },
+  "volume-130": {
+   "liver": "liver_130",
+   "corr": 0.999996,
+   "z_flipped": false,
+   "slab_offset": 336,
+   "area_scale": 3.958,
+   "shape_native": [
+    512,
+    512,
+    624
+   ],
+   "spacing": [
+    0.6835938096046448,
+    0.6835938096046448,
+    0.699999988079071
+   ],
+   "npy_slices": 240,
+   "gt_liver_vox_native": 3878659,
+   "gt_liver_union_vox_native": 5262351,
+   "gt_tumor_vox_native": 1383692,
+   "npy_liver_vox": 981545,
+   "npy_tumor_vox": 346214
+  },
+  "volume-14": {
+   "liver": "liver_14",
+   "corr": 0.999996,
+   "z_flipped": false,
+   "slab_offset": 260,
+   "area_scale": 3.965,
+   "shape_native": [
+    512,
+    512,
+    588
+   ],
+   "spacing": [
+    0.685546875,
+    0.685546875,
+    1.0
+   ],
+   "npy_slices": 138,
+   "gt_liver_vox_native": 3041924,
+   "gt_liver_union_vox_native": 3044536,
+   "gt_tumor_vox_native": 2612,
+   "npy_liver_vox": 766459,
+   "npy_tumor_vox": 711
+  },
+  "volume-15": {
+   "liver": "liver_15",
+   "corr": 0.999995,
+   "z_flipped": false,
+   "slab_offset": 240,
+   "area_scale": 3.963,
+   "shape_native": [
+    512,
+    512,
+    565
+   ],
+   "spacing": [
+    0.654296875,
+    0.654296875,
+    1.0
+   ],
+   "npy_slices": 132,
+   "gt_liver_vox_native": 3236299,
+   "gt_liver_union_vox_native": 3237174,
+   "gt_tumor_vox_native": 875,
+   "npy_liver_vox": 815340,
+   "npy_tumor_vox": 243
+  },
+  "volume-16": {
+   "liver": "liver_16",
+   "corr": 0.999996,
+   "z_flipped": false,
+   "slab_offset": 267,
+   "area_scale": 3.958,
+   "shape_native": [
+    512,
+    512,
+    689
+   ],
+   "spacing": [
+    0.703125,
+    0.703125,
+    0.800000011920929
+   ],
+   "npy_slices": 186,
+   "gt_liver_vox_native": 3165361,
+   "gt_liver_union_vox_native": 3538483,
+   "gt_tumor_vox_native": 373122,
+   "npy_liver_vox": 796219,
+   "npy_tumor_vox": 96448
+  },
+  "volume-17": {
+   "liver": "liver_17",
+   "corr": 0.999994,
+   "z_flipped": false,
+   "slab_offset": 328,
+   "area_scale": 3.953,
+   "shape_native": [
+    512,
+    512,
+    826
+   ],
+   "spacing": [
+    0.7441409826278687,
+    0.7441409826278687,
+    0.800000011920929
+   ],
+   "npy_slices": 197,
+   "gt_liver_vox_native": 3582734,
+   "gt_liver_union_vox_native": 3620410,
+   "gt_tumor_vox_native": 37676,
+   "npy_liver_vox": 904928,
+   "npy_tumor_vox": 9818
+  },
+  "volume-18": {
+   "liver": "liver_18",
+   "corr": 0.999992,
+   "z_flipped": false,
+   "slab_offset": 354,
+   "area_scale": 3.946,
+   "shape_native": [
+    512,
+    512,
+    845
+   ],
+   "spacing": [
+    0.921875,
+    0.921875,
+    0.800000011920929
+   ],
+   "npy_slices": 188,
+   "gt_liver_vox_native": 1932415,
+   "gt_liver_union_vox_native": 1942625,
+   "gt_tumor_vox_native": 10210,
+   "npy_liver_vox": 489213,
+   "npy_tumor_vox": 2739
+  },
+  "volume-19": {
+   "liver": "liver_19",
+   "corr": 0.99999,
+   "z_flipped": false,
+   "slab_offset": 324,
+   "area_scale": 3.958,
+   "shape_native": [
+    512,
+    512,
+    547
+   ],
+   "spacing": [
+    0.751953125,
+    0.751953125,
+    0.7999879717826843
+   ],
+   "npy_slices": 187,
+   "gt_liver_vox_native": 3861552,
+   "gt_liver_union_vox_native": 3880080,
+   "gt_tumor_vox_native": 18528,
+   "npy_liver_vox": 973377,
+   "npy_tumor_vox": 5013
+  },
+  "volume-2": {
+   "liver": "liver_2",
+   "corr": 0.999995,
+   "z_flipped": false,
+   "slab_offset": 334,
+   "area_scale": 3.966,
+   "shape_native": [
+    512,
+    512,
+    517
+   ],
+   "spacing": [
+    0.775390625,
+    0.775390625,
+    1.0
+   ],
+   "npy_slices": 138,
+   "gt_liver_vox_native": 3186716,
+   "gt_liver_union_vox_native": 3200847,
+   "gt_tumor_vox_native": 14131,
+   "npy_liver_vox": 803361,
+   "npy_tumor_vox": 3654
+  },
+  "volume-20": {
+   "liver": "liver_20",
+   "corr": 0.999997,
+   "z_flipped": false,
+   "slab_offset": 354,
+   "area_scale": 3.966,
+   "shape_native": [
+    512,
+    512,
+    574
+   ],
+   "spacing": [
+    0.802734375,
+    0.802734375,
+    0.7999879717826843
+   ],
+   "npy_slices": 193,
+   "gt_liver_vox_native": 3655683,
+   "gt_liver_union_vox_native": 3657352,
+   "gt_tumor_vox_native": 1669,
+   "npy_liver_vox": 921037,
+   "npy_tumor_vox": 463
+  },
+  "volume-21": {
+   "liver": "liver_21",
+   "corr": 0.999997,
+   "z_flipped": false,
+   "slab_offset": 260,
+   "area_scale": 3.963,
+   "shape_native": [
+    512,
+    512,
+    437
+   ],
+   "spacing": [
+    0.767578125,
+    0.767578125,
+    1.0
+   ],
+   "npy_slices": 174,
+   "gt_liver_vox_native": 2988990,
+   "gt_liver_union_vox_native": 3025261,
+   "gt_tumor_vox_native": 36271,
+   "npy_liver_vox": 753119,
+   "npy_tumor_vox": 9511
+  },
+  "volume-22": {
+   "liver": "liver_22",
+   "corr": 0.999982,
+   "z_flipped": false,
+   "slab_offset": 103,
+   "area_scale": 3.951,
+   "shape_native": [
+    512,
+    512,
+    247
+   ],
+   "spacing": [
+    0.9765620231628418,
+    0.9765620231628418,
+    3.2699999809265137
+   ],
+   "npy_slices": 45,
+   "gt_liver_vox_native": 421735,
+   "gt_liver_union_vox_native": 431159,
+   "gt_tumor_vox_native": 9424,
+   "npy_liver_vox": 106600,
+   "npy_tumor_vox": 2454
+  },
+  "volume-23": {
+   "liver": "liver_23",
+   "corr": 0.999995,
+   "z_flipped": false,
+   "slab_offset": 262,
+   "area_scale": 3.965,
+   "shape_native": [
+    512,
+    512,
+    391
+   ],
+   "spacing": [
+    0.66015625,
+    0.66015625,
+    1.2000000476837158
+   ],
+   "npy_slices": 115,
+   "gt_liver_vox_native": 2351958,
+   "gt_liver_union_vox_native": 2394862,
+   "gt_tumor_vox_native": 42904,
+   "npy_liver_vox": 592471,
+   "npy_tumor_vox": 11100
+  },
+  "volume-24": {
+   "liver": "liver_24",
+   "corr": 0.999996,
+   "z_flipped": false,
+   "slab_offset": 141,
+   "area_scale": 3.967,
+   "shape_native": [
+    512,
+    512,
+    276
+   ],
+   "spacing": [
+    0.669921875,
+    0.669921875,
+    1.5
+   ],
+   "npy_slices": 117,
+   "gt_liver_vox_native": 2040878,
+   "gt_liver_union_vox_native": 2042300,
+   "gt_tumor_vox_native": 1422,
+   "npy_liver_vox": 514044,
+   "npy_tumor_vox": 382
+  },
+  "volume-25": {
+   "liver": "liver_25",
+   "corr": 0.999994,
+   "z_flipped": false,
+   "slab_offset": 341,
+   "area_scale": 3.95,
+   "shape_native": [
+    512,
+    512,
+    601
+   ],
+   "spacing": [
+    0.767578125,
+    0.767578125,
+    0.699999988079071
+   ],
+   "npy_slices": 231,
+   "gt_liver_vox_native": 3024759,
+   "gt_liver_union_vox_native": 3025213,
+   "gt_tumor_vox_native": 454,
+   "npy_liver_vox": 764490,
+   "npy_tumor_vox": 129
+  },
+  "volume-26": {
+   "liver": "liver_26",
+   "corr": 0.999993,
+   "z_flipped": false,
+   "slab_offset": 255,
+   "area_scale": 3.95,
+   "shape_native": [
+    512,
+    512,
+    668
+   ],
+   "spacing": [
+    0.86328125,
+    0.86328125,
+    0.699999988079071
+   ],
+   "npy_slices": 191,
+   "gt_liver_vox_native": 2286734,
+   "gt_liver_union_vox_native": 2338543,
+   "gt_tumor_vox_native": 51809,
+   "npy_liver_vox": 577588,
+   "npy_tumor_vox": 13359
+  },
+  "volume-27": {
+   "liver": "liver_27",
+   "corr": 0.999993,
+   "z_flipped": false,
+   "slab_offset": 331,
+   "area_scale": 3.951,
+   "shape_native": [
+    512,
+    512,
+    861
+   ],
+   "spacing": [
+    0.73828125,
+    0.73828125,
+    0.699999988079071
+   ],
+   "npy_slices": 228,
+   "gt_liver_vox_native": 3182992,
+   "gt_liver_union_vox_native": 3370735,
+   "gt_tumor_vox_native": 187743,
+   "npy_liver_vox": 802883,
+   "npy_tumor_vox": 49148
+  },
+  "volume-28": {
+   "liver": "liver_28",
+   "corr": 0.999997,
+   "z_flipped": false,
+   "slab_offset": 27,
+   "area_scale": 3.968,
+   "shape_native": [
+    512,
+    512,
+    129
+   ],
+   "spacing": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "npy_slices": 97,
+   "gt_liver_vox_native": 2650863,
+   "gt_liver_union_vox_native": 2865131,
+   "gt_tumor_vox_native": 214268,
+   "npy_liver_vox": 667011,
+   "npy_tumor_vox": 54304
+  },
+  "volume-29": {
+   "liver": "liver_29",
+   "corr": 0.999996,
+   "z_flipped": false,
+   "slab_offset": 44,
+   "area_scale": 3.959,
+   "shape_native": [
+    512,
+    512,
+    172
+   ],
+   "spacing": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "npy_slices": 113,
+   "gt_liver_vox_native": 1633962,
+   "gt_liver_union_vox_native": 1648024,
+   "gt_tumor_vox_native": 14062,
+   "npy_liver_vox": 412276,
+   "npy_tumor_vox": 3508
+  },
+  "volume-3": {
+   "liver": "liver_3",
+   "corr": 0.999994,
+   "z_flipped": false,
+   "slab_offset": 303,
+   "area_scale": 3.956,
+   "shape_native": [
+    512,
+    512,
+    534
+   ],
+   "spacing": [
+    0.693359375,
+    0.693359375,
+    1.0
+   ],
+   "npy_slices": 168,
+   "gt_liver_vox_native": 3243946,
+   "gt_liver_union_vox_native": 3246739,
+   "gt_tumor_vox_native": 2793,
+   "npy_liver_vox": 819243,
+   "npy_tumor_vox": 728
+  },
+  "volume-30": {
+   "liver": "liver_30",
+   "corr": 0.999998,
+   "z_flipped": false,
+   "slab_offset": 60,
+   "area_scale": 3.967,
+   "shape_native": [
+    512,
+    512,
+    200
+   ],
+   "spacing": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "npy_slices": 122,
+   "gt_liver_vox_native": 2360827,
+   "gt_liver_union_vox_native": 2375079,
+   "gt_tumor_vox_native": 14252,
+   "npy_liver_vox": 594705,
+   "npy_tumor_vox": 3670
+  },
+  "volume-31": {
+   "liver": "liver_31",
+   "corr": 0.999996,
+   "z_flipped": false,
+   "slab_offset": 19,
+   "area_scale": 3.953,
+   "shape_native": [
+    512,
+    512,
+    91
+   ],
+   "spacing": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "npy_slices": 66,
+   "gt_liver_vox_native": 1125696,
+   "gt_liver_union_vox_native": 1132432,
+   "gt_tumor_vox_native": 6736,
+   "npy_liver_vox": 284053,
+   "npy_tumor_vox": 1822
+  },
+  "volume-32": {
+   "liver": "liver_32",
+   "corr": 0.999998,
+   "z_flipped": false,
+   "slab_offset": 19,
+   "area_scale": 3.963,
+   "shape_native": [
+    512,
+    512,
+    139
+   ],
+   "spacing": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "npy_slices": 118,
+   "gt_liver_vox_native": 2124505,
+   "gt_liver_union_vox_native": 2124505,
+   "gt_tumor_vox_native": 0,
+   "npy_liver_vox": 535704,
+   "npy_tumor_vox": 0
+  },
+  "volume-33": {
+   "liver": "liver_33",
+   "corr": 0.999997,
+   "z_flipped": false,
+   "slab_offset": 37,
+   "area_scale": 3.967,
+   "shape_native": [
+    512,
+    512,
+    135
+   ],
+   "spacing": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "npy_slices": 95,
+   "gt_liver_vox_native": 1393772,
+   "gt_liver_union_vox_native": 1828493,
+   "gt_tumor_vox_native": 434721,
+   "npy_liver_vox": 349515,
+   "npy_tumor_vox": 110970
+  },
+  "volume-34": {
+   "liver": "liver_34",
+   "corr": 0.999996,
+   "z_flipped": false,
+   "slab_offset": 48,
+   "area_scale": 3.942,
+   "shape_native": [
+    512,
+    512,
+    151
+   ],
+   "spacing": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "npy_slices": 97,
+   "gt_liver_vox_native": 1461944,
+   "gt_liver_union_vox_native": 1461944,
+   "gt_tumor_vox_native": 0,
+   "npy_liver_vox": 369303,
+   "npy_tumor_vox": 0
+  },
+  "volume-35": {
+   "liver": "liver_35",
+   "corr": 0.999998,
+   "z_flipped": false,
+   "slab_offset": 6,
+   "area_scale": 3.962,
+   "shape_native": [
+    512,
+    512,
+    124
+   ],
+   "spacing": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "npy_slices": 115,
+   "gt_liver_vox_native": 3194772,
+   "gt_liver_union_vox_native": 3215090,
+   "gt_tumor_vox_native": 20318,
+   "npy_liver_vox": 805697,
+   "npy_tumor_vox": 5168
+  },
+  "volume-36": {
+   "liver": "liver_36",
+   "corr": 0.999989,
+   "z_flipped": false,
+   "slab_offset": 11,
+   "area_scale": 3.952,
+   "shape_native": [
+    512,
+    512,
+    111
+   ],
+   "spacing": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "npy_slices": 88,
+   "gt_liver_vox_native": 1225936,
+   "gt_liver_union_vox_native": 1265420,
+   "gt_tumor_vox_native": 39484,
+   "npy_liver_vox": 309932,
+   "npy_tumor_vox": 9920
+  },
+  "volume-37": {
+   "liver": "liver_37",
+   "corr": 0.999993,
+   "z_flipped": false,
+   "slab_offset": 22,
+   "area_scale": 3.961,
+   "shape_native": [
+    512,
+    512,
+    122
+   ],
+   "spacing": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "npy_slices": 98,
+   "gt_liver_vox_native": 1857041,
+   "gt_liver_union_vox_native": 1872022,
+   "gt_tumor_vox_native": 14981,
+   "npy_liver_vox": 468074,
+   "npy_tumor_vox": 3895
+  },
+  "volume-38": {
+   "liver": "liver_38",
+   "corr": 0.999997,
+   "z_flipped": false,
+   "slab_offset": 33,
+   "area_scale": 3.968,
+   "shape_native": [
+    512,
+    512,
+    132
+   ],
+   "spacing": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "npy_slices": 95,
+   "gt_liver_vox_native": 1692716,
+   "gt_liver_union_vox_native": 1692716,
+   "gt_tumor_vox_native": 0,
+   "npy_liver_vox": 426563,
+   "npy_tumor_vox": 0
+  },
+  "volume-39": {
+   "liver": "liver_39",
+   "corr": 0.999994,
+   "z_flipped": false,
+   "slab_offset": 9,
+   "area_scale": 3.925,
+   "shape_native": [
+    512,
+    512,
+    260
+   ],
+   "spacing": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "npy_slices": 238,
+   "gt_liver_vox_native": 2992447,
+   "gt_liver_union_vox_native": 3341433,
+   "gt_tumor_vox_native": 348986,
+   "npy_liver_vox": 759106,
+   "npy_tumor_vox": 86144
+  },
+  "volume-4": {
+   "liver": "liver_4",
+   "corr": 0.999994,
+   "z_flipped": false,
+   "slab_offset": 347,
+   "area_scale": 3.953,
+   "shape_native": [
+    512,
+    512,
+    841
+   ],
+   "spacing": [
+    0.9023439884185791,
+    0.9023439884185791,
+    0.800000011920929
+   ],
+   "npy_slices": 249,
+   "gt_liver_vox_native": 3310959,
+   "gt_liver_union_vox_native": 4827212,
+   "gt_tumor_vox_native": 1516253,
+   "npy_liver_vox": 833817,
+   "npy_tumor_vox": 384871
+  },
+  "volume-40": {
+   "liver": "liver_40",
+   "corr": 0.999997,
+   "z_flipped": false,
+   "slab_offset": 26,
+   "area_scale": 3.957,
+   "shape_native": [
+    512,
+    512,
+    122
+   ],
+   "spacing": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "npy_slices": 89,
+   "gt_liver_vox_native": 1940629,
+   "gt_liver_union_vox_native": 2063109,
+   "gt_tumor_vox_native": 122480,
+   "npy_liver_vox": 488621,
+   "npy_tumor_vox": 31631
+  },
+  "volume-41": {
+   "liver": "liver_41",
+   "corr": 0.99999,
+   "z_flipped": false,
+   "slab_offset": 4,
+   "area_scale": 3.95,
+   "shape_native": [
+    512,
+    512,
+    113
+   ],
+   "spacing": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "npy_slices": 103,
+   "gt_liver_vox_native": 1633641,
+   "gt_liver_union_vox_native": 1633641,
+   "gt_tumor_vox_native": 0,
+   "npy_liver_vox": 412561,
+   "npy_tumor_vox": 0
+  },
+  "volume-42": {
+   "liver": "liver_42",
+   "corr": 0.999993,
+   "z_flipped": false,
+   "slab_offset": 6,
+   "area_scale": 3.95,
+   "shape_native": [
+    512,
+    512,
+    125
+   ],
+   "spacing": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "npy_slices": 114,
+   "gt_liver_vox_native": 1387934,
+   "gt_liver_union_vox_native": 1389572,
+   "gt_tumor_vox_native": 1638,
+   "npy_liver_vox": 350329,
+   "npy_tumor_vox": 437
+  },
+  "volume-43": {
+   "liver": "liver_43",
+   "corr": 0.999998,
+   "z_flipped": false,
+   "slab_offset": 39,
+   "area_scale": 3.969,
+   "shape_native": [
+    512,
+    512,
+    155
+   ],
+   "spacing": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "npy_slices": 112,
+   "gt_liver_vox_native": 2709848,
+   "gt_liver_union_vox_native": 2717185,
+   "gt_tumor_vox_native": 7337,
+   "npy_liver_vox": 682134,
+   "npy_tumor_vox": 1872
+  },
+  "volume-44": {
+   "liver": "liver_44",
+   "corr": 0.999995,
+   "z_flipped": false,
+   "slab_offset": 1,
+   "area_scale": 3.954,
+   "shape_native": [
+    512,
+    512,
+    119
+   ],
+   "spacing": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "npy_slices": 112,
+   "gt_liver_vox_native": 1920507,
+   "gt_liver_union_vox_native": 2106497,
+   "gt_tumor_vox_native": 185990,
+   "npy_liver_vox": 484646,
+   "npy_tumor_vox": 46902
+  },
+  "volume-45": {
+   "liver": "liver_45",
+   "corr": 0.999992,
+   "z_flipped": false,
+   "slab_offset": 12,
+   "area_scale": 3.954,
+   "shape_native": [
+    512,
+    512,
+    74
+   ],
+   "spacing": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "npy_slices": 58,
+   "gt_liver_vox_native": 1216025,
+   "gt_liver_union_vox_native": 1220564,
+   "gt_tumor_vox_native": 4539,
+   "npy_liver_vox": 306868,
+   "npy_tumor_vox": 1164
+  },
+  "volume-46": {
+   "liver": "liver_46",
+   "corr": 0.999995,
+   "z_flipped": false,
+   "slab_offset": 28,
+   "area_scale": 3.949,
+   "shape_native": [
+    512,
+    512,
+    124
+   ],
+   "spacing": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "npy_slices": 40,
+   "gt_liver_vox_native": 541792,
+   "gt_liver_union_vox_native": 583208,
+   "gt_tumor_vox_native": 41416,
+   "npy_liver_vox": 136222,
+   "npy_tumor_vox": 10693
+  },
+  "volume-47": {
+   "liver": "liver_47",
+   "corr": 0.999998,
+   "z_flipped": false,
+   "slab_offset": 126,
+   "area_scale": 3.96,
+   "shape_native": [
+    512,
+    512,
+    225
+   ],
+   "spacing": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "npy_slices": 84,
+   "gt_liver_vox_native": 1359697,
+   "gt_liver_union_vox_native": 1359697,
+   "gt_tumor_vox_native": 0,
+   "npy_liver_vox": 343130,
+   "npy_tumor_vox": 0
+  },
+  "volume-48": {
+   "liver": "liver_48",
+   "corr": 0.999994,
+   "z_flipped": false,
+   "slab_offset": 108,
+   "area_scale": 3.961,
+   "shape_native": [
+    512,
+    512,
+    244
+   ],
+   "spacing": [
+    0.9765620231628418,
+    0.9765620231628418,
+    2.5
+   ],
+   "npy_slices": 68,
+   "gt_liver_vox_native": 853316,
+   "gt_liver_union_vox_native": 888794,
+   "gt_tumor_vox_native": 35478,
+   "npy_liver_vox": 215027,
+   "npy_tumor_vox": 9080
+  },
+  "volume-49": {
+   "liver": "liver_49",
+   "corr": 0.999982,
+   "z_flipped": false,
+   "slab_offset": 102,
+   "area_scale": 3.945,
+   "shape_native": [
+    512,
+    512,
+    254
+   ],
+   "spacing": [
+    0.955078125,
+    0.955078125,
+    2.5
+   ],
+   "npy_slices": 72,
+   "gt_liver_vox_native": 720798,
+   "gt_liver_union_vox_native": 728813,
+   "gt_tumor_vox_native": 8015,
+   "npy_liver_vox": 182314,
+   "npy_tumor_vox": 2184
+  },
+  "volume-5": {
+   "liver": "liver_5",
+   "corr": 0.999989,
+   "z_flipped": false,
+   "slab_offset": 312,
+   "area_scale": 3.955,
+   "shape_native": [
+    512,
+    512,
+    537
+   ],
+   "spacing": [
+    0.96875,
+    0.96875,
+    0.7999879717826843
+   ],
+   "npy_slices": 175,
+   "gt_liver_vox_native": 1912013,
+   "gt_liver_union_vox_native": 1912553,
+   "gt_tumor_vox_native": 540,
+   "npy_liver_vox": 482747,
+   "npy_tumor_vox": 148
+  },
+  "volume-50": {
+   "liver": "liver_50",
+   "corr": 0.999993,
+   "z_flipped": false,
+   "slab_offset": 96,
+   "area_scale": 3.959,
+   "shape_native": [
+    512,
+    512,
+    240
+   ],
+   "spacing": [
+    0.90625,
+    0.90625,
+    2.5
+   ],
+   "npy_slices": 63,
+   "gt_liver_vox_native": 707982,
+   "gt_liver_union_vox_native": 710996,
+   "gt_tumor_vox_native": 3014,
+   "npy_liver_vox": 178830,
+   "npy_tumor_vox": 791
+  },
+  "volume-51": {
+   "liver": "liver_51",
+   "corr": 0.999995,
+   "z_flipped": false,
+   "slab_offset": 96,
+   "area_scale": 3.945,
+   "shape_native": [
+    512,
+    512,
+    227
+   ],
+   "spacing": [
+    0.90234375,
+    0.90234375,
+    3.0
+   ],
+   "npy_slices": 55,
+   "gt_liver_vox_native": 656295,
+   "gt_liver_union_vox_native": 781190,
+   "gt_tumor_vox_native": 124895,
+   "npy_liver_vox": 165290,
+   "npy_tumor_vox": 32227
+  },
+  "volume-52": {
+   "liver": "liver_52",
+   "corr": 0.999993,
+   "z_flipped": false,
+   "slab_offset": 100,
+   "area_scale": 3.965,
+   "shape_native": [
+    512,
+    512,
+    237
+   ],
+   "spacing": [
+    0.8359379768371582,
+    0.8359379768371582,
+    2.5
+   ],
+   "npy_slices": 55,
+   "gt_liver_vox_native": 741298,
+   "gt_liver_union_vox_native": 759594,
+   "gt_tumor_vox_native": 18296,
+   "npy_liver_vox": 186699,
+   "npy_tumor_vox": 4714
+  },
+  "volume-53": {
+   "liver": "liver_53",
+   "corr": 0.99999,
+   "z_flipped": false,
+   "slab_offset": 55,
+   "area_scale": 3.953,
+   "shape_native": [
+    512,
+    512,
+    105
+   ],
+   "spacing": [
+    0.8500000238418579,
+    0.8500000238418579,
+    4.0
+   ],
+   "npy_slices": 43,
+   "gt_liver_vox_native": 556890,
+   "gt_liver_union_vox_native": 559151,
+   "gt_tumor_vox_native": 2261,
+   "npy_liver_vox": 140733,
+   "npy_tumor_vox": 602
+  },
+  "volume-54": {
+   "liver": "liver_54",
+   "corr": 0.999986,
+   "z_flipped": false,
+   "slab_offset": 61,
+   "area_scale": 3.953,
+   "shape_native": [
+    512,
+    512,
+    96
+   ],
+   "spacing": [
+    0.828125,
+    0.828125,
+    5.0
+   ],
+   "npy_slices": 28,
+   "gt_liver_vox_native": 525493,
+   "gt_liver_union_vox_native": 526006,
+   "gt_tumor_vox_native": 513,
+   "npy_liver_vox": 132448,
+   "npy_tumor_vox": 139
+  },
+  "volume-55": {
+   "liver": "liver_55",
+   "corr": 0.999981,
+   "z_flipped": false,
+   "slab_offset": 94,
+   "area_scale": 3.944,
+   "shape_native": [
+    512,
+    512,
+    192
+   ],
+   "spacing": [
+    0.6660159826278687,
+    0.6660159826278687,
+    2.5
+   ],
+   "npy_slices": 91,
+   "gt_liver_vox_native": 1698920,
+   "gt_liver_union_vox_native": 1701717,
+   "gt_tumor_vox_native": 2797,
+   "npy_liver_vox": 429859,
+   "npy_tumor_vox": 710
+  },
+  "volume-56": {
+   "liver": "liver_56",
+   "corr": 0.999994,
+   "z_flipped": false,
+   "slab_offset": 135,
+   "area_scale": 3.947,
+   "shape_native": [
+    512,
+    512,
+    239
+   ],
+   "spacing": [
+    0.8027340173721313,
+    0.8027340173721313,
+    2.0
+   ],
+   "npy_slices": 89,
+   "gt_liver_vox_native": 1468108,
+   "gt_liver_union_vox_native": 1736405,
+   "gt_tumor_vox_native": 268297,
+   "npy_liver_vox": 370400,
+   "npy_tumor_vox": 67510
+  },
+  "volume-57": {
+   "liver": "liver_57",
+   "corr": 0.999997,
+   "z_flipped": false,
+   "slab_offset": 204,
+   "area_scale": 3.96,
+   "shape_native": [
+    512,
+    512,
+    366
+   ],
+   "spacing": [
+    0.703125,
+    0.703125,
+    1.25
+   ],
+   "npy_slices": 148,
+   "gt_liver_vox_native": 3002392,
+   "gt_liver_union_vox_native": 3008996,
+   "gt_tumor_vox_native": 6604,
+   "npy_liver_vox": 756922,
+   "npy_tumor_vox": 1727
+  },
+  "volume-58": {
+   "liver": "liver_58",
+   "corr": 0.999995,
+   "z_flipped": false,
+   "slab_offset": 114,
+   "area_scale": 3.95,
+   "shape_native": [
+    512,
+    512,
+    212
+   ],
+   "spacing": [
+    0.6835939884185791,
+    0.6835939884185791,
+    2.0
+   ],
+   "npy_slices": 82,
+   "gt_liver_vox_native": 1335401,
+   "gt_liver_union_vox_native": 1336844,
+   "gt_tumor_vox_native": 1443,
+   "npy_liver_vox": 336997,
+   "npy_tumor_vox": 381
+  },
+  "volume-59": {
+   "liver": "liver_59",
+   "corr": 0.999998,
+   "z_flipped": false,
+   "slab_offset": 132,
+   "area_scale": 3.969,
+   "shape_native": [
+    512,
+    512,
+    216
+   ],
+   "spacing": [
+    0.6835939884185791,
+    0.6835939884185791,
+    2.0
+   ],
+   "npy_slices": 76,
+   "gt_liver_vox_native": 1501488,
+   "gt_liver_union_vox_native": 1502185,
+   "gt_tumor_vox_native": 697,
+   "npy_liver_vox": 378124,
+   "npy_tumor_vox": 175
+  },
+  "volume-6": {
+   "liver": "liver_6",
+   "corr": 0.999994,
+   "z_flipped": false,
+   "slab_offset": 305,
+   "area_scale": 3.96,
+   "shape_native": [
+    512,
+    512,
+    518
+   ],
+   "spacing": [
+    0.873046875,
+    0.873046875,
+    1.0
+   ],
+   "npy_slices": 185,
+   "gt_liver_vox_native": 2443764,
+   "gt_liver_union_vox_native": 2475231,
+   "gt_tumor_vox_native": 31467,
+   "npy_liver_vox": 616505,
+   "npy_tumor_vox": 8327
+  },
+  "volume-60": {
+   "liver": "liver_60",
+   "corr": 0.999996,
+   "z_flipped": false,
+   "slab_offset": 157,
+   "area_scale": 3.96,
+   "shape_native": [
+    512,
+    512,
+    244
+   ],
+   "spacing": [
+    0.7988280057907104,
+    0.7988280057907104,
+    2.0
+   ],
+   "npy_slices": 78,
+   "gt_liver_vox_native": 1869578,
+   "gt_liver_union_vox_native": 1880946,
+   "gt_tumor_vox_native": 11368,
+   "npy_liver_vox": 471545,
+   "npy_tumor_vox": 2944
+  },
+  "volume-61": {
+   "liver": "liver_61",
+   "corr": 0.999989,
+   "z_flipped": false,
+   "slab_offset": 125,
+   "area_scale": 3.933,
+   "shape_native": [
+    512,
+    512,
+    193
+   ],
+   "spacing": [
+    0.7578120231628418,
+    0.7578120231628418,
+    2.5
+   ],
+   "npy_slices": 60,
+   "gt_liver_vox_native": 1129592,
+   "gt_liver_union_vox_native": 1132508,
+   "gt_tumor_vox_native": 2916,
+   "npy_liver_vox": 286459,
+   "npy_tumor_vox": 775
+  },
+  "volume-62": {
+   "liver": "liver_62",
+   "corr": 0.999998,
+   "z_flipped": false,
+   "slab_offset": 89,
+   "area_scale": 3.962,
+   "shape_native": [
+    512,
+    512,
+    188
+   ],
+   "spacing": [
+    0.6445310115814209,
+    0.6445310115814209,
+    2.0
+   ],
+   "npy_slices": 88,
+   "gt_liver_vox_native": 1423214,
+   "gt_liver_union_vox_native": 1426410,
+   "gt_tumor_vox_native": 3196,
+   "npy_liver_vox": 358571,
+   "npy_tumor_vox": 824
+  },
+  "volume-63": {
+   "liver": "liver_63",
+   "corr": 0.999993,
+   "z_flipped": false,
+   "slab_offset": 60,
+   "area_scale": 3.946,
+   "shape_native": [
+    512,
+    512,
+    104
+   ],
+   "spacing": [
+    0.7402340173721313,
+    0.7402340173721313,
+    5.0
+   ],
+   "npy_slices": 36,
+   "gt_liver_vox_native": 635709,
+   "gt_liver_union_vox_native": 636397,
+   "gt_tumor_vox_native": 688,
+   "npy_liver_vox": 160224,
+   "npy_tumor_vox": 186
+  },
+  "volume-64": {
+   "liver": "liver_64",
+   "corr": 0.999997,
+   "z_flipped": false,
+   "slab_offset": 114,
+   "area_scale": 3.957,
+   "shape_native": [
+    512,
+    512,
+    230
+   ],
+   "spacing": [
+    0.7773439884185791,
+    0.7773439884185791,
+    2.0
+   ],
+   "npy_slices": 103,
+   "gt_liver_vox_native": 1635708,
+   "gt_liver_union_vox_native": 1814801,
+   "gt_tumor_vox_native": 179093,
+   "npy_liver_vox": 412679,
+   "npy_tumor_vox": 45191
+  },
+  "volume-65": {
+   "liver": "liver_65",
+   "corr": 0.999993,
+   "z_flipped": false,
+   "slab_offset": 281,
+   "area_scale": 3.938,
+   "shape_native": [
+    512,
+    512,
+    513
+   ],
+   "spacing": [
+    0.625,
+    0.625,
+    0.7989500164985657
+   ],
+   "npy_slices": 200,
+   "gt_liver_vox_native": 2786649,
+   "gt_liver_union_vox_native": 2788319,
+   "gt_tumor_vox_native": 1670,
+   "npy_liver_vox": 704858,
+   "npy_tumor_vox": 445
+  },
+  "volume-66": {
+   "liver": "liver_66",
+   "corr": 0.999998,
+   "z_flipped": false,
+   "slab_offset": 48,
+   "area_scale": 3.969,
+   "shape_native": [
+    512,
+    512,
+    86
+   ],
+   "spacing": [
+    0.7128909826278687,
+    0.7128909826278687,
+    5.0
+   ],
+   "npy_slices": 34,
+   "gt_liver_vox_native": 672006,
+   "gt_liver_union_vox_native": 674339,
+   "gt_tumor_vox_native": 2333,
+   "npy_liver_vox": 167918,
+   "npy_tumor_vox": 613
+  },
+  "volume-67": {
+   "liver": "liver_67",
+   "corr": 0.999993,
+   "z_flipped": false,
+   "slab_offset": 82,
+   "area_scale": 3.951,
+   "shape_native": [
+    512,
+    512,
+    165
+   ],
+   "spacing": [
+    0.7109379768371582,
+    0.7109379768371582,
+    2.5
+   ],
+   "npy_slices": 78,
+   "gt_liver_vox_native": 1101934,
+   "gt_liver_union_vox_native": 1102459,
+   "gt_tumor_vox_native": 525,
+   "npy_liver_vox": 278695,
+   "npy_tumor_vox": 142
+  },
+  "volume-68": {
+   "liver": "liver_68",
+   "corr": 0.999994,
+   "z_flipped": false,
+   "slab_offset": 91,
+   "area_scale": 3.958,
+   "shape_native": [
+    512,
+    512,
+    266
+   ],
+   "spacing": [
+    0.6660159826278687,
+    0.6660159826278687,
+    2.49993896484375
+   ],
+   "npy_slices": 63,
+   "gt_liver_vox_native": 1264814,
+   "gt_liver_union_vox_native": 1269702,
+   "gt_tumor_vox_native": 4888,
+   "npy_liver_vox": 318557,
+   "npy_tumor_vox": 1268
+  },
+  "volume-69": {
+   "liver": "liver_69",
+   "corr": 0.999998,
+   "z_flipped": false,
+   "slab_offset": 134,
+   "area_scale": 3.963,
+   "shape_native": [
+    512,
+    512,
+    245
+   ],
+   "spacing": [
+    0.75390625,
+    0.75390625,
+    2.0
+   ],
+   "npy_slices": 95,
+   "gt_liver_vox_native": 1622732,
+   "gt_liver_union_vox_native": 1625845,
+   "gt_tumor_vox_native": 3113,
+   "npy_liver_vox": 408924,
+   "npy_tumor_vox": 805
+  },
+  "volume-7": {
+   "liver": "liver_7",
+   "corr": 0.999995,
+   "z_flipped": false,
+   "slab_offset": 324,
+   "area_scale": 3.964,
+   "shape_native": [
+    512,
+    512,
+    541
+   ],
+   "spacing": [
+    0.748046875,
+    0.748046875,
+    1.0
+   ],
+   "npy_slices": 176,
+   "gt_liver_vox_native": 3033572,
+   "gt_liver_union_vox_native": 3065994,
+   "gt_tumor_vox_native": 32422,
+   "npy_liver_vox": 764760,
+   "npy_tumor_vox": 8467
+  },
+  "volume-70": {
+   "liver": "liver_70",
+   "corr": 0.999997,
+   "z_flipped": false,
+   "slab_offset": 209,
+   "area_scale": 3.965,
+   "shape_native": [
+    512,
+    512,
+    333
+   ],
+   "spacing": [
+    0.5976560115814209,
+    0.5976560115814209,
+    1.25
+   ],
+   "npy_slices": 109,
+   "gt_liver_vox_native": 2242523,
+   "gt_liver_union_vox_native": 2363188,
+   "gt_tumor_vox_native": 120665,
+   "npy_liver_vox": 564943,
+   "npy_tumor_vox": 30575
+  },
+  "volume-71": {
+   "liver": "liver_71",
+   "corr": 0.999997,
+   "z_flipped": false,
+   "slab_offset": 55,
+   "area_scale": 3.969,
+   "shape_native": [
+    512,
+    512,
+    94
+   ],
+   "spacing": [
+    0.556640625,
+    0.556640625,
+    5.0
+   ],
+   "npy_slices": 35,
+   "gt_liver_vox_native": 934751,
+   "gt_liver_union_vox_native": 1077492,
+   "gt_tumor_vox_native": 142741,
+   "npy_liver_vox": 235206,
+   "npy_tumor_vox": 35825
+  },
+  "volume-72": {
+   "liver": "liver_72",
+   "corr": 0.999998,
+   "z_flipped": false,
+   "slab_offset": 28,
+   "area_scale": 3.97,
+   "shape_native": [
+    512,
+    512,
+    93
+   ],
+   "spacing": [
+    0.6777340173721313,
+    0.6777340173721313,
+    2.5
+   ],
+   "npy_slices": 57,
+   "gt_liver_vox_native": 1221191,
+   "gt_liver_union_vox_native": 1243555,
+   "gt_tumor_vox_native": 22364,
+   "npy_liver_vox": 307056,
+   "npy_tumor_vox": 5768
+  },
+  "volume-73": {
+   "liver": "liver_73",
+   "corr": 0.999997,
+   "z_flipped": false,
+   "slab_offset": 61,
+   "area_scale": 3.956,
+   "shape_native": [
+    512,
+    512,
+    121
+   ],
+   "spacing": [
+    0.951171875,
+    0.951171875,
+    4.0
+   ],
+   "npy_slices": 49,
+   "gt_liver_vox_native": 561461,
+   "gt_liver_union_vox_native": 562053,
+   "gt_tumor_vox_native": 592,
+   "npy_liver_vox": 141638,
+   "npy_tumor_vox": 151
+  },
+  "volume-74": {
+   "liver": "liver_74",
+   "corr": 0.999992,
+   "z_flipped": false,
+   "slab_offset": 68,
+   "area_scale": 3.969,
+   "shape_native": [
+    512,
+    512,
+    107
+   ],
+   "spacing": [
+    0.8261719942092896,
+    0.8261719942092896,
+    5.0
+   ],
+   "npy_slices": 31,
+   "gt_liver_vox_native": 707237,
+   "gt_liver_union_vox_native": 744381,
+   "gt_tumor_vox_native": 37144,
+   "npy_liver_vox": 177269,
+   "npy_tumor_vox": 9374
+  },
+  "volume-75": {
+   "liver": "liver_75",
+   "corr": 0.999998,
+   "z_flipped": false,
+   "slab_offset": 46,
+   "area_scale": 3.958,
+   "shape_native": [
+    512,
+    512,
+    89
+   ],
+   "spacing": [
+    0.7578125,
+    0.7578125,
+    5.0
+   ],
+   "npy_slices": 36,
+   "gt_liver_vox_native": 609134,
+   "gt_liver_union_vox_native": 611837,
+   "gt_tumor_vox_native": 2703,
+   "npy_liver_vox": 152665,
+   "npy_tumor_vox": 723
+  },
+  "volume-76": {
+   "liver": "liver_76",
+   "corr": 0.999998,
+   "z_flipped": false,
+   "slab_offset": 83,
+   "area_scale": 3.966,
+   "shape_native": [
+    512,
+    512,
+    168
+   ],
+   "spacing": [
+    0.7421879768371582,
+    0.7421879768371582,
+    2.5
+   ],
+   "npy_slices": 74,
+   "gt_liver_vox_native": 1242705,
+   "gt_liver_union_vox_native": 1436213,
+   "gt_tumor_vox_native": 193508,
+   "npy_liver_vox": 312270,
+   "npy_tumor_vox": 49307
+  },
+  "volume-77": {
+   "liver": "liver_77",
+   "corr": 0.999996,
+   "z_flipped": false,
+   "slab_offset": 57,
+   "area_scale": 3.96,
+   "shape_native": [
+    512,
+    512,
+    94
+   ],
+   "spacing": [
+    0.781000018119812,
+    0.781000018119812,
+    5.0
+   ],
+   "npy_slices": 35,
+   "gt_liver_vox_native": 618684,
+   "gt_liver_union_vox_native": 622918,
+   "gt_tumor_vox_native": 4234,
+   "npy_liver_vox": 155669,
+   "npy_tumor_vox": 1096
+  },
+  "volume-78": {
+   "liver": "liver_78",
+   "corr": 0.999997,
+   "z_flipped": false,
+   "slab_offset": 122,
+   "area_scale": 3.966,
+   "shape_native": [
+    512,
+    512,
+    198
+   ],
+   "spacing": [
+    0.7851560115814209,
+    0.7851560115814209,
+    2.5
+   ],
+   "npy_slices": 58,
+   "gt_liver_vox_native": 1000912,
+   "gt_liver_union_vox_native": 1013177,
+   "gt_tumor_vox_native": 12265,
+   "npy_liver_vox": 252106,
+   "npy_tumor_vox": 3232
+  },
+  "volume-79": {
+   "liver": "liver_79",
+   "corr": 0.999997,
+   "z_flipped": false,
+   "slab_offset": 77,
+   "area_scale": 3.96,
+   "shape_native": [
+    512,
+    512,
+    147
+   ],
+   "spacing": [
+    0.796875,
+    0.796875,
+    3.0
+   ],
+   "npy_slices": 58,
+   "gt_liver_vox_native": 651009,
+   "gt_liver_union_vox_native": 660094,
+   "gt_tumor_vox_native": 9085,
+   "npy_liver_vox": 163914,
+   "npy_tumor_vox": 2381
+  },
+  "volume-8": {
+   "liver": "liver_8",
+   "corr": 0.999995,
+   "z_flipped": false,
+   "slab_offset": 332,
+   "area_scale": 3.959,
+   "shape_native": [
+    512,
+    512,
+    541
+   ],
+   "spacing": [
+    0.84765625,
+    0.84765625,
+    1.0
+   ],
+   "npy_slices": 178,
+   "gt_liver_vox_native": 2623110,
+   "gt_liver_union_vox_native": 2643937,
+   "gt_tumor_vox_native": 20827,
+   "npy_liver_vox": 661930,
+   "npy_tumor_vox": 5472
+  },
+  "volume-80": {
+   "liver": "liver_80",
+   "corr": 0.999997,
+   "z_flipped": false,
+   "slab_offset": 127,
+   "area_scale": 3.964,
+   "shape_native": [
+    512,
+    512,
+    217
+   ],
+   "spacing": [
+    0.68359375,
+    0.68359375,
+    2.0
+   ],
+   "npy_slices": 75,
+   "gt_liver_vox_native": 1395850,
+   "gt_liver_union_vox_native": 1484119,
+   "gt_tumor_vox_native": 88269,
+   "npy_liver_vox": 351620,
+   "npy_tumor_vox": 22437
+  },
+  "volume-81": {
+   "liver": "liver_81",
+   "corr": 0.999994,
+   "z_flipped": false,
+   "slab_offset": 214,
+   "area_scale": 3.965,
+   "shape_native": [
+    512,
+    512,
+    343
+   ],
+   "spacing": [
+    0.703125,
+    0.703125,
+    1.25
+   ],
+   "npy_slices": 110,
+   "gt_liver_vox_native": 2340769,
+   "gt_liver_union_vox_native": 2345899,
+   "gt_tumor_vox_native": 5130,
+   "npy_liver_vox": 590463,
+   "npy_tumor_vox": 1348
+  },
+  "volume-82": {
+   "liver": "liver_82",
+   "corr": 0.999997,
+   "z_flipped": false,
+   "slab_offset": 323,
+   "area_scale": 3.967,
+   "shape_native": [
+    512,
+    512,
+    519
+   ],
+   "spacing": [
+    0.625,
+    0.625,
+    0.8009999990463257
+   ],
+   "npy_slices": 169,
+   "gt_liver_vox_native": 4726373,
+   "gt_liver_union_vox_native": 4867983,
+   "gt_tumor_vox_native": 141610,
+   "npy_liver_vox": 1190384,
+   "npy_tumor_vox": 35985
+  },
+  "volume-83": {
+   "liver": "liver_83",
+   "corr": 0.999994,
+   "z_flipped": false,
+   "slab_offset": 386,
+   "area_scale": 3.949,
+   "shape_native": [
+    512,
+    512,
+    871
+   ],
+   "spacing": [
+    0.7421875,
+    0.7421875,
+    0.699999988079071
+   ],
+   "npy_slices": 214,
+   "gt_liver_vox_native": 2955487,
+   "gt_liver_union_vox_native": 2955585,
+   "gt_tumor_vox_native": 98,
+   "npy_liver_vox": 747744,
+   "npy_tumor_vox": 29
+  },
+  "volume-84": {
+   "liver": "liver_84",
+   "corr": 0.999998,
+   "z_flipped": false,
+   "slab_offset": 393,
+   "area_scale": 3.965,
+   "shape_native": [
+    512,
+    512,
+    733
+   ],
+   "spacing": [
+    0.7578125,
+    0.7578125,
+    0.699999988079071
+   ],
+   "npy_slices": 257,
+   "gt_liver_vox_native": 4892550,
+   "gt_liver_union_vox_native": 5433855,
+   "gt_tumor_vox_native": 541305,
+   "npy_liver_vox": 1230433,
+   "npy_tumor_vox": 139172
+  },
+  "volume-85": {
+   "liver": "liver_85",
+   "corr": 0.999997,
+   "z_flipped": false,
+   "slab_offset": 335,
+   "area_scale": 3.965,
+   "shape_native": [
+    512,
+    512,
+    630
+   ],
+   "spacing": [
+    0.6445313096046448,
+    0.6445313096046448,
+    0.699999988079071
+   ],
+   "npy_slices": 275,
+   "gt_liver_vox_native": 7076467,
+   "gt_liver_union_vox_native": 7092011,
+   "gt_tumor_vox_native": 15544,
+   "npy_liver_vox": 1782939,
+   "npy_tumor_vox": 3998
+  },
+  "volume-86": {
+   "liver": "liver_86",
+   "corr": 0.999998,
+   "z_flipped": false,
+   "slab_offset": 343,
+   "area_scale": 3.967,
+   "shape_native": [
+    512,
+    512,
+    647
+   ],
+   "spacing": [
+    0.6835938096046448,
+    0.6835938096046448,
+    0.699999988079071
+   ],
+   "npy_slices": 279,
+   "gt_liver_vox_native": 5358063,
+   "gt_liver_union_vox_native": 5364114,
+   "gt_tumor_vox_native": 6051,
+   "npy_liver_vox": 1350611,
+   "npy_tumor_vox": 1539
+  },
+  "volume-87": {
+   "liver": "liver_87",
+   "corr": 0.999997,
+   "z_flipped": false,
+   "slab_offset": 422,
+   "area_scale": 3.957,
+   "shape_native": [
+    512,
+    512,
+    896
+   ],
+   "spacing": [
+    0.8539999723434448,
+    0.8539999723434448,
+    0.800000011920929
+   ],
+   "npy_slices": 214,
+   "gt_liver_vox_native": 3908622,
+   "gt_liver_union_vox_native": 3908622,
+   "gt_tumor_vox_native": 0,
+   "npy_liver_vox": 986133,
+   "npy_tumor_vox": 0
+  },
+  "volume-88": {
+   "liver": "liver_88",
+   "corr": 0.999995,
+   "z_flipped": false,
+   "slab_offset": 361,
+   "area_scale": 3.965,
+   "shape_native": [
+    512,
+    512,
+    811
+   ],
+   "spacing": [
+    0.7559999823570251,
+    0.7559999823570251,
+    0.800000011920929
+   ],
+   "npy_slices": 174,
+   "gt_liver_vox_native": 3148644,
+   "gt_liver_union_vox_native": 3402785,
+   "gt_tumor_vox_native": 254141,
+   "npy_liver_vox": 793256,
+   "npy_tumor_vox": 64383
+  },
+  "volume-89": {
+   "liver": "liver_89",
+   "corr": 0.999996,
+   "z_flipped": false,
+   "slab_offset": 367,
+   "area_scale": 3.957,
+   "shape_native": [
+    512,
+    512,
+    766
+   ],
+   "spacing": [
+    0.6370000243186951,
+    0.6370000243186951,
+    0.800000011920929
+   ],
+   "npy_slices": 192,
+   "gt_liver_vox_native": 3821209,
+   "gt_liver_union_vox_native": 3821209,
+   "gt_tumor_vox_native": 0,
+   "npy_liver_vox": 964316,
+   "npy_tumor_vox": 0
+  },
+  "volume-9": {
+   "liver": "liver_9",
+   "corr": 0.999992,
+   "z_flipped": false,
+   "slab_offset": 344,
+   "area_scale": 3.958,
+   "shape_native": [
+    512,
+    512,
+    549
+   ],
+   "spacing": [
+    0.8203125,
+    0.8203125,
+    1.0
+   ],
+   "npy_slices": 171,
+   "gt_liver_vox_native": 2278892,
+   "gt_liver_union_vox_native": 2301071,
+   "gt_tumor_vox_native": 22179,
+   "npy_liver_vox": 575440,
+   "npy_tumor_vox": 5832
+  },
+  "volume-90": {
+   "liver": "liver_90",
+   "corr": 0.999994,
+   "z_flipped": false,
+   "slab_offset": 301,
+   "area_scale": 3.954,
+   "shape_native": [
+    512,
+    512,
+    751
+   ],
+   "spacing": [
+    0.781000018119812,
+    0.781000018119812,
+    0.800000011920929
+   ],
+   "npy_slices": 182,
+   "gt_liver_vox_native": 3263211,
+   "gt_liver_union_vox_native": 3514104,
+   "gt_tumor_vox_native": 250893,
+   "npy_liver_vox": 823312,
+   "npy_tumor_vox": 64006
+  },
+  "volume-91": {
+   "liver": "liver_91",
+   "corr": 0.999997,
+   "z_flipped": false,
+   "slab_offset": 332,
+   "area_scale": 3.956,
+   "shape_native": [
+    512,
+    512,
+    751
+   ],
+   "spacing": [
+    0.8579999804496765,
+    0.8579999804496765,
+    0.800000011920929
+   ],
+   "npy_slices": 188,
+   "gt_liver_vox_native": 2781769,
+   "gt_liver_union_vox_native": 2781769,
+   "gt_tumor_vox_native": 0,
+   "npy_liver_vox": 701948,
+   "npy_tumor_vox": 0
+  },
+  "volume-92": {
+   "liver": "liver_92",
+   "corr": 0.999996,
+   "z_flipped": false,
+   "slab_offset": 355,
+   "area_scale": 3.957,
+   "shape_native": [
+    512,
+    512,
+    836
+   ],
+   "spacing": [
+    0.6710000038146973,
+    0.6710000038146973,
+    0.800000011920929
+   ],
+   "npy_slices": 178,
+   "gt_liver_vox_native": 3373372,
+   "gt_liver_union_vox_native": 3376004,
+   "gt_tumor_vox_native": 2632,
+   "npy_liver_vox": 850868,
+   "npy_tumor_vox": 725
+  },
+  "volume-93": {
+   "liver": "liver_93",
+   "corr": 0.999997,
+   "z_flipped": false,
+   "slab_offset": 265,
+   "area_scale": 3.963,
+   "shape_native": [
+    512,
+    512,
+    696
+   ],
+   "spacing": [
+    0.6620000004768372,
+    0.6620000004768372,
+    0.800000011920929
+   ],
+   "npy_slices": 233,
+   "gt_liver_vox_native": 4290558,
+   "gt_liver_union_vox_native": 4638646,
+   "gt_tumor_vox_native": 348088,
+   "npy_liver_vox": 1080380,
+   "npy_tumor_vox": 89660
+  },
+  "volume-94": {
+   "liver": "liver_94",
+   "corr": 0.999994,
+   "z_flipped": false,
+   "slab_offset": 395,
+   "area_scale": 3.947,
+   "shape_native": [
+    512,
+    512,
+    917
+   ],
+   "spacing": [
+    0.837890625,
+    0.837890625,
+    0.699999988079071
+   ],
+   "npy_slices": 251,
+   "gt_liver_vox_native": 2960488,
+   "gt_liver_union_vox_native": 3023013,
+   "gt_tumor_vox_native": 62525,
+   "npy_liver_vox": 747433,
+   "npy_tumor_vox": 16511
+  },
+  "volume-95": {
+   "liver": "liver_95",
+   "corr": 0.999995,
+   "z_flipped": false,
+   "slab_offset": 294,
+   "area_scale": 3.955,
+   "shape_native": [
+    512,
+    512,
+    841
+   ],
+   "spacing": [
+    0.7379999756813049,
+    0.7379999756813049,
+    0.800000011920929
+   ],
+   "npy_slices": 262,
+   "gt_liver_vox_native": 4068117,
+   "gt_liver_union_vox_native": 4070698,
+   "gt_tumor_vox_native": 2581,
+   "npy_liver_vox": 1027163,
+   "npy_tumor_vox": 650
+  },
+  "volume-96": {
+   "liver": "liver_96",
+   "corr": 0.999998,
+   "z_flipped": false,
+   "slab_offset": 345,
+   "area_scale": 3.964,
+   "shape_native": [
+    512,
+    512,
+    722
+   ],
+   "spacing": [
+    0.7460938096046448,
+    0.7460938096046448,
+    0.699999988079071
+   ],
+   "npy_slices": 298,
+   "gt_liver_vox_native": 5710555,
+   "gt_liver_union_vox_native": 5751088,
+   "gt_tumor_vox_native": 40533,
+   "npy_liver_vox": 1438898,
+   "npy_tumor_vox": 10767
+  },
+  "volume-97": {
+   "liver": "liver_97",
+   "corr": 0.999997,
+   "z_flipped": false,
+   "slab_offset": 407,
+   "area_scale": 3.96,
+   "shape_native": [
+    512,
+    512,
+    671
+   ],
+   "spacing": [
+    0.7226563096046448,
+    0.7226563096046448,
+    0.699999988079071
+   ],
+   "npy_slices": 231,
+   "gt_liver_vox_native": 4588123,
+   "gt_liver_union_vox_native": 5313433,
+   "gt_tumor_vox_native": 725310,
+   "npy_liver_vox": 1153149,
+   "npy_tumor_vox": 186630
+  },
+  "volume-98": {
+   "liver": "liver_98",
+   "corr": 0.999997,
+   "z_flipped": false,
+   "slab_offset": 388,
+   "area_scale": 3.956,
+   "shape_native": [
+    512,
+    512,
+    645
+   ],
+   "spacing": [
+    0.734375,
+    0.734375,
+    0.699999988079071
+   ],
+   "npy_slices": 240,
+   "gt_liver_vox_native": 3514870,
+   "gt_liver_union_vox_native": 4123509,
+   "gt_tumor_vox_native": 608639,
+   "npy_liver_vox": 885041,
+   "npy_tumor_vox": 155391
+  },
+  "volume-99": {
+   "liver": "liver_99",
+   "corr": 0.999996,
+   "z_flipped": false,
+   "slab_offset": 379,
+   "area_scale": 3.958,
+   "shape_native": [
+    512,
+    512,
+    629
+   ],
+   "spacing": [
+    0.78125,
+    0.78125,
+    0.699984073638916
+   ],
+   "npy_slices": 225,
+   "gt_liver_vox_native": 3681200,
+   "gt_liver_union_vox_native": 3693453,
+   "gt_tumor_vox_native": 12253,
+   "npy_liver_vox": 929240,
+   "npy_tumor_vox": 3283
+  }
+ },
+ "ambiguous": [],
+ "anchor_crosscheck": {
+  "liver_64": {
+   "shape": [
+    512,
+    512,
+    230
+   ],
+   "spacing": [
+    0.7773439884185791,
+    0.7773439884185791,
+    2.0
+   ]
+  },
+  "FLARE23_0102_mask": {
+   "shape": [
+    512,
+    512,
+    230
+   ],
+   "spacing": [
+    0.7773439884185791,
+    0.7773439884185791,
+    2.0
+   ]
+  },
+  "volume_mapping_to_liver_64": "volume-64"
+ }
+}
