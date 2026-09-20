@@ -2,13 +2,15 @@
 
 **Observability-Aware Ontology Grounding of Imaging Phenotypes for Cross-Dataset Reasoning in Abdominal CT**
 
+Project: **IPKG** (imaging-phenotype knowledge graphs) — the framework's application carries the same name.
+
 Public companion repository for the manuscript (Journal of Biomedical Informatics, under review, 2026).
 It contains the **result files, the scripts that produced them, the shipped phenotype corpora
 and knowledge graphs, and the duplicate-scan audits**, organized so the main results can be
 reproduced from this repository alone on CPU, and the compute-heavy stages from public data.
 
 **Repository state for the submitted paper:** tag **`paper-submission`** (created at submission;
-release candidates are tagged `VKG-v1-rc*`). Every table cell in the paper names its source
+release candidates are tagged `IPKG-v1-rc*`). Every table cell in the paper names its source
 file below and in [`TABLE_MAP.md`](TABLE_MAP.md).
 
 ## What the paper shows (headline numbers, all reproducible here)
