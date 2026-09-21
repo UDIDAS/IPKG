@@ -22,7 +22,7 @@ python scripts/retrieval/retrieval_iii_prime.py       # (iii') columns, both poo
 python scripts/retrieval/tab10_example_ranks.py       # Table C.19 example ranks
 ```
 Compare `/tmp/vkg_repro/*.json` against `results/retrieval/dedup/` — headline gates:
-Table 9 (ii) mAP 0.997 · (iii) Δ −0.061 · (iv) Δ −0.667 · (iii′) Δ −0.258 [−0.279, −0.239] ·
+Table 9 (ii) mAP 0.999 (full 1,334 pool; 0.997 on the 647-case CT sub-pool) · (iii) Δ −0.062 [−0.074, −0.050] · (iv) Δ −0.667 [−0.700, −0.631] · (iii′) Δ −0.261 [−0.281, −0.242] ·
 Table 10 (c) mAP 0.650 (n=516) · C.19 ranks identical.
 
 **A2. Graphs and ontology (Tables 1, 5):**

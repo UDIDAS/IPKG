@@ -1,0 +1,2818 @@
+{
+ "note": "Axis-normalized KiTS/MSD/LiTS <-> FLARE23 twin census (2026-09-20).\n\nWhy this exists: the application team noticed that the Fig.-3 showcase case FLARE23_0286 is\nthe SAME CT as KiTS query case_00067.  The original duplicate-scan audit\n(scripts/audit/duplicate_scan_audit.py, 78 twins removed -> the 1,347-case pool) missed it\nbecause of two blind spots, both fixed here:\n  * T1 compared shape/spacing POSITIONALLY -- KiTS NIfTIs store (z,y,x) while FLARE23 stores\n    (x,y,z), so every KiTS re-share failed T1 on axis order alone.\n  * T2's 2 % tumor-volume tolerance is tighter than FLARE23's tumor RE-ANNOTATION deltas\n    (0286 vs case_00067: 2.1 %).\n\nMethod (all geometric quantities compared SORTED = axis-order invariant):\n  1. Volume screen (corpus records only, axis-invariant): query organ volume within 2 % of a\n     FLARE23 candidate's same-organ volume AND (tumor volumes both zero OR within 15 %).\n     Candidates already among the 78 removed twins are skipped.\n  2. Confirmation per candidate pair:\n       AT1  same sorted shape + same sorted spacing (1e-3; MSD: voxel volume within 0.5 %,\n            spacing taken from the record-derived voxel volume) + organ voxels within ~2 %.\n       IoU  for pairs with both masks on the same grid: max kidney/organ IoU over the 48\n            axis permutation x flip configurations; tumor IoU under the best config.\n            Different patients never exceed ~0.5; every confirmed twin here is >= 0.87\n            (kidney) and >= 0.89 (tumor).  KiTS twins all map under (2,1,0) + full flips.\n       Cropped-twin scan: the original audit confirmed 3 twins with different Z extents, so\n            rejected pairs are re-scanned for same in-plane grid + same voxel volume\n            (<= 0.5 %) with different Z -- there are NONE among the rejects (every reject has\n            a genuinely different voxel volume => protocol coincidence).\n       LiTS pairs are adjudicated by the existing voxel-correlation census\n            (results/audit/lits_flare23_overlap_census.json): all five volume-proximity pairs\n            involve census-confirmed LiTS re-shares that map to NON-query LiTS volumes.\n  3. FLARE23_0405 (the replacement showcase case) is explicitly verified twin-clean: no query\n     is within even 0.5 % organ volume of it, it is not LiTS-census-confirmed, and it was\n     never flagged by any audit.\n\nData sources (the original /scratch staging was wiped):\n  * FLARE23 GT labels: streamed from Metadata.zip on Drive (ranged-zip, see\n    fetch_flare23_labels_from_zip.py) -> CENSUS_FLARE_LABELS (+ the 40-case cache dir).\n  * KiTS query GTs: re-fetched from the public kits23 GitHub repository (identical release\n    used by the pipeline) -> CENSUS_KITS.\n  * MSD query signatures: preserved verbatim in results/audit/duplicate_scan_audit.json\n    (query_sig blocks computed from GT at audit time); voxel volume from the GT record.\n\nResult: 13 NEW query twins (12 KiTS + 1 MSD/pancreas_201<->FLARE23_1764, whose tumor label is\nvoxel-IDENTICAL, 4,689 == 4,689).  Pool 1,347 -> 1,334; corpus 1,234 -> 1,221; total removed\ntwins 78 -> 91.  Four of the 40-case autonomous showcase cache (0286, 0097, 0118, 0146) are\nKiTS re-shares -- the reason the Fig. 3 showcase moved to FLARE23_0405.\n\n  CENSUS_FLARE_LABELS=/dev/shm/census/flare CENSUS_KITS=/dev/shm/census/kits   python scripts/audit/axis_normalized_twin_census.py\n-> results/audit/axis_normalized_twin_census.json",
+ "n_candidates_screened": 66,
+ "prior_twins_already_removed": 78,
+ "new_twins_confirmed": [
+  "flare23_FLARE23_0097",
+  "flare23_FLARE23_0118",
+  "flare23_FLARE23_0146",
+  "flare23_FLARE23_0286",
+  "flare23_FLARE23_0439",
+  "flare23_FLARE23_0470",
+  "flare23_FLARE23_0998",
+  "flare23_FLARE23_1051",
+  "flare23_FLARE23_1298",
+  "flare23_FLARE23_1464",
+  "flare23_FLARE23_1589",
+  "flare23_FLARE23_1764",
+  "flare23_FLARE23_2196"
+ ],
+ "new_twin_pairs": [
+  {
+   "query": "case_00017",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_1051",
+   "organ_pct": 0.758,
+   "tumor_pct": 8.45,
+   "organ_vox_pct": 0.758,
+   "tumor_vox_pct": 77.2,
+   "organ_iou": 0.9443,
+   "tumor_iou": 0.9162,
+   "transposition": "((2, 1, 0), (True, True, True))"
+  },
+  {
+   "query": "case_00067",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_0286",
+   "organ_pct": 0.256,
+   "tumor_pct": 2.11,
+   "organ_vox_pct": 0.253,
+   "tumor_vox_pct": 1433.16,
+   "organ_iou": 0.8751,
+   "tumor_iou": 0.9789,
+   "transposition": "((2, 1, 0), (True, True, True))"
+  },
+  {
+   "query": "case_00079",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_0439",
+   "organ_pct": 0.357,
+   "tumor_pct": 2.93,
+   "organ_vox_pct": 0.358,
+   "tumor_vox_pct": 172.6,
+   "organ_iou": 0.8825,
+   "tumor_iou": 0.9707,
+   "transposition": "((2, 1, 0), (True, True, True))"
+  },
+  {
+   "query": "case_00086",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_1298",
+   "organ_pct": 1.779,
+   "tumor_pct": 5.44,
+   "organ_vox_pct": 1.78,
+   "tumor_vox_pct": 102.34,
+   "organ_iou": 0.9433,
+   "tumor_iou": 0.9454,
+   "transposition": "((2, 1, 0), (True, True, True))"
+  },
+  {
+   "query": "case_00087",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_0998",
+   "organ_pct": 1.298,
+   "tumor_pct": 4.38,
+   "organ_vox_pct": 1.298,
+   "tumor_vox_pct": 64.72,
+   "organ_iou": 0.9519,
+   "tumor_iou": 0.9562,
+   "transposition": "((2, 1, 0), (True, True, True))"
+  },
+  {
+   "query": "case_00105",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_0118",
+   "organ_pct": 1.136,
+   "tumor_pct": 2.86,
+   "organ_vox_pct": 1.137,
+   "tumor_vox_pct": 256.26,
+   "organ_iou": 0.9308,
+   "tumor_iou": 0.9713,
+   "transposition": "((2, 1, 0), (True, True, True))"
+  },
+  {
+   "query": "case_00120",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_0146",
+   "organ_pct": 1.588,
+   "tumor_pct": 10.64,
+   "organ_vox_pct": 1.585,
+   "tumor_vox_pct": 55.92,
+   "organ_iou": 0.9341,
+   "tumor_iou": 0.8961,
+   "transposition": "((2, 1, 0), (True, True, True))"
+  },
+  {
+   "query": "case_00124",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_1589",
+   "organ_pct": 1.68,
+   "tumor_pct": 7.16,
+   "organ_vox_pct": 1.68,
+   "tumor_vox_pct": 7.04,
+   "organ_iou": 0.9494,
+   "tumor_iou": 0.9274,
+   "transposition": "((2, 1, 0), (True, True, True))"
+  },
+  {
+   "query": "case_00128",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_0097",
+   "organ_pct": 1.182,
+   "tumor_pct": 7.4,
+   "organ_vox_pct": 1.183,
+   "tumor_vox_pct": 123.63,
+   "organ_iou": 0.9548,
+   "tumor_iou": 0.9259,
+   "transposition": "((2, 1, 0), (True, True, True))"
+  },
+  {
+   "query": "case_00148",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_0470",
+   "organ_pct": 1.087,
+   "tumor_pct": 3.45,
+   "organ_vox_pct": 1.086,
+   "tumor_vox_pct": 101.72,
+   "organ_iou": 0.9689,
+   "tumor_iou": 0.9654,
+   "transposition": "((2, 1, 0), (True, True, True))"
+  },
+  {
+   "query": "case_00149",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_1464",
+   "organ_pct": 1.98,
+   "tumor_pct": 3.17,
+   "organ_vox_pct": 1.978,
+   "tumor_vox_pct": 386.18,
+   "organ_iou": 0.9503,
+   "tumor_iou": 0.9683,
+   "transposition": "((2, 1, 0), (True, True, True))"
+  },
+  {
+   "query": "case_00175",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_2196",
+   "organ_pct": 0.361,
+   "tumor_pct": 4.53,
+   "organ_vox_pct": 0.36,
+   "tumor_vox_pct": 66.42,
+   "organ_iou": 0.957,
+   "tumor_iou": 0.9547,
+   "transposition": "((2, 1, 0), (True, True, True))"
+  },
+  {
+   "query": "pancreas_201",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_1764",
+   "organ_pct": 1.287,
+   "tumor_pct": 0.0,
+   "organ_vox_pct": 1.275,
+   "tumor_vox_pct": 14.84,
+   "note": "tumor label voxel-identical (verbatim re-share)"
+  }
+ ],
+ "cropped_twin_candidates_among_rejects": [],
+ "flare23_0405_twin_clean": {
+  "volume_screen": "no query within 0.5 % organ volume (loosest catch-all)",
+  "lits_census": "not among census-confirmed LiTS re-shares",
+  "prior_audits": "never flagged by any T1-T4 test"
+ },
+ "twins_in_autonomous40_cache": [
+  "FLARE23_0286",
+  "FLARE23_0097",
+  "FLARE23_0118",
+  "FLARE23_0146"
+ ],
+ "pool_arithmetic": {
+  "pool_before": 1347,
+  "pool_after": 1334,
+  "flare_corpus_before": 1234,
+  "flare_corpus_after": 1221,
+  "total_twins_removed": 91
+ },
+ "all_pairs": [
+  {
+   "query": "case_00006",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_0062",
+   "organ_pct": 0.334,
+   "tumor_pct": 4.8,
+   "query_sig": {
+    "shape": [
+     157,
+     512,
+     512
+    ],
+    "spacing": [
+     0.7422,
+     0.7422,
+     3.0
+    ],
+    "voxml": 0.00165252685546875,
+    "organ_vox": 232690,
+    "tumor_vox": 6835,
+    "tumor_vox_all": 6835
+   },
+   "flare_sig": {
+    "shape": [
+     38,
+     512,
+     512
+    ],
+    "spacing": [
+     0.7227,
+     0.7227,
+     5.0
+    ],
+    "voxml": 0.0026111602783203125,
+    "organ_vox": 147757,
+    "tumor_vox": 3047,
+    "tumor_vox_all": 4544
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 57.482,
+   "tumor_vox_pct": 124.32,
+   "verdict": "rejected"
+  },
+  {
+   "query": "case_00006",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_1654",
+   "organ_pct": 1.818,
+   "tumor_pct": 6.07,
+   "query_sig": {
+    "shape": [
+     157,
+     512,
+     512
+    ],
+    "spacing": [
+     0.7422,
+     0.7422,
+     3.0
+    ],
+    "voxml": 0.00165252685546875,
+    "organ_vox": 232690,
+    "tumor_vox": 6835,
+    "tumor_vox_all": 6835
+   },
+   "flare_sig": {
+    "shape": [
+     270,
+     512,
+     512
+    ],
+    "spacing": [
+     0.8555,
+     0.8555,
+     1.0
+    ],
+    "voxml": 0.0007318267822265625,
+    "organ_vox": 535173,
+    "tumor_vox": 6103,
+    "tumor_vox_all": 16432
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 56.521,
+   "tumor_vox_pct": 11.99,
+   "verdict": "rejected"
+  },
+  {
+   "query": "case_00017",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_1051",
+   "organ_pct": 0.758,
+   "tumor_pct": 8.45,
+   "query_sig": {
+    "shape": [
+     97,
+     512,
+     512
+    ],
+    "spacing": [
+     0.6641,
+     0.6641,
+     5.0
+    ],
+    "voxml": 0.00220489501953125,
+    "organ_vox": 179292,
+    "tumor_vox": 2899,
+    "tumor_vox_all": 2899
+   },
+   "flare_sig": {
+    "shape": [
+     97,
+     512,
+     512
+    ],
+    "spacing": [
+     0.6641,
+     0.6641,
+     5.0
+    ],
+    "voxml": 0.00220489501953125,
+    "organ_vox": 180662,
+    "tumor_vox": 1636,
+    "tumor_vox_all": 3164
+   },
+   "same_grid_axis_normalized": true,
+   "organ_vox_pct": 0.758,
+   "tumor_vox_pct": 77.2,
+   "organ_iou": 0.9443,
+   "tumor_iou": 0.9162,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "verdict": "CONFIRMED_TWIN"
+  },
+  {
+   "query": "case_00018",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_1662",
+   "organ_pct": 0.672,
+   "tumor_pct": 2.44,
+   "query_sig": {
+    "shape": [
+     121,
+     512,
+     512
+    ],
+    "spacing": [
+     0.8613,
+     0.8613,
+     2.5
+    ],
+    "voxml": 0.0018547148338985053,
+    "organ_vox": 235179,
+    "tumor_vox": 9904,
+    "tumor_vox_all": 9904
+   },
+   "flare_sig": {
+    "shape": [
+     76,
+     512,
+     512
+    ],
+    "spacing": [
+     0.6836,
+     0.6836,
+     3.0
+    ],
+    "voxml": 0.0014019012451171875,
+    "organ_vox": 313247,
+    "tumor_vox": 6577,
+    "tumor_vox_all": 13430
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 24.922,
+   "tumor_vox_pct": 50.59,
+   "verdict": "rejected"
+  },
+  {
+   "query": "case_00018",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_2196",
+   "organ_pct": 0.365,
+   "tumor_pct": 12.32,
+   "query_sig": {
+    "shape": [
+     121,
+     512,
+     512
+    ],
+    "spacing": [
+     0.8613,
+     0.8613,
+     2.5
+    ],
+    "voxml": 0.0018547148338985053,
+    "organ_vox": 235179,
+    "tumor_vox": 9904,
+    "tumor_vox_all": 9904
+   },
+   "flare_sig": {
+    "shape": [
+     107,
+     512,
+     512
+    ],
+    "spacing": [
+     0.7305,
+     0.7305,
+     5.0
+    ],
+    "voxml": 0.0026679229736328125,
+    "organ_vox": 164094,
+    "tumor_vox": 4505,
+    "tumor_vox_all": 7853
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 43.32,
+   "tumor_vox_pct": 119.84,
+   "verdict": "rejected"
+  },
+  {
+   "query": "case_00060",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_1756",
+   "organ_pct": 1.909,
+   "tumor_pct": 14.59,
+   "query_sig": {
+    "shape": [
+     145,
+     512,
+     512
+    ],
+    "spacing": [
+     0.834,
+     0.834,
+     3.0
+    ],
+    "voxml": 0.0020865898132324217,
+    "organ_vox": 140099,
+    "tumor_vox": 16867,
+    "tumor_vox_all": 16867
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     553
+    ],
+    "spacing": [
+     0.5,
+     0.7734,
+     0.7734
+    ],
+    "voxml": 0.000299102783203125,
+    "organ_vox": 996380,
+    "tumor_vox": 19834,
+    "tumor_vox_all": 137761
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 85.939,
+   "tumor_vox_pct": 14.96,
+   "verdict": "rejected"
+  },
+  {
+   "query": "case_00067",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_0286",
+   "organ_pct": 0.256,
+   "tumor_pct": 2.11,
+   "query_sig": {
+    "shape": [
+     285,
+     512,
+     512
+    ],
+    "spacing": [
+     0.7617,
+     0.7617,
+     1.0
+    ],
+    "voxml": 0.0005802154541015625,
+    "organ_vox": 485178,
+    "tumor_vox": 1816289,
+    "tumor_vox_all": 1816289
+   },
+   "flare_sig": {
+    "shape": [
+     285,
+     512,
+     512
+    ],
+    "spacing": [
+     0.7617,
+     0.7617,
+     1.0
+    ],
+    "voxml": 0.0005802154541015625,
+    "organ_vox": 483956,
+    "tumor_vox": 118467,
+    "tumor_vox_all": 1855400
+   },
+   "same_grid_axis_normalized": true,
+   "organ_vox_pct": 0.253,
+   "tumor_vox_pct": 1433.16,
+   "organ_iou": 0.8751,
+   "tumor_iou": 0.9789,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "verdict": "CONFIRMED_TWIN"
+  },
+  {
+   "query": "case_00075",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_0473",
+   "organ_pct": 0.381,
+   "tumor_pct": 0.2,
+   "query_sig": {
+    "shape": [
+     90,
+     512,
+     512
+    ],
+    "spacing": [
+     0.707,
+     0.707,
+     5.0
+    ],
+    "voxml": 0.0024994659423828126,
+    "organ_vox": 131753,
+    "tumor_vox": 2030,
+    "tumor_vox_all": 2030
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     532
+    ],
+    "spacing": [
+     0.5,
+     0.7129,
+     0.7129
+    ],
+    "voxml": 0.0002541065216064453,
+    "organ_vox": 1300890,
+    "tumor_vox": 7136,
+    "tumor_vox_all": 19932
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 89.872,
+   "tumor_vox_pct": 71.55,
+   "verdict": "rejected"
+  },
+  {
+   "query": "case_00075",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_0523",
+   "organ_pct": 1.108,
+   "tumor_pct": 13.78,
+   "query_sig": {
+    "shape": [
+     90,
+     512,
+     512
+    ],
+    "spacing": [
+     0.707,
+     0.707,
+     5.0
+    ],
+    "voxml": 0.0024994659423828126,
+    "organ_vox": 131753,
+    "tumor_vox": 2030,
+    "tumor_vox_all": 2030
+   },
+   "flare_sig": {
+    "shape": [
+     439,
+     512,
+     512
+    ],
+    "spacing": [
+     0.8496,
+     0.8496,
+     1.0
+    ],
+    "voxml": 0.0007218360900878906,
+    "organ_vox": 451207,
+    "tumor_vox": 4320,
+    "tumor_vox_all": 8145
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 70.8,
+   "tumor_vox_pct": 53.01,
+   "verdict": "rejected"
+  },
+  {
+   "query": "case_00079",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_0439",
+   "organ_pct": 0.357,
+   "tumor_pct": 2.93,
+   "query_sig": {
+    "shape": [
+     124,
+     512,
+     512
+    ],
+    "spacing": [
+     0.6445,
+     0.6445,
+     5.0
+    ],
+    "voxml": 0.0020771026611328125,
+    "organ_vox": 141132,
+    "tumor_vox": 171432,
+    "tumor_vox_all": 171432
+   },
+   "flare_sig": {
+    "shape": [
+     124,
+     512,
+     512
+    ],
+    "spacing": [
+     0.6445,
+     0.6445,
+     5.0
+    ],
+    "voxml": 0.0020771026611328125,
+    "organ_vox": 141639,
+    "tumor_vox": 62888,
+    "tumor_vox_all": 176601
+   },
+   "same_grid_axis_normalized": true,
+   "organ_vox_pct": 0.358,
+   "tumor_vox_pct": 172.6,
+   "organ_iou": 0.8825,
+   "tumor_iou": 0.9707,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "verdict": "CONFIRMED_TWIN"
+  },
+  {
+   "query": "case_00086",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_1298",
+   "organ_pct": 1.779,
+   "tumor_pct": 5.44,
+   "query_sig": {
+    "shape": [
+     199,
+     512,
+     512
+    ],
+    "spacing": [
+     0.7891,
+     0.7891,
+     2.5
+    ],
+    "voxml": 0.0015565471909945927,
+    "organ_vox": 319970,
+    "tumor_vox": 18854,
+    "tumor_vox_all": 18854
+   },
+   "flare_sig": {
+    "shape": [
+     199,
+     512,
+     512
+    ],
+    "spacing": [
+     0.7891,
+     0.7891,
+     2.5
+    ],
+    "voxml": 0.0015565471909945927,
+    "organ_vox": 325769,
+    "tumor_vox": 9318,
+    "tumor_vox_all": 19943
+   },
+   "same_grid_axis_normalized": true,
+   "organ_vox_pct": 1.78,
+   "tumor_vox_pct": 102.34,
+   "organ_iou": 0.9433,
+   "tumor_iou": 0.9454,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "verdict": "CONFIRMED_TWIN"
+  },
+  {
+   "query": "case_00087",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_0463",
+   "organ_pct": 0.299,
+   "tumor_pct": 3.53,
+   "query_sig": {
+    "shape": [
+     49,
+     512,
+     512
+    ],
+    "spacing": [
+     0.6914,
+     0.6914,
+     5.0
+    ],
+    "voxml": 0.0023902130126953127,
+    "organ_vox": 169623,
+    "tumor_vox": 15329,
+    "tumor_vox_all": 15329
+   },
+   "flare_sig": {
+    "shape": [
+     274,
+     512,
+     512
+    ],
+    "spacing": [
+     0.8086,
+     0.8086,
+     1.0
+    ],
+    "voxml": 0.0006538238525390624,
+    "organ_vox": 618260,
+    "tumor_vox": 14989,
+    "tumor_vox_all": 54132
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 72.564,
+   "tumor_vox_pct": 2.27,
+   "verdict": "rejected"
+  },
+  {
+   "query": "case_00087",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_0998",
+   "organ_pct": 1.298,
+   "tumor_pct": 4.38,
+   "query_sig": {
+    "shape": [
+     49,
+     512,
+     512
+    ],
+    "spacing": [
+     0.6914,
+     0.6914,
+     5.0
+    ],
+    "voxml": 0.0023902130126953127,
+    "organ_vox": 169623,
+    "tumor_vox": 15329,
+    "tumor_vox_all": 15329
+   },
+   "flare_sig": {
+    "shape": [
+     49,
+     512,
+     512
+    ],
+    "spacing": [
+     0.6914,
+     0.6914,
+     5.0
+    ],
+    "voxml": 0.0023902130126953127,
+    "organ_vox": 171853,
+    "tumor_vox": 9306,
+    "tumor_vox_all": 16032
+   },
+   "same_grid_axis_normalized": true,
+   "organ_vox_pct": 1.298,
+   "tumor_vox_pct": 64.72,
+   "organ_iou": 0.9519,
+   "tumor_iou": 0.9562,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "verdict": "CONFIRMED_TWIN"
+  },
+  {
+   "query": "case_00087",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_1707",
+   "organ_pct": 0.081,
+   "tumor_pct": 12.74,
+   "query_sig": {
+    "shape": [
+     49,
+     512,
+     512
+    ],
+    "spacing": [
+     0.6914,
+     0.6914,
+     5.0
+    ],
+    "voxml": 0.0023902130126953127,
+    "organ_vox": 169623,
+    "tumor_vox": 15329,
+    "tumor_vox_all": 15329
+   },
+   "flare_sig": {
+    "shape": [
+     88,
+     512,
+     512
+    ],
+    "spacing": [
+     0.7227,
+     0.7227,
+     5.0
+    ],
+    "voxml": 0.0026111602783203125,
+    "organ_vox": 155401,
+    "tumor_vox": 7944,
+    "tumor_vox_all": 16081
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 9.152,
+   "tumor_vox_pct": 92.96,
+   "verdict": "rejected"
+  },
+  {
+   "query": "case_00087",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_1730",
+   "organ_pct": 1.542,
+   "tumor_pct": 1.47,
+   "query_sig": {
+    "shape": [
+     49,
+     512,
+     512
+    ],
+    "spacing": [
+     0.6914,
+     0.6914,
+     5.0
+    ],
+    "voxml": 0.0023902130126953127,
+    "organ_vox": 169623,
+    "tumor_vox": 15329,
+    "tumor_vox_all": 15329
+   },
+   "flare_sig": {
+    "shape": [
+     197,
+     512,
+     512
+    ],
+    "spacing": [
+     0.791,
+     0.791,
+     2.5
+    ],
+    "voxml": 0.0015642642974853516,
+    "organ_vox": 263245,
+    "tumor_vox": 7747,
+    "tumor_vox_all": 23083
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 35.565,
+   "tumor_vox_pct": 97.87,
+   "verdict": "rejected"
+  },
+  {
+   "query": "case_00105",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_0118",
+   "organ_pct": 1.136,
+   "tumor_pct": 2.86,
+   "query_sig": {
+    "shape": [
+     153,
+     512,
+     512
+    ],
+    "spacing": [
+     0.8926,
+     0.8926,
+     3.0
+    ],
+    "voxml": 0.002390087127685547,
+    "organ_vox": 128552,
+    "tumor_vox": 23271,
+    "tumor_vox_all": 23271
+   },
+   "flare_sig": {
+    "shape": [
+     153,
+     512,
+     512
+    ],
+    "spacing": [
+     0.8926,
+     0.8926,
+     3.0
+    ],
+    "voxml": 0.002390087127685547,
+    "organ_vox": 130030,
+    "tumor_vox": 6532,
+    "tumor_vox_all": 23959
+   },
+   "same_grid_axis_normalized": true,
+   "organ_vox_pct": 1.137,
+   "tumor_vox_pct": 256.26,
+   "organ_iou": 0.9308,
+   "tumor_iou": 0.9713,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "verdict": "CONFIRMED_TWIN"
+  },
+  {
+   "query": "case_00120",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_0146",
+   "organ_pct": 1.588,
+   "tumor_pct": 10.64,
+   "query_sig": {
+    "shape": [
+     285,
+     512,
+     512
+    ],
+    "spacing": [
+     0.832,
+     0.832,
+     1.0
+    ],
+    "voxml": 0.0006922760009765625,
+    "organ_vox": 349212,
+    "tumor_vox": 3647,
+    "tumor_vox_all": 3647
+   },
+   "flare_sig": {
+    "shape": [
+     285,
+     512,
+     512
+    ],
+    "spacing": [
+     0.832,
+     0.832,
+     1.0
+    ],
+    "voxml": 0.0006922760009765625,
+    "organ_vox": 354837,
+    "tumor_vox": 2339,
+    "tumor_vox_all": 4070
+   },
+   "same_grid_axis_normalized": true,
+   "organ_vox_pct": 1.585,
+   "tumor_vox_pct": 55.92,
+   "organ_iou": 0.9341,
+   "tumor_iou": 0.8961,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "verdict": "CONFIRMED_TWIN"
+  },
+  {
+   "query": "case_00124",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_1589",
+   "organ_pct": 1.68,
+   "tumor_pct": 7.16,
+   "query_sig": {
+    "shape": [
+     262,
+     512,
+     512
+    ],
+    "spacing": [
+     0.7031,
+     0.7031,
+     2.5
+    ],
+    "voxml": 0.0012359619140625,
+    "organ_vox": 359302,
+    "tumor_vox": 4303,
+    "tumor_vox_all": 4303
+   },
+   "flare_sig": {
+    "shape": [
+     262,
+     512,
+     512
+    ],
+    "spacing": [
+     0.7031,
+     0.7031,
+     2.5
+    ],
+    "voxml": 0.0012359619140625,
+    "organ_vox": 365442,
+    "tumor_vox": 4020,
+    "tumor_vox_all": 4640
+   },
+   "same_grid_axis_normalized": true,
+   "organ_vox_pct": 1.68,
+   "tumor_vox_pct": 7.04,
+   "organ_iou": 0.9494,
+   "tumor_iou": 0.9274,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "verdict": "CONFIRMED_TWIN"
+  },
+  {
+   "query": "case_00128",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_0097",
+   "organ_pct": 1.182,
+   "tumor_pct": 7.4,
+   "query_sig": {
+    "shape": [
+     206,
+     512,
+     512
+    ],
+    "spacing": [
+     0.8789,
+     0.8789,
+     2.5
+    ],
+    "voxml": 0.0019311894429849018,
+    "organ_vox": 254075,
+    "tumor_vox": 6673,
+    "tumor_vox_all": 6673
+   },
+   "flare_sig": {
+    "shape": [
+     206,
+     512,
+     512
+    ],
+    "spacing": [
+     0.8789,
+     0.8789,
+     2.5
+    ],
+    "voxml": 0.0019311894429849018,
+    "organ_vox": 257117,
+    "tumor_vox": 2984,
+    "tumor_vox_all": 7207
+   },
+   "same_grid_axis_normalized": true,
+   "organ_vox_pct": 1.183,
+   "tumor_vox_pct": 123.63,
+   "organ_iou": 0.9548,
+   "tumor_iou": 0.9259,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "verdict": "CONFIRMED_TWIN"
+  },
+  {
+   "query": "case_00128",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_1059",
+   "organ_pct": 1.307,
+   "tumor_pct": 4.71,
+   "query_sig": {
+    "shape": [
+     206,
+     512,
+     512
+    ],
+    "spacing": [
+     0.8789,
+     0.8789,
+     2.5
+    ],
+    "voxml": 0.0019311894429849018,
+    "organ_vox": 254075,
+    "tumor_vox": 6673,
+    "tumor_vox_all": 6673
+   },
+   "flare_sig": {
+    "shape": [
+     512,
+     512,
+     527
+    ],
+    "spacing": [
+     0.5,
+     0.8594,
+     0.8594
+    ],
+    "voxml": 0.0003692626953125,
+    "organ_vox": 1346374,
+    "tumor_vox": 15196,
+    "tumor_vox_all": 33326
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 81.129,
+   "tumor_vox_pct": 56.09,
+   "verdict": "rejected"
+  },
+  {
+   "query": "case_00128",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_1400",
+   "organ_pct": 1.711,
+   "tumor_pct": 5.4,
+   "query_sig": {
+    "shape": [
+     206,
+     512,
+     512
+    ],
+    "spacing": [
+     0.8789,
+     0.8789,
+     2.5
+    ],
+    "voxml": 0.0019311894429849018,
+    "organ_vox": 254075,
+    "tumor_vox": 6673,
+    "tumor_vox_all": 6673
+   },
+   "flare_sig": {
+    "shape": [
+     103,
+     512,
+     512
+    ],
+    "spacing": [
+     0.8203,
+     0.8203,
+     2.5
+    ],
+    "voxml": 0.0016822795383637868,
+    "organ_vox": 296746,
+    "tumor_vox": 4996,
+    "tumor_vox_all": 7268
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 14.38,
+   "tumor_vox_pct": 33.57,
+   "verdict": "rejected"
+  },
+  {
+   "query": "case_00128",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_2011",
+   "organ_pct": 1.023,
+   "tumor_pct": 0.23,
+   "query_sig": {
+    "shape": [
+     206,
+     512,
+     512
+    ],
+    "spacing": [
+     0.8789,
+     0.8789,
+     2.5
+    ],
+    "voxml": 0.0019311894429849018,
+    "organ_vox": 254075,
+    "tumor_vox": 6673,
+    "tumor_vox_all": 6673
+   },
+   "flare_sig": {
+    "shape": [
+     106,
+     512,
+     512
+    ],
+    "spacing": [
+     0.7422,
+     0.7422,
+     2.5
+    ],
+    "voxml": 0.0013771074824040852,
+    "organ_vox": 359988,
+    "tumor_vox": 4821,
+    "tumor_vox_all": 9342
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 29.421,
+   "tumor_vox_pct": 38.42,
+   "verdict": "rejected"
+  },
+  {
+   "query": "case_00148",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_0470",
+   "organ_pct": 1.087,
+   "tumor_pct": 3.45,
+   "query_sig": {
+    "shape": [
+     36,
+     512,
+     512
+    ],
+    "spacing": [
+     0.9062,
+     0.9062,
+     5.0
+    ],
+    "voxml": 0.0041064453125,
+    "organ_vox": 129643,
+    "tumor_vox": 6203,
+    "tumor_vox_all": 6203
+   },
+   "flare_sig": {
+    "shape": [
+     36,
+     512,
+     512
+    ],
+    "spacing": [
+     0.9062,
+     0.9062,
+     5.0
+    ],
+    "voxml": 0.0041064453125,
+    "organ_vox": 131066,
+    "tumor_vox": 3075,
+    "tumor_vox_all": 6425
+   },
+   "same_grid_axis_normalized": true,
+   "organ_vox_pct": 1.086,
+   "tumor_vox_pct": 101.72,
+   "organ_iou": 0.9689,
+   "tumor_iou": 0.9654,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "verdict": "CONFIRMED_TWIN"
+  },
+  {
+   "query": "case_00149",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_0488",
+   "organ_pct": 0.769,
+   "tumor_pct": 8.03,
+   "query_sig": {
+    "shape": [
+     97,
+     512,
+     512
+    ],
+    "spacing": [
+     0.7969,
+     0.7969,
+     3.0
+    ],
+    "voxml": 0.001905029296875,
+    "organ_vox": 291381,
+    "tumor_vox": 113708,
+    "tumor_vox_all": 113708
+   },
+   "flare_sig": {
+    "shape": [
+     146,
+     512,
+     512
+    ],
+    "spacing": [
+     0.8398,
+     0.8398,
+     5.0
+    ],
+    "voxml": 0.0035266876220703125,
+    "organ_vox": 158615,
+    "tumor_vox": 28372,
+    "tumor_vox_all": 66786
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 83.703,
+   "tumor_vox_pct": 300.78,
+   "verdict": "rejected"
+  },
+  {
+   "query": "case_00149",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_1464",
+   "organ_pct": 1.98,
+   "tumor_pct": 3.17,
+   "query_sig": {
+    "shape": [
+     97,
+     512,
+     512
+    ],
+    "spacing": [
+     0.7969,
+     0.7969,
+     3.0
+    ],
+    "voxml": 0.001905029296875,
+    "organ_vox": 291381,
+    "tumor_vox": 113708,
+    "tumor_vox_all": 113708
+   },
+   "flare_sig": {
+    "shape": [
+     97,
+     512,
+     512
+    ],
+    "spacing": [
+     0.7969,
+     0.7969,
+     3.0
+    ],
+    "voxml": 0.001905029296875,
+    "organ_vox": 297262,
+    "tumor_vox": 23388,
+    "tumor_vox_all": 117436
+   },
+   "same_grid_axis_normalized": true,
+   "organ_vox_pct": 1.978,
+   "tumor_vox_pct": 386.18,
+   "organ_iou": 0.9503,
+   "tumor_iou": 0.9683,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "verdict": "CONFIRMED_TWIN"
+  },
+  {
+   "query": "case_00152",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_0922",
+   "organ_pct": 1.769,
+   "tumor_pct": 9.05,
+   "query_sig": {
+    "shape": [
+     38,
+     512,
+     512
+    ],
+    "spacing": [
+     0.7227,
+     0.7227,
+     5.0
+    ],
+    "voxml": 0.0026111602783203125,
+    "organ_vox": 142107,
+    "tumor_vox": 4230,
+    "tumor_vox_all": 4230
+   },
+   "flare_sig": {
+    "shape": [
+     172,
+     512,
+     512
+    ],
+    "spacing": [
+     0.738,
+     0.738,
+     3.0
+    ],
+    "voxml": 0.00163393189231682,
+    "organ_vox": 223146,
+    "tumor_vox": 3614,
+    "tumor_vox_all": 7434
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 36.317,
+   "tumor_vox_pct": 17.04,
+   "verdict": "rejected"
+  },
+  {
+   "query": "case_00175",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_1338",
+   "organ_pct": 0.092,
+   "tumor_pct": 8.3,
+   "query_sig": {
+    "shape": [
+     107,
+     512,
+     512
+    ],
+    "spacing": [
+     0.7305,
+     0.7305,
+     5.0
+    ],
+    "voxml": 0.0026679229736328125,
+    "organ_vox": 163503,
+    "tumor_vox": 7497,
+    "tumor_vox_all": 7497
+   },
+   "flare_sig": {
+    "shape": [
+     64,
+     512,
+     512
+    ],
+    "spacing": [
+     0.9766,
+     0.9766,
+     4.0
+    ],
+    "voxml": 0.003814697265625,
+    "organ_vox": 114455,
+    "tumor_vox": 3298,
+    "tumor_vox_all": 5717
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 42.854,
+   "tumor_vox_pct": 127.32,
+   "verdict": "rejected"
+  },
+  {
+   "query": "case_00175",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_1662",
+   "organ_pct": 0.667,
+   "tumor_pct": 6.21,
+   "query_sig": {
+    "shape": [
+     107,
+     512,
+     512
+    ],
+    "spacing": [
+     0.7305,
+     0.7305,
+     5.0
+    ],
+    "voxml": 0.0026679229736328125,
+    "organ_vox": 163503,
+    "tumor_vox": 7497,
+    "tumor_vox_all": 7497
+   },
+   "flare_sig": {
+    "shape": [
+     76,
+     512,
+     512
+    ],
+    "spacing": [
+     0.6836,
+     0.6836,
+     3.0
+    ],
+    "voxml": 0.0014019012451171875,
+    "organ_vox": 313247,
+    "tumor_vox": 6577,
+    "tumor_vox_all": 13430
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 47.804,
+   "tumor_vox_pct": 13.99,
+   "verdict": "rejected"
+  },
+  {
+   "query": "case_00175",
+   "ds": "kits",
+   "organ": "kidney",
+   "flare": "flare23_FLARE23_2196",
+   "organ_pct": 0.361,
+   "tumor_pct": 4.53,
+   "query_sig": {
+    "shape": [
+     107,
+     512,
+     512
+    ],
+    "spacing": [
+     0.7305,
+     0.7305,
+     5.0
+    ],
+    "voxml": 0.0026679229736328125,
+    "organ_vox": 163503,
+    "tumor_vox": 7497,
+    "tumor_vox_all": 7497
+   },
+   "flare_sig": {
+    "shape": [
+     107,
+     512,
+     512
+    ],
+    "spacing": [
+     0.7305,
+     0.7305,
+     5.0
+    ],
+    "voxml": 0.0026679229736328125,
+    "organ_vox": 164094,
+    "tumor_vox": 4505,
+    "tumor_vox_all": 7853
+   },
+   "same_grid_axis_normalized": true,
+   "organ_vox_pct": 0.36,
+   "tumor_vox_pct": 66.42,
+   "organ_iou": 0.957,
+   "tumor_iou": 0.9547,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "verdict": "CONFIRMED_TWIN"
+  },
+  {
+   "query": "volume-101",
+   "ds": "lits",
+   "organ": "liver",
+   "flare": "flare23_FLARE23_0680",
+   "organ_pct": 1.17,
+   "tumor_pct": 5.61,
+   "verdict": "coincidence_lits_census",
+   "note": "census: FLARE23_0680 is a confirmed LiTS re-share mapping to a NON-query volume (in nonquery-pool list: True; in query-twin list: False)"
+  },
+  {
+   "query": "volume-110",
+   "ds": "lits",
+   "organ": "liver",
+   "flare": "flare23_FLARE23_2135",
+   "organ_pct": 1.49,
+   "tumor_pct": 9.33,
+   "verdict": "coincidence_lits_census",
+   "note": "census: FLARE23_2135 is a confirmed LiTS re-share mapping to a NON-query volume (in nonquery-pool list: True; in query-twin list: False)"
+  },
+  {
+   "query": "volume-116",
+   "ds": "lits",
+   "organ": "liver",
+   "flare": "flare23_FLARE23_1115",
+   "organ_pct": 0.483,
+   "tumor_pct": 12.7,
+   "verdict": "coincidence_lits_census",
+   "note": "census: FLARE23_1115 is a confirmed LiTS re-share mapping to a NON-query volume (in nonquery-pool list: True; in query-twin list: False)"
+  },
+  {
+   "query": "volume-37",
+   "ds": "lits",
+   "organ": "liver",
+   "flare": "flare23_FLARE23_1254",
+   "organ_pct": 1.471,
+   "tumor_pct": 0.13,
+   "verdict": "coincidence_lits_census",
+   "note": "census: FLARE23_1254 is a confirmed LiTS re-share mapping to a NON-query volume (in nonquery-pool list: True; in query-twin list: False)"
+  },
+  {
+   "query": "volume-54",
+   "ds": "lits",
+   "organ": "liver",
+   "flare": "flare23_FLARE23_0329",
+   "organ_pct": 0.239,
+   "tumor_pct": 12.44,
+   "verdict": "coincidence_lits_census",
+   "note": "census: FLARE23_0329 is a confirmed LiTS re-share mapping to a NON-query volume (in nonquery-pool list: True; in query-twin list: False)"
+  },
+  {
+   "query": "pancreas_015",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_0431",
+   "organ_pct": 1.519,
+   "tumor_pct": 1.91,
+   "query_sig": {
+    "shape": [
+     87,
+     512,
+     512
+    ],
+    "spacing": null,
+    "voxml": 0.0013409648405560096,
+    "organ_vox": 58307,
+    "tumor_vox": 6115
+   },
+   "flare_sig": {
+    "shape": [
+     37,
+     512,
+     512
+    ],
+    "spacing": [
+     0.7812,
+     0.7812,
+     5.0
+    ],
+    "voxml": 0.0030517578125,
+    "organ_vox": 25241,
+    "tumor_vox": 2738,
+    "tumor_vox_all": 2738
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 131.001,
+   "tumor_vox_pct": 123.34,
+   "verdict": "rejected"
+  },
+  {
+   "query": "pancreas_015",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_1827",
+   "organ_pct": 0.695,
+   "tumor_pct": 4.76,
+   "query_sig": {
+    "shape": [
+     87,
+     512,
+     512
+    ],
+    "spacing": null,
+    "voxml": 0.0013409648405560096,
+    "organ_vox": 58307,
+    "tumor_vox": 6115
+   },
+   "flare_sig": {
+    "shape": [
+     101,
+     512,
+     512
+    ],
+    "spacing": [
+     0.7031,
+     0.7031,
+     2.5
+    ],
+    "voxml": 0.0012359619140625,
+    "organ_vox": 62837,
+    "tumor_vox": 4741,
+    "tumor_vox_all": 6964
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 7.209,
+   "tumor_vox_pct": 28.98,
+   "verdict": "rejected"
+  },
+  {
+   "query": "pancreas_045",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_1722",
+   "organ_pct": 1.331,
+   "tumor_pct": 3.66,
+   "query_sig": {
+    "shape": [
+     41,
+     512,
+     512
+    ],
+    "spacing": null,
+    "voxml": 0.003332192952446117,
+    "organ_vox": 18468,
+    "tumor_vox": 2923
+   },
+   "flare_sig": {
+    "shape": [
+     90,
+     512,
+     512
+    ],
+    "spacing": [
+     0.6621,
+     0.6621,
+     2.5
+    ],
+    "voxml": 0.0010959708772137232,
+    "organ_vox": 56919,
+    "tumor_vox": 7459,
+    "tumor_vox_all": 9221
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 67.554,
+   "tumor_vox_pct": 60.81,
+   "verdict": "rejected"
+  },
+  {
+   "query": "pancreas_064",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_1695",
+   "organ_pct": 1.609,
+   "tumor_pct": 4.29,
+   "query_sig": {
+    "shape": [
+     93,
+     512,
+     512
+    ],
+    "spacing": null,
+    "voxml": 0.002000663570006636,
+    "organ_vox": 52283,
+    "tumor_vox": 9042
+   },
+   "flare_sig": {
+    "shape": [
+     137,
+     512,
+     512
+    ],
+    "spacing": [
+     0.7422,
+     0.7422,
+     2.5
+    ],
+    "voxml": 0.0013771074824040852,
+    "organ_vox": 77188,
+    "tumor_vox": 9343,
+    "tumor_vox_all": 13725
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 32.265,
+   "tumor_vox_pct": 3.22,
+   "verdict": "rejected"
+  },
+  {
+   "query": "pancreas_078",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_0491",
+   "organ_pct": 0.999,
+   "tumor_pct": 4.38,
+   "query_sig": {
+    "shape": [
+     76,
+     512,
+     512
+    ],
+    "spacing": null,
+    "voxml": 0.0012540983606557376,
+    "organ_vox": 70014,
+    "tumor_vox": 1220
+   },
+   "flare_sig": {
+    "shape": [
+     107,
+     512,
+     512
+    ],
+    "spacing": [
+     0.8984,
+     0.8984,
+     2.5
+    ],
+    "voxml": 0.002017976995558115,
+    "organ_vox": 43165,
+    "tumor_vox": 791,
+    "tumor_vox_all": 791
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 62.201,
+   "tumor_vox_pct": 54.24,
+   "verdict": "rejected"
+  },
+  {
+   "query": "pancreas_083",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_0576",
+   "organ_pct": 1.135,
+   "tumor_pct": 9.6,
+   "query_sig": {
+    "shape": [
+     83,
+     512,
+     512
+    ],
+    "spacing": null,
+    "voxml": 0.0014800403516356823,
+    "organ_vox": 75257,
+    "tumor_vox": 6939
+   },
+   "flare_sig": {
+    "shape": [
+     91,
+     512,
+     512
+    ],
+    "spacing": [
+     0.9512,
+     0.9512,
+     5.0
+    ],
+    "voxml": 0.004523640812840384,
+    "organ_vox": 24351,
+    "tumor_vox": 2511,
+    "tumor_vox_all": 2511
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 209.051,
+   "tumor_vox_pct": 176.34,
+   "verdict": "rejected"
+  },
+  {
+   "query": "pancreas_101",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_1213",
+   "organ_pct": 0.297,
+   "tumor_pct": 10.93,
+   "query_sig": {
+    "shape": [
+     98,
+     512,
+     512
+    ],
+    "spacing": null,
+    "voxml": 0.0028434197886647457,
+    "organ_vox": 47602,
+    "tumor_vox": 3123
+   },
+   "flare_sig": {
+    "shape": [
+     79,
+     512,
+     512
+    ],
+    "spacing": [
+     0.9766,
+     0.9766,
+     2.5
+    ],
+    "voxml": 0.002384183462709757,
+    "organ_vox": 56571,
+    "tumor_vox": 2697,
+    "tumor_vox_all": 4183
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 15.854,
+   "tumor_vox_pct": 15.8,
+   "verdict": "rejected"
+  },
+  {
+   "query": "pancreas_119",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_0657",
+   "organ_pct": 1.966,
+   "tumor_pct": 1.36,
+   "query_sig": {
+    "shape": [
+     85,
+     512,
+     512
+    ],
+    "spacing": null,
+    "voxml": 0.0020179609086106707,
+    "organ_vox": 51646,
+    "tumor_vox": 7572
+   },
+   "flare_sig": {
+    "shape": [
+     71,
+     512,
+     512
+    ],
+    "spacing": [
+     0.8164,
+     0.8164,
+     2.5
+    ],
+    "voxml": 0.0016662969393657079,
+    "organ_vox": 63802,
+    "tumor_vox": 6893,
+    "tumor_vox_all": 9299
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 19.053,
+   "tumor_vox_pct": 9.85,
+   "verdict": "rejected"
+  },
+  {
+   "query": "pancreas_119",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_1667",
+   "organ_pct": 1.018,
+   "tumor_pct": 12.19,
+   "query_sig": {
+    "shape": [
+     85,
+     512,
+     512
+    ],
+    "spacing": null,
+    "voxml": 0.0020179609086106707,
+    "organ_vox": 51646,
+    "tumor_vox": 7572
+   },
+   "flare_sig": {
+    "shape": [
+     101,
+     512,
+     512
+    ],
+    "spacing": [
+     0.7676,
+     0.7676,
+     2.5
+    ],
+    "voxml": 0.0014729399874341099,
+    "organ_vox": 70046,
+    "tumor_vox": 7261,
+    "tumor_vox_all": 9244
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 26.268,
+   "tumor_vox_pct": 4.28,
+   "verdict": "rejected"
+  },
+  {
+   "query": "pancreas_157",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_1482",
+   "organ_pct": 1.947,
+   "tumor_pct": 12.64,
+   "query_sig": {
+    "shape": [
+     77,
+     512,
+     512
+    ],
+    "spacing": null,
+    "voxml": 0.0015264333581533878,
+    "organ_vox": 77551,
+    "tumor_vox": 2686
+   },
+   "flare_sig": {
+    "shape": [
+     83,
+     512,
+     512
+    ],
+    "spacing": [
+     0.9473,
+     0.9473,
+     2.5
+    ],
+    "voxml": 0.002243282104609854,
+    "organ_vox": 53798,
+    "tumor_vox": 1249,
+    "tumor_vox_all": 1624
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 44.152,
+   "tumor_vox_pct": 115.05,
+   "verdict": "rejected"
+  },
+  {
+   "query": "pancreas_157",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_2198",
+   "organ_pct": 1.025,
+   "tumor_pct": 0.73,
+   "query_sig": {
+    "shape": [
+     77,
+     512,
+     512
+    ],
+    "spacing": null,
+    "voxml": 0.0015264333581533878,
+    "organ_vox": 77551,
+    "tumor_vox": 2686
+   },
+   "flare_sig": {
+    "shape": [
+     72,
+     512,
+     512
+    ],
+    "spacing": [
+     0.8926,
+     0.8926,
+     3.0
+    ],
+    "voxml": 0.0023900864892639644,
+    "organ_vox": 49005,
+    "tumor_vox": 1345,
+    "tumor_vox_all": 1726
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 58.251,
+   "tumor_vox_pct": 99.7,
+   "verdict": "rejected"
+  },
+  {
+   "query": "pancreas_191",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_1722",
+   "organ_pct": 1.315,
+   "tumor_pct": 10.88,
+   "query_sig": {
+    "shape": [
+     57,
+     512,
+     512
+    ],
+    "spacing": null,
+    "voxml": 0.0013632924799515812,
+    "organ_vox": 45174,
+    "tumor_vox": 6609
+   },
+   "flare_sig": {
+    "shape": [
+     90,
+     512,
+     512
+    ],
+    "spacing": [
+     0.6621,
+     0.6621,
+     2.5
+    ],
+    "voxml": 0.0010959708772137232,
+    "organ_vox": 56919,
+    "tumor_vox": 7459,
+    "tumor_vox_all": 9221
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 20.635,
+   "tumor_vox_pct": 11.4,
+   "verdict": "rejected"
+  },
+  {
+   "query": "pancreas_200",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_1003",
+   "organ_pct": 1.081,
+   "tumor_pct": 5.09,
+   "query_sig": {
+    "shape": [
+     89,
+     512,
+     512
+    ],
+    "spacing": null,
+    "voxml": 0.002206208425720621,
+    "organ_vox": 46058,
+    "tumor_vox": 2706
+   },
+   "flare_sig": {
+    "shape": [
+     98,
+     512,
+     512
+    ],
+    "spacing": [
+     0.707,
+     0.707,
+     2.5
+    ],
+    "voxml": 0.0012497321283446183,
+    "organ_vox": 82200,
+    "tumor_vox": 3998,
+    "tumor_vox_all": 5030
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 43.968,
+   "tumor_vox_pct": 32.32,
+   "verdict": "rejected"
+  },
+  {
+   "query": "pancreas_201",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_1764",
+   "organ_pct": 1.287,
+   "tumor_pct": 0.0,
+   "query_sig": {
+    "shape": null,
+    "spacing": null,
+    "voxml": 0.0010386009810194072,
+    "organ_vox": 36385,
+    "tumor_vox": 4689
+   },
+   "flare_sig": {
+    "shape": [
+     76,
+     512,
+     512
+    ],
+    "spacing": [
+     0.6445,
+     0.6445,
+     2.5
+    ],
+    "voxml": 0.0010385505622254243,
+    "organ_vox": 35927,
+    "tumor_vox": 4083,
+    "tumor_vox_all": 4689
+   },
+   "same_grid_axis_normalized": true,
+   "organ_vox_pct": 1.275,
+   "tumor_vox_pct": 14.84,
+   "tumor_vox_all_pct": 0.0,
+   "verdict": "CONFIRMED_TWIN",
+   "note": "tumor label voxel-identical (verbatim re-share)"
+  },
+  {
+   "query": "pancreas_218",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_0433",
+   "organ_pct": 1.32,
+   "tumor_pct": 14.98,
+   "query_sig": {
+    "shape": [
+     99,
+     512,
+     512
+    ],
+    "spacing": null,
+    "voxml": 0.0014178638351030606,
+    "organ_vox": 41547,
+    "tumor_vox": 1601
+   },
+   "flare_sig": {
+    "shape": [
+     81,
+     512,
+     512
+    ],
+    "spacing": [
+     0.7402,
+     0.7402,
+     2.5
+    ],
+    "voxml": 0.0013698660011872122,
+    "organ_vox": 43674,
+    "tumor_vox": 1946,
+    "tumor_vox_all": 1946
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 4.87,
+   "tumor_vox_pct": 17.73,
+   "verdict": "rejected"
+  },
+  {
+   "query": "pancreas_218",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_0851",
+   "organ_pct": 0.494,
+   "tumor_pct": 14.65,
+   "query_sig": {
+    "shape": [
+     99,
+     512,
+     512
+    ],
+    "spacing": null,
+    "voxml": 0.0014178638351030606,
+    "organ_vox": 41547,
+    "tumor_vox": 1601
+   },
+   "flare_sig": {
+    "shape": [
+     89,
+     512,
+     512
+    ],
+    "spacing": [
+     0.6445,
+     0.6445,
+     2.5
+    ],
+    "voxml": 0.0010385505622254243,
+    "organ_vox": 56573,
+    "tumor_vox": 1903,
+    "tumor_vox_all": 1903
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 26.56,
+   "tumor_vox_pct": 15.87,
+   "verdict": "rejected"
+  },
+  {
+   "query": "pancreas_226",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_0304",
+   "organ_pct": 1.386,
+   "tumor_pct": 0.87,
+   "query_sig": {
+    "shape": [
+     104,
+     512,
+     512
+    ],
+    "spacing": null,
+    "voxml": 0.0017135167464114834,
+    "organ_vox": 28219,
+    "tumor_vox": 3344
+   },
+   "flare_sig": {
+    "shape": [
+     47,
+     512,
+     512
+    ],
+    "spacing": [
+     0.6445,
+     0.6445,
+     5.0
+    ],
+    "voxml": 0.0020771011244508485,
+    "organ_vox": 23621,
+    "tumor_vox": 2538,
+    "tumor_vox_all": 2782
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 19.466,
+   "tumor_vox_pct": 31.76,
+   "verdict": "rejected"
+  },
+  {
+   "query": "pancreas_241",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_0311",
+   "organ_pct": 1.315,
+   "tumor_pct": 2.03,
+   "query_sig": {
+    "shape": [
+     99,
+     512,
+     512
+    ],
+    "spacing": null,
+    "voxml": 0.0015960264900662252,
+    "organ_vox": 35728,
+    "tumor_vox": 4530
+   },
+   "flare_sig": {
+    "shape": [
+     87,
+     512,
+     512
+    ],
+    "spacing": [
+     0.7656,
+     0.7656,
+     2.5
+    ],
+    "voxml": 0.0014654541015625,
+    "organ_vox": 38390,
+    "tumor_vox": 2874,
+    "tumor_vox_all": 5039
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 6.934,
+   "tumor_vox_pct": 57.62,
+   "verdict": "rejected"
+  },
+  {
+   "query": "pancreas_259",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_0642",
+   "organ_pct": 0.947,
+   "tumor_pct": 13.3,
+   "query_sig": {
+    "shape": [
+     88,
+     512,
+     512
+    ],
+    "spacing": null,
+    "voxml": 0.001778458112997495,
+    "organ_vox": 24678,
+    "tumor_vox": 3593
+   },
+   "flare_sig": {
+    "shape": [
+     73,
+     512,
+     512
+    ],
+    "spacing": [
+     0.6133,
+     0.6133,
+     2.5
+    ],
+    "voxml": 0.0009402839979158273,
+    "organ_vox": 47151,
+    "tumor_vox": 5092,
+    "tumor_vox_all": 6002
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 47.662,
+   "tumor_vox_pct": 29.44,
+   "verdict": "rejected"
+  },
+  {
+   "query": "pancreas_285",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_2065",
+   "organ_pct": 1.348,
+   "tumor_pct": 13.67,
+   "query_sig": {
+    "shape": [
+     113,
+     512,
+     512
+    ],
+    "spacing": null,
+    "voxml": 0.0017278617710583153,
+    "organ_vox": 30846,
+    "tumor_vox": 1389
+   },
+   "flare_sig": {
+    "shape": [
+     87,
+     512,
+     512
+    ],
+    "spacing": [
+     0.8008,
+     0.8008,
+     2.5
+    ],
+    "voxml": 0.0016031255712734094,
+    "organ_vox": 32855,
+    "tumor_vox": 1197,
+    "tumor_vox_all": 1731
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 6.115,
+   "tumor_vox_pct": 16.04,
+   "verdict": "rejected"
+  },
+  {
+   "query": "pancreas_289",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_1119",
+   "organ_pct": 0.228,
+   "tumor_pct": 12.23,
+   "query_sig": {
+    "shape": [
+     96,
+     512,
+     512
+    ],
+    "spacing": null,
+    "voxml": 0.0011824175824175823,
+    "organ_vox": 59448,
+    "tumor_vox": 4550
+   },
+   "flare_sig": {
+    "shape": [
+     111,
+     512,
+     512
+    ],
+    "spacing": [
+     0.8984,
+     0.8984,
+     2.5
+    ],
+    "voxml": 0.002017976995558115,
+    "organ_vox": 34732,
+    "tumor_vox": 2369,
+    "tumor_vox_all": 3037
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 71.162,
+   "tumor_vox_pct": 92.06,
+   "verdict": "rejected"
+  },
+  {
+   "query": "pancreas_289",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_1868",
+   "organ_pct": 1.065,
+   "tumor_pct": 1.51,
+   "query_sig": {
+    "shape": [
+     96,
+     512,
+     512
+    ],
+    "spacing": null,
+    "voxml": 0.0011824175824175823,
+    "organ_vox": 59448,
+    "tumor_vox": 4550
+   },
+   "flare_sig": {
+    "shape": [
+     40,
+     512,
+     512
+    ],
+    "spacing": [
+     0.8184,
+     0.8184,
+     7.5
+    ],
+    "voxml": 0.005022836109857103,
+    "organ_vox": 13839,
+    "tumor_vox": 1055,
+    "tumor_vox_all": 1055
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 329.569,
+   "tumor_vox_pct": 331.28,
+   "verdict": "rejected"
+  },
+  {
+   "query": "pancreas_289",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_1915",
+   "organ_pct": 0.702,
+   "tumor_pct": 0.94,
+   "query_sig": {
+    "shape": [
+     96,
+     512,
+     512
+    ],
+    "spacing": null,
+    "voxml": 0.0011824175824175823,
+    "organ_vox": 59448,
+    "tumor_vox": 4550
+   },
+   "flare_sig": {
+    "shape": [
+     85,
+     512,
+     512
+    ],
+    "spacing": [
+     0.7812,
+     0.7812,
+     2.5
+    ],
+    "voxml": 0.00152587890625,
+    "organ_vox": 45721,
+    "tumor_vox": 3149,
+    "tumor_vox_all": 3490
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 30.023,
+   "tumor_vox_pct": 44.49,
+   "verdict": "rejected"
+  },
+  {
+   "query": "pancreas_301",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_2001",
+   "organ_pct": 0.747,
+   "tumor_pct": 3.26,
+   "query_sig": {
+    "shape": [
+     83,
+     512,
+     512
+    ],
+    "spacing": null,
+    "voxml": 0.00173828125,
+    "organ_vox": 17838,
+    "tumor_vox": 1024
+   },
+   "flare_sig": {
+    "shape": [
+     87,
+     512,
+     512
+    ],
+    "spacing": [
+     0.7422,
+     0.7422,
+     2.5
+    ],
+    "voxml": 0.0013771074824040852,
+    "organ_vox": 22362,
+    "tumor_vox": 1143,
+    "tumor_vox_all": 1339
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 20.231,
+   "tumor_vox_pct": 10.41,
+   "verdict": "rejected"
+  },
+  {
+   "query": "pancreas_315",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_0203",
+   "organ_pct": 1.46,
+   "tumor_pct": 3.08,
+   "query_sig": {
+    "shape": [
+     93,
+     512,
+     512
+    ],
+    "spacing": null,
+    "voxml": 0.0018301655426118946,
+    "organ_vox": 36531,
+    "tumor_vox": 3262
+   },
+   "flare_sig": {
+    "shape": [
+     51,
+     512,
+     512
+    ],
+    "spacing": [
+     0.709,
+     0.709,
+     5.0
+    ],
+    "voxml": 0.0025132916844456334,
+    "organ_vox": 26989,
+    "tumor_vox": 2068,
+    "tumor_vox_all": 2450
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 35.355,
+   "tumor_vox_pct": 57.74,
+   "verdict": "rejected"
+  },
+  {
+   "query": "pancreas_315",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_1628",
+   "organ_pct": 0.375,
+   "tumor_pct": 10.15,
+   "query_sig": {
+    "shape": [
+     93,
+     512,
+     512
+    ],
+    "spacing": null,
+    "voxml": 0.0018301655426118946,
+    "organ_vox": 36531,
+    "tumor_vox": 3262
+   },
+   "flare_sig": {
+    "shape": [
+     87,
+     512,
+     512
+    ],
+    "spacing": [
+     0.9766,
+     0.9766,
+     2.5
+    ],
+    "voxml": 0.002384183462709757,
+    "organ_vox": 27931,
+    "tumor_vox": 1896,
+    "tumor_vox_all": 2275
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 30.79,
+   "tumor_vox_pct": 72.05,
+   "verdict": "rejected"
+  },
+  {
+   "query": "pancreas_336",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_0797",
+   "organ_pct": 0.462,
+   "tumor_pct": 4.55,
+   "query_sig": {
+    "shape": [
+     92,
+     512,
+     512
+    ],
+    "spacing": null,
+    "voxml": 0.0018471337579617833,
+    "organ_vox": 33873,
+    "tumor_vox": 2983
+   },
+   "flare_sig": {
+    "shape": [
+     101,
+     512,
+     512
+    ],
+    "spacing": [
+     0.9766,
+     0.9766,
+     2.5
+    ],
+    "voxml": 0.002384183462709757,
+    "organ_vox": 26351,
+    "tumor_vox": 2026,
+    "tumor_vox_all": 2212
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 28.545,
+   "tumor_vox_pct": 47.24,
+   "verdict": "rejected"
+  },
+  {
+   "query": "pancreas_336",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_1844",
+   "organ_pct": 0.305,
+   "tumor_pct": 8.77,
+   "query_sig": {
+    "shape": [
+     92,
+     512,
+     512
+    ],
+    "spacing": null,
+    "voxml": 0.0018471337579617833,
+    "organ_vox": 33873,
+    "tumor_vox": 2983
+   },
+   "flare_sig": {
+    "shape": [
+     95,
+     512,
+     512
+    ],
+    "spacing": [
+     0.832,
+     0.832,
+     2.5
+    ],
+    "voxml": 0.0017306890105830064,
+    "organ_vox": 36028,
+    "tumor_vox": 2879,
+    "tumor_vox_all": 3489
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 5.981,
+   "tumor_vox_pct": 3.61,
+   "verdict": "rejected"
+  },
+  {
+   "query": "pancreas_348",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_1583",
+   "organ_pct": 0.109,
+   "tumor_pct": 13.68,
+   "query_sig": {
+    "shape": [
+     89,
+     512,
+     512
+    ],
+    "spacing": null,
+    "voxml": 0.0013781512605042015,
+    "organ_vox": 33372,
+    "tumor_vox": 1190
+   },
+   "flare_sig": {
+    "shape": [
+     81,
+     512,
+     512
+    ],
+    "spacing": [
+     0.6934,
+     0.6934,
+     2.5
+    ],
+    "voxml": 0.001201866817428119,
+    "organ_vox": 38282,
+    "tumor_vox": 1301,
+    "tumor_vox_all": 1584
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 12.826,
+   "tumor_vox_pct": 8.53,
+   "verdict": "rejected"
+  },
+  {
+   "query": "pancreas_356",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_1594",
+   "organ_pct": 1.926,
+   "tumor_pct": 1.94,
+   "query_sig": {
+    "shape": [
+     84,
+     512,
+     512
+    ],
+    "spacing": null,
+    "voxml": 0.0022947845804988662,
+    "organ_vox": 48396,
+    "tumor_vox": 2205
+   },
+   "flare_sig": {
+    "shape": [
+     134,
+     512,
+     512
+    ],
+    "spacing": [
+     0.6602,
+     0.6602,
+     3.0
+    ],
+    "voxml": 0.0013074178788812674,
+    "organ_vox": 83407,
+    "tumor_vox": 3485,
+    "tumor_vox_all": 3948
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 41.976,
+   "tumor_vox_pct": 36.73,
+   "verdict": "rejected"
+  },
+  {
+   "query": "pancreas_369",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_1932",
+   "organ_pct": 0.569,
+   "tumor_pct": 8.18,
+   "query_sig": {
+    "shape": [
+     97,
+     512,
+     512
+    ],
+    "spacing": null,
+    "voxml": 0.0023823168235775688,
+    "organ_vox": 58604,
+    "tumor_vox": 2443
+   },
+   "flare_sig": {
+    "shape": [
+     117,
+     512,
+     512
+    ],
+    "spacing": [
+     0.8984,
+     0.8984,
+     2.5
+    ],
+    "voxml": 0.002017976995558115,
+    "organ_vox": 68848,
+    "tumor_vox": 2140,
+    "tumor_vox_all": 2668
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 14.879,
+   "tumor_vox_pct": 14.16,
+   "verdict": "rejected"
+  },
+  {
+   "query": "pancreas_404",
+   "ds": "msd",
+   "organ": "pancreas",
+   "flare": "flare23_FLARE23_0433",
+   "organ_pct": 1.788,
+   "tumor_pct": 7.87,
+   "query_sig": {
+    "shape": [
+     105,
+     512,
+     512
+    ],
+    "spacing": null,
+    "voxml": 0.0019339622641509433,
+    "organ_vox": 31535,
+    "tumor_vox": 1272
+   },
+   "flare_sig": {
+    "shape": [
+     81,
+     512,
+     512
+    ],
+    "spacing": [
+     0.7402,
+     0.7402,
+     2.5
+    ],
+    "voxml": 0.0013698660011872122,
+    "organ_vox": 43674,
+    "tumor_vox": 1946,
+    "tumor_vox_all": 1946
+   },
+   "same_grid_axis_normalized": false,
+   "organ_vox_pct": 27.795,
+   "tumor_vox_pct": 34.64,
+   "verdict": "rejected"
+  }
+ ]
+}

@@ -13,7 +13,7 @@ Numbering follows the submitted draft. "Reproduce" points to the section of
 | Table 6 | Reasoning suite, 113 reference-evaluable cases | `queries/query_suite_eval.py` | `results/queries/query_suite_tab6.json` | A3 |
 | Table 7 | Reasoning suite, 576 FLARE23 predicted graphs | `queries/query_suite_flare23.py` | `results/queries/query_suite_flare23.json` | A3 |
 | Table 8 | Primary retrieval benchmark (113 pool, all 8 configs + (iii′)) | `scripts/retrieval/baselines_tab7_tab8.py`, `retrieval_tables_789.py`, `retrieval_iii_prime.py` | `results/retrieval/dedup/baselines_tab7_tab8.json` (canonical, incl. (v)–(vii′) paired stats), `retrieval_tab7_primary.json`, `retrieval_iii_prime.json` | A1 (KG rows), C (baseline features) |
-| Table 9 | Large-pool stress test — 1,347 de-duplicated pool; baselines on the 656-case CT sub-pool | same three scripts | `results/retrieval/dedup/retrieval_tab8_stress.json` + `baselines_tab7_tab8.json` (`tab8_subpool`) | A1 / C |
+| Table 9 | Large-pool stress test — **1,334** de-duplicated pool; baselines on the **647**-case CT sub-pool | same three scripts | `results/retrieval/dedup/retrieval_tab8_stress.json` + `baselines_tab7_tab8.json` (`tab8_subpool`); stratum-(c) per-metric CIs: `tab9c_metric_cis.json` | A1 / C |
 | Table 10 | Stratified retrieval incl. the (iii′) rows | `retrieval_tables_789.py`, `retrieval_iii_prime.py` | `results/retrieval/dedup/retrieval_tab9_stratified.json`, `retrieval_iii_prime.json` (`tab9_*`) | A1 |
 | Table 11 | Statement-level report precision (containment v2) | `scripts/summarization/summ_metrics.py` (frozen), `scripts/kg/containment_reextraction_113_predicted.py` (v2 row + overall) | `results/summarization/summarization_metrics.json`, `results/kg/containment_reextraction_113_{gt,predicted}.json` | A4 / C |
 | Table 12 | LLM relevance-judge study (Qwen3-32B) | `scripts/llm_expert/llm_expert_local.py`, `llm_expert_comparators.py` | `results/llm_expert/llm_expert_study_qwen3_32b.json`, `llm_expert_comparators_qwen3_32b.json` | C (32B judge, 2 GPUs) |
@@ -26,5 +26,5 @@ Numbering follows the submitted draft. "Reproduce" points to the section of
 | Figs 3, B.4–B.6 | Application screenshots | application UI (not in this repository) | — | — |
 
 Supersession rule: where a frozen file and a `results/retrieval/dedup/` file disagree, the
-**dedup file is canonical** (de-duplicated 1,347 pool; the paper's numbers). Frozen originals
+**dedup file is canonical** (de-duplicated 1,334 pool after the 2026-09-20 axis-normalized census — `results/audit/axis_normalized_twin_census.json`; the paper's numbers). Frozen originals
 are retained for provenance. Canonical example: Table 8 row (vii) Δ = −0.263 [−0.290, −0.237].

@@ -67,7 +67,7 @@
    "mismatch@10": 0.0,
    "dmAP_vs_ii": {
     "n_common": 109,
-    "delta": -0.061,
+    "delta": -0.062,
     "ci95": [
      -0.074,
      -0.05
@@ -79,16 +79,16 @@
    "n_queries": 109,
    "P@5": 0.998,
    "P@10": 0.994,
-   "mAP": 0.74,
+   "mAP": 0.738,
    "nDCG": 0.996,
    "spurious@10": 0.0,
    "mismatch@10": 0.0,
    "dmAP_vs_ii": {
     "n_common": 109,
-    "delta": -0.258,
+    "delta": -0.261,
     "ci95": [
-     -0.279,
-     -0.239
+     -0.281,
+     -0.242
     ],
     "p_raw": 4.999750012499375e-05
    }
@@ -240,24 +240,24 @@
  },
  "tab9_c_flare23_to_single": {
   "(ii) proposed": {
-   "n_queries": 516,
-   "P@5": 0.519,
-   "P@10": 0.7,
-   "mAP": 0.65,
-   "nDCG": 0.635,
+   "n_queries": 504,
+   "P@5": 0.522,
+   "P@10": 0.703,
+   "mAP": 0.652,
+   "nDCG": 0.637,
    "spurious@10": 0.0,
    "mismatch@10": null
   },
   "(iii) coverage-blind": {
-   "n_queries": 516,
-   "P@5": 0.519,
-   "P@10": 0.7,
-   "mAP": 0.65,
-   "nDCG": 0.635,
+   "n_queries": 504,
+   "P@5": 0.522,
+   "P@10": 0.703,
+   "mAP": 0.652,
+   "nDCG": 0.637,
    "spurious@10": 0.0,
    "mismatch@10": null,
    "dmAP_vs_ii": {
-    "n_common": 516,
+    "n_common": 504,
     "delta": 0.0,
     "ci95": [
      0.0,
@@ -267,19 +267,19 @@
    }
   },
   "(iii') imputed-absent": {
-   "n_queries": 516,
-   "P@5": 0.911,
-   "P@10": 0.836,
+   "n_queries": 504,
+   "P@5": 0.913,
+   "P@10": 0.837,
    "mAP": 1.0,
    "nDCG": 1.0,
    "spurious@10": 0.0,
    "mismatch@10": null,
    "dmAP_vs_ii": {
-    "n_common": 516,
-    "delta": 0.35,
+    "n_common": 504,
+    "delta": 0.348,
     "ci95": [
-     0.333,
-     0.368
+     0.33,
+     0.366
     ],
     "p_raw": 4.999750012499375e-05
    }

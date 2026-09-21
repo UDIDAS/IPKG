@@ -18,8 +18,8 @@ file below and in [`TABLE_MAP.md`](TABLE_MAP.md).
 | Result | Value | Source |
 |:--|:--|:--|
 | Primary retrieval benchmark, predicted + γ (Table 8, config ii) | mAP **0.972** (113-case pool) | `results/retrieval/dedup/baselines_tab7_tab8.json` |
-| Large-pool stress test on the de-duplicated 1,347-case pool (Table 9) | mAP **0.997**; baselines ≤ 0.460, all Holm p ≤ 3.5×10⁻⁴ below (ii) | same file + `retrieval_tab8_stress.json` |
-| Duplicate-scan audits: **78 twins removed** from the cross-dataset pool; FLARE23 re-shares **114/131** LiTS volumes | pool 1,425 → **1,347** | `results/audit/` (three audit files) |
+| Large-pool stress test on the de-duplicated **1,334**-case pool (Table 9) | mAP **0.997** (647-case CT sub-pool; full pool 0.999); baselines ≤ 0.471, all Holm p ≤ 3.5×10⁻⁴ below (ii) | same file + `retrieval_tab8_stress.json` |
+| Duplicate-scan audits: **91 twins removed** from the cross-dataset pool (78 + 13 by the axis-normalized census, which caught the axis-transposed KiTS re-shares the positional test missed); FLARE23 re-shares **114/131** LiTS volumes | pool 1,425 → **1,334** | `results/audit/` (four audit files) |
 | Statement-level report precision (Table 11, containment v2) | overall **0.944** (containment 0.872) | `results/kg/containment_reextraction_113_predicted.json` |
 | LLM relevance-judge study (Table 12) | κ 0.669, judge-relevance mAP 0.983 | `results/llm_expert/llm_expert_study_qwen3_32b.json` |
 | Host-rule vs Eq. 3 agreement (§3.11) | **0.9853** over 749 tumor components | `results/host_rule_agreement.json` |
@@ -29,7 +29,7 @@ file below and in [`TABLE_MAP.md`](TABLE_MAP.md).
 
 ```
 corpora/        per-patient phenotype records (GT + predicted, all datasets), the de-duplicated
-                FLARE23 pool (1,234 records), and containment_v2/ side corpora (see its README)
+                FLARE23 pool (1,221 records), and containment_v2/ side corpora (see its README)
 kg_graphs/      built knowledge graphs (imaging_kg_*.ttl, unified_mmkg_*.json), schema,
                 ontology mappings (SNOMED CT / NCIt), organ-volume atlas
 queries/        the 10 SPARQL query families (.rq), the query-suite evaluators, runners
@@ -50,7 +50,7 @@ python scripts/retrieval/retrieval_iii_prime.py
 # Reproduce the query-suite verdicts (Tables 6):
 python queries/query_suite_eval.py
 ```
-Expected: Table 8 (ii) mAP 0.972 · Table 9 (ii) 0.997, (iii) −0.061, (iv) −0.667 · (iii′) −0.258
+Expected: Table 8 (ii) mAP 0.972 · Table 9 (ii) 0.999 full pool / 0.997 sub-pool, (iii) −0.062, (iv) −0.667 · (iii′) −0.261
 [−0.279, −0.239] — byte-comparable to `results/retrieval/dedup/`. Full instructions, including
 the GPU stages and the audits: [`REPRODUCING.md`](REPRODUCING.md).
 
