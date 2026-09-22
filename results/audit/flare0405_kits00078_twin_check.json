@@ -1,0 +1,30 @@
+{
+ "question": "YL 09-21: is FLARE23_0405 the same scan as KiTS23 case_00078, and was case_00078 a training case?",
+ "same_scan": true,
+ "evidence": {
+  "geometry": "case_00078 (326,512,512)@(1.0,0.9629,0.9629) vs FLARE23_0405 (512,512,326)@(0.9629,0.9629,1.0) - axis-transposed, same grid",
+  "kidney_vox": [
+   703424,
+   729013
+  ],
+  "kidney_delta_pct": 3.51,
+  "kidney_iou": 0.9172,
+  "tumor_vox": [
+   727346,
+   749609
+  ],
+  "tumor_delta_pct": 2.97,
+  "tumor_iou": 0.9703,
+  "transposition": "(2,1,0) + flips on all three axes (the standard KiTS<->FLARE mapping)",
+  "sources": "kits23 GitHub GT (case_00078/segmentation.nii.gz) vs Metadata.zip GT label (FLARE23_0405)"
+ },
+ "census_scope_note": "The axis-normalized census screened the 113 QUERIES only - case_00078 is not a query, so FLARE23_0405 remains twin-clean FOR THE RETRIEVAL POOL (no same-patient case among the 113 queries or in its displayed top-10). This pair is a TRAIN/TEST question, not a retrieval-pool one. Also note the kidney delta (3.5%) exceeds the census screen tolerance (2%) - re-annotation was heavier here.",
+ "training_membership": {
+  "case_00078_in_kits_training": "NOT LOCALLY AUDITABLE - the per-dataset fine-tune manifests live on the unreachable Delta store. Checked and excluded: dataset_bundles kg corpora (test-side), kg_atlas boundary (different subset), checkpoint pickle headers (state_dict only), /scratch + /dev/shm staging (wiped). case_00078 is NOT one of the 36 evaluated test cases; the test picks span case_00006-case_00175, so if the training universe covered that id range contiguously it was a training/val case - likely but not certifiable.",
+  "relevance": "FLARE23_0405's reported Dice (0.970) came from the FLARE23-trained tumor model, not the KiTS model - the clean question for 0405 is FLARE train/eval disjointness (same non-auditable caveat; 0405 is an eval-corpus case and standard practice excluded eval cases from training, but the manifest cannot be re-read)."
+ },
+ "train_test_twin_count_for_the_limitation_sentence": {
+  "primary_per_dataset_test_dice": "0 of 113 - structural: each dataset's model was trained only on that dataset's other cases; the datasets are patient-unique internally, and every known same-scan twin is cross-dataset (FLARE23 re-shares; plus kits case_00078<->FLARE23_0405).",
+  "flare_trained_weight_outputs": "up to 87 of 113 test cases (19 LiTS + 56 MSD + 12 KiTS) have FLARE23 re-shares that COULD sit in the FLARE training split (manifest not locally auditable); this caveat applies only to outputs of FLARE-trained weights: the 576-case predicted corpus, the 40-case autonomous showcase, the cross-dataset transfer rows, and FLARE23_0405's showcase Dice."
+ }
+}

@@ -1,0 +1,181 @@
+{
+ "question": "YL 09-22: per-query effect of removing the eleven KiTS same-scan twins (each was an S=1.0 candidate of its own query) - stress pool, configuration (ii), construction relevance",
+ "eleven_pairs": "results/audit/axis_normalized_twin_census.json second_pass_2026-09-22",
+ "per_query": {
+  "case_00008": {
+   "pool_1334": {
+    "p5": 1.0,
+    "p10": 1.0,
+    "ap": 1.0,
+    "ndcg": 1.0
+   },
+   "pool_1323": {
+    "p5": 1.0,
+    "p10": 1.0,
+    "ap": 1.0,
+    "ndcg": 1.0
+   }
+  },
+  "case_00021": {
+   "pool_1334": {
+    "p5": 1.0,
+    "p10": 1.0,
+    "ap": 1.0,
+    "ndcg": 1.0
+   },
+   "pool_1323": {
+    "p5": 1.0,
+    "p10": 1.0,
+    "ap": 1.0,
+    "ndcg": 1.0
+   }
+  },
+  "case_00024": {
+   "pool_1334": {
+    "p5": 1.0,
+    "p10": 1.0,
+    "ap": 1.0,
+    "ndcg": 1.0
+   },
+   "pool_1323": {
+    "p5": 1.0,
+    "p10": 1.0,
+    "ap": 1.0,
+    "ndcg": 1.0
+   }
+  },
+  "case_00039": {
+   "pool_1334": {
+    "p5": 1.0,
+    "p10": 1.0,
+    "ap": 1.0,
+    "ndcg": 1.0
+   },
+   "pool_1323": {
+    "p5": 1.0,
+    "p10": 1.0,
+    "ap": 1.0,
+    "ndcg": 1.0
+   }
+  },
+  "case_00043": {
+   "pool_1334": {
+    "p5": 1.0,
+    "p10": 1.0,
+    "ap": 0.9998,
+    "ndcg": 1.0
+   },
+   "pool_1323": {
+    "p5": 1.0,
+    "p10": 1.0,
+    "ap": 0.9998,
+    "ndcg": 1.0
+   }
+  },
+  "case_00060": {
+   "pool_1334": {
+    "p5": 1.0,
+    "p10": 1.0,
+    "ap": 0.9998,
+    "ndcg": 1.0
+   },
+   "pool_1323": {
+    "p5": 1.0,
+    "p10": 1.0,
+    "ap": 0.9998,
+    "ndcg": 1.0
+   }
+  },
+  "case_00075": {
+   "pool_1334": {
+    "p5": 1.0,
+    "p10": 1.0,
+    "ap": 1.0,
+    "ndcg": 1.0
+   },
+   "pool_1323": {
+    "p5": 1.0,
+    "p10": 1.0,
+    "ap": 1.0,
+    "ndcg": 1.0
+   }
+  },
+  "case_00083": {
+   "pool_1334": {
+    "p5": 1.0,
+    "p10": 1.0,
+    "ap": 1.0,
+    "ndcg": 1.0
+   },
+   "pool_1323": {
+    "p5": 1.0,
+    "p10": 1.0,
+    "ap": 1.0,
+    "ndcg": 1.0
+   }
+  },
+  "case_00090": {
+   "pool_1334": {
+    "p5": 1.0,
+    "p10": 1.0,
+    "ap": 1.0,
+    "ndcg": 1.0
+   },
+   "pool_1323": {
+    "p5": 1.0,
+    "p10": 1.0,
+    "ap": 1.0,
+    "ndcg": 1.0
+   }
+  },
+  "case_00092": {
+   "pool_1334": {
+    "p5": 1.0,
+    "p10": 1.0,
+    "ap": 1.0,
+    "ndcg": 1.0
+   },
+   "pool_1323": {
+    "p5": 1.0,
+    "p10": 1.0,
+    "ap": 1.0,
+    "ndcg": 1.0
+   }
+  },
+  "case_00165": {
+   "pool_1334": null,
+   "pool_1323": null
+  }
+ },
+ "summary": {
+  "eleven_queries_mean": {
+   "pool_1334": {
+    "p5": 1.0,
+    "p10": 1.0,
+    "ap": 1.0,
+    "ndcg": 1.0
+   },
+   "pool_1323": {
+    "p5": 1.0,
+    "p10": 1.0,
+    "ap": 1.0,
+    "ndcg": 1.0
+   }
+  },
+  "all_113_mean": {
+   "pool_1334": {
+    "p5": 1.0,
+    "p10": 1.0,
+    "ap": 0.9988,
+    "ndcg": 1.0
+   },
+   "pool_1323": {
+    "p5": 1.0,
+    "p10": 1.0,
+    "ap": 0.9988,
+    "ndcg": 1.0
+   }
+  }
+ },
+ "note": "Removal deletes one RELEVANT S=1.0 candidate per query; remaining relevant candidates back-fill the top-10, so P@k moves only where the twin was not interchangeable with other S=1.0 ties."
+}

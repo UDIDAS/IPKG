@@ -88,9 +88,12 @@ def main():
     q113 = sorted(i for i in pred if i in gt)
     flare_all = {r["case_id"]: r for r in
                  json.load(open(os.path.join(ROOT, "corpora", "corpus_flare23_kg_dedup.json")))["records"]}
-    pool_ids = sorted(c for c in flare_all
-                      if os.path.exists(f"{POOL}/images/{c.replace('flare23_', '')}_0000.nii.gz")
-                      and os.path.exists(f"{POOL}/labels/{c.replace('flare23_', '')}.nii.gz"))
+    if os.environ.get("VKG_POOL_IDS"):    # list-defined sub-pool (cache-only reruns), as in baselines_tab7_tab8.py
+        pool_ids = sorted(l.strip() for l in open(os.environ["VKG_POOL_IDS"]) if l.strip() in flare_all)
+    else:
+        pool_ids = sorted(c for c in flare_all
+                          if os.path.exists(f"{POOL}/images/{c.replace('flare23_', '')}_0000.nii.gz")
+                          and os.path.exists(f"{POOL}/labels/{c.replace('flare23_', '')}.nii.gz"))
     flare = {c: flare_all[c] for c in pool_ids}
     z = np.load(FEAT, allow_pickle=True)
     R, E = z["R"].item(), z["E"].item()

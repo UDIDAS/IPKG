@@ -1,7 +1,7 @@
 {
  "dataset": "flare23",
- "n": 1221,
- "note": "Derived from the GT-only FLARE23 KG; kidneys pooled; see script docstring. DE-DUPLICATED 2026-09-15: 58 FLARE23 cases that are twins of the 113 single-organ queries removed (results/audit/duplicate_scan_audit.json). | 2026-09-15b: FLARE23_0102 additionally removed - confirmed LiTS twin (= MSD-Task03 liver_64 source scan), per YL; the geometry audit could not test LiTS (no headers on the .npy derivatives). | 2026-09-16: 19 further FLARE23 cases removed - voxel-exact twins of 19 of the 21 LiTS queries, testable once the LiTS geometry was recovered from MSD Task03 headers (results/audit/lits_extended_audit.json, gt_label_confirmation). Pool 1,366 -> 1,347. | 2026-09-20: 13 further query twins removed by the AXIS-NORMALIZED census (results/audit/axis_normalized_twin_census.json) - the original T1 compared shape/spacing positionally and missed every axis-transposed KiTS re-share (12 KiTS pairs, kidney/tumor IoU 0.88-0.98 under (2,1,0)+flips) plus pancreas_201<->FLARE23_1764 (tumor label voxel-identical). Pool 1,347 -> 1,334; total query twins removed 78 -> 91.",
+ "n": 1210,
+ "note": "Derived from the GT-only FLARE23 KG; kidneys pooled; see script docstring. DE-DUPLICATED 2026-09-15: 58 FLARE23 cases that are twins of the 113 single-organ queries removed (results/audit/duplicate_scan_audit.json). | 2026-09-15b: FLARE23_0102 additionally removed - confirmed LiTS twin (= MSD-Task03 liver_64 source scan), per YL; the geometry audit could not test LiTS (no headers on the .npy derivatives). | 2026-09-16: 19 further FLARE23 cases removed - voxel-exact twins of 19 of the 21 LiTS queries, testable once the LiTS geometry was recovered from MSD Task03 headers (results/audit/lits_extended_audit.json, gt_label_confirmation). Pool 1,366 -> 1,347. | 2026-09-20: 13 further query twins removed by the AXIS-NORMALIZED census (results/audit/axis_normalized_twin_census.json) - the original T1 compared shape/spacing positionally and missed every axis-transposed KiTS re-share (12 KiTS pairs, kidney/tumor IoU 0.88-0.98 under (2,1,0)+flips) plus pancreas_201<->FLARE23_1764 (tumor label voxel-identical). Pool 1,347 -> 1,334; total query twins removed 78 -> 91. | 2026-09-22 second pass: 11 further KiTS same-scan pairs removed - found by KS's CT-voxel-equality scan (annotation-independent; heavy kidney/tumor re-annotation hid them from the label screen), each re-confirmed by GT mask overlap (kidney IoU 0.87-0.96, tumor IoU 0.92-0.98; census second_pass section). Pool 1,334 -> 1,323; total twins 91 -> 102.",
  "records": [
   {
    "case_id": "flare23_FLARE23_0001",
@@ -3588,63 +3588,6 @@
      "tumor_volume_cm3": 0.0,
      "burden_cat": "none",
      "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    }
-   }
-  },
-  {
-   "case_id": "flare23_FLARE23_0126",
-   "dataset": "flare23",
-   "granularity": "volume",
-   "observed_organs": [
-    "kidney",
-    "liver",
-    "pancreas",
-    "spleen"
-   ],
-   "organs": {
-    "liver": {
-     "present": true,
-     "organ_volume_cm3": 1428.08,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "spleen": {
-     "present": true,
-     "organ_volume_cm3": 193.09,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "pancreas": {
-     "present": true,
-     "organ_volume_cm3": 42.01,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "kidney": {
-     "present": true,
-     "organ_volume_cm3": 222.42,
-     "has_tumor": true,
-     "tumor_volume_cm3": 96.39,
-     "burden_cat": "high",
-     "multiplicity": "solitary",
      "containment": "none",
      "anatomic_location": "unknown",
      "size_cat": "unknown"
@@ -13228,63 +13171,6 @@
    }
   },
   {
-   "case_id": "flare23_FLARE23_0444",
-   "dataset": "flare23",
-   "granularity": "volume",
-   "observed_organs": [
-    "kidney",
-    "liver",
-    "pancreas",
-    "spleen"
-   ],
-   "organs": {
-    "liver": {
-     "present": true,
-     "organ_volume_cm3": 2184.55,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "spleen": {
-     "present": true,
-     "organ_volume_cm3": 301.67,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "pancreas": {
-     "present": true,
-     "organ_volume_cm3": 121.39,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "kidney": {
-     "present": true,
-     "organ_volume_cm3": 342.38,
-     "has_tumor": true,
-     "tumor_volume_cm3": 1.21,
-     "burden_cat": "low",
-     "multiplicity": "solitary",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    }
-   }
-  },
-  {
    "case_id": "flare23_FLARE23_0445",
    "dataset": "flare23",
    "granularity": "volume",
@@ -18814,63 +18700,6 @@
    }
   },
   {
-   "case_id": "flare23_FLARE23_0617",
-   "dataset": "flare23",
-   "granularity": "volume",
-   "observed_organs": [
-    "kidney",
-    "liver",
-    "pancreas",
-    "spleen"
-   ],
-   "organs": {
-    "liver": {
-     "present": true,
-     "organ_volume_cm3": 1858.57,
-     "has_tumor": true,
-     "tumor_volume_cm3": 500.61,
-     "burden_cat": "high",
-     "multiplicity": "multifocal",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "spleen": {
-     "present": true,
-     "organ_volume_cm3": 205.64,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "pancreas": {
-     "present": true,
-     "organ_volume_cm3": 90.48,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "kidney": {
-     "present": true,
-     "organ_volume_cm3": 456.83,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    }
-   }
-  },
-  {
    "case_id": "flare23_FLARE23_0619",
    "dataset": "flare23",
    "granularity": "volume",
@@ -24376,63 +24205,6 @@
    }
   },
   {
-   "case_id": "flare23_FLARE23_0802",
-   "dataset": "flare23",
-   "granularity": "volume",
-   "observed_organs": [
-    "kidney",
-    "liver",
-    "pancreas",
-    "spleen"
-   ],
-   "organs": {
-    "liver": {
-     "present": true,
-     "organ_volume_cm3": 1397.78,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "spleen": {
-     "present": true,
-     "organ_volume_cm3": 298.73,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "pancreas": {
-     "present": true,
-     "organ_volume_cm3": 62.92,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "kidney": {
-     "present": true,
-     "organ_volume_cm3": 313.69,
-     "has_tumor": true,
-     "tumor_volume_cm3": 123.37,
-     "burden_cat": "high",
-     "multiplicity": "multifocal",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    }
-   }
-  },
-  {
    "case_id": "flare23_FLARE23_0804",
    "dataset": "flare23",
    "granularity": "volume",
@@ -26872,63 +26644,6 @@
    }
   },
   {
-   "case_id": "flare23_FLARE23_0883",
-   "dataset": "flare23",
-   "granularity": "volume",
-   "observed_organs": [
-    "kidney",
-    "liver",
-    "pancreas",
-    "spleen"
-   ],
-   "organs": {
-    "liver": {
-     "present": true,
-     "organ_volume_cm3": 1920.57,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "spleen": {
-     "present": true,
-     "organ_volume_cm3": 260.33,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "pancreas": {
-     "present": true,
-     "organ_volume_cm3": 102.64,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "kidney": {
-     "present": true,
-     "organ_volume_cm3": 521.87,
-     "has_tumor": true,
-     "tumor_volume_cm3": 584.01,
-     "burden_cat": "high",
-     "multiplicity": "multifocal",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    }
-   }
-  },
-  {
    "case_id": "flare23_FLARE23_0884",
    "dataset": "flare23",
    "granularity": "volume",
@@ -26978,63 +26693,6 @@
      "has_tumor": true,
      "tumor_volume_cm3": 1.95,
      "burden_cat": "low",
-     "multiplicity": "solitary",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    }
-   }
-  },
-  {
-   "case_id": "flare23_FLARE23_0886",
-   "dataset": "flare23",
-   "granularity": "volume",
-   "observed_organs": [
-    "kidney",
-    "liver",
-    "pancreas",
-    "spleen"
-   ],
-   "organs": {
-    "liver": {
-     "present": true,
-     "organ_volume_cm3": 1651.48,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "spleen": {
-     "present": true,
-     "organ_volume_cm3": 291.67,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "pancreas": {
-     "present": true,
-     "organ_volume_cm3": 72.52,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "kidney": {
-     "present": true,
-     "organ_volume_cm3": 354.96,
-     "has_tumor": true,
-     "tumor_volume_cm3": 6.95,
-     "burden_cat": "medium",
      "multiplicity": "solitary",
      "containment": "none",
      "anatomic_location": "unknown",
@@ -27727,63 +27385,6 @@
    }
   },
   {
-   "case_id": "flare23_FLARE23_0910",
-   "dataset": "flare23",
-   "granularity": "volume",
-   "observed_organs": [
-    "kidney",
-    "liver",
-    "pancreas",
-    "spleen"
-   ],
-   "organs": {
-    "liver": {
-     "present": true,
-     "organ_volume_cm3": 1150.55,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "spleen": {
-     "present": true,
-     "organ_volume_cm3": 290.04,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "pancreas": {
-     "present": true,
-     "organ_volume_cm3": 36.14,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "kidney": {
-     "present": true,
-     "organ_volume_cm3": 322.75,
-     "has_tumor": true,
-     "tumor_volume_cm3": 5.51,
-     "burden_cat": "medium",
-     "multiplicity": "solitary",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    }
-   }
-  },
-  {
    "case_id": "flare23_FLARE23_0912",
    "dataset": "flare23",
    "granularity": "volume",
@@ -28233,63 +27834,6 @@
      "tumor_volume_cm3": 0.0,
      "burden_cat": "none",
      "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    }
-   }
-  },
-  {
-   "case_id": "flare23_FLARE23_0922",
-   "dataset": "flare23",
-   "granularity": "volume",
-   "observed_organs": [
-    "kidney",
-    "liver",
-    "pancreas",
-    "spleen"
-   ],
-   "organs": {
-    "liver": {
-     "present": true,
-     "organ_volume_cm3": 1816.37,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "spleen": {
-     "present": true,
-     "organ_volume_cm3": 375.71,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "pancreas": {
-     "present": true,
-     "organ_volume_cm3": 81.34,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "kidney": {
-     "present": true,
-     "organ_volume_cm3": 364.61,
-     "has_tumor": true,
-     "tumor_volume_cm3": 12.15,
-     "burden_cat": "medium",
-     "multiplicity": "solitary",
      "containment": "none",
      "anatomic_location": "unknown",
      "size_cat": "unknown"
@@ -39034,63 +38578,6 @@
    }
   },
   {
-   "case_id": "flare23_FLARE23_1274",
-   "dataset": "flare23",
-   "granularity": "volume",
-   "observed_organs": [
-    "kidney",
-    "liver",
-    "pancreas",
-    "spleen"
-   ],
-   "organs": {
-    "liver": {
-     "present": true,
-     "organ_volume_cm3": 1264.99,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "spleen": {
-     "present": true,
-     "organ_volume_cm3": 228.04,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "pancreas": {
-     "present": true,
-     "organ_volume_cm3": 81.13,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "kidney": {
-     "present": true,
-     "organ_volume_cm3": 348.72,
-     "has_tumor": true,
-     "tumor_volume_cm3": 28.31,
-     "burden_cat": "high",
-     "multiplicity": "solitary",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    }
-   }
-  },
-  {
    "case_id": "flare23_FLARE23_1276",
    "dataset": "flare23",
    "granularity": "volume",
@@ -46729,63 +46216,6 @@
    }
   },
   {
-   "case_id": "flare23_FLARE23_1512",
-   "dataset": "flare23",
-   "granularity": "volume",
-   "observed_organs": [
-    "kidney",
-    "liver",
-    "pancreas",
-    "spleen"
-   ],
-   "organs": {
-    "liver": {
-     "present": true,
-     "organ_volume_cm3": 2657.54,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "spleen": {
-     "present": true,
-     "organ_volume_cm3": 936.8,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "pancreas": {
-     "present": true,
-     "organ_volume_cm3": 111.5,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "kidney": {
-     "present": true,
-     "organ_volume_cm3": 671.99,
-     "has_tumor": true,
-     "tumor_volume_cm3": 13.59,
-     "burden_cat": "medium",
-     "multiplicity": "solitary",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    }
-   }
-  },
-  {
    "case_id": "flare23_FLARE23_1513",
    "dataset": "flare23",
    "granularity": "volume",
@@ -50313,63 +49743,6 @@
      "tumor_volume_cm3": 0.0,
      "burden_cat": "none",
      "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    }
-   }
-  },
-  {
-   "case_id": "flare23_FLARE23_1630",
-   "dataset": "flare23",
-   "granularity": "volume",
-   "observed_organs": [
-    "kidney",
-    "liver",
-    "pancreas",
-    "spleen"
-   ],
-   "organs": {
-    "liver": {
-     "present": true,
-     "organ_volume_cm3": 1208.02,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "spleen": {
-     "present": true,
-     "organ_volume_cm3": 158.22,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "pancreas": {
-     "present": true,
-     "organ_volume_cm3": 33.14,
-     "has_tumor": false,
-     "tumor_volume_cm3": 0.0,
-     "burden_cat": "none",
-     "multiplicity": "none",
-     "containment": "none",
-     "anatomic_location": "unknown",
-     "size_cat": "unknown"
-    },
-    "kidney": {
-     "present": true,
-     "organ_volume_cm3": 321.19,
-     "has_tumor": true,
-     "tumor_volume_cm3": 36.92,
-     "burden_cat": "high",
-     "multiplicity": "solitary",
      "containment": "none",
      "anatomic_location": "unknown",
      "size_cat": "unknown"

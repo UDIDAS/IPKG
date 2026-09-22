@@ -189,8 +189,13 @@ def main():
     gt = load_corpus("gt", datasets=["kits", "lits", "msd"])
     flare_all = {r["case_id"]: r for r in json.load(open(os.path.join(ROOT, "corpora", "corpus_flare23_kg.json")))["records"]}
     q113 = [i for i in pred if i in gt]
-    pool_ids = [] if a.skip_pool else [c for c in flare_all if os.path.exists(f"{POOL}/images/{c.replace('flare23_', '')}_0000.nii.gz")
-                                        and os.path.exists(f"{POOL}/labels/{c.replace('flare23_', '')}.nii.gz")]
+    # VKG_POOL_IDS: file of FLARE case_ids defining the sub-pool directly (features from the
+    # cache; no staged CTs needed) — used for pool-membership-only reruns after twin removals.
+    if os.environ.get("VKG_POOL_IDS"):
+        pool_ids = [] if a.skip_pool else [l.strip() for l in open(os.environ["VKG_POOL_IDS"]) if l.strip() in flare_all]
+    else:
+        pool_ids = [] if a.skip_pool else [c for c in flare_all if os.path.exists(f"{POOL}/images/{c.replace('flare23_', '')}_0000.nii.gz")
+                                           and os.path.exists(f"{POOL}/labels/{c.replace('flare23_', '')}.nii.gz")]
     flare = {c: flare_all[c] for c in pool_ids}
     print(f"113 queries; FLARE23 candidates with CT: {len(flare)} / {len(flare_all)}", flush=True)
 

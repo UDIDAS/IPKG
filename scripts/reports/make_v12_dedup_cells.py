@@ -35,8 +35,8 @@ _nsub = bl["tab8_subpool"]["n_candidates"]
 _twins = 1312 - _nfl
 w(f"# v12 hand-over — de-duplicated {_npool:,}-pool table cells (generated from `results/retrieval/dedup/` at `{sha}`)")
 w()
-w(f"Pool: **{_npool:,}** = 113 single-organ queries + {_nfl:,} FLARE23 ({_twins} query twins removed — 78 original "
-  f"+ 13 by the 2026-09-20 axis-normalized census, `results/audit/axis_normalized_twin_census.json`; "
+w(f"Pool: **{_npool:,}** = 113 single-organ queries + {_nfl:,} FLARE23 ({_twins} query twins removed — 78 original + 13 by the 2026-09-20 axis-normalized census "
+  f"+ 11 by the 2026-09-22 second pass (KS CT-voxel scan, mask-overlap-confirmed), `results/audit/axis_normalized_twin_census.json`; "
   f"`corpora/corpus_flare23_kg_dedup.json`). Baseline (v)–(vii′) cells: **{_nsub}-case CT sub-pool** "
   f"(113 + {_nsub - 113} dedup FLARE23 with a CT), per-query depth-30 re-rank validated against the frozen "
   "Delta 113-pool numbers (third-decimal reproduction, all eight configurations). "

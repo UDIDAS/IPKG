@@ -200,10 +200,10 @@
  ],
  "pool_arithmetic": {
   "pool_before": 1347,
-  "pool_after": 1334,
-  "flare_corpus_before": 1234,
-  "flare_corpus_after": 1221,
-  "total_twins_removed": 91
+  "pool_after_first_pass": 1334,
+  "pool_after_second_pass": 1323,
+  "flare_corpus_after": 1210,
+  "total_twins_removed": 102
  },
  "all_pairs": [
   {
@@ -2814,5 +2814,201 @@
    "tumor_vox_pct": 34.64,
    "verdict": "rejected"
   }
- ]
+ ],
+ "second_pass_2026-09-22": {
+  "note": "Second pass of the twin census (2026-09-22): confirm the eleven KiTS23<->FLARE23 same-scan\npairs found by KS's CT-voxel-equality scan and fold them into the census artifact.\n\nProvenance: KS's `scan_flare23_twins.py` (branch `abdomen/ipkg`, artifact\n`paper/flare23_twin_scan_2026-09-20.json`) indexes KiTS23/Task03/Task07 CTs by canonical (RAS)\nshape+spacing and compares candidate volumes VOXEL FOR VOXEL (`np.array_equal`) \u2014 an\nannotation-independent test that is strictly stronger than the first pass's label-based\nscreen (organ <= 2 %, tumor <= 15 %): a same-scan pair whose kidney/tumor were re-annotated\nbeyond those tolerances is invisible to any label screen (FLARE23_0405 <-> case_00078 was the\nfirst such case; these eleven are the rest that sit inside the 1,334 pool).  Of his 20\nin-pool KiTS pairs, 9 were already removed by the first pass; the eleven here are the\nremainder.  This script re-confirms each pair independently by GT-label mask overlap\n(axis-normalized transposition search; kidney and tumor IoU) and rewrites\nresults/audit/axis_normalized_twin_census.json with a `second_pass_2026-09-22` section and\nupdated pool arithmetic: pool 1,334 -> 1,323, corpus 1,221 -> 1,210, twins 91 -> 102.\n\n  V11_FLARE=/dev/shm/v11/flare V11_KITS=/dev/shm/v11/kits python twin_census_second_pass.py",
+  "source": "KS CT-voxel-equality scan (abdomen/ipkg: paper/flare23_twin_scan_2026-09-20.json; 310 cross-collection same-scan pairs over the 576 UD-masked FLARE23 studies; 20 KiTS pairs in-pool of which 9 were removed by the first pass)",
+  "first_pass_blind_spot": "label-based screen (organ <= 2 %, tumor <= 15 %) cannot see same-scan pairs whose annotations were redone beyond those tolerances; CT voxel equality is annotation-independent",
+  "pairs_confirmed": [
+   {
+    "flare": "flare23_FLARE23_0126",
+    "query": "case_00090",
+    "same_sorted_grid": true,
+    "kidney_vox": [
+     123133,
+     125840
+    ],
+    "tumor_vox": [
+     52274,
+     54532
+    ],
+    "kidney_iou": 0.9276,
+    "tumor_iou": 0.9586,
+    "transposition": "((2, 1, 0), (True, True, True))",
+    "verdict": "CONFIRMED_TWIN"
+   },
+   {
+    "flare": "flare23_FLARE23_0444",
+    "query": "case_00165",
+    "same_sorted_grid": true,
+    "kidney_vox": [
+     354552,
+     363356
+    ],
+    "tumor_vox": [
+     1220,
+     1288
+    ],
+    "kidney_iou": 0.9469,
+    "tumor_iou": 0.9472,
+    "transposition": "((2, 1, 0), (True, True, True))",
+    "verdict": "CONFIRMED_TWIN"
+   },
+   {
+    "flare": "flare23_FLARE23_0617",
+    "query": "case_00092",
+    "same_sorted_grid": true,
+    "kidney_vox": [
+     177578,
+     184807
+    ],
+    "tumor_vox": [
+     198103,
+     202519
+    ],
+    "kidney_iou": 0.9212,
+    "tumor_iou": 0.9782,
+    "transposition": "((2, 1, 0), (True, True, True))",
+    "verdict": "CONFIRMED_TWIN"
+   },
+   {
+    "flare": "flare23_FLARE23_0802",
+    "query": "case_00024",
+    "same_sorted_grid": true,
+    "kidney_vox": [
+     145386,
+     142270
+    ],
+    "tumor_vox": [
+     54608,
+     55955
+    ],
+    "kidney_iou": 0.9511,
+    "tumor_iou": 0.9759,
+    "transposition": "((2, 1, 0), (True, True, True))",
+    "verdict": "CONFIRMED_TWIN"
+   },
+   {
+    "flare": "flare23_FLARE23_0883",
+    "query": "case_00008",
+    "same_sorted_grid": true,
+    "kidney_vox": [
+     254497,
+     260990
+    ],
+    "tumor_vox": [
+     282908,
+     292070
+    ],
+    "kidney_iou": 0.8678,
+    "tumor_iou": 0.9686,
+    "transposition": "((2, 1, 0), (True, True, True))",
+    "verdict": "CONFIRMED_TWIN"
+   },
+   {
+    "flare": "flare23_FLARE23_0886",
+    "query": "case_00039",
+    "same_sorted_grid": true,
+    "kidney_vox": [
+     138231,
+     143598
+    ],
+    "tumor_vox": [
+     2641,
+     2811
+    ],
+    "kidney_iou": 0.9432,
+    "tumor_iou": 0.9395,
+    "transposition": "((2, 1, 0), (True, True, True))",
+    "verdict": "CONFIRMED_TWIN"
+   },
+   {
+    "flare": "flare23_FLARE23_0910",
+    "query": "case_00075",
+    "same_sorted_grid": true,
+    "kidney_vox": [
+     131753,
+     129128
+    ],
+    "tumor_vox": [
+     2030,
+     2206
+    ],
+    "kidney_iou": 0.9393,
+    "tumor_iou": 0.9202,
+    "transposition": "((2, 1, 0), (True, True, True))",
+    "verdict": "CONFIRMED_TWIN"
+   },
+   {
+    "flare": "flare23_FLARE23_0922",
+    "query": "case_00043",
+    "same_sorted_grid": true,
+    "kidney_vox": [
+     218090,
+     223146
+    ],
+    "tumor_vox": [
+     7177,
+     7434
+    ],
+    "kidney_iou": 0.9621,
+    "tumor_iou": 0.9654,
+    "transposition": "((2, 1, 0), (True, True, True))",
+    "verdict": "CONFIRMED_TWIN"
+   },
+   {
+    "flare": "flare23_FLARE23_1274",
+    "query": "case_00021",
+    "same_sorted_grid": true,
+    "kidney_vox": [
+     96548,
+     103152
+    ],
+    "tumor_vox": [
+     7837,
+     8374
+    ],
+    "kidney_iou": 0.9105,
+    "tumor_iou": 0.9359,
+    "transposition": "((2, 1, 0), (True, True, True))",
+    "verdict": "CONFIRMED_TWIN"
+   },
+   {
+    "flare": "flare23_FLARE23_1512",
+    "query": "case_00083",
+    "same_sorted_grid": true,
+    "kidney_vox": [
+     228706,
+     234876
+    ],
+    "tumor_vox": [
+     4528,
+     4750
+    ],
+    "kidney_iou": 0.9483,
+    "tumor_iou": 0.9533,
+    "transposition": "((2, 1, 0), (True, True, True))",
+    "verdict": "CONFIRMED_TWIN"
+   },
+   {
+    "flare": "flare23_FLARE23_1630",
+    "query": "case_00060",
+    "same_sorted_grid": true,
+    "kidney_vox": [
+     140099,
+     153931
+    ],
+    "tumor_vox": [
+     16867,
+     17695
+    ],
+    "kidney_iou": 0.8741,
+    "tumor_iou": 0.9532,
+    "transposition": "((2, 1, 0), (True, True, True))",
+    "verdict": "CONFIRMED_TWIN"
+   }
+  ],
+  "n_confirmed": 11,
+  "residual": "KS's scan covers the 576 UD-masked FLARE23 studies; the 691 pool records without a UD mask are label-screened only (first pass) - a lower bound, disclosed in the draft."
+ }
 }
