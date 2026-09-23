@@ -19,7 +19,7 @@ file below and in [`TABLE_MAP.md`](TABLE_MAP.md).
 |:--|:--|:--|
 | Primary retrieval benchmark, predicted + γ (Table 8, config ii) | mAP **0.972** (113-case pool) | `results/retrieval/dedup/baselines_tab7_tab8.json` |
 | Large-pool stress test on the de-duplicated **1,323**-case pool (Table 9) | mAP **0.997** (636-case CT sub-pool; full pool 0.999); baselines ≤ 0.483, all Holm p ≤ 3.5×10⁻⁴ below (ii) | same file + `retrieval_tab8_stress.json` |
-| Duplicate-scan audits: **102 twins removed** from the cross-dataset pool (78 + 13 by the axis-normalized census + 11 by the CT-voxel second pass — annotation-independent, mask-overlap-confirmed); FLARE23 re-shares **114/131** LiTS volumes | pool 1,425 → **1,323** | `results/audit/` (five audit files) |
+| Duplicate-scan audits: **102 twins removed** from the cross-dataset pool (78 + 13 by the axis-normalized census + 11 by the CT-voxel second pass — annotation-independent, mask-overlap-confirmed); FLARE23 re-shares **114/131** LiTS volumes; residual: **687** pool FLARE23 records (no predicted mask) are label-screened only — a disclosed lower bound (census JSON, `second_pass` section) | pool 1,425 → **1,323** | `results/audit/` (five audit files) |
 | Statement-level report precision (Table 11, containment v2) | overall **0.944** (containment 0.872) | `results/kg/containment_reextraction_113_predicted.json` |
 | LLM relevance-judge study (Table 12) | κ 0.669, judge-relevance mAP 0.983 | `results/llm_expert/llm_expert_study_qwen3_32b.json` |
 | Host-rule vs Eq. 3 agreement (§3.11) | **0.9853** over 749 tumor components | `results/host_rule_agreement.json` |
