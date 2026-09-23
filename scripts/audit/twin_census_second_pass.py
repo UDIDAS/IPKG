@@ -89,8 +89,10 @@ def main():
                                  "pairs whose annotations were redone beyond those tolerances; CT voxel "
                                  "equality is annotation-independent",
         "pairs_confirmed": conf, "n_confirmed": len(conf),
-        "residual": "KS's scan covers the 576 UD-masked FLARE23 studies; the 691 pool records without a "
-                    "UD mask are label-screened only (first pass) - a lower bound, disclosed in the draft."}
+        "residual": "KS's scan covers the 576 UD-masked FLARE23 studies; the 687 pool records without a "
+                    "UD mask (= 1,210 dedup corpus - 523 masked-in-pool) are label-screened only (first "
+                    "pass) - a lower bound, disclosed in the draft. (Correction 2026-09-23: first written "
+                    "as 691, a pre-second-pass miscount; 687 is derived from the shipped corpora.)"}
     cen["pool_arithmetic"] = {"pool_before": 1347, "pool_after_first_pass": 1334,
                               "pool_after_second_pass": 1347 - 13 - len(conf),
                               "flare_corpus_after": 1234 - 13 - len(conf),
