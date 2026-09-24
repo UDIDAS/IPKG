@@ -2,7 +2,7 @@
 """Rank-level behaviour of configuration (iii') on the 1,425-case pool: why mAP falls (0.999 -> 0.757) while
 P@10 / nDCG@10 barely move.  For each of the 113 queries, under (ii) and (iii'), we export the ranks of ALL
 relevant candidates (construction-defined relevance, as Tab. 8), the rank of the first lesion-free FLARE23
-candidate, and how many relevant candidates are displaced below it.  Output: results/retrieval/retrieval_iii_prime_rankprofile.json
+candidate, and how many relevant candidates are displaced below it.  Output: results/retrieval/dedup/retrieval_iii_prime_rankprofile.json
 """
 import json
 import os
@@ -16,7 +16,7 @@ from retrieval_core_local import load_corpus, similarity, relevant     # noqa: E
 import retrieval_tables_789 as T                                       # noqa: E402
 
 ROOT = os.path.abspath(os.path.join(_HERE, "..", ".."))
-OUT = os.path.join(ROOT, "results", "retrieval", "retrieval_iii_prime_rankprofile.json")
+OUT = os.path.join(os.environ.get("VKG_RES_DIR", os.path.join(ROOT, "results", "retrieval", "dedup")), "retrieval_iii_prime_rankprofile.json")
 
 
 def lesion_free(rec):
@@ -26,7 +26,7 @@ def lesion_free(rec):
 def main():
     core.ORGAN_UNIVERSE = T.UNIVERSE
     pred = load_corpus("predicted", datasets=["kits", "lits", "msd"]); gt = load_corpus("gt", datasets=["kits", "lits", "msd"])
-    flare = {r["case_id"]: r for r in json.load(open(os.path.join(ROOT, "corpora", "corpus_flare23_kg.json")))["records"]}
+    flare = {r["case_id"]: r for r in json.load(open(os.environ.get("VKG_FLARE_CORPUS", os.path.join(ROOT, "corpora", "corpus_flare23_kg.json"))))["records"]}
     pool = {**pred, **flare}; q113 = [i for i in pred if i in gt]; cids = q113 + sorted(flare)
     n_lf = sum(lesion_free(flare[c]) for c in flare)
     per = {}

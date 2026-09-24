@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Word companion, regenerated to the v15 numbering (2026-09-18 PM, team-confirmed's option-A email):
-the stratified table RETURNS to Table 10 WITH the (iii') rows (team item 2); summarization ->
+"""Word companion, regenerated to the v15 numbering (2026-09-18 PM, per YL's option-A email):
+the stratified table RETURNS to Table 10 WITH the (iii') rows (YL item 2); summarization ->
 Table 11, LLM-judge -> Table 12; closed loop stays supplementary; the clinician study is
 Section 5.7 (option A decided: two radiologists, 0-3 scale, prespecified design; judge-on-packet
-reported only as a labelled interim if grades miss submission). Also closes the study lead items 1 and 3:
+reported only as a labelled interim if grades miss submission). Also closes YL items 1 and 3:
 canonical (vii) = -0.263 [-0.290, -0.237] (dedup file); baseline Spur.@10 = n/a per caption.
 -> docs/VKG_v7_Tables6-9_Results_Reference.docx  (filename kept for continuity; the content
    header states the v14 provenance. Supersedes the 2026-09-17 v12 companion.)
@@ -77,12 +77,12 @@ def dstr(row):
     return f"{d['delta']:+.3f} [{d['ci95'][0]:.3f}, {d['ci95'][1]:.3f}]", f"{d.get('p_holm')}"
 
 
-doc.add_heading("VKG v15 — Tables Results Reference (2026-09-18 PM; de-duplicated 1,347-case pool)", 0)
+doc.add_heading("VKG v15 — Tables Results Reference (2026-09-24; de-duplicated 1,309-case pool, third pass)", 0)
 P("Drop-in values for the draft's retrieval/query tables on the FINAL de-duplicated pool "
-  "(1,347 = 113 + 1,234 FLARE23 after removing all 78 query twins; results/retrieval/dedup/). "
-  "Numbering follows the v15 layout (the study lead 09-18 PM email): the stratified table RETURNS to Table 10 with "
+  "(1,309 = 113 + 1,196 FLARE23 after removing all 116 query twins — 78 original + 13 census + 11 CT-voxel + 14 grid-census; results/retrieval/dedup/). "
+  "Numbering follows the v15 layout (YL 09-18 PM email): the stratified table RETURNS to Table 10 with "
   "the (iii′) rows; summarization → Table 11; LLM-judge → Table 12; closed loop supplementary; clinician "
-  "study = §5.7 (option A). PROVISIONAL until the v15 pdf confirms. Values unchanged from v14 except the "
+  "study = §5.7 (option A). CONFIRMED against the 09-18 23:51 draft (Tables 10/11/12 as mapped; Table 13 stays in the MAIN text). One draft catch: the Table 9 caption must read the 1,309-case de-duplicated corpus (any 1,425/1,347/1,334/1,323 is stale). Values unchanged from v14 except the "
   "restored Table 10 and its (iii′) rows. Stats: "
   "paired query bootstrap B=5,000; sign-flip permutation B=20,000; Holm per family. Supersedes the "
   "2026-09-17 v12 companion; hand-over: results/README.md §7 \"2026-09-18 hand-over\".",
@@ -96,17 +96,17 @@ P("⚠ Before filling: do NOT quote the v6 γ-ablation contrast (mAP 0.714, spur
   "(vii′) 0.248.", b=True, c=RED, sp=10)
 
 # ---------------- v14 numbering map ----------------
-H("v15 numbering map (provisional — the study lead 09-18 PM email; confirm against the v15 pdf)", 1)
+H("v15 numbering map (provisional — YL 09-18 PM email; confirm against the v15 pdf)", 1)
 T(["v15 table", "Former", "Content", "Values live in"],
   [["Table 6", "Table 6", "Ten-family query suite, 113 cohort", "this doc + results/queries/query_suite_tab6.json"],
    ["Table 7", "Table 7", "FLARE23 reasoning suite (576 cases)", "results/README.md §4d + queries/query_suite_flare23.json"],
    ["Table 8", "Table 8", "Primary controlled retrieval benchmark (113 pool)", "this doc + retrieval/dedup/"],
-   ["Table 9", "Table 9", "Large-pool stress test (1,347 + 656-case CT sub-pool)", "this doc + retrieval/dedup/"],
-   ["Table 10", "Table 10 (returns)", "Stratified retrieval + (iii′) rows (team item 2)", "this doc + retrieval/dedup/retrieval_{tab9_stratified,iii_prime}.json"],
+   ["Table 9", "Table 9", "Large-pool stress test (1,309 + 636-case CT sub-pool)", "this doc + retrieval/dedup/"],
+   ["Table 10", "Table 10 (returns)", "Stratified retrieval + (iii′) rows (YL item 2)", "this doc + retrieval/dedup/retrieval_{tab9_stratified,iii_prime}.json"],
    ["Table 11", "Table 11", "Summarization statement precision (containment v2)", "this doc + kg/containment_reextraction_113_predicted.json"],
    ["Table 12", "Table 12", "LLM relevance-judge study (Qwen3-32B)", "results/llm_expert/llm_expert_study_qwen3_32b.json"],
    ["§5.7", "§5.8", "Clinician relevance study (option A; interim judge-on-packet exists)", "study/clinician_study_30q.json + llm_expert/llm_judge_clinician_packet_Qwen3_32B.json"],
-   ["Supplementary", "Table 13", "Closed loop (raw / post-proc / repair)", "results/repair/closed_loop_tab12_13.json + README §6b"]])
+   ["Table 13", "Table 13", "Closed loop (CONFIRMED main text, p.20 of the 09-18 23:51 draft)", "results/repair/closed_loop_tab12_13.json + README §6b"]])
 
 # ---------------- Table 6 ----------------
 H("Draft Table 6 — ten-family query suite (§5.4)", 1)
@@ -170,15 +170,15 @@ rows.append(["(iii′) Predicted, imputed-absent (suppl.)", v_ip["P@10"], v_ip["
 T(["Configuration", "P@10", "mAP", "nDCG", "Mism.@10", "mAP vs (ii) [95% CI]", "p (Holm)"], rows)
 P("All (v)–(vii′) cells incl. paired Δ/CI/p and Mism.@10 are from the per-query local CT rerun "
   "(retrieval/dedup/baselines_tab7_tab8.json) — validated: these 113-pool rows reproduce the frozen "
-  "Delta aggregates to the third decimal. CANONICAL (team item 1): row (vii) Δ = −0.263 [−0.290, −0.237] "
+  "Delta aggregates to the third decimal. CANONICAL (YL item 1): row (vii) Δ = −0.263 [−0.290, −0.237] "
   "(this source); the frozen Delta file's −0.262 [−0.290, −0.236] is the same quantity within embedding "
   "float nondeterminism (identical mAP and Holm p).", i=True, c=GREY)
 
 # ---------------- Table 9 ----------------
 H("Draft Table 9 — large-pool stress test on the DE-DUPLICATED pool (§5.5)", 1)
-P("Caption fills: 113 queries × 1,347-case de-duplicated corpus (113 + 1,234 FLARE23 after removing "
-  "all 78 query twins; kidneys pooled); construction-defined relevance. Baseline rows (v)–(vii′) are "
-  "on the 656-case CT sub-pool (113 + 543 dedup FLARE23 candidates with a CT in the release copy), "
+P("Caption fills: 113 queries × 1,309-case de-duplicated corpus (113 + 1,196 FLARE23 after removing "
+  "all 116 query twins; kidneys pooled); construction-defined relevance. Baseline rows (v)–(vii′) are "
+  "on the 636-case CT sub-pool (113 + 523 dedup FLARE23 candidates with a CT in the release copy), "
   "with KG rows re-run on the same sub-pool for the like-for-like Δ.")
 rows = []
 for k, v in t8["rows"].items():
@@ -199,7 +199,7 @@ T(["Configuration", "P@5", "P@10", "mAP", "nDCG", "Spur.@10", "Mism.@10",
    "mAP vs (ii) [95% CI]", "p (Holm)"], rows)
 P("Full-pool rows (i)–(iv)/(iii′): 1,347 candidates. Sub-pool rows: 656 candidates (features need a "
   "CT; the sub-pool KG rows are listed for the like-for-like paired Δ). Spur.@10 = n/a for the baseline "
-  "rows (team item 3 CONFIRMED: path-based per the caption, undefined for non-graph methods; the JSONs "
+  "rows (YL item 3 CONFIRMED: path-based per the caption, undefined for non-graph methods; the JSONs "
   "keep the no-shared-organ rate under that key if a number is ever wanted).", i=True, c=GREY)
 
 # ---------------- Table 10 (former 11) ----------------
@@ -271,7 +271,7 @@ P("The within-dataset identity check PASSES (rankings identical in all three dat
   "hence n/a in (c).", b=True, c=RED)
 
 # ---------------- Supplementary: closed loop (former Table 13) ----------------
-H("SUPPLEMENTARY (former Table 13) — closed loop (§6)", 1)
+H("Draft Table 13 — closed loop (§6; CONFIRMED main text in the 09-18 23:51 draft)", 1)
 P("Moves out of the main sequence unchanged: raw / generic post-proc / ontology repair triple F1 "
   "0.355 / 0.683 / 0.457 ((c)−(b) −0.226, p_Holm 1.5e-4); volume MAPE 120.2 % → 34.0 % → 29.9 %; "
   "retrieval mAP 0.606 → 0.424 → 0.399 (reference ceiling 0.918). The loop closes at the node level "
@@ -283,7 +283,7 @@ H("Still red at v15 (2026-09-18 PM) — everything pipeline-side is filled", 1)
 P("All v7-era red items above the line are CLOSED: closed-loop Tabs (09-13 GPU round), baseline "
   "cells + paired stats (09-17 local re-rank), Qwen3-32B judge (09-13), Q10 single-pass IQR (09-16), "
   "Table 10 containment v2 → overall 0.944 (09-17b). Remaining:", i=True, c=GREY, sp=4)
-for item in ["Clinician study GRADES (§5.7, tab:clinician) — OPTION A DECIDED (team decision 09-18): two board-certified "
+for item in ["Clinician study GRADES (§5.7, tab:clinician) — OPTION A DECIDED (YL 09-18): two board-certified "
              "abdominal radiologists, 0–3 scale, prespecified design unchanged; grading sheets + F5 harness are "
              "in scripts/study/; grading start gated on the IRB / not-human-subjects determination; if grades "
              "miss submission, report the judge-on-packet as a labelled interim "

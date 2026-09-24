@@ -25,6 +25,8 @@ Numbering follows the submitted draft. "Reproduce" points to the section of
 | Connectivity note (§3.11/D4) | 6- vs 26-connectivity sensitivity | `scripts/kg/connectivity_sensitivity.py` | `results/kg/connectivity_sensitivity.json` | B/C |
 | Figs 3, B.4–B.6 | Application screenshots | application UI (not in this repository) | — | — |
 
-Supersession rule: where a frozen file and a `results/retrieval/dedup/` file disagree, the
-**dedup file is canonical** (de-duplicated 1,309 pool after the 09-20 census + 09-22 CT-voxel second pass + 09-24 grid-census third pass — `results/audit/axis_normalized_twin_census.json` incl. §second_pass/§third_pass; the paper's numbers). Frozen originals
-are retained for provenance. Canonical example: Table 8 row (vii) Δ = −0.263 [−0.290, −0.237].
+Canonical retrieval results: `results/retrieval/dedup/` — the de-duplicated **1,309**-pool reruns
+(09-20 census + 09-22 CT-voxel second pass + 09-24 grid-census third pass;
+`results/audit/axis_normalized_twin_census.json` incl. §second_pass/§third_pass — the paper's numbers).
+The pre-dedup "frozen original" files were removed 2026-09-24 to prevent stale-version transcription;
+tags `IPKG-v1-rc1..rc4` retain them. Canonical example: Table 8 row (vii) Δ = −0.263 [−0.290, −0.237].

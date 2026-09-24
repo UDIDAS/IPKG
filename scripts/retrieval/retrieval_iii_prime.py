@@ -16,7 +16,7 @@ from retrieval_core_local import load_corpus             # noqa: E402
 import retrieval_tables_789 as T                         # noqa: E402
 
 ROOT = os.path.abspath(os.path.join(_HERE, "..", ".."))
-OUT = os.path.join(os.environ.get("VKG_RES_DIR", os.path.join(ROOT, "results", "retrieval")), "retrieval_iii_prime.json")
+OUT = os.path.join(os.environ.get("VKG_RES_DIR", os.path.join(ROOT, "results", "retrieval", "dedup")), "retrieval_iii_prime.json")
 MODES = {"(ii) proposed": "proposed", "(iii) coverage-blind": "coverage_blind", "(iii') imputed-absent": "imputed_absent"}
 
 

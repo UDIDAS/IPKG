@@ -6,14 +6,14 @@
    "tab8_mAP": 0.999,
    "tab8_P@10": 1.0,
    "tab9b_mAP": 1.0,
-   "tab9b_P@10": 0.997
+   "tab9b_P@10": 0.994
   },
   "(ii) sub-site n/a when unknown": {
    "tab7_mAP": 0.972,
    "tab8_mAP": 0.999,
    "tab8_P@10": 1.0,
    "tab9b_mAP": 1.0,
-   "tab9b_P@10": 0.997
+   "tab9b_P@10": 0.994
   }
  }
 }

@@ -38,7 +38,7 @@ sys.path.insert(0, HERE)
 import retrieval_core_local as core
 from retrieval_core_local import load_corpus, relevant, _agree_over, _dcg, phen
 
-RES = os.environ.get("VKG_RES_DIR", os.path.join(ROOT, "results", "retrieval"))
+RES = os.environ.get("VKG_RES_DIR", os.path.join(ROOT, "results", "retrieval", "dedup"))
 B_BOOT, B_PERM = 5000, 20000
 rng = np.random.default_rng(12345)
 

@@ -5,7 +5,7 @@ retrieval experiments can be reproduced from `corpora/` on any machine.
 
 The scoring functions are verbatim copies of kg_retrieval_v2 (same constants, same semantics);
 `load_corpus()` reads the per-dataset corpora shipped in ../../corpora.
-Verified to reproduce results/retrieval/retrieval_on_predicted.json exactly.
+Verified (2026-09-13) to reproduce the v6 retrieval_on_predicted.json exactly (that v6 file was retired 2026-09-24; git history before v15-freeze-1309 retains it).
 """
 import glob
 import json

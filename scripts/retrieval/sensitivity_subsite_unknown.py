@@ -16,7 +16,7 @@ from retrieval_core_local import load_corpus                 # noqa: E402
 import retrieval_tables_789 as T                             # noqa: E402
 
 ROOT = os.path.abspath(os.path.join(_HERE, "..", ".."))
-OUT = os.path.join(ROOT, "results", "retrieval", "sensitivity_subsite_unknown.json")
+OUT = os.path.join(os.environ.get("VKG_RES_DIR", os.path.join(ROOT, "results", "retrieval", "dedup")), "sensitivity_subsite_unknown.json")
 
 
 def sim_na(A, B, mode, weights=None, gamma_min=1):
@@ -34,7 +34,7 @@ def sim_na(A, B, mode, weights=None, gamma_min=1):
 def main():
     core.ORGAN_UNIVERSE = T.UNIVERSE
     pred = load_corpus("predicted", datasets=["kits", "lits", "msd"]); gt = load_corpus("gt", datasets=["kits", "lits", "msd"])
-    flare = {r["case_id"]: r for r in json.load(open(os.path.join(ROOT, "corpora", "corpus_flare23_kg.json")))["records"]}
+    flare = {r["case_id"]: r for r in json.load(open(os.environ.get("VKG_FLARE_CORPUS", os.path.join(ROOT, "corpora", "corpus_flare23_kg.json"))))["records"]}
     pool = {**pred, **flare}; q113 = [i for i in pred if i in gt]; cids = q113 + sorted(flare)
     res = {}
     for name, fn in (("(ii) as published", core.similarity), ("(ii) sub-site n/a when unknown", sim_na)):

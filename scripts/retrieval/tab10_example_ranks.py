@@ -17,7 +17,7 @@ from retrieval_core_local import load_corpus, similarity, relevant     # noqa: E
 import retrieval_tables_789 as T                                       # noqa: E402
 
 ROOT = os.path.abspath(os.path.join(_HERE, "..", ".."))
-OUT = os.path.join(os.environ.get("VKG_RES_DIR", os.path.join(ROOT, "results", "retrieval")), "tab10_example_ranks.json")
+OUT = os.path.join(os.environ.get("VKG_RES_DIR", os.path.join(ROOT, "results", "retrieval", "dedup")), "tab10_example_ranks.json")
 QUERIES = [("Pancreas -> FLARE23, contained tumor", "pancreas_041"),
            ("LiTS -> FLARE23, multifocal liver", "volume-101"),
            ("Pancreas -> FLARE23, high burden", "pancreas_015")]
