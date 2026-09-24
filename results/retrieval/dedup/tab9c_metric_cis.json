@@ -1,36 +1,36 @@
 {
  "stratum": "(c) FLARE23 -> single-organ, configuration (ii) proposed",
- "n_queries": 493,
- "n_flare_corpus": 1210,
+ "n_queries": 479,
+ "n_flare_corpus": 1196,
  "B_boot": 5000,
  "note": "Per-metric bootstrap CIs for the Table 9 stratum (c) proposed row (YL 09-20 ask: \"updated\nnq, P@5, P@10, mAP, CIs, and the (iii') comparison\" for FLARE23 -> single-organ after the\naxis-normalized re-dedup).\n\nThe shipped retrieval_tab9_stratified.json carries point metrics and the PAIRED-delta CIs\n(its convention); this adds plain per-metric bootstrap CIs for the (ii) row on the same\nper-query values.  Standalone RNG (seed 20260920) so the frozen table JSONs stay byte-stable\n- do NOT fold extra draws into retrieval_tables_789's shared rng.\n\n  VKG_FLARE_CORPUS=corpora/corpus_flare23_kg_dedup.json python tab9c_metric_cis.py\n-> results/retrieval/dedup/tab9c_metric_cis.json",
  "metrics": {
   "P@5": {
-   "point": 0.526,
+   "point": 0.533,
    "ci95": [
-    0.503,
-    0.548
+    0.51,
+    0.556
    ]
   },
   "P@10": {
-   "point": 0.705,
+   "point": 0.714,
    "ci95": [
-    0.684,
-    0.726
+    0.692,
+    0.734
    ]
   },
   "mAP": {
-   "point": 0.655,
+   "point": 0.661,
    "ci95": [
-    0.635,
-    0.674
+    0.643,
+    0.68
    ]
   },
   "nDCG": {
-   "point": 0.64,
+   "point": 0.644,
    "ci95": [
-    0.628,
-    0.651
+    0.632,
+    0.656
    ]
   }
  }

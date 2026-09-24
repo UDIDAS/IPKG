@@ -1,0 +1,72 @@
+{
+ "gate": "twin_elimination_gate_2026-09-24",
+ "checks": {
+  "A_removed_set_integrity": {
+   "full_corpus": 1312,
+   "dedup_corpus": 1196,
+   "removed": 116,
+   "wave1_original_audit": 78,
+   "wave2_census": 13,
+   "wave3_second_pass": 11,
+   "wave4_third_pass_grid_census": 14,
+   "union_of_waves_equals_removed": true,
+   "waves_disjoint": true,
+   "unexplained_removed": [],
+   "listed_but_still_in_corpus": []
+  },
+  "B_no_resurrection": {
+   "app_handoff/precomputed/rankings_113_queries.json": {
+    "removed_ids_found": [],
+    "clean": true
+   },
+   "results/retrieval/dedup/tab10_example_ranks.json": {
+    "removed_ids_found": [],
+    "clean": true
+   },
+   "results/study/clinician_study_30q.json": {
+    "removed_ids_found": [],
+    "clean": true
+   },
+   "results/retrieval/dedup/eleven_kits_effect_2026-09-22.json": {
+    "removed_ids_found": [],
+    "clean": true
+   },
+   "results/retrieval/dedup/fourteen_twins_effect_2026-09-24.json": {
+    "removed_ids_found": [],
+    "clean": true
+   }
+  },
+  "C_ks_scan_reconciliation": {
+   "scanned": 576,
+   "ct_voxel_twins": 310,
+   "scanned_still_in_pool": 523,
+   "twins_of_a_query": 51,
+   "twins_of_a_query_by_collection": {
+    "LiTS": 10,
+    "MSD Pancreas": 21,
+    "KiTS23": 20
+   },
+   "violations_query_twin_still_in_pool": [],
+   "ks_summary": {
+    "scanned": 576,
+    "twins": 310,
+    "twin_collections": {
+     "KiTS23": 133,
+     "MSD Pancreas": 127,
+     "LiTS": 50
+    },
+    "shortlist_n": 0,
+    "elapsed_s": 2441
+   }
+  },
+  "D_grid_census_reconciliation": {
+   "grid_collisions": 17,
+   "confirmed_twins": 14,
+   "flags_unresolved": 0,
+   "confirmed_twins_still_in_pool": [],
+   "residual": "a RESAMPLED re-share evades the grid test and the CT-voxel test equally; none of the 310 known re-shares is resampled"
+  }
+ },
+ "failures": [],
+ "verdict": "PASS - pool is twin-free w.r.t. every list, the full CT-voxel scan (masked stratum) and the grid census (no-CT stratum)"
+}

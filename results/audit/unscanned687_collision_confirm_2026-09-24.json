@@ -1,0 +1,827 @@
+{
+ "confirm": "unscanned687_collision_confirm_2026-09-24",
+ "n_collisions": 17,
+ "rows": [
+  {
+   "flare": "flare23_FLARE23_0062",
+   "query": "case_00152",
+   "dataset": "kits",
+   "grid": [
+    512,
+    512,
+    38
+   ],
+   "spacing": [
+    0.7227,
+    0.7227,
+    5.0
+   ],
+   "organ_iou": 0.9401,
+   "tumor_iou": 0.9309,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "organ_vox": [
+    142107,
+    147757
+   ],
+   "tumor_vox": [
+    4230,
+    4544
+   ],
+   "verdict": "CONFIRMED_TWIN"
+  },
+  {
+   "flare": "flare23_FLARE23_0129",
+   "query": "volume-49",
+   "dataset": "lits",
+   "grid": [
+    512,
+    512,
+    254
+   ],
+   "spacing": [
+    0.9551,
+    0.9551,
+    2.5
+   ],
+   "flare_liver_vox": 697708,
+   "query_liver_vox_native": 720798,
+   "flare_tumor_vox": 8015,
+   "query_tumor_vox_native": 8015,
+   "liver_delta_pct": 3.203,
+   "verdict": "CONFIRMED_TWIN (tumor GT voxel counts EXACTLY equal - the LiTS census's T2 criterion: FLARE inherited the Task03 tumor label verbatim; the liver delta is FLARE's own liver re-annotation)"
+  },
+  {
+   "flare": "flare23_FLARE23_0141",
+   "query": "case_00160",
+   "dataset": "kits",
+   "grid": [
+    796,
+    512,
+    252
+   ],
+   "spacing": [
+    0.4512,
+    0.4512,
+    1.0
+   ],
+   "organ_iou": 0.9553,
+   "tumor_iou": 0.9485,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "organ_vox": [
+    2018389,
+    2076984
+   ],
+   "tumor_vox": [
+    241177,
+    254275
+   ],
+   "verdict": "CONFIRMED_TWIN"
+  },
+  {
+   "flare": "flare23_FLARE23_0628",
+   "query": "case_00057",
+   "dataset": "kits",
+   "grid": [
+    512,
+    512,
+    80
+   ],
+   "spacing": [
+    0.8223,
+    0.8223,
+    3.0
+   ],
+   "organ_iou": 0.9207,
+   "tumor_iou": 0.9671,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "organ_vox": [
+    165022,
+    161349
+   ],
+   "tumor_vox": [
+    56755,
+    58688
+   ],
+   "verdict": "CONFIRMED_TWIN"
+  },
+  {
+   "flare": "flare23_FLARE23_0740",
+   "query": "case_00103",
+   "dataset": "kits",
+   "grid": [
+    512,
+    512,
+    665
+   ],
+   "spacing": [
+    0.8281,
+    0.8281,
+    0.5
+   ],
+   "organ_iou": 0.9282,
+   "tumor_iou": 0.8997,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "organ_vox": [
+    830790,
+    876871
+   ],
+   "tumor_vox": [
+    13577,
+    15091
+   ],
+   "verdict": "CONFIRMED_TWIN"
+  },
+  {
+   "flare": "flare23_FLARE23_0917",
+   "query": "volume-54",
+   "dataset": "lits",
+   "grid": [
+    512,
+    512,
+    96
+   ],
+   "spacing": [
+    0.8281,
+    0.8281,
+    5.0
+   ],
+   "flare_liver_vox": 513316,
+   "query_liver_vox_native": 525493,
+   "flare_tumor_vox": 513,
+   "query_tumor_vox_native": 513,
+   "liver_delta_pct": 2.317,
+   "verdict": "CONFIRMED_TWIN (tumor GT voxel counts EXACTLY equal - the LiTS census's T2 criterion: FLARE inherited the Task03 tumor label verbatim; the liver delta is FLARE's own liver re-annotation)"
+  },
+  {
+   "flare": "flare23_FLARE23_1099",
+   "query": "pancreas_369",
+   "dataset": "msd",
+   "grid": [
+    512,
+    512,
+    97
+   ],
+   "spacing": [
+    0.9766,
+    0.9766,
+    2.5
+   ],
+   "organ_iou": 0.161,
+   "tumor_iou": 0.0,
+   "transposition": "((0, 1, 2), (True, False, True))",
+   "organ_vox": [
+    58604,
+    70640
+   ],
+   "tumor_vox": [
+    2443,
+    0
+   ],
+   "verdict": "coincidence (different patients; organ IoU far below twin range)"
+  },
+  {
+   "flare": "flare23_FLARE23_1125",
+   "query": "case_00018",
+   "dataset": "kits",
+   "grid": [
+    512,
+    512,
+    121
+   ],
+   "spacing": [
+    0.8613,
+    0.8613,
+    2.5
+   ],
+   "organ_iou": 0.9463,
+   "tumor_iou": 0.9187,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "organ_vox": [
+    235179,
+    240439
+   ],
+   "tumor_vox": [
+    9904,
+    10781
+   ],
+   "verdict": "CONFIRMED_TWIN"
+  },
+  {
+   "flare": "flare23_FLARE23_1158",
+   "query": "case_00042",
+   "dataset": "kits",
+   "grid": [
+    512,
+    512,
+    301
+   ],
+   "spacing": [
+    0.8594,
+    0.8594,
+    1.0
+   ],
+   "organ_iou": 0.8686,
+   "tumor_iou": 0.9838,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "organ_vox": [
+    511912,
+    538590
+   ],
+   "tumor_vox": [
+    1848011,
+    1878436
+   ],
+   "verdict": "CONFIRMED_TWIN"
+  },
+  {
+   "flare": "flare23_FLARE23_1364",
+   "query": "case_00162",
+   "dataset": "kits",
+   "grid": [
+    512,
+    512,
+    94
+   ],
+   "spacing": [
+    0.5508,
+    0.5508,
+    5.0
+   ],
+   "organ_iou": 0.9417,
+   "tumor_iou": 0.967,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "organ_vox": [
+    134859,
+    140744
+   ],
+   "tumor_vox": [
+    19904,
+    20583
+   ],
+   "verdict": "CONFIRMED_TWIN"
+  },
+  {
+   "flare": "flare23_FLARE23_1609",
+   "query": "case_00095",
+   "dataset": "kits",
+   "grid": [
+    512,
+    512,
+    314
+   ],
+   "spacing": [
+    0.9336,
+    0.9336,
+    1.5
+   ],
+   "organ_iou": 0.9264,
+   "tumor_iou": 0.9758,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "organ_vox": [
+    267500,
+    281844
+   ],
+   "tumor_vox": [
+    47620,
+    48803
+   ],
+   "verdict": "CONFIRMED_TWIN"
+  },
+  {
+   "flare": "flare23_FLARE23_1816",
+   "query": "case_00006",
+   "dataset": "kits",
+   "grid": [
+    512,
+    512,
+    157
+   ],
+   "spacing": [
+    0.7422,
+    0.7422,
+    3.0
+   ],
+   "organ_iou": 0.9324,
+   "tumor_iou": 0.9358,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "organ_vox": [
+    232690,
+    244097
+   ],
+   "tumor_vox": [
+    6835,
+    7304
+   ],
+   "verdict": "CONFIRMED_TWIN"
+  },
+  {
+   "flare": "flare23_FLARE23_2033",
+   "query": "case_00154",
+   "dataset": "kits",
+   "grid": [
+    512,
+    512,
+    470
+   ],
+   "spacing": [
+    0.9375,
+    0.9375,
+    0.5
+   ],
+   "organ_iou": 0.9217,
+   "tumor_iou": 0.9552,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "organ_vox": [
+    818247,
+    866872
+   ],
+   "tumor_vox": [
+    38895,
+    40720
+   ],
+   "verdict": "CONFIRMED_TWIN"
+  },
+  {
+   "flare": "flare23_FLARE23_2068",
+   "query": "case_00030",
+   "dataset": "kits",
+   "grid": [
+    512,
+    512,
+    38
+   ],
+   "spacing": [
+    0.7305,
+    0.7305,
+    5.0
+   ],
+   "organ_iou": 0.753,
+   "tumor_iou": 0.9746,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "organ_vox": [
+    100690,
+    79989
+   ],
+   "tumor_vox": [
+    542374,
+    556484
+   ],
+   "verdict": "CONFIRMED_TWIN (by tumor: IoU 0.9746 on a 542374-voxel tumor; the organ disagreement is re-annotation, two patients cannot share a tumor)"
+  },
+  {
+   "flare": "flare23_FLARE23_2072",
+   "query": "pancreas_369",
+   "dataset": "msd",
+   "grid": [
+    512,
+    512,
+    97
+   ],
+   "spacing": [
+    0.9766,
+    0.9766,
+    2.5
+   ],
+   "organ_iou": 0.082,
+   "tumor_iou": 0.0,
+   "transposition": "((0, 1, 2), (False, False, False))",
+   "organ_vox": [
+    58604,
+    36442
+   ],
+   "tumor_vox": [
+    2443,
+    4784
+   ],
+   "verdict": "coincidence (different patients; organ IoU far below twin range)"
+  },
+  {
+   "flare": "flare23_FLARE23_2106",
+   "query": "volume-37",
+   "dataset": "lits",
+   "grid": [
+    512,
+    512,
+    122
+   ],
+   "spacing": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "flare_liver_vox": 1940629,
+   "query_liver_vox_native": 1857041,
+   "flare_tumor_vox": 122480,
+   "query_tumor_vox_native": 14981,
+   "liver_delta_pct": 4.501,
+   "lits_census_attribution": {
+    "volume": "volume-40",
+    "tests": [
+     "T2"
+    ],
+    "flare_tumor_vox": 122480,
+    "task03_tumor_vox": 122480,
+    "liver_delta_pct": 0.0
+   },
+   "verdict": "BENIGN - census already attributes FLARE23_2106 to volume-40 (non-query); grid coincidence between two LiTS scans"
+  },
+  {
+   "flare": "flare23_FLARE23_2116",
+   "query": "case_00035",
+   "dataset": "kits",
+   "grid": [
+    512,
+    512,
+    98
+   ],
+   "spacing": [
+    0.9648,
+    0.9648,
+    5.0
+   ],
+   "organ_iou": 0.954,
+   "tumor_iou": 0.9585,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "organ_vox": [
+    102806,
+    105945
+   ],
+   "tumor_vox": [
+    5109,
+    5330
+   ],
+   "verdict": "CONFIRMED_TWIN"
+  }
+ ],
+ "n_confirmed_twins": 14,
+ "confirmed_twins": [
+  {
+   "flare": "flare23_FLARE23_0062",
+   "query": "case_00152",
+   "dataset": "kits",
+   "grid": [
+    512,
+    512,
+    38
+   ],
+   "spacing": [
+    0.7227,
+    0.7227,
+    5.0
+   ],
+   "organ_iou": 0.9401,
+   "tumor_iou": 0.9309,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "organ_vox": [
+    142107,
+    147757
+   ],
+   "tumor_vox": [
+    4230,
+    4544
+   ],
+   "verdict": "CONFIRMED_TWIN"
+  },
+  {
+   "flare": "flare23_FLARE23_0129",
+   "query": "volume-49",
+   "dataset": "lits",
+   "grid": [
+    512,
+    512,
+    254
+   ],
+   "spacing": [
+    0.9551,
+    0.9551,
+    2.5
+   ],
+   "flare_liver_vox": 697708,
+   "query_liver_vox_native": 720798,
+   "flare_tumor_vox": 8015,
+   "query_tumor_vox_native": 8015,
+   "liver_delta_pct": 3.203,
+   "verdict": "CONFIRMED_TWIN (tumor GT voxel counts EXACTLY equal - the LiTS census's T2 criterion: FLARE inherited the Task03 tumor label verbatim; the liver delta is FLARE's own liver re-annotation)"
+  },
+  {
+   "flare": "flare23_FLARE23_0141",
+   "query": "case_00160",
+   "dataset": "kits",
+   "grid": [
+    796,
+    512,
+    252
+   ],
+   "spacing": [
+    0.4512,
+    0.4512,
+    1.0
+   ],
+   "organ_iou": 0.9553,
+   "tumor_iou": 0.9485,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "organ_vox": [
+    2018389,
+    2076984
+   ],
+   "tumor_vox": [
+    241177,
+    254275
+   ],
+   "verdict": "CONFIRMED_TWIN"
+  },
+  {
+   "flare": "flare23_FLARE23_0628",
+   "query": "case_00057",
+   "dataset": "kits",
+   "grid": [
+    512,
+    512,
+    80
+   ],
+   "spacing": [
+    0.8223,
+    0.8223,
+    3.0
+   ],
+   "organ_iou": 0.9207,
+   "tumor_iou": 0.9671,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "organ_vox": [
+    165022,
+    161349
+   ],
+   "tumor_vox": [
+    56755,
+    58688
+   ],
+   "verdict": "CONFIRMED_TWIN"
+  },
+  {
+   "flare": "flare23_FLARE23_0740",
+   "query": "case_00103",
+   "dataset": "kits",
+   "grid": [
+    512,
+    512,
+    665
+   ],
+   "spacing": [
+    0.8281,
+    0.8281,
+    0.5
+   ],
+   "organ_iou": 0.9282,
+   "tumor_iou": 0.8997,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "organ_vox": [
+    830790,
+    876871
+   ],
+   "tumor_vox": [
+    13577,
+    15091
+   ],
+   "verdict": "CONFIRMED_TWIN"
+  },
+  {
+   "flare": "flare23_FLARE23_0917",
+   "query": "volume-54",
+   "dataset": "lits",
+   "grid": [
+    512,
+    512,
+    96
+   ],
+   "spacing": [
+    0.8281,
+    0.8281,
+    5.0
+   ],
+   "flare_liver_vox": 513316,
+   "query_liver_vox_native": 525493,
+   "flare_tumor_vox": 513,
+   "query_tumor_vox_native": 513,
+   "liver_delta_pct": 2.317,
+   "verdict": "CONFIRMED_TWIN (tumor GT voxel counts EXACTLY equal - the LiTS census's T2 criterion: FLARE inherited the Task03 tumor label verbatim; the liver delta is FLARE's own liver re-annotation)"
+  },
+  {
+   "flare": "flare23_FLARE23_1125",
+   "query": "case_00018",
+   "dataset": "kits",
+   "grid": [
+    512,
+    512,
+    121
+   ],
+   "spacing": [
+    0.8613,
+    0.8613,
+    2.5
+   ],
+   "organ_iou": 0.9463,
+   "tumor_iou": 0.9187,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "organ_vox": [
+    235179,
+    240439
+   ],
+   "tumor_vox": [
+    9904,
+    10781
+   ],
+   "verdict": "CONFIRMED_TWIN"
+  },
+  {
+   "flare": "flare23_FLARE23_1158",
+   "query": "case_00042",
+   "dataset": "kits",
+   "grid": [
+    512,
+    512,
+    301
+   ],
+   "spacing": [
+    0.8594,
+    0.8594,
+    1.0
+   ],
+   "organ_iou": 0.8686,
+   "tumor_iou": 0.9838,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "organ_vox": [
+    511912,
+    538590
+   ],
+   "tumor_vox": [
+    1848011,
+    1878436
+   ],
+   "verdict": "CONFIRMED_TWIN"
+  },
+  {
+   "flare": "flare23_FLARE23_1364",
+   "query": "case_00162",
+   "dataset": "kits",
+   "grid": [
+    512,
+    512,
+    94
+   ],
+   "spacing": [
+    0.5508,
+    0.5508,
+    5.0
+   ],
+   "organ_iou": 0.9417,
+   "tumor_iou": 0.967,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "organ_vox": [
+    134859,
+    140744
+   ],
+   "tumor_vox": [
+    19904,
+    20583
+   ],
+   "verdict": "CONFIRMED_TWIN"
+  },
+  {
+   "flare": "flare23_FLARE23_1609",
+   "query": "case_00095",
+   "dataset": "kits",
+   "grid": [
+    512,
+    512,
+    314
+   ],
+   "spacing": [
+    0.9336,
+    0.9336,
+    1.5
+   ],
+   "organ_iou": 0.9264,
+   "tumor_iou": 0.9758,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "organ_vox": [
+    267500,
+    281844
+   ],
+   "tumor_vox": [
+    47620,
+    48803
+   ],
+   "verdict": "CONFIRMED_TWIN"
+  },
+  {
+   "flare": "flare23_FLARE23_1816",
+   "query": "case_00006",
+   "dataset": "kits",
+   "grid": [
+    512,
+    512,
+    157
+   ],
+   "spacing": [
+    0.7422,
+    0.7422,
+    3.0
+   ],
+   "organ_iou": 0.9324,
+   "tumor_iou": 0.9358,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "organ_vox": [
+    232690,
+    244097
+   ],
+   "tumor_vox": [
+    6835,
+    7304
+   ],
+   "verdict": "CONFIRMED_TWIN"
+  },
+  {
+   "flare": "flare23_FLARE23_2033",
+   "query": "case_00154",
+   "dataset": "kits",
+   "grid": [
+    512,
+    512,
+    470
+   ],
+   "spacing": [
+    0.9375,
+    0.9375,
+    0.5
+   ],
+   "organ_iou": 0.9217,
+   "tumor_iou": 0.9552,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "organ_vox": [
+    818247,
+    866872
+   ],
+   "tumor_vox": [
+    38895,
+    40720
+   ],
+   "verdict": "CONFIRMED_TWIN"
+  },
+  {
+   "flare": "flare23_FLARE23_2068",
+   "query": "case_00030",
+   "dataset": "kits",
+   "grid": [
+    512,
+    512,
+    38
+   ],
+   "spacing": [
+    0.7305,
+    0.7305,
+    5.0
+   ],
+   "organ_iou": 0.753,
+   "tumor_iou": 0.9746,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "organ_vox": [
+    100690,
+    79989
+   ],
+   "tumor_vox": [
+    542374,
+    556484
+   ],
+   "verdict": "CONFIRMED_TWIN (by tumor: IoU 0.9746 on a 542374-voxel tumor; the organ disagreement is re-annotation, two patients cannot share a tumor)"
+  },
+  {
+   "flare": "flare23_FLARE23_2116",
+   "query": "case_00035",
+   "dataset": "kits",
+   "grid": [
+    512,
+    512,
+    98
+   ],
+   "spacing": [
+    0.9648,
+    0.9648,
+    5.0
+   ],
+   "organ_iou": 0.954,
+   "tumor_iou": 0.9585,
+   "transposition": "((2, 1, 0), (True, True, True))",
+   "organ_vox": [
+    102806,
+    105945
+   ],
+   "tumor_vox": [
+    5109,
+    5330
+   ],
+   "verdict": "CONFIRMED_TWIN"
+  }
+ ],
+ "n_flags": 0,
+ "flags": []
+}

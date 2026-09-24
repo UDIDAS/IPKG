@@ -1,0 +1,358 @@
+{
+ "prescreen": "unscanned687_grid_prescreen_2026-09-24",
+ "premise": "same-scan re-shares are grid-identical (all 310 KS CT-voxel twins are); GT labels carry the CT grid, so grid comparison is annotation-independent",
+ "n_unmasked_pool_records": 687,
+ "headers_read": 687,
+ "header_errors": [],
+ "no_ct_exists_for_any": true,
+ "query_sigs": {
+  "total": 113,
+  "fetched_from_drive": 75,
+  "shape_only": []
+ },
+ "grid_collisions": [
+  {
+   "flare": "flare23_FLARE23_0062",
+   "query": "case_00152",
+   "shape": [
+    512,
+    512,
+    38
+   ],
+   "flare_spacing": [
+    0.7227,
+    0.7227,
+    5.0
+   ],
+   "query_spacing": [
+    0.7227,
+    0.7227,
+    5.0
+   ],
+   "sig_source": "census"
+  },
+  {
+   "flare": "flare23_FLARE23_0129",
+   "query": "volume-49",
+   "shape": [
+    512,
+    512,
+    254
+   ],
+   "flare_spacing": [
+    0.9551,
+    0.9551,
+    2.5
+   ],
+   "query_spacing": [
+    0.955078125,
+    0.955078125,
+    2.5
+   ],
+   "sig_source": "lits_geometry_map"
+  },
+  {
+   "flare": "flare23_FLARE23_0141",
+   "query": "case_00160",
+   "shape": [
+    796,
+    512,
+    252
+   ],
+   "flare_spacing": [
+    0.4512,
+    0.4512,
+    1.0
+   ],
+   "query_spacing": [
+    1.0,
+    0.4512,
+    0.4512
+   ],
+   "sig_source": "drive header fetch"
+  },
+  {
+   "flare": "flare23_FLARE23_0628",
+   "query": "case_00057",
+   "shape": [
+    512,
+    512,
+    80
+   ],
+   "flare_spacing": [
+    0.8223,
+    0.8223,
+    3.0
+   ],
+   "query_spacing": [
+    3.0,
+    0.8223,
+    0.8223
+   ],
+   "sig_source": "drive header fetch"
+  },
+  {
+   "flare": "flare23_FLARE23_0740",
+   "query": "case_00103",
+   "shape": [
+    512,
+    512,
+    665
+   ],
+   "flare_spacing": [
+    0.8281,
+    0.8281,
+    0.5
+   ],
+   "query_spacing": [
+    0.5,
+    0.8281,
+    0.8281
+   ],
+   "sig_source": "drive header fetch"
+  },
+  {
+   "flare": "flare23_FLARE23_0917",
+   "query": "volume-54",
+   "shape": [
+    512,
+    512,
+    96
+   ],
+   "flare_spacing": [
+    0.8281,
+    0.8281,
+    5.0
+   ],
+   "query_spacing": [
+    0.828125,
+    0.828125,
+    5.0
+   ],
+   "sig_source": "lits_geometry_map"
+  },
+  {
+   "flare": "flare23_FLARE23_1099",
+   "query": "pancreas_369",
+   "shape": [
+    512,
+    512,
+    97
+   ],
+   "flare_spacing": [
+    0.9766,
+    0.9766,
+    2.5
+   ],
+   "query_spacing": [
+    0.9766,
+    0.9766,
+    2.5
+   ],
+   "sig_source": "drive header fetch"
+  },
+  {
+   "flare": "flare23_FLARE23_1125",
+   "query": "case_00018",
+   "shape": [
+    512,
+    512,
+    121
+   ],
+   "flare_spacing": [
+    0.8613,
+    0.8613,
+    2.5
+   ],
+   "query_spacing": [
+    0.8613,
+    0.8613,
+    2.5
+   ],
+   "sig_source": "census"
+  },
+  {
+   "flare": "flare23_FLARE23_1158",
+   "query": "case_00042",
+   "shape": [
+    512,
+    512,
+    301
+   ],
+   "flare_spacing": [
+    0.8594,
+    0.8594,
+    1.0
+   ],
+   "query_spacing": [
+    1.0,
+    0.8594,
+    0.8594
+   ],
+   "sig_source": "drive header fetch"
+  },
+  {
+   "flare": "flare23_FLARE23_1364",
+   "query": "case_00162",
+   "shape": [
+    512,
+    512,
+    94
+   ],
+   "flare_spacing": [
+    0.5508,
+    0.5508,
+    5.0
+   ],
+   "query_spacing": [
+    5.0,
+    0.5508,
+    0.5508
+   ],
+   "sig_source": "drive header fetch"
+  },
+  {
+   "flare": "flare23_FLARE23_1609",
+   "query": "case_00095",
+   "shape": [
+    512,
+    512,
+    314
+   ],
+   "flare_spacing": [
+    0.9336,
+    0.9336,
+    1.5
+   ],
+   "query_spacing": [
+    1.5,
+    0.9336,
+    0.9336
+   ],
+   "sig_source": "drive header fetch"
+  },
+  {
+   "flare": "flare23_FLARE23_1816",
+   "query": "case_00006",
+   "shape": [
+    512,
+    512,
+    157
+   ],
+   "flare_spacing": [
+    0.7422,
+    0.7422,
+    3.0
+   ],
+   "query_spacing": [
+    0.7422,
+    0.7422,
+    3.0
+   ],
+   "sig_source": "census"
+  },
+  {
+   "flare": "flare23_FLARE23_2033",
+   "query": "case_00154",
+   "shape": [
+    512,
+    512,
+    470
+   ],
+   "flare_spacing": [
+    0.9375,
+    0.9375,
+    0.5
+   ],
+   "query_spacing": [
+    0.5,
+    0.9375,
+    0.9375
+   ],
+   "sig_source": "drive header fetch"
+  },
+  {
+   "flare": "flare23_FLARE23_2068",
+   "query": "case_00030",
+   "shape": [
+    512,
+    512,
+    38
+   ],
+   "flare_spacing": [
+    0.7305,
+    0.7305,
+    5.0
+   ],
+   "query_spacing": [
+    5.0,
+    0.7305,
+    0.7305
+   ],
+   "sig_source": "drive header fetch"
+  },
+  {
+   "flare": "flare23_FLARE23_2072",
+   "query": "pancreas_369",
+   "shape": [
+    512,
+    512,
+    97
+   ],
+   "flare_spacing": [
+    0.9766,
+    0.9766,
+    2.5
+   ],
+   "query_spacing": [
+    0.9766,
+    0.9766,
+    2.5
+   ],
+   "sig_source": "drive header fetch"
+  },
+  {
+   "flare": "flare23_FLARE23_2106",
+   "query": "volume-37",
+   "shape": [
+    512,
+    512,
+    122
+   ],
+   "flare_spacing": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "query_spacing": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "sig_source": "lits_geometry_map"
+  },
+  {
+   "flare": "flare23_FLARE23_2116",
+   "query": "case_00035",
+   "shape": [
+    512,
+    512,
+    98
+   ],
+   "flare_spacing": [
+    0.9648,
+    0.9648,
+    5.0
+   ],
+   "query_spacing": [
+    5.0,
+    0.9648,
+    0.9648
+   ],
+   "sig_source": "drive header fetch"
+  }
+ ],
+ "n_collisions": 17,
+ "caveat": "a re-share RESAMPLED to a new grid evades this test (and would equally evade KS's np.array_equal CT-voxel scan); none of the 310 known re-shares is resampled",
+ "verdict": "COLLISIONS/ERRORS - confirm each by mask overlap before claiming clean"
+}

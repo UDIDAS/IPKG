@@ -128,25 +128,25 @@
   },
   "(c) FLARE23 -> single-organ": {
    "proposed": {
-    "n_queries": 493,
-    "P@5": 0.526,
-    "P@10": 0.705,
-    "mAP": 0.655,
-    "nDCG": 0.64,
+    "n_queries": 479,
+    "P@5": 0.533,
+    "P@10": 0.714,
+    "mAP": 0.661,
+    "nDCG": 0.644,
     "spurious@10": 0.0,
     "mismatch@10": null
    },
    "coverage_blind": {
-    "n_queries": 493,
-    "P@5": 0.526,
-    "P@10": 0.705,
-    "mAP": 0.655,
-    "nDCG": 0.64,
+    "n_queries": 479,
+    "P@5": 0.533,
+    "P@10": 0.714,
+    "mAP": 0.661,
+    "nDCG": 0.644,
     "spurious@10": 0.0,
     "mismatch@10": null
    },
    "delta_obs_mAP": {
-    "n_common": 493,
+    "n_common": 479,
     "delta": 0.0,
     "ci95": [
      0.0,

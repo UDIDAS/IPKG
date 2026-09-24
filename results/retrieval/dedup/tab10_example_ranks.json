@@ -1,5 +1,5 @@
 {
- "pool_size": 1323,
+ "pool_size": 1309,
  "universe": [
   "liver",
   "spleen",
@@ -22,7 +22,7 @@
     "rank_within_flare23_only": 1,
     "single_organ_candidates_above": 39,
     "n_relevant_flare23_candidates": 92,
-    "n_ranked": 1264
+    "n_ranked": 1250
    },
    "coverage_blind": {
     "first_flare23_rank": 53,
@@ -30,7 +30,7 @@
     "rank_within_flare23_only": 1,
     "single_organ_candidates_above": 52,
     "n_relevant_flare23_candidates": 92,
-    "n_ranked": 1322
+    "n_ranked": 1308
    },
    "imputed_absent": {
     "first_flare23_rank": 3,
@@ -38,7 +38,7 @@
     "rank_within_flare23_only": 1,
     "single_organ_candidates_above": 2,
     "n_relevant_flare23_candidates": 92,
-    "n_ranked": 1322
+    "n_ranked": 1308
    }
   },
   {
@@ -56,7 +56,7 @@
     "rank_within_flare23_only": 1,
     "single_organ_candidates_above": 15,
     "n_relevant_flare23_candidates": 42,
-    "n_ranked": 1229
+    "n_ranked": 1215
    },
    "coverage_blind": {
     "first_flare23_rank": 20,
@@ -64,7 +64,7 @@
     "rank_within_flare23_only": 1,
     "single_organ_candidates_above": 19,
     "n_relevant_flare23_candidates": 42,
-    "n_ranked": 1322
+    "n_ranked": 1308
    },
    "imputed_absent": {
     "first_flare23_rank": 5,
@@ -72,7 +72,7 @@
     "rank_within_flare23_only": 1,
     "single_organ_candidates_above": 4,
     "n_relevant_flare23_candidates": 42,
-    "n_ranked": 1322
+    "n_ranked": 1308
    }
   },
   {
@@ -90,7 +90,7 @@
     "rank_within_flare23_only": 1,
     "single_organ_candidates_above": 44,
     "n_relevant_flare23_candidates": 25,
-    "n_ranked": 1264
+    "n_ranked": 1250
    },
    "coverage_blind": {
     "first_flare23_rank": 53,
@@ -98,7 +98,7 @@
     "rank_within_flare23_only": 1,
     "single_organ_candidates_above": 52,
     "n_relevant_flare23_candidates": 25,
-    "n_ranked": 1322
+    "n_ranked": 1308
    },
    "imputed_absent": {
     "first_flare23_rank": 17,
@@ -106,7 +106,7 @@
     "rank_within_flare23_only": 1,
     "single_organ_candidates_above": 16,
     "n_relevant_flare23_candidates": 25,
-    "n_ranked": 1322
+    "n_ranked": 1308
    }
   }
  ]

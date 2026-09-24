@@ -1,6 +1,6 @@
 {
  "n_queries": 113,
- "n_pool": 1323,
+ "n_pool": 1309,
  "relevance": "construction-defined (candidate's own recorded phenotype); FLARE23 candidates use the shipped GT-derived KG records",
  "universe": [
   "liver",
@@ -14,7 +14,7 @@
    "n_queries": 113,
    "P@5": 1.0,
    "P@10": 1.0,
-   "mAP": 0.998,
+   "mAP": 0.997,
    "nDCG": 1.0,
    "spurious@10": 0.0,
    "mismatch@10": 0.0,
@@ -23,10 +23,10 @@
     "delta": -0.001,
     "ci95": [
      -0.003,
-     0.0
+     -0.0
     ],
-    "p_raw": 0.06364681765911705,
-    "p_holm": 0.06365
+    "p_raw": 0.054447277636118195,
+    "p_holm": 0.05445
    }
   },
   "(ii) Predicted phenotypes + gamma (proposed)": {
@@ -61,16 +61,16 @@
    "n_queries": 109,
    "P@5": 0.481,
    "P@10": 0.44,
-   "mAP": 0.333,
+   "mAP": 0.334,
    "nDCG": 0.444,
    "spurious@10": 0.557,
    "mismatch@10": 0.56,
    "dmAP_vs_ii": {
     "n_common": 109,
-    "delta": -0.666,
+    "delta": -0.665,
     "ci95": [
-     -0.699,
-     -0.63
+     -0.698,
+     -0.629
     ],
     "p_raw": 4.999750012499375e-05,
     "p_holm": 0.0001

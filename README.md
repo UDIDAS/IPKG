@@ -18,8 +18,8 @@ file below and in [`TABLE_MAP.md`](TABLE_MAP.md).
 | Result | Value | Source |
 |:--|:--|:--|
 | Primary retrieval benchmark, predicted + γ (Table 8, config ii) | mAP **0.972** (113-case pool) | `results/retrieval/dedup/baselines_tab7_tab8.json` |
-| Large-pool stress test on the de-duplicated **1,323**-case pool (Table 9) | mAP **0.997** (636-case CT sub-pool; full pool 0.999); baselines ≤ 0.483, all Holm p ≤ 3.5×10⁻⁴ below (ii) | same file + `retrieval_tab8_stress.json` |
-| Duplicate-scan audits: **102 twins removed** from the cross-dataset pool (78 + 13 by the axis-normalized census + 11 by the CT-voxel second pass — annotation-independent, mask-overlap-confirmed); FLARE23 re-shares **114/131** LiTS volumes; residual: **687** pool FLARE23 records (no predicted mask) are label-screened only — a disclosed lower bound (census JSON, `second_pass` section) | pool 1,425 → **1,323** | `results/audit/` (five audit files) |
+| Large-pool stress test on the de-duplicated **1,309**-case pool (Table 9) | mAP **0.997** (636-case CT sub-pool; full pool 0.999); baselines ≤ 0.483, all Holm p ≤ 3.5×10⁻⁴ below (ii) | same file + `retrieval_tab8_stress.json` |
+| Duplicate-scan audits: **116 twins removed** from the cross-dataset pool (78 + 13 by the axis-normalized census + 11 by the CT-voxel second pass + 14 by the grid-census third pass — all annotation-independent, mask-overlap- or exact-tumor-voxel-confirmed); FLARE23 re-shares **116/131** LiTS volumes; residual: **673** pool FLARE23 records (no CT in any release copy) are label- AND grid-screened — none shares a voxel grid with any query (census JSON `second_pass`/`third_pass` sections; elimination gate 4/4 PASS: `twin_elimination_gate_2026-09-24.json`; disclosed caveat: a resampled re-share evades the grid and CT-voxel tests equally) | pool 1,425 → **1,309** | `results/audit/` (eight audit files) |
 | Statement-level report precision (Table 11, containment v2) | overall **0.944** (containment 0.872) | `results/kg/containment_reextraction_113_predicted.json` |
 | LLM relevance-judge study (Table 12) | κ 0.669, judge-relevance mAP 0.983 | `results/llm_expert/llm_expert_study_qwen3_32b.json` |
 | Host-rule vs Eq. 3 agreement (§3.11) | **0.9853** over 749 tumor components | `results/host_rule_agreement.json` |
@@ -29,7 +29,7 @@ file below and in [`TABLE_MAP.md`](TABLE_MAP.md).
 
 ```
 corpora/        per-patient phenotype records (GT + predicted, all datasets), the de-duplicated
-                FLARE23 pool (1,210 records), and containment_v2/ side corpora (see its README)
+                FLARE23 pool (1,196 records), and containment_v2/ side corpora (see its README)
 kg_graphs/      built knowledge graphs (imaging_kg_*.ttl, unified_mmkg_*.json), schema,
                 ontology mappings (SNOMED CT / NCIt), organ-volume atlas
 queries/        the 10 SPARQL query families (.rq), the query-suite evaluators, runners
