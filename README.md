@@ -60,8 +60,11 @@ All imaging data are public releases: **FLARE23** (MICCAI FLARE 2023), **LiTS** 
 Task03_Liver, which carries the original NIfTI headers), **KiTS23**, **MSD Pancreas**. This
 repository ships derived per-patient phenotype records and graphs only — no image data, no PHI
 (all sources are de-identified public challenge sets). The 576 semi-oracle predicted FLARE23
-masks behind Table 4 are being deposited (release channel in the Data Availability statement of
-the paper).
+masks behind Table 4 (the intermediate segmentation outputs the KG records are extracted from)
+are available in the shared Drive folder
+[`masks_predicted_flare23/`](https://drive.google.com/drive/folders/1INMkyghy0mouV0o61qWvBcOuAQ-Wt0Pl)
+(576 x `.nii.gz`, 229.7 MiB, with the FLARE23 citation/license notes) — cite this link plus the
+repository tag `IPKG-v1-rc5` in the Data Availability statement.
 
 ## Clinician relevance study (§4.11 / §5.7)
 
