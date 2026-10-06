@@ -1,0 +1,2812 @@
+{
+"pancreas_001": {
+"shape": [
+512,
+512,
+110
+],
+"pancreas_sl50": 29,
+"tumor_vox": 26153,
+"tumor_sl15": 23
+},
+"pancreas_004": {
+"shape": [
+512,
+512,
+107
+],
+"pancreas_sl50": 35,
+"tumor_vox": 28448,
+"tumor_sl15": 14
+},
+"pancreas_005": {
+"shape": [
+512,
+512,
+104
+],
+"pancreas_sl50": 40,
+"tumor_vox": 3609,
+"tumor_sl15": 10
+},
+"pancreas_006": {
+"shape": [
+512,
+512,
+101
+],
+"pancreas_sl50": 25,
+"tumor_vox": 9244,
+"tumor_sl15": 10
+},
+"pancreas_010": {
+"shape": [
+512,
+512,
+174
+],
+"pancreas_sl50": 73,
+"tumor_vox": 53193,
+"tumor_sl15": 36
+},
+"pancreas_012": {
+"shape": [
+512,
+512,
+97
+],
+"pancreas_sl50": 28,
+"tumor_vox": 8475,
+"tumor_sl15": 14
+},
+"pancreas_015": {
+"shape": [
+512,
+512,
+87
+],
+"pancreas_sl50": 30,
+"tumor_vox": 6115,
+"tumor_sl15": 8
+},
+"pancreas_016": {
+"shape": [
+512,
+512,
+85
+],
+"pancreas_sl50": 31,
+"tumor_vox": 6668,
+"tumor_sl15": 6
+},
+"pancreas_018": {
+"shape": [
+512,
+512,
+87
+],
+"pancreas_sl50": 33,
+"tumor_vox": 7482,
+"tumor_sl15": 8
+},
+"pancreas_019": {
+"shape": [
+512,
+512,
+85
+],
+"pancreas_sl50": 30,
+"tumor_vox": 3287,
+"tumor_sl15": 9
+},
+"pancreas_021": {
+"shape": [
+512,
+512,
+93
+],
+"pancreas_sl50": 30,
+"tumor_vox": 5700,
+"tumor_sl15": 12
+},
+"pancreas_024": {
+"shape": [
+512,
+512,
+105
+],
+"pancreas_sl50": 30,
+"tumor_vox": 15672,
+"tumor_sl15": 14
+},
+"pancreas_025": {
+"shape": [
+512,
+512,
+75
+],
+"pancreas_sl50": 31,
+"tumor_vox": 6556,
+"tumor_sl15": 13
+},
+"pancreas_028": {
+"shape": [
+512,
+512,
+83
+],
+"pancreas_sl50": 44,
+"tumor_vox": 1248,
+"tumor_sl15": 6
+},
+"pancreas_029": {
+"shape": [
+512,
+512,
+99
+],
+"pancreas_sl50": 40,
+"tumor_vox": 1167,
+"tumor_sl15": 7
+},
+"pancreas_032": {
+"shape": [
+512,
+512,
+89
+],
+"pancreas_sl50": 25,
+"tumor_vox": 1880,
+"tumor_sl15": 5
+},
+"pancreas_035": {
+"shape": [
+512,
+512,
+73
+],
+"pancreas_sl50": 26,
+"tumor_vox": 6002,
+"tumor_sl15": 9
+},
+"pancreas_037": {
+"shape": [
+512,
+512,
+71
+],
+"pancreas_sl50": 23,
+"tumor_vox": 5418,
+"tumor_sl15": 9
+},
+"pancreas_040": {
+"shape": [
+512,
+512,
+45
+],
+"pancreas_sl50": 24,
+"tumor_vox": 2839,
+"tumor_sl15": 7
+},
+"pancreas_041": {
+"shape": [
+512,
+512,
+137
+],
+"pancreas_sl50": 56,
+"tumor_vox": 2112,
+"tumor_sl15": 7
+},
+"pancreas_042": {
+"shape": [
+512,
+512,
+51
+],
+"pancreas_sl50": 16,
+"tumor_vox": 7367,
+"tumor_sl15": 8
+},
+"pancreas_043": {
+"shape": [
+512,
+512,
+39
+],
+"pancreas_sl50": 21,
+"tumor_vox": 2592,
+"tumor_sl15": 6
+},
+"pancreas_045": {
+"shape": [
+512,
+512,
+41
+],
+"pancreas_sl50": 14,
+"tumor_vox": 2923,
+"tumor_sl15": 8
+},
+"pancreas_046": {
+"shape": [
+512,
+512,
+103
+],
+"pancreas_sl50": 35,
+"tumor_vox": 5422,
+"tumor_sl15": 9
+},
+"pancreas_048": {
+"shape": [
+512,
+512,
+121
+],
+"pancreas_sl50": 27,
+"tumor_vox": 5995,
+"tumor_sl15": 14
+},
+"pancreas_049": {
+"shape": [
+512,
+512,
+87
+],
+"pancreas_sl50": 39,
+"tumor_vox": 4744,
+"tumor_sl15": 7
+},
+"pancreas_050": {
+"shape": [
+512,
+512,
+85
+],
+"pancreas_sl50": 17,
+"tumor_vox": 3194,
+"tumor_sl15": 6
+},
+"pancreas_051": {
+"shape": [
+512,
+512,
+99
+],
+"pancreas_sl50": 36,
+"tumor_vox": 1186,
+"tumor_sl15": 6
+},
+"pancreas_052": {
+"shape": [
+512,
+512,
+89
+],
+"pancreas_sl50": 27,
+"tumor_vox": 2856,
+"tumor_sl15": 7
+},
+"pancreas_055": {
+"shape": [
+512,
+512,
+96
+],
+"pancreas_sl50": 37,
+"tumor_vox": 1275,
+"tumor_sl15": 8
+},
+"pancreas_056": {
+"shape": [
+512,
+512,
+84
+],
+"pancreas_sl50": 29,
+"tumor_vox": 2369,
+"tumor_sl15": 10
+},
+"pancreas_058": {
+"shape": [
+512,
+512,
+91
+],
+"pancreas_sl50": 13,
+"tumor_vox": 2511,
+"tumor_sl15": 3
+},
+"pancreas_061": {
+"shape": [
+512,
+512,
+93
+],
+"pancreas_sl50": 35,
+"tumor_vox": 4020,
+"tumor_sl15": 10
+},
+"pancreas_064": {
+"shape": [
+512,
+512,
+93
+],
+"pancreas_sl50": 41,
+"tumor_vox": 9042,
+"tumor_sl15": 19
+},
+"pancreas_066": {
+"shape": [
+512,
+512,
+96
+],
+"pancreas_sl50": 18,
+"tumor_vox": 4575,
+"tumor_sl15": 6
+},
+"pancreas_067": {
+"shape": [
+512,
+512,
+103
+],
+"pancreas_sl50": 31,
+"tumor_vox": 1035,
+"tumor_sl15": 5
+},
+"pancreas_069": {
+"shape": [
+512,
+512,
+97
+],
+"pancreas_sl50": 19,
+"tumor_vox": 12496,
+"tumor_sl15": 10
+},
+"pancreas_070": {
+"shape": [
+512,
+512,
+106
+],
+"pancreas_sl50": 39,
+"tumor_vox": 20737,
+"tumor_sl15": 20
+},
+"pancreas_071": {
+"shape": [
+512,
+512,
+87
+],
+"pancreas_sl50": 14,
+"tumor_vox": 23909,
+"tumor_sl15": 11
+},
+"pancreas_074": {
+"shape": [
+512,
+512,
+37
+],
+"pancreas_sl50": 19,
+"tumor_vox": 2738,
+"tumor_sl15": 5
+},
+"pancreas_075": {
+"shape": [
+512,
+512,
+121
+],
+"pancreas_sl50": 71,
+"tumor_vox": 12504,
+"tumor_sl15": 20
+},
+"pancreas_077": {
+"shape": [
+512,
+512,
+81
+],
+"pancreas_sl50": 32,
+"tumor_vox": 5822,
+"tumor_sl15": 11
+},
+"pancreas_078": {
+"shape": [
+512,
+512,
+76
+],
+"pancreas_sl50": 36,
+"tumor_vox": 1220,
+"tumor_sl15": 4
+},
+"pancreas_080": {
+"shape": [
+512,
+512,
+98
+],
+"pancreas_sl50": 27,
+"tumor_vox": 11123,
+"tumor_sl15": 13
+},
+"pancreas_081": {
+"shape": [
+512,
+512,
+47
+],
+"pancreas_sl50": 14,
+"tumor_vox": 2782,
+"tumor_sl15": 4
+},
+"pancreas_083": {
+"shape": [
+512,
+512,
+83
+],
+"pancreas_sl50": 42,
+"tumor_vox": 6939,
+"tumor_sl15": 10
+},
+"pancreas_084": {
+"shape": [
+512,
+512,
+82
+],
+"pancreas_sl50": 34,
+"tumor_vox": 973,
+"tumor_sl15": 7
+},
+"pancreas_086": {
+"shape": [
+512,
+512,
+51
+],
+"pancreas_sl50": 37,
+"tumor_vox": 1760,
+"tumor_sl15": 5
+},
+"pancreas_087": {
+"shape": [
+512,
+512,
+77
+],
+"pancreas_sl50": 20,
+"tumor_vox": 5012,
+"tumor_sl15": 6
+},
+"pancreas_088": {
+"shape": [
+512,
+512,
+103
+],
+"pancreas_sl50": 42,
+"tumor_vox": 27046,
+"tumor_sl15": 16
+},
+"pancreas_089": {
+"shape": [
+512,
+512,
+91
+],
+"pancreas_sl50": 31,
+"tumor_vox": 3810,
+"tumor_sl15": 8
+},
+"pancreas_091": {
+"shape": [
+512,
+512,
+71
+],
+"pancreas_sl50": 26,
+"tumor_vox": 9299,
+"tumor_sl15": 12
+},
+"pancreas_092": {
+"shape": [
+512,
+512,
+92
+],
+"pancreas_sl50": 14,
+"tumor_vox": 1507,
+"tumor_sl15": 4
+},
+"pancreas_093": {
+"shape": [
+512,
+512,
+97
+],
+"pancreas_sl50": 32,
+"tumor_vox": 5105,
+"tumor_sl15": 9
+},
+"pancreas_094": {
+"shape": [
+512,
+512,
+84
+],
+"pancreas_sl50": 43,
+"tumor_vox": 13165,
+"tumor_sl15": 11
+},
+"pancreas_095": {
+"shape": [
+512,
+512,
+93
+],
+"pancreas_sl50": 32,
+"tumor_vox": 4144,
+"tumor_sl15": 12
+},
+"pancreas_096": {
+"shape": [
+512,
+512,
+108
+],
+"pancreas_sl50": 32,
+"tumor_vox": 14131,
+"tumor_sl15": 12
+},
+"pancreas_098": {
+"shape": [
+512,
+512,
+147
+],
+"pancreas_sl50": 39,
+"tumor_vox": 6347,
+"tumor_sl15": 21
+},
+"pancreas_099": {
+"shape": [
+512,
+512,
+48
+],
+"pancreas_sl50": 14,
+"tumor_vox": 4832,
+"tumor_sl15": 5
+},
+"pancreas_100": {
+"shape": [
+512,
+512,
+98
+],
+"pancreas_sl50": 30,
+"tumor_vox": 7109,
+"tumor_sl15": 9
+},
+"pancreas_101": {
+"shape": [
+512,
+512,
+98
+],
+"pancreas_sl50": 18,
+"tumor_vox": 3123,
+"tumor_sl15": 4
+},
+"pancreas_102": {
+"shape": [
+512,
+512,
+92
+],
+"pancreas_sl50": 34,
+"tumor_vox": 2157,
+"tumor_sl15": 5
+},
+"pancreas_103": {
+"shape": [
+512,
+512,
+90
+],
+"pancreas_sl50": 30,
+"tumor_vox": 9221,
+"tumor_sl15": 8
+},
+"pancreas_104": {
+"shape": [
+512,
+512,
+100
+],
+"pancreas_sl50": 32,
+"tumor_vox": 588,
+"tumor_sl15": 6
+},
+"pancreas_105": {
+"shape": [
+512,
+512,
+98
+],
+"pancreas_sl50": 13,
+"tumor_vox": 1704,
+"tumor_sl15": 3
+},
+"pancreas_106": {
+"shape": [
+512,
+512,
+55
+],
+"pancreas_sl50": 21,
+"tumor_vox": 1076,
+"tumor_sl15": 2
+},
+"pancreas_107": {
+"shape": [
+512,
+512,
+102
+],
+"pancreas_sl50": 19,
+"tumor_vox": 2084,
+"tumor_sl15": 6
+},
+"pancreas_109": {
+"shape": [
+512,
+512,
+99
+],
+"pancreas_sl50": 27,
+"tumor_vox": 1387,
+"tumor_sl15": 4
+},
+"pancreas_110": {
+"shape": [
+512,
+512,
+98
+],
+"pancreas_sl50": 29,
+"tumor_vox": 1074,
+"tumor_sl15": 6
+},
+"pancreas_111": {
+"shape": [
+512,
+512,
+57
+],
+"pancreas_sl50": 19,
+"tumor_vox": 910,
+"tumor_sl15": 2
+},
+"pancreas_113": {
+"shape": [
+512,
+512,
+100
+],
+"pancreas_sl50": 24,
+"tumor_vox": 18965,
+"tumor_sl15": 11
+},
+"pancreas_114": {
+"shape": [
+512,
+512,
+98
+],
+"pancreas_sl50": 39,
+"tumor_vox": 5030,
+"tumor_sl15": 8
+},
+"pancreas_117": {
+"shape": [
+512,
+512,
+134
+],
+"pancreas_sl50": 33,
+"tumor_vox": 3948,
+"tumor_sl15": 8
+},
+"pancreas_119": {
+"shape": [
+512,
+512,
+85
+],
+"pancreas_sl50": 27,
+"tumor_vox": 7572,
+"tumor_sl15": 13
+},
+"pancreas_120": {
+"shape": [
+512,
+512,
+104
+],
+"pancreas_sl50": 13,
+"tumor_vox": 454,
+"tumor_sl15": 3
+},
+"pancreas_122": {
+"shape": [
+512,
+512,
+97
+],
+"pancreas_sl50": 31,
+"tumor_vox": 4516,
+"tumor_sl15": 11
+},
+"pancreas_124": {
+"shape": [
+512,
+512,
+82
+],
+"pancreas_sl50": 33,
+"tumor_vox": 15567,
+"tumor_sl15": 16
+},
+"pancreas_125": {
+"shape": [
+512,
+512,
+102
+],
+"pancreas_sl50": 35,
+"tumor_vox": 3615,
+"tumor_sl15": 10
+},
+"pancreas_126": {
+"shape": [
+512,
+512,
+73
+],
+"pancreas_sl50": 41,
+"tumor_vox": 5235,
+"tumor_sl15": 13
+},
+"pancreas_127": {
+"shape": [
+512,
+512,
+126
+],
+"pancreas_sl50": 33,
+"tumor_vox": 5075,
+"tumor_sl15": 12
+},
+"pancreas_129": {
+"shape": [
+512,
+512,
+44
+],
+"pancreas_sl50": 12,
+"tumor_vox": 1966,
+"tumor_sl15": 5
+},
+"pancreas_130": {
+"shape": [
+512,
+512,
+130
+],
+"pancreas_sl50": 28,
+"tumor_vox": 2175,
+"tumor_sl15": 3
+},
+"pancreas_131": {
+"shape": [
+512,
+512,
+59
+],
+"pancreas_sl50": 38,
+"tumor_vox": 5261,
+"tumor_sl15": 9
+},
+"pancreas_135": {
+"shape": [
+512,
+512,
+60
+],
+"pancreas_sl50": 20,
+"tumor_vox": 4070,
+"tumor_sl15": 6
+},
+"pancreas_137": {
+"shape": [
+512,
+512,
+85
+],
+"pancreas_sl50": 36,
+"tumor_vox": 3547,
+"tumor_sl15": 9
+},
+"pancreas_138": {
+"shape": [
+512,
+512,
+95
+],
+"pancreas_sl50": 34,
+"tumor_vox": 9006,
+"tumor_sl15": 12
+},
+"pancreas_140": {
+"shape": [
+512,
+512,
+56
+],
+"pancreas_sl50": 12,
+"tumor_vox": 3931,
+"tumor_sl15": 5
+},
+"pancreas_145": {
+"shape": [
+512,
+512,
+93
+],
+"pancreas_sl50": 32,
+"tumor_vox": 1580,
+"tumor_sl15": 6
+},
+"pancreas_147": {
+"shape": [
+512,
+512,
+85
+],
+"pancreas_sl50": 34,
+"tumor_vox": 880,
+"tumor_sl15": 4
+},
+"pancreas_148": {
+"shape": [
+512,
+512,
+42
+],
+"pancreas_sl50": 13,
+"tumor_vox": 1438,
+"tumor_sl15": 3
+},
+"pancreas_149": {
+"shape": [
+512,
+512,
+77
+],
+"pancreas_sl50": 31,
+"tumor_vox": 5419,
+"tumor_sl15": 8
+},
+"pancreas_155": {
+"shape": [
+512,
+512,
+95
+],
+"pancreas_sl50": 26,
+"tumor_vox": 3489,
+"tumor_sl15": 9
+},
+"pancreas_157": {
+"shape": [
+512,
+512,
+77
+],
+"pancreas_sl50": 29,
+"tumor_vox": 2686,
+"tumor_sl15": 6
+},
+"pancreas_158": {
+"shape": [
+512,
+512,
+66
+],
+"pancreas_sl50": 21,
+"tumor_vox": 2626,
+"tumor_sl15": 5
+},
+"pancreas_159": {
+"shape": [
+512,
+512,
+90
+],
+"pancreas_sl50": 36,
+"tumor_vox": 6059,
+"tumor_sl15": 11
+},
+"pancreas_160": {
+"shape": [
+512,
+512,
+75
+],
+"pancreas_sl50": 27,
+"tumor_vox": 9424,
+"tumor_sl15": 11
+},
+"pancreas_165": {
+"shape": [
+512,
+512,
+85
+],
+"pancreas_sl50": 32,
+"tumor_vox": 445,
+"tumor_sl15": 3
+},
+"pancreas_166": {
+"shape": [
+512,
+512,
+95
+],
+"pancreas_sl50": 30,
+"tumor_vox": 3918,
+"tumor_sl15": 9
+},
+"pancreas_167": {
+"shape": [
+512,
+512,
+101
+],
+"pancreas_sl50": 34,
+"tumor_vox": 7480,
+"tumor_sl15": 12
+},
+"pancreas_169": {
+"shape": [
+512,
+512,
+87
+],
+"pancreas_sl50": 35,
+"tumor_vox": 1339,
+"tumor_sl15": 8
+},
+"pancreas_170": {
+"shape": [
+512,
+512,
+103
+],
+"pancreas_sl50": 35,
+"tumor_vox": 1662,
+"tumor_sl15": 5
+},
+"pancreas_172": {
+"shape": [
+512,
+512,
+95
+],
+"pancreas_sl50": 40,
+"tumor_vox": 1298,
+"tumor_sl15": 4
+},
+"pancreas_173": {
+"shape": [
+512,
+512,
+81
+],
+"pancreas_sl50": 40,
+"tumor_vox": 1584,
+"tumor_sl15": 7
+},
+"pancreas_175": {
+"shape": [
+512,
+512,
+91
+],
+"pancreas_sl50": 33,
+"tumor_vox": 1750,
+"tumor_sl15": 7
+},
+"pancreas_178": {
+"shape": [
+512,
+512,
+110
+],
+"pancreas_sl50": 27,
+"tumor_vox": 3400,
+"tumor_sl15": 7
+},
+"pancreas_179": {
+"shape": [
+512,
+512,
+89
+],
+"pancreas_sl50": 27,
+"tumor_vox": 1199,
+"tumor_sl15": 6
+},
+"pancreas_180": {
+"shape": [
+512,
+512,
+95
+],
+"pancreas_sl50": 31,
+"tumor_vox": 8857,
+"tumor_sl15": 12
+},
+"pancreas_181": {
+"shape": [
+512,
+512,
+87
+],
+"pancreas_sl50": 33,
+"tumor_vox": 2275,
+"tumor_sl15": 10
+},
+"pancreas_182": {
+"shape": [
+512,
+512,
+79
+],
+"pancreas_sl50": 25,
+"tumor_vox": 20299,
+"tumor_sl15": 19
+},
+"pancreas_183": {
+"shape": [
+512,
+512,
+76
+],
+"pancreas_sl50": 23,
+"tumor_vox": 1812,
+"tumor_sl15": 8
+},
+"pancreas_186": {
+"shape": [
+512,
+512,
+51
+],
+"pancreas_sl50": 20,
+"tumor_vox": 2450,
+"tumor_sl15": 4
+},
+"pancreas_187": {
+"shape": [
+512,
+512,
+95
+],
+"pancreas_sl50": 38,
+"tumor_vox": 9042,
+"tumor_sl15": 13
+},
+"pancreas_191": {
+"shape": [
+512,
+512,
+57
+],
+"pancreas_sl50": 31,
+"tumor_vox": 6609,
+"tumor_sl15": 11
+},
+"pancreas_193": {
+"shape": [
+512,
+512,
+113
+],
+"pancreas_sl50": 30,
+"tumor_vox": 4643,
+"tumor_sl15": 11
+},
+"pancreas_194": {
+"shape": [
+512,
+512,
+98
+],
+"pancreas_sl50": 51,
+"tumor_vox": 4645,
+"tumor_sl15": 11
+},
+"pancreas_196": {
+"shape": [
+512,
+512,
+92
+],
+"pancreas_sl50": 25,
+"tumor_vox": 2963,
+"tumor_sl15": 6
+},
+"pancreas_197": {
+"shape": [
+512,
+512,
+73
+],
+"pancreas_sl50": 22,
+"tumor_vox": 1813,
+"tumor_sl15": 6
+},
+"pancreas_198": {
+"shape": [
+512,
+512,
+111
+],
+"pancreas_sl50": 24,
+"tumor_vox": 3037,
+"tumor_sl15": 11
+},
+"pancreas_199": {
+"shape": [
+512,
+512,
+95
+],
+"pancreas_sl50": 32,
+"tumor_vox": 9060,
+"tumor_sl15": 11
+},
+"pancreas_200": {
+"shape": [
+512,
+512,
+89
+],
+"pancreas_sl50": 47,
+"tumor_vox": 2706,
+"tumor_sl15": 8
+},
+"pancreas_201": {
+"shape": [
+512,
+512,
+76
+],
+"pancreas_sl50": 39,
+"tumor_vox": 4689,
+"tumor_sl15": 8
+},
+"pancreas_203": {
+"shape": [
+512,
+512,
+106
+],
+"pancreas_sl50": 29,
+"tumor_vox": 681,
+"tumor_sl15": 5
+},
+"pancreas_204": {
+"shape": [
+512,
+512,
+73
+],
+"pancreas_sl50": 23,
+"tumor_vox": 4749,
+"tumor_sl15": 11
+},
+"pancreas_207": {
+"shape": [
+512,
+512,
+81
+],
+"pancreas_sl50": 34,
+"tumor_vox": 2621,
+"tumor_sl15": 6
+},
+"pancreas_209": {
+"shape": [
+512,
+512,
+104
+],
+"pancreas_sl50": 44,
+"tumor_vox": 4812,
+"tumor_sl15": 11
+},
+"pancreas_210": {
+"shape": [
+512,
+512,
+93
+],
+"pancreas_sl50": 35,
+"tumor_vox": 1779,
+"tumor_sl15": 9
+},
+"pancreas_211": {
+"shape": [
+512,
+512,
+121
+],
+"pancreas_sl50": 35,
+"tumor_vox": 2580,
+"tumor_sl15": 11
+},
+"pancreas_212": {
+"shape": [
+512,
+512,
+97
+],
+"pancreas_sl50": 35,
+"tumor_vox": 673,
+"tumor_sl15": 4
+},
+"pancreas_213": {
+"shape": [
+512,
+512,
+95
+],
+"pancreas_sl50": 34,
+"tumor_vox": 9672,
+"tumor_sl15": 13
+},
+"pancreas_214": {
+"shape": [
+512,
+512,
+109
+],
+"pancreas_sl50": 28,
+"tumor_vox": 1613,
+"tumor_sl15": 5
+},
+"pancreas_215": {
+"shape": [
+512,
+512,
+99
+],
+"pancreas_sl50": 26,
+"tumor_vox": 1043,
+"tumor_sl15": 4
+},
+"pancreas_217": {
+"shape": [
+512,
+512,
+107
+],
+"pancreas_sl50": 32,
+"tumor_vox": 1307,
+"tumor_sl15": 7
+},
+"pancreas_218": {
+"shape": [
+512,
+512,
+99
+],
+"pancreas_sl50": 26,
+"tumor_vox": 1601,
+"tumor_sl15": 8
+},
+"pancreas_219": {
+"shape": [
+512,
+512,
+192
+],
+"pancreas_sl50": 34,
+"tumor_vox": 4020,
+"tumor_sl15": 9
+},
+"pancreas_222": {
+"shape": [
+512,
+512,
+77
+],
+"pancreas_sl50": 35,
+"tumor_vox": 2834,
+"tumor_sl15": 8
+},
+"pancreas_224": {
+"shape": [
+512,
+512,
+93
+],
+"pancreas_sl50": 37,
+"tumor_vox": 1471,
+"tumor_sl15": 7
+},
+"pancreas_225": {
+"shape": [
+512,
+512,
+81
+],
+"pancreas_sl50": 28,
+"tumor_vox": 1946,
+"tumor_sl15": 6
+},
+"pancreas_226": {
+"shape": [
+512,
+512,
+104
+],
+"pancreas_sl50": 33,
+"tumor_vox": 3344,
+"tumor_sl15": 9
+},
+"pancreas_227": {
+"shape": [
+512,
+512,
+89
+],
+"pancreas_sl50": 36,
+"tumor_vox": 2757,
+"tumor_sl15": 8
+},
+"pancreas_228": {
+"shape": [
+512,
+512,
+113
+],
+"pancreas_sl50": 38,
+"tumor_vox": 1256,
+"tumor_sl15": 5
+},
+"pancreas_229": {
+"shape": [
+512,
+512,
+87
+],
+"pancreas_sl50": 31,
+"tumor_vox": 3733,
+"tumor_sl15": 8
+},
+"pancreas_230": {
+"shape": [
+512,
+512,
+96
+],
+"pancreas_sl50": 25,
+"tumor_vox": 2543,
+"tumor_sl15": 10
+},
+"pancreas_231": {
+"shape": [
+512,
+512,
+93
+],
+"pancreas_sl50": 29,
+"tumor_vox": 2641,
+"tumor_sl15": 8
+},
+"pancreas_234": {
+"shape": [
+512,
+512,
+81
+],
+"pancreas_sl50": 30,
+"tumor_vox": 6687,
+"tumor_sl15": 16
+},
+"pancreas_235": {
+"shape": [
+512,
+512,
+84
+],
+"pancreas_sl50": 36,
+"tumor_vox": 1823,
+"tumor_sl15": 7
+},
+"pancreas_236": {
+"shape": [
+512,
+512,
+81
+],
+"pancreas_sl50": 24,
+"tumor_vox": 2086,
+"tumor_sl15": 8
+},
+"pancreas_239": {
+"shape": [
+512,
+512,
+92
+],
+"pancreas_sl50": 20,
+"tumor_vox": 1611,
+"tumor_sl15": 7
+},
+"pancreas_241": {
+"shape": [
+512,
+512,
+99
+],
+"pancreas_sl50": 35,
+"tumor_vox": 4530,
+"tumor_sl15": 10
+},
+"pancreas_242": {
+"shape": [
+512,
+512,
+101
+],
+"pancreas_sl50": 32,
+"tumor_vox": 405,
+"tumor_sl15": 3
+},
+"pancreas_243": {
+"shape": [
+512,
+512,
+51
+],
+"pancreas_sl50": 17,
+"tumor_vox": 1171,
+"tumor_sl15": 4
+},
+"pancreas_244": {
+"shape": [
+512,
+512,
+103
+],
+"pancreas_sl50": 38,
+"tumor_vox": 707,
+"tumor_sl15": 8
+},
+"pancreas_246": {
+"shape": [
+512,
+512,
+107
+],
+"pancreas_sl50": 35,
+"tumor_vox": 791,
+"tumor_sl15": 6
+},
+"pancreas_247": {
+"shape": [
+512,
+512,
+89
+],
+"pancreas_sl50": 33,
+"tumor_vox": 1903,
+"tumor_sl15": 6
+},
+"pancreas_249": {
+"shape": [
+512,
+512,
+123
+],
+"pancreas_sl50": 33,
+"tumor_vox": 2607,
+"tumor_sl15": 8
+},
+"pancreas_253": {
+"shape": [
+512,
+512,
+94
+],
+"pancreas_sl50": 26,
+"tumor_vox": 1106,
+"tumor_sl15": 7
+},
+"pancreas_254": {
+"shape": [
+512,
+512,
+101
+],
+"pancreas_sl50": 36,
+"tumor_vox": 2212,
+"tumor_sl15": 9
+},
+"pancreas_255": {
+"shape": [
+512,
+512,
+99
+],
+"pancreas_sl50": 31,
+"tumor_vox": 2733,
+"tumor_sl15": 9
+},
+"pancreas_256": {
+"shape": [
+512,
+512,
+89
+],
+"pancreas_sl50": 37,
+"tumor_vox": 3584,
+"tumor_sl15": 8
+},
+"pancreas_258": {
+"shape": [
+512,
+512,
+79
+],
+"pancreas_sl50": 36,
+"tumor_vox": 3364,
+"tumor_sl15": 8
+},
+"pancreas_259": {
+"shape": [
+512,
+512,
+88
+],
+"pancreas_sl50": 25,
+"tumor_vox": 3593,
+"tumor_sl15": 9
+},
+"pancreas_261": {
+"shape": [
+512,
+512,
+161
+],
+"pancreas_sl50": 27,
+"tumor_vox": 2834,
+"tumor_sl15": 11
+},
+"pancreas_262": {
+"shape": [
+512,
+512,
+76
+],
+"pancreas_sl50": 32,
+"tumor_vox": 3750,
+"tumor_sl15": 11
+},
+"pancreas_264": {
+"shape": [
+512,
+512,
+109
+],
+"pancreas_sl50": 29,
+"tumor_vox": 4912,
+"tumor_sl15": 11
+},
+"pancreas_265": {
+"shape": [
+512,
+512,
+81
+],
+"pancreas_sl50": 38,
+"tumor_vox": 526,
+"tumor_sl15": 5
+},
+"pancreas_266": {
+"shape": [
+512,
+512,
+97
+],
+"pancreas_sl50": 30,
+"tumor_vox": 6737,
+"tumor_sl15": 17
+},
+"pancreas_267": {
+"shape": [
+512,
+512,
+89
+],
+"pancreas_sl50": 36,
+"tumor_vox": 2778,
+"tumor_sl15": 6
+},
+"pancreas_268": {
+"shape": [
+512,
+512,
+67
+],
+"pancreas_sl50": 28,
+"tumor_vox": 4682,
+"tumor_sl15": 12
+},
+"pancreas_269": {
+"shape": [
+512,
+512,
+113
+],
+"pancreas_sl50": 44,
+"tumor_vox": 5067,
+"tumor_sl15": 7
+},
+"pancreas_270": {
+"shape": [
+512,
+512,
+87
+],
+"pancreas_sl50": 31,
+"tumor_vox": 1731,
+"tumor_sl15": 11
+},
+"pancreas_274": {
+"shape": [
+512,
+512,
+115
+],
+"pancreas_sl50": 42,
+"tumor_vox": 7046,
+"tumor_sl15": 17
+},
+"pancreas_275": {
+"shape": [
+512,
+512,
+105
+],
+"pancreas_sl50": 33,
+"tumor_vox": 10961,
+"tumor_sl15": 14
+},
+"pancreas_276": {
+"shape": [
+512,
+512,
+89
+],
+"pancreas_sl50": 44,
+"tumor_vox": 8410,
+"tumor_sl15": 11
+},
+"pancreas_277": {
+"shape": [
+512,
+512,
+109
+],
+"pancreas_sl50": 32,
+"tumor_vox": 3028,
+"tumor_sl15": 9
+},
+"pancreas_278": {
+"shape": [
+512,
+512,
+100
+],
+"pancreas_sl50": 32,
+"tumor_vox": 5089,
+"tumor_sl15": 10
+},
+"pancreas_279": {
+"shape": [
+512,
+512,
+80
+],
+"pancreas_sl50": 27,
+"tumor_vox": 4201,
+"tumor_sl15": 9
+},
+"pancreas_280": {
+"shape": [
+512,
+512,
+97
+],
+"pancreas_sl50": 35,
+"tumor_vox": 1476,
+"tumor_sl15": 8
+},
+"pancreas_283": {
+"shape": [
+512,
+512,
+107
+],
+"pancreas_sl50": 36,
+"tumor_vox": 7232,
+"tumor_sl15": 11
+},
+"pancreas_284": {
+"shape": [
+512,
+512,
+85
+],
+"pancreas_sl50": 37,
+"tumor_vox": 2599,
+"tumor_sl15": 8
+},
+"pancreas_285": {
+"shape": [
+512,
+512,
+113
+],
+"pancreas_sl50": 27,
+"tumor_vox": 1389,
+"tumor_sl15": 5
+},
+"pancreas_286": {
+"shape": [
+512,
+512,
+93
+],
+"pancreas_sl50": 36,
+"tumor_vox": 2326,
+"tumor_sl15": 7
+},
+"pancreas_287": {
+"shape": [
+512,
+512,
+98
+],
+"pancreas_sl50": 35,
+"tumor_vox": 12511,
+"tumor_sl15": 13
+},
+"pancreas_289": {
+"shape": [
+512,
+512,
+96
+],
+"pancreas_sl50": 32,
+"tumor_vox": 4550,
+"tumor_sl15": 10
+},
+"pancreas_290": {
+"shape": [
+512,
+512,
+97
+],
+"pancreas_sl50": 34,
+"tumor_vox": 3521,
+"tumor_sl15": 8
+},
+"pancreas_291": {
+"shape": [
+512,
+512,
+97
+],
+"pancreas_sl50": 34,
+"tumor_vox": 4443,
+"tumor_sl15": 9
+},
+"pancreas_292": {
+"shape": [
+512,
+512,
+93
+],
+"pancreas_sl50": 31,
+"tumor_vox": 5127,
+"tumor_sl15": 14
+},
+"pancreas_293": {
+"shape": [
+512,
+512,
+107
+],
+"pancreas_sl50": 34,
+"tumor_vox": 2893,
+"tumor_sl15": 13
+},
+"pancreas_294": {
+"shape": [
+512,
+512,
+97
+],
+"pancreas_sl50": 36,
+"tumor_vox": 6803,
+"tumor_sl15": 17
+},
+"pancreas_295": {
+"shape": [
+512,
+512,
+105
+],
+"pancreas_sl50": 33,
+"tumor_vox": 1849,
+"tumor_sl15": 8
+},
+"pancreas_296": {
+"shape": [
+512,
+512,
+43
+],
+"pancreas_sl50": 20,
+"tumor_vox": 932,
+"tumor_sl15": 4
+},
+"pancreas_297": {
+"shape": [
+512,
+512,
+101
+],
+"pancreas_sl50": 39,
+"tumor_vox": 2232,
+"tumor_sl15": 9
+},
+"pancreas_298": {
+"shape": [
+512,
+512,
+93
+],
+"pancreas_sl50": 26,
+"tumor_vox": 4280,
+"tumor_sl15": 12
+},
+"pancreas_299": {
+"shape": [
+512,
+512,
+83
+],
+"pancreas_sl50": 30,
+"tumor_vox": 5280,
+"tumor_sl15": 7
+},
+"pancreas_300": {
+"shape": [
+512,
+512,
+85
+],
+"pancreas_sl50": 35,
+"tumor_vox": 2182,
+"tumor_sl15": 12
+},
+"pancreas_301": {
+"shape": [
+512,
+512,
+83
+],
+"pancreas_sl50": 20,
+"tumor_vox": 1024,
+"tumor_sl15": 8
+},
+"pancreas_302": {
+"shape": [
+512,
+512,
+83
+],
+"pancreas_sl50": 37,
+"tumor_vox": 1624,
+"tumor_sl15": 9
+},
+"pancreas_303": {
+"shape": [
+512,
+512,
+113
+],
+"pancreas_sl50": 35,
+"tumor_vox": 1172,
+"tumor_sl15": 7
+},
+"pancreas_304": {
+"shape": [
+512,
+512,
+93
+],
+"pancreas_sl50": 35,
+"tumor_vox": 872,
+"tumor_sl15": 6
+},
+"pancreas_305": {
+"shape": [
+512,
+512,
+73
+],
+"pancreas_sl50": 29,
+"tumor_vox": 1252,
+"tumor_sl15": 7
+},
+"pancreas_308": {
+"shape": [
+512,
+512,
+113
+],
+"pancreas_sl50": 36,
+"tumor_vox": 880,
+"tumor_sl15": 6
+},
+"pancreas_309": {
+"shape": [
+512,
+512,
+95
+],
+"pancreas_sl50": 31,
+"tumor_vox": 5093,
+"tumor_sl15": 9
+},
+"pancreas_310": {
+"shape": [
+512,
+512,
+81
+],
+"pancreas_sl50": 26,
+"tumor_vox": 1731,
+"tumor_sl15": 7
+},
+"pancreas_311": {
+"shape": [
+512,
+512,
+87
+],
+"pancreas_sl50": 27,
+"tumor_vox": 5039,
+"tumor_sl15": 8
+},
+"pancreas_312": {
+"shape": [
+512,
+512,
+75
+],
+"pancreas_sl50": 23,
+"tumor_vox": 1729,
+"tumor_sl15": 8
+},
+"pancreas_313": {
+"shape": [
+512,
+512,
+95
+],
+"pancreas_sl50": 34,
+"tumor_vox": 2008,
+"tumor_sl15": 6
+},
+"pancreas_315": {
+"shape": [
+512,
+512,
+93
+],
+"pancreas_sl50": 27,
+"tumor_vox": 3262,
+"tumor_sl15": 11
+},
+"pancreas_316": {
+"shape": [
+512,
+512,
+89
+],
+"pancreas_sl50": 29,
+"tumor_vox": 1099,
+"tumor_sl15": 5
+},
+"pancreas_318": {
+"shape": [
+512,
+512,
+105
+],
+"pancreas_sl50": 50,
+"tumor_vox": 407,
+"tumor_sl15": 3
+},
+"pancreas_320": {
+"shape": [
+512,
+512,
+91
+],
+"pancreas_sl50": 27,
+"tumor_vox": 2399,
+"tumor_sl15": 7
+},
+"pancreas_321": {
+"shape": [
+512,
+512,
+117
+],
+"pancreas_sl50": 32,
+"tumor_vox": 433,
+"tumor_sl15": 4
+},
+"pancreas_323": {
+"shape": [
+512,
+512,
+95
+],
+"pancreas_sl50": 34,
+"tumor_vox": 1639,
+"tumor_sl15": 6
+},
+"pancreas_325": {
+"shape": [
+512,
+512,
+93
+],
+"pancreas_sl50": 29,
+"tumor_vox": 1527,
+"tumor_sl15": 8
+},
+"pancreas_326": {
+"shape": [
+512,
+512,
+89
+],
+"pancreas_sl50": 28,
+"tumor_vox": 2629,
+"tumor_sl15": 7
+},
+"pancreas_327": {
+"shape": [
+512,
+512,
+99
+],
+"pancreas_sl50": 33,
+"tumor_vox": 1920,
+"tumor_sl15": 8
+},
+"pancreas_328": {
+"shape": [
+512,
+512,
+95
+],
+"pancreas_sl50": 34,
+"tumor_vox": 491,
+"tumor_sl15": 4
+},
+"pancreas_329": {
+"shape": [
+512,
+512,
+79
+],
+"pancreas_sl50": 30,
+"tumor_vox": 4183,
+"tumor_sl15": 12
+},
+"pancreas_330": {
+"shape": [
+512,
+512,
+89
+],
+"pancreas_sl50": 33,
+"tumor_vox": 4549,
+"tumor_sl15": 12
+},
+"pancreas_331": {
+"shape": [
+512,
+512,
+101
+],
+"pancreas_sl50": 36,
+"tumor_vox": 1940,
+"tumor_sl15": 8
+},
+"pancreas_333": {
+"shape": [
+512,
+512,
+97
+],
+"pancreas_sl50": 33,
+"tumor_vox": 4784,
+"tumor_sl15": 10
+},
+"pancreas_334": {
+"shape": [
+512,
+512,
+91
+],
+"pancreas_sl50": 26,
+"tumor_vox": 779,
+"tumor_sl15": 3
+},
+"pancreas_336": {
+"shape": [
+512,
+512,
+92
+],
+"pancreas_sl50": 28,
+"tumor_vox": 2983,
+"tumor_sl15": 7
+},
+"pancreas_339": {
+"shape": [
+512,
+512,
+105
+],
+"pancreas_sl50": 30,
+"tumor_vox": 1748,
+"tumor_sl15": 6
+},
+"pancreas_342": {
+"shape": [
+512,
+512,
+117
+],
+"pancreas_sl50": 36,
+"tumor_vox": 1296,
+"tumor_sl15": 6
+},
+"pancreas_343": {
+"shape": [
+512,
+512,
+86
+],
+"pancreas_sl50": 28,
+"tumor_vox": 632,
+"tumor_sl15": 3
+},
+"pancreas_344": {
+"shape": [
+512,
+512,
+112
+],
+"pancreas_sl50": 36,
+"tumor_vox": 2569,
+"tumor_sl15": 6
+},
+"pancreas_345": {
+"shape": [
+512,
+512,
+84
+],
+"pancreas_sl50": 28,
+"tumor_vox": 1195,
+"tumor_sl15": 6
+},
+"pancreas_346": {
+"shape": [
+512,
+512,
+103
+],
+"pancreas_sl50": 26,
+"tumor_vox": 688,
+"tumor_sl15": 7
+},
+"pancreas_347": {
+"shape": [
+512,
+512,
+89
+],
+"pancreas_sl50": 36,
+"tumor_vox": 303,
+"tumor_sl15": 3
+},
+"pancreas_348": {
+"shape": [
+512,
+512,
+89
+],
+"pancreas_sl50": 30,
+"tumor_vox": 1190,
+"tumor_sl15": 4
+},
+"pancreas_350": {
+"shape": [
+512,
+512,
+89
+],
+"pancreas_sl50": 36,
+"tumor_vox": 1573,
+"tumor_sl15": 7
+},
+"pancreas_351": {
+"shape": [
+512,
+512,
+88
+],
+"pancreas_sl50": 25,
+"tumor_vox": 1555,
+"tumor_sl15": 6
+},
+"pancreas_354": {
+"shape": [
+512,
+512,
+81
+],
+"pancreas_sl50": 12,
+"tumor_vox": 4678,
+"tumor_sl15": 5
+},
+"pancreas_355": {
+"shape": [
+512,
+512,
+86
+],
+"pancreas_sl50": 12,
+"tumor_vox": 4359,
+"tumor_sl15": 6
+},
+"pancreas_356": {
+"shape": [
+512,
+512,
+84
+],
+"pancreas_sl50": 16,
+"tumor_vox": 2205,
+"tumor_sl15": 4
+},
+"pancreas_357": {
+"shape": [
+512,
+512,
+44
+],
+"pancreas_sl50": 14,
+"tumor_vox": 2467,
+"tumor_sl15": 3
+},
+"pancreas_358": {
+"shape": [
+512,
+512,
+89
+],
+"pancreas_sl50": 12,
+"tumor_vox": 1009,
+"tumor_sl15": 3
+},
+"pancreas_360": {
+"shape": [
+512,
+512,
+40
+],
+"pancreas_sl50": 12,
+"tumor_vox": 1055,
+"tumor_sl15": 4
+},
+"pancreas_361": {
+"shape": [
+512,
+512,
+68
+],
+"pancreas_sl50": 18,
+"tumor_vox": 1192,
+"tumor_sl15": 3
+},
+"pancreas_362": {
+"shape": [
+512,
+512,
+48
+],
+"pancreas_sl50": 16,
+"tumor_vox": 3037,
+"tumor_sl15": 5
+},
+"pancreas_364": {
+"shape": [
+512,
+512,
+89
+],
+"pancreas_sl50": 30,
+"tumor_vox": 23203,
+"tumor_sl15": 10
+},
+"pancreas_365": {
+"shape": [
+512,
+512,
+94
+],
+"pancreas_sl50": 23,
+"tumor_vox": 15745,
+"tumor_sl15": 10
+},
+"pancreas_366": {
+"shape": [
+512,
+512,
+121
+],
+"pancreas_sl50": 41,
+"tumor_vox": 2487,
+"tumor_sl15": 7
+},
+"pancreas_367": {
+"shape": [
+512,
+512,
+104
+],
+"pancreas_sl50": 36,
+"tumor_vox": 5998,
+"tumor_sl15": 9
+},
+"pancreas_369": {
+"shape": [
+512,
+512,
+97
+],
+"pancreas_sl50": 39,
+"tumor_vox": 2443,
+"tumor_sl15": 9
+},
+"pancreas_370": {
+"shape": [
+512,
+512,
+91
+],
+"pancreas_sl50": 15,
+"tumor_vox": 64032,
+"tumor_sl15": 13
+},
+"pancreas_372": {
+"shape": [
+512,
+512,
+93
+],
+"pancreas_sl50": 39,
+"tumor_vox": 11448,
+"tumor_sl15": 15
+},
+"pancreas_374": {
+"shape": [
+512,
+512,
+137
+],
+"pancreas_sl50": 37,
+"tumor_vox": 13725,
+"tumor_sl15": 13
+},
+"pancreas_375": {
+"shape": [
+512,
+512,
+117
+],
+"pancreas_sl50": 40,
+"tumor_vox": 2668,
+"tumor_sl15": 9
+},
+"pancreas_376": {
+"shape": [
+512,
+512,
+109
+],
+"pancreas_sl50": 36,
+"tumor_vox": 5608,
+"tumor_sl15": 8
+},
+"pancreas_377": {
+"shape": [
+512,
+512,
+55
+],
+"pancreas_sl50": 16,
+"tumor_vox": 12934,
+"tumor_sl15": 12
+},
+"pancreas_378": {
+"shape": [
+512,
+512,
+93
+],
+"pancreas_sl50": 27,
+"tumor_vox": 868,
+"tumor_sl15": 4
+},
+"pancreas_379": {
+"shape": [
+512,
+512,
+384
+],
+"pancreas_sl50": 62,
+"tumor_vox": 11885,
+"tumor_sl15": 19
+},
+"pancreas_380": {
+"shape": [
+512,
+512,
+63
+],
+"pancreas_sl50": 23,
+"tumor_vox": 7372,
+"tumor_sl15": 11
+},
+"pancreas_382": {
+"shape": [
+512,
+512,
+111
+],
+"pancreas_sl50": 33,
+"tumor_vox": 1483,
+"tumor_sl15": 4
+},
+"pancreas_385": {
+"shape": [
+512,
+512,
+49
+],
+"pancreas_sl50": 19,
+"tumor_vox": 12754,
+"tumor_sl15": 9
+},
+"pancreas_386": {
+"shape": [
+512,
+512,
+81
+],
+"pancreas_sl50": 33,
+"tumor_vox": 1161,
+"tumor_sl15": 5
+},
+"pancreas_387": {
+"shape": [
+512,
+512,
+50
+],
+"pancreas_sl50": 18,
+"tumor_vox": 22847,
+"tumor_sl15": 12
+},
+"pancreas_388": {
+"shape": [
+512,
+512,
+57
+],
+"pancreas_sl50": 15,
+"tumor_vox": 4590,
+"tumor_sl15": 10
+},
+"pancreas_389": {
+"shape": [
+512,
+512,
+118
+],
+"pancreas_sl50": 34,
+"tumor_vox": 1334,
+"tumor_sl15": 9
+},
+"pancreas_391": {
+"shape": [
+512,
+512,
+89
+],
+"pancreas_sl50": 42,
+"tumor_vox": 61414,
+"tumor_sl15": 24
+},
+"pancreas_392": {
+"shape": [
+512,
+512,
+57
+],
+"pancreas_sl50": 20,
+"tumor_vox": 914,
+"tumor_sl15": 3
+},
+"pancreas_393": {
+"shape": [
+512,
+512,
+119
+],
+"pancreas_sl50": 39,
+"tumor_vox": 2571,
+"tumor_sl15": 9
+},
+"pancreas_395": {
+"shape": [
+512,
+512,
+142
+],
+"pancreas_sl50": 20,
+"tumor_vox": 1113,
+"tumor_sl15": 5
+},
+"pancreas_398": {
+"shape": [
+512,
+512,
+103
+],
+"pancreas_sl50": 33,
+"tumor_vox": 401,
+"tumor_sl15": 5
+},
+"pancreas_399": {
+"shape": [
+512,
+512,
+58
+],
+"pancreas_sl50": 19,
+"tumor_vox": 2682,
+"tumor_sl15": 8
+},
+"pancreas_400": {
+"shape": [
+512,
+512,
+107
+],
+"pancreas_sl50": 44,
+"tumor_vox": 2626,
+"tumor_sl15": 7
+},
+"pancreas_401": {
+"shape": [
+512,
+512,
+120
+],
+"pancreas_sl50": 14,
+"tumor_vox": 3728,
+"tumor_sl15": 7
+},
+"pancreas_402": {
+"shape": [
+512,
+512,
+134
+],
+"pancreas_sl50": 32,
+"tumor_vox": 1302,
+"tumor_sl15": 5
+},
+"pancreas_404": {
+"shape": [
+512,
+512,
+105
+],
+"pancreas_sl50": 35,
+"tumor_vox": 1272,
+"tumor_sl15": 6
+},
+"pancreas_405": {
+"shape": [
+512,
+512,
+89
+],
+"pancreas_sl50": 38,
+"tumor_vox": 3601,
+"tumor_sl15": 6
+},
+"pancreas_406": {
+"shape": [
+512,
+512,
+72
+],
+"pancreas_sl50": 30,
+"tumor_vox": 1726,
+"tumor_sl15": 6
+},
+"pancreas_409": {
+"shape": [
+512,
+512,
+751
+],
+"pancreas_sl50": 139,
+"tumor_vox": 324028,
+"tumor_sl15": 103
+},
+"pancreas_410": {
+"shape": [
+512,
+512,
+101
+],
+"pancreas_sl50": 29,
+"tumor_vox": 6964,
+"tumor_sl15": 9
+},
+"pancreas_411": {
+"shape": [
+512,
+512,
+103
+],
+"pancreas_sl50": 35,
+"tumor_vox": 4295,
+"tumor_sl15": 8
+},
+"pancreas_412": {
+"shape": [
+512,
+512,
+164
+],
+"pancreas_sl50": 29,
+"tumor_vox": 5069,
+"tumor_sl15": 9
+},
+"pancreas_413": {
+"shape": [
+512,
+512,
+85
+],
+"pancreas_sl50": 30,
+"tumor_vox": 3490,
+"tumor_sl15": 8
+},
+"pancreas_414": {
+"shape": [
+512,
+512,
+169
+],
+"pancreas_sl50": 68,
+"tumor_vox": 76733,
+"tumor_sl15": 48
+},
+"pancreas_415": {
+"shape": [
+512,
+512,
+61
+],
+"pancreas_sl50": 33,
+"tumor_vox": 189621,
+"tumor_sl15": 27
+},
+"pancreas_416": {
+"shape": [
+512,
+512,
+116
+],
+"pancreas_sl50": 30,
+"tumor_vox": 2828,
+"tumor_sl15": 7
+},
+"pancreas_418": {
+"shape": [
+512,
+512,
+44
+],
+"pancreas_sl50": 20,
+"tumor_vox": 1102,
+"tumor_sl15": 5
+},
+"pancreas_419": {
+"shape": [
+512,
+512,
+44
+],
+"pancreas_sl50": 20,
+"tumor_vox": 1414,
+"tumor_sl15": 5
+},
+"pancreas_421": {
+"shape": [
+512,
+512,
+131
+],
+"pancreas_sl50": 53,
+"tumor_vox": 5470,
+"tumor_sl15": 11
+}
+}

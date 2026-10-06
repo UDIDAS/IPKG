@@ -9,7 +9,7 @@ FLARE23 release copy (Metadata.zip) contains images for 950 studies and none of 
 of the 687 (verified here) - only their GT labels exist.
 
 This prescreen is annotation-independent anyway: a same-scan re-share lives on the SAME voxel
-grid (every one of KS's 310 CT-voxel twins is grid-identical, axis order aside), and the GT
+grid (every one of the co-author's 310 CT-voxel twins is grid-identical, axis order aside), and the GT
 label file carries the CT's grid.  So:
 
   1. stream the NIfTI header of each of the 687 GT labels out of Metadata.zip (ranged reads);
@@ -23,7 +23,7 @@ label file carries the CT's grid.  So:
 
 Zero collisions means: no unmasked pool record even shares a voxel grid with any query, so
 none can be a same-scan re-share of a query (caveat, stated in the artifact: a re-share that
-was RESAMPLED to a new grid would evade both this and KS's np.array_equal CT test; none of
+was RESAMPLED to a new grid would evade both this and the co-author's np.array_equal CT test; none of
 the 310 known re-shares was).
 
   ZIP_INDEX=/dev/shm/zipidx/metadata_zip_index.json python unscanned687_grid_prescreen.py
@@ -181,7 +181,7 @@ def main():
                                    "query_spacing": s.get("spacing"), "sig_source": s["source"]})
     report = {
         "prescreen": "unscanned687_grid_prescreen_2026-09-24",
-        "premise": "same-scan re-shares are grid-identical (all 310 KS CT-voxel twins are); "
+        "premise": "same-scan re-shares are grid-identical (all 310 the co-author CT-voxel twins are); "
                    "GT labels carry the CT grid, so grid comparison is annotation-independent",
         "n_unmasked_pool_records": len(un),
         "headers_read": len(grids), "header_errors": errs,
@@ -190,7 +190,7 @@ def main():
                        "shape_only": [q for q, s in sigs.items() if not s["spacing"] and not s["voxml"]]},
         "grid_collisions": collisions, "n_collisions": len(collisions),
         "caveat": "a re-share RESAMPLED to a new grid evades this test (and would equally evade "
-                  "KS's np.array_equal CT-voxel scan); none of the 310 known re-shares is resampled",
+                  "the co-author's np.array_equal CT-voxel scan); none of the 310 known re-shares is resampled",
     }
     if not collisions and not errs:
         report["verdict"] = ("CLEAN - no unmasked pool record shares a voxel grid with any of the "

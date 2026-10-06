@@ -1,0 +1,341 @@
+{
+ "values_present": [
+  "body",
+  "head",
+  "na",
+  "tail"
+ ],
+ "pancreas_125_predicted": {
+  "anatomic_location": "head",
+  "anatomic_location_status": "computed",
+  "anatomic_location_provenance": "rule on the regenerated semi-oracle mask (ausam_msd organ + flare_only tumor); f_lr=0.156 f_pca=0.132",
+  "anatomic_location_snomed": "64163001",
+  "anatomic_location_delivered": "tail"
+ },
+ "changes": [
+  {
+   "kind": "predicted",
+   "dataset": "flare23",
+   "organ": "kidney",
+   "delivered": "unknown",
+   "reissued": "na",
+   "status": "not_applicable",
+   "n": 2
+  },
+  {
+   "kind": "predicted",
+   "dataset": "flare23",
+   "organ": "liver",
+   "delivered": "unknown",
+   "reissued": "na",
+   "status": "not_applicable",
+   "n": 2
+  },
+  {
+   "kind": "predicted",
+   "dataset": "flare23",
+   "organ": "pancreas",
+   "delivered": "unknown",
+   "reissued": "na",
+   "status": "no_tumor",
+   "n": 2
+  },
+  {
+   "kind": "predicted",
+   "dataset": "flare23",
+   "organ": "spleen",
+   "delivered": "unknown",
+   "reissued": "na",
+   "status": "not_applicable",
+   "n": 2
+  },
+  {
+   "kind": "predicted",
+   "dataset": "kits",
+   "organ": "kidney",
+   "delivered": "body",
+   "reissued": "na",
+   "status": "not_applicable",
+   "n": 9
+  },
+  {
+   "kind": "predicted",
+   "dataset": "kits",
+   "organ": "kidney",
+   "delivered": "head",
+   "reissued": "na",
+   "status": "not_applicable",
+   "n": 14
+  },
+  {
+   "kind": "predicted",
+   "dataset": "kits",
+   "organ": "kidney",
+   "delivered": "na",
+   "reissued": "na",
+   "status": "not_applicable",
+   "n": 1
+  },
+  {
+   "kind": "predicted",
+   "dataset": "kits",
+   "organ": "kidney",
+   "delivered": "tail",
+   "reissued": "na",
+   "status": "not_applicable",
+   "n": 12
+  },
+  {
+   "kind": "predicted",
+   "dataset": "lits",
+   "organ": "liver",
+   "delivered": "body",
+   "reissued": "na",
+   "status": "not_applicable",
+   "n": 13
+  },
+  {
+   "kind": "predicted",
+   "dataset": "lits",
+   "organ": "liver",
+   "delivered": "head",
+   "reissued": "na",
+   "status": "not_applicable",
+   "n": 7
+  },
+  {
+   "kind": "predicted",
+   "dataset": "lits",
+   "organ": "liver",
+   "delivered": "tail",
+   "reissued": "na",
+   "status": "not_applicable",
+   "n": 1
+  },
+  {
+   "kind": "predicted",
+   "dataset": "msd",
+   "organ": "pancreas",
+   "delivered": "body",
+   "reissued": "body",
+   "status": "computed",
+   "n": 1
+  },
+  {
+   "kind": "predicted",
+   "dataset": "msd",
+   "organ": "pancreas",
+   "delivered": "body",
+   "reissued": "head",
+   "status": "computed",
+   "n": 17
+  },
+  {
+   "kind": "predicted",
+   "dataset": "msd",
+   "organ": "pancreas",
+   "delivered": "head",
+   "reissued": "body",
+   "status": "computed",
+   "n": 5
+  },
+  {
+   "kind": "predicted",
+   "dataset": "msd",
+   "organ": "pancreas",
+   "delivered": "head",
+   "reissued": "head",
+   "status": "computed",
+   "n": 3
+  },
+  {
+   "kind": "predicted",
+   "dataset": "msd",
+   "organ": "pancreas",
+   "delivered": "head",
+   "reissued": "tail",
+   "status": "computed",
+   "n": 3
+  },
+  {
+   "kind": "predicted",
+   "dataset": "msd",
+   "organ": "pancreas",
+   "delivered": "na",
+   "reissued": "na",
+   "status": "no_tumor",
+   "n": 3
+  },
+  {
+   "kind": "predicted",
+   "dataset": "msd",
+   "organ": "pancreas",
+   "delivered": "tail",
+   "reissued": "head",
+   "status": "computed",
+   "n": 24
+  },
+  {
+   "kind": "reference",
+   "dataset": "flare23",
+   "organ": "kidney",
+   "delivered": "unknown",
+   "reissued": "na",
+   "status": "not_applicable",
+   "n": 1199
+  },
+  {
+   "kind": "reference",
+   "dataset": "flare23",
+   "organ": "liver",
+   "delivered": "unknown",
+   "reissued": "na",
+   "status": "not_applicable",
+   "n": 1198
+  },
+  {
+   "kind": "reference",
+   "dataset": "flare23",
+   "organ": "pancreas",
+   "delivered": "unknown",
+   "reissued": "na",
+   "status": "no_tumor",
+   "n": 974
+  },
+  {
+   "kind": "reference",
+   "dataset": "flare23",
+   "organ": "pancreas",
+   "delivered": "unknown",
+   "reissued": "na",
+   "status": "not_computed",
+   "n": 224
+  },
+  {
+   "kind": "reference",
+   "dataset": "flare23",
+   "organ": "spleen",
+   "delivered": "unknown",
+   "reissued": "na",
+   "status": "not_applicable",
+   "n": 1193
+  },
+  {
+   "kind": "reference",
+   "dataset": "kits",
+   "organ": "kidney",
+   "delivered": "body",
+   "reissued": "na",
+   "status": "not_applicable",
+   "n": 10
+  },
+  {
+   "kind": "reference",
+   "dataset": "kits",
+   "organ": "kidney",
+   "delivered": "head",
+   "reissued": "na",
+   "status": "not_applicable",
+   "n": 13
+  },
+  {
+   "kind": "reference",
+   "dataset": "kits",
+   "organ": "kidney",
+   "delivered": "tail",
+   "reissued": "na",
+   "status": "not_applicable",
+   "n": 13
+  },
+  {
+   "kind": "reference",
+   "dataset": "lits",
+   "organ": "liver",
+   "delivered": "body",
+   "reissued": "na",
+   "status": "not_applicable",
+   "n": 15
+  },
+  {
+   "kind": "reference",
+   "dataset": "lits",
+   "organ": "liver",
+   "delivered": "head",
+   "reissued": "na",
+   "status": "not_applicable",
+   "n": 5
+  },
+  {
+   "kind": "reference",
+   "dataset": "lits",
+   "organ": "liver",
+   "delivered": "tail",
+   "reissued": "na",
+   "status": "not_applicable",
+   "n": 1
+  },
+  {
+   "kind": "reference",
+   "dataset": "msd",
+   "organ": "pancreas",
+   "delivered": "body",
+   "reissued": "body",
+   "status": "computed",
+   "n": 1
+  },
+  {
+   "kind": "reference",
+   "dataset": "msd",
+   "organ": "pancreas",
+   "delivered": "body",
+   "reissued": "head",
+   "status": "computed",
+   "n": 19
+  },
+  {
+   "kind": "reference",
+   "dataset": "msd",
+   "organ": "pancreas",
+   "delivered": "head",
+   "reissued": "body",
+   "status": "computed",
+   "n": 7
+  },
+  {
+   "kind": "reference",
+   "dataset": "msd",
+   "organ": "pancreas",
+   "delivered": "head",
+   "reissued": "head",
+   "status": "computed",
+   "n": 2
+  },
+  {
+   "kind": "reference",
+   "dataset": "msd",
+   "organ": "pancreas",
+   "delivered": "head",
+   "reissued": "na",
+   "status": "guard_failed",
+   "n": 1
+  },
+  {
+   "kind": "reference",
+   "dataset": "msd",
+   "organ": "pancreas",
+   "delivered": "head",
+   "reissued": "tail",
+   "status": "computed",
+   "n": 3
+  },
+  {
+   "kind": "reference",
+   "dataset": "msd",
+   "organ": "pancreas",
+   "delivered": "tail",
+   "reissued": "head",
+   "status": "computed",
+   "n": 23
+  }
+ ]
+}

@@ -1,0 +1,9896 @@
+{
+ "summary": {
+  "scanned": 576,
+  "twins": 310,
+  "twin_collections": {
+   "KiTS23": 133,
+   "MSD Pancreas": 127,
+   "LiTS": 50
+  },
+  "shortlist_n": 0,
+  "elapsed_s": 2441
+ },
+ "shortlist": [],
+ "results": {
+  "FLARE23_0003": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0003_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    325
+   ],
+   "zooms": [
+    0.703,
+    0.703,
+    0.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00115\\imaging.nii.gz",
+    "case": "case_00115"
+   }
+  },
+  "FLARE23_0006": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0006_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    282
+   ],
+   "zooms": [
+    0.938,
+    0.938,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0013": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0013_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    272
+   ],
+   "zooms": [
+    0.785,
+    0.785,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0016": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0016_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    113
+   ],
+   "zooms": [
+    0.963,
+    0.963,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_308.nii.gz",
+    "case": "pancreas_308"
+   }
+  },
+  "FLARE23_0019": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0019_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    310
+   ],
+   "zooms": [
+    0.781,
+    0.781,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0022": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0022_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    146
+   ],
+   "zooms": [
+    0.865,
+    0.865,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0028": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0028_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    172
+   ],
+   "zooms": [
+    0.906,
+    0.906,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0031": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0031_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    537
+   ],
+   "zooms": [
+    0.756,
+    0.756,
+    0.8
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0037": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0037_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    333
+   ],
+   "zooms": [
+    0.598,
+    0.598,
+    1.25
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_70.nii.gz",
+    "case": "liver_70"
+   }
+  },
+  "FLARE23_0038": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0038_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    107
+   ],
+   "zooms": [
+    0.748,
+    0.748,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0042": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0042_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    115
+   ],
+   "zooms": [
+    0.703,
+    0.703,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_274.nii.gz",
+    "case": "pancreas_274"
+   }
+  },
+  "FLARE23_0044": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0044_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    237
+   ],
+   "zooms": [
+    0.938,
+    0.938,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0047": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0047_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    659
+   ],
+   "zooms": [
+    0.734,
+    0.734,
+    0.7
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0048": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0048_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    147
+   ],
+   "zooms": [
+    0.797,
+    0.797,
+    3.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_79.nii.gz",
+    "case": "liver_79"
+   }
+  },
+  "FLARE23_0051": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0051_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    89
+   ],
+   "zooms": [
+    0.758,
+    0.758,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_75.nii.gz",
+    "case": "liver_75"
+   }
+  },
+  "FLARE23_0052": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0052_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    133
+   ],
+   "zooms": [
+    0.842,
+    0.842,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0054": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0054_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    55
+   ],
+   "zooms": [
+    0.863,
+    0.863,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_377.nii.gz",
+    "case": "pancreas_377"
+   }
+  },
+  "FLARE23_0060": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0060_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    470
+   ],
+   "zooms": [
+    0.824,
+    0.824,
+    1.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00100\\imaging.nii.gz",
+    "case": "case_00100"
+   }
+  },
+  "FLARE23_0070": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0070_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    105
+   ],
+   "zooms": [
+    0.928,
+    0.928,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_339.nii.gz",
+    "case": "pancreas_339"
+   }
+  },
+  "FLARE23_0081": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0081_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    433
+   ],
+   "zooms": [
+    0.672,
+    0.672,
+    0.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00116\\imaging.nii.gz",
+    "case": "case_00116"
+   }
+  },
+  "FLARE23_0088": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0088_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    168
+   ],
+   "zooms": [
+    0.754,
+    0.754,
+    1.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0092": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0092_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    101
+   ],
+   "zooms": [
+    0.898,
+    0.898,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0094": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0094_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    140
+   ],
+   "zooms": [
+    0.912,
+    0.912,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0097": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0097_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    206
+   ],
+   "zooms": [
+    0.879,
+    0.879,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00128\\imaging.nii.gz",
+    "case": "case_00128"
+   }
+  },
+  "FLARE23_0101": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0101_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    908
+   ],
+   "zooms": [
+    0.789,
+    0.789,
+    0.7
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_116.nii.gz",
+    "case": "liver_116"
+   }
+  },
+  "FLARE23_0102": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0102_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    230
+   ],
+   "zooms": [
+    0.777,
+    0.777,
+    2.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_64.nii.gz",
+    "case": "liver_64"
+   }
+  },
+  "FLARE23_0104": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0104_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    38
+   ],
+   "zooms": [
+    0.74,
+    0.74,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": null
+  },
+  "FLARE23_0111": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0111_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    214
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0112": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0112_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    108
+   ],
+   "zooms": [
+    0.805,
+    0.805,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0118": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0118_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    153
+   ],
+   "zooms": [
+    0.893,
+    0.893,
+    3.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00105\\imaging.nii.gz",
+    "case": "case_00105"
+   }
+  },
+  "FLARE23_0120": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0120_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    437
+   ],
+   "zooms": [
+    0.768,
+    0.768,
+    1.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_21.nii.gz",
+    "case": "liver_21"
+   }
+  },
+  "FLARE23_0123": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0123_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    121
+   ],
+   "zooms": [
+    0.854,
+    0.854,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0126": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0126_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    76
+   ],
+   "zooms": [
+    0.768,
+    0.768,
+    3.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00090\\imaging.nii.gz",
+    "case": "case_00090"
+   }
+  },
+  "FLARE23_0133": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0133_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    705
+   ],
+   "zooms": [
+    0.703,
+    0.703,
+    0.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00158\\imaging.nii.gz",
+    "case": "case_00158"
+   }
+  },
+  "FLARE23_0136": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0136_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    139
+   ],
+   "zooms": [
+    0.852,
+    0.852,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0143": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0143_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    81
+   ],
+   "zooms": [
+    0.859,
+    0.859,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_236.nii.gz",
+    "case": "pancreas_236"
+   }
+  },
+  "FLARE23_0146": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0146_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    285
+   ],
+   "zooms": [
+    0.832,
+    0.832,
+    1.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00120\\imaging.nii.gz",
+    "case": "case_00120"
+   }
+  },
+  "FLARE23_0156": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0156_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    85
+   ],
+   "zooms": [
+    0.84,
+    0.84,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_137.nii.gz",
+    "case": "pancreas_137"
+   }
+  },
+  "FLARE23_0161": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0161_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    105
+   ],
+   "zooms": [
+    0.809,
+    0.809,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0162": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0162_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    89
+   ],
+   "zooms": [
+    0.68,
+    0.68,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_267.nii.gz",
+    "case": "pancreas_267"
+   }
+  },
+  "FLARE23_0164": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0164_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    46
+   ],
+   "zooms": [
+    0.943,
+    0.943,
+    5.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0167": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0167_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    234
+   ],
+   "zooms": [
+    0.699,
+    0.699,
+    1.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00098\\imaging.nii.gz",
+    "case": "case_00098"
+   }
+  },
+  "FLARE23_0174": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0174_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    132
+   ],
+   "zooms": [
+    0.848,
+    0.848,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0178": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0178_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    209
+   ],
+   "zooms": [
+    0.781,
+    0.781,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0180": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0180_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    97
+   ],
+   "zooms": [
+    0.793,
+    0.793,
+    5.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0185": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0185_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    95
+   ],
+   "zooms": [
+    0.959,
+    0.959,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_323.nii.gz",
+    "case": "pancreas_323"
+   }
+  },
+  "FLARE23_0189": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0189_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    206
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0190": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0190_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    708
+   ],
+   "zooms": [
+    0.859,
+    0.859,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0193": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0193_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    79
+   ],
+   "zooms": [
+    0.625,
+    0.625,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00277\\imaging.nii.gz",
+    "case": "case_00277"
+   }
+  },
+  "FLARE23_0199": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0199_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    604
+   ],
+   "zooms": [
+    0.781,
+    0.781,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0208": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0208_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    155
+   ],
+   "zooms": [
+    0.863,
+    0.863,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0211": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0211_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    71
+   ],
+   "zooms": [
+    0.742,
+    0.742,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0212": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0212_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    133
+   ],
+   "zooms": [
+    0.781,
+    0.781,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00192\\imaging.nii.gz",
+    "case": "case_00192"
+   }
+  },
+  "FLARE23_0217": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0217_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    210
+   ],
+   "zooms": [
+    0.898,
+    0.898,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0226": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0226_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    92
+   ],
+   "zooms": [
+    0.918,
+    0.918,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00143\\imaging.nii.gz",
+    "case": "case_00143"
+   }
+  },
+  "FLARE23_0233": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0233_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    130
+   ],
+   "zooms": [
+    0.906,
+    0.906,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0235": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0235_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    101
+   ],
+   "zooms": [
+    0.896,
+    0.896,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00269\\imaging.nii.gz",
+    "case": "case_00269"
+   }
+  },
+  "FLARE23_0236": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0236_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    189
+   ],
+   "zooms": [
+    0.779,
+    0.779,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00032\\imaging.nii.gz",
+    "case": "case_00032"
+   }
+  },
+  "FLARE23_0239": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0239_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    143
+   ],
+   "zooms": [
+    0.734,
+    0.734,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00186\\imaging.nii.gz",
+    "case": "case_00186"
+   }
+  },
+  "FLARE23_0243": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0243_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    141
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0246": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0246_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    761
+   ],
+   "zooms": [
+    0.782,
+    0.782,
+    0.8
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_111.nii.gz",
+    "case": "liver_111"
+   }
+  },
+  "FLARE23_0250": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0250_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    83
+   ],
+   "zooms": [
+    0.783,
+    0.783,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0253": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0253_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    534
+   ],
+   "zooms": [
+    0.693,
+    0.693,
+    1.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_3.nii.gz",
+    "case": "liver_3"
+   }
+  },
+  "FLARE23_0255": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0255_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    100
+   ],
+   "zooms": [
+    0.881,
+    0.881,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_278.nii.gz",
+    "case": "pancreas_278"
+   }
+  },
+  "FLARE23_0256": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0256_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    133
+   ],
+   "zooms": [
+    0.84,
+    0.84,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0259": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0259_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    123
+   ],
+   "zooms": [
+    0.725,
+    0.725,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0261": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0261_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    179
+   ],
+   "zooms": [
+    0.699,
+    0.699,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0262": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0262_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    95
+   ],
+   "zooms": [
+    0.742,
+    0.742,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_180.nii.gz",
+    "case": "pancreas_180"
+   }
+  },
+  "FLARE23_0268": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0268_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    164
+   ],
+   "zooms": [
+    0.967,
+    0.967,
+    1.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0274": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0274_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    45
+   ],
+   "zooms": [
+    0.68,
+    0.68,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00251\\imaging.nii.gz",
+    "case": "case_00251"
+   }
+  },
+  "FLARE23_0277": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0277_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    244
+   ],
+   "zooms": [
+    0.734,
+    0.734,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00284\\imaging.nii.gz",
+    "case": "case_00284"
+   }
+  },
+  "FLARE23_0278": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0278_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    97
+   ],
+   "zooms": [
+    0.807,
+    0.807,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0283": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0283_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    99
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_327.nii.gz",
+    "case": "pancreas_327"
+   }
+  },
+  "FLARE23_0285": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0285_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    97
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    2.5
+   ],
+   "header_matches": 2,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_369.nii.gz",
+    "case": "pancreas_369"
+   }
+  },
+  "FLARE23_0286": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0286_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    285
+   ],
+   "zooms": [
+    0.762,
+    0.762,
+    1.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00067\\imaging.nii.gz",
+    "case": "case_00067"
+   }
+  },
+  "FLARE23_0289": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0289_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    323
+   ],
+   "zooms": [
+    0.773,
+    0.773,
+    1.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0290": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0290_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    201
+   ],
+   "zooms": [
+    0.938,
+    0.938,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0295": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0295_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    61
+   ],
+   "zooms": [
+    0.793,
+    0.793,
+    8.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0299": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0299_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    97
+   ],
+   "zooms": [
+    0.916,
+    0.916,
+    2.5
+   ],
+   "header_matches": 2,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_290.nii.gz",
+    "case": "pancreas_290"
+   }
+  },
+  "FLARE23_0305": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0305_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    691
+   ],
+   "zooms": [
+    0.82,
+    0.82,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0309": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0309_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    109
+   ],
+   "zooms": [
+    0.742,
+    0.742,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00137\\imaging.nii.gz",
+    "case": "case_00137"
+   }
+  },
+  "FLARE23_0313": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0313_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    60
+   ],
+   "zooms": [
+    0.752,
+    0.752,
+    5.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0319": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0319_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    138
+   ],
+   "zooms": [
+    0.914,
+    0.914,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0321": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0321_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    126
+   ],
+   "zooms": [
+    0.818,
+    0.818,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0327": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0327_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    212
+   ],
+   "zooms": [
+    0.684,
+    0.684,
+    2.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_58.nii.gz",
+    "case": "liver_58"
+   }
+  },
+  "FLARE23_0328": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0328_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    79
+   ],
+   "zooms": [
+    0.826,
+    0.826,
+    5.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0332": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0332_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    104
+   ],
+   "zooms": [
+    0.828,
+    0.828,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_226.nii.gz",
+    "case": "pancreas_226"
+   }
+  },
+  "FLARE23_0338": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0338_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    548
+   ],
+   "zooms": [
+    0.852,
+    0.852,
+    0.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00157\\imaging.nii.gz",
+    "case": "case_00157"
+   }
+  },
+  "FLARE23_0341": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0341_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    97
+   ],
+   "zooms": [
+    0.824,
+    0.824,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00173\\imaging.nii.gz",
+    "case": "case_00173"
+   }
+  },
+  "FLARE23_0357": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0357_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    61
+   ],
+   "zooms": [
+    0.939,
+    0.939,
+    3.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00007\\imaging.nii.gz",
+    "case": "case_00007"
+   }
+  },
+  "FLARE23_0363": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0363_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    136
+   ],
+   "zooms": [
+    0.967,
+    0.967,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0365": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0365_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    48
+   ],
+   "zooms": [
+    0.719,
+    0.719,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_099.nii.gz",
+    "case": "pancreas_099"
+   }
+  },
+  "FLARE23_0369": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0369_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    107
+   ],
+   "zooms": [
+    0.77,
+    0.77,
+    3.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00258\\imaging.nii.gz",
+    "case": "case_00258"
+   }
+  },
+  "FLARE23_0370": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0370_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    103
+   ],
+   "zooms": [
+    0.783,
+    0.783,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0373": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0373_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    52
+   ],
+   "zooms": [
+    0.678,
+    0.678,
+    3.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00041\\imaging.nii.gz",
+    "case": "case_00041"
+   }
+  },
+  "FLARE23_0375": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0375_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    141
+   ],
+   "zooms": [
+    0.816,
+    0.816,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0379": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0379_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    149
+   ],
+   "zooms": [
+    0.65,
+    0.65,
+    3.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0382": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0382_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    180
+   ],
+   "zooms": [
+    0.82,
+    0.82,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00255\\imaging.nii.gz",
+    "case": "case_00255"
+   }
+  },
+  "FLARE23_0388": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0388_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    141
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0398": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0398_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    133
+   ],
+   "zooms": [
+    0.854,
+    0.854,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0400": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0400_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    205
+   ],
+   "zooms": [
+    0.82,
+    0.82,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0403": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0403_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    605
+   ],
+   "zooms": [
+    0.848,
+    0.848,
+    1.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_13.nii.gz",
+    "case": "liver_13"
+   }
+  },
+  "FLARE23_0405": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0405_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    326
+   ],
+   "zooms": [
+    0.963,
+    0.963,
+    1.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00078\\imaging.nii.gz",
+    "case": "case_00078"
+   }
+  },
+  "FLARE23_0413": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0413_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    53
+   ],
+   "zooms": [
+    0.703,
+    0.703,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00064\\imaging.nii.gz",
+    "case": "case_00064"
+   }
+  },
+  "FLARE23_0416": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0416_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    466
+   ],
+   "zooms": [
+    0.672,
+    0.672,
+    1.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_11.nii.gz",
+    "case": "liver_11"
+   }
+  },
+  "FLARE23_0419": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0419_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    97
+   ],
+   "zooms": [
+    0.787,
+    0.787,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_012.nii.gz",
+    "case": "pancreas_012"
+   }
+  },
+  "FLARE23_0421": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0421_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    105
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    3.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00127\\imaging.nii.gz",
+    "case": "case_00127"
+   }
+  },
+  "FLARE23_0428": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0428_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    63
+   ],
+   "zooms": [
+    0.682,
+    0.682,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00262\\imaging.nii.gz",
+    "case": "case_00262"
+   }
+  },
+  "FLARE23_0431": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0431_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    37
+   ],
+   "zooms": [
+    0.781,
+    0.781,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_074.nii.gz",
+    "case": "pancreas_074"
+   }
+  },
+  "FLARE23_0432": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0432_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    121
+   ],
+   "zooms": [
+    0.83,
+    0.83,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0434": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0434_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    140
+   ],
+   "zooms": [
+    0.895,
+    0.895,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0437": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0437_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    114
+   ],
+   "zooms": [
+    0.781,
+    0.781,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00104\\imaging.nii.gz",
+    "case": "case_00104"
+   }
+  },
+  "FLARE23_0444": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0444_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    734
+   ],
+   "zooms": [
+    0.971,
+    0.971,
+    1.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00165\\imaging.nii.gz",
+    "case": "case_00165"
+   }
+  },
+  "FLARE23_0448": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0448_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    84
+   ],
+   "zooms": [
+    0.678,
+    0.678,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_356.nii.gz",
+    "case": "pancreas_356"
+   }
+  },
+  "FLARE23_0451": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0451_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    491
+   ],
+   "zooms": [
+    0.764,
+    0.764,
+    1.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00253\\imaging.nii.gz",
+    "case": "case_00253"
+   }
+  },
+  "FLARE23_0452": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0452_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    629
+   ],
+   "zooms": [
+    0.895,
+    0.895,
+    0.8
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0458": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0458_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    93
+   ],
+   "zooms": [
+    0.752,
+    0.752,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_095.nii.gz",
+    "case": "pancreas_095"
+   }
+  },
+  "FLARE23_0463": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0463_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    274
+   ],
+   "zooms": [
+    0.809,
+    0.809,
+    1.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00142\\imaging.nii.gz",
+    "case": "case_00142"
+   }
+  },
+  "FLARE23_0466": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0466_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    109
+   ],
+   "zooms": [
+    0.859,
+    0.859,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_376.nii.gz",
+    "case": "pancreas_376"
+   }
+  },
+  "FLARE23_0470": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0470_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    36
+   ],
+   "zooms": [
+    0.906,
+    0.906,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00148\\imaging.nii.gz",
+    "case": "case_00148"
+   }
+  },
+  "FLARE23_0473": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0473_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    532
+   ],
+   "zooms": [
+    0.713,
+    0.713,
+    0.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00132\\imaging.nii.gz",
+    "case": "case_00132"
+   }
+  },
+  "FLARE23_0476": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0476_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    69
+   ],
+   "zooms": [
+    0.898,
+    0.898,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0482": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0482_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    169
+   ],
+   "zooms": [
+    0.859,
+    0.859,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0487": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0487_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    198
+   ],
+   "zooms": [
+    0.785,
+    0.785,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_78.nii.gz",
+    "case": "liver_78"
+   }
+  },
+  "FLARE23_0488": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0488_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    146
+   ],
+   "zooms": [
+    0.84,
+    0.84,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00184\\imaging.nii.gz",
+    "case": "case_00184"
+   }
+  },
+  "FLARE23_0491": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0491_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    107
+   ],
+   "zooms": [
+    0.898,
+    0.898,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_246.nii.gz",
+    "case": "pancreas_246"
+   }
+  },
+  "FLARE23_0494": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0494_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    203
+   ],
+   "zooms": [
+    0.782,
+    0.782,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0497": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0497_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    87
+   ],
+   "zooms": [
+    0.621,
+    0.621,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0504": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0504_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    89
+   ],
+   "zooms": [
+    0.725,
+    0.725,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_316.nii.gz",
+    "case": "pancreas_316"
+   }
+  },
+  "FLARE23_0511": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0511_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    81
+   ],
+   "zooms": [
+    0.922,
+    0.922,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_310.nii.gz",
+    "case": "pancreas_310"
+   }
+  },
+  "FLARE23_0512": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0512_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    661
+   ],
+   "zooms": [
+    0.748,
+    0.748,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0514": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0514_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    846
+   ],
+   "zooms": [
+    0.782,
+    0.782,
+    0.8
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_114.nii.gz",
+    "case": "liver_114"
+   }
+  },
+  "FLARE23_0518": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0518_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    89
+   ],
+   "zooms": [
+    0.885,
+    0.885,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00208\\imaging.nii.gz",
+    "case": "case_00208"
+   }
+  },
+  "FLARE23_0520": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0520_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    116
+   ],
+   "zooms": [
+    0.922,
+    0.922,
+    4.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_416.nii.gz",
+    "case": "pancreas_416"
+   }
+  },
+  "FLARE23_0523": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0523_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    439
+   ],
+   "zooms": [
+    0.85,
+    0.85,
+    1.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00014\\imaging.nii.gz",
+    "case": "case_00014"
+   }
+  },
+  "FLARE23_0525": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0525_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    146
+   ],
+   "zooms": [
+    0.879,
+    0.879,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0526": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0526_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    199
+   ],
+   "zooms": [
+    0.781,
+    0.781,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0533": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0533_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    97
+   ],
+   "zooms": [
+    0.898,
+    0.898,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_266.nii.gz",
+    "case": "pancreas_266"
+   }
+  },
+  "FLARE23_0536": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0536_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    98
+   ],
+   "zooms": [
+    0.779,
+    0.779,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_287.nii.gz",
+    "case": "pancreas_287"
+   }
+  },
+  "FLARE23_0539": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0539_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    117
+   ],
+   "zooms": [
+    0.732,
+    0.732,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0540": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0540_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    93
+   ],
+   "zooms": [
+    0.836,
+    0.836,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_292.nii.gz",
+    "case": "pancreas_292"
+   }
+  },
+  "FLARE23_0549": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0549_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    119
+   ],
+   "zooms": [
+    0.775,
+    0.775,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0550": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0550_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    142
+   ],
+   "zooms": [
+    0.885,
+    0.885,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0562": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0562_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    141
+   ],
+   "zooms": [
+    0.893,
+    0.893,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0572": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0572_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    89
+   ],
+   "zooms": [
+    0.645,
+    0.645,
+    2.5
+   ],
+   "header_matches": 2,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_052.nii.gz",
+    "case": "pancreas_052"
+   }
+  },
+  "FLARE23_0574": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0574_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    310
+   ],
+   "zooms": [
+    0.703,
+    0.703,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0578": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0578_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    127
+   ],
+   "zooms": [
+    0.775,
+    0.775,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0586": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0586_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    81
+   ],
+   "zooms": [
+    0.734,
+    0.734,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_207.nii.gz",
+    "case": "pancreas_207"
+   }
+  },
+  "FLARE23_0590": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0590_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    164
+   ],
+   "zooms": [
+    0.664,
+    0.664,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00072\\imaging.nii.gz",
+    "case": "case_00072"
+   }
+  },
+  "FLARE23_0593": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0593_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    82
+   ],
+   "zooms": [
+    0.729,
+    0.729,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_084.nii.gz",
+    "case": "pancreas_084"
+   }
+  },
+  "FLARE23_0595": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0595_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    81
+   ],
+   "zooms": [
+    0.754,
+    0.754,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0604": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0604_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    227
+   ],
+   "zooms": [
+    0.859,
+    0.859,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0607": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0607_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    87
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": null
+  },
+  "FLARE23_0611": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0611_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    160
+   ],
+   "zooms": [
+    0.938,
+    0.938,
+    3.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00226\\imaging.nii.gz",
+    "case": "case_00226"
+   }
+  },
+  "FLARE23_0612": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0612_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    89
+   ],
+   "zooms": [
+    0.812,
+    0.812,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_330.nii.gz",
+    "case": "pancreas_330"
+   }
+  },
+  "FLARE23_0614": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0614_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    102
+   ],
+   "zooms": [
+    0.752,
+    0.752,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0617": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0617_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    98
+   ],
+   "zooms": [
+    0.703,
+    0.703,
+    5.0
+   ],
+   "header_matches": 2,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00092\\imaging.nii.gz",
+    "case": "case_00092"
+   }
+  },
+  "FLARE23_0620": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0620_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    99
+   ],
+   "zooms": [
+    0.826,
+    0.826,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00241\\imaging.nii.gz",
+    "case": "case_00241"
+   }
+  },
+  "FLARE23_0623": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0623_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    247
+   ],
+   "zooms": [
+    0.781,
+    0.781,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0633": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0633_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    142
+   ],
+   "zooms": [
+    0.9,
+    0.9,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0635": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0635_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    57
+   ],
+   "zooms": [
+    0.826,
+    0.826,
+    5.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0646": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0646_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    134
+   ],
+   "zooms": [
+    0.797,
+    0.797,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0649": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0649_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    51
+   ],
+   "zooms": [
+    0.797,
+    0.797,
+    5.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0650": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0650_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    233
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0656": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0656_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    121
+   ],
+   "zooms": [
+    0.885,
+    0.885,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0661": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0661_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    120
+   ],
+   "zooms": [
+    0.896,
+    0.896,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0662": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0662_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    103
+   ],
+   "zooms": [
+    0.791,
+    0.791,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0664": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0664_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    85
+   ],
+   "zooms": [
+    0.844,
+    0.844,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0668": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0668_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    137
+   ],
+   "zooms": [
+    0.92,
+    0.92,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0671": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0671_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    133
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0674": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0674_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    85
+   ],
+   "zooms": [
+    0.898,
+    0.898,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_119.nii.gz",
+    "case": "pancreas_119"
+   }
+  },
+  "FLARE23_0678": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0678_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    97
+   ],
+   "zooms": [
+    0.732,
+    0.732,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0680": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0680_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    654
+   ],
+   "zooms": [
+    0.781,
+    0.781,
+    0.7
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_128.nii.gz",
+    "case": "liver_128"
+   }
+  },
+  "FLARE23_0683": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0683_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    263
+   ],
+   "zooms": [
+    0.867,
+    0.867,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0685": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0685_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    112
+   ],
+   "zooms": [
+    0.812,
+    0.812,
+    4.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0686": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0686_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    139
+   ],
+   "zooms": [
+    0.832,
+    0.832,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0689": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0689_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    722
+   ],
+   "zooms": [
+    0.746,
+    0.746,
+    0.7
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_96.nii.gz",
+    "case": "liver_96"
+   }
+  },
+  "FLARE23_0695": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0695_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    93
+   ],
+   "zooms": [
+    0.699,
+    0.699,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0696": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0696_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    32
+   ],
+   "zooms": [
+    0.779,
+    0.779,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00038\\imaging.nii.gz",
+    "case": "case_00038"
+   }
+  },
+  "FLARE23_0700": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0700_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    751
+   ],
+   "zooms": [
+    0.781,
+    0.781,
+    0.8
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_90.nii.gz",
+    "case": "liver_90"
+   }
+  },
+  "FLARE23_0705": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0705_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    114
+   ],
+   "zooms": [
+    0.855,
+    0.855,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0706": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0706_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    101
+   ],
+   "zooms": [
+    0.754,
+    0.754,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0709": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0709_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    947
+   ],
+   "zooms": [
+    0.717,
+    0.717,
+    0.7
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0715": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0715_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    310
+   ],
+   "zooms": [
+    0.918,
+    0.918,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0716": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0716_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    686
+   ],
+   "zooms": [
+    0.814,
+    0.814,
+    0.625
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0719": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0719_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    163
+   ],
+   "zooms": [
+    0.799,
+    0.799,
+    3.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00036\\imaging.nii.gz",
+    "case": "case_00036"
+   }
+  },
+  "FLARE23_0724": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0724_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    51
+   ],
+   "zooms": [
+    0.895,
+    0.895,
+    5.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0728": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0728_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    61
+   ],
+   "zooms": [
+    0.947,
+    0.947,
+    3.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00134\\imaging.nii.gz",
+    "case": "case_00134"
+   }
+  },
+  "FLARE23_0732": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0732_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    238
+   ],
+   "zooms": [
+    0.699,
+    0.699,
+    1.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00273\\imaging.nii.gz",
+    "case": "case_00273"
+   }
+  },
+  "FLARE23_0734": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0734_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    103
+   ],
+   "zooms": [
+    0.951,
+    0.951,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00058\\imaging.nii.gz",
+    "case": "case_00058"
+   }
+  },
+  "FLARE23_0738": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0738_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    149
+   ],
+   "zooms": [
+    0.976,
+    0.976,
+    3.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00245\\imaging.nii.gz",
+    "case": "case_00245"
+   }
+  },
+  "FLARE23_0742": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0742_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    119
+   ],
+   "zooms": [
+    0.77,
+    0.77,
+    4.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0744": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0744_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    97
+   ],
+   "zooms": [
+    0.938,
+    0.938,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00037\\imaging.nii.gz",
+    "case": "case_00037"
+   }
+  },
+  "FLARE23_0747": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0747_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    132
+   ],
+   "zooms": [
+    0.826,
+    0.826,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0751": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0751_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    99
+   ],
+   "zooms": [
+    0.754,
+    0.754,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_218.nii.gz",
+    "case": "pancreas_218"
+   }
+  },
+  "FLARE23_0758": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0758_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    110
+   ],
+   "zooms": [
+    0.801,
+    0.801,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_178.nii.gz",
+    "case": "pancreas_178"
+   }
+  },
+  "FLARE23_0766": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0766_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    95
+   ],
+   "zooms": [
+    0.938,
+    0.938,
+    2.5
+   ],
+   "header_matches": 2,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_213.nii.gz",
+    "case": "pancreas_213"
+   }
+  },
+  "FLARE23_0769": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0769_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    79
+   ],
+   "zooms": [
+    0.541,
+    0.541,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0770": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0770_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    134
+   ],
+   "zooms": [
+    0.824,
+    0.824,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0775": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0775_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    121
+   ],
+   "zooms": [
+    0.816,
+    0.816,
+    1.25
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_075.nii.gz",
+    "case": "pancreas_075"
+   }
+  },
+  "FLARE23_0779": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0779_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    627
+   ],
+   "zooms": [
+    0.766,
+    0.766,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0782": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0782_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    99
+   ],
+   "zooms": [
+    0.742,
+    0.742,
+    5.0
+   ],
+   "header_matches": 2,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00179\\imaging.nii.gz",
+    "case": "case_00179"
+   }
+  },
+  "FLARE23_0784": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0784_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    84
+   ],
+   "zooms": [
+    0.703,
+    0.703,
+    5.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0787": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0787_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    66
+   ],
+   "zooms": [
+    0.949,
+    0.949,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_158.nii.gz",
+    "case": "pancreas_158"
+   }
+  },
+  "FLARE23_0794": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0794_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    117
+   ],
+   "zooms": [
+    0.771,
+    0.771,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0797": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0797_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    101
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_254.nii.gz",
+    "case": "pancreas_254"
+   }
+  },
+  "FLARE23_0798": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0798_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    627
+   ],
+   "zooms": [
+    0.773,
+    0.773,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0802": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0802_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    85
+   ],
+   "zooms": [
+    0.664,
+    0.664,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00024\\imaging.nii.gz",
+    "case": "case_00024"
+   }
+  },
+  "FLARE23_0804": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0804_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    136
+   ],
+   "zooms": [
+    0.898,
+    0.898,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0808": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0808_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    310
+   ],
+   "zooms": [
+    0.703,
+    0.703,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0811": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0811_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    679
+   ],
+   "zooms": [
+    0.703,
+    0.703,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0812": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0812_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    266
+   ],
+   "zooms": [
+    0.816,
+    0.816,
+    1.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00281\\imaging.nii.gz",
+    "case": "case_00281"
+   }
+  },
+  "FLARE23_0817": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0817_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    136
+   ],
+   "zooms": [
+    0.832,
+    0.832,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0820": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0820_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    147
+   ],
+   "zooms": [
+    0.801,
+    0.801,
+    3.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0830": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0830_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    141
+   ],
+   "zooms": [
+    0.941,
+    0.941,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0835": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0835_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    89
+   ],
+   "zooms": [
+    0.951,
+    0.951,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_326.nii.gz",
+    "case": "pancreas_326"
+   }
+  },
+  "FLARE23_0836": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0836_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    626
+   ],
+   "zooms": [
+    0.781,
+    0.781,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0839": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0839_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    55
+   ],
+   "zooms": [
+    0.703,
+    0.703,
+    3.75
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_106.nii.gz",
+    "case": "pancreas_106"
+   }
+  },
+  "FLARE23_0840": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0840_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    143
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0845": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0845_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    103
+   ],
+   "zooms": [
+    0.873,
+    0.873,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00167\\imaging.nii.gz",
+    "case": "case_00167"
+   }
+  },
+  "FLARE23_0846": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0846_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    107
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0850": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0850_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    79
+   ],
+   "zooms": [
+    0.686,
+    0.686,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00121\\imaging.nii.gz",
+    "case": "case_00121"
+   }
+  },
+  "FLARE23_0853": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0853_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    135
+   ],
+   "zooms": [
+    0.75,
+    0.75,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00194\\imaging.nii.gz",
+    "case": "case_00194"
+   }
+  },
+  "FLARE23_0855": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0855_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    131
+   ],
+   "zooms": [
+    0.865,
+    0.865,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0856": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0856_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    221
+   ],
+   "zooms": [
+    0.898,
+    0.898,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0859": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0859_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    44
+   ],
+   "zooms": [
+    0.73,
+    0.73,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_129.nii.gz",
+    "case": "pancreas_129"
+   }
+  },
+  "FLARE23_0861": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0861_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    221
+   ],
+   "zooms": [
+    0.902,
+    0.902,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0862": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0862_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    93
+   ],
+   "zooms": [
+    0.781,
+    0.781,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00205\\imaging.nii.gz",
+    "case": "case_00205"
+   }
+  },
+  "FLARE23_0864": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0864_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    760
+   ],
+   "zooms": [
+    0.734,
+    0.734,
+    0.7
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0868": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0868_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    226
+   ],
+   "zooms": [
+    0.938,
+    0.938,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0872": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0872_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    145
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0878": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0878_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    101
+   ],
+   "zooms": [
+    0.879,
+    0.879,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00055\\imaging.nii.gz",
+    "case": "case_00055"
+   }
+  },
+  "FLARE23_0880": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0880_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    135
+   ],
+   "zooms": [
+    0.889,
+    0.889,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0883": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0883_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    227
+   ],
+   "zooms": [
+    0.816,
+    0.816,
+    3.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00008\\imaging.nii.gz",
+    "case": "case_00008"
+   }
+  },
+  "FLARE23_0886": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0886_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    90
+   ],
+   "zooms": [
+    0.703,
+    0.703,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00039\\imaging.nii.gz",
+    "case": "case_00039"
+   }
+  },
+  "FLARE23_0889": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0889_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    77
+   ],
+   "zooms": [
+    0.781,
+    0.781,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_157.nii.gz",
+    "case": "pancreas_157"
+   }
+  },
+  "FLARE23_0893": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0893_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    216
+   ],
+   "zooms": [
+    0.938,
+    0.938,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0896": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0896_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    95
+   ],
+   "zooms": [
+    0.926,
+    0.926,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_166.nii.gz",
+    "case": "pancreas_166"
+   }
+  },
+  "FLARE23_0903": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0903_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    557
+   ],
+   "zooms": [
+    0.938,
+    0.938,
+    1.25
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0909": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0909_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    93
+   ],
+   "zooms": [
+    0.938,
+    0.938,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00182\\imaging.nii.gz",
+    "case": "case_00182"
+   }
+  },
+  "FLARE23_0910": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0910_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    90
+   ],
+   "zooms": [
+    0.707,
+    0.707,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00075\\imaging.nii.gz",
+    "case": "case_00075"
+   }
+  },
+  "FLARE23_0915": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0915_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    129
+   ],
+   "zooms": [
+    0.832,
+    0.832,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0916": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0916_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    113
+   ],
+   "zooms": [
+    0.742,
+    0.742,
+    2.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00112\\imaging.nii.gz",
+    "case": "case_00112"
+   }
+  },
+  "FLARE23_0919": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0919_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    85
+   ],
+   "zooms": [
+    1.041,
+    1.041,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00048\\imaging.nii.gz",
+    "case": "case_00048"
+   }
+  },
+  "FLARE23_0922": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0922_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    172
+   ],
+   "zooms": [
+    0.738,
+    0.738,
+    3.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00043\\imaging.nii.gz",
+    "case": "case_00043"
+   }
+  },
+  "FLARE23_0927": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0927_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    86
+   ],
+   "zooms": [
+    0.779,
+    0.779,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_343.nii.gz",
+    "case": "pancreas_343"
+   }
+  },
+  "FLARE23_0928": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0928_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    103
+   ],
+   "zooms": [
+    0.908,
+    0.908,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_244.nii.gz",
+    "case": "pancreas_244"
+   }
+  },
+  "FLARE23_0934": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0934_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    103
+   ],
+   "zooms": [
+    0.801,
+    0.801,
+    5.0
+   ],
+   "header_matches": 2,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00139\\imaging.nii.gz",
+    "case": "case_00139"
+   }
+  },
+  "FLARE23_0938": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0938_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    91
+   ],
+   "zooms": [
+    0.766,
+    0.766,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00172\\imaging.nii.gz",
+    "case": "case_00172"
+   }
+  },
+  "FLARE23_0948": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0948_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    83
+   ],
+   "zooms": [
+    0.924,
+    0.924,
+    5.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0957": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0957_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    233
+   ],
+   "zooms": [
+    0.859,
+    0.859,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0960": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0960_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    137
+   ],
+   "zooms": [
+    0.741,
+    0.741,
+    3.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00180\\imaging.nii.gz",
+    "case": "case_00180"
+   }
+  },
+  "FLARE23_0966": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0966_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    174
+   ],
+   "zooms": [
+    0.781,
+    0.781,
+    3.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00220\\imaging.nii.gz",
+    "case": "case_00220"
+   }
+  },
+  "FLARE23_0969": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0969_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    194
+   ],
+   "zooms": [
+    0.891,
+    0.891,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0973": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0973_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    101
+   ],
+   "zooms": [
+    0.967,
+    0.967,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00044\\imaging.nii.gz",
+    "case": "case_00044"
+   }
+  },
+  "FLARE23_0976": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0976_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    164
+   ],
+   "zooms": [
+    0.938,
+    0.938,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0981": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0981_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    66
+   ],
+   "zooms": [
+    0.678,
+    0.678,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00076\\imaging.nii.gz",
+    "case": "case_00076"
+   }
+  },
+  "FLARE23_0984": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0984_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    617
+   ],
+   "zooms": [
+    0.734,
+    0.734,
+    0.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00298\\imaging.nii.gz",
+    "case": "case_00298"
+   }
+  },
+  "FLARE23_0987": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0987_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    619
+   ],
+   "zooms": [
+    0.918,
+    0.918,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0994": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0994_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    432
+   ],
+   "zooms": [
+    0.748,
+    0.748,
+    1.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_123.nii.gz",
+    "case": "liver_123"
+   }
+  },
+  "FLARE23_0997": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0997_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    42
+   ],
+   "zooms": [
+    0.82,
+    0.82,
+    5.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_0998": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_0998_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    49
+   ],
+   "zooms": [
+    0.691,
+    0.691,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00087\\imaging.nii.gz",
+    "case": "case_00087"
+   }
+  },
+  "FLARE23_1003": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1003_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    98
+   ],
+   "zooms": [
+    0.707,
+    0.707,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_114.nii.gz",
+    "case": "pancreas_114"
+   }
+  },
+  "FLARE23_1005": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1005_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    122
+   ],
+   "zooms": [
+    0.824,
+    0.824,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1013": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1013_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    261
+   ],
+   "zooms": [
+    0.939,
+    0.939,
+    1.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00002\\imaging.nii.gz",
+    "case": "case_00002"
+   }
+  },
+  "FLARE23_1021": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1021_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    1858
+   ],
+   "zooms": [
+    0.799,
+    0.799,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1024": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1024_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    128
+   ],
+   "zooms": [
+    0.883,
+    0.883,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1027": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1027_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    168
+   ],
+   "zooms": [
+    0.742,
+    0.742,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_76.nii.gz",
+    "case": "liver_76"
+   }
+  },
+  "FLARE23_1028": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1028_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    93
+   ],
+   "zooms": [
+    0.723,
+    0.723,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_304.nii.gz",
+    "case": "pancreas_304"
+   }
+  },
+  "FLARE23_1034": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1034_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    203
+   ],
+   "zooms": [
+    0.939,
+    0.939,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1037": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1037_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    93
+   ],
+   "zooms": [
+    0.742,
+    0.742,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_325.nii.gz",
+    "case": "pancreas_325"
+   }
+  },
+  "FLARE23_1038": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1038_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    269
+   ],
+   "zooms": [
+    0.732,
+    0.732,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00198\\imaging.nii.gz",
+    "case": "case_00198"
+   }
+  },
+  "FLARE23_1041": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1041_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    93
+   ],
+   "zooms": [
+    0.791,
+    0.791,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_231.nii.gz",
+    "case": "pancreas_231"
+   }
+  },
+  "FLARE23_1044": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1044_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    132
+   ],
+   "zooms": [
+    0.824,
+    0.824,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1048": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1048_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    89
+   ],
+   "zooms": [
+    0.688,
+    0.688,
+    5.01
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1051": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1051_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    97
+   ],
+   "zooms": [
+    0.664,
+    0.664,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00017\\imaging.nii.gz",
+    "case": "case_00017"
+   }
+  },
+  "FLARE23_1054": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1054_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    73
+   ],
+   "zooms": [
+    0.852,
+    0.852,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_197.nii.gz",
+    "case": "pancreas_197"
+   }
+  },
+  "FLARE23_1058": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1058_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    43
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": null
+  },
+  "FLARE23_1063": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1063_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    77
+   ],
+   "zooms": [
+    0.809,
+    0.809,
+    3.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00009\\imaging.nii.gz",
+    "case": "case_00009"
+   }
+  },
+  "FLARE23_1069": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1069_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    113
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_303.nii.gz",
+    "case": "pancreas_303"
+   }
+  },
+  "FLARE23_1070": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1070_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    205
+   ],
+   "zooms": [
+    0.782,
+    0.782,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1082": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1082_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    135
+   ],
+   "zooms": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_33.nii.gz",
+    "case": "liver_33"
+   }
+  },
+  "FLARE23_1087": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1087_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    274
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    2.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00084\\imaging.nii.gz",
+    "case": "case_00084"
+   }
+  },
+  "FLARE23_1092": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1092_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    136
+   ],
+   "zooms": [
+    0.871,
+    0.871,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1097": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1097_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    239
+   ],
+   "zooms": [
+    0.803,
+    0.803,
+    2.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_56.nii.gz",
+    "case": "liver_56"
+   }
+  },
+  "FLARE23_1104": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1104_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    228
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1107": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1107_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    574
+   ],
+   "zooms": [
+    0.803,
+    0.803,
+    0.8
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_20.nii.gz",
+    "case": "liver_20"
+   }
+  },
+  "FLARE23_1108": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1108_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    97
+   ],
+   "zooms": [
+    0.83,
+    0.83,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1111": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1111_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    75
+   ],
+   "zooms": [
+    0.705,
+    0.705,
+    3.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00015\\imaging.nii.gz",
+    "case": "case_00015"
+   }
+  },
+  "FLARE23_1112": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1112_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    489
+   ],
+   "zooms": [
+    0.684,
+    0.684,
+    1.25
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1114": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1114_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    127
+   ],
+   "zooms": [
+    0.855,
+    0.855,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1117": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1117_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    81
+   ],
+   "zooms": [
+    0.83,
+    0.83,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_354.nii.gz",
+    "case": "pancreas_354"
+   }
+  },
+  "FLARE23_1118": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1118_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    90
+   ],
+   "zooms": [
+    0.6,
+    0.6,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1120": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1120_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    661
+   ],
+   "zooms": [
+    0.684,
+    0.684,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1123": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1123_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    222
+   ],
+   "zooms": [
+    0.898,
+    0.898,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1135": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1135_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    89
+   ],
+   "zooms": [
+    0.924,
+    0.924,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_032.nii.gz",
+    "case": "pancreas_032"
+   }
+  },
+  "FLARE23_1136": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1136_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    192
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_219.nii.gz",
+    "case": "pancreas_219"
+   }
+  },
+  "FLARE23_1139": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1139_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    130
+   ],
+   "zooms": [
+    0.684,
+    0.684,
+    5.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1146": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1146_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    53
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    5.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1153": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1153_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    73
+   ],
+   "zooms": [
+    0.645,
+    0.645,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_204.nii.gz",
+    "case": "pancreas_204"
+   }
+  },
+  "FLARE23_1156": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1156_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    92
+   ],
+   "zooms": [
+    0.684,
+    0.684,
+    3.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00013\\imaging.nii.gz",
+    "case": "case_00013"
+   }
+  },
+  "FLARE23_1159": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1159_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    113
+   ],
+   "zooms": [
+    0.777,
+    0.777,
+    2.5
+   ],
+   "header_matches": 2,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_269.nii.gz",
+    "case": "pancreas_269"
+   }
+  },
+  "FLARE23_1161": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1161_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    126
+   ],
+   "zooms": [
+    0.795,
+    0.795,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1164": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1164_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    655
+   ],
+   "zooms": [
+    0.703,
+    0.703,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1168": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1168_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    79
+   ],
+   "zooms": [
+    0.684,
+    0.684,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1174": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1174_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    48
+   ],
+   "zooms": [
+    0.647,
+    0.647,
+    5.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1178": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1178_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    135
+   ],
+   "zooms": [
+    0.859,
+    0.859,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1180": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1180_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    103
+   ],
+   "zooms": [
+    0.859,
+    0.859,
+    5.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1185": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1185_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    103
+   ],
+   "zooms": [
+    0.93,
+    0.93,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_398.nii.gz",
+    "case": "pancreas_398"
+   }
+  },
+  "FLARE23_1189": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1189_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    84
+   ],
+   "zooms": [
+    0.617,
+    0.617,
+    5.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1195": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1195_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    338
+   ],
+   "zooms": [
+    0.705,
+    0.705,
+    0.7
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_129.nii.gz",
+    "case": "liver_129"
+   }
+  },
+  "FLARE23_1196": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1196_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    80
+   ],
+   "zooms": [
+    0.676,
+    0.676,
+    5.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1199": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1199_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    733
+   ],
+   "zooms": [
+    0.758,
+    0.758,
+    0.7
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_84.nii.gz",
+    "case": "liver_84"
+   }
+  },
+  "FLARE23_1204": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1204_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    161
+   ],
+   "zooms": [
+    0.73,
+    0.73,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1208": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1208_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    98
+   ],
+   "zooms": [
+    0.82,
+    0.82,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_100.nii.gz",
+    "case": "pancreas_100"
+   }
+  },
+  "FLARE23_1212": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1212_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    77
+   ],
+   "zooms": [
+    0.605,
+    0.605,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_222.nii.gz",
+    "case": "pancreas_222"
+   }
+  },
+  "FLARE23_1217": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1217_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    95
+   ],
+   "zooms": [
+    0.785,
+    0.785,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1218": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1218_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    151
+   ],
+   "zooms": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_34.nii.gz",
+    "case": "liver_34"
+   }
+  },
+  "FLARE23_1223": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1223_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    310
+   ],
+   "zooms": [
+    0.664,
+    0.664,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1225": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1225_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    73
+   ],
+   "zooms": [
+    0.734,
+    0.734,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_126.nii.gz",
+    "case": "pancreas_126"
+   }
+  },
+  "FLARE23_1230": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1230_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    149
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1233": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1233_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    588
+   ],
+   "zooms": [
+    0.686,
+    0.686,
+    1.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_14.nii.gz",
+    "case": "liver_14"
+   }
+  },
+  "FLARE23_1236": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1236_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    84
+   ],
+   "zooms": [
+    0.777,
+    0.777,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_235.nii.gz",
+    "case": "pancreas_235"
+   }
+  },
+  "FLARE23_1239": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1239_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    97
+   ],
+   "zooms": [
+    0.803,
+    0.803,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1243": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1243_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    148
+   ],
+   "zooms": [
+    0.932,
+    0.932,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1246": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1246_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    146
+   ],
+   "zooms": [
+    0.742,
+    0.742,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00189\\imaging.nii.gz",
+    "case": "case_00189"
+   }
+  },
+  "FLARE23_1249": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1249_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    231
+   ],
+   "zooms": [
+    0.938,
+    0.938,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1250": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1250_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    77
+   ],
+   "zooms": [
+    0.645,
+    0.645,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_087.nii.gz",
+    "case": "pancreas_087"
+   }
+  },
+  "FLARE23_1256": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1256_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    119
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_393.nii.gz",
+    "case": "pancreas_393"
+   }
+  },
+  "FLARE23_1261": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1261_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    93
+   ],
+   "zooms": [
+    0.816,
+    0.816,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1262": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1262_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    77
+   ],
+   "zooms": [
+    0.742,
+    0.742,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1264": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1264_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    165
+   ],
+   "zooms": [
+    0.922,
+    0.922,
+    3.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00231\\imaging.nii.gz",
+    "case": "case_00231"
+   }
+  },
+  "FLARE23_1274": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1274_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    38
+   ],
+   "zooms": [
+    0.822,
+    0.822,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00021\\imaging.nii.gz",
+    "case": "case_00021"
+   }
+  },
+  "FLARE23_1280": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1280_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    533
+   ],
+   "zooms": [
+    0.918,
+    0.918,
+    1.25
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1283": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1283_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    75
+   ],
+   "zooms": [
+    0.865,
+    0.865,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1285": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1285_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    100
+   ],
+   "zooms": [
+    0.689,
+    0.689,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_113.nii.gz",
+    "case": "pancreas_113"
+   }
+  },
+  "FLARE23_1286": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1286_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    172
+   ],
+   "zooms": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_29.nii.gz",
+    "case": "liver_29"
+   }
+  },
+  "FLARE23_1289": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1289_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    109
+   ],
+   "zooms": [
+    0.838,
+    0.838,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_264.nii.gz",
+    "case": "pancreas_264"
+   }
+  },
+  "FLARE23_1290": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1290_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    138
+   ],
+   "zooms": [
+    0.818,
+    0.818,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1293": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1293_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    630
+   ],
+   "zooms": [
+    0.645,
+    0.645,
+    0.7
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_85.nii.gz",
+    "case": "liver_85"
+   }
+  },
+  "FLARE23_1299": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1299_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    45
+   ],
+   "zooms": [
+    0.824,
+    0.824,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_040.nii.gz",
+    "case": "pancreas_040"
+   }
+  },
+  "FLARE23_1300": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1300_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    223
+   ],
+   "zooms": [
+    0.957,
+    0.957,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1310": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1310_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    131
+   ],
+   "zooms": [
+    0.85,
+    0.85,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1313": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1313_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    86
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    3.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00145\\imaging.nii.gz",
+    "case": "case_00145"
+   }
+  },
+  "FLARE23_1316": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1316_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    741
+   ],
+   "zooms": [
+    0.84,
+    0.84,
+    0.8
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1322": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1322_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    96
+   ],
+   "zooms": [
+    0.717,
+    0.717,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1324": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1324_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    82
+   ],
+   "zooms": [
+    0.625,
+    0.625,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00187\\imaging.nii.gz",
+    "case": "case_00187"
+   }
+  },
+  "FLARE23_1331": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1331_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    97
+   ],
+   "zooms": [
+    0.717,
+    0.717,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1334": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1334_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    620
+   ],
+   "zooms": [
+    0.637,
+    0.637,
+    1.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00203\\imaging.nii.gz",
+    "case": "case_00203"
+   }
+  },
+  "FLARE23_1338": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1338_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    64
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    4.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00004\\imaging.nii.gz",
+    "case": "case_00004"
+   }
+  },
+  "FLARE23_1341": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1341_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    95
+   ],
+   "zooms": [
+    0.621,
+    0.621,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1344": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1344_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    97
+   ],
+   "zooms": [
+    0.873,
+    0.873,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_212.nii.gz",
+    "case": "pancreas_212"
+   }
+  },
+  "FLARE23_1347": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1347_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    751
+   ],
+   "zooms": [
+    0.64,
+    0.64,
+    0.8
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_112.nii.gz",
+    "case": "liver_112"
+   }
+  },
+  "FLARE23_1351": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1351_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    276
+   ],
+   "zooms": [
+    0.84,
+    0.84,
+    1.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00288\\imaging.nii.gz",
+    "case": "case_00288"
+   }
+  },
+  "FLARE23_1352": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1352_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    71
+   ],
+   "zooms": [
+    0.645,
+    0.645,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_037.nii.gz",
+    "case": "pancreas_037"
+   }
+  },
+  "FLARE23_1360": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1360_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    177
+   ],
+   "zooms": [
+    0.674,
+    0.674,
+    0.8
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00268\\imaging.nii.gz",
+    "case": "case_00268"
+   }
+  },
+  "FLARE23_1363": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1363_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    83
+   ],
+   "zooms": [
+    0.684,
+    0.684,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_299.nii.gz",
+    "case": "pancreas_299"
+   }
+  },
+  "FLARE23_1373": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1373_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    99
+   ],
+   "zooms": [
+    0.438,
+    0.438,
+    3.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00088\\imaging.nii.gz",
+    "case": "case_00088"
+   }
+  },
+  "FLARE23_1375": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1375_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    105
+   ],
+   "zooms": [
+    0.789,
+    0.789,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_318.nii.gz",
+    "case": "pancreas_318"
+   }
+  },
+  "FLARE23_1381": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1381_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    50
+   ],
+   "zooms": [
+    0.797,
+    0.797,
+    5.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1382": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1382_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    120
+   ],
+   "zooms": [
+    0.77,
+    0.77,
+    4.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1388": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1388_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    87
+   ],
+   "zooms": [
+    0.781,
+    0.781,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_071.nii.gz",
+    "case": "pancreas_071"
+   }
+  },
+  "FLARE23_1392": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1392_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    723
+   ],
+   "zooms": [
+    0.895,
+    0.895,
+    0.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00027\\imaging.nii.gz",
+    "case": "case_00027"
+   }
+  },
+  "FLARE23_1394": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1394_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    82
+   ],
+   "zooms": [
+    0.777,
+    0.777,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00259\\imaging.nii.gz",
+    "case": "case_00259"
+   }
+  },
+  "FLARE23_1400": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1400_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    103
+   ],
+   "zooms": [
+    0.82,
+    0.82,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00065\\imaging.nii.gz",
+    "case": "case_00065"
+   }
+  },
+  "FLARE23_1403": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1403_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    129
+   ],
+   "zooms": [
+    0.832,
+    0.832,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1405": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1405_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    89
+   ],
+   "zooms": [
+    0.729,
+    0.729,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_358.nii.gz",
+    "case": "pancreas_358"
+   }
+  },
+  "FLARE23_1409": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1409_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    225
+   ],
+   "zooms": [
+    0.791,
+    0.791,
+    2.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1415": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1415_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    206
+   ],
+   "zooms": [
+    0.898,
+    0.898,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1424": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1424_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    676
+   ],
+   "zooms": [
+    0.684,
+    0.684,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1428": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1428_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    67
+   ],
+   "zooms": [
+    0.736,
+    0.736,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_268.nii.gz",
+    "case": "pancreas_268"
+   }
+  },
+  "FLARE23_1432": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1432_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    86
+   ],
+   "zooms": [
+    0.66,
+    0.66,
+    5.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1437": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1437_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    67
+   ],
+   "zooms": [
+    0.803,
+    0.803,
+    5.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1438": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1438_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    266
+   ],
+   "zooms": [
+    0.666,
+    0.666,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_68.nii.gz",
+    "case": "liver_68"
+   }
+  },
+  "FLARE23_1441": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1441_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    53
+   ],
+   "zooms": [
+    0.547,
+    0.547,
+    3.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00130\\imaging.nii.gz",
+    "case": "case_00130"
+   }
+  },
+  "FLARE23_1444": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1444_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    148
+   ],
+   "zooms": [
+    0.969,
+    0.969,
+    1.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1447": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1447_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    82
+   ],
+   "zooms": [
+    0.762,
+    0.762,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00242\\imaging.nii.gz",
+    "case": "case_00242"
+   }
+  },
+  "FLARE23_1448": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1448_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    164
+   ],
+   "zooms": [
+    0.916,
+    0.916,
+    3.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_412.nii.gz",
+    "case": "pancreas_412"
+   }
+  },
+  "FLARE23_1454": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1454_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    81
+   ],
+   "zooms": [
+    0.762,
+    0.762,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_386.nii.gz",
+    "case": "pancreas_386"
+   }
+  },
+  "FLARE23_1465": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1465_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    99
+   ],
+   "zooms": [
+    0.82,
+    0.82,
+    2.5
+   ],
+   "header_matches": 2,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_051.nii.gz",
+    "case": "pancreas_051"
+   }
+  },
+  "FLARE23_1466": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1466_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    161
+   ],
+   "zooms": [
+    0.699,
+    0.699,
+    1.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_261.nii.gz",
+    "case": "pancreas_261"
+   }
+  },
+  "FLARE23_1470": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1470_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    91
+   ],
+   "zooms": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_31.nii.gz",
+    "case": "liver_31"
+   }
+  },
+  "FLARE23_1473": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1473_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    95
+   ],
+   "zooms": [
+    0.906,
+    0.906,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1479": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1479_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    135
+   ],
+   "zooms": [
+    0.92,
+    0.92,
+    1.6
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1482": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1482_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    83
+   ],
+   "zooms": [
+    0.947,
+    0.947,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_302.nii.gz",
+    "case": "pancreas_302"
+   }
+  },
+  "FLARE23_1487": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1487_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    83
+   ],
+   "zooms": [
+    0.664,
+    0.664,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1488": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1488_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    145
+   ],
+   "zooms": [
+    0.848,
+    0.848,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1492": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1492_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    107
+   ],
+   "zooms": [
+    0.967,
+    0.967,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_400.nii.gz",
+    "case": "pancreas_400"
+   }
+  },
+  "FLARE23_1497": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1497_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    34
+   ],
+   "zooms": [
+    0.83,
+    0.83,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00110\\imaging.nii.gz",
+    "case": "case_00110"
+   }
+  },
+  "FLARE23_1498": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1498_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    164
+   ],
+   "zooms": [
+    0.859,
+    0.859,
+    3.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00218\\imaging.nii.gz",
+    "case": "case_00218"
+   }
+  },
+  "FLARE23_1507": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1507_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    86
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00062\\imaging.nii.gz",
+    "case": "case_00062"
+   }
+  },
+  "FLARE23_1508": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1508_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    739
+   ],
+   "zooms": [
+    0.898,
+    0.898,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1512": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1512_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    94
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    3.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00083\\imaging.nii.gz",
+    "case": "case_00083"
+   }
+  },
+  "FLARE23_1514": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1514_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    133
+   ],
+   "zooms": [
+    0.928,
+    0.928,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1518": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1518_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    314
+   ],
+   "zooms": [
+    0.791,
+    0.791,
+    1.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1520": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1520_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    140
+   ],
+   "zooms": [
+    0.754,
+    0.754,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00207\\imaging.nii.gz",
+    "case": "case_00207"
+   }
+  },
+  "FLARE23_1526": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1526_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    223
+   ],
+   "zooms": [
+    0.885,
+    0.885,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1535": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1535_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    90
+   ],
+   "zooms": [
+    0.725,
+    0.725,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1536": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1536_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    91
+   ],
+   "zooms": [
+    0.676,
+    0.676,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_370.nii.gz",
+    "case": "pancreas_370"
+   }
+  },
+  "FLARE23_1543": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1543_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    42
+   ],
+   "zooms": [
+    0.867,
+    0.867,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00210\\imaging.nii.gz",
+    "case": "case_00210"
+   }
+  },
+  "FLARE23_1545": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1545_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    591
+   ],
+   "zooms": [
+    0.703,
+    0.703,
+    0.5
+   ],
+   "header_matches": 2,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00293\\imaging.nii.gz",
+    "case": "case_00293"
+   }
+  },
+  "FLARE23_1556": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1556_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    97
+   ],
+   "zooms": [
+    0.789,
+    0.789,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_069.nii.gz",
+    "case": "pancreas_069"
+   }
+  },
+  "FLARE23_1561": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1561_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    101
+   ],
+   "zooms": [
+    0.773,
+    0.773,
+    5.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1562": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1562_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    88
+   ],
+   "zooms": [
+    0.785,
+    0.785,
+    5.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1564": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1564_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    87
+   ],
+   "zooms": [
+    0.879,
+    0.879,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_229.nii.gz",
+    "case": "pancreas_229"
+   }
+  },
+  "FLARE23_1567": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1567_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    689
+   ],
+   "zooms": [
+    0.703,
+    0.703,
+    0.8
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_16.nii.gz",
+    "case": "liver_16"
+   }
+  },
+  "FLARE23_1571": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1571_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    55
+   ],
+   "zooms": [
+    0.832,
+    0.832,
+    5.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1574": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1574_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    681
+   ],
+   "zooms": [
+    0.898,
+    0.898,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1577": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1577_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    96
+   ],
+   "zooms": [
+    0.779,
+    0.779,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_230.nii.gz",
+    "case": "pancreas_230"
+   }
+  },
+  "FLARE23_1578": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1578_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    139
+   ],
+   "zooms": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_32.nii.gz",
+    "case": "liver_32"
+   }
+  },
+  "FLARE23_1583": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1583_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    81
+   ],
+   "zooms": [
+    0.693,
+    0.693,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_173.nii.gz",
+    "case": "pancreas_173"
+   }
+  },
+  "FLARE23_1589": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1589_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    262
+   ],
+   "zooms": [
+    0.703,
+    0.703,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00124\\imaging.nii.gz",
+    "case": "case_00124"
+   }
+  },
+  "FLARE23_1596": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1596_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    98
+   ],
+   "zooms": [
+    0.84,
+    0.84,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00028\\imaging.nii.gz",
+    "case": "case_00028"
+   }
+  },
+  "FLARE23_1602": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1602_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    105
+   ],
+   "zooms": [
+    0.887,
+    0.887,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1604": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1604_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    135
+   ],
+   "zooms": [
+    0.758,
+    0.758,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1611": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1611_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    83
+   ],
+   "zooms": [
+    0.781,
+    0.781,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1612": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1612_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    176
+   ],
+   "zooms": [
+    0.691,
+    0.691,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1614": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1614_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    621
+   ],
+   "zooms": [
+    0.801,
+    0.801,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1617": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1617_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    101
+   ],
+   "zooms": [
+    0.902,
+    0.902,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_297.nii.gz",
+    "case": "pancreas_297"
+   }
+  },
+  "FLARE23_1618": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1618_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    316
+   ],
+   "zooms": [
+    0.84,
+    0.84,
+    1.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00102\\imaging.nii.gz",
+    "case": "case_00102"
+   }
+  },
+  "FLARE23_1620": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1620_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    99
+   ],
+   "zooms": [
+    0.693,
+    0.693,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00181\\imaging.nii.gz",
+    "case": "case_00181"
+   }
+  },
+  "FLARE23_1623": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1623_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    140
+   ],
+   "zooms": [
+    0.686,
+    0.686,
+    3.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00234\\imaging.nii.gz",
+    "case": "case_00234"
+   }
+  },
+  "FLARE23_1625": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1625_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    42
+   ],
+   "zooms": [
+    0.605,
+    0.605,
+    5.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1630": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1630_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    145
+   ],
+   "zooms": [
+    0.834,
+    0.834,
+    3.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00060\\imaging.nii.gz",
+    "case": "case_00060"
+   }
+  },
+  "FLARE23_1639": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1639_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    85
+   ],
+   "zooms": [
+    0.879,
+    0.879,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_019.nii.gz",
+    "case": "pancreas_019"
+   }
+  },
+  "FLARE23_1640": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1640_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    102
+   ],
+   "zooms": [
+    0.811,
+    0.811,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1643": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1643_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    105
+   ],
+   "zooms": [
+    0.879,
+    0.879,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_404.nii.gz",
+    "case": "pancreas_404"
+   }
+  },
+  "FLARE23_1646": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1646_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    131
+   ],
+   "zooms": [
+    0.684,
+    0.684,
+    5.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1649": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1649_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    138
+   ],
+   "zooms": [
+    0.902,
+    0.902,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1650": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1650_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    61
+   ],
+   "zooms": [
+    0.879,
+    0.879,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_415.nii.gz",
+    "case": "pancreas_415"
+   }
+  },
+  "FLARE23_1655": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1655_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    144
+   ],
+   "zooms": [
+    0.883,
+    0.883,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1656": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1656_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    676
+   ],
+   "zooms": [
+    0.762,
+    0.762,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1661": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1661_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    624
+   ],
+   "zooms": [
+    0.684,
+    0.684,
+    0.7
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_130.nii.gz",
+    "case": "liver_130"
+   }
+  },
+  "FLARE23_1662": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1662_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    76
+   ],
+   "zooms": [
+    0.684,
+    0.684,
+    3.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00138\\imaging.nii.gz",
+    "case": "case_00138"
+   }
+  },
+  "FLARE23_1667": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1667_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    101
+   ],
+   "zooms": [
+    0.768,
+    0.768,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_006.nii.gz",
+    "case": "pancreas_006"
+   }
+  },
+  "FLARE23_1674": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1674_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    971
+   ],
+   "zooms": [
+    0.702,
+    0.702,
+    0.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1678": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1678_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    87
+   ],
+   "zooms": [
+    0.674,
+    0.674,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_018.nii.gz",
+    "case": "pancreas_018"
+   }
+  },
+  "FLARE23_1680": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1680_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    244
+   ],
+   "zooms": [
+    0.799,
+    0.799,
+    2.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_60.nii.gz",
+    "case": "liver_60"
+   }
+  },
+  "FLARE23_1683": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1683_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    85
+   ],
+   "zooms": [
+    0.732,
+    0.732,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_147.nii.gz",
+    "case": "pancreas_147"
+   }
+  },
+  "FLARE23_1685": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1685_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    91
+   ],
+   "zooms": [
+    0.777,
+    0.777,
+    2.5
+   ],
+   "header_matches": 2,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_175.nii.gz",
+    "case": "pancreas_175"
+   }
+  },
+  "FLARE23_1686": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1686_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    611
+   ],
+   "zooms": [
+    0.92,
+    0.92,
+    0.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00000\\imaging.nii.gz",
+    "case": "case_00000"
+   }
+  },
+  "FLARE23_1689": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1689_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    284
+   ],
+   "zooms": [
+    0.947,
+    0.947,
+    2.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00247\\imaging.nii.gz",
+    "case": "case_00247"
+   }
+  },
+  "FLARE23_1693": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1693_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    99
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": null
+  },
+  "FLARE23_1695": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1695_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    137
+   ],
+   "zooms": [
+    0.742,
+    0.742,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_374.nii.gz",
+    "case": "pancreas_374"
+   }
+  },
+  "FLARE23_1699": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1699_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    41
+   ],
+   "zooms": [
+    0.65,
+    0.65,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00285\\imaging.nii.gz",
+    "case": "case_00285"
+   }
+  },
+  "FLARE23_1700": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1700_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    131
+   ],
+   "zooms": [
+    0.928,
+    0.928,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1706": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1706_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    130
+   ],
+   "zooms": [
+    0.82,
+    0.82,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1710": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1710_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    198
+   ],
+   "zooms": [
+    0.742,
+    0.742,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1713": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1713_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    310
+   ],
+   "zooms": [
+    0.781,
+    0.781,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1722": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1722_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    90
+   ],
+   "zooms": [
+    0.662,
+    0.662,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_103.nii.gz",
+    "case": "pancreas_103"
+   }
+  },
+  "FLARE23_1724": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1724_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    92
+   ],
+   "zooms": [
+    0.805,
+    0.805,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_092.nii.gz",
+    "case": "pancreas_092"
+   }
+  },
+  "FLARE23_1731": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1731_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    163
+   ],
+   "zooms": [
+    0.75,
+    0.75,
+    3.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1732": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1732_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    51
+   ],
+   "zooms": [
+    0.762,
+    0.762,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_243.nii.gz",
+    "case": "pancreas_243"
+   }
+  },
+  "FLARE23_1734": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1734_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    68
+   ],
+   "zooms": [
+    0.961,
+    0.961,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00051\\imaging.nii.gz",
+    "case": "case_00051"
+   }
+  },
+  "FLARE23_1737": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1737_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    610
+   ],
+   "zooms": [
+    0.758,
+    0.758,
+    0.7
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1741": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1741_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    626
+   ],
+   "zooms": [
+    0.703,
+    0.703,
+    0.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00068\\imaging.nii.gz",
+    "case": "case_00068"
+   }
+  },
+  "FLARE23_1742": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1742_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    115
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1744": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1744_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    565
+   ],
+   "zooms": [
+    0.861,
+    0.861,
+    0.7
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1748": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1748_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    102
+   ],
+   "zooms": [
+    0.859,
+    0.859,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1754": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1754_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    250
+   ],
+   "zooms": [
+    0.754,
+    0.754,
+    1.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00254\\imaging.nii.gz",
+    "case": "case_00254"
+   }
+  },
+  "FLARE23_1758": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1758_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    123
+   ],
+   "zooms": [
+    0.676,
+    0.676,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_1.nii.gz",
+    "case": "liver_1"
+   }
+  },
+  "FLARE23_1760": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1760_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    44
+   ],
+   "zooms": [
+    0.938,
+    0.938,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_419.nii.gz",
+    "case": "pancreas_419"
+   }
+  },
+  "FLARE23_1770": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1770_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    130
+   ],
+   "zooms": [
+    0.771,
+    0.771,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1775": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1775_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    845
+   ],
+   "zooms": [
+    0.922,
+    0.922,
+    0.8
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_18.nii.gz",
+    "case": "liver_18"
+   }
+  },
+  "FLARE23_1776": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1776_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    746
+   ],
+   "zooms": [
+    0.938,
+    0.938,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1782": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1782_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    461
+   ],
+   "zooms": [
+    0.844,
+    0.844,
+    1.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_119.nii.gz",
+    "case": "liver_119"
+   }
+  },
+  "FLARE23_1791": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1791_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    547
+   ],
+   "zooms": [
+    0.752,
+    0.752,
+    0.8
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_19.nii.gz",
+    "case": "liver_19"
+   }
+  },
+  "FLARE23_1794": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1794_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    1059
+   ],
+   "zooms": [
+    0.811,
+    0.811,
+    0.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00151\\imaging.nii.gz",
+    "case": "case_00151"
+   }
+  },
+  "FLARE23_1801": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1801_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    103
+   ],
+   "zooms": [
+    0.764,
+    0.764,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_088.nii.gz",
+    "case": "pancreas_088"
+   }
+  },
+  "FLARE23_1802": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1802_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    102
+   ],
+   "zooms": [
+    0.741,
+    0.741,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00228\\imaging.nii.gz",
+    "case": "case_00228"
+   }
+  },
+  "FLARE23_1807": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1807_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    32
+   ],
+   "zooms": [
+    0.645,
+    0.645,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00257\\imaging.nii.gz",
+    "case": "case_00257"
+   }
+  },
+  "FLARE23_1808": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1808_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    668
+   ],
+   "zooms": [
+    0.797,
+    0.797,
+    0.7
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1812": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1812_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    198
+   ],
+   "zooms": [
+    0.782,
+    0.782,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1817": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1817_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    39
+   ],
+   "zooms": [
+    0.746,
+    0.746,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_043.nii.gz",
+    "case": "pancreas_043"
+   }
+  },
+  "FLARE23_1820": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1820_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    98
+   ],
+   "zooms": [
+    0.807,
+    0.807,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_080.nii.gz",
+    "case": "pancreas_080"
+   }
+  },
+  "FLARE23_1823": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1823_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    137
+   ],
+   "zooms": [
+    0.85,
+    0.85,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1825": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1825_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    784
+   ],
+   "zooms": [
+    0.904,
+    0.904,
+    0.8
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1826": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1826_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    89
+   ],
+   "zooms": [
+    0.939,
+    0.939,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_200.nii.gz",
+    "case": "pancreas_200"
+   }
+  },
+  "FLARE23_1829": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1829_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    751
+   ],
+   "zooms": [
+    0.858,
+    0.858,
+    0.8
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_91.nii.gz",
+    "case": "liver_91"
+   }
+  },
+  "FLARE23_1830": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1830_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    383
+   ],
+   "zooms": [
+    0.898,
+    0.898,
+    1.25
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00202\\imaging.nii.gz",
+    "case": "case_00202"
+   }
+  },
+  "FLARE23_1833": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1833_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    55
+   ],
+   "zooms": [
+    0.643,
+    0.643,
+    4.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1835": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1835_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    271
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1840": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1840_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    120
+   ],
+   "zooms": [
+    0.814,
+    0.814,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1849": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1849_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    310
+   ],
+   "zooms": [
+    0.703,
+    0.703,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1855": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1855_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    169
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    1.25
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_414.nii.gz",
+    "case": "pancreas_414"
+   }
+  },
+  "FLARE23_1856": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1856_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    105
+   ],
+   "zooms": [
+    0.812,
+    0.812,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_295.nii.gz",
+    "case": "pancreas_295"
+   }
+  },
+  "FLARE23_1867": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1867_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    93
+   ],
+   "zooms": [
+    0.855,
+    0.855,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_315.nii.gz",
+    "case": "pancreas_315"
+   }
+  },
+  "FLARE23_1872": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1872_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    135
+   ],
+   "zooms": [
+    0.91,
+    0.91,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1877": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1877_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    171
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    3.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00125\\imaging.nii.gz",
+    "case": "case_00125"
+   }
+  },
+  "FLARE23_1878": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1878_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    128
+   ],
+   "zooms": [
+    0.789,
+    0.789,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1886": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1886_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    138
+   ],
+   "zooms": [
+    0.863,
+    0.863,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1896": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1896_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    223
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1899": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1899_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    91
+   ],
+   "zooms": [
+    0.777,
+    0.777,
+    2.5
+   ],
+   "header_matches": 2,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_089.nii.gz",
+    "case": "pancreas_089"
+   }
+  },
+  "FLARE23_1903": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1903_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    310
+   ],
+   "zooms": [
+    0.781,
+    0.781,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1905": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1905_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    75
+   ],
+   "zooms": [
+    0.875,
+    0.875,
+    3.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00204\\imaging.nii.gz",
+    "case": "case_00204"
+   }
+  },
+  "FLARE23_1906": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1906_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    56
+   ],
+   "zooms": [
+    0.82,
+    0.82,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_140.nii.gz",
+    "case": "pancreas_140"
+   }
+  },
+  "FLARE23_1909": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1909_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    93
+   ],
+   "zooms": [
+    0.865,
+    0.865,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_298.nii.gz",
+    "case": "pancreas_298"
+   }
+  },
+  "FLARE23_1913": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1913_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    597
+   ],
+   "zooms": [
+    0.898,
+    0.898,
+    1.25
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1915": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1915_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    85
+   ],
+   "zooms": [
+    0.781,
+    0.781,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_413.nii.gz",
+    "case": "pancreas_413"
+   }
+  },
+  "FLARE23_1919": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1919_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    147
+   ],
+   "zooms": [
+    0.928,
+    0.928,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_098.nii.gz",
+    "case": "pancreas_098"
+   }
+  },
+  "FLARE23_1922": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1922_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    677
+   ],
+   "zooms": [
+    0.717,
+    0.717,
+    0.7
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_102.nii.gz",
+    "case": "liver_102"
+   }
+  },
+  "FLARE23_1927": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1927_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    133
+   ],
+   "zooms": [
+    0.748,
+    0.748,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1932": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1932_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    117
+   ],
+   "zooms": [
+    0.898,
+    0.898,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_375.nii.gz",
+    "case": "pancreas_375"
+   }
+  },
+  "FLARE23_1934": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1934_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    141
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1937": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1937_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    125
+   ],
+   "zooms": [
+    0.863,
+    0.863,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00274\\imaging.nii.gz",
+    "case": "case_00274"
+   }
+  },
+  "FLARE23_1941": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1941_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    136
+   ],
+   "zooms": [
+    0.844,
+    0.844,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1942": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1942_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    75
+   ],
+   "zooms": [
+    0.762,
+    0.762,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1947": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1947_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    68
+   ],
+   "zooms": [
+    0.625,
+    0.625,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_361.nii.gz",
+    "case": "pancreas_361"
+   }
+  },
+  "FLARE23_1951": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1951_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    76
+   ],
+   "zooms": [
+    0.822,
+    0.822,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_183.nii.gz",
+    "case": "pancreas_183"
+   }
+  },
+  "FLARE23_1952": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1952_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    138
+   ],
+   "zooms": [
+    0.748,
+    0.748,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1957": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1957_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    165
+   ],
+   "zooms": [
+    0.664,
+    0.664,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00278\\imaging.nii.gz",
+    "case": "case_00278"
+   }
+  },
+  "FLARE23_1960": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1960_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    119
+   ],
+   "zooms": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_44.nii.gz",
+    "case": "liver_44"
+   }
+  },
+  "FLARE23_1963": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1963_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    756
+   ],
+   "zooms": [
+    0.898,
+    0.898,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1965": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1965_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    95
+   ],
+   "zooms": [
+    0.803,
+    0.803,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_199.nii.gz",
+    "case": "pancreas_199"
+   }
+  },
+  "FLARE23_1969": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1969_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    468
+   ],
+   "zooms": [
+    0.605,
+    0.605,
+    0.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00271\\imaging.nii.gz",
+    "case": "case_00271"
+   }
+  },
+  "FLARE23_1973": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1973_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    204
+   ],
+   "zooms": [
+    0.782,
+    0.782,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1975": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1975_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    485
+   ],
+   "zooms": [
+    0.82,
+    0.82,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1981": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1981_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    42
+   ],
+   "zooms": [
+    0.762,
+    0.762,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_148.nii.gz",
+    "case": "pancreas_148"
+   }
+  },
+  "FLARE23_1984": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1984_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    103
+   ],
+   "zooms": [
+    0.863,
+    0.863,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1988": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1988_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    781
+   ],
+   "zooms": [
+    0.781,
+    0.781,
+    0.8
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_104.nii.gz",
+    "case": "liver_104"
+   }
+  },
+  "FLARE23_1991": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1991_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    105
+   ],
+   "zooms": [
+    0.795,
+    0.795,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_024.nii.gz",
+    "case": "pancreas_024"
+   }
+  },
+  "FLARE23_1992": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1992_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    49
+   ],
+   "zooms": [
+    0.896,
+    0.896,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_1994": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1994_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    89
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_227.nii.gz",
+    "case": "pancreas_227"
+   }
+  },
+  "FLARE23_1998": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_1998_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    549
+   ],
+   "zooms": [
+    0.82,
+    0.82,
+    1.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_9.nii.gz",
+    "case": "liver_9"
+   }
+  },
+  "FLARE23_2000": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2000_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    140
+   ],
+   "zooms": [
+    0.904,
+    0.904,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_2003": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2003_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    343
+   ],
+   "zooms": [
+    0.703,
+    0.703,
+    1.25
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_81.nii.gz",
+    "case": "liver_81"
+   }
+  },
+  "FLARE23_2006": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2006_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    43
+   ],
+   "zooms": [
+    0.701,
+    0.701,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00113\\imaging.nii.gz",
+    "case": "case_00113"
+   }
+  },
+  "FLARE23_2009": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2009_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    99
+   ],
+   "zooms": [
+    0.797,
+    0.797,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_109.nii.gz",
+    "case": "pancreas_109"
+   }
+  },
+  "FLARE23_2013": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2013_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    122
+   ],
+   "zooms": [
+    0.906,
+    0.906,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_2015": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2015_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    76
+   ],
+   "zooms": [
+    0.709,
+    0.709,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_078.nii.gz",
+    "case": "pancreas_078"
+   }
+  },
+  "FLARE23_2019": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2019_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    107
+   ],
+   "zooms": [
+    0.782,
+    0.782,
+    3.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00023\\imaging.nii.gz",
+    "case": "case_00023"
+   }
+  },
+  "FLARE23_2031": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2031_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    175
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_2034": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2034_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    178
+   ],
+   "zooms": [
+    0.65,
+    0.65,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00016\\imaging.nii.gz",
+    "case": "case_00016"
+   }
+  },
+  "FLARE23_2042": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2042_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    276
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_2044": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2044_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    97
+   ],
+   "zooms": [
+    0.791,
+    0.791,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": null
+  },
+  "FLARE23_2047": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2047_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    87
+   ],
+   "zooms": [
+    0.758,
+    0.758,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_2051": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2051_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    58
+   ],
+   "zooms": [
+    0.938,
+    0.938,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_399.nii.gz",
+    "case": "pancreas_399"
+   }
+  },
+  "FLARE23_2052": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2052_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    101
+   ],
+   "zooms": [
+    0.82,
+    0.82,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_2058": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2058_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    100
+   ],
+   "zooms": [
+    0.77,
+    0.77,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_2060": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2060_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    99
+   ],
+   "zooms": [
+    0.938,
+    0.938,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00163\\imaging.nii.gz",
+    "case": "case_00163"
+   }
+  },
+  "FLARE23_2065": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2065_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    87
+   ],
+   "zooms": [
+    0.801,
+    0.801,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_270.nii.gz",
+    "case": "pancreas_270"
+   }
+  },
+  "FLARE23_2069": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2069_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    113
+   ],
+   "zooms": [
+    0.777,
+    0.777,
+    2.5
+   ],
+   "header_matches": 2,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_193.nii.gz",
+    "case": "pancreas_193"
+   }
+  },
+  "FLARE23_2073": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2073_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    117
+   ],
+   "zooms": [
+    0.818,
+    0.818,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_342.nii.gz",
+    "case": "pancreas_342"
+   }
+  },
+  "FLARE23_2075": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2075_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    94
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_2076": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2076_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    143
+   ],
+   "zooms": [
+    0.863,
+    0.863,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_2084": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2084_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    465
+   ],
+   "zooms": [
+    0.697,
+    0.697,
+    1.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_2088": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2088_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    139
+   ],
+   "zooms": [
+    0.814,
+    0.814,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_2091": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2091_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    655
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_2092": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2092_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    836
+   ],
+   "zooms": [
+    0.68,
+    0.68,
+    0.8
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_117.nii.gz",
+    "case": "liver_117"
+   }
+  },
+  "FLARE23_2097": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2097_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    106
+   ],
+   "zooms": [
+    0.82,
+    0.82,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00286\\imaging.nii.gz",
+    "case": "case_00286"
+   }
+  },
+  "FLARE23_2098": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2098_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    134
+   ],
+   "zooms": [
+    0.91,
+    0.91,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_2101": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2101_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    151
+   ],
+   "zooms": [
+    0.891,
+    0.891,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_2102": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2102_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    86
+   ],
+   "zooms": [
+    0.703,
+    0.703,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_355.nii.gz",
+    "case": "pancreas_355"
+   }
+  },
+  "FLARE23_2111": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2111_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    391
+   ],
+   "zooms": [
+    0.66,
+    0.66,
+    1.2
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_23.nii.gz",
+    "case": "liver_23"
+   }
+  },
+  "FLARE23_2117": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2117_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    670
+   ],
+   "zooms": [
+    0.861,
+    0.861,
+    0.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00049\\imaging.nii.gz",
+    "case": "case_00049"
+   }
+  },
+  "FLARE23_2120": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2120_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    89
+   ],
+   "zooms": [
+    0.742,
+    0.742,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": null
+  },
+  "FLARE23_2123": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2123_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    92
+   ],
+   "zooms": [
+    0.645,
+    0.645,
+    2.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_196.nii.gz",
+    "case": "pancreas_196"
+   }
+  },
+  "FLARE23_2125": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2125_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    137
+   ],
+   "zooms": [
+    0.799,
+    0.799,
+    1.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_041.nii.gz",
+    "case": "pancreas_041"
+   }
+  },
+  "FLARE23_2126": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2126_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    719
+   ],
+   "zooms": [
+    0.766,
+    0.766,
+    0.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00159\\imaging.nii.gz",
+    "case": "case_00159"
+   }
+  },
+  "FLARE23_2130": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2130_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    861
+   ],
+   "zooms": [
+    0.738,
+    0.738,
+    0.7
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_27.nii.gz",
+    "case": "liver_27"
+   }
+  },
+  "FLARE23_2133": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2133_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    46
+   ],
+   "zooms": [
+    0.723,
+    0.723,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00267\\imaging.nii.gz",
+    "case": "case_00267"
+   }
+  },
+  "FLARE23_2135": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2135_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    422
+   ],
+   "zooms": [
+    0.689,
+    0.689,
+    1.5
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_122.nii.gz",
+    "case": "liver_122"
+   }
+  },
+  "FLARE23_2139": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2139_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    135
+   ],
+   "zooms": [
+    0.863,
+    0.863,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_2145": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2145_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    836
+   ],
+   "zooms": [
+    0.781,
+    0.781,
+    0.8
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_113.nii.gz",
+    "case": "liver_113"
+   }
+  },
+  "FLARE23_2153": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2153_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    107
+   ],
+   "zooms": [
+    0.826,
+    0.826,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": null
+  },
+  "FLARE23_2159": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2159_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    134
+   ],
+   "zooms": [
+    0.893,
+    0.893,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_2161": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2161_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    209
+   ],
+   "zooms": [
+    0.859,
+    0.859,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_2167": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2167_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    144
+   ],
+   "zooms": [
+    0.877,
+    0.877,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_2171": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2171_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    134
+   ],
+   "zooms": [
+    0.793,
+    0.793,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_2172": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2172_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    103
+   ],
+   "zooms": [
+    0.736,
+    0.736,
+    2.5
+   ],
+   "header_matches": 2,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_411.nii.gz",
+    "case": "pancreas_411"
+   }
+  },
+  "FLARE23_2177": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2177_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    51
+   ],
+   "zooms": [
+    0.865,
+    0.865,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00108\\imaging.nii.gz",
+    "case": "case_00108"
+   }
+  },
+  "FLARE23_2183": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2183_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    216
+   ],
+   "zooms": [
+    0.977,
+    0.977,
+    1.0
+   ],
+   "header_matches": 0,
+   "twin": null
+  },
+  "FLARE23_2185": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2185_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    104
+   ],
+   "zooms": [
+    0.684,
+    0.684,
+    4.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "MSD Pancreas",
+    "path": "Task07_Pancreas\\imagesTr\\pancreas_120.nii.gz",
+    "case": "pancreas_120"
+   }
+  },
+  "FLARE23_2190": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2190_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    856
+   ],
+   "zooms": [
+    0.729,
+    0.729,
+    0.8
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "LiTS",
+    "path": "MSD Task 3 Liver\\Task03_Liver\\imagesTr\\liver_108.nii.gz",
+    "case": "liver_108"
+   }
+  },
+  "FLARE23_2196": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2196_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    107
+   ],
+   "zooms": [
+    0.73,
+    0.73,
+    5.0
+   ],
+   "header_matches": 1,
+   "twin": {
+    "collection": "KiTS23",
+    "path": "KiTs23\\dataset\\case_00175\\imaging.nii.gz",
+    "case": "case_00175"
+   }
+  },
+  "FLARE23_2199": {
+   "ct": "FLARE23 Box\\images\\images\\FLARE23_2199_0000.nii.gz",
+   "shape": [
+    512,
+    512,
+    81
+   ],
+   "zooms": [
+    0.695,
+    0.695,
+    2.5
+   ],
+   "header_matches": 0,
+   "twin": null
+  }
+ }
+}

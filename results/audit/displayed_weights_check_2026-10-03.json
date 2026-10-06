@@ -1,0 +1,58 @@
+{
+ "note": "Which weights drew the three single-organ masks shipped 09-19 (final_cases_2026-09-19/masks/)? (the study lead 10-03, the pipeline team item 1)\n\nThe package README said \"same checkpoints\"; the regeneration record (commit 23a5e04, regen_predicted_masks_113.py)\nsays base facebook/sam3 for the organ + sam3_tumor_flare_only for the tumor. This settles it by re-drawing:\n  tumor half : sam3_tumor_flare_only with the regeneration script's OWN functions (predict_volume, bbox, batch\n               inference: GT box + 3 px on slices with >= 50 GT px at 256^2) -> compared voxel-for-voxel with the\n               shipped tumor label (masks are exclusive with tumor winning, so the shipped label-2 set IS the tumor\n               pass's output)\n  organ half : the per-dataset organ checkpoint (sam3_organ_generic_ausam_<ds>) under the same protocol -> if the\n               shipped organ were drawn by it, it would match the same way; base facebook/sam3 itself cannot be\n               re-run here (gated download), so the organ half is established by exclusion + the regeneration log.\n\n  CKPT_DIR=... DATA=... python verify_displayed_weights.py -> results/audit/displayed_weights_check_2026-10-03.json",
+ "tumor_model": "sam3_tumor_flare_only",
+ "tumor_sha256": "503c14bffe675f028249cff9ee98b4d124f5b481b46683abed61116a7d5594cf",
+ "cases": {
+  "volume-76": {
+   "tumor_half_vs_flare_only": {
+    "voxels_redrawn": 51277,
+    "voxels_shipped": 51277,
+    "voxels_differing": 0,
+    "identical": true,
+    "dice": 1.0
+   },
+   "organ_half_vs_per_dataset_ckpt": {
+    "ckpt": "sam3_organ_generic_ausam_lits.pth",
+    "voxels_redrawn": 304689,
+    "voxels_shipped": 311682,
+    "voxels_differing": 13489,
+    "identical": false,
+    "dice": 0.9781
+   }
+  },
+  "case_00067": {
+   "tumor_half_vs_flare_only": {
+    "voxels_redrawn": 1830612,
+    "voxels_shipped": 1830612,
+    "voxels_differing": 0,
+    "identical": true,
+    "dice": 1.0
+   },
+   "organ_half_vs_per_dataset_ckpt": {
+    "ckpt": "sam3_organ_generic_ausam_kits.pth",
+    "voxels_redrawn": 446044,
+    "voxels_shipped": 550424,
+    "voxels_differing": 158172,
+    "identical": false,
+    "dice": 0.8413
+   }
+  },
+  "pancreas_125": {
+   "tumor_half_vs_flare_only": {
+    "voxels_redrawn": 4016,
+    "voxels_shipped": 4016,
+    "voxels_differing": 0,
+    "identical": true,
+    "dice": 1.0
+   },
+   "organ_half_vs_per_dataset_ckpt": {
+    "ckpt": "sam3_organ_generic_ausam_msd.pth",
+    "voxels_redrawn": 80692,
+    "voxels_shipped": 77240,
+    "voxels_differing": 18404,
+    "identical": false,
+    "dice": 0.8835
+   }
+  }
+ }
+}

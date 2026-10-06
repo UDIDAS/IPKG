@@ -16,7 +16,7 @@ query volume):
     lits_geometry_map.json's gt_{liver,tumor}_vox_native: every census-confirmed LiTS
     re-share matched liver GT voxels EXACTLY (liver_delta_pct 0.0 - FLARE inherited the
     Task03 liver labels).  Exact/near-exact = twin; a large delta = coincidence; anything
-    between is flagged for KS (he has Task03 mounted) - stated per pair.
+    between is flagged for the co-author (he has Task03 mounted) - stated per pair.
   * A collision whose FLARE record the LiTS overlap census ALREADY attributes to a
     different, non-query LiTS volume is closed as benign (grid coincidence between two LiTS
     scans), with the attribution shown.
@@ -138,7 +138,7 @@ def main():
             elif row["liver_delta_pct"] >= 5:
                 row["verdict"] = "coincidence (liver GT differs by " + str(row["liver_delta_pct"]) + " %)"
             else:
-                row["verdict"] = "FLAG for KS Task03 mask-overlap (borderline liver delta)"
+                row["verdict"] = "FLAG for the co-author Task03 mask-overlap (borderline liver delta)"
                 flags.append(row)
         else:
             qs = query_label(q)

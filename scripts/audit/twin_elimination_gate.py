@@ -13,8 +13,8 @@ Three independent checks, all against shipped files (no re-derivation by hand):
      example-ranks table, the clinician study set, or the eleven-query effect report's
      AFTER rankings (its BEFORE rankings legitimately contain the eleven - that is the point
      of the file - so they are excluded).
-  C. KS-SCAN RECONCILIATION - KS's CT-voxel-equality scan (paper/flare23_twin_scan_2026-09-20
-     .json, branch abdomen/ipkg; 310 same-scan pairs over the 576 UD-masked FLARE studies) is
+  C. the co-author-SCAN RECONCILIATION - the co-author's CT-voxel-equality scan (paper/flare23_twin_scan_2026-09-20
+     .json, branch abdomen/ipkg; 310 same-scan pairs over the 576 pipeline-masked FLARE studies) is
      replayed against the CURRENT pool: every scanned FLARE study whose CT-voxel twin is one
      of our 113 queries must be OUT of the dedup corpus.  Zero violations means the masked
      part of the pool is twin-free at CT-VOXEL level, not merely label-screen level.
@@ -28,7 +28,7 @@ Three independent checks, all against shipped files (no re-derivation by hand):
      check (disclosed): a re-share RESAMPLED to a new grid evades the grid test and the
      CT-voxel test equally; none of the 310 known re-shares is resampled.
 
-  KS_SCAN=/dev/shm/ks_twin_scan.json python scripts/audit/twin_elimination_gate.py
+  CTVOXEL_SCAN=/dev/shm/ctvoxel_twin_scan.json python scripts/audit/twin_elimination_gate.py
 -> results/audit/twin_elimination_gate_2026-09-24.json  (exit 1 on any failure)
 """
 import json
@@ -36,7 +36,7 @@ import os
 import sys
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
-KS_SCAN = os.environ.get("KS_SCAN", "/dev/shm/ks_twin_scan.json")
+CTVOXEL_SCAN = os.environ.get("CTVOXEL_SCAN", "/dev/shm/ctvoxel_twin_scan.json")
 OUT = os.path.join(ROOT, "results", "audit", "twin_elimination_gate_2026-09-24.json")
 
 
@@ -114,8 +114,8 @@ def main():
             report["failures"].append(f"B: {path} still contains removed ids: {sorted(hits)[:5]}")
     report["checks"]["B_no_resurrection"] = b
 
-    # ---- C: KS-scan reconciliation -------------------------------------------------------
-    scan = json.load(open(KS_SCAN))
+    # ---- C: the co-author-scan reconciliation -------------------------------------------------------
+    scan = json.load(open(CTVOXEL_SCAN))
     queries = set()
     for ds in ("kits", "lits", "msd"):
         queries |= {r["case_id"] for r in j(f"corpora/corpus_gt_{ds}.json")["records"]}
@@ -142,7 +142,7 @@ def main():
          "twins_of_a_query": twin_of_query, "twins_of_a_query_by_collection": per_coll,
          "violations_query_twin_still_in_pool": viol,
          "ks_summary": scan.get("summary")}
-    report["checks"]["C_ks_scan_reconciliation"] = c
+    report["checks"]["C_ctvoxel_scan_reconciliation"] = c
     if viol:
         report["failures"].append(f"C: {len(viol)} CT-voxel query twins still in the pool")
 
@@ -173,7 +173,7 @@ def main():
     print(json.dumps({k: v for k, v in report.items() if k != "checks"}, indent=1))
     print("A:", {k: v for k, v in report["checks"]["A_removed_set_integrity"].items() if k != "unexplained_removed"})
     print("B:", {p: r.get("clean", r.get("status")) for p, r in report["checks"]["B_no_resurrection"].items()})
-    print("C:", {k: v for k, v in report["checks"]["C_ks_scan_reconciliation"].items() if k != "violations_query_twin_still_in_pool"})
+    print("C:", {k: v for k, v in report["checks"]["C_ctvoxel_scan_reconciliation"].items() if k != "violations_query_twin_still_in_pool"})
     print("D:", report["checks"]["D_grid_census_reconciliation"])
     sys.exit(1 if report["failures"] else 0)
 

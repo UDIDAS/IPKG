@@ -1,0 +1,5404 @@
+{
+ "note": "Pancreatic sub-site (head / body / tail) in PATIENT coordinates: the replacement for the slice-axis rule in\nbuild_predicted_corpus.py (the co-author 09-29 \u00a73 / \u00a76 item 11).\n\nThe delivered rule measured the tumor's offset along the ACQUISITION SLICE axis (axis 2 = inferior->superior on MSD)\nwith a +-0.12 dead band. That axis is craniocaudal, not the gland's long axis, and because the tail normally sits\ncranial to the head the labels come out close to INVERTED (MSD GT, n=281: kappa vs the corrected rule -0.335).\nIt also ran for liver and kidney, which have no head/body/tail.\n\nCorrected rule (pancreas only; every other organ -> \"na\"):\n  1. voxel -> world mm through the NIfTI affine (nibabel RAS+: +x = patient RIGHT, so patient-left L = -x).\n  2. gland = pancreas + tumor labels (tumor voxels are carved out of the pancreas label).\n  3. PRIMARY  f_lr  = (mean L of tumor voxels - P1(L_gland)) / (P99(L_gland) - P1(L_gland)), clipped to [0, 1];\n     head f < 1/3, body 1/3 <= f < 2/3, tail f >= 2/3  (operational thirds; the SEER/CAP anatomic boundaries -\n     head right of the left border of the SMV, body up to the left border of the aorta, tail to the splenic\n     hilum - need vessel masks the four datasets do not provide).\n  4. CROSS-CHECK f_pca along the gland's first principal axis (mm, oriented toward patient-left).\n  5. GUARDS (fail closed -> \"unknown\"): non-degenerate affine; the gland's patient-left third lies cranial to its\n     patient-right third (tail rises toward the splenic hilum); LR and PCA thirds agree unless |f_lr - f_pca| is\n     small (boundary cases are flagged, not voided).\n\n  python pancreas_subsite.py --labels-dir /path/to/Task07_Pancreas/labelsTr      (GT audit, MSD label 1|2)\n-> results/kg/pancreas_subsite_msd_gt.json",
+ "summary": {
+  "n_files": 281,
+  "n_with_tumor": 281,
+  "axcodes": {
+   "RAS": 281
+  },
+  "dist_corrected": {
+   "head": 198,
+   "body": 33,
+   "tail": 38,
+   "unknown": 12
+  },
+  "dist_lr_thirds": {
+   "head": 205,
+   "body": 35,
+   "tail": 41
+  },
+  "dist_pca_thirds": {
+   "head": 201,
+   "body": 36,
+   "tail": 44
+  },
+  "dist_old_rule": {
+   "body": 83,
+   "tail": 111,
+   "head": 87
+  },
+  "kappa_old_vs_lr_thirds": -0.335,
+  "kappa_lr_vs_pca_thirds": 0.862,
+  "lr_pca_agreement": 0.9395,
+  "guard_tail_cranial_frac": 0.9858,
+  "confusion_corrected_vs_old": {
+   "head": {
+    "head": 18,
+    "body": 71,
+    "tail": 109
+   },
+   "body": {
+    "head": 27,
+    "body": 4,
+    "tail": 2
+   },
+   "tail": {
+    "head": 36,
+    "body": 2,
+    "tail": 0
+   },
+   "unknown": {
+    "head": 6,
+    "body": 6,
+    "tail": 0
+   }
+  },
+  "snomed": {
+   "head": "64163001",
+   "body": "40133006",
+   "tail": "73239005",
+   "pancreas": "15776009"
+  }
+ },
+ "records": [
+  {
+   "case": "pancreas_001",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.162,
+   "f_pca": 0.162,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 30.5,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.0,
+    "pc1_var_frac": 0.779
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_004",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.146,
+   "f_pca": 0.112,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 50.5,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.035,
+    "pc1_var_frac": 0.878
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_005",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.247,
+   "f_pca": 0.3,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 36.0,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.053,
+    "pc1_var_frac": 0.705
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_006",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.21,
+   "f_pca": 0.19,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 11.7,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.02,
+    "pc1_var_frac": 0.779
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_010",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.168,
+   "f_pca": 0.162,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 56.5,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.007,
+    "pc1_var_frac": 0.834
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_012",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.136,
+   "f_pca": 0.114,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 11.1,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.023,
+    "pc1_var_frac": 0.885
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_015",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.173,
+   "f_pca": 0.152,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 22.1,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.021,
+    "pc1_var_frac": 0.833
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_016",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.177,
+   "f_pca": 0.121,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 26.8,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.056,
+    "pc1_var_frac": 0.817
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_018",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.218,
+   "f_pca": 0.159,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 41.0,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.059,
+    "pc1_var_frac": 0.829
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_019",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.146,
+   "f_pca": 0.146,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 36.5,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.001,
+    "pc1_var_frac": 0.74
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_021",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.206,
+   "f_pca": 0.162,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 29.7,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.044,
+    "pc1_var_frac": 0.774
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_024",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.263,
+   "f_pca": 0.233,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 24.4,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.029,
+    "pc1_var_frac": 0.725
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_025",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.184,
+   "f_pca": 0.136,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 34.6,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.048,
+    "pc1_var_frac": 0.829
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_028",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.017,
+   "f_pca": 0.082,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 50.5,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.065,
+    "pc1_var_frac": 0.848
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_029",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.224,
+   "f_pca": 0.226,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 25.6,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.002,
+    "pc1_var_frac": 0.785
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_032",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.167,
+   "f_pca": 0.153,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 9.7,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.014,
+    "pc1_var_frac": 0.783
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_035",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "boundary case (LR/PCA thirds differ, |df| <= 0.1): LR used",
+   "f_lr": 0.291,
+   "f_pca": 0.339,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 25.9,
+    "lr_pca_agree": false,
+    "abs_f_diff": 0.048,
+    "pc1_var_frac": 0.765
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_037",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "body",
+   "reason": "ok",
+   "f_lr": 0.453,
+   "f_pca": 0.373,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 0.1,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.08,
+    "pc1_var_frac": 0.789
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_040",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.224,
+   "f_pca": 0.284,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 22.5,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.061,
+    "pc1_var_frac": 0.709
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_041",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.226,
+   "f_pca": 0.211,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 16.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.015,
+    "pc1_var_frac": 0.799
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_042",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.163,
+   "f_pca": 0.136,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 26.8,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.027,
+    "pc1_var_frac": 0.865
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_043",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.774,
+   "f_pca": 0.81,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 58.9,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.036,
+    "pc1_var_frac": 0.858
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_045",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.893,
+   "f_pca": 0.892,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 18.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.001,
+    "pc1_var_frac": 0.835
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_046",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.252,
+   "f_pca": 0.263,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 43.0,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.011,
+    "pc1_var_frac": 0.776
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_048",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.21,
+   "f_pca": 0.223,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 19.9,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.013,
+    "pc1_var_frac": 0.869
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_049",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.2,
+   "f_pca": 0.196,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 45.6,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.004,
+    "pc1_var_frac": 0.828
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_050",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.104,
+   "f_pca": 0.089,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 9.1,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.015,
+    "pc1_var_frac": 0.711
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_051",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.153,
+   "f_pca": 0.171,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 53.9,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.018,
+    "pc1_var_frac": 0.905
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_052",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.15,
+   "f_pca": 0.161,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 19.7,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.012,
+    "pc1_var_frac": 0.897
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_055",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "unknown",
+   "reason": "LR and PCA thirds disagree by > 0.1 - review",
+   "f_lr": 0.315,
+   "f_pca": 0.433,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 45.9,
+    "lr_pca_agree": false,
+    "abs_f_diff": 0.118,
+    "pc1_var_frac": 0.802
+   },
+   "snomed": null,
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_056",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "body",
+   "reason": "ok",
+   "f_lr": 0.58,
+   "f_pca": 0.592,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 31.0,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.011,
+    "pc1_var_frac": 0.788
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_058",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "unknown",
+   "reason": "orientation guard failed (patient-left third not cranial) - review",
+   "f_lr": 0.119,
+   "f_pca": 0.128,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": false,
+    "tail_minus_head_S_mm": -1.1,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.01,
+    "pc1_var_frac": 0.789
+   },
+   "snomed": null,
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_061",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.204,
+   "f_pca": 0.135,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 42.3,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.069,
+    "pc1_var_frac": 0.846
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_064",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.16,
+   "f_pca": 0.129,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 39.9,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.031,
+    "pc1_var_frac": 0.808
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_066",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.199,
+   "f_pca": 0.238,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 23.5,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.039,
+    "pc1_var_frac": 0.796
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_067",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.281,
+   "f_pca": 0.277,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 30.8,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.004,
+    "pc1_var_frac": 0.843
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_069",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.145,
+   "f_pca": 0.141,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 32.8,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.004,
+    "pc1_var_frac": 0.829
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_070",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "body",
+   "reason": "ok",
+   "f_lr": 0.338,
+   "f_pca": 0.388,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 44.5,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.05,
+    "pc1_var_frac": 0.728
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_071",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "unknown",
+   "reason": "orientation guard failed (patient-left third not cranial) - review",
+   "f_lr": 0.766,
+   "f_pca": 0.755,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": false,
+    "tail_minus_head_S_mm": -7.5,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.011,
+    "pc1_var_frac": 0.763
+   },
+   "snomed": null,
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_074",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.163,
+   "f_pca": 0.278,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 47.0,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.115,
+    "pc1_var_frac": 0.871
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_075",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.184,
+   "f_pca": 0.173,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 36.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.01,
+    "pc1_var_frac": 0.812
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_077",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.275,
+   "f_pca": 0.28,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 37.9,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.006,
+    "pc1_var_frac": 0.778
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_078",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "body",
+   "reason": "ok",
+   "f_lr": 0.461,
+   "f_pca": 0.582,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 46.7,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.121,
+    "pc1_var_frac": 0.795
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_080",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.124,
+   "f_pca": 0.116,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 28.7,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.008,
+    "pc1_var_frac": 0.869
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_081",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.742,
+   "f_pca": 0.852,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 30.0,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.11,
+    "pc1_var_frac": 0.782
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_083",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.186,
+   "f_pca": 0.274,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 49.0,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.088,
+    "pc1_var_frac": 0.822
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_084",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "body",
+   "reason": "ok",
+   "f_lr": 0.353,
+   "f_pca": 0.4,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 40.4,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.047,
+    "pc1_var_frac": 0.854
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_086",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.182,
+   "f_pca": 0.174,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 37.8,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.008,
+    "pc1_var_frac": 0.805
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_087",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "body",
+   "reason": "ok",
+   "f_lr": 0.424,
+   "f_pca": 0.552,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 28.0,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.128,
+    "pc1_var_frac": 0.668
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_088",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.153,
+   "f_pca": 0.2,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 41.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.047,
+    "pc1_var_frac": 0.788
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_089",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.162,
+   "f_pca": 0.23,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 34.3,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.069,
+    "pc1_var_frac": 0.78
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_091",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.114,
+   "f_pca": 0.107,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 6.6,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.007,
+    "pc1_var_frac": 0.738
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_092",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.257,
+   "f_pca": 0.266,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 20.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.009,
+    "pc1_var_frac": 0.796
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_093",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.113,
+   "f_pca": 0.196,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 21.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.083,
+    "pc1_var_frac": 0.751
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_094",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.128,
+   "f_pca": 0.143,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 38.4,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.015,
+    "pc1_var_frac": 0.782
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_095",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.123,
+   "f_pca": 0.114,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 30.3,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.01,
+    "pc1_var_frac": 0.79
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_096",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.139,
+   "f_pca": 0.151,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 28.1,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.011,
+    "pc1_var_frac": 0.798
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_098",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.183,
+   "f_pca": 0.092,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 46.4,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.09,
+    "pc1_var_frac": 0.864
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_099",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "unknown",
+   "reason": "orientation guard failed (patient-left third not cranial) - review",
+   "f_lr": 0.255,
+   "f_pca": 0.196,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": false,
+    "tail_minus_head_S_mm": -13.5,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.058,
+    "pc1_var_frac": 0.797
+   },
+   "snomed": null,
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_100",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "body",
+   "reason": "ok",
+   "f_lr": 0.512,
+   "f_pca": 0.438,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 20.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.074,
+    "pc1_var_frac": 0.772
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_101",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.153,
+   "f_pca": 0.274,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 40.3,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.121,
+    "pc1_var_frac": 0.782
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_102",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "body",
+   "reason": "ok",
+   "f_lr": 0.467,
+   "f_pca": 0.517,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 23.0,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.05,
+    "pc1_var_frac": 0.775
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_103",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.232,
+   "f_pca": 0.155,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 43.5,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.077,
+    "pc1_var_frac": 0.827
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_104",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.137,
+   "f_pca": 0.223,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 36.4,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.086,
+    "pc1_var_frac": 0.791
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_105",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "body",
+   "reason": "ok",
+   "f_lr": 0.428,
+   "f_pca": 0.384,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 13.3,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.044,
+    "pc1_var_frac": 0.865
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_106",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.948,
+   "f_pca": 0.913,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 27.0,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.035,
+    "pc1_var_frac": 0.865
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_107",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.186,
+   "f_pca": 0.149,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 4.7,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.038,
+    "pc1_var_frac": 0.742
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_109",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.214,
+   "f_pca": 0.219,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 26.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.005,
+    "pc1_var_frac": 0.857
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_110",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "body",
+   "reason": "ok",
+   "f_lr": 0.491,
+   "f_pca": 0.568,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 17.5,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.077,
+    "pc1_var_frac": 0.732
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_111",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "body",
+   "reason": "boundary case (LR/PCA thirds differ, |df| <= 0.1): LR used",
+   "f_lr": 0.348,
+   "f_pca": 0.262,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 45.9,
+    "lr_pca_agree": false,
+    "abs_f_diff": 0.086,
+    "pc1_var_frac": 0.791
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_113",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "unknown",
+   "reason": "LR and PCA thirds disagree by > 0.1 - review",
+   "f_lr": 0.68,
+   "f_pca": 0.564,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 20.3,
+    "lr_pca_agree": false,
+    "abs_f_diff": 0.116,
+    "pc1_var_frac": 0.828
+   },
+   "snomed": null,
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_114",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "body",
+   "reason": "ok",
+   "f_lr": 0.357,
+   "f_pca": 0.396,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 39.7,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.039,
+    "pc1_var_frac": 0.831
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_117",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.204,
+   "f_pca": 0.269,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 39.1,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.065,
+    "pc1_var_frac": 0.851
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_119",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.269,
+   "f_pca": 0.179,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 20.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.09,
+    "pc1_var_frac": 0.78
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_120",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.122,
+   "f_pca": 0.116,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 17.0,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.006,
+    "pc1_var_frac": 0.864
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_122",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.223,
+   "f_pca": 0.226,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 42.5,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.002,
+    "pc1_var_frac": 0.816
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_124",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "head",
+   "reason": "boundary case (LR/PCA thirds differ, |df| <= 0.1): LR used",
+   "f_lr": 0.305,
+   "f_pca": 0.392,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 13.4,
+    "lr_pca_agree": false,
+    "abs_f_diff": 0.088,
+    "pc1_var_frac": 0.778
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_125",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.157,
+   "f_pca": 0.132,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 22.0,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.025,
+    "pc1_var_frac": 0.809
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_126",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "body",
+   "reason": "boundary case (LR/PCA thirds differ, |df| <= 0.1): LR used",
+   "f_lr": 0.647,
+   "f_pca": 0.709,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 18.1,
+    "lr_pca_agree": false,
+    "abs_f_diff": 0.061,
+    "pc1_var_frac": 0.766
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_127",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.2,
+   "f_pca": 0.214,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 5.6,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.014,
+    "pc1_var_frac": 0.764
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_129",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.183,
+   "f_pca": 0.139,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 18.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.044,
+    "pc1_var_frac": 0.768
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_130",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.725,
+   "f_pca": 0.768,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 49.1,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.043,
+    "pc1_var_frac": 0.841
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_131",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.225,
+   "f_pca": 0.283,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 29.9,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.058,
+    "pc1_var_frac": 0.763
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_135",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "unknown",
+   "reason": "LR and PCA thirds disagree by > 0.1 - review",
+   "f_lr": 0.569,
+   "f_pca": 0.675,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 41.4,
+    "lr_pca_agree": false,
+    "abs_f_diff": 0.106,
+    "pc1_var_frac": 0.733
+   },
+   "snomed": null,
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_137",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.222,
+   "f_pca": 0.171,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 27.9,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.051,
+    "pc1_var_frac": 0.749
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_138",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.187,
+   "f_pca": 0.173,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 30.6,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.015,
+    "pc1_var_frac": 0.822
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_140",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "body",
+   "reason": "ok",
+   "f_lr": 0.602,
+   "f_pca": 0.632,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 16.3,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.029,
+    "pc1_var_frac": 0.853
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_145",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.179,
+   "f_pca": 0.3,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 33.9,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.121,
+    "pc1_var_frac": 0.766
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_147",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.095,
+   "f_pca": 0.051,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 32.5,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.045,
+    "pc1_var_frac": 0.707
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_148",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.833,
+   "f_pca": 0.841,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 21.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.008,
+    "pc1_var_frac": 0.765
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_149",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.108,
+   "f_pca": 0.089,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 40.9,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.019,
+    "pc1_var_frac": 0.839
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_155",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "body",
+   "reason": "ok",
+   "f_lr": 0.477,
+   "f_pca": 0.457,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 22.5,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.019,
+    "pc1_var_frac": 0.806
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_157",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.183,
+   "f_pca": 0.147,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 17.9,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.036,
+    "pc1_var_frac": 0.794
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_158",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.084,
+   "f_pca": 0.076,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 32.8,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.009,
+    "pc1_var_frac": 0.745
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_159",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.282,
+   "f_pca": 0.238,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 46.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.045,
+    "pc1_var_frac": 0.88
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_160",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.218,
+   "f_pca": 0.248,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 35.3,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.03,
+    "pc1_var_frac": 0.811
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_165",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "body",
+   "reason": "ok",
+   "f_lr": 0.566,
+   "f_pca": 0.611,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 44.5,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.045,
+    "pc1_var_frac": 0.849
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_166",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.717,
+   "f_pca": 0.764,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 28.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.048,
+    "pc1_var_frac": 0.781
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_167",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.166,
+   "f_pca": 0.158,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 35.7,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.008,
+    "pc1_var_frac": 0.708
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_169",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.281,
+   "f_pca": 0.264,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 51.6,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.017,
+    "pc1_var_frac": 0.822
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_170",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.215,
+   "f_pca": 0.231,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 37.7,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.016,
+    "pc1_var_frac": 0.785
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_172",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.213,
+   "f_pca": 0.285,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 19.5,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.072,
+    "pc1_var_frac": 0.769
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_173",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.147,
+   "f_pca": 0.176,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 52.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.029,
+    "pc1_var_frac": 0.882
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_175",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.168,
+   "f_pca": 0.193,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 31.8,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.025,
+    "pc1_var_frac": 0.84
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_178",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.173,
+   "f_pca": 0.182,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 31.3,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.009,
+    "pc1_var_frac": 0.774
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_179",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.187,
+   "f_pca": 0.229,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 24.8,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.042,
+    "pc1_var_frac": 0.807
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_180",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "body",
+   "reason": "ok",
+   "f_lr": 0.582,
+   "f_pca": 0.56,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 32.4,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.023,
+    "pc1_var_frac": 0.817
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_181",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "unknown",
+   "reason": "LR and PCA thirds disagree by > 0.1 - review",
+   "f_lr": 0.272,
+   "f_pca": 0.417,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 28.6,
+    "lr_pca_agree": false,
+    "abs_f_diff": 0.144,
+    "pc1_var_frac": 0.769
+   },
+   "snomed": null,
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_182",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.256,
+   "f_pca": 0.246,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 23.9,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.01,
+    "pc1_var_frac": 0.696
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_183",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.144,
+   "f_pca": 0.156,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 15.5,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.013,
+    "pc1_var_frac": 0.819
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_186",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.109,
+   "f_pca": 0.132,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 46.6,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.023,
+    "pc1_var_frac": 0.857
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_187",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.89,
+   "f_pca": 0.884,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 34.9,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.006,
+    "pc1_var_frac": 0.846
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_191",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.177,
+   "f_pca": 0.228,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 31.9,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.051,
+    "pc1_var_frac": 0.826
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_193",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.104,
+   "f_pca": 0.111,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 10.1,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.006,
+    "pc1_var_frac": 0.836
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_194",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.188,
+   "f_pca": 0.149,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 55.6,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.039,
+    "pc1_var_frac": 0.89
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_196",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.13,
+   "f_pca": 0.148,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 9.5,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.018,
+    "pc1_var_frac": 0.821
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_197",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "unknown",
+   "reason": "orientation guard failed (patient-left third not cranial) - review",
+   "f_lr": 0.167,
+   "f_pca": 0.169,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": false,
+    "tail_minus_head_S_mm": -1.7,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.002,
+    "pc1_var_frac": 0.861
+   },
+   "snomed": null,
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_198",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.136,
+   "f_pca": 0.132,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 14.4,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.003,
+    "pc1_var_frac": 0.91
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_199",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.847,
+   "f_pca": 0.857,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 25.8,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.01,
+    "pc1_var_frac": 0.842
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_200",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.178,
+   "f_pca": 0.048,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 52.8,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.129,
+    "pc1_var_frac": 0.855
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_201",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.102,
+   "f_pca": 0.071,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 38.0,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.031,
+    "pc1_var_frac": 0.858
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_203",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.874,
+   "f_pca": 0.929,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 31.6,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.056,
+    "pc1_var_frac": 0.852
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_204",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.199,
+   "f_pca": 0.138,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 24.7,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.061,
+    "pc1_var_frac": 0.809
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_207",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.158,
+   "f_pca": 0.133,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 44.0,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.025,
+    "pc1_var_frac": 0.852
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_209",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.177,
+   "f_pca": 0.107,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 47.1,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.07,
+    "pc1_var_frac": 0.789
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_210",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.237,
+   "f_pca": 0.304,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 23.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.068,
+    "pc1_var_frac": 0.694
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_211",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.208,
+   "f_pca": 0.115,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 40.4,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.093,
+    "pc1_var_frac": 0.837
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_212",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.239,
+   "f_pca": 0.181,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 36.1,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.059,
+    "pc1_var_frac": 0.831
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_213",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.12,
+   "f_pca": 0.11,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 33.3,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.01,
+    "pc1_var_frac": 0.798
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_214",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "body",
+   "reason": "ok",
+   "f_lr": 0.62,
+   "f_pca": 0.642,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 29.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.022,
+    "pc1_var_frac": 0.849
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_215",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.115,
+   "f_pca": 0.127,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 29.8,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.013,
+    "pc1_var_frac": 0.863
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_217",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.125,
+   "f_pca": 0.16,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 26.8,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.035,
+    "pc1_var_frac": 0.853
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_218",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.113,
+   "f_pca": 0.087,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 27.8,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.026,
+    "pc1_var_frac": 0.812
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_219",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.235,
+   "f_pca": 0.172,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 41.5,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.063,
+    "pc1_var_frac": 0.8
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_222",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.181,
+   "f_pca": 0.217,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 46.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.036,
+    "pc1_var_frac": 0.845
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_224",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.125,
+   "f_pca": 0.121,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 49.9,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.004,
+    "pc1_var_frac": 0.904
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_225",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.219,
+   "f_pca": 0.236,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 25.0,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.016,
+    "pc1_var_frac": 0.795
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_226",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.172,
+   "f_pca": 0.185,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 37.8,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.013,
+    "pc1_var_frac": 0.852
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_227",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.173,
+   "f_pca": 0.238,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 46.0,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.066,
+    "pc1_var_frac": 0.82
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_228",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.304,
+   "f_pca": 0.285,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 49.7,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.02,
+    "pc1_var_frac": 0.833
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_229",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.156,
+   "f_pca": 0.119,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 40.0,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.037,
+    "pc1_var_frac": 0.822
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_230",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.197,
+   "f_pca": 0.167,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 30.8,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.03,
+    "pc1_var_frac": 0.824
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_231",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.228,
+   "f_pca": 0.208,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 36.3,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.02,
+    "pc1_var_frac": 0.908
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_234",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.229,
+   "f_pca": 0.239,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 19.7,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.01,
+    "pc1_var_frac": 0.766
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_235",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.269,
+   "f_pca": 0.313,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 26.5,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.044,
+    "pc1_var_frac": 0.745
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_236",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.257,
+   "f_pca": 0.184,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 23.3,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.073,
+    "pc1_var_frac": 0.827
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_239",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.023,
+   "f_pca": 0.025,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 1.7,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.002,
+    "pc1_var_frac": 0.872
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_241",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.17,
+   "f_pca": 0.204,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 43.4,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.033,
+    "pc1_var_frac": 0.797
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_242",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "body",
+   "reason": "ok",
+   "f_lr": 0.443,
+   "f_pca": 0.415,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 30.7,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.028,
+    "pc1_var_frac": 0.851
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_243",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "body",
+   "reason": "ok",
+   "f_lr": 0.42,
+   "f_pca": 0.399,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 34.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.021,
+    "pc1_var_frac": 0.788
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_244",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.155,
+   "f_pca": 0.192,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 50.6,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.037,
+    "pc1_var_frac": 0.89
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_246",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.272,
+   "f_pca": 0.208,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 24.0,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.063,
+    "pc1_var_frac": 0.818
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_247",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.174,
+   "f_pca": 0.148,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 40.9,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.026,
+    "pc1_var_frac": 0.808
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_249",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.114,
+   "f_pca": 0.173,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 24.6,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.059,
+    "pc1_var_frac": 0.805
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_253",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "body",
+   "reason": "boundary case (LR/PCA thirds differ, |df| <= 0.1): LR used",
+   "f_lr": 0.384,
+   "f_pca": 0.312,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 26.5,
+    "lr_pca_agree": false,
+    "abs_f_diff": 0.072,
+    "pc1_var_frac": 0.876
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_254",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.682,
+   "f_pca": 0.708,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 40.6,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.026,
+    "pc1_var_frac": 0.865
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_255",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.234,
+   "f_pca": 0.238,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 24.4,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.004,
+    "pc1_var_frac": 0.774
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_256",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "body",
+   "reason": "ok",
+   "f_lr": 0.531,
+   "f_pca": 0.586,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 43.0,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.055,
+    "pc1_var_frac": 0.818
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_258",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.19,
+   "f_pca": 0.173,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 27.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.017,
+    "pc1_var_frac": 0.796
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_259",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "body",
+   "reason": "ok",
+   "f_lr": 0.424,
+   "f_pca": 0.507,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 27.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.083,
+    "pc1_var_frac": 0.753
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_261",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.132,
+   "f_pca": 0.143,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 8.9,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.011,
+    "pc1_var_frac": 0.888
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_262",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.101,
+   "f_pca": 0.067,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 41.6,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.034,
+    "pc1_var_frac": 0.891
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_264",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.198,
+   "f_pca": 0.18,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 36.4,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.018,
+    "pc1_var_frac": 0.88
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_265",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.32,
+   "f_pca": 0.315,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 45.9,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.005,
+    "pc1_var_frac": 0.79
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_266",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.25,
+   "f_pca": 0.248,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 23.3,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.002,
+    "pc1_var_frac": 0.713
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_267",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "body",
+   "reason": "boundary case (LR/PCA thirds differ, |df| <= 0.1): LR used",
+   "f_lr": 0.608,
+   "f_pca": 0.671,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 34.5,
+    "lr_pca_agree": false,
+    "abs_f_diff": 0.064,
+    "pc1_var_frac": 0.828
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_268",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.17,
+   "f_pca": 0.112,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 17.6,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.059,
+    "pc1_var_frac": 0.691
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_269",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.17,
+   "f_pca": 0.18,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 55.1,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.01,
+    "pc1_var_frac": 0.854
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_270",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.216,
+   "f_pca": 0.219,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 33.0,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.003,
+    "pc1_var_frac": 0.839
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_274",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.159,
+   "f_pca": 0.131,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 53.1,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.028,
+    "pc1_var_frac": 0.898
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_275",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.158,
+   "f_pca": 0.142,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 35.7,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.016,
+    "pc1_var_frac": 0.869
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_276",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.207,
+   "f_pca": 0.218,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 57.3,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.011,
+    "pc1_var_frac": 0.855
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_277",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.171,
+   "f_pca": 0.132,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 31.3,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.038,
+    "pc1_var_frac": 0.84
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_278",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.863,
+   "f_pca": 0.872,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 22.4,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.009,
+    "pc1_var_frac": 0.834
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_279",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.135,
+   "f_pca": 0.14,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 26.6,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.005,
+    "pc1_var_frac": 0.858
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_280",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.118,
+   "f_pca": 0.105,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 32.8,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.014,
+    "pc1_var_frac": 0.875
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_283",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.181,
+   "f_pca": 0.194,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 47.0,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.013,
+    "pc1_var_frac": 0.857
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_284",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "body",
+   "reason": "ok",
+   "f_lr": 0.463,
+   "f_pca": 0.49,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 34.6,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.027,
+    "pc1_var_frac": 0.832
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_285",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.239,
+   "f_pca": 0.301,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 24.4,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.062,
+    "pc1_var_frac": 0.787
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_286",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.82,
+   "f_pca": 0.879,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 30.1,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.06,
+    "pc1_var_frac": 0.733
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_287",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.311,
+   "f_pca": 0.227,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 48.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.084,
+    "pc1_var_frac": 0.768
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_289",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.13,
+   "f_pca": 0.109,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 34.5,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.02,
+    "pc1_var_frac": 0.844
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_290",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.125,
+   "f_pca": 0.155,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 43.7,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.03,
+    "pc1_var_frac": 0.806
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_291",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.136,
+   "f_pca": 0.168,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 44.8,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.032,
+    "pc1_var_frac": 0.809
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_292",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.099,
+   "f_pca": 0.117,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 12.8,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.018,
+    "pc1_var_frac": 0.717
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_293",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.152,
+   "f_pca": 0.15,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 39.9,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.002,
+    "pc1_var_frac": 0.871
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_294",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "body",
+   "reason": "boundary case (LR/PCA thirds differ, |df| <= 0.1): LR used",
+   "f_lr": 0.341,
+   "f_pca": 0.277,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 39.6,
+    "lr_pca_agree": false,
+    "abs_f_diff": 0.064,
+    "pc1_var_frac": 0.78
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_295",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.23,
+   "f_pca": 0.232,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 41.7,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.002,
+    "pc1_var_frac": 0.863
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_296",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.162,
+   "f_pca": 0.111,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 42.3,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.05,
+    "pc1_var_frac": 0.784
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_297",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.126,
+   "f_pca": 0.105,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 48.7,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.021,
+    "pc1_var_frac": 0.871
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_298",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.115,
+   "f_pca": 0.114,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 30.9,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.001,
+    "pc1_var_frac": 0.804
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_299",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.201,
+   "f_pca": 0.174,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 23.6,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.027,
+    "pc1_var_frac": 0.847
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_300",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.182,
+   "f_pca": 0.193,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 27.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.01,
+    "pc1_var_frac": 0.745
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_301",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.158,
+   "f_pca": 0.155,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 3.3,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.003,
+    "pc1_var_frac": 0.894
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_302",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.254,
+   "f_pca": 0.236,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 32.9,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.018,
+    "pc1_var_frac": 0.833
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_303",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.198,
+   "f_pca": 0.162,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 44.9,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.036,
+    "pc1_var_frac": 0.876
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_304",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "head",
+   "reason": "boundary case (LR/PCA thirds differ, |df| <= 0.1): LR used",
+   "f_lr": 0.272,
+   "f_pca": 0.364,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 43.6,
+    "lr_pca_agree": false,
+    "abs_f_diff": 0.092,
+    "pc1_var_frac": 0.845
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_305",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.28,
+   "f_pca": 0.328,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 37.9,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.048,
+    "pc1_var_frac": 0.834
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_308",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.112,
+   "f_pca": 0.14,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 42.8,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.027,
+    "pc1_var_frac": 0.819
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_309",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "body",
+   "reason": "ok",
+   "f_lr": 0.508,
+   "f_pca": 0.58,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 14.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.073,
+    "pc1_var_frac": 0.726
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_310",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.162,
+   "f_pca": 0.238,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 29.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.077,
+    "pc1_var_frac": 0.806
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_311",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.768,
+   "f_pca": 0.765,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 14.3,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.003,
+    "pc1_var_frac": 0.849
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_312",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.219,
+   "f_pca": 0.171,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 22.3,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.047,
+    "pc1_var_frac": 0.787
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_313",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "body",
+   "reason": "ok",
+   "f_lr": 0.562,
+   "f_pca": 0.661,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 44.4,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.099,
+    "pc1_var_frac": 0.8
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_315",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.084,
+   "f_pca": 0.08,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 15.9,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.004,
+    "pc1_var_frac": 0.849
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_316",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.697,
+   "f_pca": 0.777,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 38.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.08,
+    "pc1_var_frac": 0.819
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_318",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.039,
+   "f_pca": 0.068,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 63.1,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.03,
+    "pc1_var_frac": 0.897
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_320",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.089,
+   "f_pca": 0.07,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 14.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.019,
+    "pc1_var_frac": 0.856
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_321",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.118,
+   "f_pca": 0.058,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 36.6,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.061,
+    "pc1_var_frac": 0.807
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_323",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.102,
+   "f_pca": 0.123,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 36.8,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.021,
+    "pc1_var_frac": 0.766
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_325",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.187,
+   "f_pca": 0.131,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 33.3,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.057,
+    "pc1_var_frac": 0.823
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_326",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.08,
+   "f_pca": 0.073,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 30.6,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.007,
+    "pc1_var_frac": 0.892
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_327",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.119,
+   "f_pca": 0.152,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 36.4,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.034,
+    "pc1_var_frac": 0.838
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_328",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.199,
+   "f_pca": 0.238,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 40.9,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.039,
+    "pc1_var_frac": 0.851
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_329",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.111,
+   "f_pca": 0.096,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 17.3,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.015,
+    "pc1_var_frac": 0.794
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_330",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.159,
+   "f_pca": 0.155,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 42.3,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.004,
+    "pc1_var_frac": 0.849
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_331",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.28,
+   "f_pca": 0.263,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 35.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.017,
+    "pc1_var_frac": 0.771
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_333",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.174,
+   "f_pca": 0.101,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 36.0,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.073,
+    "pc1_var_frac": 0.768
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_334",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.288,
+   "f_pca": 0.246,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 23.3,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.042,
+    "pc1_var_frac": 0.862
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_336",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.188,
+   "f_pca": 0.18,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 19.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.009,
+    "pc1_var_frac": 0.816
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_339",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.227,
+   "f_pca": 0.212,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 13.6,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.016,
+    "pc1_var_frac": 0.813
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_342",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.152,
+   "f_pca": 0.182,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 24.5,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.03,
+    "pc1_var_frac": 0.877
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_343",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.179,
+   "f_pca": 0.216,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 43.0,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.037,
+    "pc1_var_frac": 0.842
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_344",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.206,
+   "f_pca": 0.147,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 47.0,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.059,
+    "pc1_var_frac": 0.867
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_345",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.045,
+   "f_pca": 0.04,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 15.6,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.005,
+    "pc1_var_frac": 0.757
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_346",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.283,
+   "f_pca": 0.136,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 30.9,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.146,
+    "pc1_var_frac": 0.802
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_347",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.168,
+   "f_pca": 0.165,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 47.7,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.003,
+    "pc1_var_frac": 0.848
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_348",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "unknown",
+   "reason": "LR and PCA thirds disagree by > 0.1 - review",
+   "f_lr": 0.178,
+   "f_pca": 0.348,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 21.7,
+    "lr_pca_agree": false,
+    "abs_f_diff": 0.17,
+    "pc1_var_frac": 0.719
+   },
+   "snomed": null,
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_350",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.132,
+   "f_pca": 0.163,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 36.9,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.03,
+    "pc1_var_frac": 0.796
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_351",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.165,
+   "f_pca": 0.184,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 31.4,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.019,
+    "pc1_var_frac": 0.822
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_354",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.699,
+   "f_pca": 0.701,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 23.5,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.001,
+    "pc1_var_frac": 0.821
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_355",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.165,
+   "f_pca": 0.176,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 11.4,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.011,
+    "pc1_var_frac": 0.89
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_356",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.155,
+   "f_pca": 0.176,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 23.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.021,
+    "pc1_var_frac": 0.717
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_357",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.219,
+   "f_pca": 0.185,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 18.8,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.034,
+    "pc1_var_frac": 0.841
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_358",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.953,
+   "f_pca": 0.958,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 5.4,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.005,
+    "pc1_var_frac": 0.825
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_360",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.253,
+   "f_pca": 0.154,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 39.8,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.099,
+    "pc1_var_frac": 0.792
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_361",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.16,
+   "f_pca": 0.269,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 41.6,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.109,
+    "pc1_var_frac": 0.863
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_362",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.182,
+   "f_pca": 0.113,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 45.3,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.069,
+    "pc1_var_frac": 0.832
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_364",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.773,
+   "f_pca": 0.798,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 26.1,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.025,
+    "pc1_var_frac": 0.83
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_365",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.877,
+   "f_pca": 0.885,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 52.4,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.009,
+    "pc1_var_frac": 0.92
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_366",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.973,
+   "f_pca": 0.967,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 49.9,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.006,
+    "pc1_var_frac": 0.874
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_367",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.745,
+   "f_pca": 0.762,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 31.1,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.016,
+    "pc1_var_frac": 0.87
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_369",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.139,
+   "f_pca": 0.221,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 41.5,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.083,
+    "pc1_var_frac": 0.863
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_370",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.77,
+   "f_pca": 0.775,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 14.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.005,
+    "pc1_var_frac": 0.726
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_372",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.244,
+   "f_pca": 0.168,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 41.5,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.075,
+    "pc1_var_frac": 0.851
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_374",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.272,
+   "f_pca": 0.139,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 42.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.132,
+    "pc1_var_frac": 0.852
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_375",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.057,
+   "f_pca": 0.035,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 40.1,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.022,
+    "pc1_var_frac": 0.863
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_376",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "body",
+   "reason": "boundary case (LR/PCA thirds differ, |df| <= 0.1): LR used",
+   "f_lr": 0.649,
+   "f_pca": 0.694,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 35.2,
+    "lr_pca_agree": false,
+    "abs_f_diff": 0.046,
+    "pc1_var_frac": 0.811
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_377",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.187,
+   "f_pca": 0.184,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 36.1,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.003,
+    "pc1_var_frac": 0.806
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_378",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "body",
+   "reason": "ok",
+   "f_lr": 0.61,
+   "f_pca": 0.627,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 8.5,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.017,
+    "pc1_var_frac": 0.862
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_379",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.906,
+   "f_pca": 0.905,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 39.5,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.001,
+    "pc1_var_frac": 0.89
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_380",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.852,
+   "f_pca": 0.87,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 34.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.018,
+    "pc1_var_frac": 0.791
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_382",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.673,
+   "f_pca": 0.76,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 41.9,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.087,
+    "pc1_var_frac": 0.82
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_385",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "unknown",
+   "reason": "LR and PCA thirds disagree by > 0.1 - review",
+   "f_lr": 0.675,
+   "f_pca": 0.565,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 33.9,
+    "lr_pca_agree": false,
+    "abs_f_diff": 0.11,
+    "pc1_var_frac": 0.779
+   },
+   "snomed": null,
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_386",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "body",
+   "reason": "ok",
+   "f_lr": 0.592,
+   "f_pca": 0.6,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 28.6,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.008,
+    "pc1_var_frac": 0.787
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_387",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.174,
+   "f_pca": 0.17,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 33.5,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.004,
+    "pc1_var_frac": 0.811
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_388",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "unknown",
+   "reason": "LR and PCA thirds disagree by > 0.1 - review",
+   "f_lr": 0.262,
+   "f_pca": 0.368,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 35.0,
+    "lr_pca_agree": false,
+    "abs_f_diff": 0.106,
+    "pc1_var_frac": 0.513
+   },
+   "snomed": null,
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_389",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.129,
+   "f_pca": 0.075,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 16.4,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.054,
+    "pc1_var_frac": 0.85
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_391",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.784,
+   "f_pca": 0.811,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 32.5,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.027,
+    "pc1_var_frac": 0.824
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_392",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.75,
+   "f_pca": 0.807,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 45.3,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.057,
+    "pc1_var_frac": 0.813
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_393",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.197,
+   "f_pca": 0.148,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 34.1,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.049,
+    "pc1_var_frac": 0.89
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_395",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.987,
+   "f_pca": 0.982,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 15.7,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.004,
+    "pc1_var_frac": 0.795
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_398",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "unknown",
+   "reason": "LR and PCA thirds disagree by > 0.1 - review",
+   "f_lr": 0.588,
+   "f_pca": 0.891,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 38.6,
+    "lr_pca_agree": false,
+    "abs_f_diff": 0.303,
+    "pc1_var_frac": 0.759
+   },
+   "snomed": null,
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_399",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.872,
+   "f_pca": 0.846,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 33.4,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.026,
+    "pc1_var_frac": 0.913
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_400",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.895,
+   "f_pca": 0.92,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 57.4,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.025,
+    "pc1_var_frac": 0.876
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_401",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.166,
+   "f_pca": 0.198,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 2.3,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.031,
+    "pc1_var_frac": 0.666
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_402",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.676,
+   "f_pca": 0.768,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 44.3,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.093,
+    "pc1_var_frac": 0.88
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_404",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.146,
+   "f_pca": 0.103,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 34.8,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.043,
+    "pc1_var_frac": 0.924
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_405",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.922,
+   "f_pca": 0.939,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 31.3,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.018,
+    "pc1_var_frac": 0.828
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_406",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "body",
+   "reason": "ok",
+   "f_lr": 0.559,
+   "f_pca": 0.575,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 3.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.017,
+    "pc1_var_frac": 0.799
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_409",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.707,
+   "f_pca": 0.786,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 39.8,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.079,
+    "pc1_var_frac": 0.629
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_410",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.94,
+   "f_pca": 0.944,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 24.9,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.005,
+    "pc1_var_frac": 0.909
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_411",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.907,
+   "f_pca": 0.907,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 44.4,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.001,
+    "pc1_var_frac": 0.896
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_412",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.824,
+   "f_pca": 0.834,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 40.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.009,
+    "pc1_var_frac": 0.911
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_413",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "body",
+   "reason": "ok",
+   "f_lr": 0.59,
+   "f_pca": 0.637,
+   "site_pca": "body",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 28.0,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.048,
+    "pc1_var_frac": 0.844
+   },
+   "snomed": "40133006",
+   "lr_thirds": "body"
+  },
+  {
+   "case": "pancreas_414",
+   "axcodes": "RAS",
+   "old_rule": "head",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.823,
+   "f_pca": 0.826,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 34.7,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.002,
+    "pc1_var_frac": 0.833
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_415",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "tail",
+   "reason": "ok",
+   "f_lr": 0.668,
+   "f_pca": 0.713,
+   "site_pca": "tail",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 67.1,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.045,
+    "pc1_var_frac": 0.607
+   },
+   "snomed": "73239005",
+   "lr_thirds": "tail"
+  },
+  {
+   "case": "pancreas_416",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.176,
+   "f_pca": 0.211,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 74.3,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.035,
+    "pc1_var_frac": 0.874
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_418",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.044,
+   "f_pca": 0.032,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 46.1,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.012,
+    "pc1_var_frac": 0.863
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_419",
+   "axcodes": "RAS",
+   "old_rule": "body",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.232,
+   "f_pca": 0.233,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 36.5,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.001,
+    "pc1_var_frac": 0.829
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  },
+  {
+   "case": "pancreas_421",
+   "axcodes": "RAS",
+   "old_rule": "tail",
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.275,
+   "f_pca": 0.209,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 61.2,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.066,
+    "pc1_var_frac": 0.858
+   },
+   "snomed": "64163001",
+   "lr_thirds": "head"
+  }
+ ]
+}

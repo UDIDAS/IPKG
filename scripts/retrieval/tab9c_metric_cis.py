@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Per-metric bootstrap CIs for the Table 9 stratum (c) proposed row (YL 09-20 ask: "updated
+"""Per-metric bootstrap CIs for the Table 9 stratum (c) proposed row (the study lead 09-20 ask: "updated
 nq, P@5, P@10, mAP, CIs, and the (iii') comparison" for FLARE23 -> single-organ after the
 axis-normalized re-dedup).
 

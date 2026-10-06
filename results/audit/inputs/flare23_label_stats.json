@@ -1,0 +1,11402 @@
+{
+"FLARE23_0003": {
+"shape": [
+512,
+512,
+325
+],
+"liver": 205,
+"kidney": 210,
+"pancreas": 146,
+"tumor_vox": 30587,
+"tumor_sl15": 59
+},
+"FLARE23_0005": {
+"shape": [
+512,
+512,
+55
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 663904,
+"tumor_sl15": 33
+},
+"FLARE23_0006": {
+"shape": [
+512,
+512,
+282
+],
+"liver": 60,
+"kidney": 50,
+"pancreas": 30,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0010": {
+"shape": [
+512,
+512,
+852
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 1648386,
+"tumor_sl15": 390
+},
+"FLARE23_0013": {
+"shape": [
+512,
+512,
+272
+],
+"liver": 70,
+"kidney": 45,
+"pancreas": 37,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0016": {
+"shape": [
+512,
+512,
+113
+],
+"liver": 70,
+"kidney": 56,
+"pancreas": 36,
+"tumor_vox": 880,
+"tumor_sl15": 6
+},
+"FLARE23_0019": {
+"shape": [
+512,
+512,
+310
+],
+"liver": 187,
+"kidney": 137,
+"pancreas": 112,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0021": {
+"shape": [
+512,
+512,
+410
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 487276,
+"tumor_sl15": 119
+},
+"FLARE23_0022": {
+"shape": [
+512,
+512,
+146
+],
+"liver": 70,
+"kidney": 45,
+"pancreas": 34,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0024": {
+"shape": [
+512,
+512,
+51
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 98504,
+"tumor_sl15": 22
+},
+"FLARE23_0028": {
+"shape": [
+512,
+512,
+172
+],
+"liver": 72,
+"kidney": 47,
+"pancreas": 37,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0031": {
+"shape": [
+512,
+512,
+537
+],
+"liver": 262,
+"kidney": 143,
+"pancreas": 125,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0032": {
+"shape": [
+512,
+512,
+149
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 8744,
+"tumor_sl15": 12
+},
+"FLARE23_0034": {
+"shape": [
+512,
+512,
+340
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 33455,
+"tumor_sl15": 38
+},
+"FLARE23_0037": {
+"shape": [
+512,
+512,
+333
+],
+"liver": 110,
+"kidney": 90,
+"pancreas": 53,
+"tumor_vox": 120665,
+"tumor_sl15": 51
+},
+"FLARE23_0038": {
+"shape": [
+512,
+512,
+107
+],
+"liver": 69,
+"kidney": 55,
+"pancreas": 27,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0041": {
+"shape": [
+512,
+512,
+978
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 113904,
+"tumor_sl15": 90
+},
+"FLARE23_0042": {
+"shape": [
+512,
+512,
+115
+],
+"liver": 69,
+"kidney": 47,
+"pancreas": 42,
+"tumor_vox": 7046,
+"tumor_sl15": 17
+},
+"FLARE23_0044": {
+"shape": [
+512,
+512,
+237
+],
+"liver": 167,
+"kidney": 131,
+"pancreas": 82,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0047": {
+"shape": [
+512,
+512,
+659
+],
+"liver": 261,
+"kidney": 199,
+"pancreas": 131,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0048": {
+"shape": [
+512,
+512,
+147
+],
+"liver": 59,
+"kidney": 33,
+"pancreas": 29,
+"tumor_vox": 9085,
+"tumor_sl15": 18
+},
+"FLARE23_0051": {
+"shape": [
+512,
+512,
+89
+],
+"liver": 37,
+"kidney": 24,
+"pancreas": 19,
+"tumor_vox": 2703,
+"tumor_sl15": 12
+},
+"FLARE23_0052": {
+"shape": [
+512,
+512,
+133
+],
+"liver": 80,
+"kidney": 60,
+"pancreas": 34,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0054": {
+"shape": [
+512,
+512,
+55
+],
+"liver": 36,
+"kidney": 25,
+"pancreas": 16,
+"tumor_vox": 12934,
+"tumor_sl15": 12
+},
+"FLARE23_0058": {
+"shape": [
+512,
+512,
+340
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 1626,
+"tumor_sl15": 7
+},
+"FLARE23_0060": {
+"shape": [
+512,
+512,
+470
+],
+"liver": 170,
+"kidney": 113,
+"pancreas": 76,
+"tumor_vox": 2813,
+"tumor_sl15": 16
+},
+"FLARE23_0063": {
+"shape": [
+512,
+512,
+1858
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 32985,
+"tumor_sl15": 201
+},
+"FLARE23_0066": {
+"shape": [
+512,
+512,
+978
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 249819,
+"tumor_sl15": 156
+},
+"FLARE23_0069": {
+"shape": [
+512,
+512,
+405
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 7212,
+"tumor_sl15": 16
+},
+"FLARE23_0070": {
+"shape": [
+512,
+512,
+105
+],
+"liver": 68,
+"kidney": 43,
+"pancreas": 30,
+"tumor_vox": 1748,
+"tumor_sl15": 6
+},
+"FLARE23_0073": {
+"shape": [
+512,
+512,
+852
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 137193,
+"tumor_sl15": 111
+},
+"FLARE23_0075": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 49136,
+"tumor_sl15": 33
+},
+"FLARE23_0076": {
+"shape": [
+512,
+512,
+90
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 3833,
+"tumor_sl15": 7
+},
+"FLARE23_0081": {
+"shape": [
+512,
+512,
+433
+],
+"liver": 359,
+"kidney": 188,
+"pancreas": 222,
+"tumor_vox": 187162,
+"tumor_sl15": 109
+},
+"FLARE23_0082": {
+"shape": [
+512,
+512,
+40
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 9821,
+"tumor_sl15": 8
+},
+"FLARE23_0087": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 161849,
+"tumor_sl15": 157
+},
+"FLARE23_0088": {
+"shape": [
+512,
+512,
+168
+],
+"liver": 134,
+"kidney": 84,
+"pancreas": 69,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0091": {
+"shape": [
+512,
+512,
+55
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 1236,
+"tumor_sl15": 10
+},
+"FLARE23_0092": {
+"shape": [
+512,
+512,
+101
+],
+"liver": 77,
+"kidney": 52,
+"pancreas": 33,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0094": {
+"shape": [
+512,
+512,
+140
+],
+"liver": 53,
+"kidney": 43,
+"pancreas": 40,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0097": {
+"shape": [
+512,
+512,
+206
+],
+"liver": 66,
+"kidney": 45,
+"pancreas": 37,
+"tumor_vox": 7207,
+"tumor_sl15": 15
+},
+"FLARE23_0101": {
+"shape": [
+512,
+512,
+908
+],
+"liver": 219,
+"kidney": 157,
+"pancreas": 111,
+"tumor_vox": 611132,
+"tumor_sl15": 133
+},
+"FLARE23_0102": {
+"shape": [
+512,
+512,
+230
+],
+"liver": 102,
+"kidney": 59,
+"pancreas": 52,
+"tumor_vox": 179093,
+"tumor_sl15": 38
+},
+"FLARE23_0104": {
+"shape": [
+512,
+512,
+38
+],
+"liver": 33,
+"kidney": 20,
+"pancreas": 13,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0108": {
+"shape": [
+512,
+512,
+852
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 76509,
+"tumor_sl15": 108
+},
+"FLARE23_0111": {
+"shape": [
+512,
+512,
+214
+],
+"liver": 196,
+"kidney": 124,
+"pancreas": 77,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0112": {
+"shape": [
+512,
+512,
+108
+],
+"liver": 65,
+"kidney": 46,
+"pancreas": 35,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0114": {
+"shape": [
+512,
+512,
+48
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 11302,
+"tumor_sl15": 9
+},
+"FLARE23_0117": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 184557,
+"tumor_sl15": 81
+},
+"FLARE23_0118": {
+"shape": [
+512,
+512,
+153
+],
+"liver": 51,
+"kidney": 38,
+"pancreas": 20,
+"tumor_vox": 23959,
+"tumor_sl15": 21
+},
+"FLARE23_0120": {
+"shape": [
+512,
+512,
+437
+],
+"liver": 176,
+"kidney": 134,
+"pancreas": 88,
+"tumor_vox": 36271,
+"tumor_sl15": 68
+},
+"FLARE23_0123": {
+"shape": [
+512,
+512,
+121
+],
+"liver": 73,
+"kidney": 57,
+"pancreas": 37,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0125": {
+"shape": [
+512,
+512,
+169
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 6520,
+"tumor_sl15": 28
+},
+"FLARE23_0126": {
+"shape": [
+512,
+512,
+76
+],
+"liver": 46,
+"kidney": 36,
+"pancreas": 29,
+"tumor_vox": 54532,
+"tumor_sl15": 21
+},
+"FLARE23_0130": {
+"shape": [
+512,
+512,
+39
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 32017,
+"tumor_sl15": 6
+},
+"FLARE23_0133": {
+"shape": [
+512,
+512,
+705
+],
+"liver": 234,
+"kidney": 297,
+"pancreas": 152,
+"tumor_vox": 17809,
+"tumor_sl15": 38
+},
+"FLARE23_0136": {
+"shape": [
+512,
+512,
+139
+],
+"liver": 64,
+"kidney": 46,
+"pancreas": 38,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0139": {
+"shape": [
+512,
+512,
+978
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 427821,
+"tumor_sl15": 186
+},
+"FLARE23_0140": {
+"shape": [
+512,
+512,
+38
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 170083,
+"tumor_sl15": 17
+},
+"FLARE23_0143": {
+"shape": [
+512,
+512,
+81
+],
+"liver": 67,
+"kidney": 46,
+"pancreas": 24,
+"tumor_vox": 2086,
+"tumor_sl15": 8
+},
+"FLARE23_0146": {
+"shape": [
+512,
+512,
+285
+],
+"liver": 170,
+"kidney": 94,
+"pancreas": 95,
+"tumor_vox": 4070,
+"tumor_sl15": 15
+},
+"FLARE23_0149": {
+"shape": [
+512,
+512,
+45
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 331110,
+"tumor_sl15": 28
+},
+"FLARE23_0150": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 1973,
+"tumor_sl15": 13
+},
+"FLARE23_0153": {
+"shape": [
+512,
+512,
+144
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 32410,
+"tumor_sl15": 37
+},
+"FLARE23_0155": {
+"shape": [
+512,
+512,
+114
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 28280,
+"tumor_sl15": 12
+},
+"FLARE23_0156": {
+"shape": [
+512,
+512,
+85
+],
+"liver": 62,
+"kidney": 46,
+"pancreas": 36,
+"tumor_vox": 3547,
+"tumor_sl15": 9
+},
+"FLARE23_0161": {
+"shape": [
+512,
+512,
+105
+],
+"liver": 63,
+"kidney": 45,
+"pancreas": 32,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0162": {
+"shape": [
+512,
+512,
+89
+],
+"liver": 67,
+"kidney": 49,
+"pancreas": 36,
+"tumor_vox": 2778,
+"tumor_sl15": 6
+},
+"FLARE23_0164": {
+"shape": [
+512,
+512,
+46
+],
+"liver": 34,
+"kidney": 26,
+"pancreas": 17,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0167": {
+"shape": [
+512,
+512,
+234
+],
+"liver": 155,
+"kidney": 137,
+"pancreas": 74,
+"tumor_vox": 44700,
+"tumor_sl15": 36
+},
+"FLARE23_0168": {
+"shape": [
+512,
+512,
+174
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 32857,
+"tumor_sl15": 17
+},
+"FLARE23_0171": {
+"shape": [
+512,
+512,
+36
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 39003,
+"tumor_sl15": 16
+},
+"FLARE23_0172": {
+"shape": [
+512,
+512,
+99
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 26924,
+"tumor_sl15": 33
+},
+"FLARE23_0174": {
+"shape": [
+512,
+512,
+132
+],
+"liver": 76,
+"kidney": 52,
+"pancreas": 52,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0178": {
+"shape": [
+512,
+512,
+209
+],
+"liver": 162,
+"kidney": 113,
+"pancreas": 76,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0180": {
+"shape": [
+512,
+512,
+97
+],
+"liver": 32,
+"kidney": 24,
+"pancreas": 18,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0183": {
+"shape": [
+512,
+512,
+33
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 265190,
+"tumor_sl15": 21
+},
+"FLARE23_0185": {
+"shape": [
+512,
+512,
+95
+],
+"liver": 75,
+"kidney": 50,
+"pancreas": 34,
+"tumor_vox": 1639,
+"tumor_sl15": 6
+},
+"FLARE23_0186": {
+"shape": [
+512,
+512,
+978
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 74004,
+"tumor_sl15": 81
+},
+"FLARE23_0189": {
+"shape": [
+512,
+512,
+206
+],
+"liver": 149,
+"kidney": 99,
+"pancreas": 85,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0190": {
+"shape": [
+512,
+512,
+708
+],
+"liver": 171,
+"kidney": 120,
+"pancreas": 84,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0193": {
+"shape": [
+512,
+512,
+79
+],
+"liver": 26,
+"kidney": 21,
+"pancreas": 15,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0195": {
+"shape": [
+512,
+512,
+1355
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 150081,
+"tumor_sl15": 225
+},
+"FLARE23_0199": {
+"shape": [
+512,
+512,
+604
+],
+"liver": 190,
+"kidney": 116,
+"pancreas": 104,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0201": {
+"shape": [
+512,
+512,
+44
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 6274,
+"tumor_sl15": 7
+},
+"FLARE23_0204": {
+"shape": [
+512,
+512,
+85
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 5715,
+"tumor_sl15": 9
+},
+"FLARE23_0207": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 2928,
+"tumor_sl15": 19
+},
+"FLARE23_0208": {
+"shape": [
+512,
+512,
+155
+],
+"liver": 95,
+"kidney": 48,
+"pancreas": 46,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0211": {
+"shape": [
+512,
+512,
+71
+],
+"liver": 63,
+"kidney": 56,
+"pancreas": 32,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0212": {
+"shape": [
+512,
+512,
+133
+],
+"liver": 38,
+"kidney": 31,
+"pancreas": 19,
+"tumor_vox": 264476,
+"tumor_sl15": 24
+},
+"FLARE23_0214": {
+"shape": [
+512,
+512,
+44
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 10800,
+"tumor_sl15": 6
+},
+"FLARE23_0217": {
+"shape": [
+512,
+512,
+210
+],
+"liver": 150,
+"kidney": 105,
+"pancreas": 96,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0218": {
+"shape": [
+512,
+512,
+692
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 9020,
+"tumor_sl15": 47
+},
+"FLARE23_0220": {
+"shape": [
+512,
+512,
+95
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 881,
+"tumor_sl15": 4
+},
+"FLARE23_0223": {
+"shape": [
+512,
+512,
+387
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 62352,
+"tumor_sl15": 93
+},
+"FLARE23_0225": {
+"shape": [
+512,
+512,
+84
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 25245,
+"tumor_sl15": 15
+},
+"FLARE23_0226": {
+"shape": [
+512,
+512,
+92
+],
+"liver": 29,
+"kidney": 27,
+"pancreas": 20,
+"tumor_vox": 13980,
+"tumor_sl15": 9
+},
+"FLARE23_0229": {
+"shape": [
+512,
+512,
+379
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 42552,
+"tumor_sl15": 49
+},
+"FLARE23_0233": {
+"shape": [
+512,
+512,
+130
+],
+"liver": 42,
+"kidney": 43,
+"pancreas": 50,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0235": {
+"shape": [
+512,
+512,
+101
+],
+"liver": 31,
+"kidney": 21,
+"pancreas": 18,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0236": {
+"shape": [
+512,
+512,
+189
+],
+"liver": 67,
+"kidney": 50,
+"pancreas": 31,
+"tumor_vox": 6327,
+"tumor_sl15": 11
+},
+"FLARE23_0239": {
+"shape": [
+512,
+512,
+143
+],
+"liver": 37,
+"kidney": 26,
+"pancreas": 18,
+"tumor_vox": 108579,
+"tumor_sl15": 19
+},
+"FLARE23_0243": {
+"shape": [
+512,
+512,
+141
+],
+"liver": 61,
+"kidney": 48,
+"pancreas": 47,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0245": {
+"shape": [
+512,
+512,
+978
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 978315,
+"tumor_sl15": 420
+},
+"FLARE23_0246": {
+"shape": [
+512,
+512,
+761
+],
+"liver": 232,
+"kidney": 133,
+"pancreas": 109,
+"tumor_vox": 7300,
+"tumor_sl15": 85
+},
+"FLARE23_0249": {
+"shape": [
+512,
+512,
+852
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 219717,
+"tumor_sl15": 144
+},
+"FLARE23_0250": {
+"shape": [
+512,
+512,
+83
+],
+"liver": 75,
+"kidney": 53,
+"pancreas": 39,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0253": {
+"shape": [
+512,
+512,
+534
+],
+"liver": 168,
+"kidney": 127,
+"pancreas": 108,
+"tumor_vox": 2793,
+"tumor_sl15": 14
+},
+"FLARE23_0255": {
+"shape": [
+512,
+512,
+100
+],
+"liver": 62,
+"kidney": 43,
+"pancreas": 32,
+"tumor_vox": 5089,
+"tumor_sl15": 10
+},
+"FLARE23_0256": {
+"shape": [
+512,
+512,
+133
+],
+"liver": 75,
+"kidney": 46,
+"pancreas": 39,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0259": {
+"shape": [
+512,
+512,
+123
+],
+"liver": 61,
+"kidney": 47,
+"pancreas": 37,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0261": {
+"shape": [
+512,
+512,
+179
+],
+"liver": 78,
+"kidney": 50,
+"pancreas": 28,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0262": {
+"shape": [
+512,
+512,
+95
+],
+"liver": 61,
+"kidney": 50,
+"pancreas": 31,
+"tumor_vox": 8857,
+"tumor_sl15": 12
+},
+"FLARE23_0264": {
+"shape": [
+512,
+512,
+692
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 22238,
+"tumor_sl15": 54
+},
+"FLARE23_0268": {
+"shape": [
+512,
+512,
+164
+],
+"liver": 145,
+"kidney": 81,
+"pancreas": 62,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0271": {
+"shape": [
+512,
+512,
+134
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 19394,
+"tumor_sl15": 34
+},
+"FLARE23_0274": {
+"shape": [
+512,
+512,
+45
+],
+"liver": 29,
+"kidney": 21,
+"pancreas": 22,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0277": {
+"shape": [
+512,
+512,
+244
+],
+"liver": 68,
+"kidney": 45,
+"pancreas": 31,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0278": {
+"shape": [
+512,
+512,
+97
+],
+"liver": 69,
+"kidney": 48,
+"pancreas": 30,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0280": {
+"shape": [
+512,
+512,
+340
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 6377,
+"tumor_sl15": 16
+},
+"FLARE23_0283": {
+"shape": [
+512,
+512,
+99
+],
+"liver": 53,
+"kidney": 47,
+"pancreas": 33,
+"tumor_vox": 1920,
+"tumor_sl15": 8
+},
+"FLARE23_0285": {
+"shape": [
+512,
+512,
+97
+],
+"liver": 75,
+"kidney": 54,
+"pancreas": 39,
+"tumor_vox": 2443,
+"tumor_sl15": 9
+},
+"FLARE23_0286": {
+"shape": [
+512,
+512,
+285
+],
+"liver": 149,
+"kidney": 164,
+"pancreas": 96,
+"tumor_vox": 1855400,
+"tumor_sl15": 131
+},
+"FLARE23_0289": {
+"shape": [
+512,
+512,
+323
+],
+"liver": 92,
+"kidney": 92,
+"pancreas": 57,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0290": {
+"shape": [
+512,
+512,
+201
+],
+"liver": 157,
+"kidney": 108,
+"pancreas": 80,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0295": {
+"shape": [
+512,
+512,
+61
+],
+"liver": 22,
+"kidney": 15,
+"pancreas": 10,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0296": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 123857,
+"tumor_sl15": 57
+},
+"FLARE23_0299": {
+"shape": [
+512,
+512,
+97
+],
+"liver": 79,
+"kidney": 47,
+"pancreas": 34,
+"tumor_vox": 3521,
+"tumor_sl15": 8
+},
+"FLARE23_0300": {
+"shape": [
+512,
+512,
+39
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 18126,
+"tumor_sl15": 12
+},
+"FLARE23_0303": {
+"shape": [
+512,
+512,
+166
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 6982,
+"tumor_sl15": 10
+},
+"FLARE23_0305": {
+"shape": [
+512,
+512,
+691
+],
+"liver": 177,
+"kidney": 132,
+"pancreas": 89,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0306": {
+"shape": [
+512,
+512,
+340
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 54348,
+"tumor_sl15": 42
+},
+"FLARE23_0309": {
+"shape": [
+512,
+512,
+109
+],
+"liver": 77,
+"kidney": 53,
+"pancreas": 37,
+"tumor_vox": 2017,
+"tumor_sl15": 8
+},
+"FLARE23_0313": {
+"shape": [
+512,
+512,
+60
+],
+"liver": 35,
+"kidney": 23,
+"pancreas": 13,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0315": {
+"shape": [
+512,
+512,
+30
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 1827,
+"tumor_sl15": 3
+},
+"FLARE23_0316": {
+"shape": [
+512,
+512,
+42
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 2489,
+"tumor_sl15": 5
+},
+"FLARE23_0319": {
+"shape": [
+512,
+512,
+138
+],
+"liver": 77,
+"kidney": 55,
+"pancreas": 45,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0321": {
+"shape": [
+512,
+512,
+126
+],
+"liver": 83,
+"kidney": 44,
+"pancreas": 32,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0324": {
+"shape": [
+512,
+512,
+340
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 6502,
+"tumor_sl15": 17
+},
+"FLARE23_0327": {
+"shape": [
+512,
+512,
+212
+],
+"liver": 83,
+"kidney": 55,
+"pancreas": 38,
+"tumor_vox": 1443,
+"tumor_sl15": 16
+},
+"FLARE23_0328": {
+"shape": [
+512,
+512,
+79
+],
+"liver": 45,
+"kidney": 24,
+"pancreas": 13,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0331": {
+"shape": [
+512,
+512,
+152
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 631,
+"tumor_sl15": 6
+},
+"FLARE23_0332": {
+"shape": [
+512,
+512,
+104
+],
+"liver": 75,
+"kidney": 51,
+"pancreas": 33,
+"tumor_vox": 3344,
+"tumor_sl15": 9
+},
+"FLARE23_0334": {
+"shape": [
+512,
+512,
+978
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 399696,
+"tumor_sl15": 168
+},
+"FLARE23_0337": {
+"shape": [
+512,
+512,
+394
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 498,
+"tumor_sl15": 4
+},
+"FLARE23_0338": {
+"shape": [
+512,
+512,
+548
+],
+"liver": 282,
+"kidney": 234,
+"pancreas": 83,
+"tumor_vox": 200109,
+"tumor_sl15": 118
+},
+"FLARE23_0341": {
+"shape": [
+512,
+512,
+97
+],
+"liver": 42,
+"kidney": 26,
+"pancreas": 19,
+"tumor_vox": 2375,
+"tumor_sl15": 5
+},
+"FLARE23_0342": {
+"shape": [
+512,
+512,
+852
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 140022,
+"tumor_sl15": 99
+},
+"FLARE23_0344": {
+"shape": [
+512,
+512,
+98
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 7699,
+"tumor_sl15": 10
+},
+"FLARE23_0347": {
+"shape": [
+512,
+512,
+114
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 21008,
+"tumor_sl15": 16
+},
+"FLARE23_0348": {
+"shape": [
+512,
+512,
+53
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 167322,
+"tumor_sl15": 20
+},
+"FLARE23_0351": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 9559,
+"tumor_sl15": 27
+},
+"FLARE23_0354": {
+"shape": [
+512,
+512,
+1393
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 511702,
+"tumor_sl15": 876
+},
+"FLARE23_0357": {
+"shape": [
+512,
+512,
+61
+],
+"liver": 45,
+"kidney": 37,
+"pancreas": 30,
+"tumor_vox": 7584,
+"tumor_sl15": 10
+},
+"FLARE23_0358": {
+"shape": [
+512,
+512,
+131
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 58774,
+"tumor_sl15": 36
+},
+"FLARE23_0363": {
+"shape": [
+512,
+512,
+136
+],
+"liver": 65,
+"kidney": 45,
+"pancreas": 37,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0365": {
+"shape": [
+512,
+512,
+48
+],
+"liver": 35,
+"kidney": 21,
+"pancreas": 14,
+"tumor_vox": 4832,
+"tumor_sl15": 5
+},
+"FLARE23_0366": {
+"shape": [
+512,
+512,
+42
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 7543,
+"tumor_sl15": 8
+},
+"FLARE23_0369": {
+"shape": [
+512,
+512,
+107
+],
+"liver": 57,
+"kidney": 38,
+"pancreas": 33,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0370": {
+"shape": [
+512,
+512,
+103
+],
+"liver": 69,
+"kidney": 48,
+"pancreas": 37,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0373": {
+"shape": [
+512,
+512,
+52
+],
+"liver": 52,
+"kidney": 44,
+"pancreas": 26,
+"tumor_vox": 27843,
+"tumor_sl15": 19
+},
+"FLARE23_0375": {
+"shape": [
+512,
+512,
+141
+],
+"liver": 79,
+"kidney": 57,
+"pancreas": 49,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0376": {
+"shape": [
+512,
+512,
+37
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 3152,
+"tumor_sl15": 3
+},
+"FLARE23_0379": {
+"shape": [
+512,
+512,
+149
+],
+"liver": 43,
+"kidney": 40,
+"pancreas": 24,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0382": {
+"shape": [
+512,
+512,
+180
+],
+"liver": 69,
+"kidney": 43,
+"pancreas": 30,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0384": {
+"shape": [
+512,
+512,
+60
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 312158,
+"tumor_sl15": 29
+},
+"FLARE23_0387": {
+"shape": [
+512,
+512,
+978
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 751599,
+"tumor_sl15": 336
+},
+"FLARE23_0388": {
+"shape": [
+512,
+512,
+141
+],
+"liver": 74,
+"kidney": 56,
+"pancreas": 41,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0391": {
+"shape": [
+512,
+512,
+1394
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 719895,
+"tumor_sl15": 197
+},
+"FLARE23_0392": {
+"shape": [
+512,
+512,
+692
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 1300,
+"tumor_sl15": 13
+},
+"FLARE23_0394": {
+"shape": [
+512,
+512,
+45
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 61207,
+"tumor_sl15": 15
+},
+"FLARE23_0397": {
+"shape": [
+512,
+512,
+978
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 887922,
+"tumor_sl15": 489
+},
+"FLARE23_0398": {
+"shape": [
+512,
+512,
+133
+],
+"liver": 61,
+"kidney": 51,
+"pancreas": 38,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0400": {
+"shape": [
+512,
+512,
+205
+],
+"liver": 155,
+"kidney": 161,
+"pancreas": 107,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0403": {
+"shape": [
+512,
+512,
+605
+],
+"liver": 140,
+"kidney": 110,
+"pancreas": 86,
+"tumor_vox": 23651,
+"tumor_sl15": 63
+},
+"FLARE23_0405": {
+"shape": [
+512,
+512,
+326
+],
+"liver": 225,
+"kidney": 153,
+"pancreas": 108,
+"tumor_vox": 749609,
+"tumor_sl15": 132
+},
+"FLARE23_0406": {
+"shape": [
+512,
+512,
+45
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 14181,
+"tumor_sl15": 10
+},
+"FLARE23_0410": {
+"shape": [
+512,
+512,
+791
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 204,
+"tumor_sl15": 4
+},
+"FLARE23_0413": {
+"shape": [
+512,
+512,
+53
+],
+"liver": 27,
+"kidney": 20,
+"pancreas": 16,
+"tumor_vox": 2824,
+"tumor_sl15": 4
+},
+"FLARE23_0416": {
+"shape": [
+512,
+512,
+466
+],
+"liver": 166,
+"kidney": 121,
+"pancreas": 93,
+"tumor_vox": 10549,
+"tumor_sl15": 51
+},
+"FLARE23_0419": {
+"shape": [
+512,
+512,
+97
+],
+"liver": 80,
+"kidney": 52,
+"pancreas": 28,
+"tumor_vox": 8475,
+"tumor_sl15": 14
+},
+"FLARE23_0421": {
+"shape": [
+512,
+512,
+105
+],
+"liver": 69,
+"kidney": 44,
+"pancreas": 31,
+"tumor_vox": 4627,
+"tumor_sl15": 8
+},
+"FLARE23_0422": {
+"shape": [
+512,
+512,
+47
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 184,
+"tumor_sl15": 3
+},
+"FLARE23_0424": {
+"shape": [
+512,
+512,
+56
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 417513,
+"tumor_sl15": 30
+},
+"FLARE23_0428": {
+"shape": [
+512,
+512,
+63
+],
+"liver": 35,
+"kidney": 34,
+"pancreas": 18,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0431": {
+"shape": [
+512,
+512,
+37
+],
+"liver": 32,
+"kidney": 29,
+"pancreas": 19,
+"tumor_vox": 2738,
+"tumor_sl15": 5
+},
+"FLARE23_0432": {
+"shape": [
+512,
+512,
+121
+],
+"liver": 53,
+"kidney": 49,
+"pancreas": 37,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0434": {
+"shape": [
+512,
+512,
+140
+],
+"liver": 86,
+"kidney": 49,
+"pancreas": 41,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0437": {
+"shape": [
+512,
+512,
+114
+],
+"liver": 37,
+"kidney": 21,
+"pancreas": 17,
+"tumor_vox": 16541,
+"tumor_sl15": 9
+},
+"FLARE23_0438": {
+"shape": [
+512,
+512,
+852
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 73482,
+"tumor_sl15": 63
+},
+"FLARE23_0441": {
+"shape": [
+512,
+512,
+1104
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 10428,
+"tumor_sl15": 24
+},
+"FLARE23_0442": {
+"shape": [
+512,
+512,
+757
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 91707,
+"tumor_sl15": 66
+},
+"FLARE23_0444": {
+"shape": [
+512,
+512,
+734
+],
+"liver": 179,
+"kidney": 128,
+"pancreas": 87,
+"tumor_vox": 1288,
+"tumor_sl15": 12
+},
+"FLARE23_0447": {
+"shape": [
+512,
+512,
+49
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 89,
+"tumor_sl15": 2
+},
+"FLARE23_0448": {
+"shape": [
+512,
+512,
+84
+],
+"liver": 31,
+"kidney": 22,
+"pancreas": 16,
+"tumor_vox": 2205,
+"tumor_sl15": 4
+},
+"FLARE23_0451": {
+"shape": [
+512,
+512,
+491
+],
+"liver": 158,
+"kidney": 113,
+"pancreas": 63,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0452": {
+"shape": [
+512,
+512,
+629
+],
+"liver": 213,
+"kidney": 173,
+"pancreas": 94,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0454": {
+"shape": [
+512,
+512,
+340
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 15928,
+"tumor_sl15": 28
+},
+"FLARE23_0458": {
+"shape": [
+512,
+512,
+93
+],
+"liver": 67,
+"kidney": 52,
+"pancreas": 32,
+"tumor_vox": 4144,
+"tumor_sl15": 12
+},
+"FLARE23_0460": {
+"shape": [
+512,
+512,
+778
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 123697,
+"tumor_sl15": 68
+},
+"FLARE23_0463": {
+"shape": [
+512,
+512,
+274
+],
+"liver": 166,
+"kidney": 140,
+"pancreas": 27,
+"tumor_vox": 54132,
+"tumor_sl15": 53
+},
+"FLARE23_0466": {
+"shape": [
+512,
+512,
+109
+],
+"liver": 73,
+"kidney": 54,
+"pancreas": 36,
+"tumor_vox": 5608,
+"tumor_sl15": 8
+},
+"FLARE23_0469": {
+"shape": [
+512,
+512,
+1858
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 95838,
+"tumor_sl15": 150
+},
+"FLARE23_0470": {
+"shape": [
+512,
+512,
+36
+],
+"liver": 29,
+"kidney": 28,
+"pancreas": 16,
+"tumor_vox": 6425,
+"tumor_sl15": 7
+},
+"FLARE23_0473": {
+"shape": [
+512,
+512,
+532
+],
+"liver": 241,
+"kidney": 222,
+"pancreas": 138,
+"tumor_vox": 19932,
+"tumor_sl15": 48
+},
+"FLARE23_0475": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 44162,
+"tumor_sl15": 47
+},
+"FLARE23_0476": {
+"shape": [
+512,
+512,
+69
+],
+"liver": 53,
+"kidney": 53,
+"pancreas": 26,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0481": {
+"shape": [
+512,
+512,
+155
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 336165,
+"tumor_sl15": 73
+},
+"FLARE23_0482": {
+"shape": [
+512,
+512,
+169
+],
+"liver": 80,
+"kidney": 44,
+"pancreas": 38,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0487": {
+"shape": [
+512,
+512,
+198
+],
+"liver": 59,
+"kidney": 41,
+"pancreas": 38,
+"tumor_vox": 12265,
+"tumor_sl15": 36
+},
+"FLARE23_0488": {
+"shape": [
+512,
+512,
+146
+],
+"liver": 30,
+"kidney": 27,
+"pancreas": 21,
+"tumor_vox": 66786,
+"tumor_sl15": 20
+},
+"FLARE23_0491": {
+"shape": [
+512,
+512,
+107
+],
+"liver": 59,
+"kidney": 52,
+"pancreas": 35,
+"tumor_vox": 791,
+"tumor_sl15": 6
+},
+"FLARE23_0492": {
+"shape": [
+512,
+512,
+83
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 14009,
+"tumor_sl15": 11
+},
+"FLARE23_0494": {
+"shape": [
+512,
+512,
+203
+],
+"liver": 186,
+"kidney": 111,
+"pancreas": 81,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0497": {
+"shape": [
+512,
+512,
+87
+],
+"liver": 53,
+"kidney": 21,
+"pancreas": 25,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0501": {
+"shape": [
+512,
+512,
+34
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 23967,
+"tumor_sl15": 11
+},
+"FLARE23_0502": {
+"shape": [
+512,
+512,
+743
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 34934,
+"tumor_sl15": 55
+},
+"FLARE23_0504": {
+"shape": [
+512,
+512,
+89
+],
+"liver": 78,
+"kidney": 46,
+"pancreas": 29,
+"tumor_vox": 1099,
+"tumor_sl15": 5
+},
+"FLARE23_0508": {
+"shape": [
+512,
+512,
+46
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 50042,
+"tumor_sl15": 14
+},
+"FLARE23_0511": {
+"shape": [
+512,
+512,
+81
+],
+"liver": 71,
+"kidney": 43,
+"pancreas": 26,
+"tumor_vox": 1731,
+"tumor_sl15": 7
+},
+"FLARE23_0512": {
+"shape": [
+512,
+512,
+661
+],
+"liver": 119,
+"kidney": 132,
+"pancreas": 77,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0514": {
+"shape": [
+512,
+512,
+846
+],
+"liver": 215,
+"kidney": 150,
+"pancreas": 84,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0517": {
+"shape": [
+512,
+512,
+1388
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 142304,
+"tumor_sl15": 180
+},
+"FLARE23_0518": {
+"shape": [
+512,
+512,
+89
+],
+"liver": 20,
+"kidney": 21,
+"pancreas": 19,
+"tumor_vox": 4965,
+"tumor_sl15": 6
+},
+"FLARE23_0520": {
+"shape": [
+512,
+512,
+116
+],
+"liver": 55,
+"kidney": 34,
+"pancreas": 30,
+"tumor_vox": 2828,
+"tumor_sl15": 7
+},
+"FLARE23_0523": {
+"shape": [
+512,
+512,
+439
+],
+"liver": 184,
+"kidney": 117,
+"pancreas": 105,
+"tumor_vox": 8145,
+"tumor_sl15": 25
+},
+"FLARE23_0525": {
+"shape": [
+512,
+512,
+146
+],
+"liver": 80,
+"kidney": 53,
+"pancreas": 42,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0526": {
+"shape": [
+512,
+512,
+199
+],
+"liver": 187,
+"kidney": 119,
+"pancreas": 78,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0530": {
+"shape": [
+512,
+512,
+44
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 7562,
+"tumor_sl15": 8
+},
+"FLARE23_0533": {
+"shape": [
+512,
+512,
+97
+],
+"liver": 75,
+"kidney": 43,
+"pancreas": 30,
+"tumor_vox": 6737,
+"tumor_sl15": 17
+},
+"FLARE23_0536": {
+"shape": [
+512,
+512,
+98
+],
+"liver": 81,
+"kidney": 48,
+"pancreas": 35,
+"tumor_vox": 12511,
+"tumor_sl15": 13
+},
+"FLARE23_0539": {
+"shape": [
+512,
+512,
+117
+],
+"liver": 67,
+"kidney": 44,
+"pancreas": 33,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0540": {
+"shape": [
+512,
+512,
+93
+],
+"liver": 69,
+"kidney": 49,
+"pancreas": 31,
+"tumor_vox": 5127,
+"tumor_sl15": 14
+},
+"FLARE23_0543": {
+"shape": [
+512,
+512,
+1393
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 12858,
+"tumor_sl15": 77
+},
+"FLARE23_0546": {
+"shape": [
+512,
+512,
+978
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 606069,
+"tumor_sl15": 192
+},
+"FLARE23_0549": {
+"shape": [
+512,
+512,
+119
+],
+"liver": 50,
+"kidney": 42,
+"pancreas": 31,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0550": {
+"shape": [
+512,
+512,
+142
+],
+"liver": 69,
+"kidney": 51,
+"pancreas": 37,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0553": {
+"shape": [
+512,
+512,
+1393
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 1450105,
+"tumor_sl15": 429
+},
+"FLARE23_0555": {
+"shape": [
+512,
+512,
+177
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 72658,
+"tumor_sl15": 27
+},
+"FLARE23_0556": {
+"shape": [
+512,
+512,
+119
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 829,
+"tumor_sl15": 4
+},
+"FLARE23_0561": {
+"shape": [
+512,
+512,
+43
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 9599,
+"tumor_sl15": 8
+},
+"FLARE23_0562": {
+"shape": [
+512,
+512,
+141
+],
+"liver": 59,
+"kidney": 51,
+"pancreas": 27,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0564": {
+"shape": [
+512,
+512,
+51
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 112,
+"tumor_sl15": 4
+},
+"FLARE23_0567": {
+"shape": [
+512,
+512,
+47
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 225553,
+"tumor_sl15": 21
+},
+"FLARE23_0568": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 82869,
+"tumor_sl15": 73
+},
+"FLARE23_0571": {
+"shape": [
+512,
+512,
+852
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 1257825,
+"tumor_sl15": 372
+},
+"FLARE23_0572": {
+"shape": [
+512,
+512,
+89
+],
+"liver": 57,
+"kidney": 39,
+"pancreas": 27,
+"tumor_vox": 2856,
+"tumor_sl15": 7
+},
+"FLARE23_0574": {
+"shape": [
+512,
+512,
+310
+],
+"liver": 139,
+"kidney": 107,
+"pancreas": 78,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0578": {
+"shape": [
+512,
+512,
+127
+],
+"liver": 87,
+"kidney": 62,
+"pancreas": 28,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0580": {
+"shape": [
+512,
+512,
+760
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 868,
+"tumor_sl15": 6
+},
+"FLARE23_0583": {
+"shape": [
+512,
+512,
+136
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 61869,
+"tumor_sl15": 23
+},
+"FLARE23_0585": {
+"shape": [
+512,
+512,
+171
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 56638,
+"tumor_sl15": 45
+},
+"FLARE23_0586": {
+"shape": [
+512,
+512,
+81
+],
+"liver": 58,
+"kidney": 51,
+"pancreas": 34,
+"tumor_vox": 2621,
+"tumor_sl15": 6
+},
+"FLARE23_0589": {
+"shape": [
+512,
+512,
+692
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 518,
+"tumor_sl15": 8
+},
+"FLARE23_0590": {
+"shape": [
+512,
+512,
+164
+],
+"liver": 75,
+"kidney": 53,
+"pancreas": 30,
+"tumor_vox": 2596,
+"tumor_sl15": 7
+},
+"FLARE23_0593": {
+"shape": [
+512,
+512,
+82
+],
+"liver": 68,
+"kidney": 55,
+"pancreas": 34,
+"tumor_vox": 973,
+"tumor_sl15": 7
+},
+"FLARE23_0595": {
+"shape": [
+512,
+512,
+81
+],
+"liver": 67,
+"kidney": 55,
+"pancreas": 40,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0599": {
+"shape": [
+512,
+512,
+137
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 7742,
+"tumor_sl15": 8
+},
+"FLARE23_0601": {
+"shape": [
+512,
+512,
+1394
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 179809,
+"tumor_sl15": 128
+},
+"FLARE23_0604": {
+"shape": [
+512,
+512,
+227
+],
+"liver": 206,
+"kidney": 109,
+"pancreas": 74,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0607": {
+"shape": [
+512,
+512,
+87
+],
+"liver": 76,
+"kidney": 57,
+"pancreas": 35,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0608": {
+"shape": [
+512,
+512,
+541
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 62295,
+"tumor_sl15": 103
+},
+"FLARE23_0611": {
+"shape": [
+512,
+512,
+160
+],
+"liver": 71,
+"kidney": 39,
+"pancreas": 34,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0612": {
+"shape": [
+512,
+512,
+89
+],
+"liver": 68,
+"kidney": 48,
+"pancreas": 33,
+"tumor_vox": 4549,
+"tumor_sl15": 12
+},
+"FLARE23_0614": {
+"shape": [
+512,
+512,
+102
+],
+"liver": 48,
+"kidney": 52,
+"pancreas": 31,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0617": {
+"shape": [
+512,
+512,
+98
+],
+"liver": 27,
+"kidney": 26,
+"pancreas": 19,
+"tumor_vox": 202519,
+"tumor_sl15": 24
+},
+"FLARE23_0618": {
+"shape": [
+512,
+512,
+350
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 212792,
+"tumor_sl15": 131
+},
+"FLARE23_0620": {
+"shape": [
+512,
+512,
+99
+],
+"liver": 41,
+"kidney": 27,
+"pancreas": 17,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0623": {
+"shape": [
+512,
+512,
+247
+],
+"liver": 181,
+"kidney": 118,
+"pancreas": 126,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0625": {
+"shape": [
+512,
+512,
+729
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 7739,
+"tumor_sl15": 18
+},
+"FLARE23_0626": {
+"shape": [
+512,
+512,
+743
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 24421,
+"tumor_sl15": 21
+},
+"FLARE23_0629": {
+"shape": [
+512,
+512,
+852
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 466389,
+"tumor_sl15": 189
+},
+"FLARE23_0633": {
+"shape": [
+512,
+512,
+142
+],
+"liver": 75,
+"kidney": 56,
+"pancreas": 33,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0635": {
+"shape": [
+512,
+512,
+57
+],
+"liver": 38,
+"kidney": 23,
+"pancreas": 18,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0636": {
+"shape": [
+512,
+512,
+978
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 190467,
+"tumor_sl15": 93
+},
+"FLARE23_0639": {
+"shape": [
+512,
+512,
+1214
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 190044,
+"tumor_sl15": 104
+},
+"FLARE23_0643": {
+"shape": [
+512,
+512,
+852
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 670239,
+"tumor_sl15": 240
+},
+"FLARE23_0645": {
+"shape": [
+512,
+512,
+47
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 3625,
+"tumor_sl15": 8
+},
+"FLARE23_0646": {
+"shape": [
+512,
+512,
+134
+],
+"liver": 67,
+"kidney": 69,
+"pancreas": 32,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0649": {
+"shape": [
+512,
+512,
+51
+],
+"liver": 38,
+"kidney": 26,
+"pancreas": 20,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0650": {
+"shape": [
+512,
+512,
+233
+],
+"liver": 212,
+"kidney": 113,
+"pancreas": 82,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0653": {
+"shape": [
+512,
+512,
+978
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 482418,
+"tumor_sl15": 81
+},
+"FLARE23_0656": {
+"shape": [
+512,
+512,
+121
+],
+"liver": 63,
+"kidney": 36,
+"pancreas": 38,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0659": {
+"shape": [
+512,
+512,
+340
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 89255,
+"tumor_sl15": 57
+},
+"FLARE23_0661": {
+"shape": [
+512,
+512,
+120
+],
+"liver": 71,
+"kidney": 50,
+"pancreas": 33,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0662": {
+"shape": [
+512,
+512,
+103
+],
+"liver": 68,
+"kidney": 58,
+"pancreas": 34,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0664": {
+"shape": [
+512,
+512,
+85
+],
+"liver": 66,
+"kidney": 36,
+"pancreas": 32,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0667": {
+"shape": [
+512,
+512,
+154
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 26051,
+"tumor_sl15": 23
+},
+"FLARE23_0668": {
+"shape": [
+512,
+512,
+137
+],
+"liver": 75,
+"kidney": 44,
+"pancreas": 39,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0671": {
+"shape": [
+512,
+512,
+133
+],
+"liver": 83,
+"kidney": 46,
+"pancreas": 40,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0674": {
+"shape": [
+512,
+512,
+85
+],
+"liver": 58,
+"kidney": 45,
+"pancreas": 27,
+"tumor_vox": 7572,
+"tumor_sl15": 13
+},
+"FLARE23_0677": {
+"shape": [
+512,
+512,
+360
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 1150,
+"tumor_sl15": 9
+},
+"FLARE23_0678": {
+"shape": [
+512,
+512,
+97
+],
+"liver": 86,
+"kidney": 51,
+"pancreas": 31,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0680": {
+"shape": [
+512,
+512,
+654
+],
+"liver": 292,
+"kidney": 180,
+"pancreas": 118,
+"tumor_vox": 326553,
+"tumor_sl15": 144
+},
+"FLARE23_0683": {
+"shape": [
+512,
+512,
+263
+],
+"liver": 61,
+"kidney": 47,
+"pancreas": 30,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0685": {
+"shape": [
+512,
+512,
+112
+],
+"liver": 40,
+"kidney": 26,
+"pancreas": 23,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0686": {
+"shape": [
+512,
+512,
+139
+],
+"liver": 70,
+"kidney": 54,
+"pancreas": 39,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0689": {
+"shape": [
+512,
+512,
+722
+],
+"liver": 299,
+"kidney": 191,
+"pancreas": 154,
+"tumor_vox": 40533,
+"tumor_sl15": 192
+},
+"FLARE23_0690": {
+"shape": [
+512,
+512,
+90
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 10731,
+"tumor_sl15": 8
+},
+"FLARE23_0695": {
+"shape": [
+512,
+512,
+93
+],
+"liver": 74,
+"kidney": 49,
+"pancreas": 24,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0696": {
+"shape": [
+512,
+512,
+32
+],
+"liver": 32,
+"kidney": 25,
+"pancreas": 18,
+"tumor_vox": 26865,
+"tumor_sl15": 10
+},
+"FLARE23_0699": {
+"shape": [
+512,
+512,
+31
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 5842,
+"tumor_sl15": 11
+},
+"FLARE23_0700": {
+"shape": [
+512,
+512,
+751
+],
+"liver": 183,
+"kidney": 175,
+"pancreas": 144,
+"tumor_vox": 250893,
+"tumor_sl15": 161
+},
+"FLARE23_0703": {
+"shape": [
+512,
+512,
+392
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 596759,
+"tumor_sl15": 156
+},
+"FLARE23_0705": {
+"shape": [
+512,
+512,
+114
+],
+"liver": 82,
+"kidney": 47,
+"pancreas": 35,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0706": {
+"shape": [
+512,
+512,
+101
+],
+"liver": 69,
+"kidney": 50,
+"pancreas": 31,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0709": {
+"shape": [
+512,
+512,
+947
+],
+"liver": 253,
+"kidney": 164,
+"pancreas": 125,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0713": {
+"shape": [
+512,
+512,
+1214
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 184313,
+"tumor_sl15": 60
+},
+"FLARE23_0715": {
+"shape": [
+512,
+512,
+310
+],
+"liver": 166,
+"kidney": 125,
+"pancreas": 52,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0716": {
+"shape": [
+512,
+512,
+686
+],
+"liver": 314,
+"kidney": 211,
+"pancreas": 151,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0719": {
+"shape": [
+512,
+512,
+163
+],
+"liver": 70,
+"kidney": 43,
+"pancreas": 33,
+"tumor_vox": 46100,
+"tumor_sl15": 23
+},
+"FLARE23_0721": {
+"shape": [
+512,
+512,
+113
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 359,
+"tumor_sl15": 3
+},
+"FLARE23_0724": {
+"shape": [
+512,
+512,
+51
+],
+"liver": 28,
+"kidney": 26,
+"pancreas": 16,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0727": {
+"shape": [
+512,
+512,
+340
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 549989,
+"tumor_sl15": 107
+},
+"FLARE23_0728": {
+"shape": [
+512,
+512,
+61
+],
+"liver": 46,
+"kidney": 52,
+"pancreas": 19,
+"tumor_vox": 18488,
+"tumor_sl15": 17
+},
+"FLARE23_0731": {
+"shape": [
+512,
+512,
+50
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 14358,
+"tumor_sl15": 18
+},
+"FLARE23_0732": {
+"shape": [
+512,
+512,
+238
+],
+"liver": 156,
+"kidney": 133,
+"pancreas": 89,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0734": {
+"shape": [
+512,
+512,
+103
+],
+"liver": 36,
+"kidney": 31,
+"pancreas": 21,
+"tumor_vox": 23163,
+"tumor_sl15": 15
+},
+"FLARE23_0738": {
+"shape": [
+512,
+512,
+149
+],
+"liver": 61,
+"kidney": 48,
+"pancreas": 31,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0741": {
+"shape": [
+512,
+512,
+44
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 14503,
+"tumor_sl15": 13
+},
+"FLARE23_0742": {
+"shape": [
+512,
+512,
+119
+],
+"liver": 37,
+"kidney": 31,
+"pancreas": 19,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0744": {
+"shape": [
+512,
+512,
+97
+],
+"liver": 34,
+"kidney": 28,
+"pancreas": 16,
+"tumor_vox": 98792,
+"tumor_sl15": 20
+},
+"FLARE23_0747": {
+"shape": [
+512,
+512,
+132
+],
+"liver": 67,
+"kidney": 41,
+"pancreas": 36,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0748": {
+"shape": [
+512,
+512,
+49
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 151289,
+"tumor_sl15": 18
+},
+"FLARE23_0751": {
+"shape": [
+512,
+512,
+99
+],
+"liver": 50,
+"kidney": 47,
+"pancreas": 26,
+"tumor_vox": 1601,
+"tumor_sl15": 8
+},
+"FLARE23_0754": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 56158,
+"tumor_sl15": 83
+},
+"FLARE23_0757": {
+"shape": [
+512,
+512,
+37
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 23284,
+"tumor_sl15": 13
+},
+"FLARE23_0758": {
+"shape": [
+512,
+512,
+110
+],
+"liver": 69,
+"kidney": 44,
+"pancreas": 27,
+"tumor_vox": 3400,
+"tumor_sl15": 7
+},
+"FLARE23_0763": {
+"shape": [
+512,
+512,
+103
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 20597,
+"tumor_sl15": 12
+},
+"FLARE23_0765": {
+"shape": [
+512,
+512,
+978
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 158898,
+"tumor_sl15": 159
+},
+"FLARE23_0766": {
+"shape": [
+512,
+512,
+95
+],
+"liver": 55,
+"kidney": 41,
+"pancreas": 34,
+"tumor_vox": 9672,
+"tumor_sl15": 13
+},
+"FLARE23_0769": {
+"shape": [
+512,
+512,
+79
+],
+"liver": 61,
+"kidney": 42,
+"pancreas": 25,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0770": {
+"shape": [
+512,
+512,
+134
+],
+"liver": 74,
+"kidney": 47,
+"pancreas": 37,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0773": {
+"shape": [
+512,
+512,
+852
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 100050,
+"tumor_sl15": 174
+},
+"FLARE23_0775": {
+"shape": [
+512,
+512,
+121
+],
+"liver": 111,
+"kidney": 104,
+"pancreas": 71,
+"tumor_vox": 12504,
+"tumor_sl15": 20
+},
+"FLARE23_0776": {
+"shape": [
+512,
+512,
+852
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 154731,
+"tumor_sl15": 81
+},
+"FLARE23_0779": {
+"shape": [
+512,
+512,
+627
+],
+"liver": 141,
+"kidney": 105,
+"pancreas": 90,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0782": {
+"shape": [
+512,
+512,
+99
+],
+"liver": 26,
+"kidney": 27,
+"pancreas": 17,
+"tumor_vox": 61132,
+"tumor_sl15": 11
+},
+"FLARE23_0784": {
+"shape": [
+512,
+512,
+84
+],
+"liver": 29,
+"kidney": 25,
+"pancreas": 17,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0787": {
+"shape": [
+512,
+512,
+66
+],
+"liver": 30,
+"kidney": 25,
+"pancreas": 21,
+"tumor_vox": 2626,
+"tumor_sl15": 5
+},
+"FLARE23_0788": {
+"shape": [
+512,
+512,
+31
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 3267,
+"tumor_sl15": 6
+},
+"FLARE23_0791": {
+"shape": [
+512,
+512,
+59
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 9298,
+"tumor_sl15": 9
+},
+"FLARE23_0792": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 1553,
+"tumor_sl15": 11
+},
+"FLARE23_0794": {
+"shape": [
+512,
+512,
+117
+],
+"liver": 58,
+"kidney": 51,
+"pancreas": 36,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0797": {
+"shape": [
+512,
+512,
+101
+],
+"liver": 75,
+"kidney": 44,
+"pancreas": 36,
+"tumor_vox": 2212,
+"tumor_sl15": 9
+},
+"FLARE23_0798": {
+"shape": [
+512,
+512,
+627
+],
+"liver": 177,
+"kidney": 107,
+"pancreas": 107,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0802": {
+"shape": [
+512,
+512,
+85
+],
+"liver": 32,
+"kidney": 20,
+"pancreas": 15,
+"tumor_vox": 55955,
+"tumor_sl15": 12
+},
+"FLARE23_0804": {
+"shape": [
+512,
+512,
+136
+],
+"liver": 49,
+"kidney": 51,
+"pancreas": 31,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0807": {
+"shape": [
+512,
+512,
+340
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 46698,
+"tumor_sl15": 71
+},
+"FLARE23_0808": {
+"shape": [
+512,
+512,
+310
+],
+"liver": 180,
+"kidney": 124,
+"pancreas": 76,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0811": {
+"shape": [
+512,
+512,
+679
+],
+"liver": 163,
+"kidney": 136,
+"pancreas": 58,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0812": {
+"shape": [
+512,
+512,
+266
+],
+"liver": 178,
+"kidney": 110,
+"pancreas": 82,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0814": {
+"shape": [
+512,
+512,
+36
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 4355,
+"tumor_sl15": 6
+},
+"FLARE23_0817": {
+"shape": [
+512,
+512,
+136
+],
+"liver": 69,
+"kidney": 57,
+"pancreas": 38,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0818": {
+"shape": [
+512,
+512,
+164
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 454,
+"tumor_sl15": 7
+},
+"FLARE23_0820": {
+"shape": [
+512,
+512,
+147
+],
+"liver": 46,
+"kidney": 38,
+"pancreas": 27,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0823": {
+"shape": [
+512,
+512,
+90
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 8132,
+"tumor_sl15": 9
+},
+"FLARE23_0825": {
+"shape": [
+512,
+512,
+852
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 983694,
+"tumor_sl15": 264
+},
+"FLARE23_0826": {
+"shape": [
+512,
+512,
+181
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 30817,
+"tumor_sl15": 34
+},
+"FLARE23_0829": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 92925,
+"tumor_sl15": 29
+},
+"FLARE23_0830": {
+"shape": [
+512,
+512,
+141
+],
+"liver": 67,
+"kidney": 48,
+"pancreas": 50,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0835": {
+"shape": [
+512,
+512,
+89
+],
+"liver": 73,
+"kidney": 50,
+"pancreas": 28,
+"tumor_vox": 2629,
+"tumor_sl15": 7
+},
+"FLARE23_0836": {
+"shape": [
+512,
+512,
+626
+],
+"liver": 172,
+"kidney": 127,
+"pancreas": 108,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0839": {
+"shape": [
+512,
+512,
+55
+],
+"liver": 45,
+"kidney": 26,
+"pancreas": 21,
+"tumor_vox": 1076,
+"tumor_sl15": 2
+},
+"FLARE23_0840": {
+"shape": [
+512,
+512,
+143
+],
+"liver": 79,
+"kidney": 52,
+"pancreas": 38,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0845": {
+"shape": [
+512,
+512,
+103
+],
+"liver": 38,
+"kidney": 26,
+"pancreas": 18,
+"tumor_vox": 1565,
+"tumor_sl15": 4
+},
+"FLARE23_0846": {
+"shape": [
+512,
+512,
+107
+],
+"liver": 53,
+"kidney": 39,
+"pancreas": 39,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0849": {
+"shape": [
+512,
+512,
+1393
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 47900,
+"tumor_sl15": 64
+},
+"FLARE23_0850": {
+"shape": [
+512,
+512,
+79
+],
+"liver": 35,
+"kidney": 26,
+"pancreas": 15,
+"tumor_vox": 1321,
+"tumor_sl15": 4
+},
+"FLARE23_0853": {
+"shape": [
+512,
+512,
+135
+],
+"liver": 28,
+"kidney": 27,
+"pancreas": 19,
+"tumor_vox": 1441,
+"tumor_sl15": 6
+},
+"FLARE23_0855": {
+"shape": [
+512,
+512,
+131
+],
+"liver": 78,
+"kidney": 43,
+"pancreas": 38,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0856": {
+"shape": [
+512,
+512,
+221
+],
+"liver": 155,
+"kidney": 107,
+"pancreas": 71,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0859": {
+"shape": [
+512,
+512,
+44
+],
+"liver": 30,
+"kidney": 21,
+"pancreas": 12,
+"tumor_vox": 1966,
+"tumor_sl15": 5
+},
+"FLARE23_0861": {
+"shape": [
+512,
+512,
+221
+],
+"liver": 173,
+"kidney": 142,
+"pancreas": 100,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0862": {
+"shape": [
+512,
+512,
+93
+],
+"liver": 30,
+"kidney": 26,
+"pancreas": 22,
+"tumor_vox": 4438,
+"tumor_sl15": 10
+},
+"FLARE23_0864": {
+"shape": [
+512,
+512,
+760
+],
+"liver": 271,
+"kidney": 204,
+"pancreas": 126,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0867": {
+"shape": [
+512,
+512,
+852
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 354744,
+"tumor_sl15": 186
+},
+"FLARE23_0868": {
+"shape": [
+512,
+512,
+226
+],
+"liver": 142,
+"kidney": 107,
+"pancreas": 66,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0872": {
+"shape": [
+512,
+512,
+145
+],
+"liver": 73,
+"kidney": 62,
+"pancreas": 33,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0874": {
+"shape": [
+512,
+512,
+852
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 928383,
+"tumor_sl15": 282
+},
+"FLARE23_0877": {
+"shape": [
+512,
+512,
+52
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 3217,
+"tumor_sl15": 14
+},
+"FLARE23_0878": {
+"shape": [
+512,
+512,
+101
+],
+"liver": 34,
+"kidney": 29,
+"pancreas": 20,
+"tumor_vox": 134051,
+"tumor_sl15": 23
+},
+"FLARE23_0880": {
+"shape": [
+512,
+512,
+135
+],
+"liver": 70,
+"kidney": 50,
+"pancreas": 29,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0883": {
+"shape": [
+512,
+512,
+227
+],
+"liver": 54,
+"kidney": 53,
+"pancreas": 40,
+"tumor_vox": 292070,
+"tumor_sl15": 39
+},
+"FLARE23_0885": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 11847,
+"tumor_sl15": 30
+},
+"FLARE23_0886": {
+"shape": [
+512,
+512,
+90
+],
+"liver": 33,
+"kidney": 27,
+"pancreas": 16,
+"tumor_vox": 2811,
+"tumor_sl15": 5
+},
+"FLARE23_0889": {
+"shape": [
+512,
+512,
+77
+],
+"liver": 60,
+"kidney": 52,
+"pancreas": 29,
+"tumor_vox": 2686,
+"tumor_sl15": 6
+},
+"FLARE23_0893": {
+"shape": [
+512,
+512,
+216
+],
+"liver": 171,
+"kidney": 123,
+"pancreas": 95,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0895": {
+"shape": [
+512,
+512,
+60
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 32907,
+"tumor_sl15": 21
+},
+"FLARE23_0896": {
+"shape": [
+512,
+512,
+95
+],
+"liver": 63,
+"kidney": 49,
+"pancreas": 30,
+"tumor_vox": 3918,
+"tumor_sl15": 9
+},
+"FLARE23_0899": {
+"shape": [
+512,
+512,
+113
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 5597,
+"tumor_sl15": 7
+},
+"FLARE23_0900": {
+"shape": [
+512,
+512,
+112
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 50423,
+"tumor_sl15": 15
+},
+"FLARE23_0903": {
+"shape": [
+512,
+512,
+557
+],
+"liver": 161,
+"kidney": 103,
+"pancreas": 76,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0905": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 520365,
+"tumor_sl15": 289
+},
+"FLARE23_0906": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 53758,
+"tumor_sl15": 33
+},
+"FLARE23_0909": {
+"shape": [
+512,
+512,
+93
+],
+"liver": 37,
+"kidney": 22,
+"pancreas": 23,
+"tumor_vox": 2172,
+"tumor_sl15": 5
+},
+"FLARE23_0910": {
+"shape": [
+512,
+512,
+90
+],
+"liver": 26,
+"kidney": 23,
+"pancreas": 19,
+"tumor_vox": 2206,
+"tumor_sl15": 5
+},
+"FLARE23_0915": {
+"shape": [
+512,
+512,
+129
+],
+"liver": 72,
+"kidney": 43,
+"pancreas": 36,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0916": {
+"shape": [
+512,
+512,
+113
+],
+"liver": 80,
+"kidney": 63,
+"pancreas": 47,
+"tumor_vox": 95511,
+"tumor_sl15": 30
+},
+"FLARE23_0919": {
+"shape": [
+512,
+512,
+85
+],
+"liver": 35,
+"kidney": 27,
+"pancreas": 18,
+"tumor_vox": 7427,
+"tumor_sl15": 9
+},
+"FLARE23_0922": {
+"shape": [
+512,
+512,
+172
+],
+"liver": 60,
+"kidney": 41,
+"pancreas": 33,
+"tumor_vox": 7434,
+"tumor_sl15": 10
+},
+"FLARE23_0924": {
+"shape": [
+512,
+512,
+40
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 114929,
+"tumor_sl15": 23
+},
+"FLARE23_0927": {
+"shape": [
+512,
+512,
+86
+],
+"liver": 69,
+"kidney": 42,
+"pancreas": 28,
+"tumor_vox": 632,
+"tumor_sl15": 3
+},
+"FLARE23_0928": {
+"shape": [
+512,
+512,
+103
+],
+"liver": 49,
+"kidney": 54,
+"pancreas": 38,
+"tumor_vox": 707,
+"tumor_sl15": 8
+},
+"FLARE23_0931": {
+"shape": [
+512,
+512,
+104
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 1685,
+"tumor_sl15": 4
+},
+"FLARE23_0932": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 585993,
+"tumor_sl15": 96
+},
+"FLARE23_0934": {
+"shape": [
+512,
+512,
+103
+],
+"liver": 30,
+"kidney": 28,
+"pancreas": 17,
+"tumor_vox": 305306,
+"tumor_sl15": 25
+},
+"FLARE23_0937": {
+"shape": [
+512,
+512,
+45
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 13693,
+"tumor_sl15": 15
+},
+"FLARE23_0938": {
+"shape": [
+512,
+512,
+91
+],
+"liver": 29,
+"kidney": 27,
+"pancreas": 18,
+"tumor_vox": 205879,
+"tumor_sl15": 23
+},
+"FLARE23_0941": {
+"shape": [
+512,
+512,
+104
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 101577,
+"tumor_sl15": 43
+},
+"FLARE23_0942": {
+"shape": [
+512,
+512,
+127
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 8861,
+"tumor_sl15": 11
+},
+"FLARE23_0944": {
+"shape": [
+512,
+512,
+44
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 6394,
+"tumor_sl15": 9
+},
+"FLARE23_0947": {
+"shape": [
+512,
+512,
+852
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 542664,
+"tumor_sl15": 108
+},
+"FLARE23_0948": {
+"shape": [
+512,
+512,
+83
+],
+"liver": 33,
+"kidney": 21,
+"pancreas": 18,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0952": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 68029,
+"tumor_sl15": 45
+},
+"FLARE23_0954": {
+"shape": [
+512,
+512,
+95
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 18960,
+"tumor_sl15": 8
+},
+"FLARE23_0957": {
+"shape": [
+512,
+512,
+233
+],
+"liver": 146,
+"kidney": 119,
+"pancreas": 86,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0960": {
+"shape": [
+512,
+512,
+137
+],
+"liver": 66,
+"kidney": 46,
+"pancreas": 30,
+"tumor_vox": 71381,
+"tumor_sl15": 18
+},
+"FLARE23_0965": {
+"shape": [
+512,
+512,
+40
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 122202,
+"tumor_sl15": 20
+},
+"FLARE23_0966": {
+"shape": [
+512,
+512,
+174
+],
+"liver": 63,
+"kidney": 39,
+"pancreas": 28,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0969": {
+"shape": [
+512,
+512,
+194
+],
+"liver": 186,
+"kidney": 121,
+"pancreas": 83,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0970": {
+"shape": [
+512,
+512,
+91
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 5456,
+"tumor_sl15": 5
+},
+"FLARE23_0973": {
+"shape": [
+512,
+512,
+101
+],
+"liver": 34,
+"kidney": 26,
+"pancreas": 20,
+"tumor_vox": 30680,
+"tumor_sl15": 15
+},
+"FLARE23_0975": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 9303,
+"tumor_sl15": 18
+},
+"FLARE23_0976": {
+"shape": [
+512,
+512,
+164
+],
+"liver": 90,
+"kidney": 55,
+"pancreas": 46,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0979": {
+"shape": [
+512,
+512,
+102
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 24217,
+"tumor_sl15": 15
+},
+"FLARE23_0981": {
+"shape": [
+512,
+512,
+66
+],
+"liver": 31,
+"kidney": 22,
+"pancreas": 15,
+"tumor_vox": 2897,
+"tumor_sl15": 5
+},
+"FLARE23_0984": {
+"shape": [
+512,
+512,
+617
+],
+"liver": 256,
+"kidney": 223,
+"pancreas": 162,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0987": {
+"shape": [
+512,
+512,
+619
+],
+"liver": 157,
+"kidney": 106,
+"pancreas": 82,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0988": {
+"shape": [
+512,
+512,
+154
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 24611,
+"tumor_sl15": 62
+},
+"FLARE23_0991": {
+"shape": [
+512,
+512,
+340
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 144564,
+"tumor_sl15": 78
+},
+"FLARE23_0992": {
+"shape": [
+512,
+512,
+58
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 41695,
+"tumor_sl15": 14
+},
+"FLARE23_0994": {
+"shape": [
+512,
+512,
+432
+],
+"liver": 115,
+"kidney": 82,
+"pancreas": 48,
+"tumor_vox": 228251,
+"tumor_sl15": 82
+},
+"FLARE23_0997": {
+"shape": [
+512,
+512,
+42
+],
+"liver": 31,
+"kidney": 24,
+"pancreas": 18,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_0998": {
+"shape": [
+512,
+512,
+49
+],
+"liver": 29,
+"kidney": 22,
+"pancreas": 20,
+"tumor_vox": 16032,
+"tumor_sl15": 9
+},
+"FLARE23_1000": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 22354,
+"tumor_sl15": 19
+},
+"FLARE23_1003": {
+"shape": [
+512,
+512,
+98
+],
+"liver": 66,
+"kidney": 68,
+"pancreas": 39,
+"tumor_vox": 5030,
+"tumor_sl15": 8
+},
+"FLARE23_1005": {
+"shape": [
+512,
+512,
+122
+],
+"liver": 73,
+"kidney": 57,
+"pancreas": 35,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1006": {
+"shape": [
+512,
+512,
+50
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 3268,
+"tumor_sl15": 5
+},
+"FLARE23_1009": {
+"shape": [
+512,
+512,
+94
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 1741,
+"tumor_sl15": 5
+},
+"FLARE23_1013": {
+"shape": [
+512,
+512,
+261
+],
+"liver": 248,
+"kidney": 159,
+"pancreas": 97,
+"tumor_vox": 43790,
+"tumor_sl15": 45
+},
+"FLARE23_1015": {
+"shape": [
+512,
+512,
+85
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 9605,
+"tumor_sl15": 6
+},
+"FLARE23_1016": {
+"shape": [
+512,
+512,
+441
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 1027,
+"tumor_sl15": 9
+},
+"FLARE23_1019": {
+"shape": [
+512,
+512,
+978
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 394062,
+"tumor_sl15": 168
+},
+"FLARE23_1021": {
+"shape": [
+512,
+512,
+1858
+],
+"liver": 0,
+"kidney": 218,
+"pancreas": 0,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1024": {
+"shape": [
+512,
+512,
+128
+],
+"liver": 78,
+"kidney": 48,
+"pancreas": 41,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1027": {
+"shape": [
+512,
+512,
+168
+],
+"liver": 75,
+"kidney": 49,
+"pancreas": 42,
+"tumor_vox": 193508,
+"tumor_sl15": 59
+},
+"FLARE23_1028": {
+"shape": [
+512,
+512,
+93
+],
+"liver": 65,
+"kidney": 41,
+"pancreas": 35,
+"tumor_vox": 872,
+"tumor_sl15": 6
+},
+"FLARE23_1031": {
+"shape": [
+512,
+512,
+1732
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 44085,
+"tumor_sl15": 102
+},
+"FLARE23_1032": {
+"shape": [
+512,
+512,
+41
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 3674,
+"tumor_sl15": 5
+},
+"FLARE23_1034": {
+"shape": [
+512,
+512,
+203
+],
+"liver": 174,
+"kidney": 126,
+"pancreas": 68,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1037": {
+"shape": [
+512,
+512,
+93
+],
+"liver": 68,
+"kidney": 45,
+"pancreas": 29,
+"tumor_vox": 1527,
+"tumor_sl15": 8
+},
+"FLARE23_1038": {
+"shape": [
+512,
+512,
+269
+],
+"liver": 63,
+"kidney": 48,
+"pancreas": 35,
+"tumor_vox": 4837,
+"tumor_sl15": 9
+},
+"FLARE23_1041": {
+"shape": [
+512,
+512,
+93
+],
+"liver": 62,
+"kidney": 49,
+"pancreas": 29,
+"tumor_vox": 2641,
+"tumor_sl15": 8
+},
+"FLARE23_1042": {
+"shape": [
+512,
+512,
+148
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 8616,
+"tumor_sl15": 24
+},
+"FLARE23_1044": {
+"shape": [
+512,
+512,
+132
+],
+"liver": 60,
+"kidney": 56,
+"pancreas": 29,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1047": {
+"shape": [
+512,
+512,
+47
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 486,
+"tumor_sl15": 3
+},
+"FLARE23_1048": {
+"shape": [
+512,
+512,
+89
+],
+"liver": 39,
+"kidney": 21,
+"pancreas": 21,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1051": {
+"shape": [
+512,
+512,
+97
+],
+"liver": 33,
+"kidney": 26,
+"pancreas": 20,
+"tumor_vox": 3164,
+"tumor_sl15": 6
+},
+"FLARE23_1054": {
+"shape": [
+512,
+512,
+73
+],
+"liver": 59,
+"kidney": 40,
+"pancreas": 22,
+"tumor_vox": 1813,
+"tumor_sl15": 6
+},
+"FLARE23_1057": {
+"shape": [
+512,
+512,
+340
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 176325,
+"tumor_sl15": 154
+},
+"FLARE23_1058": {
+"shape": [
+512,
+512,
+43
+],
+"liver": 28,
+"kidney": 19,
+"pancreas": 16,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1063": {
+"shape": [
+512,
+512,
+77
+],
+"liver": 47,
+"kidney": 45,
+"pancreas": 26,
+"tumor_vox": 5213,
+"tumor_sl15": 9
+},
+"FLARE23_1065": {
+"shape": [
+512,
+512,
+705
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 1208,
+"tumor_sl15": 6
+},
+"FLARE23_1066": {
+"shape": [
+512,
+512,
+749
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 1502,
+"tumor_sl15": 10
+},
+"FLARE23_1069": {
+"shape": [
+512,
+512,
+113
+],
+"liver": 76,
+"kidney": 48,
+"pancreas": 35,
+"tumor_vox": 1172,
+"tumor_sl15": 7
+},
+"FLARE23_1070": {
+"shape": [
+512,
+512,
+205
+],
+"liver": 188,
+"kidney": 106,
+"pancreas": 73,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1073": {
+"shape": [
+512,
+512,
+1393
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 31747,
+"tumor_sl15": 86
+},
+"FLARE23_1075": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 506673,
+"tumor_sl15": 252
+},
+"FLARE23_1076": {
+"shape": [
+512,
+512,
+978
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 232620,
+"tumor_sl15": 192
+},
+"FLARE23_1079": {
+"shape": [
+512,
+512,
+47
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 4223,
+"tumor_sl15": 8
+},
+"FLARE23_1082": {
+"shape": [
+512,
+512,
+135
+],
+"liver": 96,
+"kidney": 81,
+"pancreas": 58,
+"tumor_vox": 434721,
+"tumor_sl15": 78
+},
+"FLARE23_1084": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 68840,
+"tumor_sl15": 48
+},
+"FLARE23_1087": {
+"shape": [
+512,
+512,
+274
+],
+"liver": 105,
+"kidney": 83,
+"pancreas": 46,
+"tumor_vox": 53661,
+"tumor_sl15": 34
+},
+"FLARE23_1088": {
+"shape": [
+512,
+512,
+26
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 39783,
+"tumor_sl15": 9
+},
+"FLARE23_1091": {
+"shape": [
+512,
+512,
+58
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 4407,
+"tumor_sl15": 8
+},
+"FLARE23_1092": {
+"shape": [
+512,
+512,
+136
+],
+"liver": 63,
+"kidney": 41,
+"pancreas": 28,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1094": {
+"shape": [
+512,
+512,
+340
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 77581,
+"tumor_sl15": 59
+},
+"FLARE23_1097": {
+"shape": [
+512,
+512,
+239
+],
+"liver": 90,
+"kidney": 61,
+"pancreas": 43,
+"tumor_vox": 268297,
+"tumor_sl15": 64
+},
+"FLARE23_1098": {
+"shape": [
+512,
+512,
+82
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 6476,
+"tumor_sl15": 9
+},
+"FLARE23_1101": {
+"shape": [
+512,
+512,
+32
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 20880,
+"tumor_sl15": 11
+},
+"FLARE23_1104": {
+"shape": [
+512,
+512,
+228
+],
+"liver": 162,
+"kidney": 100,
+"pancreas": 77,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1107": {
+"shape": [
+512,
+512,
+574
+],
+"liver": 194,
+"kidney": 149,
+"pancreas": 112,
+"tumor_vox": 1669,
+"tumor_sl15": 17
+},
+"FLARE23_1108": {
+"shape": [
+512,
+512,
+97
+],
+"liver": 64,
+"kidney": 47,
+"pancreas": 34,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1111": {
+"shape": [
+512,
+512,
+75
+],
+"liver": 55,
+"kidney": 38,
+"pancreas": 27,
+"tumor_vox": 12531,
+"tumor_sl15": 14
+},
+"FLARE23_1112": {
+"shape": [
+512,
+512,
+489
+],
+"liver": 139,
+"kidney": 89,
+"pancreas": 79,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1114": {
+"shape": [
+512,
+512,
+127
+],
+"liver": 59,
+"kidney": 49,
+"pancreas": 32,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1117": {
+"shape": [
+512,
+512,
+81
+],
+"liver": 19,
+"kidney": 19,
+"pancreas": 12,
+"tumor_vox": 4678,
+"tumor_sl15": 5
+},
+"FLARE23_1118": {
+"shape": [
+512,
+512,
+90
+],
+"liver": 79,
+"kidney": 69,
+"pancreas": 45,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1120": {
+"shape": [
+512,
+512,
+661
+],
+"liver": 163,
+"kidney": 166,
+"pancreas": 88,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1123": {
+"shape": [
+512,
+512,
+222
+],
+"liver": 180,
+"kidney": 117,
+"pancreas": 88,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1126": {
+"shape": [
+512,
+512,
+138
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 6305,
+"tumor_sl15": 20
+},
+"FLARE23_1129": {
+"shape": [
+512,
+512,
+1393
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 109749,
+"tumor_sl15": 154
+},
+"FLARE23_1133": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 90676,
+"tumor_sl15": 143
+},
+"FLARE23_1135": {
+"shape": [
+512,
+512,
+89
+],
+"liver": 61,
+"kidney": 49,
+"pancreas": 27,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1136": {
+"shape": [
+512,
+512,
+192
+],
+"liver": 79,
+"kidney": 41,
+"pancreas": 34,
+"tumor_vox": 4020,
+"tumor_sl15": 9
+},
+"FLARE23_1139": {
+"shape": [
+512,
+512,
+130
+],
+"liver": 32,
+"kidney": 26,
+"pancreas": 19,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1143": {
+"shape": [
+512,
+512,
+51
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 7275,
+"tumor_sl15": 7
+},
+"FLARE23_1145": {
+"shape": [
+512,
+512,
+50
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 10314,
+"tumor_sl15": 9
+},
+"FLARE23_1146": {
+"shape": [
+512,
+512,
+53
+],
+"liver": 31,
+"kidney": 27,
+"pancreas": 17,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1149": {
+"shape": [
+512,
+512,
+978
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 183528,
+"tumor_sl15": 111
+},
+"FLARE23_1150": {
+"shape": [
+512,
+512,
+348
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 171791,
+"tumor_sl15": 76
+},
+"FLARE23_1153": {
+"shape": [
+512,
+512,
+73
+],
+"liver": 57,
+"kidney": 47,
+"pancreas": 23,
+"tumor_vox": 4749,
+"tumor_sl15": 11
+},
+"FLARE23_1155": {
+"shape": [
+512,
+512,
+852
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 396558,
+"tumor_sl15": 405
+},
+"FLARE23_1156": {
+"shape": [
+512,
+512,
+92
+],
+"liver": 38,
+"kidney": 35,
+"pancreas": 17,
+"tumor_vox": 30009,
+"tumor_sl15": 15
+},
+"FLARE23_1159": {
+"shape": [
+512,
+512,
+113
+],
+"liver": 72,
+"kidney": 56,
+"pancreas": 44,
+"tumor_vox": 5067,
+"tumor_sl15": 7
+},
+"FLARE23_1161": {
+"shape": [
+512,
+512,
+126
+],
+"liver": 64,
+"kidney": 46,
+"pancreas": 33,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1162": {
+"shape": [
+512,
+512,
+340
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 5442,
+"tumor_sl15": 15
+},
+"FLARE23_1164": {
+"shape": [
+512,
+512,
+655
+],
+"liver": 151,
+"kidney": 115,
+"pancreas": 84,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1167": {
+"shape": [
+512,
+512,
+340
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 4724,
+"tumor_sl15": 19
+},
+"FLARE23_1168": {
+"shape": [
+512,
+512,
+79
+],
+"liver": 65,
+"kidney": 46,
+"pancreas": 32,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1171": {
+"shape": [
+512,
+512,
+692
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 223341,
+"tumor_sl15": 226
+},
+"FLARE23_1174": {
+"shape": [
+512,
+512,
+48
+],
+"liver": 35,
+"kidney": 25,
+"pancreas": 15,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1177": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 4779,
+"tumor_sl15": 15
+},
+"FLARE23_1178": {
+"shape": [
+512,
+512,
+135
+],
+"liver": 69,
+"kidney": 61,
+"pancreas": 37,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1180": {
+"shape": [
+512,
+512,
+103
+],
+"liver": 36,
+"kidney": 25,
+"pancreas": 20,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1183": {
+"shape": [
+512,
+512,
+45
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 1373,
+"tumor_sl15": 5
+},
+"FLARE23_1185": {
+"shape": [
+512,
+512,
+103
+],
+"liver": 67,
+"kidney": 47,
+"pancreas": 33,
+"tumor_vox": 401,
+"tumor_sl15": 5
+},
+"FLARE23_1186": {
+"shape": [
+512,
+512,
+53
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 18099,
+"tumor_sl15": 12
+},
+"FLARE23_1189": {
+"shape": [
+512,
+512,
+84
+],
+"liver": 29,
+"kidney": 20,
+"pancreas": 8,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1190": {
+"shape": [
+512,
+512,
+642
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 920,
+"tumor_sl15": 10
+},
+"FLARE23_1195": {
+"shape": [
+512,
+512,
+338
+],
+"liver": 277,
+"kidney": 205,
+"pancreas": 201,
+"tumor_vox": 1909785,
+"tumor_sl15": 226
+},
+"FLARE23_1196": {
+"shape": [
+512,
+512,
+80
+],
+"liver": 33,
+"kidney": 27,
+"pancreas": 10,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1199": {
+"shape": [
+512,
+512,
+733
+],
+"liver": 258,
+"kidney": 181,
+"pancreas": 136,
+"tumor_vox": 541305,
+"tumor_sl15": 216
+},
+"FLARE23_1201": {
+"shape": [
+512,
+512,
+90
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 2873,
+"tumor_sl15": 6
+},
+"FLARE23_1202": {
+"shape": [
+512,
+512,
+350
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 48,
+"tumor_sl15": 2
+},
+"FLARE23_1204": {
+"shape": [
+512,
+512,
+161
+],
+"liver": 60,
+"kidney": 51,
+"pancreas": 32,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1208": {
+"shape": [
+512,
+512,
+98
+],
+"liver": 64,
+"kidney": 59,
+"pancreas": 30,
+"tumor_vox": 7109,
+"tumor_sl15": 9
+},
+"FLARE23_1211": {
+"shape": [
+512,
+512,
+88
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 13611,
+"tumor_sl15": 11
+},
+"FLARE23_1212": {
+"shape": [
+512,
+512,
+77
+],
+"liver": 73,
+"kidney": 39,
+"pancreas": 35,
+"tumor_vox": 2834,
+"tumor_sl15": 8
+},
+"FLARE23_1214": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 174800,
+"tumor_sl15": 122
+},
+"FLARE23_1217": {
+"shape": [
+512,
+512,
+95
+],
+"liver": 72,
+"kidney": 44,
+"pancreas": 41,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1218": {
+"shape": [
+512,
+512,
+151
+],
+"liver": 107,
+"kidney": 70,
+"pancreas": 55,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1220": {
+"shape": [
+512,
+512,
+47
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 1630,
+"tumor_sl15": 5
+},
+"FLARE23_1223": {
+"shape": [
+512,
+512,
+310
+],
+"liver": 169,
+"kidney": 135,
+"pancreas": 75,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1225": {
+"shape": [
+512,
+512,
+73
+],
+"liver": 61,
+"kidney": 55,
+"pancreas": 41,
+"tumor_vox": 5235,
+"tumor_sl15": 13
+},
+"FLARE23_1226": {
+"shape": [
+512,
+512,
+27
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 7807,
+"tumor_sl15": 8
+},
+"FLARE23_1230": {
+"shape": [
+512,
+512,
+149
+],
+"liver": 85,
+"kidney": 53,
+"pancreas": 45,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1233": {
+"shape": [
+512,
+512,
+588
+],
+"liver": 140,
+"kidney": 118,
+"pancreas": 61,
+"tumor_vox": 2612,
+"tumor_sl15": 14
+},
+"FLARE23_1236": {
+"shape": [
+512,
+512,
+84
+],
+"liver": 66,
+"kidney": 51,
+"pancreas": 36,
+"tumor_vox": 1823,
+"tumor_sl15": 7
+},
+"FLARE23_1239": {
+"shape": [
+512,
+512,
+97
+],
+"liver": 57,
+"kidney": 55,
+"pancreas": 32,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1240": {
+"shape": [
+512,
+512,
+978
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 449736,
+"tumor_sl15": 162
+},
+"FLARE23_1243": {
+"shape": [
+512,
+512,
+148
+],
+"liver": 66,
+"kidney": 48,
+"pancreas": 35,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1246": {
+"shape": [
+512,
+512,
+146
+],
+"liver": 41,
+"kidney": 36,
+"pancreas": 16,
+"tumor_vox": 139447,
+"tumor_sl15": 20
+},
+"FLARE23_1249": {
+"shape": [
+512,
+512,
+231
+],
+"liver": 204,
+"kidney": 162,
+"pancreas": 88,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1250": {
+"shape": [
+512,
+512,
+77
+],
+"liver": 32,
+"kidney": 21,
+"pancreas": 20,
+"tumor_vox": 5012,
+"tumor_sl15": 6
+},
+"FLARE23_1253": {
+"shape": [
+512,
+512,
+43
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 6075,
+"tumor_sl15": 6
+},
+"FLARE23_1255": {
+"shape": [
+512,
+512,
+852
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 30474,
+"tumor_sl15": 51
+},
+"FLARE23_1256": {
+"shape": [
+512,
+512,
+119
+],
+"liver": 56,
+"kidney": 51,
+"pancreas": 39,
+"tumor_vox": 2571,
+"tumor_sl15": 9
+},
+"FLARE23_1261": {
+"shape": [
+512,
+512,
+93
+],
+"liver": 68,
+"kidney": 56,
+"pancreas": 45,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1262": {
+"shape": [
+512,
+512,
+77
+],
+"liver": 67,
+"kidney": 43,
+"pancreas": 37,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1264": {
+"shape": [
+512,
+512,
+165
+],
+"liver": 73,
+"kidney": 42,
+"pancreas": 31,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1267": {
+"shape": [
+512,
+512,
+90
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 3581,
+"tumor_sl15": 7
+},
+"FLARE23_1268": {
+"shape": [
+512,
+512,
+49
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 477392,
+"tumor_sl15": 42
+},
+"FLARE23_1271": {
+"shape": [
+512,
+512,
+81
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 11560,
+"tumor_sl15": 7
+},
+"FLARE23_1272": {
+"shape": [
+512,
+512,
+63
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 2052,
+"tumor_sl15": 3
+},
+"FLARE23_1274": {
+"shape": [
+512,
+512,
+38
+],
+"liver": 25,
+"kidney": 21,
+"pancreas": 15,
+"tumor_vox": 8374,
+"tumor_sl15": 8
+},
+"FLARE23_1278": {
+"shape": [
+512,
+512,
+92
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 4681,
+"tumor_sl15": 12
+},
+"FLARE23_1280": {
+"shape": [
+512,
+512,
+533
+],
+"liver": 163,
+"kidney": 96,
+"pancreas": 71,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1283": {
+"shape": [
+512,
+512,
+75
+],
+"liver": 67,
+"kidney": 42,
+"pancreas": 35,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1285": {
+"shape": [
+512,
+512,
+100
+],
+"liver": 66,
+"kidney": 49,
+"pancreas": 24,
+"tumor_vox": 18965,
+"tumor_sl15": 11
+},
+"FLARE23_1286": {
+"shape": [
+512,
+512,
+172
+],
+"liver": 113,
+"kidney": 79,
+"pancreas": 58,
+"tumor_vox": 14062,
+"tumor_sl15": 22
+},
+"FLARE23_1289": {
+"shape": [
+512,
+512,
+109
+],
+"liver": 67,
+"kidney": 47,
+"pancreas": 29,
+"tumor_vox": 4912,
+"tumor_sl15": 11
+},
+"FLARE23_1290": {
+"shape": [
+512,
+512,
+138
+],
+"liver": 72,
+"kidney": 45,
+"pancreas": 26,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1293": {
+"shape": [
+512,
+512,
+630
+],
+"liver": 276,
+"kidney": 147,
+"pancreas": 143,
+"tumor_vox": 15544,
+"tumor_sl15": 34
+},
+"FLARE23_1295": {
+"shape": [
+512,
+512,
+1393
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 29823,
+"tumor_sl15": 89
+},
+"FLARE23_1299": {
+"shape": [
+512,
+512,
+45
+],
+"liver": 37,
+"kidney": 22,
+"pancreas": 24,
+"tumor_vox": 2839,
+"tumor_sl15": 7
+},
+"FLARE23_1300": {
+"shape": [
+512,
+512,
+223
+],
+"liver": 180,
+"kidney": 130,
+"pancreas": 82,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1303": {
+"shape": [
+512,
+512,
+105
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 980765,
+"tumor_sl15": 66
+},
+"FLARE23_1305": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 193435,
+"tumor_sl15": 78
+},
+"FLARE23_1306": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 25060,
+"tumor_sl15": 44
+},
+"FLARE23_1310": {
+"shape": [
+512,
+512,
+131
+],
+"liver": 79,
+"kidney": 50,
+"pancreas": 38,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1313": {
+"shape": [
+512,
+512,
+86
+],
+"liver": 67,
+"kidney": 43,
+"pancreas": 22,
+"tumor_vox": 85648,
+"tumor_sl15": 28
+},
+"FLARE23_1316": {
+"shape": [
+512,
+512,
+741
+],
+"liver": 191,
+"kidney": 143,
+"pancreas": 93,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1319": {
+"shape": [
+512,
+512,
+30
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 562,
+"tumor_sl15": 4
+},
+"FLARE23_1321": {
+"shape": [
+512,
+512,
+46
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 15357,
+"tumor_sl15": 10
+},
+"FLARE23_1322": {
+"shape": [
+512,
+512,
+96
+],
+"liver": 66,
+"kidney": 50,
+"pancreas": 36,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1324": {
+"shape": [
+512,
+512,
+82
+],
+"liver": 29,
+"kidney": 25,
+"pancreas": 22,
+"tumor_vox": 93241,
+"tumor_sl15": 19
+},
+"FLARE23_1328": {
+"shape": [
+512,
+512,
+757
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 23698,
+"tumor_sl15": 58
+},
+"FLARE23_1331": {
+"shape": [
+512,
+512,
+97
+],
+"liver": 63,
+"kidney": 39,
+"pancreas": 37,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1332": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 7272,
+"tumor_sl15": 15
+},
+"FLARE23_1334": {
+"shape": [
+512,
+512,
+620
+],
+"liver": 122,
+"kidney": 109,
+"pancreas": 73,
+"tumor_vox": 7249,
+"tumor_sl15": 19
+},
+"FLARE23_1337": {
+"shape": [
+512,
+512,
+39
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 17571,
+"tumor_sl15": 11
+},
+"FLARE23_1338": {
+"shape": [
+512,
+512,
+64
+],
+"liver": 45,
+"kidney": 34,
+"pancreas": 21,
+"tumor_vox": 5717,
+"tumor_sl15": 10
+},
+"FLARE23_1341": {
+"shape": [
+512,
+512,
+95
+],
+"liver": 81,
+"kidney": 41,
+"pancreas": 27,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1342": {
+"shape": [
+512,
+512,
+852
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 155346,
+"tumor_sl15": 99
+},
+"FLARE23_1344": {
+"shape": [
+512,
+512,
+97
+],
+"liver": 60,
+"kidney": 60,
+"pancreas": 35,
+"tumor_vox": 673,
+"tumor_sl15": 4
+},
+"FLARE23_1347": {
+"shape": [
+512,
+512,
+751
+],
+"liver": 191,
+"kidney": 129,
+"pancreas": 109,
+"tumor_vox": 1181,
+"tumor_sl15": 23
+},
+"FLARE23_1348": {
+"shape": [
+512,
+512,
+1371
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 111662,
+"tumor_sl15": 150
+},
+"FLARE23_1351": {
+"shape": [
+512,
+512,
+276
+],
+"liver": 176,
+"kidney": 119,
+"pancreas": 85,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1352": {
+"shape": [
+512,
+512,
+71
+],
+"liver": 63,
+"kidney": 45,
+"pancreas": 23,
+"tumor_vox": 5418,
+"tumor_sl15": 9
+},
+"FLARE23_1354": {
+"shape": [
+512,
+512,
+1393
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 35799,
+"tumor_sl15": 125
+},
+"FLARE23_1358": {
+"shape": [
+512,
+512,
+1394
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 6243,
+"tumor_sl15": 39
+},
+"FLARE23_1360": {
+"shape": [
+512,
+512,
+177
+],
+"liver": 165,
+"kidney": 147,
+"pancreas": 120,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1363": {
+"shape": [
+512,
+512,
+83
+],
+"liver": 69,
+"kidney": 34,
+"pancreas": 30,
+"tumor_vox": 5280,
+"tumor_sl15": 7
+},
+"FLARE23_1366": {
+"shape": [
+512,
+512,
+102
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 4734,
+"tumor_sl15": 10
+},
+"FLARE23_1369": {
+"shape": [
+512,
+512,
+360
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 5092,
+"tumor_sl15": 12
+},
+"FLARE23_1370": {
+"shape": [
+512,
+512,
+48
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 77098,
+"tumor_sl15": 20
+},
+"FLARE23_1373": {
+"shape": [
+512,
+512,
+99
+],
+"liver": 32,
+"kidney": 31,
+"pancreas": 16,
+"tumor_vox": 420895,
+"tumor_sl15": 26
+},
+"FLARE23_1375": {
+"shape": [
+512,
+512,
+105
+],
+"liver": 70,
+"kidney": 51,
+"pancreas": 50,
+"tumor_vox": 407,
+"tumor_sl15": 3
+},
+"FLARE23_1376": {
+"shape": [
+512,
+512,
+126
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 2165,
+"tumor_sl15": 7
+},
+"FLARE23_1381": {
+"shape": [
+512,
+512,
+50
+],
+"liver": 31,
+"kidney": 20,
+"pancreas": 18,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1382": {
+"shape": [
+512,
+512,
+120
+],
+"liver": 41,
+"kidney": 29,
+"pancreas": 25,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1387": {
+"shape": [
+512,
+512,
+106
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 18394,
+"tumor_sl15": 13
+},
+"FLARE23_1388": {
+"shape": [
+512,
+512,
+87
+],
+"liver": 33,
+"kidney": 22,
+"pancreas": 14,
+"tumor_vox": 23909,
+"tumor_sl15": 11
+},
+"FLARE23_1391": {
+"shape": [
+512,
+512,
+164
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 74841,
+"tumor_sl15": 36
+},
+"FLARE23_1392": {
+"shape": [
+512,
+512,
+723
+],
+"liver": 348,
+"kidney": 255,
+"pancreas": 206,
+"tumor_vox": 11261,
+"tumor_sl15": 46
+},
+"FLARE23_1394": {
+"shape": [
+512,
+512,
+82
+],
+"liver": 27,
+"kidney": 29,
+"pancreas": 13,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1397": {
+"shape": [
+512,
+512,
+101
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 10921,
+"tumor_sl15": 13
+},
+"FLARE23_1400": {
+"shape": [
+512,
+512,
+103
+],
+"liver": 70,
+"kidney": 52,
+"pancreas": 46,
+"tumor_vox": 7268,
+"tumor_sl15": 12
+},
+"FLARE23_1403": {
+"shape": [
+512,
+512,
+129
+],
+"liver": 80,
+"kidney": 43,
+"pancreas": 34,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1405": {
+"shape": [
+512,
+512,
+89
+],
+"liver": 32,
+"kidney": 26,
+"pancreas": 12,
+"tumor_vox": 1009,
+"tumor_sl15": 3
+},
+"FLARE23_1406": {
+"shape": [
+512,
+512,
+88
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 15407,
+"tumor_sl15": 12
+},
+"FLARE23_1409": {
+"shape": [
+512,
+512,
+225
+],
+"liver": 105,
+"kidney": 75,
+"pancreas": 61,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1413": {
+"shape": [
+512,
+512,
+45
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 26766,
+"tumor_sl15": 16
+},
+"FLARE23_1415": {
+"shape": [
+512,
+512,
+206
+],
+"liver": 170,
+"kidney": 106,
+"pancreas": 73,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1416": {
+"shape": [
+512,
+512,
+50
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 30863,
+"tumor_sl15": 10
+},
+"FLARE23_1419": {
+"shape": [
+512,
+512,
+86
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 2179,
+"tumor_sl15": 5
+},
+"FLARE23_1421": {
+"shape": [
+512,
+512,
+392
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 2770,
+"tumor_sl15": 10
+},
+"FLARE23_1424": {
+"shape": [
+512,
+512,
+676
+],
+"liver": 211,
+"kidney": 133,
+"pancreas": 82,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1427": {
+"shape": [
+512,
+512,
+396
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 4850,
+"tumor_sl15": 12
+},
+"FLARE23_1428": {
+"shape": [
+512,
+512,
+67
+],
+"liver": 58,
+"kidney": 42,
+"pancreas": 28,
+"tumor_vox": 4682,
+"tumor_sl15": 12
+},
+"FLARE23_1431": {
+"shape": [
+512,
+512,
+37
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 2841,
+"tumor_sl15": 7
+},
+"FLARE23_1432": {
+"shape": [
+512,
+512,
+86
+],
+"liver": 41,
+"kidney": 24,
+"pancreas": 18,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1434": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 155886,
+"tumor_sl15": 129
+},
+"FLARE23_1437": {
+"shape": [
+512,
+512,
+67
+],
+"liver": 26,
+"kidney": 15,
+"pancreas": 16,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1438": {
+"shape": [
+512,
+512,
+266
+],
+"liver": 64,
+"kidney": 47,
+"pancreas": 33,
+"tumor_vox": 4888,
+"tumor_sl15": 9
+},
+"FLARE23_1441": {
+"shape": [
+512,
+512,
+53
+],
+"liver": 44,
+"kidney": 43,
+"pancreas": 41,
+"tumor_vox": 39126,
+"tumor_sl15": 17
+},
+"FLARE23_1442": {
+"shape": [
+512,
+512,
+100
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 23688,
+"tumor_sl15": 16
+},
+"FLARE23_1444": {
+"shape": [
+512,
+512,
+148
+],
+"liver": 131,
+"kidney": 82,
+"pancreas": 29,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1447": {
+"shape": [
+512,
+512,
+82
+],
+"liver": 37,
+"kidney": 25,
+"pancreas": 16,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1448": {
+"shape": [
+512,
+512,
+164
+],
+"liver": 50,
+"kidney": 42,
+"pancreas": 29,
+"tumor_vox": 5069,
+"tumor_sl15": 9
+},
+"FLARE23_1451": {
+"shape": [
+512,
+512,
+441
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 68781,
+"tumor_sl15": 209
+},
+"FLARE23_1454": {
+"shape": [
+512,
+512,
+81
+],
+"liver": 64,
+"kidney": 55,
+"pancreas": 33,
+"tumor_vox": 1161,
+"tumor_sl15": 5
+},
+"FLARE23_1457": {
+"shape": [
+512,
+512,
+194
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 11224,
+"tumor_sl15": 13
+},
+"FLARE23_1458": {
+"shape": [
+512,
+512,
+59
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 470059,
+"tumor_sl15": 30
+},
+"FLARE23_1463": {
+"shape": [
+512,
+512,
+347
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 14114,
+"tumor_sl15": 31
+},
+"FLARE23_1465": {
+"shape": [
+512,
+512,
+99
+],
+"liver": 58,
+"kidney": 45,
+"pancreas": 36,
+"tumor_vox": 1186,
+"tumor_sl15": 6
+},
+"FLARE23_1466": {
+"shape": [
+512,
+512,
+161
+],
+"liver": 122,
+"kidney": 86,
+"pancreas": 27,
+"tumor_vox": 2834,
+"tumor_sl15": 11
+},
+"FLARE23_1469": {
+"shape": [
+512,
+512,
+340
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 69290,
+"tumor_sl15": 62
+},
+"FLARE23_1470": {
+"shape": [
+512,
+512,
+91
+],
+"liver": 67,
+"kidney": 55,
+"pancreas": 44,
+"tumor_vox": 6736,
+"tumor_sl15": 33
+},
+"FLARE23_1473": {
+"shape": [
+512,
+512,
+95
+],
+"liver": 69,
+"kidney": 50,
+"pancreas": 38,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1476": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 6643,
+"tumor_sl15": 15
+},
+"FLARE23_1479": {
+"shape": [
+512,
+512,
+135
+],
+"liver": 126,
+"kidney": 77,
+"pancreas": 49,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1482": {
+"shape": [
+512,
+512,
+83
+],
+"liver": 69,
+"kidney": 46,
+"pancreas": 37,
+"tumor_vox": 1624,
+"tumor_sl15": 9
+},
+"FLARE23_1484": {
+"shape": [
+512,
+512,
+86
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 20501,
+"tumor_sl15": 13
+},
+"FLARE23_1487": {
+"shape": [
+512,
+512,
+83
+],
+"liver": 55,
+"kidney": 46,
+"pancreas": 24,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1488": {
+"shape": [
+512,
+512,
+145
+],
+"liver": 73,
+"kidney": 65,
+"pancreas": 42,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1491": {
+"shape": [
+512,
+512,
+89
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 2971,
+"tumor_sl15": 3
+},
+"FLARE23_1492": {
+"shape": [
+512,
+512,
+107
+],
+"liver": 72,
+"kidney": 55,
+"pancreas": 44,
+"tumor_vox": 2626,
+"tumor_sl15": 7
+},
+"FLARE23_1494": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 30387,
+"tumor_sl15": 31
+},
+"FLARE23_1497": {
+"shape": [
+512,
+512,
+34
+],
+"liver": 34,
+"kidney": 25,
+"pancreas": 20,
+"tumor_vox": 8777,
+"tumor_sl15": 8
+},
+"FLARE23_1498": {
+"shape": [
+512,
+512,
+164
+],
+"liver": 62,
+"kidney": 42,
+"pancreas": 34,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1501": {
+"shape": [
+512,
+512,
+141
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 7422,
+"tumor_sl15": 16
+},
+"FLARE23_1504": {
+"shape": [
+512,
+512,
+41
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 300959,
+"tumor_sl15": 27
+},
+"FLARE23_1507": {
+"shape": [
+512,
+512,
+86
+],
+"liver": 42,
+"kidney": 25,
+"pancreas": 17,
+"tumor_vox": 1393,
+"tumor_sl15": 5
+},
+"FLARE23_1508": {
+"shape": [
+512,
+512,
+739
+],
+"liver": 174,
+"kidney": 121,
+"pancreas": 97,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1511": {
+"shape": [
+512,
+512,
+82
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 30231,
+"tumor_sl15": 20
+},
+"FLARE23_1512": {
+"shape": [
+512,
+512,
+94
+],
+"liver": 53,
+"kidney": 45,
+"pancreas": 35,
+"tumor_vox": 4750,
+"tumor_sl15": 14
+},
+"FLARE23_1514": {
+"shape": [
+512,
+512,
+133
+],
+"liver": 66,
+"kidney": 36,
+"pancreas": 39,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1517": {
+"shape": [
+512,
+512,
+54
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 31710,
+"tumor_sl15": 11
+},
+"FLARE23_1518": {
+"shape": [
+512,
+512,
+314
+],
+"liver": 96,
+"kidney": 97,
+"pancreas": 56,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1520": {
+"shape": [
+512,
+512,
+140
+],
+"liver": 37,
+"kidney": 33,
+"pancreas": 19,
+"tumor_vox": 3399,
+"tumor_sl15": 5
+},
+"FLARE23_1523": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 158287,
+"tumor_sl15": 90
+},
+"FLARE23_1525": {
+"shape": [
+512,
+512,
+1393
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 2477,
+"tumor_sl15": 17
+},
+"FLARE23_1526": {
+"shape": [
+512,
+512,
+223
+],
+"liver": 67,
+"kidney": 51,
+"pancreas": 41,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1529": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 77149,
+"tumor_sl15": 80
+},
+"FLARE23_1533": {
+"shape": [
+512,
+512,
+413
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 3495,
+"tumor_sl15": 11
+},
+"FLARE23_1535": {
+"shape": [
+512,
+512,
+90
+],
+"liver": 63,
+"kidney": 50,
+"pancreas": 34,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1536": {
+"shape": [
+512,
+512,
+91
+],
+"liver": 31,
+"kidney": 25,
+"pancreas": 15,
+"tumor_vox": 64032,
+"tumor_sl15": 13
+},
+"FLARE23_1539": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 81322,
+"tumor_sl15": 33
+},
+"FLARE23_1543": {
+"shape": [
+512,
+512,
+42
+],
+"liver": 32,
+"kidney": 26,
+"pancreas": 20,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1545": {
+"shape": [
+512,
+512,
+591
+],
+"liver": 301,
+"kidney": 257,
+"pancreas": 188,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1546": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 12813,
+"tumor_sl15": 63
+},
+"FLARE23_1549": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 62279,
+"tumor_sl15": 40
+},
+"FLARE23_1550": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 166678,
+"tumor_sl15": 101
+},
+"FLARE23_1553": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 10038,
+"tumor_sl15": 12
+},
+"FLARE23_1555": {
+"shape": [
+512,
+512,
+41
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 1112,
+"tumor_sl15": 4
+},
+"FLARE23_1556": {
+"shape": [
+512,
+512,
+97
+],
+"liver": 25,
+"kidney": 23,
+"pancreas": 19,
+"tumor_vox": 12496,
+"tumor_sl15": 10
+},
+"FLARE23_1559": {
+"shape": [
+512,
+512,
+1983
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 222789,
+"tumor_sl15": 159
+},
+"FLARE23_1561": {
+"shape": [
+512,
+512,
+101
+],
+"liver": 29,
+"kidney": 28,
+"pancreas": 7,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1562": {
+"shape": [
+512,
+512,
+88
+],
+"liver": 26,
+"kidney": 23,
+"pancreas": 10,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1564": {
+"shape": [
+512,
+512,
+87
+],
+"liver": 58,
+"kidney": 37,
+"pancreas": 31,
+"tumor_vox": 3733,
+"tumor_sl15": 8
+},
+"FLARE23_1567": {
+"shape": [
+512,
+512,
+689
+],
+"liver": 187,
+"kidney": 142,
+"pancreas": 82,
+"tumor_vox": 373122,
+"tumor_sl15": 115
+},
+"FLARE23_1568": {
+"shape": [
+512,
+512,
+852
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 222618,
+"tumor_sl15": 141
+},
+"FLARE23_1571": {
+"shape": [
+512,
+512,
+55
+],
+"liver": 38,
+"kidney": 22,
+"pancreas": 17,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1574": {
+"shape": [
+512,
+512,
+681
+],
+"liver": 227,
+"kidney": 137,
+"pancreas": 85,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1577": {
+"shape": [
+512,
+512,
+96
+],
+"liver": 68,
+"kidney": 49,
+"pancreas": 25,
+"tumor_vox": 2543,
+"tumor_sl15": 10
+},
+"FLARE23_1578": {
+"shape": [
+512,
+512,
+139
+],
+"liver": 119,
+"kidney": 75,
+"pancreas": 63,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1580": {
+"shape": [
+512,
+512,
+47
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 31540,
+"tumor_sl15": 24
+},
+"FLARE23_1583": {
+"shape": [
+512,
+512,
+81
+],
+"liver": 63,
+"kidney": 49,
+"pancreas": 40,
+"tumor_vox": 1584,
+"tumor_sl15": 7
+},
+"FLARE23_1585": {
+"shape": [
+512,
+512,
+45
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 38137,
+"tumor_sl15": 12
+},
+"FLARE23_1586": {
+"shape": [
+512,
+512,
+370
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 176,
+"tumor_sl15": 2
+},
+"FLARE23_1589": {
+"shape": [
+512,
+512,
+262
+],
+"liver": 70,
+"kidney": 48,
+"pancreas": 30,
+"tumor_vox": 4640,
+"tumor_sl15": 7
+},
+"FLARE23_1590": {
+"shape": [
+512,
+512,
+1393
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 164119,
+"tumor_sl15": 167
+},
+"FLARE23_1595": {
+"shape": [
+512,
+512,
+342
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 62677,
+"tumor_sl15": 151
+},
+"FLARE23_1596": {
+"shape": [
+512,
+512,
+98
+],
+"liver": 46,
+"kidney": 29,
+"pancreas": 18,
+"tumor_vox": 82846,
+"tumor_sl15": 20
+},
+"FLARE23_1599": {
+"shape": [
+512,
+512,
+30
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 1564,
+"tumor_sl15": 4
+},
+"FLARE23_1601": {
+"shape": [
+512,
+512,
+1393
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 14505,
+"tumor_sl15": 39
+},
+"FLARE23_1602": {
+"shape": [
+512,
+512,
+105
+],
+"liver": 57,
+"kidney": 50,
+"pancreas": 30,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1604": {
+"shape": [
+512,
+512,
+135
+],
+"liver": 72,
+"kidney": 47,
+"pancreas": 36,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1608": {
+"shape": [
+512,
+512,
+158
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 809,
+"tumor_sl15": 7
+},
+"FLARE23_1611": {
+"shape": [
+512,
+512,
+83
+],
+"liver": 60,
+"kidney": 37,
+"pancreas": 26,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1612": {
+"shape": [
+512,
+512,
+176
+],
+"liver": 70,
+"kidney": 50,
+"pancreas": 36,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1614": {
+"shape": [
+512,
+512,
+621
+],
+"liver": 198,
+"kidney": 119,
+"pancreas": 80,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1617": {
+"shape": [
+512,
+512,
+101
+],
+"liver": 77,
+"kidney": 45,
+"pancreas": 39,
+"tumor_vox": 2232,
+"tumor_sl15": 9
+},
+"FLARE23_1618": {
+"shape": [
+512,
+512,
+316
+],
+"liver": 176,
+"kidney": 158,
+"pancreas": 121,
+"tumor_vox": 973347,
+"tumor_sl15": 128
+},
+"FLARE23_1620": {
+"shape": [
+512,
+512,
+99
+],
+"liver": 38,
+"kidney": 34,
+"pancreas": 17,
+"tumor_vox": 286484,
+"tumor_sl15": 26
+},
+"FLARE23_1623": {
+"shape": [
+512,
+512,
+140
+],
+"liver": 52,
+"kidney": 35,
+"pancreas": 26,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1625": {
+"shape": [
+512,
+512,
+42
+],
+"liver": 38,
+"kidney": 23,
+"pancreas": 16,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1626": {
+"shape": [
+512,
+512,
+141
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 23461,
+"tumor_sl15": 40
+},
+"FLARE23_1630": {
+"shape": [
+512,
+512,
+145
+],
+"liver": 46,
+"kidney": 32,
+"pancreas": 21,
+"tumor_vox": 17695,
+"tumor_sl15": 14
+},
+"FLARE23_1633": {
+"shape": [
+512,
+512,
+852
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 668511,
+"tumor_sl15": 267
+},
+"FLARE23_1636": {
+"shape": [
+512,
+512,
+340
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 13093,
+"tumor_sl15": 48
+},
+"FLARE23_1639": {
+"shape": [
+512,
+512,
+85
+],
+"liver": 67,
+"kidney": 43,
+"pancreas": 30,
+"tumor_vox": 3287,
+"tumor_sl15": 9
+},
+"FLARE23_1640": {
+"shape": [
+512,
+512,
+102
+],
+"liver": 71,
+"kidney": 48,
+"pancreas": 36,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1643": {
+"shape": [
+512,
+512,
+105
+],
+"liver": 52,
+"kidney": 52,
+"pancreas": 35,
+"tumor_vox": 1272,
+"tumor_sl15": 6
+},
+"FLARE23_1646": {
+"shape": [
+512,
+512,
+131
+],
+"liver": 33,
+"kidney": 26,
+"pancreas": 23,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1649": {
+"shape": [
+512,
+512,
+138
+],
+"liver": 73,
+"kidney": 48,
+"pancreas": 33,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1650": {
+"shape": [
+512,
+512,
+61
+],
+"liver": 48,
+"kidney": 32,
+"pancreas": 33,
+"tumor_vox": 189621,
+"tumor_sl15": 27
+},
+"FLARE23_1653": {
+"shape": [
+512,
+512,
+1393
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 9848,
+"tumor_sl15": 26
+},
+"FLARE23_1655": {
+"shape": [
+512,
+512,
+144
+],
+"liver": 78,
+"kidney": 58,
+"pancreas": 41,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1656": {
+"shape": [
+512,
+512,
+676
+],
+"liver": 181,
+"kidney": 133,
+"pancreas": 85,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1661": {
+"shape": [
+512,
+512,
+624
+],
+"liver": 241,
+"kidney": 189,
+"pancreas": 107,
+"tumor_vox": 1383692,
+"tumor_sl15": 198
+},
+"FLARE23_1662": {
+"shape": [
+512,
+512,
+76
+],
+"liver": 62,
+"kidney": 37,
+"pancreas": 27,
+"tumor_vox": 13430,
+"tumor_sl15": 13
+},
+"FLARE23_1664": {
+"shape": [
+512,
+512,
+45
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 9504,
+"tumor_sl15": 10
+},
+"FLARE23_1667": {
+"shape": [
+512,
+512,
+101
+],
+"liver": 42,
+"kidney": 45,
+"pancreas": 25,
+"tumor_vox": 9244,
+"tumor_sl15": 10
+},
+"FLARE23_1668": {
+"shape": [
+512,
+512,
+55
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 6228,
+"tumor_sl15": 10
+},
+"FLARE23_1671": {
+"shape": [
+512,
+512,
+1214
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 7492,
+"tumor_sl15": 43
+},
+"FLARE23_1672": {
+"shape": [
+512,
+512,
+36
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 19202,
+"tumor_sl15": 14
+},
+"FLARE23_1674": {
+"shape": [
+512,
+512,
+971
+],
+"liver": 385,
+"kidney": 230,
+"pancreas": 170,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1678": {
+"shape": [
+512,
+512,
+87
+],
+"liver": 63,
+"kidney": 41,
+"pancreas": 33,
+"tumor_vox": 7482,
+"tumor_sl15": 8
+},
+"FLARE23_1680": {
+"shape": [
+512,
+512,
+244
+],
+"liver": 79,
+"kidney": 74,
+"pancreas": 42,
+"tumor_vox": 11368,
+"tumor_sl15": 18
+},
+"FLARE23_1683": {
+"shape": [
+512,
+512,
+85
+],
+"liver": 74,
+"kidney": 49,
+"pancreas": 34,
+"tumor_vox": 880,
+"tumor_sl15": 4
+},
+"FLARE23_1685": {
+"shape": [
+512,
+512,
+91
+],
+"liver": 69,
+"kidney": 46,
+"pancreas": 33,
+"tumor_vox": 1750,
+"tumor_sl15": 7
+},
+"FLARE23_1686": {
+"shape": [
+512,
+512,
+611
+],
+"liver": 300,
+"kidney": 260,
+"pancreas": 183,
+"tumor_vox": 21205,
+"tumor_sl15": 55
+},
+"FLARE23_1689": {
+"shape": [
+512,
+512,
+284
+],
+"liver": 61,
+"kidney": 55,
+"pancreas": 38,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1690": {
+"shape": [
+512,
+512,
+134
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 3826,
+"tumor_sl15": 12
+},
+"FLARE23_1693": {
+"shape": [
+512,
+512,
+99
+],
+"liver": 68,
+"kidney": 44,
+"pancreas": 43,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1695": {
+"shape": [
+512,
+512,
+137
+],
+"liver": 67,
+"kidney": 46,
+"pancreas": 37,
+"tumor_vox": 13725,
+"tumor_sl15": 13
+},
+"FLARE23_1699": {
+"shape": [
+512,
+512,
+41
+],
+"liver": 25,
+"kidney": 23,
+"pancreas": 16,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1700": {
+"shape": [
+512,
+512,
+131
+],
+"liver": 58,
+"kidney": 52,
+"pancreas": 29,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1703": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 179102,
+"tumor_sl15": 77
+},
+"FLARE23_1705": {
+"shape": [
+512,
+512,
+978
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 666369,
+"tumor_sl15": 294
+},
+"FLARE23_1706": {
+"shape": [
+512,
+512,
+130
+],
+"liver": 74,
+"kidney": 45,
+"pancreas": 38,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1710": {
+"shape": [
+512,
+512,
+198
+],
+"liver": 190,
+"kidney": 132,
+"pancreas": 89,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1713": {
+"shape": [
+512,
+512,
+310
+],
+"liver": 143,
+"kidney": 145,
+"pancreas": 80,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1716": {
+"shape": [
+512,
+512,
+340
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 3313,
+"tumor_sl15": 14
+},
+"FLARE23_1719": {
+"shape": [
+512,
+512,
+154
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 10939,
+"tumor_sl15": 13
+},
+"FLARE23_1721": {
+"shape": [
+512,
+512,
+1753
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 9910,
+"tumor_sl15": 38
+},
+"FLARE23_1722": {
+"shape": [
+512,
+512,
+90
+],
+"liver": 50,
+"kidney": 55,
+"pancreas": 30,
+"tumor_vox": 9221,
+"tumor_sl15": 8
+},
+"FLARE23_1724": {
+"shape": [
+512,
+512,
+92
+],
+"liver": 36,
+"kidney": 25,
+"pancreas": 14,
+"tumor_vox": 1507,
+"tumor_sl15": 4
+},
+"FLARE23_1728": {
+"shape": [
+512,
+512,
+41
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 90814,
+"tumor_sl15": 18
+},
+"FLARE23_1731": {
+"shape": [
+512,
+512,
+163
+],
+"liver": 45,
+"kidney": 44,
+"pancreas": 23,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1732": {
+"shape": [
+512,
+512,
+51
+],
+"liver": 32,
+"kidney": 20,
+"pancreas": 17,
+"tumor_vox": 1171,
+"tumor_sl15": 4
+},
+"FLARE23_1734": {
+"shape": [
+512,
+512,
+68
+],
+"liver": 32,
+"kidney": 46,
+"pancreas": 38,
+"tumor_vox": 15453,
+"tumor_sl15": 15
+},
+"FLARE23_1737": {
+"shape": [
+512,
+512,
+610
+],
+"liver": 227,
+"kidney": 167,
+"pancreas": 108,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1738": {
+"shape": [
+512,
+512,
+340
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 11465,
+"tumor_sl15": 28
+},
+"FLARE23_1741": {
+"shape": [
+512,
+512,
+626
+],
+"liver": 321,
+"kidney": 222,
+"pancreas": 192,
+"tumor_vox": 72313,
+"tumor_sl15": 66
+},
+"FLARE23_1742": {
+"shape": [
+512,
+512,
+115
+],
+"liver": 62,
+"kidney": 49,
+"pancreas": 34,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1744": {
+"shape": [
+512,
+512,
+565
+],
+"liver": 225,
+"kidney": 147,
+"pancreas": 118,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1747": {
+"shape": [
+512,
+512,
+48
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 1742,
+"tumor_sl15": 12
+},
+"FLARE23_1748": {
+"shape": [
+512,
+512,
+102
+],
+"liver": 54,
+"kidney": 53,
+"pancreas": 34,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1751": {
+"shape": [
+512,
+512,
+40
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 2361,
+"tumor_sl15": 2
+},
+"FLARE23_1752": {
+"shape": [
+512,
+512,
+852
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 918369,
+"tumor_sl15": 312
+},
+"FLARE23_1754": {
+"shape": [
+512,
+512,
+250
+],
+"liver": 191,
+"kidney": 144,
+"pancreas": 90,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1758": {
+"shape": [
+512,
+512,
+123
+],
+"liver": 27,
+"kidney": 22,
+"pancreas": 16,
+"tumor_vox": 7194,
+"tumor_sl15": 18
+},
+"FLARE23_1760": {
+"shape": [
+512,
+512,
+44
+],
+"liver": 29,
+"kidney": 27,
+"pancreas": 20,
+"tumor_vox": 1414,
+"tumor_sl15": 5
+},
+"FLARE23_1763": {
+"shape": [
+512,
+512,
+80
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 4600,
+"tumor_sl15": 5
+},
+"FLARE23_1766": {
+"shape": [
+512,
+512,
+140
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 11158,
+"tumor_sl15": 11
+},
+"FLARE23_1769": {
+"shape": [
+512,
+512,
+374
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 528,
+"tumor_sl15": 6
+},
+"FLARE23_1770": {
+"shape": [
+512,
+512,
+130
+],
+"liver": 59,
+"kidney": 55,
+"pancreas": 40,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1773": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 20789,
+"tumor_sl15": 17
+},
+"FLARE23_1775": {
+"shape": [
+512,
+512,
+845
+],
+"liver": 187,
+"kidney": 171,
+"pancreas": 109,
+"tumor_vox": 10210,
+"tumor_sl15": 42
+},
+"FLARE23_1776": {
+"shape": [
+512,
+512,
+746
+],
+"liver": 214,
+"kidney": 106,
+"pancreas": 76,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1781": {
+"shape": [
+512,
+512,
+340
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 93154,
+"tumor_sl15": 79
+},
+"FLARE23_1782": {
+"shape": [
+512,
+512,
+461
+],
+"liver": 132,
+"kidney": 138,
+"pancreas": 66,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1787": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 21798,
+"tumor_sl15": 20
+},
+"FLARE23_1788": {
+"shape": [
+512,
+512,
+87
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 105237,
+"tumor_sl15": 29
+},
+"FLARE23_1791": {
+"shape": [
+512,
+512,
+547
+],
+"liver": 187,
+"kidney": 155,
+"pancreas": 111,
+"tumor_vox": 18528,
+"tumor_sl15": 43
+},
+"FLARE23_1792": {
+"shape": [
+512,
+512,
+153
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 12957,
+"tumor_sl15": 15
+},
+"FLARE23_1794": {
+"shape": [
+512,
+512,
+1059
+],
+"liver": 324,
+"kidney": 321,
+"pancreas": 142,
+"tumor_vox": 746453,
+"tumor_sl15": 263
+},
+"FLARE23_1797": {
+"shape": [
+512,
+512,
+340
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 37435,
+"tumor_sl15": 61
+},
+"FLARE23_1801": {
+"shape": [
+512,
+512,
+103
+],
+"liver": 62,
+"kidney": 48,
+"pancreas": 42,
+"tumor_vox": 27046,
+"tumor_sl15": 16
+},
+"FLARE23_1802": {
+"shape": [
+512,
+512,
+102
+],
+"liver": 45,
+"kidney": 30,
+"pancreas": 22,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1807": {
+"shape": [
+512,
+512,
+32
+],
+"liver": 21,
+"kidney": 21,
+"pancreas": 13,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1808": {
+"shape": [
+512,
+512,
+668
+],
+"liver": 258,
+"kidney": 193,
+"pancreas": 153,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1811": {
+"shape": [
+512,
+512,
+142
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 116892,
+"tumor_sl15": 35
+},
+"FLARE23_1812": {
+"shape": [
+512,
+512,
+198
+],
+"liver": 148,
+"kidney": 126,
+"pancreas": 80,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1814": {
+"shape": [
+512,
+512,
+1606
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 114156,
+"tumor_sl15": 90
+},
+"FLARE23_1817": {
+"shape": [
+512,
+512,
+39
+],
+"liver": 35,
+"kidney": 23,
+"pancreas": 21,
+"tumor_vox": 2592,
+"tumor_sl15": 6
+},
+"FLARE23_1820": {
+"shape": [
+512,
+512,
+98
+],
+"liver": 79,
+"kidney": 43,
+"pancreas": 27,
+"tumor_vox": 11123,
+"tumor_sl15": 13
+},
+"FLARE23_1823": {
+"shape": [
+512,
+512,
+137
+],
+"liver": 75,
+"kidney": 43,
+"pancreas": 37,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1825": {
+"shape": [
+512,
+512,
+784
+],
+"liver": 184,
+"kidney": 147,
+"pancreas": 88,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1826": {
+"shape": [
+512,
+512,
+89
+],
+"liver": 79,
+"kidney": 54,
+"pancreas": 47,
+"tumor_vox": 2706,
+"tumor_sl15": 8
+},
+"FLARE23_1829": {
+"shape": [
+512,
+512,
+751
+],
+"liver": 189,
+"kidney": 140,
+"pancreas": 126,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1830": {
+"shape": [
+512,
+512,
+383
+],
+"liver": 135,
+"kidney": 89,
+"pancreas": 68,
+"tumor_vox": 117414,
+"tumor_sl15": 48
+},
+"FLARE23_1833": {
+"shape": [
+512,
+512,
+55
+],
+"liver": 46,
+"kidney": 32,
+"pancreas": 20,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1835": {
+"shape": [
+512,
+512,
+271
+],
+"liver": 71,
+"kidney": 55,
+"pancreas": 48,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1839": {
+"shape": [
+512,
+512,
+151
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 106254,
+"tumor_sl15": 35
+},
+"FLARE23_1840": {
+"shape": [
+512,
+512,
+120
+],
+"liver": 71,
+"kidney": 43,
+"pancreas": 33,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1843": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 5002,
+"tumor_sl15": 22
+},
+"FLARE23_1845": {
+"shape": [
+512,
+512,
+107
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 59377,
+"tumor_sl15": 32
+},
+"FLARE23_1849": {
+"shape": [
+512,
+512,
+310
+],
+"liver": 139,
+"kidney": 119,
+"pancreas": 80,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1850": {
+"shape": [
+512,
+512,
+66
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 8798,
+"tumor_sl15": 8
+},
+"FLARE23_1855": {
+"shape": [
+512,
+512,
+169
+],
+"liver": 138,
+"kidney": 98,
+"pancreas": 68,
+"tumor_vox": 76733,
+"tumor_sl15": 48
+},
+"FLARE23_1856": {
+"shape": [
+512,
+512,
+105
+],
+"liver": 65,
+"kidney": 56,
+"pancreas": 33,
+"tumor_vox": 1849,
+"tumor_sl15": 8
+},
+"FLARE23_1859": {
+"shape": [
+512,
+512,
+358
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 18422,
+"tumor_sl15": 54
+},
+"FLARE23_1861": {
+"shape": [
+512,
+512,
+94
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 5830,
+"tumor_sl15": 9
+},
+"FLARE23_1862": {
+"shape": [
+512,
+512,
+32
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 1097,
+"tumor_sl15": 3
+},
+"FLARE23_1864": {
+"shape": [
+512,
+512,
+81
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 292900,
+"tumor_sl15": 30
+},
+"FLARE23_1867": {
+"shape": [
+512,
+512,
+93
+],
+"liver": 58,
+"kidney": 51,
+"pancreas": 27,
+"tumor_vox": 3262,
+"tumor_sl15": 11
+},
+"FLARE23_1871": {
+"shape": [
+512,
+512,
+340
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 82146,
+"tumor_sl15": 71
+},
+"FLARE23_1872": {
+"shape": [
+512,
+512,
+135
+],
+"liver": 74,
+"kidney": 47,
+"pancreas": 35,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1877": {
+"shape": [
+512,
+512,
+171
+],
+"liver": 73,
+"kidney": 36,
+"pancreas": 33,
+"tumor_vox": 2503,
+"tumor_sl15": 9
+},
+"FLARE23_1878": {
+"shape": [
+512,
+512,
+128
+],
+"liver": 48,
+"kidney": 49,
+"pancreas": 33,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1880": {
+"shape": [
+512,
+512,
+39
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 17222,
+"tumor_sl15": 8
+},
+"FLARE23_1883": {
+"shape": [
+512,
+512,
+978
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 202056,
+"tumor_sl15": 99
+},
+"FLARE23_1885": {
+"shape": [
+512,
+512,
+96
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 2903,
+"tumor_sl15": 6
+},
+"FLARE23_1886": {
+"shape": [
+512,
+512,
+138
+],
+"liver": 61,
+"kidney": 53,
+"pancreas": 48,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1890": {
+"shape": [
+512,
+512,
+978
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 614520,
+"tumor_sl15": 303
+},
+"FLARE23_1893": {
+"shape": [
+512,
+512,
+42
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 2112,
+"tumor_sl15": 8
+},
+"FLARE23_1896": {
+"shape": [
+512,
+512,
+223
+],
+"liver": 133,
+"kidney": 104,
+"pancreas": 88,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1899": {
+"shape": [
+512,
+512,
+91
+],
+"liver": 66,
+"kidney": 52,
+"pancreas": 31,
+"tumor_vox": 3810,
+"tumor_sl15": 8
+},
+"FLARE23_1900": {
+"shape": [
+512,
+512,
+161
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 41462,
+"tumor_sl15": 23
+},
+"FLARE23_1903": {
+"shape": [
+512,
+512,
+310
+],
+"liver": 175,
+"kidney": 108,
+"pancreas": 90,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1905": {
+"shape": [
+512,
+512,
+75
+],
+"liver": 50,
+"kidney": 44,
+"pancreas": 33,
+"tumor_vox": 29010,
+"tumor_sl15": 16
+},
+"FLARE23_1906": {
+"shape": [
+512,
+512,
+56
+],
+"liver": 31,
+"kidney": 24,
+"pancreas": 12,
+"tumor_vox": 3931,
+"tumor_sl15": 5
+},
+"FLARE23_1909": {
+"shape": [
+512,
+512,
+93
+],
+"liver": 75,
+"kidney": 51,
+"pancreas": 26,
+"tumor_vox": 4280,
+"tumor_sl15": 12
+},
+"FLARE23_1910": {
+"shape": [
+512,
+512,
+1932
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 837981,
+"tumor_sl15": 297
+},
+"FLARE23_1913": {
+"shape": [
+512,
+512,
+597
+],
+"liver": 175,
+"kidney": 98,
+"pancreas": 82,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1915": {
+"shape": [
+512,
+512,
+85
+],
+"liver": 71,
+"kidney": 43,
+"pancreas": 30,
+"tumor_vox": 3490,
+"tumor_sl15": 8
+},
+"FLARE23_1919": {
+"shape": [
+512,
+512,
+147
+],
+"liver": 55,
+"kidney": 48,
+"pancreas": 39,
+"tumor_vox": 6347,
+"tumor_sl15": 21
+},
+"FLARE23_1921": {
+"shape": [
+512,
+512,
+670
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 2852,
+"tumor_sl15": 16
+},
+"FLARE23_1922": {
+"shape": [
+512,
+512,
+677
+],
+"liver": 263,
+"kidney": 161,
+"pancreas": 117,
+"tumor_vox": 47754,
+"tumor_sl15": 45
+},
+"FLARE23_1927": {
+"shape": [
+512,
+512,
+133
+],
+"liver": 56,
+"kidney": 42,
+"pancreas": 34,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1928": {
+"shape": [
+512,
+512,
+50
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 2415,
+"tumor_sl15": 6
+},
+"FLARE23_1932": {
+"shape": [
+512,
+512,
+117
+],
+"liver": 69,
+"kidney": 50,
+"pancreas": 40,
+"tumor_vox": 2668,
+"tumor_sl15": 9
+},
+"FLARE23_1934": {
+"shape": [
+512,
+512,
+141
+],
+"liver": 65,
+"kidney": 53,
+"pancreas": 32,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1937": {
+"shape": [
+512,
+512,
+125
+],
+"liver": 32,
+"kidney": 27,
+"pancreas": 20,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1941": {
+"shape": [
+512,
+512,
+136
+],
+"liver": 65,
+"kidney": 47,
+"pancreas": 32,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1942": {
+"shape": [
+512,
+512,
+75
+],
+"liver": 70,
+"kidney": 53,
+"pancreas": 32,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1944": {
+"shape": [
+512,
+512,
+1104
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 5022,
+"tumor_sl15": 15
+},
+"FLARE23_1947": {
+"shape": [
+512,
+512,
+68
+],
+"liver": 28,
+"kidney": 23,
+"pancreas": 18,
+"tumor_vox": 1192,
+"tumor_sl15": 3
+},
+"FLARE23_1951": {
+"shape": [
+512,
+512,
+76
+],
+"liver": 70,
+"kidney": 45,
+"pancreas": 23,
+"tumor_vox": 1812,
+"tumor_sl15": 8
+},
+"FLARE23_1952": {
+"shape": [
+512,
+512,
+138
+],
+"liver": 59,
+"kidney": 55,
+"pancreas": 39,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1957": {
+"shape": [
+512,
+512,
+165
+],
+"liver": 93,
+"kidney": 56,
+"pancreas": 32,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1958": {
+"shape": [
+512,
+512,
+48
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 31553,
+"tumor_sl15": 24
+},
+"FLARE23_1960": {
+"shape": [
+512,
+512,
+119
+],
+"liver": 112,
+"kidney": 79,
+"pancreas": 58,
+"tumor_vox": 185990,
+"tumor_sl15": 36
+},
+"FLARE23_1963": {
+"shape": [
+512,
+512,
+756
+],
+"liver": 136,
+"kidney": 121,
+"pancreas": 90,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1965": {
+"shape": [
+512,
+512,
+95
+],
+"liver": 64,
+"kidney": 47,
+"pancreas": 32,
+"tumor_vox": 9060,
+"tumor_sl15": 11
+},
+"FLARE23_1969": {
+"shape": [
+512,
+512,
+468
+],
+"liver": 347,
+"kidney": 222,
+"pancreas": 108,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1970": {
+"shape": [
+512,
+512,
+102
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 13300,
+"tumor_sl15": 12
+},
+"FLARE23_1973": {
+"shape": [
+512,
+512,
+204
+],
+"liver": 179,
+"kidney": 147,
+"pancreas": 113,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1975": {
+"shape": [
+512,
+512,
+485
+],
+"liver": 126,
+"kidney": 132,
+"pancreas": 18,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1976": {
+"shape": [
+512,
+512,
+102
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 20088,
+"tumor_sl15": 19
+},
+"FLARE23_1979": {
+"shape": [
+512,
+512,
+978
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 145362,
+"tumor_sl15": 78
+},
+"FLARE23_1981": {
+"shape": [
+512,
+512,
+42
+],
+"liver": 34,
+"kidney": 21,
+"pancreas": 13,
+"tumor_vox": 1438,
+"tumor_sl15": 3
+},
+"FLARE23_1982": {
+"shape": [
+512,
+512,
+852
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 417546,
+"tumor_sl15": 153
+},
+"FLARE23_1984": {
+"shape": [
+512,
+512,
+103
+],
+"liver": 72,
+"kidney": 38,
+"pancreas": 37,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1988": {
+"shape": [
+512,
+512,
+781
+],
+"liver": 193,
+"kidney": 144,
+"pancreas": 83,
+"tumor_vox": 275918,
+"tumor_sl15": 117
+},
+"FLARE23_1991": {
+"shape": [
+512,
+512,
+105
+],
+"liver": 73,
+"kidney": 54,
+"pancreas": 30,
+"tumor_vox": 15672,
+"tumor_sl15": 14
+},
+"FLARE23_1992": {
+"shape": [
+512,
+512,
+49
+],
+"liver": 38,
+"kidney": 39,
+"pancreas": 34,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_1994": {
+"shape": [
+512,
+512,
+89
+],
+"liver": 71,
+"kidney": 54,
+"pancreas": 36,
+"tumor_vox": 2757,
+"tumor_sl15": 8
+},
+"FLARE23_1997": {
+"shape": [
+512,
+512,
+37
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 6687,
+"tumor_sl15": 7
+},
+"FLARE23_1998": {
+"shape": [
+512,
+512,
+549
+],
+"liver": 171,
+"kidney": 123,
+"pancreas": 84,
+"tumor_vox": 22179,
+"tumor_sl15": 73
+},
+"FLARE23_2000": {
+"shape": [
+512,
+512,
+140
+],
+"liver": 75,
+"kidney": 63,
+"pancreas": 44,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_2003": {
+"shape": [
+512,
+512,
+343
+],
+"liver": 110,
+"kidney": 89,
+"pancreas": 64,
+"tumor_vox": 5130,
+"tumor_sl15": 14
+},
+"FLARE23_2005": {
+"shape": [
+512,
+512,
+53
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 1286,
+"tumor_sl15": 2
+},
+"FLARE23_2006": {
+"shape": [
+512,
+512,
+43
+],
+"liver": 38,
+"kidney": 26,
+"pancreas": 15,
+"tumor_vox": 66780,
+"tumor_sl15": 15
+},
+"FLARE23_2009": {
+"shape": [
+512,
+512,
+99
+],
+"liver": 55,
+"kidney": 45,
+"pancreas": 27,
+"tumor_vox": 1387,
+"tumor_sl15": 4
+},
+"FLARE23_2010": {
+"shape": [
+512,
+512,
+32
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 29295,
+"tumor_sl15": 14
+},
+"FLARE23_2013": {
+"shape": [
+512,
+512,
+122
+],
+"liver": 80,
+"kidney": 49,
+"pancreas": 48,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_2015": {
+"shape": [
+512,
+512,
+76
+],
+"liver": 58,
+"kidney": 38,
+"pancreas": 36,
+"tumor_vox": 1220,
+"tumor_sl15": 4
+},
+"FLARE23_2019": {
+"shape": [
+512,
+512,
+107
+],
+"liver": 57,
+"kidney": 48,
+"pancreas": 27,
+"tumor_vox": 2203,
+"tumor_sl15": 7
+},
+"FLARE23_2021": {
+"shape": [
+512,
+512,
+49
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 528,
+"tumor_sl15": 5
+},
+"FLARE23_2022": {
+"shape": [
+512,
+512,
+676
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 3304,
+"tumor_sl15": 26
+},
+"FLARE23_2027": {
+"shape": [
+512,
+512,
+44
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 2881,
+"tumor_sl15": 4
+},
+"FLARE23_2028": {
+"shape": [
+512,
+512,
+151
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 22571,
+"tumor_sl15": 42
+},
+"FLARE23_2031": {
+"shape": [
+512,
+512,
+175
+],
+"liver": 63,
+"kidney": 47,
+"pancreas": 45,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_2032": {
+"shape": [
+512,
+512,
+340
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 1344,
+"tumor_sl15": 10
+},
+"FLARE23_2034": {
+"shape": [
+512,
+512,
+178
+],
+"liver": 69,
+"kidney": 50,
+"pancreas": 34,
+"tumor_vox": 41478,
+"tumor_sl15": 19
+},
+"FLARE23_2037": {
+"shape": [
+512,
+512,
+978
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 265119,
+"tumor_sl15": 120
+},
+"FLARE23_2041": {
+"shape": [
+512,
+512,
+59
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 161196,
+"tumor_sl15": 23
+},
+"FLARE23_2042": {
+"shape": [
+512,
+512,
+276
+],
+"liver": 61,
+"kidney": 42,
+"pancreas": 35,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_2044": {
+"shape": [
+512,
+512,
+97
+],
+"liver": 73,
+"kidney": 56,
+"pancreas": 33,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_2047": {
+"shape": [
+512,
+512,
+87
+],
+"liver": 66,
+"kidney": 45,
+"pancreas": 15,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_2051": {
+"shape": [
+512,
+512,
+58
+],
+"liver": 36,
+"kidney": 22,
+"pancreas": 19,
+"tumor_vox": 2682,
+"tumor_sl15": 8
+},
+"FLARE23_2052": {
+"shape": [
+512,
+512,
+101
+],
+"liver": 70,
+"kidney": 48,
+"pancreas": 29,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_2057": {
+"shape": [
+512,
+512,
+340
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 222,
+"tumor_sl15": 4
+},
+"FLARE23_2058": {
+"shape": [
+512,
+512,
+100
+],
+"liver": 60,
+"kidney": 41,
+"pancreas": 38,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_2060": {
+"shape": [
+512,
+512,
+99
+],
+"liver": 31,
+"kidney": 29,
+"pancreas": 20,
+"tumor_vox": 10469,
+"tumor_sl15": 9
+},
+"FLARE23_2063": {
+"shape": [
+512,
+512,
+793
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 80661,
+"tumor_sl15": 137
+},
+"FLARE23_2065": {
+"shape": [
+512,
+512,
+87
+],
+"liver": 72,
+"kidney": 42,
+"pancreas": 31,
+"tumor_vox": 1731,
+"tumor_sl15": 11
+},
+"FLARE23_2069": {
+"shape": [
+512,
+512,
+113
+],
+"liver": 75,
+"kidney": 43,
+"pancreas": 30,
+"tumor_vox": 4643,
+"tumor_sl15": 11
+},
+"FLARE23_2070": {
+"shape": [
+512,
+512,
+852
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 1689,
+"tumor_sl15": 9
+},
+"FLARE23_2073": {
+"shape": [
+512,
+512,
+117
+],
+"liver": 66,
+"kidney": 62,
+"pancreas": 36,
+"tumor_vox": 1296,
+"tumor_sl15": 6
+},
+"FLARE23_2075": {
+"shape": [
+512,
+512,
+94
+],
+"liver": 59,
+"kidney": 44,
+"pancreas": 30,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_2076": {
+"shape": [
+512,
+512,
+143
+],
+"liver": 68,
+"kidney": 47,
+"pancreas": 39,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_2079": {
+"shape": [
+512,
+512,
+53
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 20193,
+"tumor_sl15": 11
+},
+"FLARE23_2081": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 14620,
+"tumor_sl15": 24
+},
+"FLARE23_2082": {
+"shape": [
+512,
+512,
+361
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 165205,
+"tumor_sl15": 106
+},
+"FLARE23_2084": {
+"shape": [
+512,
+512,
+465
+],
+"liver": 105,
+"kidney": 105,
+"pancreas": 59,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_2088": {
+"shape": [
+512,
+512,
+139
+],
+"liver": 59,
+"kidney": 45,
+"pancreas": 39,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_2091": {
+"shape": [
+512,
+512,
+655
+],
+"liver": 162,
+"kidney": 128,
+"pancreas": 91,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_2092": {
+"shape": [
+512,
+512,
+836
+],
+"liver": 260,
+"kidney": 207,
+"pancreas": 180,
+"tumor_vox": 1034092,
+"tumor_sl15": 244
+},
+"FLARE23_2094": {
+"shape": [
+512,
+512,
+102
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 7223,
+"tumor_sl15": 6
+},
+"FLARE23_2097": {
+"shape": [
+512,
+512,
+106
+],
+"liver": 45,
+"kidney": 30,
+"pancreas": 20,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_2098": {
+"shape": [
+512,
+512,
+134
+],
+"liver": 68,
+"kidney": 47,
+"pancreas": 44,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_2101": {
+"shape": [
+512,
+512,
+151
+],
+"liver": 79,
+"kidney": 49,
+"pancreas": 34,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_2102": {
+"shape": [
+512,
+512,
+86
+],
+"liver": 39,
+"kidney": 22,
+"pancreas": 12,
+"tumor_vox": 4359,
+"tumor_sl15": 6
+},
+"FLARE23_2107": {
+"shape": [
+512,
+512,
+978
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 1688928,
+"tumor_sl15": 621
+},
+"FLARE23_2108": {
+"shape": [
+512,
+512,
+978
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 322845,
+"tumor_sl15": 249
+},
+"FLARE23_2111": {
+"shape": [
+512,
+512,
+391
+],
+"liver": 116,
+"kidney": 85,
+"pancreas": 50,
+"tumor_vox": 42904,
+"tumor_sl15": 31
+},
+"FLARE23_2112": {
+"shape": [
+512,
+512,
+852
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 206073,
+"tumor_sl15": 111
+},
+"FLARE23_2114": {
+"shape": [
+512,
+512,
+37
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 12034,
+"tumor_sl15": 7
+},
+"FLARE23_2117": {
+"shape": [
+512,
+512,
+670
+],
+"liver": 325,
+"kidney": 207,
+"pancreas": 132,
+"tumor_vox": 16889,
+"tumor_sl15": 44
+},
+"FLARE23_2120": {
+"shape": [
+512,
+512,
+89
+],
+"liver": 67,
+"kidney": 37,
+"pancreas": 39,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_2123": {
+"shape": [
+512,
+512,
+92
+],
+"liver": 58,
+"kidney": 48,
+"pancreas": 25,
+"tumor_vox": 2963,
+"tumor_sl15": 6
+},
+"FLARE23_2125": {
+"shape": [
+512,
+512,
+137
+],
+"liver": 100,
+"kidney": 90,
+"pancreas": 56,
+"tumor_vox": 2112,
+"tumor_sl15": 7
+},
+"FLARE23_2126": {
+"shape": [
+512,
+512,
+719
+],
+"liver": 352,
+"kidney": 255,
+"pancreas": 190,
+"tumor_vox": 250976,
+"tumor_sl15": 110
+},
+"FLARE23_2129": {
+"shape": [
+512,
+512,
+74
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 4600,
+"tumor_sl15": 7
+},
+"FLARE23_2130": {
+"shape": [
+512,
+512,
+861
+],
+"liver": 228,
+"kidney": 154,
+"pancreas": 100,
+"tumor_vox": 187743,
+"tumor_sl15": 141
+},
+"FLARE23_2133": {
+"shape": [
+512,
+512,
+46
+],
+"liver": 30,
+"kidney": 30,
+"pancreas": 10,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_2135": {
+"shape": [
+512,
+512,
+422
+],
+"liver": 117,
+"kidney": 79,
+"pancreas": 47,
+"tumor_vox": 79803,
+"tumor_sl15": 64
+},
+"FLARE23_2139": {
+"shape": [
+512,
+512,
+135
+],
+"liver": 54,
+"kidney": 43,
+"pancreas": 36,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_2140": {
+"shape": [
+512,
+512,
+52
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 5947,
+"tumor_sl15": 9
+},
+"FLARE23_2143": {
+"shape": [
+512,
+512,
+95
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 11724,
+"tumor_sl15": 10
+},
+"FLARE23_2145": {
+"shape": [
+512,
+512,
+836
+],
+"liver": 170,
+"kidney": 149,
+"pancreas": 90,
+"tumor_vox": 84270,
+"tumor_sl15": 132
+},
+"FLARE23_2149": {
+"shape": [
+512,
+512,
+357
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 10374,
+"tumor_sl15": 21
+},
+"FLARE23_2150": {
+"shape": [
+512,
+512,
+661
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 8833,
+"tumor_sl15": 21
+},
+"FLARE23_2153": {
+"shape": [
+512,
+512,
+107
+],
+"liver": 33,
+"kidney": 24,
+"pancreas": 19,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_2155": {
+"shape": [
+512,
+512,
+87
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 16590,
+"tumor_sl15": 12
+},
+"FLARE23_2156": {
+"shape": [
+512,
+512,
+340
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 8769,
+"tumor_sl15": 22
+},
+"FLARE23_2159": {
+"shape": [
+512,
+512,
+134
+],
+"liver": 69,
+"kidney": 52,
+"pancreas": 45,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_2161": {
+"shape": [
+512,
+512,
+209
+],
+"liver": 152,
+"kidney": 108,
+"pancreas": 81,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_2162": {
+"shape": [
+512,
+512,
+26
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 972,
+"tumor_sl15": 5
+},
+"FLARE23_2164": {
+"shape": [
+512,
+512,
+87
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 59140,
+"tumor_sl15": 15
+},
+"FLARE23_2167": {
+"shape": [
+512,
+512,
+144
+],
+"liver": 64,
+"kidney": 49,
+"pancreas": 36,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_2171": {
+"shape": [
+512,
+512,
+134
+],
+"liver": 66,
+"kidney": 52,
+"pancreas": 41,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_2172": {
+"shape": [
+512,
+512,
+103
+],
+"liver": 74,
+"kidney": 48,
+"pancreas": 35,
+"tumor_vox": 4295,
+"tumor_sl15": 8
+},
+"FLARE23_2177": {
+"shape": [
+512,
+512,
+51
+],
+"liver": 31,
+"kidney": 25,
+"pancreas": 15,
+"tumor_vox": 81078,
+"tumor_sl15": 21
+},
+"FLARE23_2178": {
+"shape": [
+512,
+512,
+34
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 2291,
+"tumor_sl15": 7
+},
+"FLARE23_2183": {
+"shape": [
+512,
+512,
+216
+],
+"liver": 191,
+"kidney": 103,
+"pancreas": 96,
+"tumor_vox": 0,
+"tumor_sl15": 0
+},
+"FLARE23_2185": {
+"shape": [
+512,
+512,
+104
+],
+"liver": 40,
+"kidney": 26,
+"pancreas": 13,
+"tumor_vox": 454,
+"tumor_sl15": 3
+},
+"FLARE23_2186": {
+"shape": [
+512,
+512,
+44
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 16685,
+"tumor_sl15": 8
+},
+"FLARE23_2190": {
+"shape": [
+512,
+512,
+856
+],
+"liver": 205,
+"kidney": 160,
+"pancreas": 112,
+"tumor_vox": 1455033,
+"tumor_sl15": 201
+},
+"FLARE23_2193": {
+"shape": [
+512,
+512,
+340
+],
+"liver": 0,
+"kidney": 0,
+"pancreas": 0,
+"tumor_vox": 11790,
+"tumor_sl15": 15
+},
+"FLARE23_2196": {
+"shape": [
+512,
+512,
+107
+],
+"liver": 38,
+"kidney": 25,
+"pancreas": 18,
+"tumor_vox": 7853,
+"tumor_sl15": 9
+},
+"FLARE23_2199": {
+"shape": [
+512,
+512,
+81
+],
+"liver": 68,
+"kidney": 54,
+"pancreas": 38,
+"tumor_vox": 0,
+"tumor_sl15": 0
+}
+}

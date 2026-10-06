@@ -1,0 +1,32 @@
+{
+ "note": "Which TotalSegmentator release drew the round-2 autonomous organ masks? The installed version was recorded only on the compute cluster. Test: re-run TotalSegmentator here with round 2's call (python API, fast=True, ml=True, roi_subset = liver, kidney_left, kidney_right, pancreas, spleen, stomach, colon) on two showcase CTs from the two TotalSegmentator batches (pancreas_125: single-organ batch; FLARE23_0405: the 10-01 FLARE23 run), map the output into the shipped label scheme as combine_ts_promptfree.py does, and count voxels that differ from the shipped round-2 masks (round2_2026-10-01/masks/showcase/). Runs here are deterministic (two runs of 2.18.0: 0 voxels).",
+ "environment_here": {
+  "nnunetv2": "2.8.1",
+  "torch": "2.5.1+cu121",
+  "weights": "TotalSegmentator v2 3 mm 'total' (fast)"
+ },
+ "organ_voxels_shipped": {
+  "pancreas_125": 42022,
+  "FLARE23_0405": 3046705
+ },
+ "voxels_differing_from_shipped": {
+  "2.10.0": {
+   "pancreas_125": 1373,
+   "FLARE23_0405": 29856
+  },
+  "2.17.0": {
+   "pancreas_125": 67,
+   "FLARE23_0405": 637
+  },
+  "2.18.0": {
+   "pancreas_125": 27,
+   "FLARE23_0405": 729
+  }
+ },
+ "pypi_release_dates": {
+  "2.10.0": "2025-06-24",
+  "2.17.0": "2026-07-29",
+  "2.18.0": "2026-08-12 (latest)"
+ },
+ "conclusion": "The output is version-sensitive (2.10.0 is 20-50x further off), and the shipped masks match the 2.17/2.18 releases to within 0.02-0.16% of organ voxels. Neither reproduces them exactly, and the two cases do not agree on which is closer, so the residual is environment-level (nnU-Net / torch / GPU) and the exact patch cannot be identified from the outputs. It remains readable on the cluster (pip show TotalSegmentator)."
+}

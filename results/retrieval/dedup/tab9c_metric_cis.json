@@ -3,7 +3,7 @@
  "n_queries": 479,
  "n_flare_corpus": 1196,
  "B_boot": 5000,
- "note": "Per-metric bootstrap CIs for the Table 9 stratum (c) proposed row (YL 09-20 ask: \"updated\nnq, P@5, P@10, mAP, CIs, and the (iii') comparison\" for FLARE23 -> single-organ after the\naxis-normalized re-dedup).\n\nThe shipped retrieval_tab9_stratified.json carries point metrics and the PAIRED-delta CIs\n(its convention); this adds plain per-metric bootstrap CIs for the (ii) row on the same\nper-query values.  Standalone RNG (seed 20260920) so the frozen table JSONs stay byte-stable\n- do NOT fold extra draws into retrieval_tables_789's shared rng.\n\n  VKG_FLARE_CORPUS=corpora/corpus_flare23_kg_dedup.json python tab9c_metric_cis.py\n-> results/retrieval/dedup/tab9c_metric_cis.json",
+ "note": "Per-metric bootstrap CIs for the Table 9 stratum (c) proposed row (the study lead 09-20 ask: \"updated\nnq, P@5, P@10, mAP, CIs, and the (iii') comparison\" for FLARE23 -> single-organ after the\naxis-normalized re-dedup).\n\nThe shipped retrieval_tab9_stratified.json carries point metrics and the PAIRED-delta CIs\n(its convention); this adds plain per-metric bootstrap CIs for the (ii) row on the same\nper-query values.  Standalone RNG (seed 20260920) so the frozen table JSONs stay byte-stable\n- do NOT fold extra draws into retrieval_tables_789's shared rng.\n\n  VKG_FLARE_CORPUS=corpora/corpus_flare23_kg_dedup.json python tab9c_metric_cis.py\n-> results/retrieval/dedup/tab9c_metric_cis.json",
  "metrics": {
   "P@5": {
    "point": 0.533,

@@ -1,0 +1,1507 @@
+{
+ "note": "Prompt-free tumor arm re-scored on the shared 157-scan cohort with the complete twin census (the study lead 10-03, the pipeline team item 7).\n\nCohort: the round-2 held-out TEST lists of sam3_tumor_generic (global split) -- LiTS 21, MSD 56, KiTS 36, FLARE23 54\n= 167 scored volumes -- minus the 10 FLARE23 test volumes that ARE a LiTS/MSD/KiTS test volume (same CT, voxel- or\nheader-matched in the complete census), which were scored twice. Each such scan is counted once, under its\nsingle-organ collection (the volume the collection's own annotation was drawn on) -> 157 unique scans.\n\nExposure (complete census, results/audit/promptfree_twin_exposure_2026-10-03.json): a scan is EXPOSED when any twin\nof it sits in the generic model's TRAIN or VAL split. PRIMARY = twin-clean scans; SECONDARY = all 157.\nMetrics per scan come unchanged from results/segmentation/promptfree_round2_2026-10-01.json (raw = every kept slice;\ngated = components touching the TotalSegmentator host organ dilated 5 mm). Means with percentile-bootstrap 95 % CIs\nover scans (2,000 resamples, seed 0), per collection and pooled.\n\n  python rescore_cohort157.py -> results/segmentation/cohort157_rescore_2026-10-03.json",
+ "n_scans": 157,
+ "dropped_duplicate_flare23_scans": [
+  {
+   "flare23": "FLARE23_0037",
+   "same_scan_as": "volume-70"
+  },
+  {
+   "flare23": "FLARE23_0097",
+   "same_scan_as": "case_00128"
+  },
+  {
+   "flare23": "FLARE23_0120",
+   "same_scan_as": "volume-21"
+  },
+  {
+   "flare23": "FLARE23_0156",
+   "same_scan_as": "pancreas_137"
+  },
+  {
+   "flare23": "FLARE23_0283",
+   "same_scan_as": "pancreas_327"
+  },
+  {
+   "flare23": "FLARE23_0886",
+   "same_scan_as": "case_00039"
+  },
+  {
+   "flare23": "FLARE23_1027",
+   "same_scan_as": "volume-76"
+  },
+  {
+   "flare23": "FLARE23_1274",
+   "same_scan_as": "case_00021"
+  },
+  {
+   "flare23": "FLARE23_1643",
+   "same_scan_as": "pancreas_404"
+  },
+  {
+   "flare23": "FLARE23_1867",
+   "same_scan_as": "pancreas_315"
+  }
+ ],
+ "per_collection": {
+  "lits": {
+   "primary_twin_clean": {
+    "n": 14,
+    "tumor_raw": {
+     "dice": 0.3059,
+     "dice_ci95": [
+      0.1789,
+      0.4365
+     ],
+     "dice_median": 0.3553,
+     "nsd_2mm": 0.1617,
+     "hd95_mm": 258.18,
+     "components": 166.9286,
+     "n_scored": 14
+    },
+    "tumor_gated": {
+     "dice": 0.5135,
+     "dice_ci95": [
+      0.3409,
+      0.6656
+     ],
+     "dice_median": 0.561,
+     "nsd_2mm": 0.3959,
+     "hd95_mm": 75.4893,
+     "components": 53.2143,
+     "n_scored": 14
+    }
+   },
+   "secondary_all": {
+    "n": 21,
+    "tumor_raw": {
+     "dice": 0.2903,
+     "dice_ci95": [
+      0.1848,
+      0.402
+     ],
+     "dice_median": 0.2764,
+     "nsd_2mm": 0.1586,
+     "hd95_mm": 262.52,
+     "components": 165.7143,
+     "n_scored": 21
+    },
+    "tumor_gated": {
+     "dice": 0.4931,
+     "dice_ci95": [
+      0.3667,
+      0.6125
+     ],
+     "dice_median": 0.5304,
+     "nsd_2mm": 0.3714,
+     "hd95_mm": 75.5514,
+     "components": 50.8571,
+     "n_scored": 21
+    }
+   },
+   "n_exposed": 7
+  },
+  "msd": {
+   "primary_twin_clean": {
+    "n": 39,
+    "tumor_raw": {
+     "dice": 0.1536,
+     "dice_ci95": [
+      0.1148,
+      0.1961
+     ],
+     "dice_median": 0.1209,
+     "nsd_2mm": 0.0833,
+     "hd95_mm": 145.401,
+     "components": 58.1026,
+     "n_scored": 39
+    },
+    "tumor_gated": {
+     "dice": 0.3376,
+     "dice_ci95": [
+      0.2736,
+      0.4023
+     ],
+     "dice_median": 0.3403,
+     "nsd_2mm": 0.2433,
+     "hd95_mm": 70.5151,
+     "components": 6.4615,
+     "n_scored": 39
+    }
+   },
+   "secondary_all": {
+    "n": 56,
+    "tumor_raw": {
+     "dice": 0.1663,
+     "dice_ci95": [
+      0.1356,
+      0.1991
+     ],
+     "dice_median": 0.1511,
+     "nsd_2mm": 0.0886,
+     "hd95_mm": 146.1932,
+     "components": 54.8036,
+     "n_scored": 56
+    },
+    "tumor_gated": {
+     "dice": 0.3496,
+     "dice_ci95": [
+      0.2984,
+      0.4022
+     ],
+     "dice_median": 0.3412,
+     "nsd_2mm": 0.2499,
+     "hd95_mm": 73.4566,
+     "components": 6.3393,
+     "n_scored": 56
+    }
+   },
+   "n_exposed": 17
+  },
+  "kits": {
+   "primary_twin_clean": {
+    "n": 19,
+    "tumor_raw": {
+     "dice": 0.4195,
+     "dice_ci95": [
+      0.2985,
+      0.5521
+     ],
+     "dice_median": 0.3192,
+     "nsd_2mm": 0.2145,
+     "hd95_mm": 229.9784,
+     "components": 88.3684,
+     "n_scored": 19
+    },
+    "tumor_gated": {
+     "dice": 0.6726,
+     "dice_ci95": [
+      0.557,
+      0.7835
+     ],
+     "dice_median": 0.7578,
+     "nsd_2mm": 0.4642,
+     "hd95_mm": 118.4211,
+     "components": 22.5789,
+     "n_scored": 19
+    }
+   },
+   "secondary_all": {
+    "n": 36,
+    "tumor_raw": {
+     "dice": 0.3995,
+     "dice_ci95": [
+      0.3037,
+      0.5014
+     ],
+     "dice_median": 0.3015,
+     "nsd_2mm": 0.2146,
+     "hd95_mm": 237.8481,
+     "components": 87.3056,
+     "n_scored": 36
+    },
+    "tumor_gated": {
+     "dice": 0.639,
+     "dice_ci95": [
+      0.5439,
+      0.7267
+     ],
+     "dice_median": 0.6927,
+     "nsd_2mm": 0.4492,
+     "hd95_mm": 127.035,
+     "components": 19.6667,
+     "n_scored": 36
+    }
+   },
+   "n_exposed": 17
+  },
+  "flare23": {
+   "primary_twin_clean": {
+    "n": 4,
+    "tumor_raw": {
+     "dice": 0.1976,
+     "dice_ci95": [
+      0.0018,
+      0.5688
+     ],
+     "dice_median": 0.0161,
+     "nsd_2mm": 0.1011,
+     "hd95_mm": 309.9325,
+     "components": 191.75,
+     "n_scored": 4
+    },
+    "tumor_gated": {
+     "dice": 0.2295,
+     "dice_ci95": [
+      0.0028,
+      0.6595
+     ],
+     "dice_median": 0.0194,
+     "nsd_2mm": 0.1584,
+     "hd95_mm": 230.6025,
+     "components": 87.0,
+     "n_scored": 4
+    }
+   },
+   "secondary_all": {
+    "n": 44,
+    "tumor_raw": {
+     "dice": 0.3099,
+     "dice_ci95": [
+      0.2317,
+      0.3883
+     ],
+     "dice_median": 0.2273,
+     "nsd_2mm": 0.1655,
+     "hd95_mm": 205.7516,
+     "components": 103.1591,
+     "n_scored": 44
+    },
+    "tumor_gated": {
+     "dice": 0.3433,
+     "dice_ci95": [
+      0.2641,
+      0.4227
+     ],
+     "dice_median": 0.3057,
+     "nsd_2mm": 0.1957,
+     "hd95_mm": 185.4245,
+     "components": 65.0909,
+     "n_scored": 44
+    }
+   },
+   "n_exposed": 40
+  }
+ },
+ "pooled": {
+  "primary_twin_clean": {
+   "n": 76,
+   "tumor_raw": {
+    "dice": 0.2504,
+    "dice_ci95": [
+     0.1962,
+     0.3069
+    ],
+    "dice_median": 0.1825,
+    "nsd_2mm": 0.1315,
+    "hd95_mm": 195.98,
+    "components": 92.75,
+    "n_scored": 76
+   },
+   "tumor_gated": {
+    "dice": 0.4481,
+    "dice_ci95": [
+     0.3829,
+     0.513
+    ],
+    "dice_median": 0.4307,
+    "nsd_2mm": 0.3222,
+    "hd95_mm": 91.8336,
+    "components": 23.3421,
+    "n_scored": 76
+   }
+  },
+  "secondary_all": {
+   "n": 157,
+   "tumor_raw": {
+    "dice": 0.2766,
+    "dice_ci95": [
+     0.2367,
+     0.3157
+    ],
+    "dice_median": 0.2087,
+    "nsd_2mm": 0.1484,
+    "hd95_mm": 199.4608,
+    "components": 90.6433,
+    "n_scored": 157
+   },
+   "tumor_gated": {
+    "dice": 0.4334,
+    "dice_ci95": [
+     0.3884,
+     0.4754
+    ],
+    "dice_median": 0.3986,
+    "nsd_2mm": 0.2966,
+    "hd95_mm": 117.4018,
+    "components": 31.8153,
+    "n_scored": 157
+   }
+  },
+  "n_exposed": 81
+ },
+ "flare23_54_scan_table": {
+  "note": "FLARE23 global-split test list, all 54 scans; twin-clean = no twin in the generic model's TRAIN/VAL under the complete census",
+  "primary_twin_clean": {
+   "n": 14,
+   "tumor_raw": {
+    "dice": 0.2193,
+    "dice_ci95": [
+     0.1003,
+     0.3607
+    ],
+    "dice_median": 0.0978,
+    "nsd_2mm": 0.1155,
+    "hd95_mm": 241.2993,
+    "components": 117.4286,
+    "n_scored": 14
+   },
+   "tumor_gated": {
+    "dice": 0.2565,
+    "dice_ci95": [
+     0.1267,
+     0.4068
+    ],
+    "dice_median": 0.1478,
+    "nsd_2mm": 0.1528,
+    "hd95_mm": 209.7914,
+    "components": 64.7143,
+    "n_scored": 14
+   }
+  },
+  "secondary_all": {
+   "n": 54,
+   "tumor_raw": {
+    "dice": 0.2947,
+    "dice_ci95": [
+     0.2284,
+     0.3665
+    ],
+    "dice_median": 0.2201,
+    "nsd_2mm": 0.1573,
+    "hd95_mm": 207.2506,
+    "components": 100.2963,
+    "n_scored": 54
+   },
+   "tumor_gated": {
+    "dice": 0.3293,
+    "dice_ci95": [
+     0.2615,
+     0.4031
+    ],
+    "dice_median": 0.2616,
+    "nsd_2mm": 0.1873,
+    "hd95_mm": 188.3954,
+    "components": 63.3704,
+    "n_scored": 54
+   }
+  },
+  "twin_clean_cases": [
+   "FLARE23_0037",
+   "FLARE23_0097",
+   "FLARE23_0120",
+   "FLARE23_0156",
+   "FLARE23_0239",
+   "FLARE23_0283",
+   "FLARE23_0853",
+   "FLARE23_0886",
+   "FLARE23_1027",
+   "FLARE23_1274",
+   "FLARE23_1334",
+   "FLARE23_1347",
+   "FLARE23_1643",
+   "FLARE23_1867"
+  ]
+ },
+ "cases": [
+  {
+   "case": "volume-101",
+   "dataset": "lits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.4343,
+   "tumor_gated_dice": 0.8215
+  },
+  {
+   "case": "volume-11",
+   "dataset": "lits",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.0595,
+   "tumor_gated_dice": 0.1373
+  },
+  {
+   "case": "volume-110",
+   "dataset": "lits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.4353,
+   "tumor_gated_dice": 0.7442
+  },
+  {
+   "case": "volume-113",
+   "dataset": "lits",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.3023,
+   "tumor_gated_dice": 0.6674
+  },
+  {
+   "case": "volume-116",
+   "dataset": "lits",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.4581,
+   "tumor_gated_dice": 0.5725
+  },
+  {
+   "case": "volume-19",
+   "dataset": "lits",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.1051,
+   "tumor_gated_dice": 0.1699
+  },
+  {
+   "case": "volume-21",
+   "dataset": "lits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.0466,
+   "tumor_gated_dice": 0.4636
+  },
+  {
+   "case": "volume-24",
+   "dataset": "lits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.0107,
+   "tumor_gated_dice": 0.0542
+  },
+  {
+   "case": "volume-37",
+   "dataset": "lits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.4569,
+   "tumor_gated_dice": 0.5304
+  },
+  {
+   "case": "volume-43",
+   "dataset": "lits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.0097,
+   "tumor_gated_dice": 0.0099
+  },
+  {
+   "case": "volume-44",
+   "dataset": "lits",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.8166,
+   "tumor_gated_dice": 0.82
+  },
+  {
+   "case": "volume-49",
+   "dataset": "lits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.0618,
+   "tumor_gated_dice": 0.1042
+  },
+  {
+   "case": "volume-54",
+   "dataset": "lits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.0144,
+   "tumor_gated_dice": 0.0702
+  },
+  {
+   "case": "volume-68",
+   "dataset": "lits",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.0316,
+   "tumor_gated_dice": 0.2874
+  },
+  {
+   "case": "volume-70",
+   "dataset": "lits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.5576,
+   "tumor_gated_dice": 0.8484
+  },
+  {
+   "case": "volume-75",
+   "dataset": "lits",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.0408,
+   "tumor_gated_dice": 0.5121
+  },
+  {
+   "case": "volume-76",
+   "dataset": "lits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.7455,
+   "tumor_gated_dice": 0.8738
+  },
+  {
+   "case": "volume-80",
+   "dataset": "lits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.6819,
+   "tumor_gated_dice": 0.8708
+  },
+  {
+   "case": "volume-82",
+   "dataset": "lits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.2764,
+   "tumor_gated_dice": 0.5915
+  },
+  {
+   "case": "volume-93",
+   "dataset": "lits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.4558,
+   "tumor_gated_dice": 0.6951
+  },
+  {
+   "case": "volume-99",
+   "dataset": "lits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.0952,
+   "tumor_gated_dice": 0.511
+  },
+  {
+   "case": "pancreas_015",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.2297,
+   "tumor_gated_dice": 0.3986
+  },
+  {
+   "case": "pancreas_019",
+   "dataset": "msd",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.2995,
+   "tumor_gated_dice": 0.4789
+  },
+  {
+   "case": "pancreas_041",
+   "dataset": "msd",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.0734,
+   "tumor_gated_dice": 0.2241
+  },
+  {
+   "case": "pancreas_045",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.5388,
+   "tumor_gated_dice": 0.6931
+  },
+  {
+   "case": "pancreas_048",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.1802,
+   "tumor_gated_dice": 0.5794
+  },
+  {
+   "case": "pancreas_049",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.2232,
+   "tumor_gated_dice": 0.3834
+  },
+  {
+   "case": "pancreas_056",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.1162,
+   "tumor_gated_dice": 0.2689
+  },
+  {
+   "case": "pancreas_064",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.4534,
+   "tumor_gated_dice": 0.7008
+  },
+  {
+   "case": "pancreas_078",
+   "dataset": "msd",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.1228,
+   "tumor_gated_dice": 0.2415
+  },
+  {
+   "case": "pancreas_083",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.3346,
+   "tumor_gated_dice": 0.4417
+  },
+  {
+   "case": "pancreas_084",
+   "dataset": "msd",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.0702,
+   "tumor_gated_dice": 0.1597
+  },
+  {
+   "case": "pancreas_096",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.048,
+   "tumor_gated_dice": 0.5799
+  },
+  {
+   "case": "pancreas_101",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.0319,
+   "tumor_gated_dice": 0.4824
+  },
+  {
+   "case": "pancreas_107",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.1848,
+   "tumor_gated_dice": 0.3669
+  },
+  {
+   "case": "pancreas_110",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.0729,
+   "tumor_gated_dice": 0.1558
+  },
+  {
+   "case": "pancreas_119",
+   "dataset": "msd",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.5134,
+   "tumor_gated_dice": 0.7945
+  },
+  {
+   "case": "pancreas_122",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.1178,
+   "tumor_gated_dice": 0.4264
+  },
+  {
+   "case": "pancreas_125",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.3145,
+   "tumor_gated_dice": 0.6175
+  },
+  {
+   "case": "pancreas_127",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.2316,
+   "tumor_gated_dice": 0.6707
+  },
+  {
+   "case": "pancreas_137",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.2477,
+   "tumor_gated_dice": 0.3375
+  },
+  {
+   "case": "pancreas_149",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.3175,
+   "tumor_gated_dice": 0.5044
+  },
+  {
+   "case": "pancreas_157",
+   "dataset": "msd",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.21,
+   "tumor_gated_dice": 0.3422
+  },
+  {
+   "case": "pancreas_172",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.0115,
+   "tumor_gated_dice": 0.1
+  },
+  {
+   "case": "pancreas_191",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.1209,
+   "tumor_gated_dice": 0.312
+  },
+  {
+   "case": "pancreas_200",
+   "dataset": "msd",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.2157,
+   "tumor_gated_dice": 0.3955
+  },
+  {
+   "case": "pancreas_201",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.2901,
+   "tumor_gated_dice": 0.4256
+  },
+  {
+   "case": "pancreas_210",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.16,
+   "tumor_gated_dice": 0.3159
+  },
+  {
+   "case": "pancreas_218",
+   "dataset": "msd",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.1512,
+   "tumor_gated_dice": 0.3508
+  },
+  {
+   "case": "pancreas_226",
+   "dataset": "msd",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.1727,
+   "tumor_gated_dice": 0.3206
+  },
+  {
+   "case": "pancreas_235",
+   "dataset": "msd",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.1163,
+   "tumor_gated_dice": 0.3033
+  },
+  {
+   "case": "pancreas_239",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.0173,
+   "tumor_gated_dice": 0.0229
+  },
+  {
+   "case": "pancreas_241",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.2625,
+   "tumor_gated_dice": 0.435
+  },
+  {
+   "case": "pancreas_242",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.0018,
+   "tumor_gated_dice": 0.0121
+  },
+  {
+   "case": "pancreas_256",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.304,
+   "tumor_gated_dice": 0.4779
+  },
+  {
+   "case": "pancreas_258",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.0401,
+   "tumor_gated_dice": 0.0591
+  },
+  {
+   "case": "pancreas_259",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.0862,
+   "tumor_gated_dice": 0.2307
+  },
+  {
+   "case": "pancreas_275",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.1399,
+   "tumor_gated_dice": 0.7079
+  },
+  {
+   "case": "pancreas_285",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.0892,
+   "tumor_gated_dice": 0.1738
+  },
+  {
+   "case": "pancreas_289",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.1509,
+   "tumor_gated_dice": 0.3403
+  },
+  {
+   "case": "pancreas_301",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.0273,
+   "tumor_gated_dice": 0.2144
+  },
+  {
+   "case": "pancreas_315",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.1015,
+   "tumor_gated_dice": 0.3854
+  },
+  {
+   "case": "pancreas_327",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.1568,
+   "tumor_gated_dice": 0.2638
+  },
+  {
+   "case": "pancreas_330",
+   "dataset": "msd",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.3597,
+   "tumor_gated_dice": 0.6986
+  },
+  {
+   "case": "pancreas_336",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.2281,
+   "tumor_gated_dice": 0.3807
+  },
+  {
+   "case": "pancreas_339",
+   "dataset": "msd",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.1629,
+   "tumor_gated_dice": 0.3027
+  },
+  {
+   "case": "pancreas_346",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.0294,
+   "tumor_gated_dice": 0.0
+  },
+  {
+   "case": "pancreas_348",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.0626,
+   "tumor_gated_dice": 0.1359
+  },
+  {
+   "case": "pancreas_356",
+   "dataset": "msd",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.0829,
+   "tumor_gated_dice": 0.3149
+  },
+  {
+   "case": "pancreas_366",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.0279,
+   "tumor_gated_dice": 0.2861
+  },
+  {
+   "case": "pancreas_369",
+   "dataset": "msd",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.2019,
+   "tumor_gated_dice": 0.4031
+  },
+  {
+   "case": "pancreas_377",
+   "dataset": "msd",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.3289,
+   "tumor_gated_dice": 0.563
+  },
+  {
+   "case": "pancreas_378",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.0057,
+   "tumor_gated_dice": 0.0123
+  },
+  {
+   "case": "pancreas_393",
+   "dataset": "msd",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.2303,
+   "tumor_gated_dice": 0.3941
+  },
+  {
+   "case": "pancreas_399",
+   "dataset": "msd",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.0101,
+   "tumor_gated_dice": 0.1239
+  },
+  {
+   "case": "pancreas_404",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.0328,
+   "tumor_gated_dice": 0.2675
+  },
+  {
+   "case": "pancreas_418",
+   "dataset": "msd",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.0,
+   "tumor_gated_dice": 0.0003
+  },
+  {
+   "case": "case_00006",
+   "dataset": "kits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.1638,
+   "tumor_gated_dice": 0.6277
+  },
+  {
+   "case": "case_00008",
+   "dataset": "kits",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.8498,
+   "tumor_gated_dice": 0.9131
+  },
+  {
+   "case": "case_00017",
+   "dataset": "kits",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.0826,
+   "tumor_gated_dice": 0.306
+  },
+  {
+   "case": "case_00018",
+   "dataset": "kits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.2326,
+   "tumor_gated_dice": 0.7578
+  },
+  {
+   "case": "case_00021",
+   "dataset": "kits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.3192,
+   "tumor_gated_dice": 0.3984
+  },
+  {
+   "case": "case_00024",
+   "dataset": "kits",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.6772,
+   "tumor_gated_dice": 0.9123
+  },
+  {
+   "case": "case_00030",
+   "dataset": "kits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.9506,
+   "tumor_gated_dice": 0.9567
+  },
+  {
+   "case": "case_00035",
+   "dataset": "kits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.2081,
+   "tumor_gated_dice": 0.7862
+  },
+  {
+   "case": "case_00039",
+   "dataset": "kits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.0483,
+   "tumor_gated_dice": 0.223
+  },
+  {
+   "case": "case_00042",
+   "dataset": "kits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.9685,
+   "tumor_gated_dice": 0.9803
+  },
+  {
+   "case": "case_00043",
+   "dataset": "kits",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.1384,
+   "tumor_gated_dice": 0.615
+  },
+  {
+   "case": "case_00057",
+   "dataset": "kits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.7044,
+   "tumor_gated_dice": 0.7747
+  },
+  {
+   "case": "case_00060",
+   "dataset": "kits",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.3981,
+   "tumor_gated_dice": 0.7266
+  },
+  {
+   "case": "case_00067",
+   "dataset": "kits",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.9703,
+   "tumor_gated_dice": 0.9763
+  },
+  {
+   "case": "case_00075",
+   "dataset": "kits",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.0691,
+   "tumor_gated_dice": 0.1736
+  },
+  {
+   "case": "case_00079",
+   "dataset": "kits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.8247,
+   "tumor_gated_dice": 0.9136
+  },
+  {
+   "case": "case_00083",
+   "dataset": "kits",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.2139,
+   "tumor_gated_dice": 0.3142
+  },
+  {
+   "case": "case_00086",
+   "dataset": "kits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.3124,
+   "tumor_gated_dice": 0.6697
+  },
+  {
+   "case": "case_00087",
+   "dataset": "kits",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.2087,
+   "tumor_gated_dice": 0.6686
+  },
+  {
+   "case": "case_00090",
+   "dataset": "kits",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.8379,
+   "tumor_gated_dice": 0.8921
+  },
+  {
+   "case": "case_00092",
+   "dataset": "kits",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.8171,
+   "tumor_gated_dice": 0.9219
+  },
+  {
+   "case": "case_00095",
+   "dataset": "kits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.5397,
+   "tumor_gated_dice": 0.8396
+  },
+  {
+   "case": "case_00103",
+   "dataset": "kits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.0243,
+   "tumor_gated_dice": 0.0764
+  },
+  {
+   "case": "case_00105",
+   "dataset": "kits",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.2906,
+   "tumor_gated_dice": 0.843
+  },
+  {
+   "case": "case_00120",
+   "dataset": "kits",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.0188,
+   "tumor_gated_dice": 0.1273
+  },
+  {
+   "case": "case_00124",
+   "dataset": "kits",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.0913,
+   "tumor_gated_dice": 0.4782
+  },
+  {
+   "case": "case_00128",
+   "dataset": "kits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.1328,
+   "tumor_gated_dice": 0.7157
+  },
+  {
+   "case": "case_00146",
+   "dataset": "kits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.2718,
+   "tumor_gated_dice": 0.5396
+  },
+  {
+   "case": "case_00148",
+   "dataset": "kits",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.5778,
+   "tumor_gated_dice": 0.6488
+  },
+  {
+   "case": "case_00149",
+   "dataset": "kits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.6891,
+   "tumor_gated_dice": 0.9282
+  },
+  {
+   "case": "case_00152",
+   "dataset": "kits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.2815,
+   "tumor_gated_dice": 0.4011
+  },
+  {
+   "case": "case_00154",
+   "dataset": "kits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.444,
+   "tumor_gated_dice": 0.7983
+  },
+  {
+   "case": "case_00160",
+   "dataset": "kits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.3852,
+   "tumor_gated_dice": 0.5255
+  },
+  {
+   "case": "case_00162",
+   "dataset": "kits",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.4694,
+   "tumor_gated_dice": 0.866
+  },
+  {
+   "case": "case_00165",
+   "dataset": "kits",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.0078,
+   "tumor_gated_dice": 0.0495
+  },
+  {
+   "case": "case_00175",
+   "dataset": "kits",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.1612,
+   "tumor_gated_dice": 0.6588
+  },
+  {
+   "case": "FLARE23_0236",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.1162,
+   "tumor_gated_dice": 0.1309
+  },
+  {
+   "case": "FLARE23_0239",
+   "dataset": "flare23",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.7574,
+   "tumor_gated_dice": 0.8779
+  },
+  {
+   "case": "FLARE23_0262",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.4533,
+   "tumor_gated_dice": 0.4699
+  },
+  {
+   "case": "FLARE23_0357",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.471,
+   "tumor_gated_dice": 0.4832
+  },
+  {
+   "case": "FLARE23_0405",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.874,
+   "tumor_gated_dice": 0.8754
+  },
+  {
+   "case": "FLARE23_0431",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.2879,
+   "tumor_gated_dice": 0.2918
+  },
+  {
+   "case": "FLARE23_0466",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.2345,
+   "tumor_gated_dice": 0.2619
+  },
+  {
+   "case": "FLARE23_0536",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.5184,
+   "tumor_gated_dice": 0.5285
+  },
+  {
+   "case": "FLARE23_0572",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.1755,
+   "tumor_gated_dice": 0.1862
+  },
+  {
+   "case": "FLARE23_0680",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.6513,
+   "tumor_gated_dice": 0.7191
+  },
+  {
+   "case": "FLARE23_0766",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.5547,
+   "tumor_gated_dice": 0.5838
+  },
+  {
+   "case": "FLARE23_0775",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.486,
+   "tumor_gated_dice": 0.4981
+  },
+  {
+   "case": "FLARE23_0797",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.1911,
+   "tumor_gated_dice": 0.199
+  },
+  {
+   "case": "FLARE23_0853",
+   "dataset": "flare23",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.0293,
+   "tumor_gated_dice": 0.0344
+  },
+  {
+   "case": "FLARE23_0896",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.1206,
+   "tumor_gated_dice": 0.4047
+  },
+  {
+   "case": "FLARE23_0927",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.0532,
+   "tumor_gated_dice": 0.0549
+  },
+  {
+   "case": "FLARE23_1087",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.3589,
+   "tumor_gated_dice": 0.501
+  },
+  {
+   "case": "FLARE23_1199",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.3509,
+   "tumor_gated_dice": 0.4078
+  },
+  {
+   "case": "FLARE23_1233",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.0044,
+   "tumor_gated_dice": 0.0046
+  },
+  {
+   "case": "FLARE23_1250",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.1683,
+   "tumor_gated_dice": 0.2156
+  },
+  {
+   "case": "FLARE23_1313",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.8311,
+   "tumor_gated_dice": 0.8406
+  },
+  {
+   "case": "FLARE23_1334",
+   "dataset": "flare23",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.0007,
+   "tumor_gated_dice": 0.0012
+  },
+  {
+   "case": "FLARE23_1347",
+   "dataset": "flare23",
+   "exposed_via_twin": false,
+   "tumor_raw_dice": 0.0029,
+   "tumor_gated_dice": 0.0044
+  },
+  {
+   "case": "FLARE23_1363",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.3023,
+   "tumor_gated_dice": 0.3197
+  },
+  {
+   "case": "FLARE23_1373",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.7625,
+   "tumor_gated_dice": 0.7807
+  },
+  {
+   "case": "FLARE23_1448",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.1499,
+   "tumor_gated_dice": 0.2107
+  },
+  {
+   "case": "FLARE23_1454",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.085,
+   "tumor_gated_dice": 0.1068
+  },
+  {
+   "case": "FLARE23_1466",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.0569,
+   "tumor_gated_dice": 0.0603
+  },
+  {
+   "case": "FLARE23_1564",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.3019,
+   "tumor_gated_dice": 0.336
+  },
+  {
+   "case": "FLARE23_1618",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.9008,
+   "tumor_gated_dice": 0.9082
+  },
+  {
+   "case": "FLARE23_1686",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.3298,
+   "tumor_gated_dice": 0.4
+  },
+  {
+   "case": "FLARE23_1722",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.1418,
+   "tumor_gated_dice": 0.1434
+  },
+  {
+   "case": "FLARE23_1741",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.3563,
+   "tumor_gated_dice": 0.3875
+  },
+  {
+   "case": "FLARE23_1899",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.2032,
+   "tumor_gated_dice": 0.2155
+  },
+  {
+   "case": "FLARE23_1965",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.3992,
+   "tumor_gated_dice": 0.4097
+  },
+  {
+   "case": "FLARE23_1998",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.22,
+   "tumor_gated_dice": 0.3541
+  },
+  {
+   "case": "FLARE23_2003",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.0757,
+   "tumor_gated_dice": 0.1008
+  },
+  {
+   "case": "FLARE23_2009",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.1216,
+   "tumor_gated_dice": 0.131
+  },
+  {
+   "case": "FLARE23_2065",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.0898,
+   "tumor_gated_dice": 0.0954
+  },
+  {
+   "case": "FLARE23_2111",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.2202,
+   "tumor_gated_dice": 0.2613
+  },
+  {
+   "case": "FLARE23_2117",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.029,
+   "tumor_gated_dice": 0.0292
+  },
+  {
+   "case": "FLARE23_2135",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.287,
+   "tumor_gated_dice": 0.3549
+  },
+  {
+   "case": "FLARE23_2177",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.899,
+   "tumor_gated_dice": 0.9116
+  },
+  {
+   "case": "FLARE23_2185",
+   "dataset": "flare23",
+   "exposed_via_twin": true,
+   "tumor_raw_dice": 0.0113,
+   "tumor_gated_dice": 0.015
+  }
+ ]
+}

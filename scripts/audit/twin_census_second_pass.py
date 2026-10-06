@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Second pass of the twin census (2026-09-22): confirm the eleven KiTS23<->FLARE23 same-scan
-pairs found by KS's CT-voxel-equality scan and fold them into the census artifact.
+pairs found by the co-author's CT-voxel-equality scan and fold them into the census artifact.
 
-Provenance: KS's `scan_flare23_twins.py` (branch `abdomen/ipkg`, artifact
+Provenance: the co-author's `scan_flare23_twins.py` (branch `abdomen/ipkg`, artifact
 `paper/flare23_twin_scan_2026-09-20.json`) indexes KiTS23/Task03/Task07 CTs by canonical (RAS)
 shape+spacing and compares candidate volumes VOXEL FOR VOXEL (`np.array_equal`) — an
 annotation-independent test that is strictly stronger than the first pass's label-based
@@ -82,15 +82,15 @@ def main():
     cen = json.load(open(CENSUS))
     cen["second_pass_2026-09-22"] = {
         "note": __doc__.strip(),
-        "source": "KS CT-voxel-equality scan (abdomen/ipkg: paper/flare23_twin_scan_2026-09-20.json; "
-                  "310 cross-collection same-scan pairs over the 576 UD-masked FLARE23 studies; 20 KiTS "
+        "source": "the co-author CT-voxel-equality scan (abdomen/ipkg: paper/flare23_twin_scan_2026-09-20.json; "
+                  "310 cross-collection same-scan pairs over the 576 pipeline-masked FLARE23 studies; 20 KiTS "
                   "pairs in-pool of which 9 were removed by the first pass)",
         "first_pass_blind_spot": "label-based screen (organ <= 2 %, tumor <= 15 %) cannot see same-scan "
                                  "pairs whose annotations were redone beyond those tolerances; CT voxel "
                                  "equality is annotation-independent",
         "pairs_confirmed": conf, "n_confirmed": len(conf),
-        "residual": "KS's scan covers the 576 UD-masked FLARE23 studies; the 687 pool records without a "
-                    "UD mask (= 1,210 dedup corpus - 523 masked-in-pool) are label-screened only (first "
+        "residual": "the co-author's scan covers the 576 pipeline-masked FLARE23 studies; the 687 pool records without a "
+                    "the pipeline team mask (= 1,210 dedup corpus - 523 masked-in-pool) are label-screened only (first "
                     "pass) - a lower bound, disclosed in the draft. (Correction 2026-09-23: first written "
                     "as 691, a pre-second-pass miscount; 687 is derived from the shipped corpora.)"}
     cen["pool_arithmetic"] = {"pool_before": 1347, "pool_after_first_pass": 1334,

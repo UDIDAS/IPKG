@@ -49,7 +49,7 @@ from extract_phenotypes import extract                  # noqa: E402  the delive
 from run_queries import QUERIES, PREFIX                 # noqa: E402  the 10 stock queries
 
 CASES_DIR = "/path/to/staging/acm_data/kits_vol"
-TUMOR_OVERLAY = os.path.expanduser("~/hmmkg_ckpts/sam3_tumor_flare_only.pth")
+TUMOR_OVERLAY = os.environ.get("FLARE_ONLY_CKPT", os.path.expanduser("~/hmmkg_ckpts/sam3_tumor_flare_only.pth"))  # Drive: response_2026-10-01/checkpoints/tumor/ (md5 9a7ac81c...); local copy removed 10-03
 OUT = os.path.join(ROOT, "results", "queries", "q10_joint_timing_kits.json")
 MINPX = 50                                              # as eval_ausam_3d / build_predicted_corpus
 
@@ -120,6 +120,8 @@ def main():
     proc = Sam3Processor.from_pretrained(IE.SAM3_MODEL_ID, token=IE.HF_TOKEN)
     t0 = time.time()
     om = IE._load_sam3_ckpt("/nonexistent", "cuda")                 # base SAM3 (no overlay exists locally)
+    if not os.path.exists(TUMOR_OVERLAY):   # IE._load_sam3_ckpt would silently return base SAM 3
+        raise FileNotFoundError(f"{TUMOR_OVERLAY}: set FLARE_ONLY_CKPT (copy on Drive)")
     tm = IE._load_sam3_ckpt(TUMOR_OVERLAY, "cuda")                  # base + FLARE tumor expert
     model_load_s = round(time.time() - t0, 1)
     print(f"models loaded in {model_load_s}s", flush=True)

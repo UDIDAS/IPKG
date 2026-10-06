@@ -1,0 +1,612 @@
+{
+ "note": "Primary benchmark (draft Table 6), baseline rows (v)-(vii') re-scored under the CORRECTED relevance labels\n(the study lead 10-05 item 1). The baselines do not read the sub-site, so their rankings are the published ones; only the gold\nstandard changes.\n\nRankings: baselines_tab7_tab8.py's radiomics / image-embedding retrieval, from the feature cache it builds\n($VKG_DATA/baseline_features.npz; rebuilt 10-05 from the 113 CTs and reference masks).\nLabels: the published (D) and corrected (P, precedence-resolved sub-site) relevance labels of the 113 x 112 pairs,\nexported from the co-author's build_retrieval_tables.py (branch abdomen/ipkg-v2) together with its per-query graph rows and\nits reference records in both vocabularies (results/retrieval/inputs/). The corrected labels flip 146 of 12,656\npairs, all to irrelevant.\n\nGates (the script refuses to write if any fails):\n  1. under the published labels, rows (v)-(vii') reproduce the frozen baselines_tab7_tab8.json to the 3rd decimal;\n  2. the exported labels equal retrieval_core_local.relevant() on the exported reference records, in both vocabularies;\n  3. the exported graph rows reproduce the co-author's corrected table ((ii) mAP 0.967).\nStatistics as in Table 6: paired query-level bootstrap 95% CI and sign-flip permutation p against (ii) under the\nsame labels; Holm over family F1 = the seven comparators (i), (iii), (iv), (v), (vi), (vii), (vii'); (iii') raw p.\n\n  VKG_DATA=... python baselines_corrected_labels.py -> results/retrieval/dedup/baselines_corrected_labels_2026-10-05.json",
+ "n_queries": 113,
+ "n_candidates": 112,
+ "labels_flipped": 146,
+ "tables": {
+  "published": {
+   "rows": {
+    "(i)": {
+     "n_queries": 113,
+     "P@5": 1.0,
+     "P@10": 0.996,
+     "mAP": 0.992,
+     "nDCG": 0.999,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Reference phenotypes, support-restricted (upper bound)",
+     "ranks_on": "ref",
+     "mode": "proposed",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": 0.02,
+      "ci95": [
+       0.014,
+       0.025
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.00035
+     }
+    },
+    "(ii)": {
+     "n_queries": 113,
+     "P@5": 1.0,
+     "P@10": 0.992,
+     "mAP": 0.972,
+     "nDCG": 0.996,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Predicted phenotypes, support-restricted (proposed)",
+     "ranks_on": "pred",
+     "mode": "proposed"
+    },
+    "(iii)": {
+     "n_queries": 113,
+     "P@5": 0.984,
+     "P@10": 0.969,
+     "mAP": 0.933,
+     "nDCG": 0.977,
+     "spurious@10": 0.023,
+     "mismatch@10": 0.02,
+     "label": "Predicted, coverage-blind (one-sided organs $=$ mismatch)",
+     "ranks_on": "pred",
+     "mode": "coverage_blind",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.039,
+      "ci95": [
+       -0.061,
+       -0.021
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0003
+     }
+    },
+    "(iii')": {
+     "n_queries": 113,
+     "P@5": 0.973,
+     "P@10": 0.948,
+     "mAP": 0.911,
+     "nDCG": 0.957,
+     "spurious@10": 0.049,
+     "mismatch@10": 0.045,
+     "label": "Predicted, imputed absence (one-sided organs may agree)",
+     "ranks_on": "pred",
+     "mode": "imputed_absent",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.061,
+      "ci95": [
+       -0.088,
+       -0.038
+      ],
+      "p_raw": 4.999750012499375e-05
+     }
+    },
+    "(iv)": {
+     "n_queries": 113,
+     "P@5": 0.478,
+     "P@10": 0.436,
+     "mAP": 0.493,
+     "nDCG": 0.439,
+     "spurious@10": 0.564,
+     "mismatch@10": 0.55,
+     "label": "Predicted, organ-agnostic baseline",
+     "ranks_on": "pred",
+     "mode": "base",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.479,
+      "ci95": [
+       -0.511,
+       -0.446
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.00025
+     }
+    },
+    "(v)": {
+     "n_queries": 113,
+     "P@5": 0.834,
+     "P@10": 0.804,
+     "mAP": 0.715,
+     "nDCG": 0.819,
+     "spurious@10": 0.159,
+     "mismatch@10": 0.137,
+     "label": "Radiomics-vector (organ-agnostic)",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.257,
+      "ci95": [
+       -0.288,
+       -0.226
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0002
+     }
+    },
+    "(vi)": {
+     "n_queries": 113,
+     "P@5": 0.956,
+     "P@10": 0.953,
+     "mAP": 0.954,
+     "nDCG": 0.951,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Radiomics-vector (organ-conditioned)",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.018,
+      "ci95": [
+       -0.03,
+       -0.008
+      ],
+      "p_raw": 0.0008999550022498875,
+      "p_holm": 0.0009
+     }
+    },
+    "(vii)": {
+     "n_queries": 113,
+     "P@5": 0.885,
+     "P@10": 0.84,
+     "mAP": 0.709,
+     "nDCG": 0.855,
+     "spurious@10": 0.087,
+     "mismatch@10": 0.064,
+     "label": "Image-embedding (organ-agnostic)",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.263,
+      "ci95": [
+       -0.289,
+       -0.238
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.00015
+     }
+    },
+    "(vii')": {
+     "n_queries": 113,
+     "P@5": 0.917,
+     "P@10": 0.913,
+     "mAP": 0.925,
+     "nDCG": 0.914,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Image-embedding (organ-conditioned)",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.047,
+      "ci95": [
+       -0.066,
+       -0.031
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0001
+     }
+    }
+   },
+   "baselines_by_dataset": {
+    "kits": {
+     "(v)": {
+      "n_queries": 36,
+      "P@5": 0.717,
+      "P@10": 0.711,
+      "mAP": 0.633,
+      "nDCG": 0.716,
+      "spurious@10": 0.217,
+      "mismatch@10": 0.183
+     },
+     "(vi)": {
+      "n_queries": 36,
+      "P@5": 0.906,
+      "P@10": 0.908,
+      "mAP": 0.903,
+      "nDCG": 0.901,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(vii)": {
+      "n_queries": 36,
+      "P@5": 0.756,
+      "P@10": 0.689,
+      "mAP": 0.554,
+      "nDCG": 0.711,
+      "spurious@10": 0.15,
+      "mismatch@10": 0.114
+     },
+     "(vii')": {
+      "n_queries": 36,
+      "P@5": 0.811,
+      "P@10": 0.806,
+      "mAP": 0.834,
+      "nDCG": 0.807,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     }
+    },
+    "lits": {
+     "(v)": {
+      "n_queries": 21,
+      "P@5": 0.743,
+      "P@10": 0.667,
+      "mAP": 0.64,
+      "nDCG": 0.692,
+      "spurious@10": 0.262,
+      "mismatch@10": 0.214
+     },
+     "(vi)": {
+      "n_queries": 21,
+      "P@5": 0.924,
+      "P@10": 0.905,
+      "mAP": 0.916,
+      "nDCG": 0.909,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(vii)": {
+      "n_queries": 21,
+      "P@5": 0.81,
+      "P@10": 0.71,
+      "mAP": 0.666,
+      "nDCG": 0.74,
+      "spurious@10": 0.171,
+      "mismatch@10": 0.119
+     },
+     "(vii')": {
+      "n_queries": 21,
+      "P@5": 0.876,
+      "P@10": 0.867,
+      "mAP": 0.879,
+      "nDCG": 0.865,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     }
+    },
+    "msd": {
+     "(v)": {
+      "n_queries": 56,
+      "P@5": 0.943,
+      "P@10": 0.916,
+      "mAP": 0.796,
+      "nDCG": 0.934,
+      "spurious@10": 0.084,
+      "mismatch@10": 0.079
+     },
+     "(vi)": {
+      "n_queries": 56,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(vii)": {
+      "n_queries": 56,
+      "P@5": 0.996,
+      "P@10": 0.986,
+      "mAP": 0.826,
+      "nDCG": 0.99,
+      "spurious@10": 0.014,
+      "mismatch@10": 0.011
+     },
+     "(vii')": {
+      "n_queries": 56,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     }
+    }
+   }
+  },
+  "corrected": {
+   "rows": {
+    "(i)": {
+     "n_queries": 113,
+     "P@5": 1.0,
+     "P@10": 0.993,
+     "mAP": 1.0,
+     "nDCG": 1.0,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Reference phenotypes, support-restricted (upper bound)",
+     "ranks_on": "ref",
+     "mode": "proposed",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": 0.033,
+      "ci95": [
+       0.025,
+       0.041
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.00035
+     }
+    },
+    "(ii)": {
+     "n_queries": 113,
+     "P@5": 1.0,
+     "P@10": 0.979,
+     "mAP": 0.967,
+     "nDCG": 0.99,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Predicted phenotypes, support-restricted (proposed)",
+     "ranks_on": "pred",
+     "mode": "proposed"
+    },
+    "(iii)": {
+     "n_queries": 113,
+     "P@5": 1.0,
+     "P@10": 0.978,
+     "mAP": 0.961,
+     "nDCG": 0.989,
+     "spurious@10": 0.002,
+     "mismatch@10": 0.002,
+     "label": "Predicted, coverage-blind (one-sided organs $=$ mismatch)",
+     "ranks_on": "pred",
+     "mode": "coverage_blind",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.006,
+      "ci95": [
+       -0.01,
+       -0.003
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0003
+     }
+    },
+    "(iii')": {
+     "n_queries": 113,
+     "P@5": 0.973,
+     "P@10": 0.943,
+     "mAP": 0.928,
+     "nDCG": 0.957,
+     "spurious@10": 0.049,
+     "mismatch@10": 0.042,
+     "label": "Predicted, imputed absence (one-sided organs may agree)",
+     "ranks_on": "pred",
+     "mode": "imputed_absent",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.039,
+      "ci95": [
+       -0.065,
+       -0.019
+      ],
+      "p_raw": 4.999750012499375e-05
+     }
+    },
+    "(iv)": {
+     "n_queries": 113,
+     "P@5": 0.478,
+     "P@10": 0.435,
+     "mAP": 0.503,
+     "nDCG": 0.439,
+     "spurious@10": 0.564,
+     "mismatch@10": 0.549,
+     "label": "Predicted, organ-agnostic baseline",
+     "ranks_on": "pred",
+     "mode": "base",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.464,
+      "ci95": [
+       -0.5,
+       -0.429
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.00025
+     }
+    },
+    "(v)": {
+     "n_queries": 113,
+     "P@5": 0.814,
+     "P@10": 0.781,
+     "mAP": 0.706,
+     "nDCG": 0.801,
+     "spurious@10": 0.159,
+     "mismatch@10": 0.128,
+     "label": "Radiomics-vector (organ-agnostic)",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.261,
+      "ci95": [
+       -0.294,
+       -0.229
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0002
+     }
+    },
+    "(vi)": {
+     "n_queries": 113,
+     "P@5": 0.933,
+     "P@10": 0.922,
+     "mAP": 0.93,
+     "nDCG": 0.926,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Radiomics-vector (organ-conditioned)",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.037,
+      "ci95": [
+       -0.057,
+       -0.02
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.00015
+     }
+    },
+    "(vii)": {
+     "n_queries": 113,
+     "P@5": 0.842,
+     "P@10": 0.797,
+     "mAP": 0.678,
+     "nDCG": 0.812,
+     "spurious@10": 0.087,
+     "mismatch@10": 0.057,
+     "label": "Image-embedding (organ-agnostic)",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.289,
+      "ci95": [
+       -0.32,
+       -0.259
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0001
+     }
+    },
+    "(vii')": {
+     "n_queries": 113,
+     "P@5": 0.869,
+     "P@10": 0.859,
+     "mAP": 0.88,
+     "nDCG": 0.863,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Image-embedding (organ-conditioned)",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.087,
+      "ci95": [
+       -0.116,
+       -0.061
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 5e-05
+     }
+    }
+   },
+   "baselines_by_dataset": {
+    "kits": {
+     "(v)": {
+      "n_queries": 36,
+      "P@5": 0.694,
+      "P@10": 0.681,
+      "mAP": 0.618,
+      "nDCG": 0.69,
+      "spurious@10": 0.217,
+      "mismatch@10": 0.172
+     },
+     "(vi)": {
+      "n_queries": 36,
+      "P@5": 0.878,
+      "P@10": 0.872,
+      "mAP": 0.87,
+      "nDCG": 0.867,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(vii)": {
+      "n_queries": 36,
+      "P@5": 0.694,
+      "P@10": 0.628,
+      "mAP": 0.51,
+      "nDCG": 0.648,
+      "spurious@10": 0.15,
+      "mismatch@10": 0.106
+     },
+     "(vii')": {
+      "n_queries": 36,
+      "P@5": 0.75,
+      "P@10": 0.733,
+      "mAP": 0.772,
+      "nDCG": 0.737,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     }
+    },
+    "lits": {
+     "(v)": {
+      "n_queries": 21,
+      "P@5": 0.676,
+      "P@10": 0.59,
+      "mAP": 0.619,
+      "nDCG": 0.636,
+      "spurious@10": 0.262,
+      "mismatch@10": 0.195
+     },
+     "(vi)": {
+      "n_queries": 21,
+      "P@5": 0.848,
+      "P@10": 0.8,
+      "mAP": 0.843,
+      "nDCG": 0.832,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(vii)": {
+      "n_queries": 21,
+      "P@5": 0.686,
+      "P@10": 0.586,
+      "mAP": 0.575,
+      "nDCG": 0.619,
+      "spurious@10": 0.171,
+      "mismatch@10": 0.1
+     },
+     "(vii')": {
+      "n_queries": 21,
+      "P@5": 0.724,
+      "P@10": 0.7,
+      "mAP": 0.743,
+      "nDCG": 0.713,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     }
+    },
+    "msd": {
+     "(v)": {
+      "n_queries": 56,
+      "P@5": 0.943,
+      "P@10": 0.916,
+      "mAP": 0.796,
+      "nDCG": 0.934,
+      "spurious@10": 0.084,
+      "mismatch@10": 0.075
+     },
+     "(vi)": {
+      "n_queries": 56,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(vii)": {
+      "n_queries": 56,
+      "P@5": 0.996,
+      "P@10": 0.986,
+      "mAP": 0.826,
+      "nDCG": 0.99,
+      "spurious@10": 0.014,
+      "mismatch@10": 0.009
+     },
+     "(vii')": {
+      "n_queries": 56,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     }
+    }
+   }
+  }
+ },
+ "gates": {
+  "labels_D_equal_relevant()": true,
+  "labels_P_equal_relevant()": true,
+  "ks_corrected_(ii)_mAP_0.967": true,
+  "published_labels_reproduce_frozen_(v)-(vii')": true
+ }
+}

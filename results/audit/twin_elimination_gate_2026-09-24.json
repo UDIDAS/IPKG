@@ -36,7 +36,7 @@
     "clean": true
    }
   },
-  "C_ks_scan_reconciliation": {
+  "C_ctvoxel_scan_reconciliation": {
    "scanned": 576,
    "ct_voxel_twins": 310,
    "scanned_still_in_pool": 523,

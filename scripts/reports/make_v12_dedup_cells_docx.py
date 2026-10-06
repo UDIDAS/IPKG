@@ -112,7 +112,7 @@ for key, v in t9["strata"].items():
                      ptxt if m == "proposed" else ""])
 T(["Stratum", "Method", "n_q", "P@5", "P@10", "mAP", "nDCG", "Mism.@10", "Δobs mAP [95% CI]", "p (Holm)"], rows)
 
-H("(iii′) rows for Table 10 (returned to the main table team-confirmed 09-18; 1,347 pool)", 2)
+H("(iii′) rows for Table 10 (returned to the main table per the study lead 09-18; 1,347 pool)", 2)
 K3 = "(iii') imputed-absent"
 rows = []
 for ds in ("kits", "lits", "msd"):
@@ -139,7 +139,7 @@ for q in c19["queries"]:
 T(["Query", "id", "Configuration", "first relevant FLARE23 rank", "rank within FLARE23",
    "single-organ above", "n relevant FLARE23", "n ranked"], rows)
 
-P("CANONICAL (team item 1): Table 8 row (vii) Δ = −0.263 [−0.290, −0.237] (this file); the frozen Delta file's "
+P("CANONICAL (the study lead item 1): Table 8 row (vii) Δ = −0.263 [−0.290, −0.237] (this file); the frozen Delta file's "
   "−0.262 [−0.290, −0.236] is the same quantity within embedding float nondeterminism (identical mAP and Holm p). "
   "Spur.@10 = n/a for baseline rows per the caption (path-based; the JSONs keep the no-shared-organ rate).", i=True, sz=9.5)
 P("(iii′) full columns for both pools: results/retrieval/dedup/retrieval_iii_prime.json. Study set: "

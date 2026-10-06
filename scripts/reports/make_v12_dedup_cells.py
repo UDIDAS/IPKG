@@ -36,7 +36,7 @@ _twins = 1312 - _nfl
 w(f"# v12 hand-over — de-duplicated {_npool:,}-pool table cells (generated from `results/retrieval/dedup/` at `{sha}`)")
 w()
 w(f"Pool: **{_npool:,}** = 113 single-organ queries + {_nfl:,} FLARE23 ({_twins} query twins removed — 78 original + 13 by the 2026-09-20 axis-normalized census "
-  f"+ 11 by the 2026-09-22 second pass (KS CT-voxel scan, mask-overlap-confirmed) + 14 by the 2026-09-24 grid-census third pass "
+  f"+ 11 by the 2026-09-22 second pass (the co-author CT-voxel scan, mask-overlap-confirmed) + 14 by the 2026-09-24 grid-census third pass "
   f"(no-CT stratum, mask-overlap/exact-tumor-voxel-confirmed), `results/audit/axis_normalized_twin_census.json`; "
   f"`corpora/corpus_flare23_kg_dedup.json`). Baseline (v)–(vii′) cells: **{_nsub}-case CT sub-pool** "
   f"(113 + {_nsub - 113} dedup FLARE23 with a CT), per-query depth-30 re-rank validated against the frozen "
@@ -57,7 +57,7 @@ d, p = dcell(v)
 w(f"| (iii′) imputed-absent (suppl.) | {v['P@5']} | {v['P@10']} | {v['mAP']} | {v['nDCG']} | {v['spurious@10']} | {v['mismatch@10']} | {d} | {p} |")
 w()
 
-w("*CANONICAL note (YL item 1, 09-18): row (vii) Δ = **−0.263 [−0.290, −0.237]** (this file / retrieval/dedup/) is the")
+w("*CANONICAL note (the study lead item 1, 09-18): row (vii) Δ = **−0.263 [−0.290, −0.237]** (this file / retrieval/dedup/) is the")
 w("canonical value; the frozen Delta-run file reads −0.262 [−0.290, −0.236] — same mAP/P@10/nDCG and identical Holm p;")
 w("the 0.001 is ResNet-embedding float nondeterminism across hardware at a rounding boundary (resampling is seeded and")
 w("bit-identical). Spur.@10 reads **n/a** for baseline rows (v)–(vii′) per the caption (path-based, undefined for")
@@ -103,7 +103,7 @@ for key, v in t9["strata"].items():
           f"{ptxt if m == 'proposed' else ''} |")
 w()
 
-w(f"### (iii′) rows for Table 10 (returned to the main table per YL 09-18; {_npool:,} pool)")
+w(f"### (iii′) rows for Table 10 (returned to the main table per the study lead 09-18; {_npool:,} pool)")
 w()
 w("| Stratum | n_q | P@5 | P@10 | mAP | nDCG | Mism.@10 | ΔmAP vs (ii) [95% CI] | p |")
 w("|:--|--:|--:|--:|--:|--:|--:|:--|:--|")

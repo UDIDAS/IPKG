@@ -1,0 +1,17 @@
+{
+ "_source": "Counts printed by the original pool builders / trainers (training logs as recorded in the 2026-08 session transcript; also build_readme_splits.py output 2026-08-05). These are the targets the rebuild must reproduce.",
+ "organ": {
+  "lits": {"slices_cases": [5000, 34], "patients_tr_va_te": [25, 3, 6], "slices_tr_va_te": [3883, 409, 708], "uncapped_slices_cases": [18828, 131]},
+  "msd": {"slices_cases": [5000, 165], "patients_tr_va_te": [116, 16, 33], "slices_tr_va_te": [3530, 462, 1008], "uncapped_slices": 8701},
+  "flare_task2": {"patients": 100, "patients_tr_va_te": [70, 10, 20], "slices_tr_va_te": [10417, 1166, 2346]},
+  "flare23": {"patients": 449, "slices_per_organ": [3584, 3592, 3583], "patients_tr_va_te": [316, 44, 89], "slices_tr_va_te": [7568, 1055, 2136]},
+  "kits": {"patients": 100, "slices": 3821, "patients_tr_va_te": [70, 10, 20], "slices_tr_va_te": [2789, 377, 655]}
+ },
+ "tumor": {
+  "pancreas": {"slices_cases": [2537, 281], "patients_tr_va_te": [197, 28, 56], "slices_tr_va_te": [1811, 261, 465]},
+  "lits": {"slices_cases": [5600, 107], "patients_tr_va_te": [76, 10, 21], "slices_tr_va_te": [3825, 539, 1236]},
+  "flare": {"slices_cases": [7269, 270], "patients_tr_va_te": [189, 27, 54], "slices_tr_va_te": [5041, 615, 1613]},
+  "kits": {"slices_cases": [5267, 180], "patients_tr_va_te": [126, 18, 36], "slices_tr_va_te": [3589, 492, 1186]}
+ },
+ "flare_only": {"slices_train_val": [6441, 828], "source": "train_flare_only.log next to sam3_tumor_flare_only.pth"}
+}

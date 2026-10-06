@@ -30,3 +30,19 @@ Canonical retrieval results: `results/retrieval/dedup/` — the de-duplicated **
 `results/audit/axis_normalized_twin_census.json` incl. §second_pass/§third_pass — the paper's numbers).
 The pre-dedup "frozen original" files were removed 2026-09-24 to prevent stale-version transcription;
 tags `IPKG-v1-rc1..rc4` retain them. Canonical example: Table 8 row (vii) Δ = −0.263 [−0.290, −0.237].
+
+## Additions in IPKG-v1-rc6 (1,311-case pool, corrected relevance labels)
+
+| Paper item | Source file | Producer |
+|:--|:--|:--|
+| Table 6 (primary benchmark), all rows under the corrected relevance labels; same-organ random floor | `results/retrieval/dedup/baselines_corrected_labels_2026-10-05.json` (labels: `results/retrieval/inputs/relevance_labels_published_corrected_113.json`) | `scripts/retrieval/baselines_corrected_labels.py` |
+| Table 7 lower block (CT sub-pool, 638 cases), both label sets; sub-pool candidate list (525 of 1,198) | `results/retrieval/dedup/baselines_subpool_1311_2026-10-06.json`, `ct_subpool_1311_2026-10-06.json` | `scripts/retrieval/baselines_subpool_1311.py`, `fetch_flare23_ct_subpool.py` |
+| Pool restoration 1,309 → 1,311 and its effect on rankings | `results/retrieval/pool_restore_impact_2026-10-03.json` | `scripts/retrieval/pool_restore_impact.py` |
+| Complete cross-collection twin census | `results/audit/flare23_twin_census_complete_2026-10-03.json` | `scripts/audit/twin_census_complete.py` |
+| Split manifests and per-patient exposure | `results/audit/split_manifests_2026-10-01.json`, `promptfree_twin_exposure_2026-10-03.json` | `scripts/audit/rebuild_split_manifests.py`, `promptfree_twin_exposure.py` |
+| Autonomous arm (TotalSegmentator organs + prompt-free tumor) and the 157-scan cohort table | `results/segmentation/promptfree_round2_2026-10-01.json`, `cohort157_rescore_2026-10-03.json` | `scripts/segmentation/combine_ts_promptfree.py`, `rescore_cohort157.py` |
+| Organ Dice under convention A (organ with mass) | `results/segmentation/organ_convention_a_2026-10-03.json`, `organ_convention_a_flare576_2026-10-03.json` | `scripts/segmentation/organ_convention_a*.py` |
+| Pancreatic sub-site correction and record re-issue | `results/kg/pancreas_subsite_msd_gt.json`, `subsite_reissue_2026-10-01.json`; `corpora/reissue_2026-10-01/` | `scripts/kg/pancreas_subsite.py`, `reissue_subsite.py` |
+| Showcase-mask provenance (voxel-exact re-draw of both halves) | `results/audit/displayed_weights_check_2026-10-03.json`, `displayed_weights_base_organ_2026-10-05.json` | `scripts/audit/verify_displayed_weights.py` |
+| TotalSegmentator release (2.17/2.18) | `results/audit/totalsegmentator_version_check_2026-10-06.json` | `scripts/audit/ts_version/ts_reproduce_showcase.py` |
+| Checkpoint inventory with SHA-256 | `results/segmentation/checkpoint_manifest_2026-10-01.json` | `scripts/audit/complete_checkpoint_hashes.py` |

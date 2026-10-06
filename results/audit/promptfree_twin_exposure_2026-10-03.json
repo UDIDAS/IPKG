@@ -1,0 +1,2353 @@
+{
+ "note": "Round-2 twin exposure recomputed on the COMPLETE census (flare23_twin_census_complete_2026-10-03.json); supersedes promptfree_twin_exposure_2026-10-01.json, whose partial census missed twins of training cases.\n\nTwin exposure of the round-2 prompt-free tumor test sets (IPKG round 2).\n\nsam3_tumor_generic was trained on all four tumor pools (global seed-42 split). FLARE23 re-shares scans of KiTS,\nMSD Pancreas and LiTS patients, so a LiTS/MSD/KiTS TEST patient whose FLARE23 twin sits in the FLARE tumor\nTRAIN/VAL split was seen in training under another name (and vice versa for FLARE23 test patients).\nTwin pairs = every confirmed pair in the committed censuses (wave 1 duplicate_scan_audit, wave 2 axis-normalized,\nwave 3 the co-author CT-voxel second pass, wave 4 grid census, LiTS<->FLARE23 overlap census, the the study lead-confirmed 0102 pair and the 0405 = case_00078 check).\n\n  python promptfree_twin_exposure.py -> results/audit/promptfree_twin_exposure_2026-10-01.json",
+ "model": "sam3_tumor_generic",
+ "split": "global",
+ "n_pairs": 521,
+ "datasets": {
+  "lits": {
+   "n_test": 21,
+   "n_with_twin": 21,
+   "n_exposed_via_twin": 7,
+   "exposed_cases": [
+    "volume-11",
+    "volume-113",
+    "volume-116",
+    "volume-19",
+    "volume-44",
+    "volume-68",
+    "volume-75"
+   ],
+   "cases": [
+    {
+     "case": "volume-101",
+     "twins": [
+      {
+       "twin": "FLARE23_2100",
+       "wave": "lits_census",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "volume-11",
+     "twins": [
+      {
+       "twin": "FLARE23_0416",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_0416",
+       "wave": "lits_census",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "volume-110",
+     "twins": [
+      {
+       "twin": "FLARE23_1524",
+       "wave": "lits_census",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "volume-113",
+     "twins": [
+      {
+       "twin": "FLARE23_2145",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_2145",
+       "wave": "lits_census",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "volume-116",
+     "twins": [
+      {
+       "twin": "FLARE23_0101",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_0101",
+       "wave": "lits_census",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "volume-19",
+     "twins": [
+      {
+       "twin": "FLARE23_1791",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_1791",
+       "wave": "lits_census",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "volume-21",
+     "twins": [
+      {
+       "twin": "FLARE23_0120",
+       "wave": "ks_header_scan",
+       "twin_role": "test"
+      },
+      {
+       "twin": "FLARE23_0120",
+       "wave": "lits_census",
+       "twin_role": "test"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "volume-24",
+     "twins": [
+      {
+       "twin": "FLARE23_1786",
+       "wave": "lits_census",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "volume-37",
+     "twins": [
+      {
+       "twin": "FLARE23_0119",
+       "wave": "lits_census",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "volume-43",
+     "twins": [
+      {
+       "twin": "FLARE23_1930",
+       "wave": "lits_census",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "volume-44",
+     "twins": [
+      {
+       "twin": "FLARE23_1960",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_1960",
+       "wave": "lits_census",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "volume-49",
+     "twins": [
+      {
+       "twin": "FLARE23_0129",
+       "wave": "wave4",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "volume-54",
+     "twins": [
+      {
+       "twin": "FLARE23_0917",
+       "wave": "wave4",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "volume-68",
+     "twins": [
+      {
+       "twin": "FLARE23_1438",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_1438",
+       "wave": "lits_census",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "volume-70",
+     "twins": [
+      {
+       "twin": "FLARE23_0037",
+       "wave": "ks_header_scan",
+       "twin_role": "test"
+      },
+      {
+       "twin": "FLARE23_0037",
+       "wave": "lits_census",
+       "twin_role": "test"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "volume-75",
+     "twins": [
+      {
+       "twin": "FLARE23_0051",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_0051",
+       "wave": "lits_census",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "volume-76",
+     "twins": [
+      {
+       "twin": "FLARE23_1027",
+       "wave": "ks_header_scan",
+       "twin_role": "test"
+      },
+      {
+       "twin": "FLARE23_1027",
+       "wave": "lits_census",
+       "twin_role": "test"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "volume-80",
+     "twins": [
+      {
+       "twin": "FLARE23_1622",
+       "wave": "lits_census",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "volume-82",
+     "twins": [
+      {
+       "twin": "FLARE23_1854",
+       "wave": "lits_census",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "volume-93",
+     "twins": [
+      {
+       "twin": "FLARE23_1575",
+       "wave": "lits_census",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "volume-99",
+     "twins": [
+      {
+       "twin": "FLARE23_1530",
+       "wave": "lits_census",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    }
+   ]
+  },
+  "msd": {
+   "n_test": 56,
+   "n_with_twin": 56,
+   "n_exposed_via_twin": 17,
+   "exposed_cases": [
+    "pancreas_019",
+    "pancreas_041",
+    "pancreas_078",
+    "pancreas_084",
+    "pancreas_119",
+    "pancreas_157",
+    "pancreas_200",
+    "pancreas_218",
+    "pancreas_226",
+    "pancreas_235",
+    "pancreas_330",
+    "pancreas_339",
+    "pancreas_356",
+    "pancreas_369",
+    "pancreas_377",
+    "pancreas_393",
+    "pancreas_399"
+   ],
+   "cases": [
+    {
+     "case": "pancreas_015",
+     "twins": [
+      {
+       "twin": "FLARE23_0284",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_019",
+     "twins": [
+      {
+       "twin": "FLARE23_1639",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_1639",
+       "wave": "wave1",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "pancreas_041",
+     "twins": [
+      {
+       "twin": "FLARE23_2125",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_2125",
+       "wave": "wave1",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "pancreas_045",
+     "twins": [
+      {
+       "twin": "FLARE23_0040",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_048",
+     "twins": [
+      {
+       "twin": "FLARE23_1309",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_049",
+     "twins": [
+      {
+       "twin": "FLARE23_0951",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_056",
+     "twins": [
+      {
+       "twin": "FLARE23_0350",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_064",
+     "twins": [
+      {
+       "twin": "FLARE23_0191",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_078",
+     "twins": [
+      {
+       "twin": "FLARE23_2015",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_2015",
+       "wave": "wave1",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "pancreas_083",
+     "twins": [
+      {
+       "twin": "FLARE23_2119",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_084",
+     "twins": [
+      {
+       "twin": "FLARE23_0593",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_0593",
+       "wave": "wave1",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "pancreas_096",
+     "twins": [
+      {
+       "twin": "FLARE23_0624",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_101",
+     "twins": [
+      {
+       "twin": "FLARE23_1039",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_107",
+     "twins": [
+      {
+       "twin": "FLARE23_0819",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      },
+      {
+       "twin": "FLARE23_1774",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_110",
+     "twins": [
+      {
+       "twin": "FLARE23_0096",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_119",
+     "twins": [
+      {
+       "twin": "FLARE23_0674",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_0674",
+       "wave": "wave1",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "pancreas_122",
+     "twins": [
+      {
+       "twin": "FLARE23_1144",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_125",
+     "twins": [
+      {
+       "twin": "FLARE23_1312",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_127",
+     "twins": [
+      {
+       "twin": "FLARE23_0346",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_137",
+     "twins": [
+      {
+       "twin": "FLARE23_0156",
+       "wave": "ks_header_scan",
+       "twin_role": "test"
+      },
+      {
+       "twin": "FLARE23_0156",
+       "wave": "wave1",
+       "twin_role": "test"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_149",
+     "twins": [
+      {
+       "twin": "FLARE23_1014",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_157",
+     "twins": [
+      {
+       "twin": "FLARE23_0889",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_0889",
+       "wave": "wave1",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "pancreas_172",
+     "twins": [
+      {
+       "twin": "FLARE23_1723",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_191",
+     "twins": [
+      {
+       "twin": "FLARE23_0971",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_200",
+     "twins": [
+      {
+       "twin": "FLARE23_1826",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_1826",
+       "wave": "wave1",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "pancreas_201",
+     "twins": [
+      {
+       "twin": "FLARE23_1764",
+       "wave": "wave2",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_210",
+     "twins": [
+      {
+       "twin": "FLARE23_1842",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_218",
+     "twins": [
+      {
+       "twin": "FLARE23_0751",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_0751",
+       "wave": "wave1",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "pancreas_226",
+     "twins": [
+      {
+       "twin": "FLARE23_0332",
+       "wave": "ks_header_scan",
+       "twin_role": "val"
+      },
+      {
+       "twin": "FLARE23_0332",
+       "wave": "wave1",
+       "twin_role": "val"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "pancreas_235",
+     "twins": [
+      {
+       "twin": "FLARE23_1236",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_1236",
+       "wave": "wave1",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "pancreas_239",
+     "twins": [
+      {
+       "twin": "FLARE23_1552",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_241",
+     "twins": [
+      {
+       "twin": "FLARE23_0312",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_242",
+     "twins": [
+      {
+       "twin": "FLARE23_1081",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_256",
+     "twins": [
+      {
+       "twin": "FLARE23_0521",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_258",
+     "twins": [
+      {
+       "twin": "FLARE23_1638",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_259",
+     "twins": [
+      {
+       "twin": "FLARE23_0698",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_275",
+     "twins": [
+      {
+       "twin": "FLARE23_0592",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_285",
+     "twins": [
+      {
+       "twin": "FLARE23_1629",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_289",
+     "twins": [
+      {
+       "twin": "FLARE23_0641",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_301",
+     "twins": [
+      {
+       "twin": "FLARE23_1651",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_315",
+     "twins": [
+      {
+       "twin": "FLARE23_1867",
+       "wave": "ks_header_scan",
+       "twin_role": "test"
+      },
+      {
+       "twin": "FLARE23_1867",
+       "wave": "wave1",
+       "twin_role": "test"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_327",
+     "twins": [
+      {
+       "twin": "FLARE23_0283",
+       "wave": "ks_header_scan",
+       "twin_role": "test"
+      },
+      {
+       "twin": "FLARE23_0283",
+       "wave": "wave1",
+       "twin_role": "test"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_330",
+     "twins": [
+      {
+       "twin": "FLARE23_0612",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_0612",
+       "wave": "wave1",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "pancreas_336",
+     "twins": [
+      {
+       "twin": "FLARE23_0151",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_339",
+     "twins": [
+      {
+       "twin": "FLARE23_0070",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_0070",
+       "wave": "wave1",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "pancreas_346",
+     "twins": [
+      {
+       "twin": "FLARE23_1215",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_348",
+     "twins": [
+      {
+       "twin": "FLARE23_1327",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_356",
+     "twins": [
+      {
+       "twin": "FLARE23_0448",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_0448",
+       "wave": "wave1",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "pancreas_366",
+     "twins": [
+      {
+       "twin": "FLARE23_0071",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_369",
+     "twins": [
+      {
+       "twin": "FLARE23_0285",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_0285",
+       "wave": "wave1",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "pancreas_377",
+     "twins": [
+      {
+       "twin": "FLARE23_0054",
+       "wave": "ks_header_scan",
+       "twin_role": "val"
+      },
+      {
+       "twin": "FLARE23_0054",
+       "wave": "wave1",
+       "twin_role": "val"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "pancreas_378",
+     "twins": [
+      {
+       "twin": "FLARE23_0860",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_393",
+     "twins": [
+      {
+       "twin": "FLARE23_1256",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_1256",
+       "wave": "wave1",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "pancreas_399",
+     "twins": [
+      {
+       "twin": "FLARE23_2051",
+       "wave": "ks_header_scan",
+       "twin_role": "val"
+      },
+      {
+       "twin": "FLARE23_2051",
+       "wave": "wave1",
+       "twin_role": "val"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "pancreas_404",
+     "twins": [
+      {
+       "twin": "FLARE23_1643",
+       "wave": "ks_header_scan",
+       "twin_role": "test"
+      },
+      {
+       "twin": "FLARE23_1643",
+       "wave": "wave1",
+       "twin_role": "test"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "pancreas_418",
+     "twins": [
+      {
+       "twin": "FLARE23_0237",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    }
+   ]
+  },
+  "kits": {
+   "n_test": 36,
+   "n_with_twin": 35,
+   "n_exposed_via_twin": 17,
+   "exposed_cases": [
+    "case_00008",
+    "case_00017",
+    "case_00024",
+    "case_00043",
+    "case_00060",
+    "case_00067",
+    "case_00075",
+    "case_00083",
+    "case_00087",
+    "case_00090",
+    "case_00092",
+    "case_00105",
+    "case_00120",
+    "case_00124",
+    "case_00148",
+    "case_00165",
+    "case_00175"
+   ],
+   "cases": [
+    {
+     "case": "case_00006",
+     "twins": [
+      {
+       "twin": "FLARE23_1816",
+       "wave": "wave4",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "case_00008",
+     "twins": [
+      {
+       "twin": "FLARE23_0883",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_0883",
+       "wave": "wave3",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "case_00017",
+     "twins": [
+      {
+       "twin": "FLARE23_1051",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_1051",
+       "wave": "wave2",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "case_00018",
+     "twins": [
+      {
+       "twin": "FLARE23_1125",
+       "wave": "wave4",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "case_00021",
+     "twins": [
+      {
+       "twin": "FLARE23_1274",
+       "wave": "ks_header_scan",
+       "twin_role": "test"
+      },
+      {
+       "twin": "FLARE23_1274",
+       "wave": "wave3",
+       "twin_role": "test"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "case_00024",
+     "twins": [
+      {
+       "twin": "FLARE23_0802",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_0802",
+       "wave": "wave3",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "case_00030",
+     "twins": [
+      {
+       "twin": "FLARE23_2068",
+       "wave": "wave4",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "case_00035",
+     "twins": [
+      {
+       "twin": "FLARE23_2116",
+       "wave": "wave4",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "case_00039",
+     "twins": [
+      {
+       "twin": "FLARE23_0886",
+       "wave": "ks_header_scan",
+       "twin_role": "test"
+      },
+      {
+       "twin": "FLARE23_0886",
+       "wave": "wave3",
+       "twin_role": "test"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "case_00042",
+     "twins": [
+      {
+       "twin": "FLARE23_1158",
+       "wave": "wave4",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "case_00043",
+     "twins": [
+      {
+       "twin": "FLARE23_0922",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_0922",
+       "wave": "wave3",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "case_00057",
+     "twins": [
+      {
+       "twin": "FLARE23_0628",
+       "wave": "wave4",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "case_00060",
+     "twins": [
+      {
+       "twin": "FLARE23_1630",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_1630",
+       "wave": "wave3",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "case_00067",
+     "twins": [
+      {
+       "twin": "FLARE23_0286",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_0286",
+       "wave": "wave2",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "case_00075",
+     "twins": [
+      {
+       "twin": "FLARE23_0910",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_0910",
+       "wave": "wave3",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "case_00079",
+     "twins": [
+      {
+       "twin": "FLARE23_0439",
+       "wave": "wave2",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "case_00083",
+     "twins": [
+      {
+       "twin": "FLARE23_1512",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_1512",
+       "wave": "wave3",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "case_00086",
+     "twins": [
+      {
+       "twin": "FLARE23_1298",
+       "wave": "wave2",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "case_00087",
+     "twins": [
+      {
+       "twin": "FLARE23_0998",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_0998",
+       "wave": "wave2",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "case_00090",
+     "twins": [
+      {
+       "twin": "FLARE23_0126",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_0126",
+       "wave": "wave3",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "case_00092",
+     "twins": [
+      {
+       "twin": "FLARE23_0617",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_0617",
+       "wave": "wave3",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "case_00095",
+     "twins": [
+      {
+       "twin": "FLARE23_1609",
+       "wave": "wave4",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "case_00103",
+     "twins": [
+      {
+       "twin": "FLARE23_0740",
+       "wave": "wave4",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "case_00105",
+     "twins": [
+      {
+       "twin": "FLARE23_0118",
+       "wave": "ks_header_scan",
+       "twin_role": "val"
+      },
+      {
+       "twin": "FLARE23_0118",
+       "wave": "wave2",
+       "twin_role": "val"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "case_00120",
+     "twins": [
+      {
+       "twin": "FLARE23_0146",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_0146",
+       "wave": "wave2",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "case_00124",
+     "twins": [
+      {
+       "twin": "FLARE23_1589",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_1589",
+       "wave": "wave2",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "case_00128",
+     "twins": [
+      {
+       "twin": "FLARE23_0097",
+       "wave": "ks_header_scan",
+       "twin_role": "test"
+      },
+      {
+       "twin": "FLARE23_0097",
+       "wave": "wave2",
+       "twin_role": "test"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "case_00146",
+     "twins": [],
+     "exposed": false
+    },
+    {
+     "case": "case_00148",
+     "twins": [
+      {
+       "twin": "FLARE23_0470",
+       "wave": "ks_header_scan",
+       "twin_role": "val"
+      },
+      {
+       "twin": "FLARE23_0470",
+       "wave": "wave2",
+       "twin_role": "val"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "case_00149",
+     "twins": [
+      {
+       "twin": "FLARE23_1464",
+       "wave": "wave2",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "case_00152",
+     "twins": [
+      {
+       "twin": "FLARE23_0062",
+       "wave": "wave4",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "case_00154",
+     "twins": [
+      {
+       "twin": "FLARE23_2033",
+       "wave": "wave4",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "case_00160",
+     "twins": [
+      {
+       "twin": "FLARE23_0141",
+       "wave": "wave4",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "case_00162",
+     "twins": [
+      {
+       "twin": "FLARE23_1364",
+       "wave": "wave4",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "case_00165",
+     "twins": [
+      {
+       "twin": "FLARE23_0444",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_0444",
+       "wave": "wave3",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "case_00175",
+     "twins": [
+      {
+       "twin": "FLARE23_0939",
+       "wave": "wave1",
+       "twin_role": "not in tumor pools"
+      },
+      {
+       "twin": "FLARE23_2196",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "FLARE23_2196",
+       "wave": "wave2",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    }
+   ]
+  },
+  "flare23": {
+   "n_test": 54,
+   "n_with_twin": 54,
+   "n_exposed_via_twin": 40,
+   "exposed_cases": [
+    "FLARE23_0236",
+    "FLARE23_0262",
+    "FLARE23_0357",
+    "FLARE23_0405",
+    "FLARE23_0431",
+    "FLARE23_0466",
+    "FLARE23_0536",
+    "FLARE23_0572",
+    "FLARE23_0680",
+    "FLARE23_0766",
+    "FLARE23_0775",
+    "FLARE23_0797",
+    "FLARE23_0896",
+    "FLARE23_0927",
+    "FLARE23_1087",
+    "FLARE23_1199",
+    "FLARE23_1233",
+    "FLARE23_1250",
+    "FLARE23_1313",
+    "FLARE23_1363",
+    "FLARE23_1373",
+    "FLARE23_1448",
+    "FLARE23_1454",
+    "FLARE23_1466",
+    "FLARE23_1564",
+    "FLARE23_1618",
+    "FLARE23_1686",
+    "FLARE23_1722",
+    "FLARE23_1741",
+    "FLARE23_1899",
+    "FLARE23_1965",
+    "FLARE23_1998",
+    "FLARE23_2003",
+    "FLARE23_2009",
+    "FLARE23_2065",
+    "FLARE23_2111",
+    "FLARE23_2117",
+    "FLARE23_2135",
+    "FLARE23_2177",
+    "FLARE23_2185"
+   ],
+   "cases": [
+    {
+     "case": "FLARE23_0037",
+     "twins": [
+      {
+       "twin": "volume-70",
+       "wave": "ks_header_scan",
+       "twin_role": "test"
+      },
+      {
+       "twin": "volume-70",
+       "wave": "lits_census",
+       "twin_role": "test"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "FLARE23_0097",
+     "twins": [
+      {
+       "twin": "case_00128",
+       "wave": "ks_header_scan",
+       "twin_role": "test"
+      },
+      {
+       "twin": "case_00128",
+       "wave": "wave2",
+       "twin_role": "test"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "FLARE23_0120",
+     "twins": [
+      {
+       "twin": "volume-21",
+       "wave": "ks_header_scan",
+       "twin_role": "test"
+      },
+      {
+       "twin": "volume-21",
+       "wave": "lits_census",
+       "twin_role": "test"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "FLARE23_0156",
+     "twins": [
+      {
+       "twin": "pancreas_137",
+       "wave": "ks_header_scan",
+       "twin_role": "test"
+      },
+      {
+       "twin": "pancreas_137",
+       "wave": "wave1",
+       "twin_role": "test"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "FLARE23_0236",
+     "twins": [
+      {
+       "twin": "case_00032",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_0239",
+     "twins": [
+      {
+       "twin": "case_00186",
+       "wave": "ks_header_scan",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "FLARE23_0262",
+     "twins": [
+      {
+       "twin": "pancreas_180",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_0283",
+     "twins": [
+      {
+       "twin": "pancreas_327",
+       "wave": "ks_header_scan",
+       "twin_role": "test"
+      },
+      {
+       "twin": "pancreas_327",
+       "wave": "wave1",
+       "twin_role": "test"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "FLARE23_0357",
+     "twins": [
+      {
+       "twin": "case_00007",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_0405",
+     "twins": [
+      {
+       "twin": "case_00078",
+       "wave": "flare0405_kits00078_twin_check",
+       "twin_role": "val"
+      },
+      {
+       "twin": "case_00078",
+       "wave": "ks_header_scan",
+       "twin_role": "val"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_0431",
+     "twins": [
+      {
+       "twin": "pancreas_074",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_0466",
+     "twins": [
+      {
+       "twin": "pancreas_376",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_0536",
+     "twins": [
+      {
+       "twin": "pancreas_287",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_0572",
+     "twins": [
+      {
+       "twin": "pancreas_052",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_0680",
+     "twins": [
+      {
+       "twin": "volume-128",
+       "wave": "ks_header_scan",
+       "twin_role": "val"
+      },
+      {
+       "twin": "volume-128",
+       "wave": "lits_census",
+       "twin_role": "val"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_0766",
+     "twins": [
+      {
+       "twin": "pancreas_213",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_0775",
+     "twins": [
+      {
+       "twin": "pancreas_075",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_0797",
+     "twins": [
+      {
+       "twin": "pancreas_254",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_0853",
+     "twins": [
+      {
+       "twin": "case_00194",
+       "wave": "ks_header_scan",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "FLARE23_0886",
+     "twins": [
+      {
+       "twin": "case_00039",
+       "wave": "ks_header_scan",
+       "twin_role": "test"
+      },
+      {
+       "twin": "case_00039",
+       "wave": "wave3",
+       "twin_role": "test"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "FLARE23_0896",
+     "twins": [
+      {
+       "twin": "pancreas_166",
+       "wave": "ks_header_scan",
+       "twin_role": "val"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_0927",
+     "twins": [
+      {
+       "twin": "pancreas_343",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_1027",
+     "twins": [
+      {
+       "twin": "volume-76",
+       "wave": "ks_header_scan",
+       "twin_role": "test"
+      },
+      {
+       "twin": "volume-76",
+       "wave": "lits_census",
+       "twin_role": "test"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "FLARE23_1087",
+     "twins": [
+      {
+       "twin": "case_00084",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_1199",
+     "twins": [
+      {
+       "twin": "volume-84",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_1233",
+     "twins": [
+      {
+       "twin": "volume-14",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "volume-14",
+       "wave": "lits_census",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_1250",
+     "twins": [
+      {
+       "twin": "pancreas_087",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_1274",
+     "twins": [
+      {
+       "twin": "case_00021",
+       "wave": "ks_header_scan",
+       "twin_role": "test"
+      },
+      {
+       "twin": "case_00021",
+       "wave": "wave3",
+       "twin_role": "test"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "FLARE23_1313",
+     "twins": [
+      {
+       "twin": "case_00145",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_1334",
+     "twins": [
+      {
+       "twin": "case_00203",
+       "wave": "ks_header_scan",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "FLARE23_1347",
+     "twins": [
+      {
+       "twin": "volume-112",
+       "wave": "ks_header_scan",
+       "twin_role": "not in tumor pools"
+      },
+      {
+       "twin": "volume-112",
+       "wave": "lits_census",
+       "twin_role": "not in tumor pools"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "FLARE23_1363",
+     "twins": [
+      {
+       "twin": "pancreas_299",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_1373",
+     "twins": [
+      {
+       "twin": "case_00088",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_1448",
+     "twins": [
+      {
+       "twin": "pancreas_412",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_1454",
+     "twins": [
+      {
+       "twin": "pancreas_386",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_1466",
+     "twins": [
+      {
+       "twin": "pancreas_261",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_1564",
+     "twins": [
+      {
+       "twin": "pancreas_229",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_1618",
+     "twins": [
+      {
+       "twin": "case_00102",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_1643",
+     "twins": [
+      {
+       "twin": "pancreas_404",
+       "wave": "ks_header_scan",
+       "twin_role": "test"
+      },
+      {
+       "twin": "pancreas_404",
+       "wave": "wave1",
+       "twin_role": "test"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "FLARE23_1686",
+     "twins": [
+      {
+       "twin": "case_00000",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_1722",
+     "twins": [
+      {
+       "twin": "pancreas_103",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_1741",
+     "twins": [
+      {
+       "twin": "case_00068",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_1867",
+     "twins": [
+      {
+       "twin": "pancreas_315",
+       "wave": "ks_header_scan",
+       "twin_role": "test"
+      },
+      {
+       "twin": "pancreas_315",
+       "wave": "wave1",
+       "twin_role": "test"
+      }
+     ],
+     "exposed": false
+    },
+    {
+     "case": "FLARE23_1899",
+     "twins": [
+      {
+       "twin": "pancreas_089",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_1965",
+     "twins": [
+      {
+       "twin": "pancreas_199",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_1998",
+     "twins": [
+      {
+       "twin": "volume-9",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "volume-9",
+       "wave": "lits_census",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_2003",
+     "twins": [
+      {
+       "twin": "volume-81",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "volume-81",
+       "wave": "lits_census",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_2009",
+     "twins": [
+      {
+       "twin": "pancreas_109",
+       "wave": "ks_header_scan",
+       "twin_role": "val"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_2065",
+     "twins": [
+      {
+       "twin": "pancreas_270",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_2111",
+     "twins": [
+      {
+       "twin": "volume-23",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "volume-23",
+       "wave": "lits_census",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_2117",
+     "twins": [
+      {
+       "twin": "case_00049",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_2135",
+     "twins": [
+      {
+       "twin": "volume-122",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      },
+      {
+       "twin": "volume-122",
+       "wave": "lits_census",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_2177",
+     "twins": [
+      {
+       "twin": "case_00108",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    },
+    {
+     "case": "FLARE23_2185",
+     "twins": [
+      {
+       "twin": "pancreas_120",
+       "wave": "ks_header_scan",
+       "twin_role": "train"
+      }
+     ],
+     "exposed": true
+    }
+   ]
+  }
+ },
+ "change_vs_2026-10-01": {
+  "lits": {
+   "n_with_twin": [
+    21,
+    21
+   ],
+   "n_exposed_via_twin": [
+    7,
+    7
+   ]
+  },
+  "msd": {
+   "n_with_twin": [
+    56,
+    56
+   ],
+   "n_exposed_via_twin": [
+    18,
+    17
+   ]
+  },
+  "kits": {
+   "n_with_twin": [
+    35,
+    35
+   ],
+   "n_exposed_via_twin": [
+    17,
+    17
+   ]
+  },
+  "flare23": {
+   "n_with_twin": [
+    18,
+    54
+   ],
+   "n_exposed_via_twin": [
+    7,
+    40
+   ]
+  }
+ }
+}

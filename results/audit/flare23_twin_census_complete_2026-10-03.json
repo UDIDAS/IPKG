@@ -1,0 +1,2661 @@
+{
+ "note": "Complete FLARE23 twin census + corrected round-2 twin exposure (the study lead 10-03, the pipeline team item 6; feeds item 7).\n\nFLARE23 re-shares scans of KiTS23, MSD Pancreas and LiTS. Two censuses existed and they are complementary:\n  * ours (waves 1-4, LiTS overlap census, 0405 = case_00078 check): built to de-duplicate the RETRIEVAL POOL, so it\n    searched for twins of the 113 query cases and of pool records -- it never looked for twins of TRAINING cases;\n  * the co-author's header scan of all 576 tumor-bearing FLARE23 cases (results/audit/inputs/flare23_twin_scan_ctvoxel_2026-09-20.json,\n    from the app branch paper/): 310 twins (KiTS 133, MSD 127, LiTS 50), each matched to one public case.\nUnion = this census. Disagreements:\n  * one conflict: wave 1 paired FLARE23_0042 with pancreas_122; the voxels say pancreas_274 (100 % voxel-equal,\n    r = 1.0; pancreas_122 is on a different grid, 97 x 0.79 mm vs 115 x 0.70 mm). The wave-1 pair is dropped.\n  * the co-author-only pairs (219) were spot-checked on the voxels: 9/9 sampled MSD pairs 100 % voxel-equal.\n  * our 120 pairs absent from the co-author's scan all involve FLARE23 cases outside the co-author's 576 (non-tumor pool records).\nNo the co-author-only pair links a pool record to a query, so the pool de-duplication against the queries stands; but\nFLARE23_0042 was removed from the pool as a twin of query pancreas_122, which it is not (restored 10-03, with FLARE23_0102).\n\n  python twin_census_complete.py\n-> results/audit/flare23_twin_census_complete_2026-10-03.json, results/audit/promptfree_twin_exposure_2026-10-03.json",
+ "n_pairs": 430,
+ "n_flare23_with_twin": 430,
+ "by_collection": {
+  "LiTS": 118,
+  "MSD Pancreas": 163,
+  "KiTS23": 149
+ },
+ "sources": {
+  "ks_header_scan": 310,
+  "lits_census": 114,
+  "wave1": 57,
+  "wave3": 11,
+  "wave2": 13,
+  "wave4": 14,
+  "flare0405_kits00078_twin_check": 1,
+  "wave1_manual": 1
+ },
+ "dropped_pairs": [
+  {
+   "query": "pancreas_122",
+   "flare23": "FLARE23_0042",
+   "why": "voxel-refuted"
+  }
+ ],
+ "conflict_resolution": {
+  "FLARE23_0042": {
+   "twin": "pancreas_274",
+   "voxel_equal_frac": 1.0,
+   "corr": 1.0,
+   "refuted": {
+    "pancreas_122": "different grid: (512,512,97) @ 0.791 mm vs (512,512,115) @ 0.703 mm"
+   }
+  }
+ },
+ "ks_pairs_voxel_spot_check": {
+  "n": 9,
+  "all_identical": true,
+  "pairs": {
+   "FLARE23_1289": "pancreas_264",
+   "FLARE23_2009": "pancreas_109",
+   "FLARE23_1363": "pancreas_299",
+   "FLARE23_0262": "pancreas_180",
+   "FLARE23_1028": "pancreas_304",
+   "FLARE23_1556": "pancreas_069",
+   "FLARE23_1482": "pancreas_302",
+   "FLARE23_1344": "pancreas_212",
+   "FLARE23_2073": "pancreas_342"
+  }
+ },
+ "flare23_with_more_than_one_twin": {},
+ "pool_consequence": "FLARE23_0042 is not a twin of any query (pancreas_274 is a training case, not one of the 113); it was removed from the de-duplicated pool on the refuted pancreas_122 pairing. FLARE23_0102 (= volume-64, not a query) was likewise removed although it duplicates nothing in the pool. Both restored 10-03 (scripts/retrieval/pool_restore_impact.py) -> pool 1,311. No the co-author-only pair links a pool record to a query.",
+ "pairs": [
+  {
+   "public_case": "case_00115",
+   "flare23": "FLARE23_0003",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-105",
+   "flare23": "FLARE23_0008",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_308",
+   "flare23": "FLARE23_0016",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-70",
+   "flare23": "FLARE23_0037",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-70",
+   "flare23": "FLARE23_0037",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_045",
+   "flare23": "FLARE23_0040",
+   "source": "wave1"
+  },
+  {
+   "public_case": "pancreas_274",
+   "flare23": "FLARE23_0042",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-79",
+   "flare23": "FLARE23_0048",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-79",
+   "flare23": "FLARE23_0048",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-75",
+   "flare23": "FLARE23_0051",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-75",
+   "flare23": "FLARE23_0051",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_377",
+   "flare23": "FLARE23_0054",
+   "source": "wave1"
+  },
+  {
+   "public_case": "pancreas_377",
+   "flare23": "FLARE23_0054",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00100",
+   "flare23": "FLARE23_0060",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00152",
+   "flare23": "FLARE23_0062",
+   "source": "wave4"
+  },
+  {
+   "public_case": "pancreas_339",
+   "flare23": "FLARE23_0070",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_339",
+   "flare23": "FLARE23_0070",
+   "source": "wave1"
+  },
+  {
+   "public_case": "pancreas_366",
+   "flare23": "FLARE23_0071",
+   "source": "wave1"
+  },
+  {
+   "public_case": "case_00116",
+   "flare23": "FLARE23_0081",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_110",
+   "flare23": "FLARE23_0096",
+   "source": "wave1"
+  },
+  {
+   "public_case": "case_00128",
+   "flare23": "FLARE23_0097",
+   "source": "wave2"
+  },
+  {
+   "public_case": "case_00128",
+   "flare23": "FLARE23_0097",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-89",
+   "flare23": "FLARE23_0098",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-116",
+   "flare23": "FLARE23_0101",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-116",
+   "flare23": "FLARE23_0101",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-64",
+   "flare23": "FLARE23_0102",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-64",
+   "flare23": "FLARE23_0102",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-64",
+   "flare23": "FLARE23_0102",
+   "source": "wave1_manual"
+  },
+  {
+   "public_case": "volume-125",
+   "flare23": "FLARE23_0106",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "case_00105",
+   "flare23": "FLARE23_0118",
+   "source": "wave2"
+  },
+  {
+   "public_case": "case_00105",
+   "flare23": "FLARE23_0118",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-37",
+   "flare23": "FLARE23_0119",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-21",
+   "flare23": "FLARE23_0120",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-21",
+   "flare23": "FLARE23_0120",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "case_00090",
+   "flare23": "FLARE23_0126",
+   "source": "wave3"
+  },
+  {
+   "public_case": "case_00090",
+   "flare23": "FLARE23_0126",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-49",
+   "flare23": "FLARE23_0129",
+   "source": "wave4"
+  },
+  {
+   "public_case": "case_00158",
+   "flare23": "FLARE23_0133",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00160",
+   "flare23": "FLARE23_0141",
+   "source": "wave4"
+  },
+  {
+   "public_case": "pancreas_236",
+   "flare23": "FLARE23_0143",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00120",
+   "flare23": "FLARE23_0146",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00120",
+   "flare23": "FLARE23_0146",
+   "source": "wave2"
+  },
+  {
+   "public_case": "volume-97",
+   "flare23": "FLARE23_0148",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_336",
+   "flare23": "FLARE23_0151",
+   "source": "wave1"
+  },
+  {
+   "public_case": "pancreas_137",
+   "flare23": "FLARE23_0156",
+   "source": "wave1"
+  },
+  {
+   "public_case": "pancreas_137",
+   "flare23": "FLARE23_0156",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_267",
+   "flare23": "FLARE23_0162",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00098",
+   "flare23": "FLARE23_0167",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_323",
+   "flare23": "FLARE23_0185",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-120",
+   "flare23": "FLARE23_0187",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_064",
+   "flare23": "FLARE23_0191",
+   "source": "wave1"
+  },
+  {
+   "public_case": "case_00277",
+   "flare23": "FLARE23_0193",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00192",
+   "flare23": "FLARE23_0212",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00143",
+   "flare23": "FLARE23_0226",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00269",
+   "flare23": "FLARE23_0235",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00032",
+   "flare23": "FLARE23_0236",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_418",
+   "flare23": "FLARE23_0237",
+   "source": "wave1"
+  },
+  {
+   "public_case": "case_00186",
+   "flare23": "FLARE23_0239",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-111",
+   "flare23": "FLARE23_0246",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-111",
+   "flare23": "FLARE23_0246",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-3",
+   "flare23": "FLARE23_0253",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-3",
+   "flare23": "FLARE23_0253",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_278",
+   "flare23": "FLARE23_0255",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_180",
+   "flare23": "FLARE23_0262",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-26",
+   "flare23": "FLARE23_0263",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-65",
+   "flare23": "FLARE23_0267",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "case_00251",
+   "flare23": "FLARE23_0274",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00284",
+   "flare23": "FLARE23_0277",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_327",
+   "flare23": "FLARE23_0283",
+   "source": "wave1"
+  },
+  {
+   "public_case": "pancreas_327",
+   "flare23": "FLARE23_0283",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_015",
+   "flare23": "FLARE23_0284",
+   "source": "wave1"
+  },
+  {
+   "public_case": "pancreas_369",
+   "flare23": "FLARE23_0285",
+   "source": "wave1"
+  },
+  {
+   "public_case": "pancreas_369",
+   "flare23": "FLARE23_0285",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00067",
+   "flare23": "FLARE23_0286",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00067",
+   "flare23": "FLARE23_0286",
+   "source": "wave2"
+  },
+  {
+   "public_case": "pancreas_290",
+   "flare23": "FLARE23_0299",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-12",
+   "flare23": "FLARE23_0302",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "case_00137",
+   "flare23": "FLARE23_0309",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_241",
+   "flare23": "FLARE23_0312",
+   "source": "wave1"
+  },
+  {
+   "public_case": "volume-58",
+   "flare23": "FLARE23_0327",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-58",
+   "flare23": "FLARE23_0327",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-121",
+   "flare23": "FLARE23_0329",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_226",
+   "flare23": "FLARE23_0332",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_226",
+   "flare23": "FLARE23_0332",
+   "source": "wave1"
+  },
+  {
+   "public_case": "case_00157",
+   "flare23": "FLARE23_0338",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00173",
+   "flare23": "FLARE23_0341",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_127",
+   "flare23": "FLARE23_0346",
+   "source": "wave1"
+  },
+  {
+   "public_case": "pancreas_056",
+   "flare23": "FLARE23_0350",
+   "source": "wave1"
+  },
+  {
+   "public_case": "case_00007",
+   "flare23": "FLARE23_0357",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_099",
+   "flare23": "FLARE23_0365",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-10",
+   "flare23": "FLARE23_0367",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "case_00258",
+   "flare23": "FLARE23_0369",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00041",
+   "flare23": "FLARE23_0373",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00255",
+   "flare23": "FLARE23_0382",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-13",
+   "flare23": "FLARE23_0403",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-13",
+   "flare23": "FLARE23_0403",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00078",
+   "flare23": "FLARE23_0405",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00078",
+   "flare23": "FLARE23_0405",
+   "source": "flare0405_kits00078_twin_check"
+  },
+  {
+   "public_case": "case_00064",
+   "flare23": "FLARE23_0413",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-11",
+   "flare23": "FLARE23_0416",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-11",
+   "flare23": "FLARE23_0416",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_012",
+   "flare23": "FLARE23_0419",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00127",
+   "flare23": "FLARE23_0421",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00262",
+   "flare23": "FLARE23_0428",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_074",
+   "flare23": "FLARE23_0431",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00104",
+   "flare23": "FLARE23_0437",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00079",
+   "flare23": "FLARE23_0439",
+   "source": "wave2"
+  },
+  {
+   "public_case": "case_00165",
+   "flare23": "FLARE23_0444",
+   "source": "wave3"
+  },
+  {
+   "public_case": "case_00165",
+   "flare23": "FLARE23_0444",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-39",
+   "flare23": "FLARE23_0445",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_356",
+   "flare23": "FLARE23_0448",
+   "source": "wave1"
+  },
+  {
+   "public_case": "pancreas_356",
+   "flare23": "FLARE23_0448",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00253",
+   "flare23": "FLARE23_0451",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_095",
+   "flare23": "FLARE23_0458",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-74",
+   "flare23": "FLARE23_0459",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "case_00142",
+   "flare23": "FLARE23_0463",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_376",
+   "flare23": "FLARE23_0466",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00148",
+   "flare23": "FLARE23_0470",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00148",
+   "flare23": "FLARE23_0470",
+   "source": "wave2"
+  },
+  {
+   "public_case": "case_00132",
+   "flare23": "FLARE23_0473",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-78",
+   "flare23": "FLARE23_0487",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-78",
+   "flare23": "FLARE23_0487",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "case_00184",
+   "flare23": "FLARE23_0488",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_246",
+   "flare23": "FLARE23_0491",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-103",
+   "flare23": "FLARE23_0493",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_316",
+   "flare23": "FLARE23_0504",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_310",
+   "flare23": "FLARE23_0511",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-114",
+   "flare23": "FLARE23_0514",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-114",
+   "flare23": "FLARE23_0514",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00208",
+   "flare23": "FLARE23_0518",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_416",
+   "flare23": "FLARE23_0520",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_256",
+   "flare23": "FLARE23_0521",
+   "source": "wave1"
+  },
+  {
+   "public_case": "case_00014",
+   "flare23": "FLARE23_0523",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_266",
+   "flare23": "FLARE23_0533",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_287",
+   "flare23": "FLARE23_0536",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_292",
+   "flare23": "FLARE23_0540",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-47",
+   "flare23": "FLARE23_0544",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-5",
+   "flare23": "FLARE23_0563",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_052",
+   "flare23": "FLARE23_0572",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-45",
+   "flare23": "FLARE23_0573",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_207",
+   "flare23": "FLARE23_0586",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00072",
+   "flare23": "FLARE23_0590",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_275",
+   "flare23": "FLARE23_0592",
+   "source": "wave1"
+  },
+  {
+   "public_case": "pancreas_084",
+   "flare23": "FLARE23_0593",
+   "source": "wave1"
+  },
+  {
+   "public_case": "pancreas_084",
+   "flare23": "FLARE23_0593",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00226",
+   "flare23": "FLARE23_0611",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_330",
+   "flare23": "FLARE23_0612",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_330",
+   "flare23": "FLARE23_0612",
+   "source": "wave1"
+  },
+  {
+   "public_case": "case_00092",
+   "flare23": "FLARE23_0617",
+   "source": "wave3"
+  },
+  {
+   "public_case": "case_00092",
+   "flare23": "FLARE23_0617",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00241",
+   "flare23": "FLARE23_0620",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_096",
+   "flare23": "FLARE23_0624",
+   "source": "wave1"
+  },
+  {
+   "public_case": "case_00057",
+   "flare23": "FLARE23_0628",
+   "source": "wave4"
+  },
+  {
+   "public_case": "pancreas_289",
+   "flare23": "FLARE23_0641",
+   "source": "wave1"
+  },
+  {
+   "public_case": "volume-28",
+   "flare23": "FLARE23_0644",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_119",
+   "flare23": "FLARE23_0674",
+   "source": "wave1"
+  },
+  {
+   "public_case": "pancreas_119",
+   "flare23": "FLARE23_0674",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-128",
+   "flare23": "FLARE23_0680",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-128",
+   "flare23": "FLARE23_0680",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-96",
+   "flare23": "FLARE23_0689",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-96",
+   "flare23": "FLARE23_0689",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00038",
+   "flare23": "FLARE23_0696",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_259",
+   "flare23": "FLARE23_0698",
+   "source": "wave1"
+  },
+  {
+   "public_case": "volume-90",
+   "flare23": "FLARE23_0700",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-90",
+   "flare23": "FLARE23_0700",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00036",
+   "flare23": "FLARE23_0719",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00134",
+   "flare23": "FLARE23_0728",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-94",
+   "flare23": "FLARE23_0729",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-124",
+   "flare23": "FLARE23_0730",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "case_00273",
+   "flare23": "FLARE23_0732",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00058",
+   "flare23": "FLARE23_0734",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-87",
+   "flare23": "FLARE23_0736",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "case_00245",
+   "flare23": "FLARE23_0738",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00103",
+   "flare23": "FLARE23_0740",
+   "source": "wave4"
+  },
+  {
+   "public_case": "case_00037",
+   "flare23": "FLARE23_0744",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_218",
+   "flare23": "FLARE23_0751",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_218",
+   "flare23": "FLARE23_0751",
+   "source": "wave1"
+  },
+  {
+   "public_case": "pancreas_178",
+   "flare23": "FLARE23_0758",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_213",
+   "flare23": "FLARE23_0766",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_075",
+   "flare23": "FLARE23_0775",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-73",
+   "flare23": "FLARE23_0778",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "case_00179",
+   "flare23": "FLARE23_0782",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_158",
+   "flare23": "FLARE23_0787",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-2",
+   "flare23": "FLARE23_0795",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_254",
+   "flare23": "FLARE23_0797",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00024",
+   "flare23": "FLARE23_0802",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00024",
+   "flare23": "FLARE23_0802",
+   "source": "wave3"
+  },
+  {
+   "public_case": "case_00281",
+   "flare23": "FLARE23_0812",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_107",
+   "flare23": "FLARE23_0819",
+   "source": "wave1"
+  },
+  {
+   "public_case": "pancreas_326",
+   "flare23": "FLARE23_0835",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_106",
+   "flare23": "FLARE23_0839",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00167",
+   "flare23": "FLARE23_0845",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00121",
+   "flare23": "FLARE23_0850",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00194",
+   "flare23": "FLARE23_0853",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_129",
+   "flare23": "FLARE23_0859",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_378",
+   "flare23": "FLARE23_0860",
+   "source": "wave1"
+  },
+  {
+   "public_case": "case_00205",
+   "flare23": "FLARE23_0862",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-48",
+   "flare23": "FLARE23_0869",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "case_00055",
+   "flare23": "FLARE23_0878",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00008",
+   "flare23": "FLARE23_0883",
+   "source": "wave3"
+  },
+  {
+   "public_case": "case_00008",
+   "flare23": "FLARE23_0883",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00039",
+   "flare23": "FLARE23_0886",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00039",
+   "flare23": "FLARE23_0886",
+   "source": "wave3"
+  },
+  {
+   "public_case": "pancreas_157",
+   "flare23": "FLARE23_0889",
+   "source": "wave1"
+  },
+  {
+   "public_case": "pancreas_157",
+   "flare23": "FLARE23_0889",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_166",
+   "flare23": "FLARE23_0896",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-71",
+   "flare23": "FLARE23_0902",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "case_00182",
+   "flare23": "FLARE23_0909",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00075",
+   "flare23": "FLARE23_0910",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00075",
+   "flare23": "FLARE23_0910",
+   "source": "wave3"
+  },
+  {
+   "public_case": "volume-107",
+   "flare23": "FLARE23_0913",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "case_00112",
+   "flare23": "FLARE23_0916",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-54",
+   "flare23": "FLARE23_0917",
+   "source": "wave4"
+  },
+  {
+   "public_case": "case_00048",
+   "flare23": "FLARE23_0919",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00043",
+   "flare23": "FLARE23_0922",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00043",
+   "flare23": "FLARE23_0922",
+   "source": "wave3"
+  },
+  {
+   "public_case": "pancreas_343",
+   "flare23": "FLARE23_0927",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_244",
+   "flare23": "FLARE23_0928",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00139",
+   "flare23": "FLARE23_0934",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00172",
+   "flare23": "FLARE23_0938",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00175",
+   "flare23": "FLARE23_0939",
+   "source": "wave1"
+  },
+  {
+   "public_case": "volume-30",
+   "flare23": "FLARE23_0943",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_049",
+   "flare23": "FLARE23_0951",
+   "source": "wave1"
+  },
+  {
+   "public_case": "case_00180",
+   "flare23": "FLARE23_0960",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-66",
+   "flare23": "FLARE23_0964",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "case_00220",
+   "flare23": "FLARE23_0966",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_191",
+   "flare23": "FLARE23_0971",
+   "source": "wave1"
+  },
+  {
+   "public_case": "case_00044",
+   "flare23": "FLARE23_0973",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00076",
+   "flare23": "FLARE23_0981",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00298",
+   "flare23": "FLARE23_0984",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-123",
+   "flare23": "FLARE23_0994",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-123",
+   "flare23": "FLARE23_0994",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00087",
+   "flare23": "FLARE23_0998",
+   "source": "wave2"
+  },
+  {
+   "public_case": "case_00087",
+   "flare23": "FLARE23_0998",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-53",
+   "flare23": "FLARE23_1001",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_114",
+   "flare23": "FLARE23_1003",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00002",
+   "flare23": "FLARE23_1013",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_149",
+   "flare23": "FLARE23_1014",
+   "source": "wave1"
+  },
+  {
+   "public_case": "volume-92",
+   "flare23": "FLARE23_1018",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-38",
+   "flare23": "FLARE23_1026",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-76",
+   "flare23": "FLARE23_1027",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-76",
+   "flare23": "FLARE23_1027",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_304",
+   "flare23": "FLARE23_1028",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_325",
+   "flare23": "FLARE23_1037",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00198",
+   "flare23": "FLARE23_1038",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_101",
+   "flare23": "FLARE23_1039",
+   "source": "wave1"
+  },
+  {
+   "public_case": "pancreas_231",
+   "flare23": "FLARE23_1041",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00017",
+   "flare23": "FLARE23_1051",
+   "source": "wave2"
+  },
+  {
+   "public_case": "case_00017",
+   "flare23": "FLARE23_1051",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_197",
+   "flare23": "FLARE23_1054",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00009",
+   "flare23": "FLARE23_1063",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-88",
+   "flare23": "FLARE23_1064",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_303",
+   "flare23": "FLARE23_1069",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-72",
+   "flare23": "FLARE23_1077",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_242",
+   "flare23": "FLARE23_1081",
+   "source": "wave1"
+  },
+  {
+   "public_case": "volume-33",
+   "flare23": "FLARE23_1082",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-33",
+   "flare23": "FLARE23_1082",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "case_00084",
+   "flare23": "FLARE23_1087",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-56",
+   "flare23": "FLARE23_1097",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-56",
+   "flare23": "FLARE23_1097",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-20",
+   "flare23": "FLARE23_1107",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-20",
+   "flare23": "FLARE23_1107",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00015",
+   "flare23": "FLARE23_1111",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-51",
+   "flare23": "FLARE23_1115",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_354",
+   "flare23": "FLARE23_1117",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00018",
+   "flare23": "FLARE23_1125",
+   "source": "wave4"
+  },
+  {
+   "public_case": "pancreas_032",
+   "flare23": "FLARE23_1135",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_219",
+   "flare23": "FLARE23_1136",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_122",
+   "flare23": "FLARE23_1144",
+   "source": "wave1"
+  },
+  {
+   "public_case": "pancreas_204",
+   "flare23": "FLARE23_1153",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00013",
+   "flare23": "FLARE23_1156",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00042",
+   "flare23": "FLARE23_1158",
+   "source": "wave4"
+  },
+  {
+   "public_case": "pancreas_269",
+   "flare23": "FLARE23_1159",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_398",
+   "flare23": "FLARE23_1185",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-129",
+   "flare23": "FLARE23_1195",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-129",
+   "flare23": "FLARE23_1195",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-84",
+   "flare23": "FLARE23_1199",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_100",
+   "flare23": "FLARE23_1208",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_222",
+   "flare23": "FLARE23_1212",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_346",
+   "flare23": "FLARE23_1215",
+   "source": "wave1"
+  },
+  {
+   "public_case": "volume-34",
+   "flare23": "FLARE23_1218",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-34",
+   "flare23": "FLARE23_1218",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_126",
+   "flare23": "FLARE23_1225",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-14",
+   "flare23": "FLARE23_1233",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-14",
+   "flare23": "FLARE23_1233",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_235",
+   "flare23": "FLARE23_1236",
+   "source": "wave1"
+  },
+  {
+   "public_case": "pancreas_235",
+   "flare23": "FLARE23_1236",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00189",
+   "flare23": "FLARE23_1246",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_087",
+   "flare23": "FLARE23_1250",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-8",
+   "flare23": "FLARE23_1254",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_393",
+   "flare23": "FLARE23_1256",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_393",
+   "flare23": "FLARE23_1256",
+   "source": "wave1"
+  },
+  {
+   "public_case": "case_00231",
+   "flare23": "FLARE23_1264",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00021",
+   "flare23": "FLARE23_1274",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00021",
+   "flare23": "FLARE23_1274",
+   "source": "wave3"
+  },
+  {
+   "public_case": "pancreas_113",
+   "flare23": "FLARE23_1285",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-29",
+   "flare23": "FLARE23_1286",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-29",
+   "flare23": "FLARE23_1286",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_264",
+   "flare23": "FLARE23_1289",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-85",
+   "flare23": "FLARE23_1293",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-85",
+   "flare23": "FLARE23_1293",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00086",
+   "flare23": "FLARE23_1298",
+   "source": "wave2"
+  },
+  {
+   "public_case": "pancreas_040",
+   "flare23": "FLARE23_1299",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_048",
+   "flare23": "FLARE23_1309",
+   "source": "wave1"
+  },
+  {
+   "public_case": "pancreas_125",
+   "flare23": "FLARE23_1312",
+   "source": "wave1"
+  },
+  {
+   "public_case": "case_00145",
+   "flare23": "FLARE23_1313",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00187",
+   "flare23": "FLARE23_1324",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_348",
+   "flare23": "FLARE23_1327",
+   "source": "wave1"
+  },
+  {
+   "public_case": "case_00203",
+   "flare23": "FLARE23_1334",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00004",
+   "flare23": "FLARE23_1338",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_212",
+   "flare23": "FLARE23_1344",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-112",
+   "flare23": "FLARE23_1347",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-112",
+   "flare23": "FLARE23_1347",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00288",
+   "flare23": "FLARE23_1351",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_037",
+   "flare23": "FLARE23_1352",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00268",
+   "flare23": "FLARE23_1360",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_299",
+   "flare23": "FLARE23_1363",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00162",
+   "flare23": "FLARE23_1364",
+   "source": "wave4"
+  },
+  {
+   "public_case": "case_00088",
+   "flare23": "FLARE23_1373",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_318",
+   "flare23": "FLARE23_1375",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_071",
+   "flare23": "FLARE23_1388",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-98",
+   "flare23": "FLARE23_1390",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "case_00027",
+   "flare23": "FLARE23_1392",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00259",
+   "flare23": "FLARE23_1394",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00065",
+   "flare23": "FLARE23_1400",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_358",
+   "flare23": "FLARE23_1405",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-67",
+   "flare23": "FLARE23_1408",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_268",
+   "flare23": "FLARE23_1428",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-42",
+   "flare23": "FLARE23_1430",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-22",
+   "flare23": "FLARE23_1436",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-68",
+   "flare23": "FLARE23_1438",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-68",
+   "flare23": "FLARE23_1438",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "case_00130",
+   "flare23": "FLARE23_1441",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00242",
+   "flare23": "FLARE23_1447",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_412",
+   "flare23": "FLARE23_1448",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-126",
+   "flare23": "FLARE23_1452",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-63",
+   "flare23": "FLARE23_1453",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_386",
+   "flare23": "FLARE23_1454",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00149",
+   "flare23": "FLARE23_1464",
+   "source": "wave2"
+  },
+  {
+   "public_case": "pancreas_051",
+   "flare23": "FLARE23_1465",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_261",
+   "flare23": "FLARE23_1466",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-31",
+   "flare23": "FLARE23_1470",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-31",
+   "flare23": "FLARE23_1470",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-17",
+   "flare23": "FLARE23_1474",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_302",
+   "flare23": "FLARE23_1482",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_400",
+   "flare23": "FLARE23_1492",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-86",
+   "flare23": "FLARE23_1495",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "case_00110",
+   "flare23": "FLARE23_1497",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00218",
+   "flare23": "FLARE23_1498",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00062",
+   "flare23": "FLARE23_1507",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00083",
+   "flare23": "FLARE23_1512",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00083",
+   "flare23": "FLARE23_1512",
+   "source": "wave3"
+  },
+  {
+   "public_case": "case_00207",
+   "flare23": "FLARE23_1520",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-110",
+   "flare23": "FLARE23_1524",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-99",
+   "flare23": "FLARE23_1530",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_370",
+   "flare23": "FLARE23_1536",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-106",
+   "flare23": "FLARE23_1542",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "case_00210",
+   "flare23": "FLARE23_1543",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00293",
+   "flare23": "FLARE23_1545",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-46",
+   "flare23": "FLARE23_1548",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_239",
+   "flare23": "FLARE23_1552",
+   "source": "wave1"
+  },
+  {
+   "public_case": "pancreas_069",
+   "flare23": "FLARE23_1556",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_229",
+   "flare23": "FLARE23_1564",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-16",
+   "flare23": "FLARE23_1567",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-16",
+   "flare23": "FLARE23_1567",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-93",
+   "flare23": "FLARE23_1575",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_230",
+   "flare23": "FLARE23_1577",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-32",
+   "flare23": "FLARE23_1578",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-32",
+   "flare23": "FLARE23_1578",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-118",
+   "flare23": "FLARE23_1581",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_173",
+   "flare23": "FLARE23_1583",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00124",
+   "flare23": "FLARE23_1589",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00124",
+   "flare23": "FLARE23_1589",
+   "source": "wave2"
+  },
+  {
+   "public_case": "case_00028",
+   "flare23": "FLARE23_1596",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-69",
+   "flare23": "FLARE23_1598",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "case_00095",
+   "flare23": "FLARE23_1609",
+   "source": "wave4"
+  },
+  {
+   "public_case": "pancreas_297",
+   "flare23": "FLARE23_1617",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00102",
+   "flare23": "FLARE23_1618",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00181",
+   "flare23": "FLARE23_1620",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-80",
+   "flare23": "FLARE23_1622",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "case_00234",
+   "flare23": "FLARE23_1623",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_285",
+   "flare23": "FLARE23_1629",
+   "source": "wave1"
+  },
+  {
+   "public_case": "case_00060",
+   "flare23": "FLARE23_1630",
+   "source": "wave3"
+  },
+  {
+   "public_case": "case_00060",
+   "flare23": "FLARE23_1630",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_258",
+   "flare23": "FLARE23_1638",
+   "source": "wave1"
+  },
+  {
+   "public_case": "pancreas_019",
+   "flare23": "FLARE23_1639",
+   "source": "wave1"
+  },
+  {
+   "public_case": "pancreas_019",
+   "flare23": "FLARE23_1639",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_404",
+   "flare23": "FLARE23_1643",
+   "source": "wave1"
+  },
+  {
+   "public_case": "pancreas_404",
+   "flare23": "FLARE23_1643",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_415",
+   "flare23": "FLARE23_1650",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_301",
+   "flare23": "FLARE23_1651",
+   "source": "wave1"
+  },
+  {
+   "public_case": "volume-130",
+   "flare23": "FLARE23_1661",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-130",
+   "flare23": "FLARE23_1661",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "case_00138",
+   "flare23": "FLARE23_1662",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_006",
+   "flare23": "FLARE23_1667",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_018",
+   "flare23": "FLARE23_1678",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-60",
+   "flare23": "FLARE23_1680",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-60",
+   "flare23": "FLARE23_1680",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_147",
+   "flare23": "FLARE23_1683",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_175",
+   "flare23": "FLARE23_1685",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00000",
+   "flare23": "FLARE23_1686",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-115",
+   "flare23": "FLARE23_1687",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "case_00247",
+   "flare23": "FLARE23_1689",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_374",
+   "flare23": "FLARE23_1695",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00285",
+   "flare23": "FLARE23_1699",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_103",
+   "flare23": "FLARE23_1722",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_172",
+   "flare23": "FLARE23_1723",
+   "source": "wave1"
+  },
+  {
+   "public_case": "pancreas_092",
+   "flare23": "FLARE23_1724",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_243",
+   "flare23": "FLARE23_1732",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00051",
+   "flare23": "FLARE23_1734",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00068",
+   "flare23": "FLARE23_1741",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00254",
+   "flare23": "FLARE23_1754",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-1",
+   "flare23": "FLARE23_1758",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-1",
+   "flare23": "FLARE23_1758",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_419",
+   "flare23": "FLARE23_1760",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_201",
+   "flare23": "FLARE23_1764",
+   "source": "wave2"
+  },
+  {
+   "public_case": "pancreas_107",
+   "flare23": "FLARE23_1774",
+   "source": "wave1"
+  },
+  {
+   "public_case": "volume-18",
+   "flare23": "FLARE23_1775",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-18",
+   "flare23": "FLARE23_1775",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-119",
+   "flare23": "FLARE23_1782",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-119",
+   "flare23": "FLARE23_1782",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-24",
+   "flare23": "FLARE23_1786",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-19",
+   "flare23": "FLARE23_1791",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-19",
+   "flare23": "FLARE23_1791",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "case_00151",
+   "flare23": "FLARE23_1794",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_088",
+   "flare23": "FLARE23_1801",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00228",
+   "flare23": "FLARE23_1802",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00257",
+   "flare23": "FLARE23_1807",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00006",
+   "flare23": "FLARE23_1816",
+   "source": "wave4"
+  },
+  {
+   "public_case": "pancreas_043",
+   "flare23": "FLARE23_1817",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_080",
+   "flare23": "FLARE23_1820",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_200",
+   "flare23": "FLARE23_1826",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_200",
+   "flare23": "FLARE23_1826",
+   "source": "wave1"
+  },
+  {
+   "public_case": "volume-91",
+   "flare23": "FLARE23_1829",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00202",
+   "flare23": "FLARE23_1830",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_210",
+   "flare23": "FLARE23_1842",
+   "source": "wave1"
+  },
+  {
+   "public_case": "volume-82",
+   "flare23": "FLARE23_1854",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_414",
+   "flare23": "FLARE23_1855",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_295",
+   "flare23": "FLARE23_1856",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-15",
+   "flare23": "FLARE23_1858",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_315",
+   "flare23": "FLARE23_1867",
+   "source": "wave1"
+  },
+  {
+   "public_case": "pancreas_315",
+   "flare23": "FLARE23_1867",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00125",
+   "flare23": "FLARE23_1877",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-35",
+   "flare23": "FLARE23_1891",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_089",
+   "flare23": "FLARE23_1899",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00204",
+   "flare23": "FLARE23_1905",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_140",
+   "flare23": "FLARE23_1906",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_298",
+   "flare23": "FLARE23_1909",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_413",
+   "flare23": "FLARE23_1915",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_098",
+   "flare23": "FLARE23_1919",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-102",
+   "flare23": "FLARE23_1922",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-102",
+   "flare23": "FLARE23_1922",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-4",
+   "flare23": "FLARE23_1926",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-43",
+   "flare23": "FLARE23_1930",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_375",
+   "flare23": "FLARE23_1932",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00274",
+   "flare23": "FLARE23_1937",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_361",
+   "flare23": "FLARE23_1947",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_183",
+   "flare23": "FLARE23_1951",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00278",
+   "flare23": "FLARE23_1957",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-44",
+   "flare23": "FLARE23_1960",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-44",
+   "flare23": "FLARE23_1960",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_199",
+   "flare23": "FLARE23_1965",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00271",
+   "flare23": "FLARE23_1969",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_148",
+   "flare23": "FLARE23_1981",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-104",
+   "flare23": "FLARE23_1988",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-104",
+   "flare23": "FLARE23_1988",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_024",
+   "flare23": "FLARE23_1991",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_227",
+   "flare23": "FLARE23_1994",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-9",
+   "flare23": "FLARE23_1998",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-9",
+   "flare23": "FLARE23_1998",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-109",
+   "flare23": "FLARE23_1999",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-59",
+   "flare23": "FLARE23_2002",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-81",
+   "flare23": "FLARE23_2003",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-81",
+   "flare23": "FLARE23_2003",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "case_00113",
+   "flare23": "FLARE23_2006",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-95",
+   "flare23": "FLARE23_2007",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_109",
+   "flare23": "FLARE23_2009",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_078",
+   "flare23": "FLARE23_2015",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_078",
+   "flare23": "FLARE23_2015",
+   "source": "wave1"
+  },
+  {
+   "public_case": "case_00023",
+   "flare23": "FLARE23_2019",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-7",
+   "flare23": "FLARE23_2023",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "case_00154",
+   "flare23": "FLARE23_2033",
+   "source": "wave4"
+  },
+  {
+   "public_case": "case_00016",
+   "flare23": "FLARE23_2034",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_399",
+   "flare23": "FLARE23_2051",
+   "source": "wave1"
+  },
+  {
+   "public_case": "pancreas_399",
+   "flare23": "FLARE23_2051",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00163",
+   "flare23": "FLARE23_2060",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_270",
+   "flare23": "FLARE23_2065",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00030",
+   "flare23": "FLARE23_2068",
+   "source": "wave4"
+  },
+  {
+   "public_case": "pancreas_193",
+   "flare23": "FLARE23_2069",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_342",
+   "flare23": "FLARE23_2073",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-77",
+   "flare23": "FLARE23_2078",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-117",
+   "flare23": "FLARE23_2092",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-117",
+   "flare23": "FLARE23_2092",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "case_00286",
+   "flare23": "FLARE23_2097",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-101",
+   "flare23": "FLARE23_2100",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_355",
+   "flare23": "FLARE23_2102",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-40",
+   "flare23": "FLARE23_2106",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-23",
+   "flare23": "FLARE23_2111",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-23",
+   "flare23": "FLARE23_2111",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00035",
+   "flare23": "FLARE23_2116",
+   "source": "wave4"
+  },
+  {
+   "public_case": "case_00049",
+   "flare23": "FLARE23_2117",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_083",
+   "flare23": "FLARE23_2119",
+   "source": "wave1"
+  },
+  {
+   "public_case": "pancreas_196",
+   "flare23": "FLARE23_2123",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_041",
+   "flare23": "FLARE23_2125",
+   "source": "wave1"
+  },
+  {
+   "public_case": "pancreas_041",
+   "flare23": "FLARE23_2125",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00159",
+   "flare23": "FLARE23_2126",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-27",
+   "flare23": "FLARE23_2130",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-27",
+   "flare23": "FLARE23_2130",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00267",
+   "flare23": "FLARE23_2133",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-122",
+   "flare23": "FLARE23_2135",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "volume-122",
+   "flare23": "FLARE23_2135",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-113",
+   "flare23": "FLARE23_2145",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-113",
+   "flare23": "FLARE23_2145",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "pancreas_411",
+   "flare23": "FLARE23_2172",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-6",
+   "flare23": "FLARE23_2175",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "case_00108",
+   "flare23": "FLARE23_2177",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "pancreas_120",
+   "flare23": "FLARE23_2185",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-108",
+   "flare23": "FLARE23_2190",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "volume-108",
+   "flare23": "FLARE23_2190",
+   "source": "lits_census"
+  },
+  {
+   "public_case": "case_00175",
+   "flare23": "FLARE23_2196",
+   "source": "ks_header_scan"
+  },
+  {
+   "public_case": "case_00175",
+   "flare23": "FLARE23_2196",
+   "source": "wave2"
+  }
+ ]
+}

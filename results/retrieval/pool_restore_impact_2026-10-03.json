@@ -1,0 +1,59 @@
+{
+ "note": "Restore the two FLARE23 records the de-duplication removed in error, and measure what it changes (10-03).\n\nThe pool rule is: remove FLARE23 records that are the same scan as one of the 113 QUERY cases (a query must not\nretrieve itself). Checked against the complete twin census (results/audit/flare23_twin_census_complete_2026-10-03.json),\n114 of the 116 removals are query twins. Two are not:\n  FLARE23_0042  removed as a twin of query pancreas_122 -- it is voxel-identical to pancreas_274 (a training case,\n                not a query); pancreas_122's real twin FLARE23_1144 is removed separately.\n  FLARE23_0102  removed 09-15 as the LiTS twin of liver_64 (= volume-64) when the LiTS geometry could not be\n                tested; volume-64 is not one of the 21 LiTS queries.\nNeither duplicates anything in the pool, so both return: pool 1,309 -> 1,311 (113 + 1,198).\n\nImpact: every query re-ranked by the benchmark scorer (retrieval_core_local.similarity) on both pools, for the KG\nconfigurations of export_rankings_113.py (the feature baselines need the cluster feature cache), same candidate\nordering rule (sorted ids; ties keep that order). Reported: queries whose top-10 SET or ORDER changes, and where the\ntwo restored records land.\n\n  python pool_restore_impact.py\n-> corpora/reissue_2026-10-03/corpus_flare23_kg_dedup_1311.json (+ results/retrieval/pool_restore_impact_2026-10-03.json)",
+ "pool_old": 1309,
+ "pool_new": 1311,
+ "configs": {
+  "i": {
+   "top10_set_changed": 0,
+   "top10_order_changed": 0,
+   "queries_set_changed": [],
+   "restored_in_a_top10": {
+    "flare23_FLARE23_0042": [],
+    "flare23_FLARE23_0102": []
+   }
+  },
+  "ii": {
+   "top10_set_changed": 0,
+   "top10_order_changed": 0,
+   "queries_set_changed": [],
+   "restored_in_a_top10": {
+    "flare23_FLARE23_0042": [],
+    "flare23_FLARE23_0102": []
+   }
+  },
+  "iii": {
+   "top10_set_changed": 0,
+   "top10_order_changed": 0,
+   "queries_set_changed": [],
+   "restored_in_a_top10": {
+    "flare23_FLARE23_0042": [],
+    "flare23_FLARE23_0102": []
+   }
+  },
+  "iii_prime": {
+   "top10_set_changed": 1,
+   "top10_order_changed": 1,
+   "queries_set_changed": [
+    "volume-82"
+   ],
+   "restored_in_a_top10": {
+    "flare23_FLARE23_0042": [],
+    "flare23_FLARE23_0102": [
+     [
+      "volume-82",
+      2
+     ]
+    ]
+   }
+  },
+  "iv": {
+   "top10_set_changed": 0,
+   "top10_order_changed": 0,
+   "queries_set_changed": [],
+   "restored_in_a_top10": {
+    "flare23_FLARE23_0042": [],
+    "flare23_FLARE23_0102": []
+   }
+  }
+ }
+}

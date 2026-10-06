@@ -1,0 +1,1312 @@
+{
+"volume-0": {
+"vid": 0,
+"shape": [
+28,
+256,
+256
+],
+"liver_sl50": 28,
+"tumor_sl50": 5
+},
+"volume-1": {
+"vid": 1,
+"shape": [
+28,
+256,
+256
+],
+"liver_sl50": 27,
+"tumor_sl50": 14
+},
+"volume-10": {
+"vid": 10,
+"shape": [
+180,
+256,
+256
+],
+"liver_sl50": 179,
+"tumor_sl50": 48
+},
+"volume-100": {
+"vid": 100,
+"shape": [
+275,
+256,
+256
+],
+"liver_sl50": 274,
+"tumor_sl50": 219
+},
+"volume-101": {
+"vid": 101,
+"shape": [
+258,
+256,
+256
+],
+"liver_sl50": 258,
+"tumor_sl50": 187
+},
+"volume-102": {
+"vid": 102,
+"shape": [
+312,
+256,
+256
+],
+"liver_sl50": 258,
+"tumor_sl50": 44
+},
+"volume-103": {
+"vid": 103,
+"shape": [
+213,
+256,
+256
+],
+"liver_sl50": 209,
+"tumor_sl50": 51
+},
+"volume-104": {
+"vid": 104,
+"shape": [
+193,
+256,
+256
+],
+"liver_sl50": 190,
+"tumor_sl50": 100
+},
+"volume-105": {
+"vid": 105,
+"shape": [
+238,
+256,
+256
+],
+"liver_sl50": 236,
+"tumor_sl50": 0
+},
+"volume-106": {
+"vid": 106,
+"shape": [
+167,
+256,
+256
+],
+"liver_sl50": 165,
+"tumor_sl50": 0
+},
+"volume-107": {
+"vid": 107,
+"shape": [
+247,
+256,
+256
+],
+"liver_sl50": 242,
+"tumor_sl50": 3
+},
+"volume-108": {
+"vid": 108,
+"shape": [
+204,
+256,
+256
+],
+"liver_sl50": 203,
+"tumor_sl50": 198
+},
+"volume-109": {
+"vid": 109,
+"shape": [
+193,
+256,
+256
+],
+"liver_sl50": 193,
+"tumor_sl50": 89
+},
+"volume-11": {
+"vid": 11,
+"shape": [
+166,
+256,
+256
+],
+"liver_sl50": 164,
+"tumor_sl50": 28
+},
+"volume-110": {
+"vid": 110,
+"shape": [
+188,
+256,
+256
+],
+"liver_sl50": 185,
+"tumor_sl50": 113
+},
+"volume-111": {
+"vid": 111,
+"shape": [
+232,
+256,
+256
+],
+"liver_sl50": 230,
+"tumor_sl50": 4
+},
+"volume-112": {
+"vid": 112,
+"shape": [
+190,
+256,
+256
+],
+"liver_sl50": 188,
+"tumor_sl50": 0
+},
+"volume-113": {
+"vid": 113,
+"shape": [
+169,
+256,
+256
+],
+"liver_sl50": 168,
+"tumor_sl50": 111
+},
+"volume-114": {
+"vid": 114,
+"shape": [
+214,
+256,
+256
+],
+"liver_sl50": 213,
+"tumor_sl50": 0
+},
+"volume-115": {
+"vid": 115,
+"shape": [
+185,
+256,
+256
+],
+"liver_sl50": 183,
+"tumor_sl50": 0
+},
+"volume-116": {
+"vid": 116,
+"shape": [
+218,
+256,
+256
+],
+"liver_sl50": 217,
+"tumor_sl50": 133
+},
+"volume-117": {
+"vid": 117,
+"shape": [
+259,
+256,
+256
+],
+"liver_sl50": 255,
+"tumor_sl50": 226
+},
+"volume-118": {
+"vid": 118,
+"shape": [
+121,
+256,
+256
+],
+"liver_sl50": 120,
+"tumor_sl50": 79
+},
+"volume-119": {
+"vid": 119,
+"shape": [
+131,
+256,
+256
+],
+"liver_sl50": 130,
+"tumor_sl50": 0
+},
+"volume-12": {
+"vid": 12,
+"shape": [
+188,
+256,
+256
+],
+"liver_sl50": 187,
+"tumor_sl50": 0
+},
+"volume-120": {
+"vid": 120,
+"shape": [
+119,
+256,
+256
+],
+"liver_sl50": 119,
+"tumor_sl50": 11
+},
+"volume-121": {
+"vid": 121,
+"shape": [
+112,
+256,
+256
+],
+"liver_sl50": 111,
+"tumor_sl50": 6
+},
+"volume-122": {
+"vid": 122,
+"shape": [
+117,
+256,
+256
+],
+"liver_sl50": 116,
+"tumor_sl50": 60
+},
+"volume-123": {
+"vid": 123,
+"shape": [
+114,
+256,
+256
+],
+"liver_sl50": 114,
+"tumor_sl50": 81
+},
+"volume-124": {
+"vid": 124,
+"shape": [
+111,
+256,
+256
+],
+"liver_sl50": 110,
+"tumor_sl50": 52
+},
+"volume-125": {
+"vid": 125,
+"shape": [
+111,
+256,
+256
+],
+"liver_sl50": 110,
+"tumor_sl50": 0
+},
+"volume-126": {
+"vid": 126,
+"shape": [
+112,
+256,
+256
+],
+"liver_sl50": 111,
+"tumor_sl50": 12
+},
+"volume-127": {
+"vid": 127,
+"shape": [
+226,
+256,
+256
+],
+"liver_sl50": 225,
+"tumor_sl50": 1
+},
+"volume-128": {
+"vid": 128,
+"shape": [
+291,
+256,
+256
+],
+"liver_sl50": 289,
+"tumor_sl50": 128
+},
+"volume-129": {
+"vid": 129,
+"shape": [
+276,
+256,
+256
+],
+"liver_sl50": 276,
+"tumor_sl50": 225
+},
+"volume-13": {
+"vid": 13,
+"shape": [
+140,
+256,
+256
+],
+"liver_sl50": 137,
+"tumor_sl50": 40
+},
+"volume-130": {
+"vid": 130,
+"shape": [
+240,
+256,
+256
+],
+"liver_sl50": 238,
+"tumor_sl50": 185
+},
+"volume-14": {
+"vid": 14,
+"shape": [
+138,
+256,
+256
+],
+"liver_sl50": 136,
+"tumor_sl50": 8
+},
+"volume-15": {
+"vid": 15,
+"shape": [
+132,
+256,
+256
+],
+"liver_sl50": 131,
+"tumor_sl50": 0
+},
+"volume-16": {
+"vid": 16,
+"shape": [
+186,
+256,
+256
+],
+"liver_sl50": 182,
+"tumor_sl50": 102
+},
+"volume-17": {
+"vid": 17,
+"shape": [
+197,
+256,
+256
+],
+"liver_sl50": 194,
+"tumor_sl50": 49
+},
+"volume-18": {
+"vid": 18,
+"shape": [
+188,
+256,
+256
+],
+"liver_sl50": 184,
+"tumor_sl50": 20
+},
+"volume-19": {
+"vid": 19,
+"shape": [
+187,
+256,
+256
+],
+"liver_sl50": 185,
+"tumor_sl50": 33
+},
+"volume-2": {
+"vid": 2,
+"shape": [
+138,
+256,
+256
+],
+"liver_sl50": 136,
+"tumor_sl50": 24
+},
+"volume-20": {
+"vid": 20,
+"shape": [
+193,
+256,
+256
+],
+"liver_sl50": 192,
+"tumor_sl50": 0
+},
+"volume-21": {
+"vid": 21,
+"shape": [
+174,
+256,
+256
+],
+"liver_sl50": 173,
+"tumor_sl50": 60
+},
+"volume-22": {
+"vid": 22,
+"shape": [
+45,
+256,
+256
+],
+"liver_sl50": 43,
+"tumor_sl50": 10
+},
+"volume-23": {
+"vid": 23,
+"shape": [
+115,
+256,
+256
+],
+"liver_sl50": 114,
+"tumor_sl50": 27
+},
+"volume-24": {
+"vid": 24,
+"shape": [
+117,
+256,
+256
+],
+"liver_sl50": 115,
+"tumor_sl50": 4
+},
+"volume-25": {
+"vid": 25,
+"shape": [
+231,
+256,
+256
+],
+"liver_sl50": 222,
+"tumor_sl50": 0
+},
+"volume-26": {
+"vid": 26,
+"shape": [
+191,
+256,
+256
+],
+"liver_sl50": 189,
+"tumor_sl50": 67
+},
+"volume-27": {
+"vid": 27,
+"shape": [
+228,
+256,
+256
+],
+"liver_sl50": 226,
+"tumor_sl50": 125
+},
+"volume-28": {
+"vid": 28,
+"shape": [
+97,
+256,
+256
+],
+"liver_sl50": 97,
+"tumor_sl50": 69
+},
+"volume-29": {
+"vid": 29,
+"shape": [
+113,
+256,
+256
+],
+"liver_sl50": 111,
+"tumor_sl50": 18
+},
+"volume-3": {
+"vid": 3,
+"shape": [
+168,
+256,
+256
+],
+"liver_sl50": 168,
+"tumor_sl50": 9
+},
+"volume-30": {
+"vid": 30,
+"shape": [
+122,
+256,
+256
+],
+"liver_sl50": 120,
+"tumor_sl50": 15
+},
+"volume-31": {
+"vid": 31,
+"shape": [
+66,
+256,
+256
+],
+"liver_sl50": 66,
+"tumor_sl50": 17
+},
+"volume-32": {
+"vid": 32,
+"shape": [
+118,
+256,
+256
+],
+"liver_sl50": 117,
+"tumor_sl50": 0
+},
+"volume-33": {
+"vid": 33,
+"shape": [
+95,
+256,
+256
+],
+"liver_sl50": 95,
+"tumor_sl50": 77
+},
+"volume-34": {
+"vid": 34,
+"shape": [
+97,
+256,
+256
+],
+"liver_sl50": 97,
+"tumor_sl50": 0
+},
+"volume-35": {
+"vid": 35,
+"shape": [
+115,
+256,
+256
+],
+"liver_sl50": 115,
+"tumor_sl50": 20
+},
+"volume-36": {
+"vid": 36,
+"shape": [
+88,
+256,
+256
+],
+"liver_sl50": 86,
+"tumor_sl50": 28
+},
+"volume-37": {
+"vid": 37,
+"shape": [
+98,
+256,
+256
+],
+"liver_sl50": 96,
+"tumor_sl50": 25
+},
+"volume-38": {
+"vid": 38,
+"shape": [
+95,
+256,
+256
+],
+"liver_sl50": 94,
+"tumor_sl50": 0
+},
+"volume-39": {
+"vid": 39,
+"shape": [
+238,
+256,
+256
+],
+"liver_sl50": 227,
+"tumor_sl50": 74
+},
+"volume-4": {
+"vid": 4,
+"shape": [
+249,
+256,
+256
+],
+"liver_sl50": 247,
+"tumor_sl50": 233
+},
+"volume-40": {
+"vid": 40,
+"shape": [
+89,
+256,
+256
+],
+"liver_sl50": 88,
+"tumor_sl50": 54
+},
+"volume-41": {
+"vid": 41,
+"shape": [
+103,
+256,
+256
+],
+"liver_sl50": 102,
+"tumor_sl50": 0
+},
+"volume-42": {
+"vid": 42,
+"shape": [
+114,
+256,
+256
+],
+"liver_sl50": 112,
+"tumor_sl50": 5
+},
+"volume-43": {
+"vid": 43,
+"shape": [
+112,
+256,
+256
+],
+"liver_sl50": 111,
+"tumor_sl50": 11
+},
+"volume-44": {
+"vid": 44,
+"shape": [
+112,
+256,
+256
+],
+"liver_sl50": 106,
+"tumor_sl50": 34
+},
+"volume-45": {
+"vid": 45,
+"shape": [
+58,
+256,
+256
+],
+"liver_sl50": 58,
+"tumor_sl50": 9
+},
+"volume-46": {
+"vid": 46,
+"shape": [
+40,
+256,
+256
+],
+"liver_sl50": 39,
+"tumor_sl50": 29
+},
+"volume-47": {
+"vid": 47,
+"shape": [
+84,
+256,
+256
+],
+"liver_sl50": 84,
+"tumor_sl50": 0
+},
+"volume-48": {
+"vid": 48,
+"shape": [
+68,
+256,
+256
+],
+"liver_sl50": 68,
+"tumor_sl50": 22
+},
+"volume-49": {
+"vid": 49,
+"shape": [
+72,
+256,
+256
+],
+"liver_sl50": 72,
+"tumor_sl50": 11
+},
+"volume-5": {
+"vid": 5,
+"shape": [
+175,
+256,
+256
+],
+"liver_sl50": 171,
+"tumor_sl50": 0
+},
+"volume-50": {
+"vid": 50,
+"shape": [
+63,
+256,
+256
+],
+"liver_sl50": 63,
+"tumor_sl50": 7
+},
+"volume-51": {
+"vid": 51,
+"shape": [
+55,
+256,
+256
+],
+"liver_sl50": 55,
+"tumor_sl50": 33
+},
+"volume-52": {
+"vid": 52,
+"shape": [
+55,
+256,
+256
+],
+"liver_sl50": 55,
+"tumor_sl50": 19
+},
+"volume-53": {
+"vid": 53,
+"shape": [
+43,
+256,
+256
+],
+"liver_sl50": 42,
+"tumor_sl50": 5
+},
+"volume-54": {
+"vid": 54,
+"shape": [
+28,
+256,
+256
+],
+"liver_sl50": 27,
+"tumor_sl50": 1
+},
+"volume-55": {
+"vid": 55,
+"shape": [
+91,
+256,
+256
+],
+"liver_sl50": 90,
+"tumor_sl50": 4
+},
+"volume-56": {
+"vid": 56,
+"shape": [
+89,
+256,
+256
+],
+"liver_sl50": 88,
+"tumor_sl50": 63
+},
+"volume-57": {
+"vid": 57,
+"shape": [
+148,
+256,
+256
+],
+"liver_sl50": 146,
+"tumor_sl50": 16
+},
+"volume-58": {
+"vid": 58,
+"shape": [
+82,
+256,
+256
+],
+"liver_sl50": 81,
+"tumor_sl50": 0
+},
+"volume-59": {
+"vid": 59,
+"shape": [
+76,
+256,
+256
+],
+"liver_sl50": 75,
+"tumor_sl50": 2
+},
+"volume-6": {
+"vid": 6,
+"shape": [
+185,
+256,
+256
+],
+"liver_sl50": 182,
+"tumor_sl50": 62
+},
+"volume-60": {
+"vid": 60,
+"shape": [
+78,
+256,
+256
+],
+"liver_sl50": 78,
+"tumor_sl50": 14
+},
+"volume-61": {
+"vid": 61,
+"shape": [
+60,
+256,
+256
+],
+"liver_sl50": 59,
+"tumor_sl50": 6
+},
+"volume-62": {
+"vid": 62,
+"shape": [
+88,
+256,
+256
+],
+"liver_sl50": 87,
+"tumor_sl50": 6
+},
+"volume-63": {
+"vid": 63,
+"shape": [
+36,
+256,
+256
+],
+"liver_sl50": 36,
+"tumor_sl50": 2
+},
+"volume-64": {
+"vid": 64,
+"shape": [
+103,
+256,
+256
+],
+"liver_sl50": 102,
+"tumor_sl50": 38
+},
+"volume-65": {
+"vid": 65,
+"shape": [
+200,
+256,
+256
+],
+"liver_sl50": 196,
+"tumor_sl50": 5
+},
+"volume-66": {
+"vid": 66,
+"shape": [
+34,
+256,
+256
+],
+"liver_sl50": 33,
+"tumor_sl50": 4
+},
+"volume-67": {
+"vid": 67,
+"shape": [
+78,
+256,
+256
+],
+"liver_sl50": 77,
+"tumor_sl50": 0
+},
+"volume-68": {
+"vid": 68,
+"shape": [
+63,
+256,
+256
+],
+"liver_sl50": 63,
+"tumor_sl50": 8
+},
+"volume-69": {
+"vid": 69,
+"shape": [
+95,
+256,
+256
+],
+"liver_sl50": 95,
+"tumor_sl50": 7
+},
+"volume-7": {
+"vid": 7,
+"shape": [
+176,
+256,
+256
+],
+"liver_sl50": 174,
+"tumor_sl50": 57
+},
+"volume-70": {
+"vid": 70,
+"shape": [
+109,
+256,
+256
+],
+"liver_sl50": 109,
+"tumor_sl50": 47
+},
+"volume-71": {
+"vid": 71,
+"shape": [
+35,
+256,
+256
+],
+"liver_sl50": 34,
+"tumor_sl50": 19
+},
+"volume-72": {
+"vid": 72,
+"shape": [
+57,
+256,
+256
+],
+"liver_sl50": 57,
+"tumor_sl50": 17
+},
+"volume-73": {
+"vid": 73,
+"shape": [
+49,
+256,
+256
+],
+"liver_sl50": 48,
+"tumor_sl50": 2
+},
+"volume-74": {
+"vid": 74,
+"shape": [
+31,
+256,
+256
+],
+"liver_sl50": 31,
+"tumor_sl50": 10
+},
+"volume-75": {
+"vid": 75,
+"shape": [
+36,
+256,
+256
+],
+"liver_sl50": 36,
+"tumor_sl50": 5
+},
+"volume-76": {
+"vid": 76,
+"shape": [
+74,
+256,
+256
+],
+"liver_sl50": 74,
+"tumor_sl50": 56
+},
+"volume-77": {
+"vid": 77,
+"shape": [
+35,
+256,
+256
+],
+"liver_sl50": 35,
+"tumor_sl50": 6
+},
+"volume-78": {
+"vid": 78,
+"shape": [
+58,
+256,
+256
+],
+"liver_sl50": 58,
+"tumor_sl50": 21
+},
+"volume-79": {
+"vid": 79,
+"shape": [
+58,
+256,
+256
+],
+"liver_sl50": 58,
+"tumor_sl50": 15
+},
+"volume-8": {
+"vid": 8,
+"shape": [
+178,
+256,
+256
+],
+"liver_sl50": 176,
+"tumor_sl50": 37
+},
+"volume-80": {
+"vid": 80,
+"shape": [
+75,
+256,
+256
+],
+"liver_sl50": 75,
+"tumor_sl50": 30
+},
+"volume-81": {
+"vid": 81,
+"shape": [
+110,
+256,
+256
+],
+"liver_sl50": 108,
+"tumor_sl50": 10
+},
+"volume-82": {
+"vid": 82,
+"shape": [
+169,
+256,
+256
+],
+"liver_sl50": 168,
+"tumor_sl50": 57
+},
+"volume-83": {
+"vid": 83,
+"shape": [
+214,
+256,
+256
+],
+"liver_sl50": 211,
+"tumor_sl50": 0
+},
+"volume-84": {
+"vid": 84,
+"shape": [
+257,
+256,
+256
+],
+"liver_sl50": 256,
+"tumor_sl50": 185
+},
+"volume-85": {
+"vid": 85,
+"shape": [
+275,
+256,
+256
+],
+"liver_sl50": 275,
+"tumor_sl50": 33
+},
+"volume-86": {
+"vid": 86,
+"shape": [
+279,
+256,
+256
+],
+"liver_sl50": 279,
+"tumor_sl50": 15
+},
+"volume-87": {
+"vid": 87,
+"shape": [
+214,
+256,
+256
+],
+"liver_sl50": 210,
+"tumor_sl50": 0
+},
+"volume-88": {
+"vid": 88,
+"shape": [
+174,
+256,
+256
+],
+"liver_sl50": 174,
+"tumor_sl50": 71
+},
+"volume-89": {
+"vid": 89,
+"shape": [
+192,
+256,
+256
+],
+"liver_sl50": 189,
+"tumor_sl50": 0
+},
+"volume-9": {
+"vid": 9,
+"shape": [
+171,
+256,
+256
+],
+"liver_sl50": 170,
+"tumor_sl50": 45
+},
+"volume-90": {
+"vid": 90,
+"shape": [
+182,
+256,
+256
+],
+"liver_sl50": 180,
+"tumor_sl50": 149
+},
+"volume-91": {
+"vid": 91,
+"shape": [
+188,
+256,
+256
+],
+"liver_sl50": 186,
+"tumor_sl50": 0
+},
+"volume-92": {
+"vid": 92,
+"shape": [
+178,
+256,
+256
+],
+"liver_sl50": 175,
+"tumor_sl50": 0
+},
+"volume-93": {
+"vid": 93,
+"shape": [
+233,
+256,
+256
+],
+"liver_sl50": 229,
+"tumor_sl50": 172
+},
+"volume-94": {
+"vid": 94,
+"shape": [
+251,
+256,
+256
+],
+"liver_sl50": 246,
+"tumor_sl50": 79
+},
+"volume-95": {
+"vid": 95,
+"shape": [
+262,
+256,
+256
+],
+"liver_sl50": 262,
+"tumor_sl50": 7
+},
+"volume-96": {
+"vid": 96,
+"shape": [
+298,
+256,
+256
+],
+"liver_sl50": 298,
+"tumor_sl50": 84
+},
+"volume-97": {
+"vid": 97,
+"shape": [
+231,
+256,
+256
+],
+"liver_sl50": 229,
+"tumor_sl50": 183
+},
+"volume-98": {
+"vid": 98,
+"shape": [
+240,
+256,
+256
+],
+"liver_sl50": 238,
+"tumor_sl50": 121
+},
+"volume-99": {
+"vid": 99,
+"shape": [
+225,
+256,
+256
+],
+"liver_sl50": 223,
+"tumor_sl50": 23
+}
+}

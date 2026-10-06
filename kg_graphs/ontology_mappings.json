@@ -27,8 +27,8 @@
   "AnatomicSite::Head of pancreas": {
    "SNOMED CT": {
     "system": "SNOMED CT",
-    "code": "362201006",
-    "display": "Entire head of pancreas"
+    "code": "64163001",
+    "display": "Structure of head of pancreas"
    }
   },
   "AnatomicSite::Body of pancreas": {

@@ -1,0 +1,128 @@
+{
+ "note": "Checkpoint inventory for the co-author 09-29 \u00a76 item 4, completed 2026-10-01 (round 2): full SHA-256 for every surviving checkpoint, each computed on a fresh copy from Drive and checked against the hash or prefix recorded earlier (scripts/audit/complete_checkpoint_hashes.py). Two checkpoints are not recoverable (below).",
+ "NOT_RECOVERABLE": {
+  "sam3_tumor_ausam_lits.pth": "deleted 2026-08-22 (weights behind the LiTS tumor records/Dice)",
+  "sam3_tumor_ausam_pancreas.pth": "deleted 2026-08-22 (weights behind the MSD tumor records/Dice)"
+ },
+ "checkpoints": [
+  {
+   "file": "organ/sam3_organ_generic.pth",
+   "location": "drive_UD:MMKG_AUSAM_2026-08-07/checkpoints/organ/sam3_organ_generic.pth",
+   "drive_modified": "2026-08-04",
+   "md5_drive": "27f37e9053cff5a4d4868ee70985c1cc",
+   "sha256": "10f29041b21746315e0f7526848715f47391b6b366cd01c43d45a386af6b7eb8",
+   "sha256_prefix_only": null,
+   "size_bytes_approx": "3.36e9",
+   "complete_state_dict": "1468/1468 keys (checked on ausam_kits organ + tumor; all files identical size class)"
+  },
+  {
+   "file": "organ/sam3_organ_generic_ausam_flare23.pth",
+   "location": "drive_UD:MMKG_AUSAM_2026-08-07/checkpoints/organ/sam3_organ_generic_ausam_flare23.pth",
+   "drive_modified": "2026-08-05",
+   "md5_drive": "cf89e6adfa2f1b762eaf74d5d56bdd41",
+   "sha256": "9728087a5aba2ed6fe74f8c46c459f210db54c650c12f33dcd282fb837a57e54",
+   "sha256_prefix_only": null,
+   "size_bytes_approx": "3.36e9",
+   "complete_state_dict": "1468/1468 keys (checked on ausam_kits organ + tumor; all files identical size class)"
+  },
+  {
+   "file": "organ/sam3_organ_generic_ausam_flare_task2.pth",
+   "location": "drive_UD:MMKG_AUSAM_2026-08-07/checkpoints/organ/sam3_organ_generic_ausam_flare_task2.pth",
+   "drive_modified": "2026-08-05",
+   "md5_drive": "38517c12a48a0d05fba7fb77e6177d34",
+   "sha256": "32edee657ed420946b61abccaf7dcfd0998f02917beebb642ecec4f15c24add8",
+   "sha256_prefix_only": null,
+   "size_bytes_approx": "3.36e9",
+   "complete_state_dict": "1468/1468 keys (checked on ausam_kits organ + tumor; all files identical size class)"
+  },
+  {
+   "file": "organ/sam3_organ_generic_ausam_kits.pth",
+   "location": "drive_UD:MMKG_AUSAM_2026-08-07/checkpoints/organ/sam3_organ_generic_ausam_kits.pth",
+   "drive_modified": "2026-08-05",
+   "md5_drive": "1beb53f3885b498527a74433a4e105b8",
+   "sha256": "38f263590fc9ac5ae915e6a0c5ad06182d9428c88be77a8ca3d50fde644a559e",
+   "sha256_prefix_only": null,
+   "size_bytes_approx": "3.36e9",
+   "complete_state_dict": "1468/1468 keys (checked on ausam_kits organ + tumor; all files identical size class)"
+  },
+  {
+   "file": "organ/sam3_organ_generic_ausam_lits.pth",
+   "location": "drive_UD:MMKG_AUSAM_2026-08-07/checkpoints/organ/sam3_organ_generic_ausam_lits.pth",
+   "drive_modified": "2026-08-05",
+   "md5_drive": "f5fcfd669ef64e4f3ce6ac2e05719a14",
+   "sha256": "fb9d4e06298e814a4357b1d32732c804f85603f56b1c7f6b21c369d23a273c21",
+   "sha256_prefix_only": null,
+   "size_bytes_approx": "3.36e9",
+   "complete_state_dict": "1468/1468 keys (checked on ausam_kits organ + tumor; all files identical size class)"
+  },
+  {
+   "file": "organ/sam3_organ_generic_ausam_msd.pth",
+   "location": "drive_UD:MMKG_AUSAM_2026-08-07/checkpoints/organ/sam3_organ_generic_ausam_msd.pth",
+   "drive_modified": "2026-08-05",
+   "md5_drive": "a970cf12525ab4f8fdd64cd34a2a78ac",
+   "sha256": "fc98e5e86b2271642f23b28724ae212365df16286bc4f29a934d6e4aa32d88ec",
+   "sha256_prefix_only": null,
+   "size_bytes_approx": "3.36e9",
+   "complete_state_dict": "1468/1468 keys (checked on ausam_kits organ + tumor; all files identical size class)"
+  },
+  {
+   "file": "organ/sam3_organ_generic_kg.pth",
+   "location": "drive_UD:MMKG_AUSAM_2026-08-07/checkpoints/organ/sam3_organ_generic_kg.pth",
+   "drive_modified": "2026-08-04",
+   "md5_drive": "b8e5d5dc7435bea057ea110de2acdf6d",
+   "sha256": "8e7c15196211bbe6fdabd604e920984a7d821eff9beefeb3d08bf1b804dad49a",
+   "sha256_prefix_only": null,
+   "size_bytes_approx": "3.36e9",
+   "complete_state_dict": "1468/1468 keys (checked on ausam_kits organ + tumor; all files identical size class)"
+  },
+  {
+   "file": "tumor/sam3_tumor_ausam_flare.pth",
+   "location": "drive_UD:MMKG_AUSAM_2026-08-07/checkpoints/tumor/sam3_tumor_ausam_flare.pth",
+   "drive_modified": "2026-08-06",
+   "md5_drive": "591e88793ac1b5f786e6000bc4c4b725",
+   "sha256": "b12c48455eac81fb61c98c75579e424b34c9b8282c836dfe36aa86538f47beae",
+   "sha256_prefix_only": null,
+   "size_bytes_approx": "3.36e9",
+   "complete_state_dict": "1468/1468 keys (checked on ausam_kits organ + tumor; all files identical size class)"
+  },
+  {
+   "file": "tumor/sam3_tumor_ausam_kits.pth",
+   "location": "drive_UD:MMKG_AUSAM_2026-08-07/checkpoints/tumor/sam3_tumor_ausam_kits.pth",
+   "drive_modified": "2026-08-05",
+   "md5_drive": "05ebff156c09719f909f47a2a959d7ac",
+   "sha256": "b243bd9cd396ceb3eee24c34edde3011fd1f42ad72d188813b30a80117d4e596",
+   "sha256_prefix_only": null,
+   "size_bytes_approx": "3.36e9",
+   "complete_state_dict": "1468/1468 keys (checked on ausam_kits organ + tumor; all files identical size class)"
+  },
+  {
+   "file": "tumor/sam3_tumor_generic.pth",
+   "location": "drive_UD:MMKG_AUSAM_2026-08-07/checkpoints/tumor/sam3_tumor_generic.pth",
+   "drive_modified": "2026-08-03",
+   "md5_drive": "afcd39c3ec2aeeea4178d0bf175f27a3",
+   "sha256": "c1c778bbe1e8dd3c84a837a7345df6d61bd5c3d1de49a47bc327747d87601b2d",
+   "sha256_prefix_only": null,
+   "size_bytes_approx": "3.36e9",
+   "complete_state_dict": "1468/1468 keys (checked on ausam_kits organ + tumor; all files identical size class)"
+  },
+  {
+   "file": "tumor/sam3_tumor_s1_lits_patientlevel.pth",
+   "location": "drive_UD:MMKG_AUSAM_2026-08-07/checkpoints/tumor/sam3_tumor_s1_lits_patientlevel.pth",
+   "drive_modified": "2026-08-06",
+   "md5_drive": "6c2a6a6230397d6ce27e3655b8ad776d",
+   "sha256": "7821bd8bc13e59b542d9ff95a4b80ed8e1dbcb3a833a3d68b4994e9b3384714e",
+   "sha256_prefix_only": null,
+   "size_bytes_approx": "3.36e9",
+   "complete_state_dict": "1468/1468 keys (checked on ausam_kits organ + tumor; all files identical size class)"
+  },
+  {
+   "file": "sam3_tumor_flare_only.pth",
+   "location": "drive_UD:VKG_app_handoff_2026-09-14/response_2026-10-01/checkpoints/tumor/sam3_tumor_flare_only.pth (copied 2026-10-01)",
+   "drive_modified": null,
+   "local_modified": "2026-08-24",
+   "md5_local": "9a7ac81cf5b37858aae9e26ed3fe9f12",
+   "sha256": "503c14bffe675f028249cff9ee98b4d124f5b481b46683abed61116a7d5594cf",
+   "note": "drew the tumor half of the three single-organ masks shipped 09-19 (with base facebook/sam3 for the organ half)"
+  }
+ ]
+}

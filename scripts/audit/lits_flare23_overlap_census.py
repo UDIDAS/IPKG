@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Full LiTS <-> FLARE23 overlap census (v11 item 4): how many of the 131 LiTS volumes appear
 inside FLARE23 — the count the Limitations sentence needs. Extends the query-only extended
-audit (lits_extended_audit.json) to ALL 131 volumes, replacing/confirming KS's geometry screen.
+audit (lits_extended_audit.json) to ALL 131 volumes, replacing/confirming the co-author's geometry screen.
 
 Screen (local, from already-computed signatures):
   T2 physical — native Task03 liver volume within 1 % AND tumor volume within 2 % (or both

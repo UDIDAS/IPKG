@@ -1,5 +1,5 @@
 {
- "question": "YL 09-21: is FLARE23_0405 the same scan as KiTS23 case_00078, and was case_00078 a training case?",
+ "question": "the study lead 09-21: is FLARE23_0405 the same scan as KiTS23 case_00078, and was case_00078 a training case?",
  "same_scan": true,
  "evidence": {
   "geometry": "case_00078 (326,512,512)@(1.0,0.9629,0.9629) vs FLARE23_0405 (512,512,326)@(0.9629,0.9629,1.0) - axis-transposed, same grid",

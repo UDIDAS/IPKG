@@ -4,14 +4,14 @@ grid census of the 687 no-CT pool records into the census artifact and remove th
 deduplicated corpus.  Pool 1,323 -> 1,309, corpus 1,210 -> 1,196, twins 102 -> 116.
 
 Provenance: `scripts/audit/unscanned687_grid_prescreen.py` (voxel-grid matching on GT-label
-NIfTI headers streamed from Metadata.zip — annotation-independent: every one of KS's 310
+NIfTI headers streamed from Metadata.zip — annotation-independent: every one of the co-author's 310
 CT-voxel twins is grid-identical, and the GT label carries the CT's grid) found 17 exact-grid
 collisions between unmasked pool records and query volumes; `confirm_grid_collisions.py`
 confirmed 14 by mask overlap / exact tumor-voxel equality (12 KiTS: organ IoU 0.87-0.955 or
 tumor IoU 0.9746 on a 542K-voxel tumor; 2 LiTS: tumor GT voxel counts EXACTLY equal, the LiTS
 census's T2 criterion) and closed 3 as coincidence/benign.  These 687 records have NO CT in
 any release copy (the zip's 950 images exclude all of them — verified in the prescreen), so
-no CT-voxel scan, ours or KS's, could ever have seen them: the grid census is the strongest
+no CT-voxel scan, ours or the co-author's, could ever have seen them: the grid census is the strongest
 physically possible test for this stratum, caveat (disclosed in the prescreen artifact) that
 a RESAMPLED re-share would evade it and the CT-voxel test equally.
 

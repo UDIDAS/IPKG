@@ -17,9 +17,9 @@ file below and in [`TABLE_MAP.md`](TABLE_MAP.md).
 
 | Result | Value | Source |
 |:--|:--|:--|
-| Primary retrieval benchmark, predicted + γ (Table 8, config ii) | mAP **0.972** (113-case pool) | `results/retrieval/dedup/baselines_tab7_tab8.json` |
-| Large-pool stress test on the de-duplicated **1,309**-case pool (Table 9) | mAP **0.997** (636-case CT sub-pool; full pool 0.999); baselines ≤ 0.483, all Holm p ≤ 3.5×10⁻⁴ below (ii) | same file + `retrieval_tab8_stress.json` |
-| Duplicate-scan audits: **116 twins removed** from the cross-dataset pool (78 + 13 by the axis-normalized census + 11 by the CT-voxel second pass + 14 by the grid-census third pass — all annotation-independent, mask-overlap- or exact-tumor-voxel-confirmed); FLARE23 re-shares **116/131** LiTS volumes; residual: **673** pool FLARE23 records (no CT in any release copy) are label- AND grid-screened — none shares a voxel grid with any query (census JSON `second_pass`/`third_pass` sections; elimination gate 4/4 PASS: `twin_elimination_gate_2026-09-24.json`; disclosed caveat: a resampled re-share evades the grid and CT-voxel tests equally) | pool 1,425 → **1,309** | `results/audit/` (eight audit files) |
+| Primary retrieval benchmark, predicted + γ (Table 6, config ii), corrected relevance labels | mAP **0.967** (113-case pool); organ-conditioned baselines 0.880–0.930 (Holm p ≤ 1.5×10⁻⁴ below (ii)); same-organ random floor 0.881 | `results/retrieval/dedup/baselines_corrected_labels_2026-10-05.json` (published labels: `baselines_tab7_tab8.json`, 0.972) |
+| Large-pool stress test on the de-duplicated **1,311**-case pool (Table 7), CT sub-pool | (ii) mAP **1.000** on the 638-case CT sub-pool (113 + 525 FLARE23 candidates with a CT in the release copy); baselines 0.237–0.476, all Holm p ≤ 2×10⁻⁴ below (ii) | `results/retrieval/dedup/baselines_subpool_1311_2026-10-06.json`, `ct_subpool_1311_2026-10-06.json` |
+| Duplicate-scan audits: **114 twins removed** from the cross-dataset pool (78 + 13 by the axis-normalized census + 11 by the CT-voxel second pass + 14 by the grid-census third pass, less two records removed in error and restored (FLARE23_0042, FLARE23_0102); complete census `flare23_twin_census_complete_2026-10-03.json` — all annotation-independent, mask-overlap- or exact-tumor-voxel-confirmed); FLARE23 re-shares **116/131** LiTS volumes; residual: **673** pool FLARE23 records (no CT in any release copy) are label- AND grid-screened — none shares a voxel grid with any query (census JSON `second_pass`/`third_pass` sections; elimination gate 4/4 PASS: `twin_elimination_gate_2026-09-24.json`; disclosed caveat: a resampled re-share evades the grid and CT-voxel tests equally) | pool 1,425 → **1,311** | `results/audit/` (eight audit files) |
 | Statement-level report precision (Table 11, containment v2) | overall **0.944** (containment 0.872) | `results/kg/containment_reextraction_113_predicted.json` |
 | LLM relevance-judge study (Table 12) | κ 0.669, judge-relevance mAP 0.983 | `results/llm_expert/llm_expert_study_qwen3_32b.json` |
 | Host-rule vs Eq. 3 agreement (§3.11) | **0.9853** over 749 tumor components | `results/host_rule_agreement.json` |
@@ -29,7 +29,8 @@ file below and in [`TABLE_MAP.md`](TABLE_MAP.md).
 
 ```
 corpora/        per-patient phenotype records (GT + predicted, all datasets), the de-duplicated
-                FLARE23 pool (1,196 records), and containment_v2/ side corpora (see its README)
+                FLARE23 pool (1,196 records; the 1,311-pool version with 1,198 records is
+                corpora/reissue_2026-10-03/), sub-site-corrected re-issues in corpora/reissue_2026-10-01/, and containment_v2/ side corpora (see its README)
 kg_graphs/      built knowledge graphs (imaging_kg_*.ttl, unified_mmkg_*.json), schema,
                 ontology mappings (SNOMED CT / NCIt), organ-volume atlas
 queries/        the 10 SPARQL query families (.rq), the query-suite evaluators, runners
@@ -50,8 +51,10 @@ python scripts/retrieval/retrieval_iii_prime.py
 # Reproduce the query-suite verdicts (Tables 6):
 python queries/query_suite_eval.py
 ```
-Expected: Table 8 (ii) mAP 0.972 · Table 9 (ii) 0.999 full pool / 0.997 sub-pool, (iii) −0.061, (iv) −0.666 · (iii′) −0.264
-[−0.279, −0.239] — byte-comparable to `results/retrieval/dedup/`. Full instructions, including
+Expected (published labels): Table 6 (ii) mAP 0.972 · Table 7 (ii) 0.999 full pool / 0.997 sub-pool, (iii) −0.061, (iv) −0.666 · (iii′) −0.264
+[−0.279, −0.239] — byte-comparable to `results/retrieval/dedup/`. The corrected-label rows are re-scored by
+`scripts/retrieval/baselines_corrected_labels.py` and `baselines_subpool_1311.py` (they need the baseline feature cache;
+see `REPRODUCING.md`); both refuse to write unless their reproduction gates pass. Full instructions, including
 the GPU stages and the audits: [`REPRODUCING.md`](REPRODUCING.md).
 
 ## Data availability
@@ -61,10 +64,11 @@ Task03_Liver, which carries the original NIfTI headers), **KiTS23**, **MSD Pancr
 repository ships derived per-patient phenotype records and graphs only — no image data, no PHI
 (all sources are de-identified public challenge sets). The 576 semi-oracle predicted FLARE23
 masks behind Table 4 (the intermediate segmentation outputs the KG records are extracted from)
-are available in the shared Drive folder
-[`masks_predicted_flare23/`](https://drive.google.com/drive/folders/1INMkyghy0mouV0o61qWvBcOuAQ-Wt0Pl)
-(576 x `.nii.gz`, 229.7 MiB, with the FLARE23 citation/license notes) — cite this link plus the
-repository tag `IPKG-v1-rc5` in the Data Availability statement.
+are available from the project data share
+<https://drive.google.com/open?id=1uxsSQpWIWbxSDAiDrLJMHpJ4N5uOq4HQ>
+(576 masks as `masks_predicted_flare23.zip`, `MANIFEST.md5` checksums, `burden_tercile_cutpoints.json`,
+the FLARE23_0405 case-study mask, and the FLARE23 citation/licence notes, CC BY-NC-SA 4.0) — cite this
+link plus the repository tag `IPKG-v1-rc6` in the Data Availability statement.
 
 ## Clinician relevance study (§4.11 / §5.7)
 

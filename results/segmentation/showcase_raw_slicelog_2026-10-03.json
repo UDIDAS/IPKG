@@ -1,0 +1,205 @@
+{
+ "note": "Raw (ungated) prompt-free tumor masks + the per-slice keep/drop log for the four showcase cases (the study lead 10-03, the pipeline team item 2).\n\nSame pass as round 2 (eval_tumor_promptfree.py): sam3_tumor_generic, text 'tumor' on EVERY slice, no box, no slice\ngate, identical preprocessing and orientation (LiTS = MSD Task03 NIfTI rotated -90 deg in-plane to the training\norientation, saved back on the NIfTI grid). For each slice the log records the top query's confidence, the mask\narea at 256^2 and at native resolution, and whether the slice was KEPT or DROPPED and why:\n    drop_conf   top-query confidence < 0.15\n    drop_area   confidence ok but the native-resolution mask has < 15 px\n    kept        both thresholds met (the slice's mask enters the 3-D tumor)\nNo reference is read except to score, and to report (never to decide) whether the slice contains reference tumor.\n\nThe organ gate is then re-applied to the raw mask with round 2's rule (keep 3-D tumor components that touch the\nTotalSegmentator host organ dilated 5 mm). The host organ is taken from the shipped round-2 showcase mask (label 1;\nthe gated tumor overwrote host voxels inside itself, so host = label 1 | shipped tumor). For the three single-organ\ncases this is round 2's host exactly; FLARE23_0405 was gated on more TotalSegmentator classes than the shipped mask\ncarries, so its re-gate is reported as a check, and the shipped gated mask stays canonical.\n\n  CKPT=/path/sam3_tumor_generic.pth DATA=/path/to/staging python showcase_raw_slicelog.py\n-> $OUT_DIR/{case}_raw.nii.gz, {case}_slicelog.csv ; results/segmentation/showcase_raw_slicelog_2026-10-03.json",
+ "model": "sam3_tumor_generic.pth",
+ "model_sha256": "c1c778bbe1e8dd3c84a837a7345df6d61bd5c3d1de49a47bc327747d87601b2d",
+ "thresholds": {
+  "conf_min": 0.15,
+  "px_min_native": 15,
+  "prompt": "tumor",
+  "box": null
+ },
+ "cases": {
+  "volume-76": {
+   "dataset": "lits",
+   "slice_axis": 2,
+   "n_slices": 168,
+   "seconds_gpu": 55.8,
+   "slices": {
+    "kept": 154,
+    "drop_conf": 14,
+    "drop_area": 0
+   },
+   "kept_slices_without_ref_tumor": 96,
+   "ref_tumor_slices_dropped": 1,
+   "tumor_raw": {
+    "dice": 0.7455,
+    "pred_cm3": 406.37,
+    "ref_cm3": 266.48,
+    "outside_ref_cm3": 155.57,
+    "outside_ref_pct_of_pred": 38.3,
+    "missed_ref_cm3": 15.68,
+    "components": 83,
+    "nsd_1mm": 0.315,
+    "nsd_2mm": 0.4088,
+    "hd95_mm": 232.8
+   },
+   "raw_mask": "volume-76_raw.nii.gz",
+   "slicelog": "volume-76_slicelog.csv",
+   "round2_raw_dice": 0.7455,
+   "raw_reproduces_round2": true,
+   "tumor_gated": {
+    "dice": 0.8738,
+    "pred_cm3": 307.55,
+    "ref_cm3": 266.48,
+    "outside_ref_cm3": 56.75,
+    "outside_ref_pct_of_pred": 18.5,
+    "missed_ref_cm3": 15.68,
+    "components": 21,
+    "nsd_1mm": 0.491,
+    "nsd_2mm": 0.6371,
+    "hd95_mm": 7.55
+   },
+   "gate": {
+    "components_in": 83,
+    "components_kept": 21,
+    "host": "shipped round-2 TotalSegmentator host organ"
+   },
+   "gated_equals_shipped_voxelwise": false,
+   "gated_vs_shipped_voxel_diff": 33
+  },
+  "case_00067": {
+   "dataset": "kits",
+   "slice_axis": 0,
+   "n_slices": 285,
+   "seconds_gpu": 79.3,
+   "slices": {
+    "kept": 248,
+    "drop_conf": 37,
+    "drop_area": 0
+   },
+   "kept_slices_without_ref_tumor": 121,
+   "ref_tumor_slices_dropped": 0,
+   "tumor_raw": {
+    "dice": 0.9703,
+    "pred_cm3": 1062.67,
+    "ref_cm3": 1053.84,
+    "outside_ref_cm3": 35.85,
+    "outside_ref_pct_of_pred": 3.4,
+    "missed_ref_cm3": 27.02,
+    "components": 75,
+    "nsd_1mm": 0.6051,
+    "nsd_2mm": 0.7949,
+    "hd95_mm": 128.78
+   },
+   "raw_mask": "case_00067_raw.nii.gz",
+   "slicelog": "case_00067_slicelog.csv",
+   "round2_raw_dice": 0.9703,
+   "raw_reproduces_round2": true,
+   "tumor_gated": {
+    "dice": 0.9756,
+    "pred_cm3": 1051.22,
+    "ref_cm3": 1053.84,
+    "outside_ref_cm3": 24.41,
+    "outside_ref_pct_of_pred": 2.3,
+    "missed_ref_cm3": 27.02,
+    "components": 17,
+    "nsd_1mm": 0.6732,
+    "nsd_2mm": 0.8844,
+    "hd95_mm": 21.97
+   },
+   "gate": {
+    "components_in": 75,
+    "components_kept": 17,
+    "host": "shipped round-2 TotalSegmentator host organ"
+   },
+   "gated_equals_shipped_voxelwise": false,
+   "gated_vs_shipped_voxel_diff": 2948
+  },
+  "pancreas_125": {
+   "dataset": "msd",
+   "slice_axis": 2,
+   "n_slices": 102,
+   "seconds_gpu": 21.8,
+   "slices": {
+    "kept": 73,
+    "drop_conf": 29,
+    "drop_area": 0
+   },
+   "kept_slices_without_ref_tumor": 63,
+   "ref_tumor_slices_dropped": 0,
+   "tumor_raw": {
+    "dice": 0.3147,
+    "pred_cm3": 32.54,
+    "ref_cm3": 7.84,
+    "outside_ref_cm3": 26.19,
+    "outside_ref_pct_of_pred": 80.5,
+    "missed_ref_cm3": 1.49,
+    "components": 47,
+    "nsd_1mm": 0.1255,
+    "nsd_2mm": 0.1552,
+    "hd95_mm": 149.6
+   },
+   "raw_mask": "pancreas_125_raw.nii.gz",
+   "slicelog": "pancreas_125_slicelog.csv",
+   "round2_raw_dice": 0.3145,
+   "raw_reproduces_round2": true,
+   "tumor_gated": {
+    "dice": 0.6179,
+    "pred_cm3": 12.72,
+    "ref_cm3": 7.84,
+    "outside_ref_cm3": 6.37,
+    "outside_ref_pct_of_pred": 50.1,
+    "missed_ref_cm3": 1.49,
+    "components": 12,
+    "nsd_1mm": 0.3413,
+    "nsd_2mm": 0.4222,
+    "hd95_mm": 84.8
+   },
+   "gate": {
+    "components_in": 47,
+    "components_kept": 12,
+    "host": "shipped round-2 TotalSegmentator host organ"
+   },
+   "gated_equals_shipped_voxelwise": false,
+   "gated_vs_shipped_voxel_diff": 23
+  },
+  "FLARE23_0405": {
+   "dataset": "flare23",
+   "slice_axis": 2,
+   "n_slices": 326,
+   "seconds_gpu": 73.2,
+   "slices": {
+    "kept": 283,
+    "drop_conf": 43,
+    "drop_area": 0
+   },
+   "kept_slices_without_ref_tumor": 151,
+   "ref_tumor_slices_dropped": 0,
+   "tumor_raw": {
+    "dice": 0.874,
+    "pred_cm3": 716.03,
+    "ref_cm3": 695.01,
+    "outside_ref_cm3": 99.43,
+    "outside_ref_pct_of_pred": 13.9,
+    "missed_ref_cm3": 78.41,
+    "components": 71,
+    "nsd_1mm": 0.3971,
+    "nsd_2mm": 0.5095,
+    "hd95_mm": 214.34
+   },
+   "raw_mask": "FLARE23_0405_raw.nii.gz",
+   "slicelog": "FLARE23_0405_slicelog.csv",
+   "round2_raw_dice": 0.874,
+   "raw_reproduces_round2": true,
+   "tumor_gated": {
+    "dice": 0.8754,
+    "pred_cm3": 712.81,
+    "ref_cm3": 695.01,
+    "outside_ref_cm3": 96.62,
+    "outside_ref_pct_of_pred": 13.6,
+    "missed_ref_cm3": 78.81,
+    "components": 53,
+    "nsd_1mm": 0.4024,
+    "nsd_2mm": 0.5151,
+    "hd95_mm": 212.94
+   },
+   "gate": {
+    "components_in": 71,
+    "components_kept": 53,
+    "host": "shipped round-2 TotalSegmentator host organ (subset of round-2 host classes)"
+   },
+   "gated_equals_shipped_voxelwise": false,
+   "gated_vs_shipped_voxel_diff": 226
+  }
+ }
+}

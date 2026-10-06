@@ -37,12 +37,12 @@ ROOT = os.path.abspath(os.path.join(_HERE, "..", ".."))
 sys.path.insert(0, _HERE)
 import sam3_autonomous_local as IE                      # noqa: E402  hu_to_rgb, WIN, _load_sam3_ckpt
 
-KITS = "/path/to/staging/acm_data/kits_vol"
-LITS = "/path/to/staging/acm_data/lits_npy"
-MSD_I = "/path/to/staging/acm_data/msd_pancreas_images"
-MSD_L = "/path/to/staging/acm_data/msd_pancreas_labels"
-OUTD = "/path/to/staging/acm_data/masks_predicted_113_regen"
-TUMOR_OVERLAY = os.path.expanduser("~/hmmkg_ckpts/sam3_tumor_flare_only.pth")
+KITS = os.environ.get("REGEN_KITS", "/path/to/staging/acm_data/kits_vol")
+LITS = os.environ.get("REGEN_LITS", "/path/to/staging/acm_data/lits_npy")
+MSD_I = os.environ.get("REGEN_MSD_I", "/path/to/staging/acm_data/msd_pancreas_images")
+MSD_L = os.environ.get("REGEN_MSD_L", "/path/to/staging/acm_data/msd_pancreas_labels")
+OUTD = os.environ.get("REGEN_OUT", "/path/to/staging/acm_data/masks_predicted_113_regen")
+TUMOR_OVERLAY = os.environ.get("FLARE_ONLY_CKPT", os.path.expanduser("~/hmmkg_ckpts/sam3_tumor_flare_only.pth"))  # Drive: response_2026-10-01/checkpoints/tumor/ (md5 9a7ac81c...); local copy removed 10-03
 SUMMARY = os.path.join(ROOT, "results", "segmentation", "regen_masks_113_fidelity.json")
 MINPX = 50
 CFG = {"kits": {"organ": "kidney", "ax": 0}, "lits": {"organ": "liver", "ax": 0}, "msd": {"organ": "pancreas", "ax": 2}}
@@ -117,12 +117,15 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--datasets", nargs="+", default=["kits", "lits", "msd"])
     ap.add_argument("--batch", type=int, default=8)
+    ap.add_argument("--cases", nargs="+", default=None, help="restrict to these case ids (e.g. re-staging lost masks)")
     a = ap.parse_args()
 
     import torch
     from transformers import Sam3Processor
     proc = Sam3Processor.from_pretrained(IE.SAM3_MODEL_ID, token=IE.HF_TOKEN)
     om = IE._load_sam3_ckpt("/nonexistent", "cuda")
+    if not os.path.exists(TUMOR_OVERLAY):   # IE._load_sam3_ckpt would silently return base SAM 3
+        raise FileNotFoundError(f"{TUMOR_OVERLAY}: set FLARE_ONLY_CKPT (copy on Drive)")
     tm = IE._load_sam3_ckpt(TUMOR_OVERLAY, "cuda")
     print("models loaded", flush=True)
 
@@ -132,7 +135,10 @@ def main():
         organ, ax = CFG[ds]["organ"], CFG[ds]["ax"]
         os.makedirs(f"{OUTD}/{ds}", exist_ok=True)
         rows = []
-        for i, cid in enumerate(sorted(frozen)):
+        ids = [c for c in sorted(frozen) if not a.cases or c in a.cases]
+        if not ids:
+            continue
+        for i, cid in enumerate(ids):
             if os.path.exists(f"{OUTD}/{ds}/{cid}.json"):
                 rows.append(json.load(open(f"{OUTD}/{ds}/{cid}.json")))
                 continue
@@ -160,7 +166,7 @@ def main():
                    "has_tumor": bool(tmask.sum() > 0), "seconds": round(time.time() - t0, 1)}
             json.dump(rec, open(f"{OUTD}/{ds}/{cid}.json", "w"), indent=1)
             rows.append(rec)
-            print(f"[{ds} {i+1}/{len(frozen)}] {cid} o={rec['organ_vox']} t={rec['tumor_vox']} "
+            print(f"[{ds} {i+1}/{len(ids)}] {cid} o={rec['organ_vox']} t={rec['tumor_vox']} "
                   f"(frozen t={rec['frozen_tumor_vox']}) dice {rec['dice_organ_gt']}/{rec['dice_tumor_gt']} {rec['seconds']}s", flush=True)
             torch.cuda.empty_cache()
         ht = sum(1 for r in rows if r["has_tumor"] == r["frozen_has_tumor"])
@@ -173,9 +179,12 @@ def main():
                        "mean_dice_organ_gt": round(float(np.mean([r["dice_organ_gt"] for r in rows if r["dice_organ_gt"]])), 3),
                        "mean_dice_tumor_gt": round(float(np.mean([r["dice_tumor_gt"] for r in rows if r["dice_tumor_gt"]])), 3)}
         print(ds, summary[ds], flush=True)
-    os.makedirs(os.path.dirname(SUMMARY), exist_ok=True)
-    json.dump({"note": __doc__.strip(), "summary": summary}, open(SUMMARY, "w"), indent=1)
-    print(f"-> {SUMMARY}", flush=True)
+    if a.cases:
+        print("(--cases restriction: fidelity summary NOT rewritten; committed 113-case summary stands)", flush=True)
+    else:
+        os.makedirs(os.path.dirname(SUMMARY), exist_ok=True)
+        json.dump({"note": __doc__.strip(), "summary": summary}, open(SUMMARY, "w"), indent=1)
+        print(f"-> {SUMMARY}", flush=True)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,1500 @@
+{
+ "note": "Semi-oracle ORGAN arm re-scored under convention A on the four organ test lists (the study lead 10-03 list, the pipeline team item 1).\n\nInference = the published protocol of eval_ausam_3d.py, unchanged: the dataset's own organ checkpoint\n(sam3_organ_generic_ausam_<ds>), text = organ name, GT ORGAN box + 3 px on slices whose GT organ has >= 50 px at\n256^2, argmax query, sigmoid > 0.5, nearest-neighbour resize back to the native slice. Patients = the filtered-split\norgan TEST lists (LiTS 6, MSD 33, KiTS 20) and the 10 FLARE23 test cases of the published row. Only the SCORING changes:\n\n  P   = the organ model's own mask (not carved by any tumor mask)\n  R   = reference organ label (KiTS: kidney 1 UNION cyst 3; FLARE23 kidney = right 2 UNION left 13)\n  M   = reference mass attributed to this organ: single-organ collections -> the whole tumor label (LiTS/MSD/KiTS 2);\n        FLARE23 -> each reference tumor (14) component goes to the organ holding the majority of reference organ\n        voxels in a 3-voxel shell around it (organs 1 liver / 2+13 kidney / 3 spleen / 4 pancreas)\n  dice_tumor_excluded  Dice(P, R)            -- the published convention (reproduction check)\n  organ_dice           Dice(P, R | M)        -- convention A: organ with mass\n  parenchyma_dice      Dice(P & ~M, R)       -- the model's mask outside the mass vs the parenchyma\n  parenchyma_recall    |P & R| / |R|\n  mass_coverage        |P & M| / |M|         -- how much of the mass the organ mask swallows (null when no mass)\nLiTS = the 256^2 training .npy (no header spacing; Dice-type metrics only, as published).\n\n  CKPT_DIR=... DATA=... python organ_convention_a.py [--datasets lits msd kits flare23]\n-> results/segmentation/organ_convention_a_2026-10-03.json",
+ "datasets": {
+  "lits": {
+   "checkpoint": "sam3_organ_generic_ausam_lits.pth",
+   "checkpoint_sha256": "fb9d4e06298e814a4357b1d32732c804f85603f56b1c7f6b21c369d23a273c21",
+   "n_cases": 6,
+   "summary": {
+    "liver": {
+     "n": 6,
+     "dice_tumor_excluded": 0.9555,
+     "published_dice": 0.9555,
+     "organ_dice": 0.9449,
+     "parenchyma_dice": 0.9678,
+     "parenchyma_recall": 0.9553,
+     "mass_coverage": 0.3022,
+     "n_with_mass": 5,
+     "reproduces_published_mean": true
+    }
+   },
+   "cases": [
+    {
+     "case": "volume-16",
+     "organs": {
+      "liver": {
+       "dice_tumor_excluded": 0.9536,
+       "published_dice": 0.9536,
+       "organ_dice": 0.9117,
+       "parenchyma_dice": 0.9602,
+       "parenchyma_recall": 0.9472,
+       "mass_coverage": 0.1121,
+       "mass_vox": 96448,
+       "pred_vox": 785534,
+       "published_pred_vox": 785414
+      }
+     },
+     "seconds": 60.8
+    },
+    {
+     "case": "volume-22",
+     "organs": {
+      "liver": {
+       "dice_tumor_excluded": 0.9634,
+       "published_dice": 0.9634,
+       "organ_dice": 0.9546,
+       "parenchyma_dice": 0.9645,
+       "parenchyma_recall": 0.9497,
+       "mass_coverage": 0.1007,
+       "mass_vox": 2454,
+       "pred_vox": 103565,
+       "published_pred_vox": 103551
+      }
+     },
+     "seconds": 14.6
+    },
+    {
+     "case": "volume-26",
+     "organs": {
+      "liver": {
+       "dice_tumor_excluded": 0.9708,
+       "published_dice": 0.9709,
+       "organ_dice": 0.9661,
+       "parenchyma_dice": 0.974,
+       "parenchyma_recall": 0.9754,
+       "mass_coverage": 0.2788,
+       "mass_vox": 13359,
+       "pred_vox": 583078,
+       "published_pred_vox": 582988
+      }
+     },
+     "seconds": 62.3
+    },
+    {
+     "case": "volume-30",
+     "organs": {
+      "liver": {
+       "dice_tumor_excluded": 0.966,
+       "published_dice": 0.9659,
+       "organ_dice": 0.9667,
+       "parenchyma_dice": 0.9678,
+       "parenchyma_recall": 0.9526,
+       "mass_coverage": 0.5986,
+       "mass_vox": 3670,
+       "pred_vox": 578175,
+       "published_pred_vox": 578194
+      }
+     },
+     "seconds": 39.9
+    },
+    {
+     "case": "volume-32",
+     "organs": {
+      "liver": {
+       "dice_tumor_excluded": 0.9725,
+       "published_dice": 0.9724,
+       "organ_dice": 0.9725,
+       "parenchyma_dice": 0.9725,
+       "parenchyma_recall": 0.9548,
+       "mass_coverage": null,
+       "mass_vox": 0,
+       "pred_vox": 516250,
+       "published_pred_vox": 516201
+      }
+     },
+     "seconds": 38.5
+    },
+    {
+     "case": "volume-33",
+     "organs": {
+      "liver": {
+       "dice_tumor_excluded": 0.9065,
+       "published_dice": 0.9066,
+       "organ_dice": 0.898,
+       "parenchyma_dice": 0.9681,
+       "parenchyma_recall": 0.9522,
+       "mass_coverage": 0.4207,
+       "mass_vox": 110970,
+       "pred_vox": 384742,
+       "published_pred_vox": 384759
+      }
+     },
+     "seconds": 31.4
+    }
+   ]
+  },
+  "msd": {
+   "checkpoint": "sam3_organ_generic_ausam_msd.pth",
+   "checkpoint_sha256": "fc98e5e86b2271642f23b28724ae212365df16286bc4f29a934d6e4aa32d88ec",
+   "n_cases": 33,
+   "summary": {
+    "pancreas": {
+     "n": 33,
+     "dice_tumor_excluded": 0.8808,
+     "published_dice": 0.8809,
+     "organ_dice": 0.8859,
+     "parenchyma_dice": 0.8983,
+     "parenchyma_recall": 0.9244,
+     "mass_coverage": 0.6053,
+     "n_with_mass": 33,
+     "reproduces_published_mean": true
+    }
+   },
+   "cases": [
+    {
+     "case": "pancreas_019",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.9067,
+       "published_dice": 0.9074,
+       "organ_dice": 0.8889,
+       "parenchyma_dice": 0.9126,
+       "parenchyma_recall": 0.8998,
+       "mass_coverage": 0.1871,
+       "mass_vox": 3287,
+       "pred_vox": 47068,
+       "published_pred_vox": 47092
+      }
+     },
+     "seconds": 12.8
+    },
+    {
+     "case": "pancreas_025",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.8962,
+       "published_dice": 0.8962,
+       "organ_dice": 0.926,
+       "parenchyma_dice": 0.9262,
+       "parenchyma_recall": 0.9061,
+       "mass_coverage": 0.8554,
+       "mass_vox": 6556,
+       "pred_vox": 87320,
+       "published_pred_vox": 87412
+      }
+     },
+     "seconds": 12.3
+    },
+    {
+     "case": "pancreas_032",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.8935,
+       "published_dice": 0.8931,
+       "organ_dice": 0.9169,
+       "parenchyma_dice": 0.9132,
+       "parenchyma_recall": 0.8837,
+       "mass_coverage": 1.0,
+       "mass_vox": 1880,
+       "pred_vox": 43032,
+       "published_pred_vox": 42960
+      }
+     },
+     "seconds": 11.1
+    },
+    {
+     "case": "pancreas_035",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.8631,
+       "published_dice": 0.8639,
+       "organ_dice": 0.8145,
+       "parenchyma_dice": 0.8641,
+       "parenchyma_recall": 0.8771,
+       "mass_coverage": 0.02,
+       "mass_vox": 6002,
+       "pred_vox": 48680,
+       "published_pred_vox": 48624
+      }
+     },
+     "seconds": 10.6
+    },
+    {
+     "case": "pancreas_040",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.9096,
+       "published_dice": 0.9098,
+       "organ_dice": 0.8988,
+       "parenchyma_dice": 0.9163,
+       "parenchyma_recall": 0.9479,
+       "mass_coverage": 0.2578,
+       "mass_vox": 2839,
+       "pred_vox": 52468,
+       "published_pred_vox": 52460
+      }
+     },
+     "seconds": 8.9
+    },
+    {
+     "case": "pancreas_041",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.8825,
+       "published_dice": 0.8823,
+       "organ_dice": 0.8904,
+       "parenchyma_dice": 0.889,
+       "parenchyma_recall": 0.881,
+       "mass_coverage": 0.9792,
+       "mass_vox": 2112,
+       "pred_vox": 141224,
+       "published_pred_vox": 141060
+      }
+     },
+     "seconds": 22.0
+    },
+    {
+     "case": "pancreas_048",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.8914,
+       "published_dice": 0.8909,
+       "organ_dice": 0.8676,
+       "parenchyma_dice": 0.9096,
+       "parenchyma_recall": 0.9394,
+       "mass_coverage": 0.2721,
+       "mass_vox": 5995,
+       "pred_vox": 42756,
+       "published_pred_vox": 42776
+      }
+     },
+     "seconds": 11.9
+    },
+    {
+     "case": "pancreas_055",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.9137,
+       "published_dice": 0.9137,
+       "organ_dice": 0.9258,
+       "parenchyma_dice": 0.9241,
+       "parenchyma_recall": 0.9387,
+       "mass_coverage": 1.0,
+       "mass_vox": 1275,
+       "pred_vox": 57932,
+       "published_pred_vox": 57952
+      }
+     },
+     "seconds": 15.2
+    },
+    {
+     "case": "pancreas_056",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.8977,
+       "published_dice": 0.8984,
+       "organ_dice": 0.9137,
+       "parenchyma_dice": 0.9184,
+       "parenchyma_recall": 0.9458,
+       "mass_coverage": 0.7083,
+       "mass_vox": 2369,
+       "pred_vox": 39052,
+       "published_pred_vox": 38972
+      }
+     },
+     "seconds": 12.1
+    },
+    {
+     "case": "pancreas_058",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.8481,
+       "published_dice": 0.8487,
+       "organ_dice": 0.8631,
+       "parenchyma_dice": 0.8731,
+       "parenchyma_recall": 0.8892,
+       "mass_coverage": 0.5842,
+       "mass_vox": 2511,
+       "pred_vox": 26716,
+       "published_pred_vox": 26732
+      }
+     },
+     "seconds": 6.5
+    },
+    {
+     "case": "pancreas_091",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.865,
+       "published_dice": 0.8648,
+       "organ_dice": 0.8606,
+       "parenchyma_dice": 0.8887,
+       "parenchyma_recall": 0.9403,
+       "mass_coverage": 0.3976,
+       "mass_vox": 9299,
+       "pred_vox": 74928,
+       "published_pred_vox": 74936
+      }
+     },
+     "seconds": 11.5
+    },
+    {
+     "case": "pancreas_095",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.9203,
+       "published_dice": 0.9202,
+       "organ_dice": 0.9236,
+       "parenchyma_dice": 0.9316,
+       "parenchyma_recall": 0.9485,
+       "mass_coverage": 0.5347,
+       "mass_vox": 4144,
+       "pred_vox": 94588,
+       "published_pred_vox": 94540
+      }
+     },
+     "seconds": 16.2
+    },
+    {
+     "case": "pancreas_096",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.8731,
+       "published_dice": 0.8728,
+       "organ_dice": 0.8435,
+       "parenchyma_dice": 0.8947,
+       "parenchyma_recall": 0.9519,
+       "mass_coverage": 0.2614,
+       "mass_vox": 14131,
+       "pred_vox": 82776,
+       "published_pred_vox": 82804
+      }
+     },
+     "seconds": 14.1
+    },
+    {
+     "case": "pancreas_101",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.9203,
+       "published_dice": 0.9197,
+       "organ_dice": 0.8981,
+       "parenchyma_dice": 0.9232,
+       "parenchyma_recall": 0.9523,
+       "mass_coverage": 0.0999,
+       "mass_vox": 3123,
+       "pred_vox": 50920,
+       "published_pred_vox": 50892
+      }
+     },
+     "seconds": 9.2
+    },
+    {
+     "case": "pancreas_107",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.9064,
+       "published_dice": 0.9076,
+       "organ_dice": 0.9033,
+       "parenchyma_dice": 0.9138,
+       "parenchyma_recall": 0.9096,
+       "mass_coverage": 0.3791,
+       "mass_vox": 2084,
+       "pred_vox": 49108,
+       "published_pred_vox": 49068
+      }
+     },
+     "seconds": 9.4
+    },
+    {
+     "case": "pancreas_122",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.8789,
+       "published_dice": 0.8786,
+       "organ_dice": 0.8977,
+       "parenchyma_dice": 0.912,
+       "parenchyma_recall": 0.8989,
+       "mass_coverage": 0.6054,
+       "mass_vox": 4516,
+       "pred_vox": 38556,
+       "published_pred_vox": 38512
+      }
+     },
+     "seconds": 13.2
+    },
+    {
+     "case": "pancreas_126",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.8964,
+       "published_dice": 0.8963,
+       "organ_dice": 0.8852,
+       "parenchyma_dice": 0.9013,
+       "parenchyma_recall": 0.947,
+       "mass_coverage": 0.2181,
+       "mass_vox": 5235,
+       "pred_vox": 110972,
+       "published_pred_vox": 110908
+      }
+     },
+     "seconds": 15.6
+    },
+    {
+     "case": "pancreas_138",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.8685,
+       "published_dice": 0.8683,
+       "organ_dice": 0.8867,
+       "parenchyma_dice": 0.9081,
+       "parenchyma_recall": 0.9424,
+       "mass_coverage": 0.5598,
+       "mass_vox": 9006,
+       "pred_vox": 62320,
+       "published_pred_vox": 62372
+      }
+     },
+     "seconds": 14.1
+    },
+    {
+     "case": "pancreas_160",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.8469,
+       "published_dice": 0.8455,
+       "organ_dice": 0.8256,
+       "parenchyma_dice": 0.8857,
+       "parenchyma_recall": 0.8747,
+       "mass_coverage": 0.3321,
+       "mass_vox": 9424,
+       "pred_vox": 36808,
+       "published_pred_vox": 36904
+      }
+     },
+     "seconds": 11.6
+    },
+    {
+     "case": "pancreas_167",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.8833,
+       "published_dice": 0.8823,
+       "organ_dice": 0.8588,
+       "parenchyma_dice": 0.8926,
+       "parenchyma_recall": 0.8672,
+       "mass_coverage": 0.1964,
+       "mass_vox": 7480,
+       "pred_vox": 69544,
+       "published_pred_vox": 69364
+      }
+     },
+     "seconds": 14.5
+    },
+    {
+     "case": "pancreas_172",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.8659,
+       "published_dice": 0.8657,
+       "organ_dice": 0.8733,
+       "parenchyma_dice": 0.8716,
+       "parenchyma_recall": 0.9651,
+       "mass_coverage": 1.0,
+       "mass_vox": 1298,
+       "pred_vox": 109312,
+       "published_pred_vox": 109184
+      }
+     },
+     "seconds": 15.6
+    },
+    {
+     "case": "pancreas_179",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.9065,
+       "published_dice": 0.9066,
+       "organ_dice": 0.9158,
+       "parenchyma_dice": 0.9181,
+       "parenchyma_recall": 0.9463,
+       "mass_coverage": 0.7273,
+       "mass_vox": 1199,
+       "pred_vox": 36020,
+       "published_pred_vox": 35988
+      }
+     },
+     "seconds": 11.9
+    },
+    {
+     "case": "pancreas_196",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.8758,
+       "published_dice": 0.8753,
+       "organ_dice": 0.9064,
+       "parenchyma_dice": 0.901,
+       "parenchyma_recall": 0.9611,
+       "mass_coverage": 0.999,
+       "mass_vox": 2963,
+       "pred_vox": 57604,
+       "published_pred_vox": 57576
+      }
+     },
+     "seconds": 10.4
+    },
+    {
+     "case": "pancreas_217",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.91,
+       "published_dice": 0.9102,
+       "organ_dice": 0.9118,
+       "parenchyma_dice": 0.9139,
+       "parenchyma_recall": 0.9281,
+       "mass_coverage": 0.5746,
+       "mass_vox": 1307,
+       "pred_vox": 88252,
+       "published_pred_vox": 88144
+      }
+     },
+     "seconds": 14.1
+    },
+    {
+     "case": "pancreas_218",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.8608,
+       "published_dice": 0.8619,
+       "organ_dice": 0.8772,
+       "parenchyma_dice": 0.8751,
+       "parenchyma_recall": 0.8867,
+       "mass_coverage": 0.8776,
+       "mass_vox": 1601,
+       "pred_vox": 44048,
+       "published_pred_vox": 43984
+      }
+     },
+     "seconds": 12.1
+    },
+    {
+     "case": "pancreas_222",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.8887,
+       "published_dice": 0.8893,
+       "organ_dice": 0.8969,
+       "parenchyma_dice": 0.9057,
+       "parenchyma_recall": 0.9544,
+       "mass_coverage": 0.5745,
+       "mass_vox": 2834,
+       "pred_vox": 46144,
+       "published_pred_vox": 46108
+      }
+     },
+     "seconds": 13.6
+    },
+    {
+     "case": "pancreas_224",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.8708,
+       "published_dice": 0.8712,
+       "organ_dice": 0.8943,
+       "parenchyma_dice": 0.8903,
+       "parenchyma_recall": 0.9278,
+       "mass_coverage": 0.9667,
+       "mass_vox": 1471,
+       "pred_vox": 34568,
+       "published_pred_vox": 34556
+      }
+     },
+     "seconds": 13.4
+    },
+    {
+     "case": "pancreas_228",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.8922,
+       "published_dice": 0.8919,
+       "organ_dice": 0.9031,
+       "parenchyma_dice": 0.9067,
+       "parenchyma_recall": 0.9304,
+       "mass_coverage": 0.6839,
+       "mass_vox": 1256,
+       "pred_vox": 27896,
+       "published_pred_vox": 27892
+      }
+     },
+     "seconds": 15.3
+    },
+    {
+     "case": "pancreas_236",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.8332,
+       "published_dice": 0.8348,
+       "organ_dice": 0.8559,
+       "parenchyma_dice": 0.8628,
+       "parenchyma_recall": 0.9152,
+       "mass_coverage": 0.639,
+       "mass_vox": 2086,
+       "pred_vox": 21164,
+       "published_pred_vox": 21084
+      }
+     },
+     "seconds": 10.4
+    },
+    {
+     "case": "pancreas_249",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.793,
+       "published_dice": 0.7933,
+       "organ_dice": 0.8311,
+       "parenchyma_dice": 0.8197,
+       "parenchyma_recall": 0.9191,
+       "mass_coverage": 0.9985,
+       "mass_vox": 2607,
+       "pred_vox": 45396,
+       "published_pred_vox": 45464
+      }
+     },
+     "seconds": 13.5
+    },
+    {
+     "case": "pancreas_255",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.8852,
+       "published_dice": 0.8855,
+       "organ_dice": 0.8964,
+       "parenchyma_dice": 0.8997,
+       "parenchyma_recall": 0.9308,
+       "mass_coverage": 0.6853,
+       "mass_vox": 2733,
+       "pred_vox": 60640,
+       "published_pred_vox": 60692
+      }
+     },
+     "seconds": 12.5
+    },
+    {
+     "case": "pancreas_258",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.8674,
+       "published_dice": 0.8675,
+       "organ_dice": 0.8888,
+       "parenchyma_dice": 0.8844,
+       "parenchyma_recall": 0.9652,
+       "mass_coverage": 1.0,
+       "mass_vox": 3364,
+       "pred_vox": 96340,
+       "published_pred_vox": 96504
+      }
+     },
+     "seconds": 14.3
+    },
+    {
+     "case": "pancreas_262",
+     "organs": {
+      "pancreas": {
+       "dice_tumor_excluded": 0.8566,
+       "published_dice": 0.8566,
+       "organ_dice": 0.8948,
+       "parenchyma_dice": 0.8953,
+       "parenchyma_recall": 0.9322,
+       "mass_coverage": 0.8003,
+       "mass_vox": 3750,
+       "pred_vox": 37504,
+       "published_pred_vox": 37440
+      }
+     },
+     "seconds": 14.1
+    }
+   ]
+  },
+  "kits": {
+   "checkpoint": "sam3_organ_generic_ausam_kits.pth",
+   "checkpoint_sha256": "38f263590fc9ac5ae915e6a0c5ad06182d9428c88be77a8ca3d50fde644a559e",
+   "n_cases": 20,
+   "summary": {
+    "kidney": {
+     "n": 20,
+     "dice_tumor_excluded": 0.9381,
+     "published_dice": 0.9381,
+     "organ_dice": 0.8503,
+     "parenchyma_dice": 0.9476,
+     "parenchyma_recall": 0.9352,
+     "mass_coverage": 0.2413,
+     "n_with_mass": 20,
+     "reproduces_published_mean": true
+    }
+   },
+   "cases": [
+    {
+     "case": "case_00000",
+     "organs": {
+      "kidney": {
+       "dice_tumor_excluded": 0.9591,
+       "published_dice": 0.9591,
+       "organ_dice": 0.9609,
+       "parenchyma_dice": 0.9654,
+       "parenchyma_recall": 0.9721,
+       "mass_coverage": 0.5579,
+       "mass_vox": 20462,
+       "pred_vox": 877664,
+       "published_pred_vox": 877620
+      }
+     },
+     "seconds": 104.1
+    },
+    {
+     "case": "case_00004",
+     "organs": {
+      "kidney": {
+       "dice_tumor_excluded": 0.9598,
+       "published_dice": 0.9595,
+       "organ_dice": 0.9509,
+       "parenchyma_dice": 0.9662,
+       "parenchyma_recall": 0.9673,
+       "mass_coverage": 0.2862,
+       "mass_vox": 5297,
+       "pred_vox": 114492,
+       "published_pred_vox": 114504
+      }
+     },
+     "seconds": 14.5
+    },
+    {
+     "case": "case_00010",
+     "organs": {
+      "kidney": {
+       "dice_tumor_excluded": 0.9554,
+       "published_dice": 0.9555,
+       "organ_dice": 0.9516,
+       "parenchyma_dice": 0.9635,
+       "parenchyma_recall": 0.9616,
+       "mass_coverage": 0.387,
+       "mass_vox": 8652,
+       "pred_vox": 201948,
+       "published_pred_vox": 201968
+      }
+     },
+     "seconds": 15.3
+    },
+    {
+     "case": "case_00012",
+     "organs": {
+      "kidney": {
+       "dice_tumor_excluded": 0.9306,
+       "published_dice": 0.9306,
+       "organ_dice": 0.6678,
+       "parenchyma_dice": 0.9476,
+       "parenchyma_recall": 0.9416,
+       "mass_coverage": 0.0401,
+       "mass_vox": 92832,
+       "pred_vox": 104988,
+       "published_pred_vox": 105044
+      }
+     },
+     "seconds": 12.3
+    },
+    {
+     "case": "case_00018",
+     "organs": {
+      "kidney": {
+       "dice_tumor_excluded": 0.9517,
+       "published_dice": 0.9518,
+       "organ_dice": 0.9426,
+       "parenchyma_dice": 0.9568,
+       "parenchyma_recall": 0.9601,
+       "mass_coverage": 0.2526,
+       "mass_vox": 9904,
+       "pred_vox": 239296,
+       "published_pred_vox": 239292
+      }
+     },
+     "seconds": 19.2
+    },
+    {
+     "case": "case_00022",
+     "organs": {
+      "kidney": {
+       "dice_tumor_excluded": 0.9485,
+       "published_dice": 0.9485,
+       "organ_dice": 0.9544,
+       "parenchyma_dice": 0.9563,
+       "parenchyma_recall": 0.9586,
+       "mass_coverage": 0.7461,
+       "mass_vox": 21208,
+       "pred_vox": 975644,
+       "published_pred_vox": 975704
+      }
+     },
+     "seconds": 84.6
+    },
+    {
+     "case": "case_00030",
+     "organs": {
+      "kidney": {
+       "dice_tumor_excluded": 0.7113,
+       "published_dice": 0.7115,
+       "organ_dice": 0.2637,
+       "parenchyma_dice": 0.8204,
+       "parenchyma_recall": 0.7085,
+       "mass_coverage": 0.0488,
+       "mass_vox": 542374,
+       "pred_vox": 99856,
+       "published_pred_vox": 99828
+      }
+     },
+     "seconds": 11.6
+    },
+    {
+     "case": "case_00031",
+     "organs": {
+      "kidney": {
+       "dice_tumor_excluded": 0.9657,
+       "published_dice": 0.9656,
+       "organ_dice": 0.9703,
+       "parenchyma_dice": 0.9718,
+       "parenchyma_recall": 0.972,
+       "mass_coverage": 0.7682,
+       "mass_vox": 5142,
+       "pred_vox": 320444,
+       "published_pred_vox": 320448
+      }
+     },
+     "seconds": 15.3
+    },
+    {
+     "case": "case_00033",
+     "organs": {
+      "kidney": {
+       "dice_tumor_excluded": 0.9618,
+       "published_dice": 0.9618,
+       "organ_dice": 0.9615,
+       "parenchyma_dice": 0.9643,
+       "parenchyma_recall": 0.9624,
+       "mass_coverage": 0.4589,
+       "mass_vox": 7619,
+       "pred_vox": 674864,
+       "published_pred_vox": 674888
+      }
+     },
+     "seconds": 52.6
+    },
+    {
+     "case": "case_00039",
+     "organs": {
+      "kidney": {
+       "dice_tumor_excluded": 0.9606,
+       "published_dice": 0.9607,
+       "organ_dice": 0.9568,
+       "parenchyma_dice": 0.9632,
+       "parenchyma_recall": 0.9596,
+       "mass_coverage": 0.284,
+       "mass_vox": 2641,
+       "pred_vox": 137964,
+       "published_pred_vox": 137908
+      }
+     },
+     "seconds": 11.2
+    },
+    {
+     "case": "case_00044",
+     "organs": {
+      "kidney": {
+       "dice_tumor_excluded": 0.9482,
+       "published_dice": 0.9483,
+       "organ_dice": 0.8494,
+       "parenchyma_dice": 0.9531,
+       "parenchyma_recall": 0.9274,
+       "mass_coverage": 0.0398,
+       "mass_vox": 29758,
+       "pred_vox": 113360,
+       "published_pred_vox": 113372
+      }
+     },
+     "seconds": 11.1
+    },
+    {
+     "case": "case_00045",
+     "organs": {
+      "kidney": {
+       "dice_tumor_excluded": 0.9219,
+       "published_dice": 0.922,
+       "organ_dice": 0.7855,
+       "parenchyma_dice": 0.8964,
+       "parenchyma_recall": 0.8571,
+       "mass_coverage": 0.0958,
+       "mass_vox": 39151,
+       "pred_vox": 116436,
+       "published_pred_vox": 116424
+      }
+     },
+     "seconds": 12.4
+    },
+    {
+     "case": "case_00053",
+     "organs": {
+      "kidney": {
+       "dice_tumor_excluded": 0.9589,
+       "published_dice": 0.959,
+       "organ_dice": 0.898,
+       "parenchyma_dice": 0.9594,
+       "parenchyma_recall": 0.9557,
+       "mass_coverage": 0.0084,
+       "mass_vox": 134230,
+       "pred_vox": 968416,
+       "published_pred_vox": 968260
+      }
+     },
+     "seconds": 79.2
+    },
+    {
+     "case": "case_00070",
+     "organs": {
+      "kidney": {
+       "dice_tumor_excluded": 0.9409,
+       "published_dice": 0.9402,
+       "organ_dice": 0.6465,
+       "parenchyma_dice": 0.9496,
+       "parenchyma_recall": 0.9401,
+       "mass_coverage": 0.0189,
+       "mass_vox": 162501,
+       "pred_vox": 167848,
+       "published_pred_vox": 167740
+      }
+     },
+     "seconds": 10.4
+    },
+    {
+     "case": "case_00073",
+     "organs": {
+      "kidney": {
+       "dice_tumor_excluded": 0.9222,
+       "published_dice": 0.9225,
+       "organ_dice": 0.6859,
+       "parenchyma_dice": 0.9345,
+       "parenchyma_recall": 0.9081,
+       "mass_coverage": 0.0707,
+       "mass_vox": 117145,
+       "pred_vox": 143912,
+       "published_pred_vox": 143808
+      }
+     },
+     "seconds": 12.8
+    },
+    {
+     "case": "case_00076",
+     "organs": {
+      "kidney": {
+       "dice_tumor_excluded": 0.9653,
+       "published_dice": 0.9654,
+       "organ_dice": 0.9597,
+       "parenchyma_dice": 0.9677,
+       "parenchyma_recall": 0.968,
+       "mass_coverage": 0.1842,
+       "mass_vox": 2790,
+       "pred_vox": 133492,
+       "published_pred_vox": 133420
+      }
+     },
+     "seconds": 10.2
+    },
+    {
+     "case": "case_00077",
+     "organs": {
+      "kidney": {
+       "dice_tumor_excluded": 0.9623,
+       "published_dice": 0.9622,
+       "organ_dice": 0.9596,
+       "parenchyma_dice": 0.966,
+       "parenchyma_recall": 0.9648,
+       "mass_coverage": 0.3596,
+       "mass_vox": 3306,
+       "pred_vox": 152976,
+       "published_pred_vox": 152948
+      }
+     },
+     "seconds": 12.6
+    },
+    {
+     "case": "case_00080",
+     "organs": {
+      "kidney": {
+       "dice_tumor_excluded": 0.9587,
+       "published_dice": 0.9587,
+       "organ_dice": 0.922,
+       "parenchyma_dice": 0.9629,
+       "parenchyma_recall": 0.9596,
+       "mass_coverage": 0.0869,
+       "mass_vox": 15039,
+       "pred_vox": 153144,
+       "published_pred_vox": 153060
+      }
+     },
+     "seconds": 10.9
+    },
+    {
+     "case": "case_00083",
+     "organs": {
+      "kidney": {
+       "dice_tumor_excluded": 0.9581,
+       "published_dice": 0.9581,
+       "organ_dice": 0.9522,
+       "parenchyma_dice": 0.9605,
+       "parenchyma_recall": 0.9626,
+       "mass_coverage": 0.1031,
+       "mass_vox": 4528,
+       "pred_vox": 231176,
+       "published_pred_vox": 231248
+      }
+     },
+     "seconds": 17.4
+    },
+    {
+     "case": "case_00090",
+     "organs": {
+      "kidney": {
+       "dice_tumor_excluded": 0.921,
+       "published_dice": 0.9213,
+       "organ_dice": 0.7667,
+       "parenchyma_dice": 0.9269,
+       "parenchyma_recall": 0.8974,
+       "mass_coverage": 0.0294,
+       "mass_vox": 52274,
+       "pred_vox": 116824,
+       "published_pred_vox": 116780
+      }
+     },
+     "seconds": 14.1
+    }
+   ]
+  },
+  "flare23": {
+   "checkpoint": "sam3_organ_generic_ausam_flare23.pth",
+   "checkpoint_sha256": "9728087a5aba2ed6fe74f8c46c459f210db54c650c12f33dcd282fb837a57e54",
+   "n_cases": 10,
+   "summary": {
+    "liver": {
+     "n": 10,
+     "dice_tumor_excluded": 0.9712,
+     "published_dice": 0.9712,
+     "organ_dice": 0.9768,
+     "parenchyma_dice": 0.9767,
+     "parenchyma_recall": 0.9783,
+     "mass_coverage": 0.9472,
+     "n_with_mass": 2,
+     "reproduces_published_mean": true
+    },
+    "kidney": {
+     "n": 10,
+     "dice_tumor_excluded": 0.9541,
+     "published_dice": 0.9541,
+     "organ_dice": 0.9547,
+     "parenchyma_dice": 0.96,
+     "parenchyma_recall": 0.966,
+     "mass_coverage": 0.5376,
+     "n_with_mass": 4,
+     "reproduces_published_mean": true
+    },
+    "pancreas": {
+     "n": 10,
+     "dice_tumor_excluded": 0.8844,
+     "published_dice": 0.8842,
+     "organ_dice": 0.8933,
+     "parenchyma_dice": 0.8931,
+     "parenchyma_recall": 0.9035,
+     "mass_coverage": 0.7869,
+     "n_with_mass": 4,
+     "reproduces_published_mean": true
+    }
+   },
+   "cases": [
+    {
+     "case": "FLARE23_0003",
+     "organs": {
+      "liver": {
+       "dice_tumor_excluded": 0.9623,
+       "published_dice": 0.9623,
+       "organ_dice": 0.9623,
+       "parenchyma_dice": 0.9623,
+       "parenchyma_recall": 0.9694,
+       "mass_coverage": null,
+       "mass_vox": 0,
+       "pred_vox": 3107252,
+       "published_pred_vox": 3106360
+      },
+      "kidney": {
+       "dice_tumor_excluded": 0.9628,
+       "published_dice": 0.9628,
+       "organ_dice": 0.9761,
+       "parenchyma_dice": 0.9757,
+       "parenchyma_recall": 0.9735,
+       "mass_coverage": 0.9853,
+       "mass_vox": 30587,
+       "pred_vox": 1155024,
+       "published_pred_vox": 1154924
+      },
+      "pancreas": {
+       "dice_tumor_excluded": 0.853,
+       "published_dice": 0.8534,
+       "organ_dice": 0.853,
+       "parenchyma_dice": 0.853,
+       "parenchyma_recall": 0.8893,
+       "mass_coverage": null,
+       "mass_vox": 0,
+       "pred_vox": 288620,
+       "published_pred_vox": 288736
+      }
+     },
+     "seconds": 210.1
+    },
+    {
+     "case": "FLARE23_0081",
+     "organs": {
+      "liver": {
+       "dice_tumor_excluded": 0.9769,
+       "published_dice": 0.9769,
+       "organ_dice": 0.9769,
+       "parenchyma_dice": 0.9769,
+       "parenchyma_recall": 0.9723,
+       "mass_coverage": null,
+       "mass_vox": 0,
+       "pred_vox": 5388752,
+       "published_pred_vox": 5388084
+      },
+      "kidney": {
+       "dice_tumor_excluded": 0.9223,
+       "published_dice": 0.9222,
+       "organ_dice": 0.9226,
+       "parenchyma_dice": 0.9619,
+       "parenchyma_recall": 0.9553,
+       "mass_coverage": 0.4633,
+       "mass_vox": 187162,
+       "pred_vox": 1087724,
+       "published_pred_vox": 1087724
+      },
+      "pancreas": {
+       "dice_tumor_excluded": 0.8739,
+       "published_dice": 0.8738,
+       "organ_dice": 0.8739,
+       "parenchyma_dice": 0.8739,
+       "parenchyma_recall": 0.8811,
+       "mass_coverage": null,
+       "mass_vox": 0,
+       "pred_vox": 295980,
+       "published_pred_vox": 295988
+      }
+     },
+     "seconds": 331.7
+    },
+    {
+     "case": "FLARE23_0102",
+     "organs": {
+      "liver": {
+       "dice_tumor_excluded": 0.9291,
+       "published_dice": 0.9291,
+       "organ_dice": 0.9796,
+       "parenchyma_dice": 0.979,
+       "parenchyma_recall": 0.9772,
+       "mass_coverage": 0.9708,
+       "mass_vox": 179093,
+       "pred_vox": 1792700,
+       "published_pred_vox": 1792660
+      },
+      "kidney": {
+       "dice_tumor_excluded": 0.9635,
+       "published_dice": 0.9635,
+       "organ_dice": 0.9635,
+       "parenchyma_dice": 0.9635,
+       "parenchyma_recall": 0.9647,
+       "mass_coverage": null,
+       "mass_vox": 0,
+       "pred_vox": 356032,
+       "published_pred_vox": 355940
+      },
+      "pancreas": {
+       "dice_tumor_excluded": 0.9213,
+       "published_dice": 0.9207,
+       "organ_dice": 0.9213,
+       "parenchyma_dice": 0.9213,
+       "parenchyma_recall": 0.894,
+       "mass_coverage": null,
+       "mass_vox": 0,
+       "pred_vox": 107616,
+       "published_pred_vox": 107708
+      }
+     },
+     "seconds": 83.0
+    },
+    {
+     "case": "FLARE23_0120",
+     "organs": {
+      "liver": {
+       "dice_tumor_excluded": 0.9685,
+       "published_dice": 0.9685,
+       "organ_dice": 0.9736,
+       "parenchyma_dice": 0.9738,
+       "parenchyma_recall": 0.9825,
+       "mass_coverage": 0.9237,
+       "mass_vox": 36271,
+       "pred_vox": 3094088,
+       "published_pred_vox": 3093908
+      },
+      "kidney": {
+       "dice_tumor_excluded": 0.9544,
+       "published_dice": 0.9544,
+       "organ_dice": 0.9544,
+       "parenchyma_dice": 0.9544,
+       "parenchyma_recall": 0.9801,
+       "mass_coverage": null,
+       "mass_vox": 0,
+       "pred_vox": 766992,
+       "published_pred_vox": 766856
+      },
+      "pancreas": {
+       "dice_tumor_excluded": 0.9133,
+       "published_dice": 0.9135,
+       "organ_dice": 0.9133,
+       "parenchyma_dice": 0.9133,
+       "parenchyma_recall": 0.8914,
+       "mass_coverage": null,
+       "mass_vox": 0,
+       "pred_vox": 160860,
+       "published_pred_vox": 160772
+      }
+     },
+     "seconds": 184.1
+    },
+    {
+     "case": "FLARE23_0133",
+     "organs": {
+      "liver": {
+       "dice_tumor_excluded": 0.9752,
+       "published_dice": 0.9752,
+       "organ_dice": 0.9752,
+       "parenchyma_dice": 0.9752,
+       "parenchyma_recall": 0.9772,
+       "mass_coverage": null,
+       "mass_vox": 0,
+       "pred_vox": 5601664,
+       "published_pred_vox": 5602108
+      },
+      "kidney": {
+       "dice_tumor_excluded": 0.9632,
+       "published_dice": 0.9632,
+       "organ_dice": 0.9624,
+       "parenchyma_dice": 0.9658,
+       "parenchyma_recall": 0.9512,
+       "mass_coverage": 0.4207,
+       "mass_vox": 17809,
+       "pred_vox": 1346644,
+       "published_pred_vox": 1346576
+      },
+      "pancreas": {
+       "dice_tumor_excluded": 0.8886,
+       "published_dice": 0.8885,
+       "organ_dice": 0.8886,
+       "parenchyma_dice": 0.8886,
+       "parenchyma_recall": 0.9517,
+       "mass_coverage": null,
+       "mass_vox": 0,
+       "pred_vox": 460592,
+       "published_pred_vox": 460548
+      }
+     },
+     "seconds": 257.2
+    },
+    {
+     "case": "FLARE23_0162",
+     "organs": {
+      "liver": {
+       "dice_tumor_excluded": 0.9851,
+       "published_dice": 0.985,
+       "organ_dice": 0.9851,
+       "parenchyma_dice": 0.9851,
+       "parenchyma_recall": 0.9827,
+       "mass_coverage": null,
+       "mass_vox": 0,
+       "pred_vox": 1175596,
+       "published_pred_vox": 1175444
+      },
+      "kidney": {
+       "dice_tumor_excluded": 0.9361,
+       "published_dice": 0.9363,
+       "organ_dice": 0.9361,
+       "parenchyma_dice": 0.9361,
+       "parenchyma_recall": 0.9804,
+       "mass_coverage": null,
+       "mass_vox": 0,
+       "pred_vox": 227928,
+       "published_pred_vox": 227760
+      },
+      "pancreas": {
+       "dice_tumor_excluded": 0.8675,
+       "published_dice": 0.8679,
+       "organ_dice": 0.8858,
+       "parenchyma_dice": 0.882,
+       "parenchyma_recall": 0.8876,
+       "mass_coverage": 0.9978,
+       "mass_vox": 2778,
+       "pred_vox": 86428,
+       "published_pred_vox": 86276
+      }
+     },
+     "seconds": 42.4
+    },
+    {
+     "case": "FLARE23_0236",
+     "organs": {
+      "liver": {
+       "dice_tumor_excluded": 0.984,
+       "published_dice": 0.9839,
+       "organ_dice": 0.984,
+       "parenchyma_dice": 0.984,
+       "parenchyma_recall": 0.9827,
+       "mass_coverage": null,
+       "mass_vox": 0,
+       "pred_vox": 1115816,
+       "published_pred_vox": 1115672
+      },
+      "kidney": {
+       "dice_tumor_excluded": 0.9621,
+       "published_dice": 0.9621,
+       "organ_dice": 0.9553,
+       "parenchyma_dice": 0.9667,
+       "parenchyma_recall": 0.9451,
+       "mass_coverage": 0.2812,
+       "mass_vox": 6327,
+       "pred_vox": 180312,
+       "published_pred_vox": 180280
+      },
+      "pancreas": {
+       "dice_tumor_excluded": 0.913,
+       "published_dice": 0.9126,
+       "organ_dice": 0.913,
+       "parenchyma_dice": 0.913,
+       "parenchyma_recall": 0.9148,
+       "mass_coverage": null,
+       "mass_vox": 0,
+       "pred_vox": 39328,
+       "published_pred_vox": 39300
+      }
+     },
+     "seconds": 38.8
+    },
+    {
+     "case": "FLARE23_0283",
+     "organs": {
+      "liver": {
+       "dice_tumor_excluded": 0.9695,
+       "published_dice": 0.9694,
+       "organ_dice": 0.9695,
+       "parenchyma_dice": 0.9695,
+       "parenchyma_recall": 0.9763,
+       "mass_coverage": null,
+       "mass_vox": 0,
+       "pred_vox": 567208,
+       "published_pred_vox": 567368
+      },
+      "kidney": {
+       "dice_tumor_excluded": 0.9612,
+       "published_dice": 0.9612,
+       "organ_dice": 0.9612,
+       "parenchyma_dice": 0.9612,
+       "parenchyma_recall": 0.9623,
+       "mass_coverage": null,
+       "mass_vox": 0,
+       "pred_vox": 143572,
+       "published_pred_vox": 143532
+      },
+      "pancreas": {
+       "dice_tumor_excluded": 0.8732,
+       "published_dice": 0.8725,
+       "organ_dice": 0.8974,
+       "parenchyma_dice": 0.8928,
+       "parenchyma_recall": 0.9495,
+       "mass_coverage": 0.999,
+       "mass_vox": 1920,
+       "pred_vox": 47188,
+       "published_pred_vox": 47244
+      }
+     },
+     "seconds": 31.2
+    },
+    {
+     "case": "FLARE23_0285",
+     "organs": {
+      "liver": {
+       "dice_tumor_excluded": 0.9834,
+       "published_dice": 0.9834,
+       "organ_dice": 0.9834,
+       "parenchyma_dice": 0.9834,
+       "parenchyma_recall": 0.9773,
+       "mass_coverage": null,
+       "mass_vox": 0,
+       "pred_vox": 950728,
+       "published_pred_vox": 950884
+      },
+      "kidney": {
+       "dice_tumor_excluded": 0.9414,
+       "published_dice": 0.9415,
+       "organ_dice": 0.9414,
+       "parenchyma_dice": 0.9414,
+       "parenchyma_recall": 0.981,
+       "mass_coverage": null,
+       "mass_vox": 0,
+       "pred_vox": 295336,
+       "published_pred_vox": 295312
+      },
+      "pancreas": {
+       "dice_tumor_excluded": 0.885,
+       "published_dice": 0.8844,
+       "organ_dice": 0.8763,
+       "parenchyma_dice": 0.8891,
+       "parenchyma_recall": 0.8963,
+       "mass_coverage": 0.226,
+       "mass_vox": 2443,
+       "pred_vox": 60096,
+       "published_pred_vox": 60116
+      }
+     },
+     "seconds": 37.4
+    },
+    {
+     "case": "FLARE23_0299",
+     "organs": {
+      "liver": {
+       "dice_tumor_excluded": 0.9782,
+       "published_dice": 0.9782,
+       "organ_dice": 0.9782,
+       "parenchyma_dice": 0.9782,
+       "parenchyma_recall": 0.9852,
+       "mass_coverage": null,
+       "mass_vox": 0,
+       "pred_vox": 720584,
+       "published_pred_vox": 720524
+      },
+      "kidney": {
+       "dice_tumor_excluded": 0.9736,
+       "published_dice": 0.9734,
+       "organ_dice": 0.9736,
+       "parenchyma_dice": 0.9736,
+       "parenchyma_recall": 0.9665,
+       "mass_coverage": null,
+       "mass_vox": 0,
+       "pred_vox": 146612,
+       "published_pred_vox": 146536
+      },
+      "pancreas": {
+       "dice_tumor_excluded": 0.8552,
+       "published_dice": 0.8546,
+       "organ_dice": 0.9103,
+       "parenchyma_dice": 0.9042,
+       "parenchyma_recall": 0.8795,
+       "mass_coverage": 0.9247,
+       "mass_vox": 3521,
+       "pred_vox": 30824,
+       "published_pred_vox": 30796
+      }
+     },
+     "seconds": 36.3
+    }
+   ]
+  }
+ }
+}

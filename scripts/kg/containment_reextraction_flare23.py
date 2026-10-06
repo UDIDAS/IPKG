@@ -5,7 +5,7 @@ The frozen assemble (build_predicted_corpus_flare23.py) tests containment as
 (tum & om) on EXCLUSIVE labels (a voxel is organ xor tumor), so the >=90 %-inside
 rule can never fire and every tumor-bearing record reads 'boundary'.
 
-Fix (docs/VKG_v9_ud_round_2026-09-15.md item 2): organ := organ UNION tumor-in-organ.
+Fix (docs/VKG_v9_round_2026-09-15.md item 2): organ := organ UNION tumor-in-organ.
 A tumor sitting inside the organ appears as a cavity in the exclusive organ mask; the
 anatomic organ region is restored by filling those cavities, then the ORIGINAL rule
 (>=90 % of the tumor within the 3-voxel dilation of the organ) is applied against the

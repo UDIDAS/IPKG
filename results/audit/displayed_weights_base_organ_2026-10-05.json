@@ -1,0 +1,47 @@
+{
+ "note": "Organ half of the three shipped single-organ showcase masks re-drawn with base facebook/sam3, loaded as the 09-19 regeneration loaded it (regen_predicted_masks_113.py at commit 23a5e04: IE._load_sam3_ckpt('/nonexistent') -> base weights), same protocol and functions as the tumor check of displayed_weights_check_2026-10-03.json. Masks are exclusive with tumor winning, so the redrawn organ is compared after removing the shipped tumor voxels.",
+ "organ_model": "facebook/sam3 (base, no fine-tune)",
+ "cases": {
+  "volume-76": {
+   "organ_half_vs_base_sam3": {
+    "voxels_redrawn": 311682,
+    "voxels_shipped": 311682,
+    "voxels_differing": 0,
+    "identical": true,
+    "dice": 1.0
+   }
+  },
+  "case_00067": {
+   "organ_half_vs_base_sam3": {
+    "voxels_redrawn": 550424,
+    "voxels_shipped": 550424,
+    "voxels_differing": 0,
+    "identical": true,
+    "dice": 1.0
+   }
+  },
+  "pancreas_125": {
+   "organ_half_vs_base_sam3": {
+    "voxels_redrawn": 77240,
+    "voxels_shipped": 77240,
+    "voxels_differing": 0,
+    "identical": true,
+    "dice": 1.0
+   }
+  }
+ },
+ "organ_model_revision": "3c879f39826c281e95690f02c7821c4de09afae7",
+ "run_record_0919": {
+  "command": "regen_predicted_masks_113.py --cases volume-76 case_00067 pancreas_125",
+  "started_utc": "2026-09-20T01:26:58Z",
+  "finished_utc": "2026-09-20T01:30:08Z",
+  "log": [
+   "[kits 1/1] case_00067 o=1897528 t=1830612 dice 0.3675/0.9826",
+   "[lits 1/1] volume-76 o=351617 t=51277 dice 0.9009/0.924",
+   "[msd 1/1] pancreas_125 o=81256 t=4016 dice 0.8545/0.861"
+  ],
+  "drive_upload_modtime": "2026-09-19 20:31:58 (final_cases_2026-09-19/masks/)",
+  "commit": "23a5e04 2026-09-19 20:38:51 -0500 (script version: organ om = IE._load_sam3_ckpt('/nonexistent') = base)",
+  "source": "Claude Code session transcript of 2026-09-19 (MMKG_vkg project)"
+ }
+}

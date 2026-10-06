@@ -1,0 +1,1165 @@
+{
+ "note": "One-pass re-run of the four final cases: every shipped mask comes with the metrics of THAT mask (the co-author 09-29 \u00a76 items 7-9).\n\nArms (all share one preprocessing: HU window (-125, 225), 256x256 slices, argmax query, sigmoid > 0.5, resize back):\n  so_pair       SEMI-ORACLE (the protocol behind the printed numbers): per labeled slice with GT structure >= 50 px at\n                256^2, GT box + 3 px pad + text prompt. Weights = the dataset's own organ + tumor checkpoint pair;\n                where the per-dataset tumor checkpoint is not recoverable (LiTS, MSD) the substitute is named in the\n                manifest.\n  displayed     NO inference: the masks shipped in final_cases_2026-09-19/masks/ (what raters saw), scored with the\n                same metric code. The three single-organ ones were drawn by base facebook/sam3 (organ) + the\n                FLARE23-only tumor expert; FLARE23_0405 by its own pair.\n  so_displayed  (optional; needs the base facebook/sam3 weights) re-draw with the displayed weights.\n  auto_pair     AUTONOMOUS: text prompt only, NO box, NO slice gate \u2014 every slice is prompted; a slice is kept when\n                the top query's confidence >= 0.15 and the mask has >= 15 px (sam3_autonomous_local thresholds).\n                Same weights as so_pair.\n\nMasks are saved EXCLUSIVE (organ label(s), tumor wins) exactly as the app draws them, and every metric is computed on\nthat saved mask: Dice, NSD@1/2 mm, HD95 (mm), predicted/reference volume, out-of-reference volume, component count;\nplus the same metrics after connected-component post-processing (organ: largest component per organ, 2 for a\nbilateral 'kidney' label; tumor: drop components < 0.1 cm^3) so the method change in plan item 12 can be judged.\nLiTS is the 256^2 npy slab with no header spacing: Dice is exact, mm metrics use the NOMINAL display spacing\n(1.4844, 1.4844, 2.5) and are flagged.\n\n  CKPT_DIR=/dev/shm/ud_ckpt CASE_DIR=/dev/shm/fc HF_HOME=... python rerun_final_cases.py [--arms ...] [--cases ...]\n-> $OUT_DIR/{arm}/{case}.nii.gz + results/segmentation/final_cases_rerun_2026-09-29.json",
+ "runs": {
+  "case_00067": {
+   "displayed": {
+    "dataset": "kits",
+    "arm": "displayed",
+    "mode": "so",
+    "weights_note": "shipped mask (final_cases_2026-09-19/masks/), scored as drawn",
+    "organ_ckpt": "facebook/sam3 (base)",
+    "organ_ckpt_sha256": null,
+    "tumor_ckpt": "sam3_tumor_flare_only.pth",
+    "tumor_ckpt_sha256": "503c14bffe675f028249cff9ee98b4d124f5b481b46683abed61116a7d5594cf",
+    "weights_dtype": null,
+    "spacing_mm": [
+     1.0,
+     0.76171875,
+     0.76171875
+    ],
+    "spacing_source": "header",
+    "seconds_gpu_pass": null,
+    "mask_file": "masks/case_00067.nii.gz",
+    "structures": {
+     "kidney": {
+      "dice": 0.8109,
+      "pred_cm3": 319.36,
+      "ref_cm3": 281.51,
+      "outside_ref_cm3": 75.75,
+      "outside_ref_pct_of_pred": 23.7,
+      "missed_ref_cm3": 37.9,
+      "components": 1136,
+      "nsd_1mm": 0.5183,
+      "nsd_2mm": 0.6714,
+      "hd95_mm": 48.22
+     },
+     "tumor": {
+      "dice": 0.9826,
+      "pred_cm3": 1062.15,
+      "ref_cm3": 1053.84,
+      "outside_ref_cm3": 22.61,
+      "outside_ref_pct_of_pred": 2.1,
+      "missed_ref_cm3": 14.3,
+      "components": 1,
+      "nsd_1mm": 0.8312,
+      "nsd_2mm": 0.9753,
+      "hd95_mm": 1.82
+     }
+    },
+    "structures_ccpp": {
+     "kidney": {
+      "dice": 0.8956,
+      "pred_cm3": 253.66,
+      "ref_cm3": 281.51,
+      "outside_ref_cm3": 14.02,
+      "outside_ref_pct_of_pred": 5.5,
+      "missed_ref_cm3": 41.87,
+      "components": 2,
+      "nsd_1mm": 0.5685,
+      "nsd_2mm": 0.6774,
+      "hd95_mm": 106.08
+     },
+     "tumor": {
+      "dice": 0.9826,
+      "pred_cm3": 1062.15,
+      "ref_cm3": 1053.84,
+      "outside_ref_cm3": 22.61,
+      "outside_ref_pct_of_pred": 2.1,
+      "missed_ref_cm3": 14.3,
+      "components": 1,
+      "nsd_1mm": 0.8312,
+      "nsd_2mm": 0.9753,
+      "hd95_mm": 1.82
+     }
+    },
+    "ccpp_rule": "organ: largest component (2 for bilateral kidney label); tumor: drop components < 0.1 cm3 (172 vox)"
+   },
+   "so_pair": {
+    "dataset": "kits",
+    "arm": "so_pair",
+    "mode": "so",
+    "weights_note": "per-dataset pair",
+    "organ_ckpt": "sam3_organ_generic_ausam_kits.pth",
+    "organ_ckpt_sha256": "38f263590fc9ac5ae915e6a0c5ad06182d9428c88be77a8ca3d50fde644a559e",
+    "tumor_ckpt": "sam3_tumor_ausam_kits.pth",
+    "tumor_ckpt_sha256": "b243bd9cd396ceb3eee24c34edde3011fd1f42ad72d188813b30a80117d4e596",
+    "weights_dtype": "fp16",
+    "spacing_mm": [
+     1.0,
+     0.76171875,
+     0.76171875
+    ],
+    "spacing_source": "header",
+    "seconds_gpu_pass": 307.9,
+    "mask_file": "so_pair/case_00067.nii.gz",
+    "structures": {
+     "kidney": {
+      "dice": 0.9231,
+      "pred_cm3": 262.52,
+      "ref_cm3": 281.51,
+      "outside_ref_cm3": 11.44,
+      "outside_ref_pct_of_pred": 4.4,
+      "missed_ref_cm3": 30.42,
+      "components": 415,
+      "nsd_1mm": 0.7142,
+      "nsd_2mm": 0.8311,
+      "hd95_mm": 27.46
+     },
+     "tumor": {
+      "dice": 0.9839,
+      "pred_cm3": 1039.97,
+      "ref_cm3": 1053.84,
+      "outside_ref_cm3": 9.92,
+      "outside_ref_pct_of_pred": 1.0,
+      "missed_ref_cm3": 23.79,
+      "components": 1,
+      "nsd_1mm": 0.8207,
+      "nsd_2mm": 0.984,
+      "hd95_mm": 1.52
+     }
+    },
+    "structures_ccpp": {
+     "kidney": {
+      "dice": 0.923,
+      "pred_cm3": 256.49,
+      "ref_cm3": 281.51,
+      "outside_ref_cm3": 8.2,
+      "outside_ref_pct_of_pred": 3.2,
+      "missed_ref_cm3": 33.22,
+      "components": 2,
+      "nsd_1mm": 0.643,
+      "nsd_2mm": 0.7305,
+      "hd95_mm": 106.0
+     },
+     "tumor": {
+      "dice": 0.9839,
+      "pred_cm3": 1039.97,
+      "ref_cm3": 1053.84,
+      "outside_ref_cm3": 9.92,
+      "outside_ref_pct_of_pred": 1.0,
+      "missed_ref_cm3": 23.79,
+      "components": 1,
+      "nsd_1mm": 0.8207,
+      "nsd_2mm": 0.984,
+      "hd95_mm": 1.52
+     }
+    },
+    "ccpp_rule": "organ: largest component (2 for bilateral kidney label); tumor: drop components < 0.1 cm3 (172 vox)"
+   },
+   "auto_pair": {
+    "dataset": "kits",
+    "arm": "auto_pair",
+    "mode": "auto",
+    "weights_note": "per-dataset pair",
+    "organ_ckpt": "sam3_organ_generic_ausam_kits.pth",
+    "organ_ckpt_sha256": "38f263590fc9ac5ae915e6a0c5ad06182d9428c88be77a8ca3d50fde644a559e",
+    "tumor_ckpt": "sam3_tumor_ausam_kits.pth",
+    "tumor_ckpt_sha256": "b243bd9cd396ceb3eee24c34edde3011fd1f42ad72d188813b30a80117d4e596",
+    "weights_dtype": "fp16",
+    "spacing_mm": [
+     1.0,
+     0.76171875,
+     0.76171875
+    ],
+    "spacing_source": "header",
+    "seconds_gpu_pass": 610.0,
+    "mask_file": "auto_pair/case_00067.nii.gz",
+    "structures": {
+     "kidney": {
+      "dice": 0.7323,
+      "pred_cm3": 368.77,
+      "ref_cm3": 281.51,
+      "outside_ref_cm3": 130.68,
+      "outside_ref_pct_of_pred": 35.4,
+      "missed_ref_cm3": 43.41,
+      "components": 204,
+      "nsd_1mm": 0.2889,
+      "nsd_2mm": 0.3501,
+      "hd95_mm": 108.74
+     },
+     "tumor": {
+      "dice": 0.9162,
+      "pred_cm3": 1183.74,
+      "ref_cm3": 1053.84,
+      "outside_ref_cm3": 158.66,
+      "outside_ref_pct_of_pred": 13.4,
+      "missed_ref_cm3": 28.77,
+      "components": 78,
+      "nsd_1mm": 0.3419,
+      "nsd_2mm": 0.4632,
+      "hd95_mm": 181.15
+     }
+    },
+    "structures_ccpp": {
+     "kidney": {
+      "dice": 0.9019,
+      "pred_cm3": 244.3,
+      "ref_cm3": 281.51,
+      "outside_ref_cm3": 7.19,
+      "outside_ref_pct_of_pred": 2.9,
+      "missed_ref_cm3": 44.4,
+      "components": 2,
+      "nsd_1mm": 0.54,
+      "nsd_2mm": 0.6463,
+      "hd95_mm": 107.0
+     },
+     "tumor": {
+      "dice": 0.9164,
+      "pred_cm3": 1183.22,
+      "ref_cm3": 1053.84,
+      "outside_ref_cm3": 158.15,
+      "outside_ref_pct_of_pred": 13.4,
+      "missed_ref_cm3": 28.77,
+      "components": 62,
+      "nsd_1mm": 0.3429,
+      "nsd_2mm": 0.4647,
+      "hd95_mm": 181.18
+     }
+    },
+    "ccpp_rule": "organ: largest component (2 for bilateral kidney label); tumor: drop components < 0.1 cm3 (172 vox)"
+   }
+  },
+  "volume-76": {
+   "displayed": {
+    "dataset": "lits",
+    "arm": "displayed",
+    "mode": "so",
+    "weights_note": "shipped mask (final_cases_2026-09-19/masks/), scored as drawn",
+    "organ_ckpt": "facebook/sam3 (base)",
+    "organ_ckpt_sha256": null,
+    "tumor_ckpt": "sam3_tumor_flare_only.pth",
+    "tumor_ckpt_sha256": "503c14bffe675f028249cff9ee98b4d124f5b481b46683abed61116a7d5594cf",
+    "weights_dtype": null,
+    "spacing_mm": [
+     2.5,
+     1.4844,
+     1.4844
+    ],
+    "spacing_source": "NOMINAL display spacing (npy slab has none)",
+    "seconds_gpu_pass": null,
+    "mask_file": "masks/volume-76.nii.gz",
+    "structures": {
+     "liver": {
+      "dice": 0.9448,
+      "pred_cm3": 1716.93,
+      "ref_cm3": 1720.17,
+      "outside_ref_cm3": 93.18,
+      "outside_ref_pct_of_pred": 5.4,
+      "missed_ref_cm3": 96.42,
+      "components": 40,
+      "nsd_1mm": 0.4465,
+      "nsd_2mm": 0.7457,
+      "hd95_mm": 5.11
+     },
+     "tumor": {
+      "dice": 0.924,
+      "pred_cm3": 282.46,
+      "ref_cm3": 271.61,
+      "outside_ref_cm3": 26.49,
+      "outside_ref_pct_of_pred": 9.4,
+      "missed_ref_cm3": 15.64,
+      "components": 10,
+      "nsd_1mm": 0.549,
+      "nsd_2mm": 0.8137,
+      "hd95_mm": 2.91
+     }
+    },
+    "structures_ccpp": {
+     "liver": {
+      "dice": 0.9449,
+      "pred_cm3": 1716.52,
+      "ref_cm3": 1720.17,
+      "outside_ref_cm3": 92.89,
+      "outside_ref_pct_of_pred": 5.4,
+      "missed_ref_cm3": 96.54,
+      "components": 1,
+      "nsd_1mm": 0.4464,
+      "nsd_2mm": 0.745,
+      "hd95_mm": 5.0
+     },
+     "tumor": {
+      "dice": 0.924,
+      "pred_cm3": 282.38,
+      "ref_cm3": 271.61,
+      "outside_ref_cm3": 26.45,
+      "outside_ref_pct_of_pred": 9.4,
+      "missed_ref_cm3": 15.68,
+      "components": 8,
+      "nsd_1mm": 0.5488,
+      "nsd_2mm": 0.8134,
+      "hd95_mm": 2.91
+     }
+    },
+    "ccpp_rule": "organ: largest component (2 for bilateral kidney label); tumor: drop components < 0.1 cm3 (18 vox)"
+   },
+   "so_pair": {
+    "dataset": "lits",
+    "arm": "so_pair",
+    "mode": "so",
+    "weights_note": "per-dataset organ; tumor = FLARE expert SUBSTITUTE (per-dataset tumor ckpt not recoverable)",
+    "organ_ckpt": "sam3_organ_generic_ausam_lits.pth",
+    "organ_ckpt_sha256": "fb9d4e06298e814a4357b1d32732c804f85603f56b1c7f6b21c369d23a273c21",
+    "tumor_ckpt": "sam3_tumor_ausam_flare.pth",
+    "tumor_ckpt_sha256": "b12c48455eac81fb61c98c75579e424b34c9b8282c836dfe36aa86538f47beae",
+    "weights_dtype": "fp16",
+    "spacing_mm": [
+     2.5,
+     1.4844,
+     1.4844
+    ],
+    "spacing_source": "NOMINAL display spacing (npy slab has none)",
+    "seconds_gpu_pass": 282.4,
+    "mask_file": "so_pair/volume-76.nii.gz",
+    "structures": {
+     "liver": {
+      "dice": 0.9487,
+      "pred_cm3": 1680.41,
+      "ref_cm3": 1720.17,
+      "outside_ref_cm3": 67.32,
+      "outside_ref_pct_of_pred": 4.0,
+      "missed_ref_cm3": 107.09,
+      "components": 21,
+      "nsd_1mm": 0.474,
+      "nsd_2mm": 0.7662,
+      "hd95_mm": 5.11
+     },
+     "tumor": {
+      "dice": 0.9266,
+      "pred_cm3": 279.44,
+      "ref_cm3": 271.61,
+      "outside_ref_cm3": 24.13,
+      "outside_ref_pct_of_pred": 8.6,
+      "missed_ref_cm3": 16.31,
+      "components": 10,
+      "nsd_1mm": 0.5633,
+      "nsd_2mm": 0.8188,
+      "hd95_mm": 2.91
+     }
+    },
+    "structures_ccpp": {
+     "liver": {
+      "dice": 0.9485,
+      "pred_cm3": 1678.71,
+      "ref_cm3": 1720.17,
+      "outside_ref_cm3": 66.82,
+      "outside_ref_pct_of_pred": 4.0,
+      "missed_ref_cm3": 108.29,
+      "components": 1,
+      "nsd_1mm": 0.471,
+      "nsd_2mm": 0.7623,
+      "hd95_mm": 5.11
+     },
+     "tumor": {
+      "dice": 0.9268,
+      "pred_cm3": 279.32,
+      "ref_cm3": 271.61,
+      "outside_ref_cm3": 24.01,
+      "outside_ref_pct_of_pred": 8.6,
+      "missed_ref_cm3": 16.31,
+      "components": 8,
+      "nsd_1mm": 0.5638,
+      "nsd_2mm": 0.8195,
+      "hd95_mm": 2.91
+     }
+    },
+    "ccpp_rule": "organ: largest component (2 for bilateral kidney label); tumor: drop components < 0.1 cm3 (18 vox)"
+   },
+   "auto_pair": {
+    "dataset": "lits",
+    "arm": "auto_pair",
+    "mode": "auto",
+    "weights_note": "per-dataset organ; tumor = FLARE expert SUBSTITUTE (per-dataset tumor ckpt not recoverable)",
+    "organ_ckpt": "sam3_organ_generic_ausam_lits.pth",
+    "organ_ckpt_sha256": "fb9d4e06298e814a4357b1d32732c804f85603f56b1c7f6b21c369d23a273c21",
+    "tumor_ckpt": "sam3_tumor_ausam_flare.pth",
+    "tumor_ckpt_sha256": "b12c48455eac81fb61c98c75579e424b34c9b8282c836dfe36aa86538f47beae",
+    "weights_dtype": "fp16",
+    "spacing_mm": [
+     2.5,
+     1.4844,
+     1.4844
+    ],
+    "spacing_source": "NOMINAL display spacing (npy slab has none)",
+    "seconds_gpu_pass": 290.6,
+    "mask_file": "auto_pair/volume-76.nii.gz",
+    "structures": {
+     "liver": {
+      "dice": 0.9392,
+      "pred_cm3": 1668.87,
+      "ref_cm3": 1720.17,
+      "outside_ref_cm3": 77.45,
+      "outside_ref_pct_of_pred": 4.6,
+      "missed_ref_cm3": 128.75,
+      "components": 9,
+      "nsd_1mm": 0.3974,
+      "nsd_2mm": 0.689,
+      "hd95_mm": 6.0
+     },
+     "tumor": {
+      "dice": 0.7356,
+      "pred_cm3": 173.59,
+      "ref_cm3": 271.61,
+      "outside_ref_cm3": 9.85,
+      "outside_ref_pct_of_pred": 5.7,
+      "missed_ref_cm3": 107.88,
+      "components": 22,
+      "nsd_1mm": 0.3078,
+      "nsd_2mm": 0.4853,
+      "hd95_mm": 45.16
+     }
+    },
+    "structures_ccpp": {
+     "liver": {
+      "dice": 0.9393,
+      "pred_cm3": 1666.41,
+      "ref_cm3": 1720.17,
+      "outside_ref_cm3": 75.9,
+      "outside_ref_pct_of_pred": 4.6,
+      "missed_ref_cm3": 129.66,
+      "components": 1,
+      "nsd_1mm": 0.396,
+      "nsd_2mm": 0.6879,
+      "hd95_mm": 6.0
+     },
+     "tumor": {
+      "dice": 0.7358,
+      "pred_cm3": 173.36,
+      "ref_cm3": 271.61,
+      "outside_ref_cm3": 9.65,
+      "outside_ref_pct_of_pred": 5.6,
+      "missed_ref_cm3": 107.91,
+      "components": 17,
+      "nsd_1mm": 0.3079,
+      "nsd_2mm": 0.4854,
+      "hd95_mm": 45.0
+     }
+    },
+    "ccpp_rule": "organ: largest component (2 for bilateral kidney label); tumor: drop components < 0.1 cm3 (18 vox)"
+   }
+  },
+  "pancreas_125": {
+   "displayed": {
+    "dataset": "msd",
+    "arm": "displayed",
+    "mode": "so",
+    "weights_note": "shipped mask (final_cases_2026-09-19/masks/), scored as drawn",
+    "organ_ckpt": "facebook/sam3 (base)",
+    "organ_ckpt_sha256": null,
+    "tumor_ckpt": "sam3_tumor_flare_only.pth",
+    "tumor_ckpt_sha256": "503c14bffe675f028249cff9ee98b4d124f5b481b46683abed61116a7d5594cf",
+    "weights_dtype": null,
+    "spacing_mm": [
+     0.9316409826278687,
+     0.9316409826278687,
+     2.5
+    ],
+    "spacing_source": "header",
+    "seconds_gpu_pass": null,
+    "mask_file": "masks/pancreas_125.nii.gz",
+    "structures": {
+     "pancreas": {
+      "dice": 0.8672,
+      "pred_cm3": 167.6,
+      "ref_cm3": 170.0,
+      "outside_ref_cm3": 21.22,
+      "outside_ref_pct_of_pred": 12.7,
+      "missed_ref_cm3": 23.61,
+      "components": 21,
+      "nsd_1mm": 0.579,
+      "nsd_2mm": 0.7057,
+      "hd95_mm": 6.51
+     },
+     "tumor": {
+      "dice": 0.861,
+      "pred_cm3": 8.71,
+      "ref_cm3": 7.84,
+      "outside_ref_cm3": 1.59,
+      "outside_ref_pct_of_pred": 18.2,
+      "missed_ref_cm3": 0.72,
+      "components": 1,
+      "nsd_1mm": 0.751,
+      "nsd_2mm": 0.8833,
+      "hd95_mm": 3.73
+     }
+    },
+    "structures_ccpp": {
+     "pancreas": {
+      "dice": 0.8696,
+      "pred_cm3": 166.49,
+      "ref_cm3": 170.0,
+      "outside_ref_cm3": 20.18,
+      "outside_ref_pct_of_pred": 12.1,
+      "missed_ref_cm3": 23.69,
+      "components": 1,
+      "nsd_1mm": 0.5838,
+      "nsd_2mm": 0.7117,
+      "hd95_mm": 5.29
+     },
+     "tumor": {
+      "dice": 0.861,
+      "pred_cm3": 8.71,
+      "ref_cm3": 7.84,
+      "outside_ref_cm3": 1.59,
+      "outside_ref_pct_of_pred": 18.2,
+      "missed_ref_cm3": 0.72,
+      "components": 1,
+      "nsd_1mm": 0.751,
+      "nsd_2mm": 0.8833,
+      "hd95_mm": 3.73
+     }
+    },
+    "ccpp_rule": "organ: largest component (2 for bilateral kidney label); tumor: drop components < 0.1 cm3 (46 vox)"
+   },
+   "so_pair": {
+    "dataset": "msd",
+    "arm": "so_pair",
+    "mode": "so",
+    "weights_note": "per-dataset organ; tumor = FLARE expert SUBSTITUTE (per-dataset tumor ckpt not recoverable)",
+    "organ_ckpt": "sam3_organ_generic_ausam_msd.pth",
+    "organ_ckpt_sha256": "fc98e5e86b2271642f23b28724ae212365df16286bc4f29a934d6e4aa32d88ec",
+    "tumor_ckpt": "sam3_tumor_ausam_flare.pth",
+    "tumor_ckpt_sha256": "b12c48455eac81fb61c98c75579e424b34c9b8282c836dfe36aa86538f47beae",
+    "weights_dtype": "fp16",
+    "spacing_mm": [
+     0.9316409826278687,
+     0.9316409826278687,
+     2.5
+    ],
+    "spacing_source": "header",
+    "seconds_gpu_pass": 222.0,
+    "mask_file": "so_pair/pancreas_125.nii.gz",
+    "structures": {
+     "pancreas": {
+      "dice": 0.9257,
+      "pred_cm3": 175.11,
+      "ref_cm3": 170.0,
+      "outside_ref_cm3": 15.38,
+      "outside_ref_pct_of_pred": 8.8,
+      "missed_ref_cm3": 10.26,
+      "components": 1,
+      "nsd_1mm": 0.7963,
+      "nsd_2mm": 0.8985,
+      "hd95_mm": 2.64
+     },
+     "tumor": {
+      "dice": 0.9235,
+      "pred_cm3": 7.96,
+      "ref_cm3": 7.84,
+      "outside_ref_cm3": 0.66,
+      "outside_ref_pct_of_pred": 8.3,
+      "missed_ref_cm3": 0.55,
+      "components": 1,
+      "nsd_1mm": 0.9157,
+      "nsd_2mm": 0.989,
+      "hd95_mm": 1.86
+     }
+    },
+    "structures_ccpp": {
+     "pancreas": {
+      "dice": 0.9257,
+      "pred_cm3": 175.11,
+      "ref_cm3": 170.0,
+      "outside_ref_cm3": 15.38,
+      "outside_ref_pct_of_pred": 8.8,
+      "missed_ref_cm3": 10.26,
+      "components": 1,
+      "nsd_1mm": 0.7963,
+      "nsd_2mm": 0.8985,
+      "hd95_mm": 2.64
+     },
+     "tumor": {
+      "dice": 0.9235,
+      "pred_cm3": 7.96,
+      "ref_cm3": 7.84,
+      "outside_ref_cm3": 0.66,
+      "outside_ref_pct_of_pred": 8.3,
+      "missed_ref_cm3": 0.55,
+      "components": 1,
+      "nsd_1mm": 0.9157,
+      "nsd_2mm": 0.989,
+      "hd95_mm": 1.86
+     }
+    },
+    "ccpp_rule": "organ: largest component (2 for bilateral kidney label); tumor: drop components < 0.1 cm3 (46 vox)"
+   },
+   "auto_pair": {
+    "dataset": "msd",
+    "arm": "auto_pair",
+    "mode": "auto",
+    "weights_note": "per-dataset organ; tumor = FLARE expert SUBSTITUTE (per-dataset tumor ckpt not recoverable)",
+    "organ_ckpt": "sam3_organ_generic_ausam_msd.pth",
+    "organ_ckpt_sha256": "fc98e5e86b2271642f23b28724ae212365df16286bc4f29a934d6e4aa32d88ec",
+    "tumor_ckpt": "sam3_tumor_ausam_flare.pth",
+    "tumor_ckpt_sha256": "b12c48455eac81fb61c98c75579e424b34c9b8282c836dfe36aa86538f47beae",
+    "weights_dtype": "fp16",
+    "spacing_mm": [
+     0.9316409826278687,
+     0.9316409826278687,
+     2.5
+    ],
+    "spacing_source": "header",
+    "seconds_gpu_pass": 319.3,
+    "mask_file": "auto_pair/pancreas_125.nii.gz",
+    "structures": {
+     "pancreas": {
+      "dice": 0.4591,
+      "pred_cm3": 322.75,
+      "ref_cm3": 170.0,
+      "outside_ref_cm3": 209.65,
+      "outside_ref_pct_of_pred": 65.0,
+      "missed_ref_cm3": 56.89,
+      "components": 34,
+      "nsd_1mm": 0.1285,
+      "nsd_2mm": 0.1801,
+      "hd95_mm": 114.78
+     },
+     "tumor": {
+      "dice": 0.2403,
+      "pred_cm3": 38.13,
+      "ref_cm3": 7.84,
+      "outside_ref_cm3": 32.61,
+      "outside_ref_pct_of_pred": 85.5,
+      "missed_ref_cm3": 2.32,
+      "components": 57,
+      "nsd_1mm": 0.0861,
+      "nsd_2mm": 0.1132,
+      "hd95_mm": 188.83
+     }
+    },
+    "structures_ccpp": {
+     "pancreas": {
+      "dice": 0.0,
+      "pred_cm3": 81.88,
+      "ref_cm3": 170.0,
+      "outside_ref_cm3": 81.88,
+      "outside_ref_pct_of_pred": 100.0,
+      "missed_ref_cm3": 170.0,
+      "components": 1,
+      "nsd_1mm": 0.0,
+      "nsd_2mm": 0.0,
+      "hd95_mm": 104.25
+     },
+     "tumor": {
+      "dice": 0.2434,
+      "pred_cm3": 37.56,
+      "ref_cm3": 7.84,
+      "outside_ref_cm3": 32.03,
+      "outside_ref_pct_of_pred": 85.3,
+      "missed_ref_cm3": 2.32,
+      "components": 47,
+      "nsd_1mm": 0.0876,
+      "nsd_2mm": 0.1152,
+      "hd95_mm": 188.89
+     }
+    },
+    "ccpp_rule": "organ: largest component (2 for bilateral kidney label); tumor: drop components < 0.1 cm3 (46 vox)"
+   }
+  },
+  "FLARE23_0405": {
+   "displayed": {
+    "dataset": "flare23",
+    "arm": "displayed",
+    "mode": "so",
+    "weights_note": "shipped mask (final_cases_2026-09-19/masks/), scored as drawn",
+    "organ_ckpt": "sam3_organ_generic_ausam_flare23.pth",
+    "organ_ckpt_sha256": "9728087a5aba2ed6fe74f8c46c459f210db54c650c12f33dcd282fb837a57e54",
+    "tumor_ckpt": "sam3_tumor_ausam_flare.pth",
+    "tumor_ckpt_sha256": "b12c48455eac81fb61c98c75579e424b34c9b8282c836dfe36aa86538f47beae",
+    "weights_dtype": null,
+    "spacing_mm": [
+     0.962890625,
+     0.962890625,
+     1.0
+    ],
+    "spacing_source": "header",
+    "seconds_gpu_pass": null,
+    "mask_file": "masks/FLARE23_0405.nii.gz",
+    "structures": {
+     "liver": {
+      "dice": 0.9794,
+      "pred_cm3": 2723.62,
+      "ref_cm3": 2733.11,
+      "outside_ref_cm3": 51.41,
+      "outside_ref_pct_of_pred": 1.9,
+      "missed_ref_cm3": 60.9,
+      "components": 3,
+      "nsd_1mm": 0.8376,
+      "nsd_2mm": 0.9468,
+      "hd95_mm": 2.37
+     },
+     "right kidney": {
+      "dice": 0.9692,
+      "pred_cm3": 342.85,
+      "ref_cm3": 344.78,
+      "outside_ref_cm3": 9.62,
+      "outside_ref_pct_of_pred": 2.8,
+      "missed_ref_cm3": 11.56,
+      "components": 1,
+      "nsd_1mm": 0.891,
+      "nsd_2mm": 0.963,
+      "hd95_mm": 2.37
+     },
+     "spleen": {
+      "dice": 0.9595,
+      "pred_cm3": 384.41,
+      "ref_cm3": 372.61,
+      "outside_ref_cm3": 21.23,
+      "outside_ref_pct_of_pred": 5.5,
+      "missed_ref_cm3": 9.43,
+      "components": 1,
+      "nsd_1mm": 0.7735,
+      "nsd_2mm": 0.9259,
+      "hd95_mm": 2.37
+     },
+     "pancreas": {
+      "dice": 0.8892,
+      "pred_cm3": 137.87,
+      "ref_cm3": 138.66,
+      "outside_ref_cm3": 14.92,
+      "outside_ref_pct_of_pred": 10.8,
+      "missed_ref_cm3": 15.71,
+      "components": 1,
+      "nsd_1mm": 0.7085,
+      "nsd_2mm": 0.8679,
+      "hd95_mm": 3.61
+     },
+     "left kidney": {
+      "dice": 0.8951,
+      "pred_cm3": 301.26,
+      "ref_cm3": 331.13,
+      "outside_ref_cm3": 18.23,
+      "outside_ref_pct_of_pred": 6.0,
+      "missed_ref_cm3": 48.1,
+      "components": 130,
+      "nsd_1mm": 0.5458,
+      "nsd_2mm": 0.6691,
+      "hd95_mm": 21.36
+     },
+     "tumor": {
+      "dice": 0.97,
+      "pred_cm3": 702.11,
+      "ref_cm3": 695.01,
+      "outside_ref_cm3": 24.53,
+      "outside_ref_pct_of_pred": 3.5,
+      "missed_ref_cm3": 17.42,
+      "components": 1,
+      "nsd_1mm": 0.8212,
+      "nsd_2mm": 0.951,
+      "hd95_mm": 2.15
+     }
+    },
+    "structures_ccpp": {
+     "liver": {
+      "dice": 0.9795,
+      "pred_cm3": 2723.42,
+      "ref_cm3": 2733.11,
+      "outside_ref_cm3": 51.22,
+      "outside_ref_pct_of_pred": 1.9,
+      "missed_ref_cm3": 60.91,
+      "components": 1,
+      "nsd_1mm": 0.8381,
+      "nsd_2mm": 0.9469,
+      "hd95_mm": 2.37
+     },
+     "right kidney": {
+      "dice": 0.9692,
+      "pred_cm3": 342.85,
+      "ref_cm3": 344.78,
+      "outside_ref_cm3": 9.62,
+      "outside_ref_pct_of_pred": 2.8,
+      "missed_ref_cm3": 11.56,
+      "components": 1,
+      "nsd_1mm": 0.891,
+      "nsd_2mm": 0.963,
+      "hd95_mm": 2.37
+     },
+     "spleen": {
+      "dice": 0.9595,
+      "pred_cm3": 384.41,
+      "ref_cm3": 372.61,
+      "outside_ref_cm3": 21.23,
+      "outside_ref_pct_of_pred": 5.5,
+      "missed_ref_cm3": 9.43,
+      "components": 1,
+      "nsd_1mm": 0.7735,
+      "nsd_2mm": 0.9259,
+      "hd95_mm": 2.37
+     },
+     "pancreas": {
+      "dice": 0.8892,
+      "pred_cm3": 137.87,
+      "ref_cm3": 138.66,
+      "outside_ref_cm3": 14.92,
+      "outside_ref_pct_of_pred": 10.8,
+      "missed_ref_cm3": 15.71,
+      "components": 1,
+      "nsd_1mm": 0.7085,
+      "nsd_2mm": 0.8679,
+      "hd95_mm": 3.61
+     },
+     "left kidney": {
+      "dice": 0.8964,
+      "pred_cm3": 299.43,
+      "ref_cm3": 331.13,
+      "outside_ref_cm3": 16.82,
+      "outside_ref_pct_of_pred": 5.6,
+      "missed_ref_cm3": 48.51,
+      "components": 1,
+      "nsd_1mm": 0.5372,
+      "nsd_2mm": 0.6543,
+      "hd95_mm": 49.76
+     },
+     "tumor": {
+      "dice": 0.97,
+      "pred_cm3": 702.11,
+      "ref_cm3": 695.01,
+      "outside_ref_cm3": 24.53,
+      "outside_ref_pct_of_pred": 3.5,
+      "missed_ref_cm3": 17.42,
+      "components": 1,
+      "nsd_1mm": 0.8212,
+      "nsd_2mm": 0.951,
+      "hd95_mm": 2.15
+     }
+    },
+    "ccpp_rule": "organ: largest component (2 for bilateral kidney label); tumor: drop components < 0.1 cm3 (108 vox)"
+   },
+   "so_pair": {
+    "dataset": "flare23",
+    "arm": "so_pair",
+    "mode": "so",
+    "weights_note": "per-dataset pair",
+    "organ_ckpt": "sam3_organ_generic_ausam_flare23.pth",
+    "organ_ckpt_sha256": "9728087a5aba2ed6fe74f8c46c459f210db54c650c12f33dcd282fb837a57e54",
+    "tumor_ckpt": "sam3_tumor_ausam_flare.pth",
+    "tumor_ckpt_sha256": "b12c48455eac81fb61c98c75579e424b34c9b8282c836dfe36aa86538f47beae",
+    "weights_dtype": "fp16",
+    "spacing_mm": [
+     0.962890625,
+     0.962890625,
+     1.0
+    ],
+    "spacing_source": "header",
+    "seconds_gpu_pass": 438.7,
+    "mask_file": "so_pair/FLARE23_0405.nii.gz",
+    "structures": {
+     "liver": {
+      "dice": 0.9806,
+      "pred_cm3": 2723.45,
+      "ref_cm3": 2733.11,
+      "outside_ref_cm3": 48.2,
+      "outside_ref_pct_of_pred": 1.8,
+      "missed_ref_cm3": 57.85,
+      "components": 3,
+      "nsd_1mm": 0.8302,
+      "nsd_2mm": 0.9455,
+      "hd95_mm": 2.72
+     },
+     "right kidney": {
+      "dice": 0.9714,
+      "pred_cm3": 342.95,
+      "ref_cm3": 344.78,
+      "outside_ref_cm3": 8.94,
+      "outside_ref_pct_of_pred": 2.6,
+      "missed_ref_cm3": 10.77,
+      "components": 1,
+      "nsd_1mm": 0.8972,
+      "nsd_2mm": 0.9586,
+      "hd95_mm": 2.78
+     },
+     "spleen": {
+      "dice": 0.961,
+      "pred_cm3": 384.27,
+      "ref_cm3": 372.61,
+      "outside_ref_cm3": 20.59,
+      "outside_ref_pct_of_pred": 5.4,
+      "missed_ref_cm3": 8.92,
+      "components": 1,
+      "nsd_1mm": 0.7583,
+      "nsd_2mm": 0.9222,
+      "hd95_mm": 2.22
+     },
+     "pancreas": {
+      "dice": 0.8907,
+      "pred_cm3": 137.72,
+      "ref_cm3": 138.66,
+      "outside_ref_cm3": 14.63,
+      "outside_ref_pct_of_pred": 10.6,
+      "missed_ref_cm3": 15.57,
+      "components": 1,
+      "nsd_1mm": 0.6984,
+      "nsd_2mm": 0.8635,
+      "hd95_mm": 3.64
+     },
+     "left kidney": {
+      "dice": 0.8973,
+      "pred_cm3": 301.06,
+      "ref_cm3": 331.13,
+      "outside_ref_cm3": 17.44,
+      "outside_ref_pct_of_pred": 5.8,
+      "missed_ref_cm3": 47.51,
+      "components": 226,
+      "nsd_1mm": 0.5357,
+      "nsd_2mm": 0.6629,
+      "hd95_mm": 17.47
+     },
+     "tumor": {
+      "dice": 0.9715,
+      "pred_cm3": 701.86,
+      "ref_cm3": 695.01,
+      "outside_ref_cm3": 23.32,
+      "outside_ref_pct_of_pred": 3.3,
+      "missed_ref_cm3": 16.48,
+      "components": 1,
+      "nsd_1mm": 0.8162,
+      "nsd_2mm": 0.9484,
+      "hd95_mm": 2.15
+     }
+    },
+    "structures_ccpp": {
+     "liver": {
+      "dice": 0.9806,
+      "pred_cm3": 2723.25,
+      "ref_cm3": 2733.11,
+      "outside_ref_cm3": 48.01,
+      "outside_ref_pct_of_pred": 1.8,
+      "missed_ref_cm3": 57.86,
+      "components": 1,
+      "nsd_1mm": 0.8308,
+      "nsd_2mm": 0.9456,
+      "hd95_mm": 2.72
+     },
+     "right kidney": {
+      "dice": 0.9714,
+      "pred_cm3": 342.95,
+      "ref_cm3": 344.78,
+      "outside_ref_cm3": 8.94,
+      "outside_ref_pct_of_pred": 2.6,
+      "missed_ref_cm3": 10.77,
+      "components": 1,
+      "nsd_1mm": 0.8972,
+      "nsd_2mm": 0.9586,
+      "hd95_mm": 2.78
+     },
+     "spleen": {
+      "dice": 0.961,
+      "pred_cm3": 384.27,
+      "ref_cm3": 372.61,
+      "outside_ref_cm3": 20.59,
+      "outside_ref_pct_of_pred": 5.4,
+      "missed_ref_cm3": 8.92,
+      "components": 1,
+      "nsd_1mm": 0.7583,
+      "nsd_2mm": 0.9222,
+      "hd95_mm": 2.22
+     },
+     "pancreas": {
+      "dice": 0.8907,
+      "pred_cm3": 137.72,
+      "ref_cm3": 138.66,
+      "outside_ref_cm3": 14.63,
+      "outside_ref_pct_of_pred": 10.6,
+      "missed_ref_cm3": 15.57,
+      "components": 1,
+      "nsd_1mm": 0.6984,
+      "nsd_2mm": 0.8635,
+      "hd95_mm": 3.64
+     },
+     "left kidney": {
+      "dice": 0.8983,
+      "pred_cm3": 299.38,
+      "ref_cm3": 331.13,
+      "outside_ref_cm3": 16.18,
+      "outside_ref_pct_of_pred": 5.4,
+      "missed_ref_cm3": 47.93,
+      "components": 1,
+      "nsd_1mm": 0.5261,
+      "nsd_2mm": 0.6454,
+      "hd95_mm": 48.14
+     },
+     "tumor": {
+      "dice": 0.9715,
+      "pred_cm3": 701.86,
+      "ref_cm3": 695.01,
+      "outside_ref_cm3": 23.32,
+      "outside_ref_pct_of_pred": 3.3,
+      "missed_ref_cm3": 16.48,
+      "components": 1,
+      "nsd_1mm": 0.8162,
+      "nsd_2mm": 0.9484,
+      "hd95_mm": 2.15
+     }
+    },
+    "ccpp_rule": "organ: largest component (2 for bilateral kidney label); tumor: drop components < 0.1 cm3 (108 vox)"
+   },
+   "auto_pair": {
+    "dataset": "flare23",
+    "arm": "auto_pair",
+    "mode": "auto",
+    "weights_note": "per-dataset pair",
+    "organ_ckpt": "sam3_organ_generic_ausam_flare23.pth",
+    "organ_ckpt_sha256": "9728087a5aba2ed6fe74f8c46c459f210db54c650c12f33dcd282fb837a57e54",
+    "tumor_ckpt": "sam3_tumor_ausam_flare.pth",
+    "tumor_ckpt_sha256": "b12c48455eac81fb61c98c75579e424b34c9b8282c836dfe36aa86538f47beae",
+    "weights_dtype": "fp16",
+    "spacing_mm": [
+     0.962890625,
+     0.962890625,
+     1.0
+    ],
+    "spacing_source": "header",
+    "seconds_gpu_pass": 648.5,
+    "mask_file": "auto_pair/FLARE23_0405.nii.gz",
+    "structures": {
+     "liver": {
+      "dice": 0.946,
+      "pred_cm3": 2556.88,
+      "ref_cm3": 2733.11,
+      "outside_ref_cm3": 54.67,
+      "outside_ref_pct_of_pred": 2.1,
+      "missed_ref_cm3": 230.9,
+      "components": 132,
+      "nsd_1mm": 0.4743,
+      "nsd_2mm": 0.627,
+      "hd95_mm": 55.54
+     },
+     "right kidney": {
+      "dice": 0.8028,
+      "pred_cm3": 310.95,
+      "ref_cm3": 344.78,
+      "outside_ref_cm3": 47.75,
+      "outside_ref_pct_of_pred": 15.4,
+      "missed_ref_cm3": 81.58,
+      "components": 1094,
+      "nsd_1mm": 0.3838,
+      "nsd_2mm": 0.4501,
+      "hd95_mm": 183.76
+     },
+     "spleen": {
+      "dice": 0.8355,
+      "pred_cm3": 457.86,
+      "ref_cm3": 372.61,
+      "outside_ref_cm3": 110.94,
+      "outside_ref_pct_of_pred": 24.2,
+      "missed_ref_cm3": 25.69,
+      "components": 118,
+      "nsd_1mm": 0.4149,
+      "nsd_2mm": 0.542,
+      "hd95_mm": 237.03
+     },
+     "pancreas": {
+      "dice": 0.6716,
+      "pred_cm3": 169.81,
+      "ref_cm3": 138.66,
+      "outside_ref_cm3": 66.23,
+      "outside_ref_pct_of_pred": 39.0,
+      "missed_ref_cm3": 35.07,
+      "components": 223,
+      "nsd_1mm": 0.3159,
+      "nsd_2mm": 0.435,
+      "hd95_mm": 142.05
+     },
+     "left kidney": {
+      "dice": 0.5084,
+      "pred_cm3": 368.31,
+      "ref_cm3": 331.13,
+      "outside_ref_cm3": 190.52,
+      "outside_ref_pct_of_pred": 51.7,
+      "missed_ref_cm3": 153.34,
+      "components": 160,
+      "nsd_1mm": 0.1576,
+      "nsd_2mm": 0.2193,
+      "hd95_mm": 156.15
+     },
+     "tumor": {
+      "dice": 0.0833,
+      "pred_cm3": 118.21,
+      "ref_cm3": 695.01,
+      "outside_ref_cm3": 84.35,
+      "outside_ref_pct_of_pred": 71.4,
+      "missed_ref_cm3": 661.15,
+      "components": 157,
+      "nsd_1mm": 0.0194,
+      "nsd_2mm": 0.0402,
+      "hd95_mm": 222.46
+     }
+    },
+    "structures_ccpp": {
+     "liver": {
+      "dice": 0.9537,
+      "pred_cm3": 2509.31,
+      "ref_cm3": 2733.11,
+      "outside_ref_cm3": 9.43,
+      "outside_ref_pct_of_pred": 0.4,
+      "missed_ref_cm3": 233.22,
+      "components": 1,
+      "nsd_1mm": 0.5307,
+      "nsd_2mm": 0.6998,
+      "hd95_mm": 18.44
+     },
+     "right kidney": {
+      "dice": 0.7617,
+      "pred_cm3": 218.76,
+      "ref_cm3": 344.78,
+      "outside_ref_cm3": 4.15,
+      "outside_ref_pct_of_pred": 1.9,
+      "missed_ref_cm3": 130.17,
+      "components": 1,
+      "nsd_1mm": 0.5109,
+      "nsd_2mm": 0.6051,
+      "hd95_mm": 22.0
+     },
+     "spleen": {
+      "dice": 0.8945,
+      "pred_cm3": 322.53,
+      "ref_cm3": 372.61,
+      "outside_ref_cm3": 11.64,
+      "outside_ref_pct_of_pred": 3.6,
+      "missed_ref_cm3": 61.72,
+      "components": 1,
+      "nsd_1mm": 0.5975,
+      "nsd_2mm": 0.7841,
+      "hd95_mm": 20.0
+     },
+     "pancreas": {
+      "dice": 0.5284,
+      "pred_cm3": 68.69,
+      "ref_cm3": 138.66,
+      "outside_ref_cm3": 13.9,
+      "outside_ref_pct_of_pred": 20.2,
+      "missed_ref_cm3": 83.88,
+      "components": 1,
+      "nsd_1mm": 0.3383,
+      "nsd_2mm": 0.472,
+      "hd95_mm": 57.49
+     },
+     "left kidney": {
+      "dice": 0.4292,
+      "pred_cm3": 94.66,
+      "ref_cm3": 331.13,
+      "outside_ref_cm3": 3.28,
+      "outside_ref_pct_of_pred": 3.5,
+      "missed_ref_cm3": 239.75,
+      "components": 1,
+      "nsd_1mm": 0.1726,
+      "nsd_2mm": 0.2313,
+      "hd95_mm": 77.4
+     },
+     "tumor": {
+      "dice": 0.0832,
+      "pred_cm3": 114.98,
+      "ref_cm3": 695.01,
+      "outside_ref_cm3": 81.26,
+      "outside_ref_pct_of_pred": 70.7,
+      "missed_ref_cm3": 661.29,
+      "components": 78,
+      "nsd_1mm": 0.0186,
+      "nsd_2mm": 0.0396,
+      "hd95_mm": 222.67
+     }
+    },
+    "ccpp_rule": "organ: largest component (2 for bilateral kidney label); tumor: drop components < 0.1 cm3 (108 vox)"
+   }
+  }
+ }
+}

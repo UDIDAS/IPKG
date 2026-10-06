@@ -1,0 +1,575 @@
+{
+ "note": "Sub-site re-issue of the delivered records (IPKG round 2; the co-author v2 report \u00a72.2 'pending the pipeline team re-issue').\n\nRule = scripts/kg/pancreas_subsite.py (patient left-right in world mm, thirds, PCA cross-check, fail-closed guards).\n  * liver / kidney / spleen entries: anatomic_location -> \"na\" (no head/body/tail; their own sub-sites would be\n    Couinaud segments / poles, which the pipeline does not compute).\n  * MSD pancreas, REFERENCE records: the corrected site from results/kg/pancreas_subsite_msd_gt.json.\n  * MSD pancreas, PREDICTED records: the masks behind the frozen predicted corpus were not retained (and the tumor\n    checkpoint that drew them was deleted 08-22), so the corrected rule cannot be applied -> \"unknown\"; the round-2\n    record (TS pancreas + prompt-free tumor, results/segmentation/promptfree_round2_2026-10-01.json) carries the\n    recomputed site. Exception: the shipped final-case mask of pancreas_125 exists and is re-scored directly.\n  * FLARE23 records: already \"unknown\" for pancreas (never computed); other organs -> \"na\".\nEvery changed entry keeps the delivered word in anatomic_location_delivered. The frozen corpora are not modified:\nre-issued copies go to corpora/reissue_2026-10-01/ and app_handoff/final_cases_2026-09-19_reissue/.\n\n  python reissue_subsite.py",
+ "corpora": {
+  "containment_v2/corpus_gt_kits_containment_v2.json": [
+   {
+    "organ": "kidney",
+    "delivered": "body",
+    "reissued": "na",
+    "n": 10
+   },
+   {
+    "organ": "kidney",
+    "delivered": "head",
+    "reissued": "na",
+    "n": 13
+   },
+   {
+    "organ": "kidney",
+    "delivered": "tail",
+    "reissued": "na",
+    "n": 13
+   }
+  ],
+  "containment_v2/corpus_gt_lits_containment_v2.json": [
+   {
+    "organ": "liver",
+    "delivered": "body",
+    "reissued": "na",
+    "n": 15
+   },
+   {
+    "organ": "liver",
+    "delivered": "head",
+    "reissued": "na",
+    "n": 5
+   },
+   {
+    "organ": "liver",
+    "delivered": "tail",
+    "reissued": "na",
+    "n": 1
+   }
+  ],
+  "containment_v2/corpus_gt_msd_containment_v2.json": [
+   {
+    "organ": "pancreas",
+    "delivered": "body",
+    "reissued": "body",
+    "n": 1
+   },
+   {
+    "organ": "pancreas",
+    "delivered": "body",
+    "reissued": "head",
+    "n": 19
+   },
+   {
+    "organ": "pancreas",
+    "delivered": "head",
+    "reissued": "body",
+    "n": 7
+   },
+   {
+    "organ": "pancreas",
+    "delivered": "head",
+    "reissued": "head",
+    "n": 2
+   },
+   {
+    "organ": "pancreas",
+    "delivered": "head",
+    "reissued": "tail",
+    "n": 3
+   },
+   {
+    "organ": "pancreas",
+    "delivered": "head",
+    "reissued": "unknown",
+    "n": 1
+   },
+   {
+    "organ": "pancreas",
+    "delivered": "tail",
+    "reissued": "head",
+    "n": 23
+   }
+  ],
+  "containment_v2/corpus_predicted_flare23_containment_v2.json": [
+   {
+    "organ": "kidney",
+    "delivered": "unknown",
+    "reissued": "na",
+    "n": 576
+   },
+   {
+    "organ": "liver",
+    "delivered": "unknown",
+    "reissued": "na",
+    "n": 575
+   },
+   {
+    "organ": "pancreas",
+    "delivered": "unknown",
+    "reissued": "unknown",
+    "n": 575
+   },
+   {
+    "organ": "spleen",
+    "delivered": "unknown",
+    "reissued": "na",
+    "n": 570
+   }
+  ],
+  "containment_v2/corpus_predicted_kits_containment_v2.json": [
+   {
+    "organ": "kidney",
+    "delivered": "body",
+    "reissued": "na",
+    "n": 9
+   },
+   {
+    "organ": "kidney",
+    "delivered": "head",
+    "reissued": "na",
+    "n": 14
+   },
+   {
+    "organ": "kidney",
+    "delivered": "na",
+    "reissued": "na",
+    "n": 1
+   },
+   {
+    "organ": "kidney",
+    "delivered": "tail",
+    "reissued": "na",
+    "n": 12
+   }
+  ],
+  "containment_v2/corpus_predicted_lits_containment_v2.json": [
+   {
+    "organ": "liver",
+    "delivered": "body",
+    "reissued": "na",
+    "n": 13
+   },
+   {
+    "organ": "liver",
+    "delivered": "head",
+    "reissued": "na",
+    "n": 7
+   },
+   {
+    "organ": "liver",
+    "delivered": "tail",
+    "reissued": "na",
+    "n": 1
+   }
+  ],
+  "containment_v2/corpus_predicted_msd_containment_v2.json": [
+   {
+    "organ": "pancreas",
+    "delivered": "body",
+    "reissued": "unknown",
+    "n": 18
+   },
+   {
+    "organ": "pancreas",
+    "delivered": "head",
+    "reissued": "unknown",
+    "n": 11
+   },
+   {
+    "organ": "pancreas",
+    "delivered": "na",
+    "reissued": "unknown",
+    "n": 3
+   },
+   {
+    "organ": "pancreas",
+    "delivered": "tail",
+    "reissued": "unknown",
+    "n": 24
+   }
+  ],
+  "corpus_flare23_kg.json": [
+   {
+    "organ": "kidney",
+    "delivered": "unknown",
+    "reissued": "na",
+    "n": 1312
+   },
+   {
+    "organ": "liver",
+    "delivered": "unknown",
+    "reissued": "na",
+    "n": 1311
+   },
+   {
+    "organ": "pancreas",
+    "delivered": "unknown",
+    "reissued": "unknown",
+    "n": 1311
+   },
+   {
+    "organ": "spleen",
+    "delivered": "unknown",
+    "reissued": "na",
+    "n": 1306
+   }
+  ],
+  "corpus_flare23_kg_dedup.json": [
+   {
+    "organ": "kidney",
+    "delivered": "unknown",
+    "reissued": "na",
+    "n": 1196
+   },
+   {
+    "organ": "liver",
+    "delivered": "unknown",
+    "reissued": "na",
+    "n": 1195
+   },
+   {
+    "organ": "pancreas",
+    "delivered": "unknown",
+    "reissued": "unknown",
+    "n": 1195
+   },
+   {
+    "organ": "spleen",
+    "delivered": "unknown",
+    "reissued": "na",
+    "n": 1190
+   }
+  ],
+  "corpus_gt_kits.json": [
+   {
+    "organ": "kidney",
+    "delivered": "body",
+    "reissued": "na",
+    "n": 10
+   },
+   {
+    "organ": "kidney",
+    "delivered": "head",
+    "reissued": "na",
+    "n": 13
+   },
+   {
+    "organ": "kidney",
+    "delivered": "tail",
+    "reissued": "na",
+    "n": 13
+   }
+  ],
+  "corpus_gt_lits.json": [
+   {
+    "organ": "liver",
+    "delivered": "body",
+    "reissued": "na",
+    "n": 15
+   },
+   {
+    "organ": "liver",
+    "delivered": "head",
+    "reissued": "na",
+    "n": 5
+   },
+   {
+    "organ": "liver",
+    "delivered": "tail",
+    "reissued": "na",
+    "n": 1
+   }
+  ],
+  "corpus_gt_msd.json": [
+   {
+    "organ": "pancreas",
+    "delivered": "body",
+    "reissued": "body",
+    "n": 1
+   },
+   {
+    "organ": "pancreas",
+    "delivered": "body",
+    "reissued": "head",
+    "n": 19
+   },
+   {
+    "organ": "pancreas",
+    "delivered": "head",
+    "reissued": "body",
+    "n": 7
+   },
+   {
+    "organ": "pancreas",
+    "delivered": "head",
+    "reissued": "head",
+    "n": 2
+   },
+   {
+    "organ": "pancreas",
+    "delivered": "head",
+    "reissued": "tail",
+    "n": 3
+   },
+   {
+    "organ": "pancreas",
+    "delivered": "head",
+    "reissued": "unknown",
+    "n": 1
+   },
+   {
+    "organ": "pancreas",
+    "delivered": "tail",
+    "reissued": "head",
+    "n": 23
+   }
+  ],
+  "corpus_predicted_flare23.json": [
+   {
+    "organ": "kidney",
+    "delivered": "unknown",
+    "reissued": "na",
+    "n": 576
+   },
+   {
+    "organ": "liver",
+    "delivered": "unknown",
+    "reissued": "na",
+    "n": 575
+   },
+   {
+    "organ": "pancreas",
+    "delivered": "unknown",
+    "reissued": "unknown",
+    "n": 575
+   },
+   {
+    "organ": "spleen",
+    "delivered": "unknown",
+    "reissued": "na",
+    "n": 570
+   }
+  ],
+  "corpus_predicted_kits.json": [
+   {
+    "organ": "kidney",
+    "delivered": "body",
+    "reissued": "na",
+    "n": 9
+   },
+   {
+    "organ": "kidney",
+    "delivered": "head",
+    "reissued": "na",
+    "n": 14
+   },
+   {
+    "organ": "kidney",
+    "delivered": "na",
+    "reissued": "na",
+    "n": 1
+   },
+   {
+    "organ": "kidney",
+    "delivered": "tail",
+    "reissued": "na",
+    "n": 12
+   }
+  ],
+  "corpus_predicted_lits.json": [
+   {
+    "organ": "liver",
+    "delivered": "body",
+    "reissued": "na",
+    "n": 13
+   },
+   {
+    "organ": "liver",
+    "delivered": "head",
+    "reissued": "na",
+    "n": 7
+   },
+   {
+    "organ": "liver",
+    "delivered": "tail",
+    "reissued": "na",
+    "n": 1
+   }
+  ],
+  "corpus_predicted_msd.json": [
+   {
+    "organ": "pancreas",
+    "delivered": "body",
+    "reissued": "unknown",
+    "n": 18
+   },
+   {
+    "organ": "pancreas",
+    "delivered": "head",
+    "reissued": "unknown",
+    "n": 11
+   },
+   {
+    "organ": "pancreas",
+    "delivered": "na",
+    "reissued": "unknown",
+    "n": 3
+   },
+   {
+    "organ": "pancreas",
+    "delivered": "tail",
+    "reissued": "unknown",
+    "n": 24
+   }
+  ]
+ },
+ "final_cases": {
+  "pancreas_125_displayed_mask": {
+   "site": "head",
+   "reason": "ok",
+   "f_lr": 0.157,
+   "f_pca": 0.135,
+   "site_pca": "head",
+   "guards": {
+    "tail_cranial_to_head": true,
+    "tail_minus_head_S_mm": 23.3,
+    "lr_pca_agree": true,
+    "abs_f_diff": 0.022,
+    "pc1_var_frac": 0.8
+   },
+   "snomed": "64163001"
+  },
+  "flare23_FLARE23_0405/record_containment_v2.json": [
+   {
+    "organ": "liver",
+    "delivered": "unknown",
+    "reissued": "na"
+   },
+   {
+    "organ": "kidney",
+    "delivered": "unknown",
+    "reissued": "na"
+   },
+   {
+    "organ": "spleen",
+    "delivered": "unknown",
+    "reissued": "na"
+   },
+   {
+    "organ": "pancreas",
+    "delivered": "unknown",
+    "reissued": "unknown"
+   }
+  ],
+  "flare23_FLARE23_0405/record_predicted.json": [
+   {
+    "organ": "liver",
+    "delivered": "unknown",
+    "reissued": "na"
+   },
+   {
+    "organ": "kidney",
+    "delivered": "unknown",
+    "reissued": "na"
+   },
+   {
+    "organ": "spleen",
+    "delivered": "unknown",
+    "reissued": "na"
+   },
+   {
+    "organ": "pancreas",
+    "delivered": "unknown",
+    "reissued": "unknown"
+   }
+  ],
+  "flare23_FLARE23_0405/record_reference.json": [
+   {
+    "organ": "liver",
+    "delivered": "unknown",
+    "reissued": "na"
+   },
+   {
+    "organ": "spleen",
+    "delivered": "unknown",
+    "reissued": "na"
+   },
+   {
+    "organ": "pancreas",
+    "delivered": "unknown",
+    "reissued": "unknown"
+   },
+   {
+    "organ": "kidney",
+    "delivered": "unknown",
+    "reissued": "na"
+   }
+  ],
+  "kits_case_00067/record_containment_v2.json": [
+   {
+    "organ": "kidney",
+    "delivered": "head",
+    "reissued": "na"
+   }
+  ],
+  "kits_case_00067/record_predicted.json": [
+   {
+    "organ": "kidney",
+    "delivered": "head",
+    "reissued": "na"
+   }
+  ],
+  "kits_case_00067/record_reference.json": [
+   {
+    "organ": "kidney",
+    "delivered": "head",
+    "reissued": "na"
+   }
+  ],
+  "lits_volume-76/record_containment_v2.json": [
+   {
+    "organ": "liver",
+    "delivered": "body",
+    "reissued": "na"
+   }
+  ],
+  "lits_volume-76/record_predicted.json": [
+   {
+    "organ": "liver",
+    "delivered": "body",
+    "reissued": "na"
+   }
+  ],
+  "lits_volume-76/record_reference.json": [
+   {
+    "organ": "liver",
+    "delivered": "body",
+    "reissued": "na"
+   }
+  ],
+  "msd_pancreas_125/record_containment_v2.json": [
+   {
+    "organ": "pancreas",
+    "delivered": "tail",
+    "reissued": "head"
+   }
+  ],
+  "msd_pancreas_125/record_predicted.json": [
+   {
+    "organ": "pancreas",
+    "delivered": "tail",
+    "reissued": "head"
+   }
+  ],
+  "msd_pancreas_125/record_reference.json": [
+   {
+    "organ": "pancreas",
+    "delivered": "tail",
+    "reissued": "head"
+   }
+  ]
+ },
+ "ontology_change": {
+  "concept": "AnatomicSite::Head of pancreas",
+  "from": {
+   "system": "SNOMED CT",
+   "code": "362201006",
+   "display": "Entire head of pancreas"
+  }
+ }
+}
