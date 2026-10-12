@@ -793,7 +793,7 @@
    "improved": 32,
    "worsened": 0,
    "tied": 8,
-   "p_holm": 0.0001
+   "p_holm": 0.00015
   },
   "(b)-(a) postproc - raw": {
    "n": 40,
@@ -806,7 +806,7 @@
    "improved": 40,
    "worsened": 0,
    "tied": 0,
-   "p_holm": 5e-05
+   "p_holm": 0.00015
   }
  },
  "secondary_contrasts": {

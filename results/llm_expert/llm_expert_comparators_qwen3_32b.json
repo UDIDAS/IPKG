@@ -45,7 +45,7 @@
           -0.089
         ],
         "p_raw": 0.000199990000499975,
-        "p_holm": 0.0002
+        "p_holm": 0.0003
       },
       "(vii) image-embedding (organ-agnostic)": {
         "n_common": 19,
@@ -65,7 +65,7 @@
           -0.161
         ],
         "p_raw": 4.999750012499375e-05,
-        "p_holm": 0.00015
+        "p_holm": 0.0002
       }
     },
     "(iv) organ-agnostic": "excluded from F4: 11/20 queries have no judge-relevant candidate in its top-10",

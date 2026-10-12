@@ -1,0 +1,142 @@
+{
+ "note": "Holm with the step-down maximum for families F3 (closed loop, 3 contrasts) and F4 (judge table, 4 contrasts)\n(study lead 10-08, item 1). Raw p values are read from the committed results, not recomputed:\n  F3  results/repair/closed_loop_tab12_13.json            F3_triple_F1_contrasts            (n = 40 patients)\n  F4  results/llm_expert/llm_expert_comparators_qwen3_32b.json  F4_paired_vs_ii_judge_relevance  (n = 19 queries)\nBoth were computed as paired bootstrap 95 % CI + two-sided sign-flip permutation p (B = 20,000; p = (k + 1)/(B + 1)).\nFor information, F5 (judge over the clinician packet, llm_judge_clinician_packet_Qwen3_32B.json) is re-adjusted too.\n\n  python holm_f3_f4_2026-10-08.py -> results/repair/holm_f3_f4_2026-10-08.json",
+ "F3": {
+  "source": "closed_loop_tab12_13.json:F3_triple_F1_contrasts",
+  "m": 3,
+  "contrasts": {
+   "(c)-(b) repair - postproc": {
+    "delta": -0.2257,
+    "ci95": [
+     -0.2613,
+     -0.1876
+    ],
+    "n": 40,
+    "p_raw": 4.999750012499375e-05,
+    "p_holm_stepdown": 0.00015,
+    "p_holm_previously_printed": 0.00015
+   },
+   "(c)-(a) repair - raw": {
+    "delta": 0.1024,
+    "ci95": [
+     0.0691,
+     0.1393
+    ],
+    "n": 40,
+    "p_raw": 4.999750012499375e-05,
+    "p_holm_stepdown": 0.00015,
+    "p_holm_previously_printed": 0.0001
+   },
+   "(b)-(a) postproc - raw": {
+    "delta": 0.3281,
+    "ci95": [
+     0.2977,
+     0.3593
+    ],
+    "n": 40,
+    "p_raw": 4.999750012499375e-05,
+    "p_holm_stepdown": 0.00015,
+    "p_holm_previously_printed": 5e-05
+   }
+  }
+ },
+ "F4": {
+  "source": "llm_expert_comparators_qwen3_32b.json:F4_paired_vs_ii_judge_relevance.contrasts",
+  "m": 4,
+  "contrasts": {
+   "(v) radiomics (organ-agnostic)": {
+    "delta": -0.242,
+    "ci95": [
+     -0.361,
+     -0.142
+    ],
+    "n": 19,
+    "p_raw": 0.00014999250037498125,
+    "p_holm_stepdown": 0.0003,
+    "p_holm_previously_printed": 0.0003
+   },
+   "(vi) radiomics (organ-conditioned)": {
+    "delta": -0.153,
+    "ci95": [
+     -0.223,
+     -0.089
+    ],
+    "n": 19,
+    "p_raw": 0.000199990000499975,
+    "p_holm_stepdown": 0.0003,
+    "p_holm_previously_printed": 0.0002
+   },
+   "(vii) image-embedding (organ-agnostic)": {
+    "delta": -0.273,
+    "ci95": [
+     -0.366,
+     -0.185
+    ],
+    "n": 19,
+    "p_raw": 4.999750012499375e-05,
+    "p_holm_stepdown": 0.0002,
+    "p_holm_previously_printed": 0.0002
+   },
+   "(vii') image-embedding (organ-conditioned)": {
+    "delta": -0.234,
+    "ci95": [
+     -0.313,
+     -0.161
+    ],
+    "n": 19,
+    "p_raw": 4.999750012499375e-05,
+    "p_holm_stepdown": 0.0002,
+    "p_holm_previously_printed": 0.00015
+   }
+  }
+ },
+ "F5_for_information": {
+  "source": "llm_judge_clinician_packet_Qwen3_32B.json:f5_contrasts_vs_ii",
+  "m": 4,
+  "contrasts": {
+   "iii": {
+    "delta": null,
+    "ci95": [
+     -0.052,
+     -0.003
+    ],
+    "n": 22,
+    "p_raw": 0.12735,
+    "p_holm_stepdown": 0.12735,
+    "p_holm_previously_printed": 0.12735
+   },
+   "iii_prime": {
+    "delta": null,
+    "ci95": [
+     0.016,
+     0.191
+    ],
+    "n": 30,
+    "p_raw": 0.031,
+    "p_holm_stepdown": 0.062,
+    "p_holm_previously_printed": 0.062
+   },
+   "vi": {
+    "delta": null,
+    "ci95": [
+     -0.258,
+     -0.105
+    ],
+    "n": 22,
+    "p_raw": 5e-05,
+    "p_holm_stepdown": 0.0002,
+    "p_holm_previously_printed": 0.0002
+   },
+   "vii_prime": {
+    "delta": null,
+    "ci95": [
+     -0.488,
+     -0.346
+    ],
+    "n": 22,
+    "p_raw": 5e-05,
+    "p_holm_stepdown": 0.0002,
+    "p_holm_previously_printed": 0.00015
+   }
+  }
+ }
+}

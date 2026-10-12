@@ -1,0 +1,126 @@
+{
+ "note": "TotalSegmentator release check (study lead 10-08 item 4). Each run re-runs the round-2 call (fast=True, ml=True, organ roi_subset) on pancreas_125 and FLARE23_0405 and compares with the delivered round-2 masks per organ; re-run masks are in rerun_<release>/<case>.nii.gz (delivered label scheme). Environment identical across releases (nnunetv2 2.8.1, torch 2.5.1+cu121); producer scripts/audit/ts_version/ts_reproduce_showcase.py.",
+ "runs": [
+  {
+   "file": "rerun_2.10.0/differences.json",
+   "release": "2.10.0",
+   "case": "pancreas_125",
+   "voxels_differing": 1373,
+   "organ_voxels_delivered": 42022,
+   "percent": 3.2673,
+   "per_organ_differing": {
+    "pancreas": 1373
+   }
+  },
+  {
+   "file": "rerun_2.10.0/differences.json",
+   "release": "2.10.0",
+   "case": "FLARE23_0405",
+   "voxels_differing": 29856,
+   "organ_voxels_delivered": 4218596,
+   "percent": 0.7077,
+   "per_organ_differing": {
+    "liver": 14674,
+    "right kidney": 1953,
+    "spleen": 2611,
+    "pancreas": 3684,
+    "left kidney": 6934
+   }
+  },
+  {
+   "file": "rerun_2.17.0/differences.json",
+   "release": "2.17.0",
+   "case": "pancreas_125",
+   "voxels_differing": 27,
+   "organ_voxels_delivered": 42022,
+   "percent": 0.0643,
+   "per_organ_differing": {
+    "pancreas": 27
+   }
+  },
+  {
+   "file": "rerun_2.17.0/differences.json",
+   "release": "2.17.0",
+   "case": "FLARE23_0405",
+   "voxels_differing": 729,
+   "organ_voxels_delivered": 4218596,
+   "percent": 0.0173,
+   "per_organ_differing": {
+    "liver": 351,
+    "right kidney": 81,
+    "spleen": 96,
+    "pancreas": 90,
+    "left kidney": 111
+   }
+  },
+  {
+   "file": "rerun_2.18.0/differences_run1_gpu1.json",
+   "release": "2.18.0",
+   "case": "pancreas_125",
+   "voxels_differing": 67,
+   "organ_voxels_delivered": 42022,
+   "percent": 0.1594,
+   "per_organ_differing": {
+    "pancreas": 67
+   }
+  },
+  {
+   "file": "rerun_2.18.0/differences_run1_gpu1.json",
+   "release": "2.18.0",
+   "case": "FLARE23_0405",
+   "voxels_differing": 637,
+   "organ_voxels_delivered": 4218596,
+   "percent": 0.0151,
+   "per_organ_differing": {
+    "liver": 301,
+    "right kidney": 108,
+    "spleen": 48,
+    "pancreas": 54,
+    "left kidney": 126
+   }
+  },
+  {
+   "file": "rerun_2.18.0/differences_run2_gpu0.json",
+   "release": "2.18.0",
+   "case": "pancreas_125",
+   "voxels_differing": 18,
+   "organ_voxels_delivered": 42022,
+   "percent": 0.0428,
+   "per_organ_differing": {
+    "pancreas": 18
+   }
+  },
+  {
+   "file": "rerun_2.18.0/differences_run2_gpu0.json",
+   "release": "2.18.0",
+   "case": "FLARE23_0405",
+   "voxels_differing": 813,
+   "organ_voxels_delivered": 4218596,
+   "percent": 0.0193,
+   "per_organ_differing": {
+    "liver": 351,
+    "right kidney": 108,
+    "spleen": 84,
+    "pancreas": 81,
+    "left kidney": 189
+   }
+  }
+ ],
+ "runs_2026_10_06_previous_record": {
+  "2.10.0": {
+   "pancreas_125": 1373,
+   "FLARE23_0405": 29856
+  },
+  "2.17.0": {
+   "pancreas_125": 67,
+   "FLARE23_0405": 637
+  },
+  "2.18.0": {
+   "pancreas_125": 27,
+   "FLARE23_0405": 729
+  }
+ },
+ "finding": "Repeated runs of the SAME release differ from each other by tens to hundreds of voxels (2.18.0: 67/637 on GPU 1, 18/813 on GPU 0; the 10-06 record attributes 27/729 to 2.18.0 and 67/637 to 2.17.0, today 2.17.0 gives 27/729). Release 2.17 and 2.18 therefore cannot be told apart from the outputs. Both reproduce the delivered organ masks to within 0.2 % of organ voxels (0.015-0.16 % over all runs); 2.10.0 differs by 0.71-3.27 %.",
+ "quotable": "TotalSegmentator v2 (2.17/2.18 releases): re-running either reproduces the released organ masks to within 0.2 % of organ voxels (results/audit/ts_version/).",
+ "correction": "The 10-06 suggested wording 're-running 2.18.0 reproduces the released organ masks to within 0.1 % of voxels' does not hold: one 2.18.0 run differs by 0.16 % on pancreas_125."
+}

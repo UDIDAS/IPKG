@@ -1,0 +1,12 @@
+% Table 7 (tab:retrieval) CT sub-pool block, corrected arm: 638 = 113 single-organ + 525 FLARE23 with a CT;
+% 109 of 113 queries scored. Graph rows (ii)-(iv) as the co-author's emit_ct_subpool_rows.py; rows (v)-(vii') added;
+% Spur.@10 is defined on the reasoning path, which the external retrievers do not have: n/a on (v)-(vii').
+% Holm once over F1 (13 contrasts); (iii') raw. Columns: P@5, P@10, mAP, nDCG, Spur.@10, Mism.@10, dmAP [95% CI], p.
+ (ii)     & \textbf{Predicted phenotypes, support-restricted (proposed)} & \textbf{1.000} & \textbf{0.993} & \textbf{1.000} & \textbf{1.000} & \textbf{0.00} & \textbf{0.00} & --- & --- \\
+ (iii)    & Predicted, coverage-blind (one-sided organs $=$ mismatch) & 0.998 & 0.980 & 0.932 & 0.990 & 0.00 & 0.00 & $-0.068$ [$-0.084$, $-0.054$] & $6.5\times10^{-4}$ \\
+ (iii$'$) & Predicted, imputed absence (one-sided organs may agree) & 0.989 & 0.960 & 0.639 & 0.973 & 0.00 & 0.00 & $-0.361$ [$-0.386$, $-0.338$] & $5\times10^{-5}$ \\
+ (iv)     & Predicted, organ-agnostic baseline & 0.481 & 0.440 & 0.392 & 0.444 & 0.56 & 0.56 & $-0.608$ [$-0.638$, $-0.576$] & $6.5\times10^{-4}$ \\
+ (v)      & Radiomics-vector (reference regions) & 0.690 & 0.613 & 0.417 & 0.650 & n/a & 0.14 & $-0.583$ [$-0.614$, $-0.551$] & $6.5\times10^{-4}$ \\
+ (vi)     & Organ-conditioned radiomics (reference regions) & 0.593 & 0.550 & 0.476 & 0.573 & n/a & 0.01 & $-0.524$ [$-0.550$, $-0.498$] & $6.5\times10^{-4}$ \\
+ (vii)    & Image embedding, organ-agnostic (reference regions) & 0.506 & 0.439 & 0.237 & 0.470 & n/a & 0.04 & $-0.763$ [$-0.779$, $-0.745$] & $6.5\times10^{-4}$ \\
+ (vii$'$) & Image embedding, organ-conditioned (reference regions) & 0.466 & 0.417 & 0.242 & 0.445 & n/a & 0.02 & $-0.758$ [$-0.775$, $-0.739$] & $6.5\times10^{-4}$ \\

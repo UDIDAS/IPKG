@@ -1,0 +1,316 @@
+{
+ "note": "Complete replacement rows for Table 6 (tab:retrieval-primary) and the CT sub-pool block of Table 7 (tab:retrieval),\ncorrected arm, in v47 column order, with ONE Holm correction over the complete F1 family (study lead's 10-07 list,\nitems 1-4).\n\nInputs (committed, no recomputation):\n  results/retrieval/dedup/baselines_corrected_labels_2026-10-05.json  Table 6: graph rows (the co-author's corrected\n      arm, reproduced cell for cell) + rows (v)-(vii'); 113 queries over the 113 cases\n  results/retrieval/dedup/baselines_subpool_1311_2026-10-06.json      Table 7 sub-pool: graph rows (ii)-(iv) + (v)-(vii')\n      on the 638-case sub-pool (membership identical to ct_subpool_membership_2026-10-07.txt, sha256 f646fd8f...)\nEvery comparator-vs-(ii) contrast in both files was computed by one procedure: paired query-level bootstrap 95% CI\n(B = 5,000) and two-sided sign-flip permutation p (B = 20,000, p = (k + 1) / (B + 1)), seed 20261003.\n\nF1 = 7 contrasts on Table 6 [(i), (iii), (iv), (v), (vi), (vii), (vii')] + 6 on the sub-pool block [(iii), (iv), (v),\n(vi), (vii), (vii')]; row (i) is undefined on the sub-pool; (iii') stays outside F1 and is reported raw.\n\nHolm is applied as the step-down procedure: p_adj(k) = max_{j<=k} min(1, (m - j + 1) p_(j)). The shared holm() used\nuntil now (retrieval_tables_789.holm and its verbatim copy in build_retrieval_tables.py) omitted the running maximum,\nso tied raw p values received different adjusted values depending on row order. Both values are reported per row.\n\n  python emit_final_rows_2026-10-07.py [--tables-json retrieval_tables_1311.json]\n-> results/retrieval/dedup/final_rows_2026-10-07.json, tab_retrieval_primary_2026-10-07.tex,\n   tab_retrieval_ct_subpool_rows_2026-10-07.tex [, retrieval_tables_1311_filled_2026-10-07.json]",
+ "family_F1_size": 13,
+ "permutation_floor": 5e-05,
+ "tables": {
+  "tab:retrieval-primary": {
+   "(i)": {
+    "label": "Reference phenotypes, support-restricted (upper bound)",
+    "n_queries": 113,
+    "P@5": 1.0,
+    "P@10": 0.993,
+    "mAP": 1.0,
+    "nDCG": 1.0,
+    "Spur.@10": 0.0,
+    "Mism.@10": 0.0,
+    "dmAP": 0.033,
+    "ci95": [
+     0.025,
+     0.041
+    ],
+    "p_raw": 4.999750012499375e-05,
+    "p_holm_F1": 0.00065,
+    "p_holm_previous_method": 0.00035,
+    "p_reported": "Holm over F1"
+   },
+   "(ii)": {
+    "label": "Predicted phenotypes, support-restricted (proposed)",
+    "n_queries": 113,
+    "P@5": 1.0,
+    "P@10": 0.979,
+    "mAP": 0.967,
+    "nDCG": 0.99,
+    "Spur.@10": 0.0,
+    "Mism.@10": 0.0
+   },
+   "(iii)": {
+    "label": "Predicted, coverage-blind (one-sided organs $=$ mismatch)",
+    "n_queries": 113,
+    "P@5": 1.0,
+    "P@10": 0.978,
+    "mAP": 0.961,
+    "nDCG": 0.989,
+    "Spur.@10": 0.002,
+    "Mism.@10": 0.002,
+    "dmAP": -0.006,
+    "ci95": [
+     -0.01,
+     -0.003
+    ],
+    "p_raw": 4.999750012499375e-05,
+    "p_holm_F1": 0.00065,
+    "p_holm_previous_method": 0.0003,
+    "p_reported": "Holm over F1"
+   },
+   "(iii')": {
+    "label": "Predicted, imputed absence (one-sided organs may agree)",
+    "n_queries": 113,
+    "P@5": 0.973,
+    "P@10": 0.943,
+    "mAP": 0.928,
+    "nDCG": 0.957,
+    "Spur.@10": 0.049,
+    "Mism.@10": 0.042,
+    "dmAP": -0.039,
+    "ci95": [
+     -0.065,
+     -0.019
+    ],
+    "p_raw": 4.999750012499375e-05,
+    "p_holm_F1": null,
+    "p_holm_previous_method": null,
+    "p_reported": "raw"
+   },
+   "(iv)": {
+    "label": "Predicted, organ-agnostic baseline",
+    "n_queries": 113,
+    "P@5": 0.478,
+    "P@10": 0.435,
+    "mAP": 0.503,
+    "nDCG": 0.439,
+    "Spur.@10": 0.564,
+    "Mism.@10": 0.549,
+    "dmAP": -0.464,
+    "ci95": [
+     -0.5,
+     -0.429
+    ],
+    "p_raw": 4.999750012499375e-05,
+    "p_holm_F1": 0.00065,
+    "p_holm_previous_method": 0.00025,
+    "p_reported": "Holm over F1"
+   },
+   "(v)": {
+    "label": "Radiomics-vector (reference regions)",
+    "n_queries": 113,
+    "P@5": 0.814,
+    "P@10": 0.781,
+    "mAP": 0.706,
+    "nDCG": 0.801,
+    "Spur.@10": null,
+    "Mism.@10": 0.128,
+    "dmAP": -0.261,
+    "ci95": [
+     -0.294,
+     -0.229
+    ],
+    "p_raw": 4.999750012499375e-05,
+    "p_holm_F1": 0.00065,
+    "p_holm_previous_method": 0.0002,
+    "p_reported": "Holm over F1"
+   },
+   "(vi)": {
+    "label": "Organ-conditioned radiomics (reference regions)",
+    "n_queries": 113,
+    "P@5": 0.933,
+    "P@10": 0.922,
+    "mAP": 0.93,
+    "nDCG": 0.926,
+    "Spur.@10": null,
+    "Mism.@10": 0.0,
+    "dmAP": -0.037,
+    "ci95": [
+     -0.057,
+     -0.02
+    ],
+    "p_raw": 4.999750012499375e-05,
+    "p_holm_F1": 0.00065,
+    "p_holm_previous_method": 0.00015,
+    "p_reported": "Holm over F1"
+   },
+   "(vii)": {
+    "label": "Image embedding, organ-agnostic (reference regions)",
+    "n_queries": 113,
+    "P@5": 0.842,
+    "P@10": 0.797,
+    "mAP": 0.678,
+    "nDCG": 0.812,
+    "Spur.@10": null,
+    "Mism.@10": 0.057,
+    "dmAP": -0.289,
+    "ci95": [
+     -0.32,
+     -0.259
+    ],
+    "p_raw": 4.999750012499375e-05,
+    "p_holm_F1": 0.00065,
+    "p_holm_previous_method": 0.0001,
+    "p_reported": "Holm over F1"
+   },
+   "(vii')": {
+    "label": "Image embedding, organ-conditioned (reference regions)",
+    "n_queries": 113,
+    "P@5": 0.869,
+    "P@10": 0.859,
+    "mAP": 0.88,
+    "nDCG": 0.863,
+    "Spur.@10": null,
+    "Mism.@10": 0.0,
+    "dmAP": -0.087,
+    "ci95": [
+     -0.116,
+     -0.061
+    ],
+    "p_raw": 4.999750012499375e-05,
+    "p_holm_F1": 0.00065,
+    "p_holm_previous_method": 5e-05,
+    "p_reported": "Holm over F1"
+   }
+  },
+  "tab:retrieval ct-subpool": {
+   "(ii)": {
+    "label": "Predicted phenotypes, support-restricted (proposed)",
+    "n_queries": 109,
+    "P@5": 1.0,
+    "P@10": 0.993,
+    "mAP": 1.0,
+    "nDCG": 1.0,
+    "Spur.@10": 0.0,
+    "Mism.@10": 0.0
+   },
+   "(iii)": {
+    "label": "Predicted, coverage-blind (one-sided organs $=$ mismatch)",
+    "n_queries": 109,
+    "P@5": 0.998,
+    "P@10": 0.98,
+    "mAP": 0.932,
+    "nDCG": 0.99,
+    "Spur.@10": 0.0,
+    "Mism.@10": 0.0,
+    "dmAP": -0.068,
+    "ci95": [
+     -0.084,
+     -0.054
+    ],
+    "p_raw": 4.999750012499375e-05,
+    "p_holm_F1": 0.00065,
+    "p_holm_previous_method": 0.0003,
+    "p_reported": "Holm over F1"
+   },
+   "(iii')": {
+    "label": "Predicted, imputed absence (one-sided organs may agree)",
+    "n_queries": 109,
+    "P@5": 0.989,
+    "P@10": 0.96,
+    "mAP": 0.639,
+    "nDCG": 0.973,
+    "Spur.@10": 0.0,
+    "Mism.@10": 0.0,
+    "dmAP": -0.361,
+    "ci95": [
+     -0.386,
+     -0.338
+    ],
+    "p_raw": 4.999750012499375e-05,
+    "p_holm_F1": null,
+    "p_holm_previous_method": null,
+    "p_reported": "raw"
+   },
+   "(iv)": {
+    "label": "Predicted, organ-agnostic baseline",
+    "n_queries": 109,
+    "P@5": 0.481,
+    "P@10": 0.44,
+    "mAP": 0.392,
+    "nDCG": 0.444,
+    "Spur.@10": 0.557,
+    "Mism.@10": 0.56,
+    "dmAP": -0.608,
+    "ci95": [
+     -0.638,
+     -0.576
+    ],
+    "p_raw": 4.999750012499375e-05,
+    "p_holm_F1": 0.00065,
+    "p_holm_previous_method": 0.00025,
+    "p_reported": "Holm over F1"
+   },
+   "(v)": {
+    "label": "Radiomics-vector (reference regions)",
+    "n_queries": 109,
+    "P@5": 0.69,
+    "P@10": 0.613,
+    "mAP": 0.417,
+    "nDCG": 0.65,
+    "Spur.@10": null,
+    "Mism.@10": 0.139,
+    "dmAP": -0.583,
+    "ci95": [
+     -0.614,
+     -0.551
+    ],
+    "p_raw": 4.999750012499375e-05,
+    "p_holm_F1": 0.00065,
+    "p_holm_previous_method": 0.0002,
+    "p_reported": "Holm over F1"
+   },
+   "(vi)": {
+    "label": "Organ-conditioned radiomics (reference regions)",
+    "n_queries": 109,
+    "P@5": 0.593,
+    "P@10": 0.55,
+    "mAP": 0.476,
+    "nDCG": 0.573,
+    "Spur.@10": null,
+    "Mism.@10": 0.006,
+    "dmAP": -0.524,
+    "ci95": [
+     -0.55,
+     -0.498
+    ],
+    "p_raw": 4.999750012499375e-05,
+    "p_holm_F1": 0.00065,
+    "p_holm_previous_method": 0.00015,
+    "p_reported": "Holm over F1"
+   },
+   "(vii)": {
+    "label": "Image embedding, organ-agnostic (reference regions)",
+    "n_queries": 109,
+    "P@5": 0.506,
+    "P@10": 0.439,
+    "mAP": 0.237,
+    "nDCG": 0.47,
+    "Spur.@10": null,
+    "Mism.@10": 0.041,
+    "dmAP": -0.763,
+    "ci95": [
+     -0.779,
+     -0.745
+    ],
+    "p_raw": 4.999750012499375e-05,
+    "p_holm_F1": 0.00065,
+    "p_holm_previous_method": 0.0001,
+    "p_reported": "Holm over F1"
+   },
+   "(vii')": {
+    "label": "Image embedding, organ-conditioned (reference regions)",
+    "n_queries": 109,
+    "P@5": 0.466,
+    "P@10": 0.417,
+    "mAP": 0.242,
+    "nDCG": 0.445,
+    "Spur.@10": null,
+    "Mism.@10": 0.023,
+    "dmAP": -0.758,
+    "ci95": [
+     -0.775,
+     -0.739
+    ],
+    "p_raw": 4.999750012499375e-05,
+    "p_holm_F1": 0.00065,
+    "p_holm_previous_method": 5e-05,
+    "p_reported": "Holm over F1"
+   }
+  }
+ }
+}

@@ -1,0 +1,230 @@
+{
+ "note": "Re-adjust Holm p values with the step-down maximum in committed result files whose generators cannot be re-run here\n(closed-loop masks lived on the retired cluster; the baseline feature cache is gone). Raw p values are kept; each\nfamily is the one its generator adjusted together. Gate: only `p_holm` values may change; the script refuses to write\notherwise. The retrieval tables 7/8/9 are NOT handled here: they were re-emitted by the fixed retrieval_tables_789.py.\n\n  python readjust_holm_stepdown_2026-10-08.py -> rewrites the files below + results/audit/holm_readjust_log_2026-10-08.json",
+ "files": {
+  "results/repair/closed_loop_tab12_13.json": {
+   "families": [
+    3
+   ],
+   "changed": [
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 0.0001,
+     "new": 0.00015
+    },
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 5e-05,
+     "new": 0.00015
+    }
+   ]
+  },
+  "results/llm_expert/llm_expert_comparators_qwen3_32b.json": {
+   "families": [
+    4
+   ],
+   "changed": [
+    {
+     "p_raw": 0.000199990000499975,
+     "old": 0.0002,
+     "new": 0.0003
+    },
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 0.00015,
+     "new": 0.0002
+    }
+   ]
+  },
+  "results/llm_expert/llm_judge_clinician_packet_Qwen3_32B.json": {
+   "families": [
+    4
+   ],
+   "changed": [
+    {
+     "p_raw": 5e-05,
+     "old": 0.00015,
+     "new": 0.0002
+    }
+   ]
+  },
+  "results/retrieval/dedup/baselines_tab7_tab8.json": {
+   "families": [
+    7,
+    7
+   ],
+   "changed": [
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 0.0003,
+     "new": 0.00035
+    },
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 0.00025,
+     "new": 0.00035
+    },
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 0.0002,
+     "new": 0.00035
+    },
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 0.00015,
+     "new": 0.00035
+    },
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 0.0001,
+     "new": 0.00035
+    },
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 0.0003,
+     "new": 0.00035
+    },
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 0.00025,
+     "new": 0.00035
+    },
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 0.0002,
+     "new": 0.00035
+    },
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 0.00015,
+     "new": 0.00035
+    },
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 0.0001,
+     "new": 0.00035
+    }
+   ]
+  },
+  "results/retrieval/dedup/baselines_corrected_labels_2026-10-05.json": {
+   "families": [
+    7,
+    7
+   ],
+   "changed": [
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 0.0003,
+     "new": 0.00035
+    },
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 0.00025,
+     "new": 0.00035
+    },
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 0.0002,
+     "new": 0.00035
+    },
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 0.00015,
+     "new": 0.00035
+    },
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 0.0001,
+     "new": 0.00035
+    },
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 0.0003,
+     "new": 0.00035
+    },
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 0.00025,
+     "new": 0.00035
+    },
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 0.0002,
+     "new": 0.00035
+    },
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 0.00015,
+     "new": 0.00035
+    },
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 0.0001,
+     "new": 0.00035
+    },
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 5e-05,
+     "new": 0.00035
+    }
+   ]
+  },
+  "results/retrieval/dedup/baselines_subpool_1311_2026-10-06.json": {
+   "families": [
+    6,
+    6
+   ],
+   "changed": [
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 0.00025,
+     "new": 0.0003
+    },
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 0.0002,
+     "new": 0.0003
+    },
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 0.00015,
+     "new": 0.0003
+    },
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 0.0001,
+     "new": 0.0003
+    },
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 5e-05,
+     "new": 0.0003
+    },
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 0.00025,
+     "new": 0.0003
+    },
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 0.0002,
+     "new": 0.0003
+    },
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 0.00015,
+     "new": 0.0003
+    },
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 0.0001,
+     "new": 0.0003
+    },
+    {
+     "p_raw": 4.999750012499375e-05,
+     "old": 5e-05,
+     "new": 0.0003
+    }
+   ]
+  }
+ }
+}

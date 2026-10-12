@@ -1,0 +1,360 @@
+{
+ "build": "ipkg-corrected-2026-10-09_rendered",
+ "cases": {
+  "lits_volume-76": {
+   "checks": [
+    {
+     "check": "observed organs",
+     "pass": true,
+     "detail": "['liver'] vs ['liver']"
+    },
+    {
+     "check": "liver.has_tumor",
+     "pass": true,
+     "detail": "app True vs reference True"
+    },
+    {
+     "check": "liver.tumor_volume_cm3",
+     "pass": true,
+     "detail": "app 266.4 vs reference 266.4"
+    },
+    {
+     "check": "liver.burden_cat",
+     "pass": true,
+     "detail": "app 'high' vs reference 'high'"
+    },
+    {
+     "check": "liver.multiplicity",
+     "pass": true,
+     "detail": "app 'multifocal' vs reference 'multifocal'"
+    },
+    {
+     "check": "liver.containment",
+     "pass": true,
+     "detail": "app 'boundary' vs reference 'boundary'"
+    },
+    {
+     "check": "liver.anatomic_location",
+     "pass": true,
+     "detail": "app 'na' vs reference 'na'"
+    },
+    {
+     "check": "top-10 has every candidate above the cutoff",
+     "pass": true,
+     "detail": "missing []"
+    },
+    {
+     "check": "top-10 fills only from the tied set",
+     "pass": true,
+     "detail": "outside []"
+    },
+    {
+     "check": "top-10 has 10 entries",
+     "pass": true,
+     "detail": "10"
+    },
+    {
+     "check": "pool stated as 1,311",
+     "pass": true,
+     "detail": "\"de-duplicated 1,311-case pool (113 predicted single-organ + 1198 FLARE23; corrected arm, pool as of 2026-10-03)\""
+    },
+    {
+     "check": "mask unchanged",
+     "pass": true,
+     "detail": "c6a4f052803f374ab7cb5184c4616d07 vs c6a4f052803f374ab7cb5184c4616d07"
+    }
+   ],
+   "top10_exact_order_matches_pool_order_tiebreak": true
+  },
+  "kits_case_00067": {
+   "checks": [
+    {
+     "check": "observed organs",
+     "pass": true,
+     "detail": "['kidney'] vs ['kidney']"
+    },
+    {
+     "check": "kidney.has_tumor",
+     "pass": true,
+     "detail": "app True vs reference True"
+    },
+    {
+     "check": "kidney.tumor_volume_cm3",
+     "pass": true,
+     "detail": "app 1040.2 vs reference 1040.2"
+    },
+    {
+     "check": "kidney.burden_cat",
+     "pass": true,
+     "detail": "app 'high' vs reference 'high'"
+    },
+    {
+     "check": "kidney.multiplicity",
+     "pass": true,
+     "detail": "app 'solitary' vs reference 'solitary'"
+    },
+    {
+     "check": "kidney.containment",
+     "pass": true,
+     "detail": "app 'boundary' vs reference 'boundary'"
+    },
+    {
+     "check": "kidney.anatomic_location",
+     "pass": true,
+     "detail": "app 'na' vs reference 'na'"
+    },
+    {
+     "check": "top-10 has every candidate above the cutoff",
+     "pass": true,
+     "detail": "missing []"
+    },
+    {
+     "check": "top-10 fills only from the tied set",
+     "pass": true,
+     "detail": "outside []"
+    },
+    {
+     "check": "top-10 has 10 entries",
+     "pass": true,
+     "detail": "10"
+    },
+    {
+     "check": "pool stated as 1,311",
+     "pass": true,
+     "detail": "\"de-duplicated 1,311-case pool (113 predicted single-organ + 1198 FLARE23; corrected arm, pool as of 2026-10-03)\""
+    },
+    {
+     "check": "mask unchanged",
+     "pass": true,
+     "detail": "a99bf857e0414931e4921e782eb5441d vs a99bf857e0414931e4921e782eb5441d"
+    }
+   ],
+   "top10_exact_order_matches_pool_order_tiebreak": true
+  },
+  "msd_pancreas_125": {
+   "checks": [
+    {
+     "check": "observed organs",
+     "pass": true,
+     "detail": "['pancreas'] vs ['pancreas']"
+    },
+    {
+     "check": "pancreas.has_tumor",
+     "pass": true,
+     "detail": "app True vs reference True"
+    },
+    {
+     "check": "pancreas.tumor_volume_cm3",
+     "pass": true,
+     "detail": "app 7.59 vs reference 7.59"
+    },
+    {
+     "check": "pancreas.burden_cat",
+     "pass": true,
+     "detail": "app 'high' vs reference 'high'"
+    },
+    {
+     "check": "pancreas.multiplicity",
+     "pass": true,
+     "detail": "app 'solitary' vs reference 'solitary'"
+    },
+    {
+     "check": "pancreas.containment",
+     "pass": true,
+     "detail": "app 'boundary' vs reference 'boundary'"
+    },
+    {
+     "check": "pancreas.anatomic_location",
+     "pass": true,
+     "detail": "app 'head' vs reference 'head'"
+    },
+    {
+     "check": "pancreas.anatomic_location_snomed",
+     "pass": true,
+     "detail": "app '64163001' vs reference '64163001'"
+    },
+    {
+     "check": "top-10 has every candidate above the cutoff",
+     "pass": true,
+     "detail": "missing []"
+    },
+    {
+     "check": "top-10 fills only from the tied set",
+     "pass": true,
+     "detail": "outside []"
+    },
+    {
+     "check": "top-10 has 10 entries",
+     "pass": true,
+     "detail": "10"
+    },
+    {
+     "check": "pool stated as 1,311",
+     "pass": true,
+     "detail": "\"de-duplicated 1,311-case pool (113 predicted single-organ + 1198 FLARE23; corrected arm, pool as of 2026-10-03)\""
+    },
+    {
+     "check": "mask unchanged",
+     "pass": true,
+     "detail": "d83eba933dfeb684e18e8959defbd793 vs d83eba933dfeb684e18e8959defbd793"
+    }
+   ],
+   "top10_exact_order_matches_pool_order_tiebreak": false
+  },
+  "flare23_FLARE23_0405": {
+   "checks": [
+    {
+     "check": "observed organs",
+     "pass": true,
+     "detail": "['kidney', 'liver', 'pancreas', 'spleen'] vs ['kidney', 'liver', 'pancreas', 'spleen']"
+    },
+    {
+     "check": "liver.has_tumor",
+     "pass": true,
+     "detail": "app False vs reference False"
+    },
+    {
+     "check": "liver.tumor_volume_cm3",
+     "pass": true,
+     "detail": "app 0.0 vs reference 0.0"
+    },
+    {
+     "check": "liver.burden_cat",
+     "pass": true,
+     "detail": "app 'none' vs reference 'none'"
+    },
+    {
+     "check": "liver.multiplicity",
+     "pass": true,
+     "detail": "app 'none' vs reference 'none'"
+    },
+    {
+     "check": "liver.containment",
+     "pass": true,
+     "detail": "app 'none' vs reference 'none'"
+    },
+    {
+     "check": "liver.anatomic_location",
+     "pass": true,
+     "detail": "app 'na' vs reference 'na'"
+    },
+    {
+     "check": "kidney.has_tumor",
+     "pass": true,
+     "detail": "app True vs reference True"
+    },
+    {
+     "check": "kidney.tumor_volume_cm3",
+     "pass": true,
+     "detail": "app 702.11 vs reference 702.11"
+    },
+    {
+     "check": "kidney.burden_cat",
+     "pass": true,
+     "detail": "app 'high' vs reference 'high'"
+    },
+    {
+     "check": "kidney.multiplicity",
+     "pass": true,
+     "detail": "app 'solitary' vs reference 'solitary'"
+    },
+    {
+     "check": "kidney.containment",
+     "pass": true,
+     "detail": "app 'boundary' vs reference 'boundary'"
+    },
+    {
+     "check": "kidney.anatomic_location",
+     "pass": true,
+     "detail": "app 'na' vs reference 'na'"
+    },
+    {
+     "check": "spleen.has_tumor",
+     "pass": true,
+     "detail": "app False vs reference False"
+    },
+    {
+     "check": "spleen.tumor_volume_cm3",
+     "pass": true,
+     "detail": "app 0.0 vs reference 0.0"
+    },
+    {
+     "check": "spleen.burden_cat",
+     "pass": true,
+     "detail": "app 'none' vs reference 'none'"
+    },
+    {
+     "check": "spleen.multiplicity",
+     "pass": true,
+     "detail": "app 'none' vs reference 'none'"
+    },
+    {
+     "check": "spleen.containment",
+     "pass": true,
+     "detail": "app 'none' vs reference 'none'"
+    },
+    {
+     "check": "spleen.anatomic_location",
+     "pass": true,
+     "detail": "app 'na' vs reference 'na'"
+    },
+    {
+     "check": "pancreas.has_tumor",
+     "pass": true,
+     "detail": "app False vs reference False"
+    },
+    {
+     "check": "pancreas.tumor_volume_cm3",
+     "pass": true,
+     "detail": "app 0.0 vs reference 0.0"
+    },
+    {
+     "check": "pancreas.burden_cat",
+     "pass": true,
+     "detail": "app 'none' vs reference 'none'"
+    },
+    {
+     "check": "pancreas.multiplicity",
+     "pass": true,
+     "detail": "app 'none' vs reference 'none'"
+    },
+    {
+     "check": "pancreas.containment",
+     "pass": true,
+     "detail": "app 'none' vs reference 'none'"
+    },
+    {
+     "check": "pancreas.anatomic_location",
+     "pass": true,
+     "detail": "app 'na' vs reference 'na'"
+    },
+    {
+     "check": "top-10 has every candidate above the cutoff",
+     "pass": true,
+     "detail": "missing []"
+    },
+    {
+     "check": "top-10 fills only from the tied set",
+     "pass": true,
+     "detail": "outside []"
+    },
+    {
+     "check": "top-10 has 10 entries",
+     "pass": true,
+     "detail": "10"
+    },
+    {
+     "check": "pool stated as 1,311",
+     "pass": true,
+     "detail": "\"de-duplicated 1,311-case pool (113 predicted single-organ + 1198 FLARE23; corrected arm, pool as of 2026-10-03)\""
+    },
+    {
+     "check": "mask unchanged",
+     "pass": true,
+     "detail": "61cfd5fb8066be3752181075e0ab03db vs 61cfd5fb8066be3752181075e0ab03db"
+    }
+   ],
+   "top10_exact_order_matches_pool_order_tiebreak": true
+  }
+ }
+}

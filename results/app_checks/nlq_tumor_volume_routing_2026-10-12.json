@@ -1,0 +1,86 @@
+{
+ "note": "Where does the application's question box route a tumour-volume question? (study lead v50, Limitations red text)\n\nOncologist R1 (final round, 11 Oct) reported that asking for pancreatic / kidney TUMOUR volumes returned ORGAN volumes\n(pancreas_125, FLARE23_0405). This runs segx_nlq.Engine from the rated build (tag ipkg-corrected-2026-10-09) with the\nencoder the application uses (BAAI/bge-small-en-v1.5, CPU) on R1's questions and close variants, and records the matched\nintent, its similarity and whether it is a refusal. The graph does record per-organ lesion volumes (ipkg:gt_volume_cm3\non lesions, used by the organ_distribution and lesions_over_size intents); the intent bank has no per-organ tumour-volume\nintent, so the question is answered by the organ-volume intent instead of being refused.\n\n  NLQ=<segx_nlq.py from the tag> HF_HOME=... python nlq_tumor_volume_routing.py -> results/app_checks/nlq_tumor_volume_routing_2026-10-12.json",
+ "build": "ipkg-corrected-2026-10-09",
+ "min_sim_for_answer": 0.45,
+ "intents": [
+  "count_by_organ",
+  "lesions_over_size",
+  "multifocal",
+  "organ_distribution",
+  "organ_size_range",
+  "cohort_summary",
+  "ontology_codes"
+ ],
+ "results": [
+  {
+   "question": "what are the pancreatic tumor volumes in the cohort",
+   "matched_intent": "count_by_organ",
+   "similarity": 0.884,
+   "refusal": false,
+   "nearest_phrasing": "how many people in the cohort have a pancreatic tumor",
+   "slots": {
+    "organ": "pancreas"
+   }
+  },
+  {
+   "question": "pancreatic tumor volumes",
+   "matched_intent": "organ_size_range",
+   "similarity": 0.871,
+   "refusal": false,
+   "nearest_phrasing": "typical organ volume for the pancreas",
+   "slots": {
+    "organ": "pancreas"
+   }
+  },
+  {
+   "question": "show me the pancreatic tumor volume",
+   "matched_intent": "organ_size_range",
+   "similarity": 0.887,
+   "refusal": false,
+   "nearest_phrasing": "typical organ volume for the pancreas",
+   "slots": {
+    "organ": "pancreas"
+   }
+  },
+  {
+   "question": "kidney tumor data",
+   "matched_intent": "organ_size_range",
+   "similarity": 0.775,
+   "refusal": false,
+   "nearest_phrasing": "range of kidney volumes across patients",
+   "slots": {
+    "organ": "kidney"
+   }
+  },
+  {
+   "question": "what is the kidney tumor volume",
+   "matched_intent": "organ_size_range",
+   "similarity": 0.854,
+   "refusal": false,
+   "nearest_phrasing": "range of kidney volumes across patients",
+   "slots": {
+    "organ": "kidney"
+   }
+  },
+  {
+   "question": "show kidney tumor volumes in the cohort",
+   "matched_intent": "organ_size_range",
+   "similarity": 0.869,
+   "refusal": false,
+   "nearest_phrasing": "range of kidney volumes across patients",
+   "slots": {
+    "organ": "kidney"
+   }
+  },
+  {
+   "question": "what is the normal range of liver volume",
+   "matched_intent": "organ_size_range",
+   "similarity": 1.0,
+   "refusal": false,
+   "nearest_phrasing": "what is the normal range of liver volume",
+   "slots": {
+    "organ": "liver"
+   }
+  }
+ ]
+}

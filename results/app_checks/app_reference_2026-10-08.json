@@ -1,0 +1,481 @@
+{
+ "note": "Reference pack for verifying the corrected IPKG application (study lead 10-08, the pipeline team items 1-2): what each of the four\ncase pages must show, built from the final experimental artifacts and independent of the application's own code path.\n\nPer case (lits_volume-76, kits_case_00067, msd_pancreas_125, flare23_FLARE23_0405):\n  masks       md5 of the delivered semi-oracle mask (final_cases_2026-09-19/masks/); must be UNCHANGED\n  record      the approved KG record = the round-2 re-issue of the delivered case record, with the 10-03 app-pool\n              rule applied (an organ without tumour has no sub-site: 'unknown' -> 'na', status no_tumor)\n              (records_reissue/final_cases_2026-09-19/<case>/record_predicted.json): observed organs (observability),\n              per-organ has_tumor / tumour volume / burden / multiplicity / containment / sub-site (+ SNOMED, status,\n              provenance) and the delivered word kept beside a corrected one\n  cutpoints   burden tercile cut-points of the case's collection (burden_tercile_cutpoints.json)\n  retrieval   top-10 of configuration (ii) on the 1,311-case pool, corrected arm (void sub-site axis dropped,\n              precedence-resolved sub-site on both sides), ranked by the verified table code\n              (build_retrieval_tables.Sim / arm_pool, branch abdomen/ipkg-v2), NOT by the application's\n              ipkg_retrieval_corrected path, so the check is independent of the code under test\n  pool        1,311 = 113 + 1,198\n\n  APP_TREE=<abdomen/ipkg-v2 checkout> IPKG_ROUND2_DIR=<round2_2026-10-01> FINAL_CASES=<final_cases_2026-09-19>       python build_app_reference_2026-10-08.py\n-> results/app_checks/app_reference_2026-10-08.json",
+ "pool_size": 1311,
+ "n_flare23_in_pool": 1198,
+ "app_tree_commit": "d77aa003432c216950ba1d2a70781e4c2a29f4f3",
+ "cases": {
+  "lits_volume-76": {
+   "case_id": "volume-76",
+   "collection": "lits",
+   "mask_md5_must_be_unchanged": "c6a4f052803f374ab7cb5184c4616d07",
+   "observed_organs": [
+    "liver"
+   ],
+   "organs": {
+    "liver": {
+     "has_tumor": true,
+     "tumor_volume_cm3": 266.4,
+     "burden_cat": "high",
+     "multiplicity": "multifocal",
+     "containment": "boundary",
+     "anatomic_location": "na",
+     "anatomic_location_delivered": "body"
+    }
+   },
+   "burden_cutpoints": {
+    "organ": "liver",
+    "t1_vox": 2762,
+    "t2_vox": 31097,
+    "n_tumor_cases": 21
+   },
+   "query_in_pool": true,
+   "top10_ii_corrected_1311": [
+    {
+     "rank": 1,
+     "case_id": "volume-101",
+     "S": 1.0
+    },
+    {
+     "rank": 2,
+     "case_id": "volume-110",
+     "S": 1.0
+    },
+    {
+     "rank": 3,
+     "case_id": "volume-44",
+     "S": 1.0
+    },
+    {
+     "rank": 4,
+     "case_id": "volume-93",
+     "S": 1.0
+    },
+    {
+     "rank": 5,
+     "case_id": "volume-11",
+     "S": 0.6667
+    },
+    {
+     "rank": 6,
+     "case_id": "volume-113",
+     "S": 0.6667
+    },
+    {
+     "rank": 7,
+     "case_id": "volume-116",
+     "S": 0.6667
+    },
+    {
+     "rank": 8,
+     "case_id": "volume-19",
+     "S": 0.6667
+    },
+    {
+     "rank": 9,
+     "case_id": "volume-21",
+     "S": 0.6667
+    },
+    {
+     "rank": 10,
+     "case_id": "volume-37",
+     "S": 0.6667
+    }
+   ],
+   "top10_tie_rule": {
+    "score_at_rank10": 0.6667,
+    "above_cutoff": [
+     "volume-101",
+     "volume-110",
+     "volume-44",
+     "volume-93"
+    ],
+    "tied_at_cutoff": [
+     "volume-11",
+     "volume-113",
+     "volume-116",
+     "volume-19",
+     "volume-21",
+     "volume-37",
+     "volume-49",
+     "volume-70",
+     "volume-80",
+     "volume-82",
+     "volume-99",
+     "flare23_FLARE23_0148",
+     "flare23_FLARE23_0263",
+     "flare23_FLARE23_0409",
+     "flare23_FLARE23_0459",
+     "flare23_FLARE23_0493",
+     "flare23_FLARE23_0644",
+     "flare23_FLARE23_0680",
+     "flare23_FLARE23_0700",
+     "flare23_FLARE23_0729",
+     "flare23_FLARE23_0730",
+     "flare23_FLARE23_0734",
+     "flare23_FLARE23_0838",
+     "flare23_FLARE23_0869",
+     "flare23_FLARE23_0878",
+     "flare23_FLARE23_0902",
+     "flare23_FLARE23_0934",
+     "flare23_FLARE23_0994",
+     "flare23_FLARE23_1064",
+     "flare23_FLARE23_1077",
+     "flare23_FLARE23_1082",
+     "flare23_FLARE23_1097",
+     "flare23_FLARE23_1115",
+     "flare23_FLARE23_1195",
+     "flare23_FLARE23_1198",
+     "flare23_FLARE23_1199",
+     "flare23_FLARE23_1276",
+     "flare23_FLARE23_1390",
+     "flare23_FLARE23_1548",
+     "flare23_FLARE23_1567",
+     "flare23_FLARE23_1581",
+     "flare23_FLARE23_1661",
+     "flare23_FLARE23_1891",
+     "flare23_FLARE23_1926",
+     "flare23_FLARE23_1988",
+     "flare23_FLARE23_1999",
+     "flare23_FLARE23_2092",
+     "flare23_FLARE23_2106",
+     "flare23_FLARE23_2130",
+     "flare23_FLARE23_2135",
+     "flare23_FLARE23_2154",
+     "flare23_FLARE23_2175",
+     "flare23_FLARE23_2190"
+    ],
+    "tie_break": "pool assembly order (kits, lits, msd, then the 1,198 FLARE23 records), stable sort"
+   },
+   "n_ranked": 1217
+  },
+  "kits_case_00067": {
+   "case_id": "case_00067",
+   "collection": "kits",
+   "mask_md5_must_be_unchanged": "a99bf857e0414931e4921e782eb5441d",
+   "observed_organs": [
+    "kidney"
+   ],
+   "organs": {
+    "kidney": {
+     "has_tumor": true,
+     "tumor_volume_cm3": 1040.2,
+     "burden_cat": "high",
+     "multiplicity": "solitary",
+     "containment": "boundary",
+     "anatomic_location": "na",
+     "anatomic_location_delivered": "head"
+    }
+   },
+   "burden_cutpoints": {
+    "organ": "kidney",
+    "t1_vox": 6832,
+    "t2_vox": 46696,
+    "n_tumor_cases": 35
+   },
+   "query_in_pool": true,
+   "top10_ii_corrected_1311": [
+    {
+     "rank": 1,
+     "case_id": "case_00008",
+     "S": 1.0
+    },
+    {
+     "rank": 2,
+     "case_id": "case_00024",
+     "S": 1.0
+    },
+    {
+     "rank": 3,
+     "case_id": "case_00030",
+     "S": 1.0
+    },
+    {
+     "rank": 4,
+     "case_id": "case_00042",
+     "S": 1.0
+    },
+    {
+     "rank": 5,
+     "case_id": "case_00057",
+     "S": 1.0
+    },
+    {
+     "rank": 6,
+     "case_id": "case_00079",
+     "S": 1.0
+    },
+    {
+     "rank": 7,
+     "case_id": "case_00090",
+     "S": 1.0
+    },
+    {
+     "rank": 8,
+     "case_id": "case_00092",
+     "S": 1.0
+    },
+    {
+     "rank": 9,
+     "case_id": "case_00149",
+     "S": 1.0
+    },
+    {
+     "rank": 10,
+     "case_id": "case_00160",
+     "S": 1.0
+    }
+   ],
+   "top10_tie_rule": {
+    "score_at_rank10": 1.0,
+    "above_cutoff": [],
+    "tied_at_cutoff": [
+     "case_00008",
+     "case_00024",
+     "case_00030",
+     "case_00042",
+     "case_00057",
+     "case_00079",
+     "case_00090",
+     "case_00092",
+     "case_00149",
+     "case_00160"
+    ],
+    "tie_break": "pool assembly order (kits, lits, msd, then the 1,198 FLARE23 records), stable sort"
+   },
+   "n_ranked": 1233
+  },
+  "msd_pancreas_125": {
+   "case_id": "pancreas_125",
+   "collection": "msd",
+   "mask_md5_must_be_unchanged": "d83eba933dfeb684e18e8959defbd793",
+   "observed_organs": [
+    "pancreas"
+   ],
+   "organs": {
+    "pancreas": {
+     "has_tumor": true,
+     "tumor_volume_cm3": 7.59,
+     "burden_cat": "high",
+     "multiplicity": "solitary",
+     "containment": "boundary",
+     "anatomic_location": "head",
+     "anatomic_location_snomed": "64163001",
+     "anatomic_location_delivered": "tail"
+    }
+   },
+   "burden_cutpoints": {
+    "organ": "pancreas",
+    "t1_vox": 1956,
+    "t2_vox": 3496,
+    "n_tumor_cases": 53
+   },
+   "query_in_pool": true,
+   "top10_ii_corrected_1311": [
+    {
+     "rank": 1,
+     "case_id": "pancreas_015",
+     "S": 1.0
+    },
+    {
+     "rank": 2,
+     "case_id": "pancreas_048",
+     "S": 1.0
+    },
+    {
+     "rank": 3,
+     "case_id": "pancreas_049",
+     "S": 1.0
+    },
+    {
+     "rank": 4,
+     "case_id": "pancreas_064",
+     "S": 1.0
+    },
+    {
+     "rank": 5,
+     "case_id": "pancreas_083",
+     "S": 1.0
+    },
+    {
+     "rank": 6,
+     "case_id": "pancreas_096",
+     "S": 1.0
+    },
+    {
+     "rank": 7,
+     "case_id": "pancreas_119",
+     "S": 1.0
+    },
+    {
+     "rank": 8,
+     "case_id": "pancreas_122",
+     "S": 1.0
+    },
+    {
+     "rank": 9,
+     "case_id": "pancreas_127",
+     "S": 1.0
+    },
+    {
+     "rank": 10,
+     "case_id": "pancreas_149",
+     "S": 1.0
+    }
+   ],
+   "top10_tie_rule": {
+    "score_at_rank10": 1.0,
+    "above_cutoff": [],
+    "tied_at_cutoff": [
+     "pancreas_015",
+     "pancreas_048",
+     "pancreas_049",
+     "pancreas_064",
+     "pancreas_083",
+     "pancreas_096",
+     "pancreas_119",
+     "pancreas_122",
+     "pancreas_127",
+     "pancreas_149",
+     "pancreas_191",
+     "pancreas_241",
+     "pancreas_275",
+     "pancreas_289",
+     "pancreas_330",
+     "pancreas_377"
+    ],
+    "tie_break": "pool assembly order (kits, lits, msd, then the 1,198 FLARE23 records), stable sort"
+   },
+   "n_ranked": 1252
+  },
+  "flare23_FLARE23_0405": {
+   "case_id": "flare23_FLARE23_0405",
+   "collection": "flare23",
+   "mask_md5_must_be_unchanged": "61cfd5fb8066be3752181075e0ab03db",
+   "observed_organs": [
+    "kidney",
+    "liver",
+    "pancreas",
+    "spleen"
+   ],
+   "organs": {
+    "liver": {
+     "has_tumor": false,
+     "tumor_volume_cm3": 0.0,
+     "burden_cat": "none",
+     "multiplicity": "none",
+     "containment": "none",
+     "anatomic_location": "na",
+     "anatomic_location_delivered": "unknown"
+    },
+    "kidney": {
+     "has_tumor": true,
+     "tumor_volume_cm3": 702.11,
+     "burden_cat": "high",
+     "multiplicity": "solitary",
+     "containment": "boundary",
+     "anatomic_location": "na",
+     "anatomic_location_delivered": "unknown"
+    },
+    "spleen": {
+     "has_tumor": false,
+     "tumor_volume_cm3": 0.0,
+     "burden_cat": "none",
+     "multiplicity": "none",
+     "containment": "none",
+     "anatomic_location": "na",
+     "anatomic_location_delivered": "unknown"
+    },
+    "pancreas": {
+     "has_tumor": false,
+     "tumor_volume_cm3": 0.0,
+     "burden_cat": "none",
+     "multiplicity": "none",
+     "containment": "none",
+     "anatomic_location": "na",
+     "anatomic_location_status": "no_tumor"
+    }
+   },
+   "burden_cutpoints": {
+    "organ": "all (multi-organ)",
+    "t1_cm3": 5.44,
+    "t2_cm3": 19.2,
+    "note": "GT FLARE23 corpus cm3 terciles (build_predicted_corpus_flare23.py)"
+   },
+   "query_in_pool": true,
+   "top10_ii_corrected_1311": [
+    {
+     "rank": 1,
+     "case_id": "case_00008",
+     "S": 1.0
+    },
+    {
+     "rank": 2,
+     "case_id": "case_00024",
+     "S": 1.0
+    },
+    {
+     "rank": 3,
+     "case_id": "case_00030",
+     "S": 1.0
+    },
+    {
+     "rank": 4,
+     "case_id": "case_00042",
+     "S": 1.0
+    },
+    {
+     "rank": 5,
+     "case_id": "case_00057",
+     "S": 1.0
+    },
+    {
+     "rank": 6,
+     "case_id": "case_00067",
+     "S": 1.0
+    },
+    {
+     "rank": 7,
+     "case_id": "case_00079",
+     "S": 1.0
+    },
+    {
+     "rank": 8,
+     "case_id": "case_00090",
+     "S": 1.0
+    },
+    {
+     "rank": 9,
+     "case_id": "case_00092",
+     "S": 1.0
+    },
+    {
+     "rank": 10,
+     "case_id": "case_00149",
+     "S": 1.0
+    }
+   ],
+   "top10_tie_rule": {
+    "score_at_rank10": 1.0,
+    "above_cutoff": [],
+    "tied_at_cutoff": [
+     "case_00008",
+     "case_00024",
+     "case_00030",
+     "case_00042",
+     "case_00057",
+     "case_00067",
+     "case_00079",
+     "case_00090",
+     "case_00092",
+     "case_00149",
+     "case_00160",
+     "pancreas_084",
+     "pancreas_242",
+     "pancreas_346"
+    ],
+    "tie_break": "pool assembly order (kits, lits, msd, then the 1,198 FLARE23 records), stable sort"
+   },
+   "n_ranked": 1310
+  }
+ }
+}

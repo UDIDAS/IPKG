@@ -1,0 +1,182 @@
+{
+ "note": "First issue vs re-issue of the phenotype corpora, by hash (study lead's 10-07 item 6). 'Delivered' in the paper means the first issue; a re-issue is cited as confirmation. First-issue hashes are the Drive hand-off freeze of 2026-10-03 (drive_handoff_freeze_2026-10-03.md5); re-issue hashes are the git objects at the tagged commits (tags reissue-2026-10-01 -> 9081dff, reissue-2026-10-03 -> e067b8c) and, for the 10-01 re-issue, the Drive copy under round2_2026-10-01/records_reissue/. Caveat: the first-issue Drive folder was updated in place before the freeze (09-22, 09-24 twin-removal passes); the freeze hash is the first issue as it stood on 2026-10-03.",
+ "files": [
+  {
+   "reissue": "reissue-2026-10-01",
+   "file": "corpus_flare23_kg.json",
+   "reissue_md5_git": "7e27744993f057b3652b805edb6370be",
+   "reissue_md5_now": "7e27744993f057b3652b805edb6370be",
+   "reissue_md5_drive_round2": "7e27744993f057b3652b805edb6370be",
+   "first_issue_path_drive": "corpora/corpus_flare23_kg.json",
+   "first_issue_md5_drive_freeze": "5d73a75b112ec18e2358b86fba2a66d1",
+   "distinguishable_by_hash": true
+  },
+  {
+   "reissue": "reissue-2026-10-01",
+   "file": "corpus_flare23_kg_dedup.json",
+   "reissue_md5_git": "9ed0111bc0e89ce0181c0b111b504083",
+   "reissue_md5_now": "9ed0111bc0e89ce0181c0b111b504083",
+   "reissue_md5_drive_round2": "9ed0111bc0e89ce0181c0b111b504083",
+   "first_issue_path_drive": "corpora/corpus_flare23_kg_dedup.json",
+   "first_issue_md5_drive_freeze": "bfe39021adb795078117a3e75517e08c",
+   "distinguishable_by_hash": true
+  },
+  {
+   "reissue": "reissue-2026-10-01",
+   "file": "corpus_gt_kits.json",
+   "reissue_md5_git": "5fcbe22e43bfa0114dce79150adf669f",
+   "reissue_md5_now": "5fcbe22e43bfa0114dce79150adf669f",
+   "reissue_md5_drive_round2": "5fcbe22e43bfa0114dce79150adf669f",
+   "first_issue_path_drive": "corpora/corpus_gt_kits.json",
+   "first_issue_md5_drive_freeze": "b72b303e72ec68391b5f5db90a80aced",
+   "distinguishable_by_hash": true
+  },
+  {
+   "reissue": "reissue-2026-10-01",
+   "file": "corpus_gt_lits.json",
+   "reissue_md5_git": "72c58e24b03b9eeb01a3606dda8f2262",
+   "reissue_md5_now": "72c58e24b03b9eeb01a3606dda8f2262",
+   "reissue_md5_drive_round2": "72c58e24b03b9eeb01a3606dda8f2262",
+   "first_issue_path_drive": "corpora/corpus_gt_lits.json",
+   "first_issue_md5_drive_freeze": "10da2ecea610ee3621485f1bc68922e2",
+   "distinguishable_by_hash": true
+  },
+  {
+   "reissue": "reissue-2026-10-01",
+   "file": "corpus_gt_msd.json",
+   "reissue_md5_git": "907f17f7546e717b21d6c09038e6dc92",
+   "reissue_md5_now": "907f17f7546e717b21d6c09038e6dc92",
+   "reissue_md5_drive_round2": "907f17f7546e717b21d6c09038e6dc92",
+   "first_issue_path_drive": "corpora/corpus_gt_msd.json",
+   "first_issue_md5_drive_freeze": "970776fc1f3c6f550ee5dbcedc0ced8f",
+   "distinguishable_by_hash": true
+  },
+  {
+   "reissue": "reissue-2026-10-01",
+   "file": "corpus_predicted_flare23.json",
+   "reissue_md5_git": "faa014f015755f65c35be566d84beb14",
+   "reissue_md5_now": "faa014f015755f65c35be566d84beb14",
+   "reissue_md5_drive_round2": "faa014f015755f65c35be566d84beb14",
+   "first_issue_path_drive": "corpora/corpus_predicted_flare23.json",
+   "first_issue_md5_drive_freeze": "1a5c726dcf6e319813ecc76483de7a0f",
+   "distinguishable_by_hash": true
+  },
+  {
+   "reissue": "reissue-2026-10-01",
+   "file": "corpus_predicted_kits.json",
+   "reissue_md5_git": "3d3e5fe5f688b1ddbd4593dfe1d83fed",
+   "reissue_md5_now": "3d3e5fe5f688b1ddbd4593dfe1d83fed",
+   "reissue_md5_drive_round2": "3d3e5fe5f688b1ddbd4593dfe1d83fed",
+   "first_issue_path_drive": "corpora/corpus_predicted_kits.json",
+   "first_issue_md5_drive_freeze": "d22d4ae990120bcf5edac1c23f4ecbcc",
+   "distinguishable_by_hash": true
+  },
+  {
+   "reissue": "reissue-2026-10-01",
+   "file": "corpus_predicted_lits.json",
+   "reissue_md5_git": "6f8606df437358f7b13245c82bc7fe82",
+   "reissue_md5_now": "6f8606df437358f7b13245c82bc7fe82",
+   "reissue_md5_drive_round2": "6f8606df437358f7b13245c82bc7fe82",
+   "first_issue_path_drive": "corpora/corpus_predicted_lits.json",
+   "first_issue_md5_drive_freeze": "3641e36c708b960382d775ec1635118f",
+   "distinguishable_by_hash": true
+  },
+  {
+   "reissue": "reissue-2026-10-01",
+   "file": "corpus_predicted_msd.json",
+   "reissue_md5_git": "3aa6555b5ee318ffbb954dc2eb3c438c",
+   "reissue_md5_now": "3aa6555b5ee318ffbb954dc2eb3c438c",
+   "reissue_md5_drive_round2": "3aa6555b5ee318ffbb954dc2eb3c438c",
+   "first_issue_path_drive": "corpora/corpus_predicted_msd.json",
+   "first_issue_md5_drive_freeze": "f960325c5e1c13c6025f8a4540b286eb",
+   "distinguishable_by_hash": true
+  },
+  {
+   "reissue": "reissue-2026-10-01",
+   "file": "containment_v2/corpus_gt_kits_containment_v2.json",
+   "reissue_md5_git": "fd8d9cc8e4e39331cc851d6c076d93ac",
+   "reissue_md5_now": "fd8d9cc8e4e39331cc851d6c076d93ac",
+   "reissue_md5_drive_round2": "fd8d9cc8e4e39331cc851d6c076d93ac",
+   "first_issue_path_drive": null,
+   "first_issue_md5_drive_freeze": null,
+   "distinguishable_by_hash": null,
+   "first_issue_note": "no first-issue copy in the Drive hand-off (side corpus, issued only in git)"
+  },
+  {
+   "reissue": "reissue-2026-10-01",
+   "file": "containment_v2/corpus_gt_lits_containment_v2.json",
+   "reissue_md5_git": "89ad0ff0631467bba65674122ccd7811",
+   "reissue_md5_now": "89ad0ff0631467bba65674122ccd7811",
+   "reissue_md5_drive_round2": "89ad0ff0631467bba65674122ccd7811",
+   "first_issue_path_drive": null,
+   "first_issue_md5_drive_freeze": null,
+   "distinguishable_by_hash": null,
+   "first_issue_note": "no first-issue copy in the Drive hand-off (side corpus, issued only in git)"
+  },
+  {
+   "reissue": "reissue-2026-10-01",
+   "file": "containment_v2/corpus_gt_msd_containment_v2.json",
+   "reissue_md5_git": "ece71985dbb59619884561a1cd0daaa7",
+   "reissue_md5_now": "ece71985dbb59619884561a1cd0daaa7",
+   "reissue_md5_drive_round2": "ece71985dbb59619884561a1cd0daaa7",
+   "first_issue_path_drive": null,
+   "first_issue_md5_drive_freeze": null,
+   "distinguishable_by_hash": null,
+   "first_issue_note": "no first-issue copy in the Drive hand-off (side corpus, issued only in git)"
+  },
+  {
+   "reissue": "reissue-2026-10-01",
+   "file": "containment_v2/corpus_predicted_flare23_containment_v2.json",
+   "reissue_md5_git": "75713edecffa0e2c96723ac75dfb85ad",
+   "reissue_md5_now": "75713edecffa0e2c96723ac75dfb85ad",
+   "reissue_md5_drive_round2": "75713edecffa0e2c96723ac75dfb85ad",
+   "first_issue_path_drive": null,
+   "first_issue_md5_drive_freeze": null,
+   "distinguishable_by_hash": null,
+   "first_issue_note": "no first-issue copy in the Drive hand-off (side corpus, issued only in git)"
+  },
+  {
+   "reissue": "reissue-2026-10-01",
+   "file": "containment_v2/corpus_predicted_kits_containment_v2.json",
+   "reissue_md5_git": "7207df9dad30faea677b9ff83c5ceddc",
+   "reissue_md5_now": "7207df9dad30faea677b9ff83c5ceddc",
+   "reissue_md5_drive_round2": "7207df9dad30faea677b9ff83c5ceddc",
+   "first_issue_path_drive": null,
+   "first_issue_md5_drive_freeze": null,
+   "distinguishable_by_hash": null,
+   "first_issue_note": "no first-issue copy in the Drive hand-off (side corpus, issued only in git)"
+  },
+  {
+   "reissue": "reissue-2026-10-01",
+   "file": "containment_v2/corpus_predicted_lits_containment_v2.json",
+   "reissue_md5_git": "577986484d85c5f82e8c4d8a486f4e9e",
+   "reissue_md5_now": "577986484d85c5f82e8c4d8a486f4e9e",
+   "reissue_md5_drive_round2": "577986484d85c5f82e8c4d8a486f4e9e",
+   "first_issue_path_drive": null,
+   "first_issue_md5_drive_freeze": null,
+   "distinguishable_by_hash": null,
+   "first_issue_note": "no first-issue copy in the Drive hand-off (side corpus, issued only in git)"
+  },
+  {
+   "reissue": "reissue-2026-10-01",
+   "file": "containment_v2/corpus_predicted_msd_containment_v2.json",
+   "reissue_md5_git": "878207d5a30e290862e603edb4997bbc",
+   "reissue_md5_now": "878207d5a30e290862e603edb4997bbc",
+   "reissue_md5_drive_round2": "878207d5a30e290862e603edb4997bbc",
+   "first_issue_path_drive": null,
+   "first_issue_md5_drive_freeze": null,
+   "distinguishable_by_hash": null,
+   "first_issue_note": "no first-issue copy in the Drive hand-off (side corpus, issued only in git)"
+  },
+  {
+   "reissue": "reissue-2026-10-03",
+   "file": "corpus_flare23_kg_dedup_1311.json",
+   "reissue_md5_git": "717a1d57028f837faccafbf45453ebc1",
+   "reissue_md5_now": "717a1d57028f837faccafbf45453ebc1",
+   "reissue_md5_drive_round2": null,
+   "first_issue_path_drive": "corpora/corpus_flare23_kg_dedup.json",
+   "first_issue_md5_drive_freeze": "bfe39021adb795078117a3e75517e08c",
+   "distinguishable_by_hash": true
+  }
+ ]
+}

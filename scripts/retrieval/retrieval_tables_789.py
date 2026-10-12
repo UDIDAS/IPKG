@@ -132,8 +132,10 @@ def paired(dA, dB, key="ap"):
 def holm(pdict):
     items = sorted([(k, v) for k, v in pdict.items() if v is not None], key=lambda kv: kv[1]["p_raw"])
     m = len(items)
+    run = 0.0                                    # Holm step-down: adjusted p never decreases down the ranked list
     for rank, (k, v) in enumerate(items):
-        v["p_holm"] = round(min(1.0, (m - rank) * v["p_raw"]), 5)
+        run = max(run, min(1.0, (m - rank) * v["p_raw"]))
+        v["p_holm"] = round(run, 5)
     return pdict
 
 

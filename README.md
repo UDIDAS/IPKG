@@ -51,7 +51,7 @@ python scripts/retrieval/retrieval_iii_prime.py
 # Reproduce the query-suite verdicts (Tables 6):
 python queries/query_suite_eval.py
 ```
-Expected (published labels): Table 6 (ii) mAP 0.972 · Table 7 (ii) 0.999 full pool / 0.997 sub-pool, (iii) −0.061, (iv) −0.666 · (iii′) −0.264
+Expected (published labels, 1,309-vintage cross-check; the manuscript's values are the 1,311-case run in `results/retrieval/dedup/final_rows_2026-10-08.json`): Table 6 (ii) mAP 0.972 · Table 7 (ii) 0.999 full pool / 0.997 sub-pool, (iii) −0.061, (iv) −0.666 · (iii′) −0.264
 [−0.279, −0.239] — byte-comparable to `results/retrieval/dedup/`. The corrected-label rows are re-scored by
 `scripts/retrieval/baselines_corrected_labels.py` and `baselines_subpool_1311.py` (they need the baseline feature cache;
 see `REPRODUCING.md`); both refuse to write unless their reproduction gates pass. Full instructions, including
@@ -68,7 +68,7 @@ are available from the project data share
 <https://drive.google.com/open?id=1uxsSQpWIWbxSDAiDrLJMHpJ4N5uOq4HQ>
 (576 masks as `masks_predicted_flare23.zip`, `MANIFEST.md5` checksums, `burden_tercile_cutpoints.json`,
 the FLARE23_0405 case-study mask, and the FLARE23 citation/licence notes, CC BY-NC-SA 4.0) — cite this
-link plus the repository tag `IPKG-v1-rc6` in the Data Availability statement.
+link plus the repository tag `paper-submission` (the submitted state) in the Data Availability statement.
 
 ## Clinician relevance study (§4.11 / §5.7)
 

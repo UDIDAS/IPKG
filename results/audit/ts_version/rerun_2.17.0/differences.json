@@ -1,0 +1,64 @@
+{
+ "totalsegmentator": "2.17.0",
+ "nnunetv2": "2.8.1",
+ "torch": "2.5.1+cu121",
+ "call": "fast=True, ml=True, roi_subset=liver,kidney_left,kidney_right,pancreas,spleen,stomach,colon",
+ "cases": {
+  "pancreas_125": {
+   "organs": {
+    "pancreas": {
+     "label": 1,
+     "voxels_delivered": 42022,
+     "voxels_rerun": 41995,
+     "voxels_differing": 27,
+     "percent_of_delivered": 0.0643
+    }
+   },
+   "organ_voxels_delivered": 42022,
+   "voxels_differing_total": 27,
+   "percent_of_delivered_organ_voxels": 0.0643
+  },
+  "FLARE23_0405": {
+   "organs": {
+    "liver": {
+     "label": 1,
+     "voxels_delivered": 3046705,
+     "voxels_rerun": 3046804,
+     "voxels_differing": 351,
+     "percent_of_delivered": 0.0115
+    },
+    "right kidney": {
+     "label": 2,
+     "voxels_delivered": 325003,
+     "voxels_rerun": 324976,
+     "voxels_differing": 81,
+     "percent_of_delivered": 0.0249
+    },
+    "spleen": {
+     "label": 3,
+     "voxels_delivered": 419724,
+     "voxels_rerun": 419724,
+     "voxels_differing": 96,
+     "percent_of_delivered": 0.0229
+    },
+    "pancreas": {
+     "label": 4,
+     "voxels_delivered": 154560,
+     "voxels_rerun": 154596,
+     "voxels_differing": 90,
+     "percent_of_delivered": 0.0582
+    },
+    "left kidney": {
+     "label": 13,
+     "voxels_delivered": 272604,
+     "voxels_rerun": 272643,
+     "voxels_differing": 111,
+     "percent_of_delivered": 0.0407
+    }
+   },
+   "organ_voxels_delivered": 4218596,
+   "voxels_differing_total": 729,
+   "percent_of_delivered_organ_voxels": 0.0173
+  }
+ }
+}

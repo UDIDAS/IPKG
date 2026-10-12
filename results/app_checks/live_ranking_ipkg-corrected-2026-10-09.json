@@ -1,0 +1,66 @@
+{
+ "overlay_leaves": 71385,
+ "pool_size": 1311,
+ "cases": {
+  "lits_volume-76": {
+   "shown": [
+    "volume-101",
+    "volume-44",
+    "volume-93",
+    "volume-110",
+    "volume-116",
+    "volume-80",
+    "volume-70",
+    "volume-113",
+    "volume-82",
+    "volume-21"
+   ],
+   "tie_rule_pass": true
+  },
+  "kits_case_00067": {
+   "shown": [
+    "case_00042",
+    "case_00030",
+    "case_00008",
+    "case_00092",
+    "case_00079",
+    "case_00149",
+    "case_00024",
+    "case_00057",
+    "case_00090",
+    "case_00160"
+   ],
+   "tie_rule_pass": true
+  },
+  "msd_pancreas_125": {
+   "shown": [
+    "pancreas_049",
+    "pancreas_241",
+    "pancreas_149",
+    "pancreas_330",
+    "pancreas_015",
+    "pancreas_122",
+    "pancreas_127",
+    "pancreas_191",
+    "pancreas_083",
+    "pancreas_289"
+   ],
+   "tie_rule_pass": true
+  },
+  "flare23_FLARE23_0405": {
+   "shown": [
+    "case_00008",
+    "case_00092",
+    "case_00067",
+    "case_00042",
+    "case_00079",
+    "case_00030",
+    "case_00149",
+    "case_00024",
+    "case_00057",
+    "case_00090"
+   ],
+   "tie_rule_pass": true
+  }
+ }
+}

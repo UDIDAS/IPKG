@@ -44,5 +44,16 @@ tags `IPKG-v1-rc1..rc4` retain them. Canonical example: Table 8 row (vii) Î” = â
 | Organ Dice under convention A (organ with mass) | `results/segmentation/organ_convention_a_2026-10-03.json`, `organ_convention_a_flare576_2026-10-03.json` | `scripts/segmentation/organ_convention_a*.py` |
 | Pancreatic sub-site correction and record re-issue | `results/kg/pancreas_subsite_msd_gt.json`, `subsite_reissue_2026-10-01.json`; `corpora/reissue_2026-10-01/` | `scripts/kg/pancreas_subsite.py`, `reissue_subsite.py` |
 | Showcase-mask provenance (voxel-exact re-draw of both halves) | `results/audit/displayed_weights_check_2026-10-03.json`, `displayed_weights_base_organ_2026-10-05.json` | `scripts/audit/verify_displayed_weights.py` |
-| TotalSegmentator release (2.17/2.18) | `results/audit/totalsegmentator_version_check_2026-10-06.json` | `scripts/audit/ts_version/ts_reproduce_showcase.py` |
+| TotalSegmentator release (2.17/2.18; re-run masks and per-organ differences) | `results/audit/ts_version/` (`summary_2026-10-08.json`) | `scripts/audit/ts_version/ts_reproduce_showcase.py` |
 | Checkpoint inventory with SHA-256 | `results/segmentation/checkpoint_manifest_2026-10-01.json` | `scripts/audit/complete_checkpoint_hashes.py` |
+
+## Final additions (paper-submission)
+
+| Paper item | Source file | Producer |
+|:--|:--|:--|
+| Table 6 and the Table 7 CT sub-pool block: final replacement rows (corrected arm; one step-down Holm over F1, 13 contrasts) | `results/retrieval/dedup/final_rows_2026-10-08.json`, `tab_retrieval_primary_2026-10-08.tex`, `tab_retrieval_ct_subpool_rows_2026-10-08.tex` | `scripts/retrieval/emit_final_rows_2026-10-07.py` (inputs: `baselines_corrected_labels_2026-10-05.json`, `baselines_subpool_1311_2026-10-06.json`) |
+| F3 (closed loop) and F4 (judge) Holm with the step-down maximum | `results/repair/holm_f3_f4_2026-10-08.json` | `scripts/repair/holm_f3_f4_2026-10-08.py` |
+| Holm re-adjustment of result files whose generators cannot be re-run | `results/audit/holm_readjust_log_2026-10-08.json` | `scripts/audit/readjust_holm_stepdown_2026-10-08.py` |
+| Corrected application verified at the rated build | `results/app_checks/verify_ipkg-corrected-2026-10-09_rendered.json`, `live_ranking_ipkg-corrected-2026-10-09.json` | `scripts/app_checks/` |
+
+> **Vintage:** `results/retrieval/dedup/retrieval_tab8_stress.json` (with `retrieval_tab7_primary.json`, `retrieval_tab9_stratified.json`, `baselines_tab7_tab8.json`) is a cross-check artifact at the 1,309-case vintage; the source of manuscript Table 7 is the 1,311-case run (CT sub-pool block: `results/retrieval/dedup/final_rows_2026-10-08.json`).
