@@ -15,6 +15,7 @@ consistently across script, CSV and JSON. Nothing else was changed.
 | `build_cohort_columns.py` | Writes the convention-A summary behind Table A.3 (`results/segmentation/organ_convention_a_autonomous_summary_2026-10-04.json`) |
 | `build_retrieval_tables.py` | Writes the 1,311-pool retrieval tables behind Table 5 (full-pool block), G.1 and G.2 (`results/retrieval/dedup/retrieval_tables_1311_2026-10-07.json`) |
 | `split_pack/` | The shared-cohort split pack: one patient list per collection with per-patient roles and twin exposure (`ipkg_split_pack.json`, `.csv`) and its builder |
+| `substrate/flare23_twinclean_14.json` | The FLARE23 twin-clean figure on the 54-scan held-out list (n = 14) with its bootstrap intervals, as printed in Table A.3; same cases and means as `results/segmentation/cohort157_rescore_2026-10-03.json` |
 | `cutover/README.md` | The cut-over record of the final rating round: the switch to the corrected build and the final-round submission times by rater code |
 
 Re-running these needs the application tree and the delivered case packages, which are not part of this

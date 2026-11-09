@@ -3,6 +3,7 @@
 Numbering follows the submitted manuscript (main Tables 1–6, supplementary Tables A.1–L.1). "Reproduce"
 points to the section of [`REPRODUCING.md`](REPRODUCING.md); Level A = CPU from this repository alone.
 Files under `ipkg-v2/` are the application-side instruments; see [`ipkg-v2/README.md`](ipkg-v2/README.md).
+`python scripts/audit/check_draft_cells.py <manuscript.pdf>` checks every table below against these files, row by row.
 
 ## Main tables
 
@@ -21,7 +22,7 @@ Files under `ipkg-v2/` are the application-side instruments; see [`ipkg-v2/READM
 |:--|:--|:--|:--|:--|
 | Table A.1 | Semi-oracle held-out 3D segmentation (organs on each checkpoint's test list; tumors) | `scripts/segmentation/seg_stats.py` (from `eval_ausam_3d.py`, `eval_tumor_3d.py`) | `results/segmentation/seg_stats.json`; LiTS organ also `organ_convention_a_2026-10-03.json` | C |
 | Table A.2 | Text-prompted, reference slice-gated Dice | `scripts/training/train_organ_generic.py` (organ), `scripts/segmentation/train_tumor_incremental.py` (tumor, all-four stage) | `results/segmentation/organ_generic_kg.json` (`per_organ_dataset`), `tumor_incremental.json` (`s4_flare`) | C |
-| Table A.3 | Autonomous substrate, 157-scan shared cohort (tumor raw/gated, twin-clean; TotalSegmentator organ; convention A in the caption) | `scripts/segmentation/rescore_cohort157.py`, `combine_ts_promptfree.py`; convention A: `ipkg-v2/build_cohort_columns.py` (scorer `ipkg-v2/ipkg_organ_convention.py`) | `results/segmentation/cohort157_rescore_2026-10-03.json` (tumor), `promptfree_round2_2026-10-01.json` (organ), `organ_convention_a_autonomous_summary_2026-10-04.json` (convention A, FLARE23 organ cells) | C |
+| Table A.3 | Autonomous substrate, 157-scan shared cohort (tumor raw/gated, twin-clean; TotalSegmentator organ; convention A in the caption) | `scripts/segmentation/rescore_cohort157.py`, `combine_ts_promptfree.py`; convention A: `ipkg-v2/build_cohort_columns.py` (scorer `ipkg-v2/ipkg_organ_convention.py`) | `results/segmentation/cohort157_rescore_2026-10-03.json` (tumor), `promptfree_round2_2026-10-01.json` (organ), `organ_convention_a_autonomous_summary_2026-10-04.json` (convention A, FLARE23 organ cells); FLARE23 54-scan twin-clean intervals (n = 14) `ipkg-v2/substrate/flare23_twinclean_14.json` | C |
 | Table A.4 | Organ-volume fidelity on FLARE-Task2 | `scripts/kg/analyze_3d_kg.py` | `results/kg/ausam_3d_summary.json` (`node_fidelity/*/flare_task2`) | C |
 | Table A.5 | Tumor Dice for one model on a growing dataset set | `scripts/segmentation/train_tumor_incremental.py` | `results/segmentation/tumor_incremental.json` | C |
 | Table B.1 | Datasets, coverage regimes, resulting KGs | `scripts/kg/kg_build_graph.py`, `scripts/kg/build_predicted_corpus*.py` | `kg_graphs/unified_mmkg*.json` (node/edge counts), `corpora/*.json` | A2 |
@@ -48,7 +49,7 @@ both F2 contrasts have raw p = 1.0.
 | Slice-gate and box test (checks V2.2–V2.4) and the 158-check clinical-correctness validator (128 pass / 20 fail / 10 skip) | `ipkg-v2/validation/validation_report.json` | `ipkg-v2/ipkg_validate.py` |
 | Rendered-page walk (rater page carries no accuracy figure) | `ipkg-v2/validation/ui/ui_walk.json`, `ui_walk.txt` | `ipkg-v2/ipkg_ui_walk.py` |
 | Organ-convention scorer | `results/segmentation/organ_convention_a_2026-10-03.json`, `organ_convention_a_flare576_2026-10-03.json`, `organ_convention_a_autonomous_summary_2026-10-04.json` | `scripts/segmentation/organ_convention_a*.py`, `ipkg-v2/ipkg_organ_convention.py` |
-| Draft-cell checker (manuscript's reported results against their artifacts) | — | `scripts/audit/check_draft_cells.py` |
+| Draft-cell checker: rebuilds every row of every table above from its result file and requires it, cell by cell and in order, under that table's caption in the manuscript PDF (`python scripts/audit/check_draft_cells.py <manuscript.pdf>`; exit 0 = every row matches; Table K.1 and Table 3's bracketed pilot values outside the check) | the result files of the tables above | `scripts/audit/check_draft_cells.py` |
 | Duplicate-scan censuses (Appendix B) and the complete cross-collection twin census | `results/audit/duplicate_scan_audit.json`, `lits_extended_audit.json`, `lits_flare23_overlap_census.json`, `axis_normalized_twin_census.json`, `flare23_twin_census_complete_2026-10-03.json`, `twin_elimination_gate_2026-09-24.json` | `scripts/audit/` |
 | Shared-cohort split pack with per-patient exposure | `ipkg-v2/split_pack/ipkg_split_pack.json` (`.csv`); `results/audit/split_manifests_2026-10-01.json`, `promptfree_twin_exposure_2026-10-03.json` | `ipkg-v2/split_pack/build_split_pack.py`; `scripts/audit/rebuild_split_manifests.py`, `promptfree_twin_exposure.py` |
 | Cut-over record of the final rating round | `ipkg-v2/cutover/README.md` | — |
