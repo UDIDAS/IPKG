@@ -9,41 +9,43 @@ Environment: Python ≥ 3.10, `pip install -r requirements.txt`. GPU stages addi
 `facebook/sam3` checkpoint on Hugging Face.
 
 Determinism: all statistics are seeded (bootstrap B=5,000 / permutation B=20,000; seed 20261003 for the
-final Table 6 / Table 7 CT sub-pool contrasts, 20260920 for the Table 9(c) CIs, 12345 elsewhere).
+final Table 4 / Table 5 CT sub-pool contrasts, 20260920 for the 1,309-vintage stratum (c) CIs, 12345 elsewhere).
 Feature-based baselines are architecture-deterministic but can wobble ±0.001 on paired-Δ third
 decimals across GPU hardware (documented in TABLE_MAP; the shipped JSONs are canonical).
 
 ## Level A — CPU, from the shipped corpora
 
-**A1. Retrieval tables (Tables 8–10 KG rows, (iii′), C.19):**
+**A1. Retrieval graph rows, 1,309-vintage cross-check (Tables 4, 5, G.1 graph rows, (iii′), G.2):**
 ```bash
 export VKG_FLARE_CORPUS=$PWD/corpora/corpus_flare23_kg_dedup.json VKG_RES_DIR=/tmp/vkg_repro
-python scripts/retrieval/retrieval_tables_789.py      # Tables 8/9/10 KG rows
+python scripts/retrieval/retrieval_tables_789.py      # Tables 4/5/G.1 graph rows (1,309 vintage)
 python scripts/retrieval/retrieval_iii_prime.py       # (iii') columns, both pools
-python scripts/retrieval/tab10_example_ranks.py       # Table C.19 example ranks
+python scripts/retrieval/tab10_example_ranks.py       # Table G.2 example ranks (1,309 vintage)
 ```
 Compare `/tmp/vkg_repro/*.json` against `results/retrieval/dedup/` — headline gates:
-Table 9 (ii) mAP 0.999 (full 1,309 pool; 0.997 on the 636-case CT sub-pool) · (iii) Δ −0.061 [−0.074, −0.050] · (iv) Δ −0.665 [−0.698, −0.629] · (iii′) Δ −0.268 [−0.288, −0.249] ·
-Table 10 (c) mAP 0.650 (n=516) · C.19 ranks identical.
+Table 5 (ii) mAP 0.999 (full 1,309 pool; 0.997 on the 636-case CT sub-pool) · (iii) Δ −0.061 [−0.074, −0.050] · (iv) Δ −0.665 [−0.698, −0.629] · (iii′) Δ −0.268 [−0.288, −0.249] ·
+Table G.1 (c) mAP 0.650 (n=516) · G.2 ranks identical. The manuscript's 1,311-pool values are in
+`results/retrieval/dedup/final_rows_2026-10-08.json` and `retrieval_tables_1311_2026-10-07.json` (see TABLE_MAP).
 
-**A2. Graphs and ontology (Tables 1, 5):**
+**A2. Graphs and ontology (Tables B.1, L.1):**
 ```bash
 python scripts/kg/kg_build_graph.py corpora/corpus_flare23_kg_dedup.json   # rebuild a KG
 python scripts/kg/export_ontology_mappings.py                              # 13/15 coverage
 ```
 
-**A3. Query suite (Tables 2, 6, 7):**
+**A3. Query suite (Tables E.1, 3, E.4):**
 ```bash
 python queries/query_suite_eval.py        # 113 cohort; SPARQL latency section is hardware-bound
 python queries/query_suite_flare23.py     # 576 predicted FLARE23 graphs
 ```
 
-**A4. Summarization (Table 11 frozen part):**
+**A4. Summarization (Table E.3):**
 ```bash
 python scripts/summarization/summ_metrics.py
+python scripts/summarization/statement_precision_table_e3.py   # Table E.3, 573/606 = 0.946
 ```
-The containment-v2 row and the 0.944 overall come from
-`results/kg/containment_reextraction_113_predicted.json` (Level C to regenerate; shipped).
+The containment row (closed rule, 0.872) comes from `results/kg/containment_reextraction_113_predicted.json`
+(Level C to regenerate; shipped); the sub-site row is recomputed from the delivered MSD corpora.
 
 ## Level B — audits (public label downloads, CPU)
 
@@ -63,7 +65,7 @@ the shipped `results/audit/*.json` list every pair and every rejection.
 
 | Stage | Script | Data needed | Shipped output |
 |:--|:--|:--|:--|
-| Baseline features + rows (Tables 8/9 (v)–(vii′)) | `scripts/retrieval/baselines_tab7_tab8.py` (`$VKG_DATA` layout in docstring) | KiTS/LiTS/MSD + FLARE23 CTs (public releases) | `results/retrieval/dedup/baselines_tab7_tab8.json` |
+| Baseline features + rows (Tables 4/5 (v)–(vii′)) | `scripts/retrieval/baselines_tab7_tab8.py` (`$VKG_DATA` layout in docstring) | KiTS/LiTS/MSD + FLARE23 CTs (public releases) | `results/retrieval/dedup/baselines_tab7_tab8.json` |
 | Depth-30 rankings | `scripts/retrieval/export_rankings_113.py` | feature cache from above | (application bundle) |
 | Q10 joint timing | `scripts/queries/q10_joint_timing_kits.py` | KiTS CTs + SAM3 | `results/queries/q10_joint_timing_kits.json` |
 | Containment v2 | `scripts/kg/containment_reextraction_flare23.py`, `..._113_gt.py`, `..._113_predicted.py` | released masks / GT labels | `results/kg/containment_reextraction_*.json` |

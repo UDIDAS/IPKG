@@ -1,0 +1,8137 @@
+{
+ "meta": {
+  "generated": "2026-10-07",
+  "pool_size": 1311,
+  "n_flare23": 1198,
+  "n_single_organ": 113,
+  "universe": [
+   "liver",
+   "spleen",
+   "pancreas",
+   "kidney"
+  ],
+  "headline_arm": "corrected",
+  "headline_arm_label": "precedence-resolved sub-sites + VOID FIX (shipped)",
+  "arms": {
+   "published": {
+    "subsite_vocabulary": "D",
+    "void_fix": false,
+    "label": "delivered sub-sites + delivered void (as published)"
+   },
+   "void_fix": {
+    "subsite_vocabulary": "D",
+    "void_fix": true,
+    "label": "delivered sub-sites + VOID FIX"
+   },
+   "subsite_corpus": {
+    "subsite_vocabulary": "C",
+    "void_fix": false,
+    "label": "re-issued sub-sites + delivered void"
+   },
+   "subsite_resolved": {
+    "subsite_vocabulary": "P",
+    "void_fix": false,
+    "label": "precedence-resolved sub-sites + delivered void"
+   },
+   "corpus_voidfix": {
+    "subsite_vocabulary": "C",
+    "void_fix": true,
+    "label": "re-issued sub-sites + VOID FIX"
+   },
+   "corrected": {
+    "subsite_vocabulary": "P",
+    "void_fix": true,
+    "label": "precedence-resolved sub-sites + VOID FIX (shipped)"
+   },
+   "subsite_msd_only": {
+    "subsite_vocabulary": "Pmsd",
+    "void_fix": false,
+    "label": "MSD sub-sites corrected, every other record left at the delivered word + delivered void - the published limitation's exact perturbation"
+   }
+  },
+  "B_boot": 5000,
+  "B_perm": 20000,
+  "selftest": {
+   "pairs_sampled": 4000,
+   "same_case_id_cross_corpus_checks": 35716,
+   "modes": 4,
+   "void_policies": 2,
+   "mismatches": 0,
+   "ok": true
+  },
+  "verify": {
+   "ran": true,
+   "ok": true,
+   "n_checks": 62,
+   "n_ok": 62,
+   "mismatches": [],
+   "pool": 1425,
+   "rows_1425": {
+    "primary": {
+     "(i) Reference phenotypes + gamma (upper bound)": {
+      "n_queries": 113,
+      "P@5": 1.0,
+      "P@10": 0.996,
+      "mAP": 0.992,
+      "nDCG": 0.999,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(ii) Predicted phenotypes + gamma (proposed)": {
+      "n_queries": 113,
+      "P@5": 1.0,
+      "P@10": 0.992,
+      "mAP": 0.972,
+      "nDCG": 0.996,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii) Predicted, coverage-blind (no gamma)": {
+      "n_queries": 113,
+      "P@5": 0.984,
+      "P@10": 0.969,
+      "mAP": 0.933,
+      "nDCG": 0.977,
+      "spurious@10": 0.023,
+      "mismatch@10": 0.02
+     },
+     "(iv) Predicted, organ-agnostic baseline": {
+      "n_queries": 113,
+      "P@5": 0.478,
+      "P@10": 0.436,
+      "mAP": 0.493,
+      "nDCG": 0.439,
+      "spurious@10": 0.564,
+      "mismatch@10": 0.55
+     }
+    },
+    "stress": {
+     "(i) Reference phenotypes + gamma (upper bound)": {
+      "n_queries": 113,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.998,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(ii) Predicted phenotypes + gamma (proposed)": {
+      "n_queries": 109,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.999,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii) Predicted, coverage-blind (no gamma)": {
+      "n_queries": 109,
+      "P@5": 1.0,
+      "P@10": 0.989,
+      "mAP": 0.938,
+      "nDCG": 0.993,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iv) Predicted, organ-agnostic baseline": {
+      "n_queries": 109,
+      "P@5": 0.481,
+      "P@10": 0.44,
+      "mAP": 0.327,
+      "nDCG": 0.444,
+      "spurious@10": 0.557,
+      "mismatch@10": 0.56
+     }
+    }
+   }
+  },
+  "provenance": {
+   "pool corpora": "ipkg_delivered/corpora/corpus_single_organ_113.json + corpus_flare23_kg_dedup.json (the pipeline team round 3, 2026-10-03)",
+   "reference corpus": "ipkg_delivered/corpora/corpus_reference_113.json (the pipeline team round 3)",
+   "scorer": "ipkg_delivered/code/_scorer_core.py + ipkg_retrieval.py, imported, never re-implemented",
+   "void fix": "ipkg_scorer_fixed.similarity_fixed / comparable_cats",
+   "sub-site precedence": "ipkg_scorer_fixed.resolve_site (round-2 record, then overlay, then withdrawal, then delivered)",
+   "delivered sub-site words": "each record's own anatomic_location_delivered",
+   "metric layer": "verbatim copy of pipeline_handoff/scripts/retrieval/retrieval_tables_789.py (per_query / agg / paired / holm / mismatch10), checked by --verify",
+   "published values diffed against": "paper/src/JBI/JBI-VKG-Final.tex, cross-checked against pipeline_handoff/results/retrieval/*.json",
+   "hardware": "CPU only; no GPU run, no server touched, no mask opened"
+  }
+ },
+ "tab:retrieval-primary": {
+  "published": {
+   "rows": {
+    "(i)": {
+     "n_queries": 113,
+     "P@5": 1.0,
+     "P@10": 0.996,
+     "mAP": 0.992,
+     "nDCG": 0.999,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Reference phenotypes, support-restricted (upper bound)",
+     "ranks_on": "ref",
+     "mode": "proposed",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": 0.02,
+      "ci95": [
+       0.014,
+       0.025
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0002
+     }
+    },
+    "(ii)": {
+     "n_queries": 113,
+     "P@5": 1.0,
+     "P@10": 0.992,
+     "mAP": 0.972,
+     "nDCG": 0.996,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Predicted phenotypes, support-restricted (proposed)",
+     "ranks_on": "pred",
+     "mode": "proposed"
+    },
+    "(iii)": {
+     "n_queries": 113,
+     "P@5": 0.984,
+     "P@10": 0.969,
+     "mAP": 0.933,
+     "nDCG": 0.977,
+     "spurious@10": 0.023,
+     "mismatch@10": 0.02,
+     "label": "Predicted, coverage-blind (one-sided organs $=$ mismatch)",
+     "ranks_on": "pred",
+     "mode": "coverage_blind",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.039,
+      "ci95": [
+       -0.061,
+       -0.021
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.00015
+     }
+    },
+    "(iii')": {
+     "n_queries": 113,
+     "P@5": 0.973,
+     "P@10": 0.948,
+     "mAP": 0.911,
+     "nDCG": 0.957,
+     "spurious@10": 0.049,
+     "mismatch@10": 0.045,
+     "label": "Predicted, imputed absence (one-sided organs may agree)",
+     "ranks_on": "pred",
+     "mode": "imputed_absent",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.061,
+      "ci95": [
+       -0.088,
+       -0.038
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0001
+     }
+    },
+    "(iv)": {
+     "n_queries": 113,
+     "P@5": 0.478,
+     "P@10": 0.436,
+     "mAP": 0.493,
+     "nDCG": 0.439,
+     "spurious@10": 0.564,
+     "mismatch@10": 0.55,
+     "label": "Predicted, organ-agnostic baseline",
+     "ranks_on": "pred",
+     "mode": "base",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.479,
+      "ci95": [
+       -0.511,
+       -0.446
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 5e-05
+     }
+    }
+   },
+   "by_dataset": {
+    "kits": {
+     "(i)": {
+      "n_queries": 36,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.983,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(ii)": {
+      "n_queries": 36,
+      "P@5": 1.0,
+      "P@10": 0.997,
+      "mAP": 0.932,
+      "nDCG": 0.998,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 36,
+      "P@5": 1.0,
+      "P@10": 0.997,
+      "mAP": 0.932,
+      "nDCG": 0.998,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii')": {
+      "n_queries": 36,
+      "P@5": 0.972,
+      "P@10": 0.969,
+      "mAP": 0.903,
+      "nDCG": 0.97,
+      "spurious@10": 0.028,
+      "mismatch@10": 0.025
+     },
+     "(iv)": {
+      "n_queries": 36,
+      "P@5": 0.928,
+      "P@10": 0.922,
+      "mAP": 0.67,
+      "nDCG": 0.923,
+      "spurious@10": 0.078,
+      "mismatch@10": 0.078
+     }
+    },
+    "lits": {
+     "(i)": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 0.981,
+      "mAP": 0.984,
+      "nDCG": 0.994,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(ii)": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 0.962,
+      "mAP": 0.966,
+      "nDCG": 0.98,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 0.952,
+      "mAP": 0.923,
+      "nDCG": 0.973,
+      "spurious@10": 0.01,
+      "mismatch@10": 0.01
+     },
+     "(iii')": {
+      "n_queries": 21,
+      "P@5": 0.99,
+      "P@10": 0.886,
+      "mAP": 0.871,
+      "nDCG": 0.926,
+      "spurious@10": 0.1,
+      "mismatch@10": 0.1
+     },
+     "(iv)": {
+      "n_queries": 21,
+      "P@5": 0.581,
+      "P@10": 0.329,
+      "mAP": 0.399,
+      "nDCG": 0.39,
+      "spurious@10": 0.671,
+      "mismatch@10": 0.624
+     }
+    },
+    "msd": {
+     "(i)": {
+      "n_queries": 56,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(ii)": {
+      "n_queries": 56,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 56,
+      "P@5": 0.968,
+      "P@10": 0.957,
+      "mAP": 0.938,
+      "nDCG": 0.966,
+      "spurious@10": 0.043,
+      "mismatch@10": 0.037
+     },
+     "(iii')": {
+      "n_queries": 56,
+      "P@5": 0.968,
+      "P@10": 0.957,
+      "mAP": 0.931,
+      "nDCG": 0.96,
+      "spurious@10": 0.043,
+      "mismatch@10": 0.037
+     },
+     "(iv)": {
+      "n_queries": 56,
+      "P@5": 0.15,
+      "P@10": 0.164,
+      "mAP": 0.415,
+      "nDCG": 0.147,
+      "spurious@10": 0.836,
+      "mismatch@10": 0.825
+     }
+    }
+   },
+   "n_queries": 113,
+   "n_candidates": 112
+  },
+  "void_fix": {
+   "rows": {
+    "(i)": {
+     "n_queries": 113,
+     "P@5": 1.0,
+     "P@10": 0.996,
+     "mAP": 0.992,
+     "nDCG": 0.999,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Reference phenotypes, support-restricted (upper bound)",
+     "ranks_on": "ref",
+     "mode": "proposed",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": 0.02,
+      "ci95": [
+       0.014,
+       0.025
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0002
+     }
+    },
+    "(ii)": {
+     "n_queries": 113,
+     "P@5": 1.0,
+     "P@10": 0.992,
+     "mAP": 0.972,
+     "nDCG": 0.996,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Predicted phenotypes, support-restricted (proposed)",
+     "ranks_on": "pred",
+     "mode": "proposed"
+    },
+    "(iii)": {
+     "n_queries": 113,
+     "P@5": 0.984,
+     "P@10": 0.969,
+     "mAP": 0.933,
+     "nDCG": 0.977,
+     "spurious@10": 0.023,
+     "mismatch@10": 0.02,
+     "label": "Predicted, coverage-blind (one-sided organs $=$ mismatch)",
+     "ranks_on": "pred",
+     "mode": "coverage_blind",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.039,
+      "ci95": [
+       -0.061,
+       -0.021
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.00015
+     }
+    },
+    "(iii')": {
+     "n_queries": 113,
+     "P@5": 0.973,
+     "P@10": 0.948,
+     "mAP": 0.911,
+     "nDCG": 0.957,
+     "spurious@10": 0.049,
+     "mismatch@10": 0.045,
+     "label": "Predicted, imputed absence (one-sided organs may agree)",
+     "ranks_on": "pred",
+     "mode": "imputed_absent",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.061,
+      "ci95": [
+       -0.088,
+       -0.038
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0001
+     }
+    },
+    "(iv)": {
+     "n_queries": 113,
+     "P@5": 0.478,
+     "P@10": 0.436,
+     "mAP": 0.493,
+     "nDCG": 0.439,
+     "spurious@10": 0.564,
+     "mismatch@10": 0.55,
+     "label": "Predicted, organ-agnostic baseline",
+     "ranks_on": "pred",
+     "mode": "base",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.479,
+      "ci95": [
+       -0.511,
+       -0.446
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 5e-05
+     }
+    }
+   },
+   "by_dataset": {
+    "kits": {
+     "(i)": {
+      "n_queries": 36,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.983,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(ii)": {
+      "n_queries": 36,
+      "P@5": 1.0,
+      "P@10": 0.997,
+      "mAP": 0.932,
+      "nDCG": 0.998,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 36,
+      "P@5": 1.0,
+      "P@10": 0.997,
+      "mAP": 0.932,
+      "nDCG": 0.998,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii')": {
+      "n_queries": 36,
+      "P@5": 0.972,
+      "P@10": 0.969,
+      "mAP": 0.903,
+      "nDCG": 0.97,
+      "spurious@10": 0.028,
+      "mismatch@10": 0.025
+     },
+     "(iv)": {
+      "n_queries": 36,
+      "P@5": 0.928,
+      "P@10": 0.922,
+      "mAP": 0.67,
+      "nDCG": 0.923,
+      "spurious@10": 0.078,
+      "mismatch@10": 0.078
+     }
+    },
+    "lits": {
+     "(i)": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 0.981,
+      "mAP": 0.984,
+      "nDCG": 0.994,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(ii)": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 0.962,
+      "mAP": 0.966,
+      "nDCG": 0.98,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 0.952,
+      "mAP": 0.923,
+      "nDCG": 0.973,
+      "spurious@10": 0.01,
+      "mismatch@10": 0.01
+     },
+     "(iii')": {
+      "n_queries": 21,
+      "P@5": 0.99,
+      "P@10": 0.886,
+      "mAP": 0.871,
+      "nDCG": 0.926,
+      "spurious@10": 0.1,
+      "mismatch@10": 0.1
+     },
+     "(iv)": {
+      "n_queries": 21,
+      "P@5": 0.581,
+      "P@10": 0.329,
+      "mAP": 0.399,
+      "nDCG": 0.39,
+      "spurious@10": 0.671,
+      "mismatch@10": 0.624
+     }
+    },
+    "msd": {
+     "(i)": {
+      "n_queries": 56,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(ii)": {
+      "n_queries": 56,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 56,
+      "P@5": 0.968,
+      "P@10": 0.957,
+      "mAP": 0.938,
+      "nDCG": 0.966,
+      "spurious@10": 0.043,
+      "mismatch@10": 0.037
+     },
+     "(iii')": {
+      "n_queries": 56,
+      "P@5": 0.968,
+      "P@10": 0.957,
+      "mAP": 0.931,
+      "nDCG": 0.96,
+      "spurious@10": 0.043,
+      "mismatch@10": 0.037
+     },
+     "(iv)": {
+      "n_queries": 56,
+      "P@5": 0.15,
+      "P@10": 0.164,
+      "mAP": 0.415,
+      "nDCG": 0.147,
+      "spurious@10": 0.836,
+      "mismatch@10": 0.825
+     }
+    }
+   },
+   "n_queries": 113,
+   "n_candidates": 112
+  },
+  "subsite_corpus": {
+   "rows": {
+    "(i)": {
+     "n_queries": 113,
+     "P@5": 1.0,
+     "P@10": 0.993,
+     "mAP": 1.0,
+     "nDCG": 1.0,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Reference phenotypes, support-restricted (upper bound)",
+     "ranks_on": "ref",
+     "mode": "proposed",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": 0.033,
+      "ci95": [
+       0.025,
+       0.041
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0002
+     }
+    },
+    "(ii)": {
+     "n_queries": 113,
+     "P@5": 1.0,
+     "P@10": 0.979,
+     "mAP": 0.967,
+     "nDCG": 0.99,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Predicted phenotypes, support-restricted (proposed)",
+     "ranks_on": "pred",
+     "mode": "proposed"
+    },
+    "(iii)": {
+     "n_queries": 113,
+     "P@5": 0.984,
+     "P@10": 0.957,
+     "mAP": 0.934,
+     "nDCG": 0.972,
+     "spurious@10": 0.023,
+     "mismatch@10": 0.02,
+     "label": "Predicted, coverage-blind (one-sided organs $=$ mismatch)",
+     "ranks_on": "pred",
+     "mode": "coverage_blind",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.033,
+      "ci95": [
+       -0.056,
+       -0.016
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.00015
+     }
+    },
+    "(iii')": {
+     "n_queries": 113,
+     "P@5": 0.973,
+     "P@10": 0.943,
+     "mAP": 0.917,
+     "nDCG": 0.957,
+     "spurious@10": 0.049,
+     "mismatch@10": 0.042,
+     "label": "Predicted, imputed absence (one-sided organs may agree)",
+     "ranks_on": "pred",
+     "mode": "imputed_absent",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.05,
+      "ci95": [
+       -0.075,
+       -0.03
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0001
+     }
+    },
+    "(iv)": {
+     "n_queries": 113,
+     "P@5": 0.478,
+     "P@10": 0.435,
+     "mAP": 0.503,
+     "nDCG": 0.439,
+     "spurious@10": 0.564,
+     "mismatch@10": 0.549,
+     "label": "Predicted, organ-agnostic baseline",
+     "ranks_on": "pred",
+     "mode": "base",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.464,
+      "ci95": [
+       -0.5,
+       -0.429
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 5e-05
+     }
+    }
+   },
+   "by_dataset": {
+    "kits": {
+     "(i)": {
+      "n_queries": 36,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(ii)": {
+      "n_queries": 36,
+      "P@5": 1.0,
+      "P@10": 0.992,
+      "mAP": 0.924,
+      "nDCG": 0.994,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 36,
+      "P@5": 1.0,
+      "P@10": 0.992,
+      "mAP": 0.924,
+      "nDCG": 0.994,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii')": {
+      "n_queries": 36,
+      "P@5": 0.972,
+      "P@10": 0.969,
+      "mAP": 0.899,
+      "nDCG": 0.97,
+      "spurious@10": 0.028,
+      "mismatch@10": 0.014
+     },
+     "(iv)": {
+      "n_queries": 36,
+      "P@5": 0.928,
+      "P@10": 0.919,
+      "mAP": 0.684,
+      "nDCG": 0.922,
+      "spurious@10": 0.078,
+      "mismatch@10": 0.078
+     }
+    },
+    "lits": {
+     "(i)": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 0.962,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(ii)": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 0.9,
+      "mAP": 0.953,
+      "nDCG": 0.954,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 0.895,
+      "mAP": 0.938,
+      "nDCG": 0.95,
+      "spurious@10": 0.01,
+      "mismatch@10": 0.01
+     },
+     "(iii')": {
+      "n_queries": 21,
+      "P@5": 0.99,
+      "P@10": 0.862,
+      "mAP": 0.909,
+      "nDCG": 0.924,
+      "spurious@10": 0.1,
+      "mismatch@10": 0.1
+     },
+     "(iv)": {
+      "n_queries": 21,
+      "P@5": 0.581,
+      "P@10": 0.329,
+      "mAP": 0.426,
+      "nDCG": 0.39,
+      "spurious@10": 0.671,
+      "mismatch@10": 0.619
+     }
+    },
+    "msd": {
+     "(i)": {
+      "n_queries": 56,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(ii)": {
+      "n_queries": 56,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 56,
+      "P@5": 0.968,
+      "P@10": 0.957,
+      "mAP": 0.938,
+      "nDCG": 0.966,
+      "spurious@10": 0.043,
+      "mismatch@10": 0.037
+     },
+     "(iii')": {
+      "n_queries": 56,
+      "P@5": 0.968,
+      "P@10": 0.957,
+      "mAP": 0.931,
+      "nDCG": 0.96,
+      "spurious@10": 0.043,
+      "mismatch@10": 0.037
+     },
+     "(iv)": {
+      "n_queries": 56,
+      "P@5": 0.15,
+      "P@10": 0.164,
+      "mAP": 0.415,
+      "nDCG": 0.147,
+      "spurious@10": 0.836,
+      "mismatch@10": 0.825
+     }
+    }
+   },
+   "n_queries": 113,
+   "n_candidates": 112
+  },
+  "subsite_resolved": {
+   "rows": {
+    "(i)": {
+     "n_queries": 113,
+     "P@5": 1.0,
+     "P@10": 0.993,
+     "mAP": 1.0,
+     "nDCG": 1.0,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Reference phenotypes, support-restricted (upper bound)",
+     "ranks_on": "ref",
+     "mode": "proposed",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": 0.033,
+      "ci95": [
+       0.025,
+       0.041
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0002
+     }
+    },
+    "(ii)": {
+     "n_queries": 113,
+     "P@5": 1.0,
+     "P@10": 0.979,
+     "mAP": 0.967,
+     "nDCG": 0.99,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Predicted phenotypes, support-restricted (proposed)",
+     "ranks_on": "pred",
+     "mode": "proposed"
+    },
+    "(iii)": {
+     "n_queries": 113,
+     "P@5": 1.0,
+     "P@10": 0.978,
+     "mAP": 0.961,
+     "nDCG": 0.989,
+     "spurious@10": 0.002,
+     "mismatch@10": 0.002,
+     "label": "Predicted, coverage-blind (one-sided organs $=$ mismatch)",
+     "ranks_on": "pred",
+     "mode": "coverage_blind",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.006,
+      "ci95": [
+       -0.01,
+       -0.003
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.00015
+     }
+    },
+    "(iii')": {
+     "n_queries": 113,
+     "P@5": 0.973,
+     "P@10": 0.943,
+     "mAP": 0.925,
+     "nDCG": 0.959,
+     "spurious@10": 0.049,
+     "mismatch@10": 0.046,
+     "label": "Predicted, imputed absence (one-sided organs may agree)",
+     "ranks_on": "pred",
+     "mode": "imputed_absent",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.042,
+      "ci95": [
+       -0.067,
+       -0.021
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0001
+     }
+    },
+    "(iv)": {
+     "n_queries": 113,
+     "P@5": 0.478,
+     "P@10": 0.435,
+     "mAP": 0.503,
+     "nDCG": 0.439,
+     "spurious@10": 0.564,
+     "mismatch@10": 0.549,
+     "label": "Predicted, organ-agnostic baseline",
+     "ranks_on": "pred",
+     "mode": "base",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.464,
+      "ci95": [
+       -0.5,
+       -0.429
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 5e-05
+     }
+    }
+   },
+   "by_dataset": {
+    "kits": {
+     "(i)": {
+      "n_queries": 36,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(ii)": {
+      "n_queries": 36,
+      "P@5": 1.0,
+      "P@10": 0.992,
+      "mAP": 0.924,
+      "nDCG": 0.994,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 36,
+      "P@5": 1.0,
+      "P@10": 0.992,
+      "mAP": 0.924,
+      "nDCG": 0.994,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii')": {
+      "n_queries": 36,
+      "P@5": 0.972,
+      "P@10": 0.969,
+      "mAP": 0.896,
+      "nDCG": 0.97,
+      "spurious@10": 0.028,
+      "mismatch@10": 0.028
+     },
+     "(iv)": {
+      "n_queries": 36,
+      "P@5": 0.928,
+      "P@10": 0.919,
+      "mAP": 0.684,
+      "nDCG": 0.922,
+      "spurious@10": 0.078,
+      "mismatch@10": 0.078
+     }
+    },
+    "lits": {
+     "(i)": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 0.962,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(ii)": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 0.9,
+      "mAP": 0.953,
+      "nDCG": 0.954,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 0.895,
+      "mAP": 0.938,
+      "nDCG": 0.95,
+      "spurious@10": 0.01,
+      "mismatch@10": 0.01
+     },
+     "(iii')": {
+      "n_queries": 21,
+      "P@5": 0.99,
+      "P@10": 0.862,
+      "mAP": 0.909,
+      "nDCG": 0.924,
+      "spurious@10": 0.1,
+      "mismatch@10": 0.1
+     },
+     "(iv)": {
+      "n_queries": 21,
+      "P@5": 0.581,
+      "P@10": 0.329,
+      "mAP": 0.426,
+      "nDCG": 0.39,
+      "spurious@10": 0.671,
+      "mismatch@10": 0.619
+     }
+    },
+    "msd": {
+     "(i)": {
+      "n_queries": 56,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(ii)": {
+      "n_queries": 56,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 56,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.993,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii')": {
+      "n_queries": 56,
+      "P@5": 0.968,
+      "P@10": 0.957,
+      "mAP": 0.951,
+      "nDCG": 0.966,
+      "spurious@10": 0.043,
+      "mismatch@10": 0.037
+     },
+     "(iv)": {
+      "n_queries": 56,
+      "P@5": 0.15,
+      "P@10": 0.164,
+      "mAP": 0.415,
+      "nDCG": 0.147,
+      "spurious@10": 0.836,
+      "mismatch@10": 0.825
+     }
+    }
+   },
+   "n_queries": 113,
+   "n_candidates": 112
+  },
+  "corpus_voidfix": {
+   "rows": {
+    "(i)": {
+     "n_queries": 113,
+     "P@5": 1.0,
+     "P@10": 0.993,
+     "mAP": 1.0,
+     "nDCG": 1.0,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Reference phenotypes, support-restricted (upper bound)",
+     "ranks_on": "ref",
+     "mode": "proposed",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": 0.033,
+      "ci95": [
+       0.025,
+       0.041
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0002
+     }
+    },
+    "(ii)": {
+     "n_queries": 113,
+     "P@5": 1.0,
+     "P@10": 0.979,
+     "mAP": 0.967,
+     "nDCG": 0.99,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Predicted phenotypes, support-restricted (proposed)",
+     "ranks_on": "pred",
+     "mode": "proposed"
+    },
+    "(iii)": {
+     "n_queries": 113,
+     "P@5": 0.984,
+     "P@10": 0.957,
+     "mAP": 0.934,
+     "nDCG": 0.972,
+     "spurious@10": 0.023,
+     "mismatch@10": 0.02,
+     "label": "Predicted, coverage-blind (one-sided organs $=$ mismatch)",
+     "ranks_on": "pred",
+     "mode": "coverage_blind",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.033,
+      "ci95": [
+       -0.056,
+       -0.016
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.00015
+     }
+    },
+    "(iii')": {
+     "n_queries": 113,
+     "P@5": 0.973,
+     "P@10": 0.943,
+     "mAP": 0.917,
+     "nDCG": 0.957,
+     "spurious@10": 0.049,
+     "mismatch@10": 0.042,
+     "label": "Predicted, imputed absence (one-sided organs may agree)",
+     "ranks_on": "pred",
+     "mode": "imputed_absent",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.05,
+      "ci95": [
+       -0.075,
+       -0.03
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0001
+     }
+    },
+    "(iv)": {
+     "n_queries": 113,
+     "P@5": 0.478,
+     "P@10": 0.435,
+     "mAP": 0.503,
+     "nDCG": 0.439,
+     "spurious@10": 0.564,
+     "mismatch@10": 0.549,
+     "label": "Predicted, organ-agnostic baseline",
+     "ranks_on": "pred",
+     "mode": "base",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.464,
+      "ci95": [
+       -0.5,
+       -0.429
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 5e-05
+     }
+    }
+   },
+   "by_dataset": {
+    "kits": {
+     "(i)": {
+      "n_queries": 36,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(ii)": {
+      "n_queries": 36,
+      "P@5": 1.0,
+      "P@10": 0.992,
+      "mAP": 0.924,
+      "nDCG": 0.994,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 36,
+      "P@5": 1.0,
+      "P@10": 0.992,
+      "mAP": 0.924,
+      "nDCG": 0.994,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii')": {
+      "n_queries": 36,
+      "P@5": 0.972,
+      "P@10": 0.969,
+      "mAP": 0.899,
+      "nDCG": 0.97,
+      "spurious@10": 0.028,
+      "mismatch@10": 0.014
+     },
+     "(iv)": {
+      "n_queries": 36,
+      "P@5": 0.928,
+      "P@10": 0.919,
+      "mAP": 0.684,
+      "nDCG": 0.922,
+      "spurious@10": 0.078,
+      "mismatch@10": 0.078
+     }
+    },
+    "lits": {
+     "(i)": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 0.962,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(ii)": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 0.9,
+      "mAP": 0.953,
+      "nDCG": 0.954,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 0.895,
+      "mAP": 0.938,
+      "nDCG": 0.95,
+      "spurious@10": 0.01,
+      "mismatch@10": 0.01
+     },
+     "(iii')": {
+      "n_queries": 21,
+      "P@5": 0.99,
+      "P@10": 0.862,
+      "mAP": 0.909,
+      "nDCG": 0.924,
+      "spurious@10": 0.1,
+      "mismatch@10": 0.1
+     },
+     "(iv)": {
+      "n_queries": 21,
+      "P@5": 0.581,
+      "P@10": 0.329,
+      "mAP": 0.426,
+      "nDCG": 0.39,
+      "spurious@10": 0.671,
+      "mismatch@10": 0.619
+     }
+    },
+    "msd": {
+     "(i)": {
+      "n_queries": 56,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(ii)": {
+      "n_queries": 56,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 56,
+      "P@5": 0.968,
+      "P@10": 0.957,
+      "mAP": 0.938,
+      "nDCG": 0.966,
+      "spurious@10": 0.043,
+      "mismatch@10": 0.037
+     },
+     "(iii')": {
+      "n_queries": 56,
+      "P@5": 0.968,
+      "P@10": 0.957,
+      "mAP": 0.931,
+      "nDCG": 0.96,
+      "spurious@10": 0.043,
+      "mismatch@10": 0.037
+     },
+     "(iv)": {
+      "n_queries": 56,
+      "P@5": 0.15,
+      "P@10": 0.164,
+      "mAP": 0.415,
+      "nDCG": 0.147,
+      "spurious@10": 0.836,
+      "mismatch@10": 0.825
+     }
+    }
+   },
+   "n_queries": 113,
+   "n_candidates": 112
+  },
+  "corrected": {
+   "rows": {
+    "(i)": {
+     "n_queries": 113,
+     "P@5": 1.0,
+     "P@10": 0.993,
+     "mAP": 1.0,
+     "nDCG": 1.0,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Reference phenotypes, support-restricted (upper bound)",
+     "ranks_on": "ref",
+     "mode": "proposed",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": 0.033,
+      "ci95": [
+       0.025,
+       0.041
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0002
+     }
+    },
+    "(ii)": {
+     "n_queries": 113,
+     "P@5": 1.0,
+     "P@10": 0.979,
+     "mAP": 0.967,
+     "nDCG": 0.99,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Predicted phenotypes, support-restricted (proposed)",
+     "ranks_on": "pred",
+     "mode": "proposed"
+    },
+    "(iii)": {
+     "n_queries": 113,
+     "P@5": 1.0,
+     "P@10": 0.978,
+     "mAP": 0.961,
+     "nDCG": 0.989,
+     "spurious@10": 0.002,
+     "mismatch@10": 0.002,
+     "label": "Predicted, coverage-blind (one-sided organs $=$ mismatch)",
+     "ranks_on": "pred",
+     "mode": "coverage_blind",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.006,
+      "ci95": [
+       -0.01,
+       -0.003
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.00015
+     }
+    },
+    "(iii')": {
+     "n_queries": 113,
+     "P@5": 0.973,
+     "P@10": 0.943,
+     "mAP": 0.928,
+     "nDCG": 0.957,
+     "spurious@10": 0.049,
+     "mismatch@10": 0.042,
+     "label": "Predicted, imputed absence (one-sided organs may agree)",
+     "ranks_on": "pred",
+     "mode": "imputed_absent",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.039,
+      "ci95": [
+       -0.065,
+       -0.019
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0001
+     }
+    },
+    "(iv)": {
+     "n_queries": 113,
+     "P@5": 0.478,
+     "P@10": 0.435,
+     "mAP": 0.503,
+     "nDCG": 0.439,
+     "spurious@10": 0.564,
+     "mismatch@10": 0.549,
+     "label": "Predicted, organ-agnostic baseline",
+     "ranks_on": "pred",
+     "mode": "base",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.464,
+      "ci95": [
+       -0.5,
+       -0.429
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 5e-05
+     }
+    }
+   },
+   "by_dataset": {
+    "kits": {
+     "(i)": {
+      "n_queries": 36,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(ii)": {
+      "n_queries": 36,
+      "P@5": 1.0,
+      "P@10": 0.992,
+      "mAP": 0.924,
+      "nDCG": 0.994,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 36,
+      "P@5": 1.0,
+      "P@10": 0.992,
+      "mAP": 0.924,
+      "nDCG": 0.994,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii')": {
+      "n_queries": 36,
+      "P@5": 0.972,
+      "P@10": 0.969,
+      "mAP": 0.899,
+      "nDCG": 0.97,
+      "spurious@10": 0.028,
+      "mismatch@10": 0.014
+     },
+     "(iv)": {
+      "n_queries": 36,
+      "P@5": 0.928,
+      "P@10": 0.919,
+      "mAP": 0.684,
+      "nDCG": 0.922,
+      "spurious@10": 0.078,
+      "mismatch@10": 0.078
+     }
+    },
+    "lits": {
+     "(i)": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 0.962,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(ii)": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 0.9,
+      "mAP": 0.953,
+      "nDCG": 0.954,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 0.895,
+      "mAP": 0.938,
+      "nDCG": 0.95,
+      "spurious@10": 0.01,
+      "mismatch@10": 0.01
+     },
+     "(iii')": {
+      "n_queries": 21,
+      "P@5": 0.99,
+      "P@10": 0.862,
+      "mAP": 0.909,
+      "nDCG": 0.924,
+      "spurious@10": 0.1,
+      "mismatch@10": 0.1
+     },
+     "(iv)": {
+      "n_queries": 21,
+      "P@5": 0.581,
+      "P@10": 0.329,
+      "mAP": 0.426,
+      "nDCG": 0.39,
+      "spurious@10": 0.671,
+      "mismatch@10": 0.619
+     }
+    },
+    "msd": {
+     "(i)": {
+      "n_queries": 56,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(ii)": {
+      "n_queries": 56,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 56,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.993,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii')": {
+      "n_queries": 56,
+      "P@5": 0.968,
+      "P@10": 0.957,
+      "mAP": 0.953,
+      "nDCG": 0.96,
+      "spurious@10": 0.043,
+      "mismatch@10": 0.037
+     },
+     "(iv)": {
+      "n_queries": 56,
+      "P@5": 0.15,
+      "P@10": 0.164,
+      "mAP": 0.415,
+      "nDCG": 0.147,
+      "spurious@10": 0.836,
+      "mismatch@10": 0.825
+     }
+    }
+   },
+   "n_queries": 113,
+   "n_candidates": 112
+  },
+  "subsite_msd_only": {
+   "rows": {
+    "(i)": {
+     "n_queries": 113,
+     "P@5": 1.0,
+     "P@10": 0.996,
+     "mAP": 0.992,
+     "nDCG": 0.999,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Reference phenotypes, support-restricted (upper bound)",
+     "ranks_on": "ref",
+     "mode": "proposed",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": 0.02,
+      "ci95": [
+       0.014,
+       0.025
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0002
+     }
+    },
+    "(ii)": {
+     "n_queries": 113,
+     "P@5": 1.0,
+     "P@10": 0.992,
+     "mAP": 0.972,
+     "nDCG": 0.996,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Predicted phenotypes, support-restricted (proposed)",
+     "ranks_on": "pred",
+     "mode": "proposed"
+    },
+    "(iii)": {
+     "n_queries": 113,
+     "P@5": 1.0,
+     "P@10": 0.99,
+     "mAP": 0.96,
+     "nDCG": 0.995,
+     "spurious@10": 0.002,
+     "mismatch@10": 0.002,
+     "label": "Predicted, coverage-blind (one-sided organs $=$ mismatch)",
+     "ranks_on": "pred",
+     "mode": "coverage_blind",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.012,
+      "ci95": [
+       -0.019,
+       -0.006
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.00015
+     }
+    },
+    "(iii')": {
+     "n_queries": 113,
+     "P@5": 0.973,
+     "P@10": 0.948,
+     "mAP": 0.919,
+     "nDCG": 0.96,
+     "spurious@10": 0.049,
+     "mismatch@10": 0.048,
+     "label": "Predicted, imputed absence (one-sided organs may agree)",
+     "ranks_on": "pred",
+     "mode": "imputed_absent",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.053,
+      "ci95": [
+       -0.08,
+       -0.03
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0001
+     }
+    },
+    "(iv)": {
+     "n_queries": 113,
+     "P@5": 0.478,
+     "P@10": 0.436,
+     "mAP": 0.493,
+     "nDCG": 0.439,
+     "spurious@10": 0.564,
+     "mismatch@10": 0.551,
+     "label": "Predicted, organ-agnostic baseline",
+     "ranks_on": "pred",
+     "mode": "base",
+     "dmAP_vs_ii": {
+      "n_common": 113,
+      "delta": -0.479,
+      "ci95": [
+       -0.511,
+       -0.446
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 5e-05
+     }
+    }
+   },
+   "by_dataset": {
+    "kits": {
+     "(i)": {
+      "n_queries": 36,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.983,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(ii)": {
+      "n_queries": 36,
+      "P@5": 1.0,
+      "P@10": 0.997,
+      "mAP": 0.932,
+      "nDCG": 0.998,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 36,
+      "P@5": 1.0,
+      "P@10": 0.997,
+      "mAP": 0.932,
+      "nDCG": 0.998,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii')": {
+      "n_queries": 36,
+      "P@5": 0.972,
+      "P@10": 0.969,
+      "mAP": 0.9,
+      "nDCG": 0.97,
+      "spurious@10": 0.028,
+      "mismatch@10": 0.028
+     },
+     "(iv)": {
+      "n_queries": 36,
+      "P@5": 0.928,
+      "P@10": 0.922,
+      "mAP": 0.67,
+      "nDCG": 0.923,
+      "spurious@10": 0.078,
+      "mismatch@10": 0.078
+     }
+    },
+    "lits": {
+     "(i)": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 0.981,
+      "mAP": 0.984,
+      "nDCG": 0.994,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(ii)": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 0.962,
+      "mAP": 0.966,
+      "nDCG": 0.98,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 0.952,
+      "mAP": 0.923,
+      "nDCG": 0.973,
+      "spurious@10": 0.01,
+      "mismatch@10": 0.01
+     },
+     "(iii')": {
+      "n_queries": 21,
+      "P@5": 0.99,
+      "P@10": 0.886,
+      "mAP": 0.869,
+      "nDCG": 0.926,
+      "spurious@10": 0.1,
+      "mismatch@10": 0.1
+     },
+     "(iv)": {
+      "n_queries": 21,
+      "P@5": 0.581,
+      "P@10": 0.329,
+      "mAP": 0.399,
+      "nDCG": 0.39,
+      "spurious@10": 0.671,
+      "mismatch@10": 0.624
+     }
+    },
+    "msd": {
+     "(i)": {
+      "n_queries": 56,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(ii)": {
+      "n_queries": 56,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 56,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.993,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii')": {
+      "n_queries": 56,
+      "P@5": 0.968,
+      "P@10": 0.957,
+      "mAP": 0.951,
+      "nDCG": 0.966,
+      "spurious@10": 0.043,
+      "mismatch@10": 0.041
+     },
+     "(iv)": {
+      "n_queries": 56,
+      "P@5": 0.15,
+      "P@10": 0.164,
+      "mAP": 0.415,
+      "nDCG": 0.147,
+      "spurious@10": 0.836,
+      "mismatch@10": 0.829
+     }
+    }
+   },
+   "n_queries": 113,
+   "n_candidates": 112
+  }
+ },
+ "tab:retrieval": {
+  "published": {
+   "rows": {
+    "(ii)": {
+     "n_queries": 109,
+     "P@5": 1.0,
+     "P@10": 1.0,
+     "mAP": 0.999,
+     "nDCG": 1.0,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Predicted phenotypes, support-restricted (proposed)",
+     "ranks_on": "pred",
+     "mode": "proposed"
+    },
+    "(iii)": {
+     "n_queries": 109,
+     "P@5": 1.0,
+     "P@10": 0.989,
+     "mAP": 0.937,
+     "nDCG": 0.993,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Predicted, coverage-blind (one-sided organs $=$ mismatch)",
+     "ranks_on": "pred",
+     "mode": "coverage_blind",
+     "dmAP_vs_ii": {
+      "n_common": 109,
+      "delta": -0.061,
+      "ci95": [
+       -0.074,
+       -0.05
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.00015
+     }
+    },
+    "(iii')": {
+     "n_queries": 109,
+     "P@5": 1.0,
+     "P@10": 0.995,
+     "mAP": 0.731,
+     "nDCG": 0.997,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Predicted, imputed absence (one-sided organs may agree)",
+     "ranks_on": "pred",
+     "mode": "imputed_absent",
+     "dmAP_vs_ii": {
+      "n_common": 109,
+      "delta": -0.268,
+      "ci95": [
+       -0.287,
+       -0.249
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0001
+     }
+    },
+    "(iv)": {
+     "n_queries": 109,
+     "P@5": 0.481,
+     "P@10": 0.44,
+     "mAP": 0.334,
+     "nDCG": 0.444,
+     "spurious@10": 0.557,
+     "mismatch@10": 0.56,
+     "label": "Predicted, organ-agnostic baseline",
+     "ranks_on": "pred",
+     "mode": "base",
+     "dmAP_vs_ii": {
+      "n_common": 109,
+      "delta": -0.665,
+      "ci95": [
+       -0.699,
+       -0.63
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 5e-05
+     }
+    }
+   },
+   "by_dataset": {
+    "kits": {
+     "(ii)": {
+      "n_queries": 35,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.999,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 35,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.976,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii')": {
+      "n_queries": 35,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.706,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iv)": {
+      "n_queries": 35,
+      "P@5": 0.943,
+      "P@10": 0.929,
+      "mAP": 0.592,
+      "nDCG": 0.935,
+      "spurious@10": 0.071,
+      "mismatch@10": 0.071
+     }
+    },
+    "lits": {
+     "(ii)": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.995,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 0.943,
+      "mAP": 0.903,
+      "nDCG": 0.961,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii')": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 0.976,
+      "mAP": 0.702,
+      "nDCG": 0.983,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iv)": {
+      "n_queries": 21,
+      "P@5": 0.581,
+      "P@10": 0.329,
+      "mAP": 0.194,
+      "nDCG": 0.39,
+      "spurious@10": 0.657,
+      "mismatch@10": 0.671
+     }
+    },
+    "msd": {
+     "(ii)": {
+      "n_queries": 53,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 53,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.926,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii')": {
+      "n_queries": 53,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.759,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iv)": {
+      "n_queries": 53,
+      "P@5": 0.136,
+      "P@10": 0.162,
+      "mAP": 0.219,
+      "nDCG": 0.141,
+      "spurious@10": 0.838,
+      "mismatch@10": 0.838
+     }
+    }
+   },
+   "n_queries": 113,
+   "n_pool": 1311
+  },
+  "void_fix": {
+   "rows": {
+    "(ii)": {
+     "n_queries": 109,
+     "P@5": 1.0,
+     "P@10": 1.0,
+     "mAP": 0.999,
+     "nDCG": 1.0,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Predicted phenotypes, support-restricted (proposed)",
+     "ranks_on": "pred",
+     "mode": "proposed"
+    },
+    "(iii)": {
+     "n_queries": 109,
+     "P@5": 1.0,
+     "P@10": 0.989,
+     "mAP": 0.937,
+     "nDCG": 0.993,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Predicted, coverage-blind (one-sided organs $=$ mismatch)",
+     "ranks_on": "pred",
+     "mode": "coverage_blind",
+     "dmAP_vs_ii": {
+      "n_common": 109,
+      "delta": -0.061,
+      "ci95": [
+       -0.074,
+       -0.05
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.00015
+     }
+    },
+    "(iii')": {
+     "n_queries": 109,
+     "P@5": 1.0,
+     "P@10": 0.995,
+     "mAP": 0.731,
+     "nDCG": 0.997,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Predicted, imputed absence (one-sided organs may agree)",
+     "ranks_on": "pred",
+     "mode": "imputed_absent",
+     "dmAP_vs_ii": {
+      "n_common": 109,
+      "delta": -0.268,
+      "ci95": [
+       -0.287,
+       -0.249
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0001
+     }
+    },
+    "(iv)": {
+     "n_queries": 109,
+     "P@5": 0.481,
+     "P@10": 0.44,
+     "mAP": 0.334,
+     "nDCG": 0.444,
+     "spurious@10": 0.557,
+     "mismatch@10": 0.56,
+     "label": "Predicted, organ-agnostic baseline",
+     "ranks_on": "pred",
+     "mode": "base",
+     "dmAP_vs_ii": {
+      "n_common": 109,
+      "delta": -0.665,
+      "ci95": [
+       -0.699,
+       -0.63
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 5e-05
+     }
+    }
+   },
+   "by_dataset": {
+    "kits": {
+     "(ii)": {
+      "n_queries": 35,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.999,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 35,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.976,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii')": {
+      "n_queries": 35,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.706,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iv)": {
+      "n_queries": 35,
+      "P@5": 0.943,
+      "P@10": 0.929,
+      "mAP": 0.592,
+      "nDCG": 0.935,
+      "spurious@10": 0.071,
+      "mismatch@10": 0.071
+     }
+    },
+    "lits": {
+     "(ii)": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.995,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 0.943,
+      "mAP": 0.903,
+      "nDCG": 0.961,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii')": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 0.976,
+      "mAP": 0.702,
+      "nDCG": 0.983,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iv)": {
+      "n_queries": 21,
+      "P@5": 0.581,
+      "P@10": 0.329,
+      "mAP": 0.194,
+      "nDCG": 0.39,
+      "spurious@10": 0.657,
+      "mismatch@10": 0.671
+     }
+    },
+    "msd": {
+     "(ii)": {
+      "n_queries": 53,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 53,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.926,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii')": {
+      "n_queries": 53,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.759,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iv)": {
+      "n_queries": 53,
+      "P@5": 0.136,
+      "P@10": 0.162,
+      "mAP": 0.219,
+      "nDCG": 0.141,
+      "spurious@10": 0.838,
+      "mismatch@10": 0.838
+     }
+    }
+   },
+   "n_queries": 113,
+   "n_pool": 1311
+  },
+  "subsite_corpus": {
+   "rows": {
+    "(ii)": {
+     "n_queries": 109,
+     "P@5": 1.0,
+     "P@10": 1.0,
+     "mAP": 1.0,
+     "nDCG": 1.0,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Predicted phenotypes, support-restricted (proposed)",
+     "ranks_on": "pred",
+     "mode": "proposed"
+    },
+    "(iii)": {
+     "n_queries": 109,
+     "P@5": 0.998,
+     "P@10": 0.98,
+     "mAP": 0.938,
+     "nDCG": 0.986,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Predicted, coverage-blind (one-sided organs $=$ mismatch)",
+     "ranks_on": "pred",
+     "mode": "coverage_blind",
+     "dmAP_vs_ii": {
+      "n_common": 109,
+      "delta": -0.062,
+      "ci95": [
+       -0.079,
+       -0.046
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.00015
+     }
+    },
+    "(iii')": {
+     "n_queries": 109,
+     "P@5": 1.0,
+     "P@10": 0.995,
+     "mAP": 0.743,
+     "nDCG": 0.997,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Predicted, imputed absence (one-sided organs may agree)",
+     "ranks_on": "pred",
+     "mode": "imputed_absent",
+     "dmAP_vs_ii": {
+      "n_common": 109,
+      "delta": -0.257,
+      "ci95": [
+       -0.276,
+       -0.238
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0001
+     }
+    },
+    "(iv)": {
+     "n_queries": 109,
+     "P@5": 0.481,
+     "P@10": 0.44,
+     "mAP": 0.337,
+     "nDCG": 0.444,
+     "spurious@10": 0.557,
+     "mismatch@10": 0.56,
+     "label": "Predicted, organ-agnostic baseline",
+     "ranks_on": "pred",
+     "mode": "base",
+     "dmAP_vs_ii": {
+      "n_common": 109,
+      "delta": -0.663,
+      "ci95": [
+       -0.696,
+       -0.628
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 5e-05
+     }
+    }
+   },
+   "by_dataset": {
+    "kits": {
+     "(ii)": {
+      "n_queries": 35,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 35,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.966,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii')": {
+      "n_queries": 35,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.715,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iv)": {
+      "n_queries": 35,
+      "P@5": 0.943,
+      "P@10": 0.929,
+      "mAP": 0.591,
+      "nDCG": 0.935,
+      "spurious@10": 0.071,
+      "mismatch@10": 0.071
+     }
+    },
+    "lits": {
+     "(ii)": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 21,
+      "P@5": 0.99,
+      "P@10": 0.895,
+      "mAP": 0.842,
+      "nDCG": 0.928,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii')": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 0.976,
+      "mAP": 0.76,
+      "nDCG": 0.983,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iv)": {
+      "n_queries": 21,
+      "P@5": 0.581,
+      "P@10": 0.329,
+      "mAP": 0.193,
+      "nDCG": 0.39,
+      "spurious@10": 0.657,
+      "mismatch@10": 0.671
+     }
+    },
+    "msd": {
+     "(ii)": {
+      "n_queries": 53,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 53,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.958,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii')": {
+      "n_queries": 53,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.755,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iv)": {
+      "n_queries": 53,
+      "P@5": 0.136,
+      "P@10": 0.162,
+      "mAP": 0.226,
+      "nDCG": 0.141,
+      "spurious@10": 0.838,
+      "mismatch@10": 0.838
+     }
+    }
+   },
+   "n_queries": 113,
+   "n_pool": 1311
+  },
+  "subsite_resolved": {
+   "rows": {
+    "(ii)": {
+     "n_queries": 109,
+     "P@5": 1.0,
+     "P@10": 1.0,
+     "mAP": 1.0,
+     "nDCG": 1.0,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Predicted phenotypes, support-restricted (proposed)",
+     "ranks_on": "pred",
+     "mode": "proposed"
+    },
+    "(iii)": {
+     "n_queries": 109,
+     "P@5": 0.998,
+     "P@10": 0.98,
+     "mAP": 0.915,
+     "nDCG": 0.986,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Predicted, coverage-blind (one-sided organs $=$ mismatch)",
+     "ranks_on": "pred",
+     "mode": "coverage_blind",
+     "dmAP_vs_ii": {
+      "n_common": 109,
+      "delta": -0.084,
+      "ci95": [
+       -0.102,
+       -0.068
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.00015
+     }
+    },
+    "(iii')": {
+     "n_queries": 109,
+     "P@5": 1.0,
+     "P@10": 0.995,
+     "mAP": 0.736,
+     "nDCG": 0.997,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Predicted, imputed absence (one-sided organs may agree)",
+     "ranks_on": "pred",
+     "mode": "imputed_absent",
+     "dmAP_vs_ii": {
+      "n_common": 109,
+      "delta": -0.263,
+      "ci95": [
+       -0.284,
+       -0.243
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0001
+     }
+    },
+    "(iv)": {
+     "n_queries": 109,
+     "P@5": 0.481,
+     "P@10": 0.44,
+     "mAP": 0.334,
+     "nDCG": 0.444,
+     "spurious@10": 0.557,
+     "mismatch@10": 0.56,
+     "label": "Predicted, organ-agnostic baseline",
+     "ranks_on": "pred",
+     "mode": "base",
+     "dmAP_vs_ii": {
+      "n_common": 109,
+      "delta": -0.666,
+      "ci95": [
+       -0.7,
+       -0.631
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 5e-05
+     }
+    }
+   },
+   "by_dataset": {
+    "kits": {
+     "(ii)": {
+      "n_queries": 35,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 35,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.966,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii')": {
+      "n_queries": 35,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.715,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iv)": {
+      "n_queries": 35,
+      "P@5": 0.943,
+      "P@10": 0.929,
+      "mAP": 0.591,
+      "nDCG": 0.935,
+      "spurious@10": 0.071,
+      "mismatch@10": 0.071
+     }
+    },
+    "lits": {
+     "(ii)": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 21,
+      "P@5": 0.99,
+      "P@10": 0.895,
+      "mAP": 0.842,
+      "nDCG": 0.928,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii')": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 0.976,
+      "mAP": 0.76,
+      "nDCG": 0.983,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iv)": {
+      "n_queries": 21,
+      "P@5": 0.581,
+      "P@10": 0.329,
+      "mAP": 0.193,
+      "nDCG": 0.39,
+      "spurious@10": 0.657,
+      "mismatch@10": 0.671
+     }
+    },
+    "msd": {
+     "(ii)": {
+      "n_queries": 53,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 53,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.911,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii')": {
+      "n_queries": 53,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.741,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iv)": {
+      "n_queries": 53,
+      "P@5": 0.136,
+      "P@10": 0.162,
+      "mAP": 0.22,
+      "nDCG": 0.141,
+      "spurious@10": 0.838,
+      "mismatch@10": 0.838
+     }
+    }
+   },
+   "n_queries": 113,
+   "n_pool": 1311
+  },
+  "corpus_voidfix": {
+   "rows": {
+    "(ii)": {
+     "n_queries": 109,
+     "P@5": 1.0,
+     "P@10": 1.0,
+     "mAP": 1.0,
+     "nDCG": 1.0,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Predicted phenotypes, support-restricted (proposed)",
+     "ranks_on": "pred",
+     "mode": "proposed"
+    },
+    "(iii)": {
+     "n_queries": 109,
+     "P@5": 0.998,
+     "P@10": 0.98,
+     "mAP": 0.938,
+     "nDCG": 0.986,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Predicted, coverage-blind (one-sided organs $=$ mismatch)",
+     "ranks_on": "pred",
+     "mode": "coverage_blind",
+     "dmAP_vs_ii": {
+      "n_common": 109,
+      "delta": -0.062,
+      "ci95": [
+       -0.079,
+       -0.046
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.00015
+     }
+    },
+    "(iii')": {
+     "n_queries": 109,
+     "P@5": 1.0,
+     "P@10": 0.995,
+     "mAP": 0.743,
+     "nDCG": 0.997,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Predicted, imputed absence (one-sided organs may agree)",
+     "ranks_on": "pred",
+     "mode": "imputed_absent",
+     "dmAP_vs_ii": {
+      "n_common": 109,
+      "delta": -0.257,
+      "ci95": [
+       -0.276,
+       -0.238
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0001
+     }
+    },
+    "(iv)": {
+     "n_queries": 109,
+     "P@5": 0.481,
+     "P@10": 0.44,
+     "mAP": 0.337,
+     "nDCG": 0.444,
+     "spurious@10": 0.557,
+     "mismatch@10": 0.56,
+     "label": "Predicted, organ-agnostic baseline",
+     "ranks_on": "pred",
+     "mode": "base",
+     "dmAP_vs_ii": {
+      "n_common": 109,
+      "delta": -0.663,
+      "ci95": [
+       -0.696,
+       -0.628
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 5e-05
+     }
+    }
+   },
+   "by_dataset": {
+    "kits": {
+     "(ii)": {
+      "n_queries": 35,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 35,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.966,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii')": {
+      "n_queries": 35,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.715,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iv)": {
+      "n_queries": 35,
+      "P@5": 0.943,
+      "P@10": 0.929,
+      "mAP": 0.591,
+      "nDCG": 0.935,
+      "spurious@10": 0.071,
+      "mismatch@10": 0.071
+     }
+    },
+    "lits": {
+     "(ii)": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 21,
+      "P@5": 0.99,
+      "P@10": 0.895,
+      "mAP": 0.842,
+      "nDCG": 0.928,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii')": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 0.976,
+      "mAP": 0.76,
+      "nDCG": 0.983,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iv)": {
+      "n_queries": 21,
+      "P@5": 0.581,
+      "P@10": 0.329,
+      "mAP": 0.193,
+      "nDCG": 0.39,
+      "spurious@10": 0.657,
+      "mismatch@10": 0.671
+     }
+    },
+    "msd": {
+     "(ii)": {
+      "n_queries": 53,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 53,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.958,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii')": {
+      "n_queries": 53,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.755,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iv)": {
+      "n_queries": 53,
+      "P@5": 0.136,
+      "P@10": 0.162,
+      "mAP": 0.226,
+      "nDCG": 0.141,
+      "spurious@10": 0.838,
+      "mismatch@10": 0.838
+     }
+    }
+   },
+   "n_queries": 113,
+   "n_pool": 1311
+  },
+  "corrected": {
+   "rows": {
+    "(ii)": {
+     "n_queries": 109,
+     "P@5": 1.0,
+     "P@10": 1.0,
+     "mAP": 1.0,
+     "nDCG": 1.0,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Predicted phenotypes, support-restricted (proposed)",
+     "ranks_on": "pred",
+     "mode": "proposed"
+    },
+    "(iii)": {
+     "n_queries": 109,
+     "P@5": 0.998,
+     "P@10": 0.98,
+     "mAP": 0.916,
+     "nDCG": 0.986,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Predicted, coverage-blind (one-sided organs $=$ mismatch)",
+     "ranks_on": "pred",
+     "mode": "coverage_blind",
+     "dmAP_vs_ii": {
+      "n_common": 109,
+      "delta": -0.084,
+      "ci95": [
+       -0.101,
+       -0.068
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.00015
+     }
+    },
+    "(iii')": {
+     "n_queries": 109,
+     "P@5": 1.0,
+     "P@10": 0.995,
+     "mAP": 0.749,
+     "nDCG": 0.997,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Predicted, imputed absence (one-sided organs may agree)",
+     "ranks_on": "pred",
+     "mode": "imputed_absent",
+     "dmAP_vs_ii": {
+      "n_common": 109,
+      "delta": -0.251,
+      "ci95": [
+       -0.271,
+       -0.232
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0001
+     }
+    },
+    "(iv)": {
+     "n_queries": 109,
+     "P@5": 0.481,
+     "P@10": 0.44,
+     "mAP": 0.334,
+     "nDCG": 0.444,
+     "spurious@10": 0.557,
+     "mismatch@10": 0.56,
+     "label": "Predicted, organ-agnostic baseline",
+     "ranks_on": "pred",
+     "mode": "base",
+     "dmAP_vs_ii": {
+      "n_common": 109,
+      "delta": -0.666,
+      "ci95": [
+       -0.7,
+       -0.631
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 5e-05
+     }
+    }
+   },
+   "by_dataset": {
+    "kits": {
+     "(ii)": {
+      "n_queries": 35,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 35,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.966,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii')": {
+      "n_queries": 35,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.715,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iv)": {
+      "n_queries": 35,
+      "P@5": 0.943,
+      "P@10": 0.929,
+      "mAP": 0.591,
+      "nDCG": 0.935,
+      "spurious@10": 0.071,
+      "mismatch@10": 0.071
+     }
+    },
+    "lits": {
+     "(ii)": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 21,
+      "P@5": 0.99,
+      "P@10": 0.895,
+      "mAP": 0.842,
+      "nDCG": 0.928,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii')": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 0.976,
+      "mAP": 0.76,
+      "nDCG": 0.983,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iv)": {
+      "n_queries": 21,
+      "P@5": 0.581,
+      "P@10": 0.329,
+      "mAP": 0.193,
+      "nDCG": 0.39,
+      "spurious@10": 0.657,
+      "mismatch@10": 0.671
+     }
+    },
+    "msd": {
+     "(ii)": {
+      "n_queries": 53,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 53,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.912,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii')": {
+      "n_queries": 53,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.767,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iv)": {
+      "n_queries": 53,
+      "P@5": 0.136,
+      "P@10": 0.162,
+      "mAP": 0.22,
+      "nDCG": 0.141,
+      "spurious@10": 0.838,
+      "mismatch@10": 0.838
+     }
+    }
+   },
+   "n_queries": 113,
+   "n_pool": 1311
+  },
+  "subsite_msd_only": {
+   "rows": {
+    "(ii)": {
+     "n_queries": 109,
+     "P@5": 1.0,
+     "P@10": 1.0,
+     "mAP": 0.997,
+     "nDCG": 1.0,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Predicted phenotypes, support-restricted (proposed)",
+     "ranks_on": "pred",
+     "mode": "proposed"
+    },
+    "(iii)": {
+     "n_queries": 109,
+     "P@5": 1.0,
+     "P@10": 0.989,
+     "mAP": 0.93,
+     "nDCG": 0.993,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Predicted, coverage-blind (one-sided organs $=$ mismatch)",
+     "ranks_on": "pred",
+     "mode": "coverage_blind",
+     "dmAP_vs_ii": {
+      "n_common": 109,
+      "delta": -0.066,
+      "ci95": [
+       -0.08,
+       -0.054
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.00015
+     }
+    },
+    "(iii')": {
+     "n_queries": 109,
+     "P@5": 1.0,
+     "P@10": 0.995,
+     "mAP": 0.724,
+     "nDCG": 0.997,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0,
+     "label": "Predicted, imputed absence (one-sided organs may agree)",
+     "ranks_on": "pred",
+     "mode": "imputed_absent",
+     "dmAP_vs_ii": {
+      "n_common": 109,
+      "delta": -0.272,
+      "ci95": [
+       -0.294,
+       -0.252
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0001
+     }
+    },
+    "(iv)": {
+     "n_queries": 109,
+     "P@5": 0.481,
+     "P@10": 0.44,
+     "mAP": 0.334,
+     "nDCG": 0.444,
+     "spurious@10": 0.557,
+     "mismatch@10": 0.56,
+     "label": "Predicted, organ-agnostic baseline",
+     "ranks_on": "pred",
+     "mode": "base",
+     "dmAP_vs_ii": {
+      "n_common": 109,
+      "delta": -0.662,
+      "ci95": [
+       -0.696,
+       -0.628
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 5e-05
+     }
+    }
+   },
+   "by_dataset": {
+    "kits": {
+     "(ii)": {
+      "n_queries": 35,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.999,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 35,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.976,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii')": {
+      "n_queries": 35,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.706,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iv)": {
+      "n_queries": 35,
+      "P@5": 0.943,
+      "P@10": 0.929,
+      "mAP": 0.592,
+      "nDCG": 0.935,
+      "spurious@10": 0.071,
+      "mismatch@10": 0.071
+     }
+    },
+    "lits": {
+     "(ii)": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.995,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 0.943,
+      "mAP": 0.903,
+      "nDCG": 0.961,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii')": {
+      "n_queries": 21,
+      "P@5": 1.0,
+      "P@10": 0.976,
+      "mAP": 0.702,
+      "nDCG": 0.983,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iv)": {
+      "n_queries": 21,
+      "P@5": 0.581,
+      "P@10": 0.329,
+      "mAP": 0.194,
+      "nDCG": 0.39,
+      "spurious@10": 0.657,
+      "mismatch@10": 0.671
+     }
+    },
+    "msd": {
+     "(ii)": {
+      "n_queries": 53,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.996,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii)": {
+      "n_queries": 53,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.911,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iii')": {
+      "n_queries": 53,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 0.745,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "(iv)": {
+      "n_queries": 53,
+      "P@5": 0.136,
+      "P@10": 0.162,
+      "mAP": 0.22,
+      "nDCG": 0.141,
+      "spurious@10": 0.838,
+      "mismatch@10": 0.838
+     }
+    }
+   },
+   "n_queries": 113,
+   "n_pool": 1311
+  }
+ },
+ "tab:retrieval-strata": {
+  "published": {
+   "(a) within-dataset control": {
+    "per_dataset": {
+     "kits": {
+      "proposed": {
+       "n_queries": 35,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 0.994,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "coverage_blind": {
+       "n_queries": 35,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 0.994,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "imputed_absent": {
+       "n_queries": 35,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 0.994,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "rankings_identical": {
+       "proposed": true,
+       "coverage_blind": true,
+       "imputed_absent": true
+      }
+     },
+     "lits": {
+      "proposed": {
+       "n_queries": 21,
+       "P@5": 1.0,
+       "P@10": 0.933,
+       "mAP": 0.977,
+       "nDCG": 0.977,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "coverage_blind": {
+       "n_queries": 21,
+       "P@5": 1.0,
+       "P@10": 0.933,
+       "mAP": 0.977,
+       "nDCG": 0.977,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "imputed_absent": {
+       "n_queries": 21,
+       "P@5": 1.0,
+       "P@10": 0.933,
+       "mAP": 0.977,
+       "nDCG": 0.977,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "rankings_identical": {
+       "proposed": true,
+       "coverage_blind": true,
+       "imputed_absent": true
+      }
+     },
+     "msd": {
+      "proposed": {
+       "n_queries": 53,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "coverage_blind": {
+       "n_queries": 53,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "imputed_absent": {
+       "n_queries": 53,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "rankings_identical": {
+       "proposed": true,
+       "coverage_blind": true,
+       "imputed_absent": true
+      }
+     }
+    },
+    "pooled": {
+     "proposed": {
+      "n_queries": 109,
+      "P@5": 1.0,
+      "P@10": 0.987,
+      "mAP": 0.994,
+      "nDCG": 0.996,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "coverage_blind": {
+      "n_queries": 109,
+      "P@5": 1.0,
+      "P@10": 0.987,
+      "mAP": 0.994,
+      "nDCG": 0.996,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "imputed_absent": {
+      "n_queries": 109,
+      "P@5": 1.0,
+      "P@10": 0.987,
+      "mAP": 0.994,
+      "nDCG": 0.996,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     }
+    },
+    "identity_check_passed": true,
+    "note": "identity check, no p-value"
+   },
+   "(b) single-organ -> FLARE23": {
+    "rows": {
+     "proposed": {
+      "n_queries": 109,
+      "P@5": 1.0,
+      "P@10": 0.995,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "coverage_blind": {
+      "n_queries": 109,
+      "P@5": 1.0,
+      "P@10": 0.995,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "imputed_absent": {
+      "n_queries": 109,
+      "P@5": 1.0,
+      "P@10": 0.995,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     }
+    },
+    "delta_obs": {
+     "(iii)": {
+      "n_common": 109,
+      "delta": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "p_raw": 1.0,
+      "p_holm": 1.0
+     },
+     "(iii')": {
+      "n_common": 109,
+      "delta": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "p_raw": 1.0,
+      "p_holm": 1.0
+     }
+    }
+   },
+   "(c) FLARE23 -> single-organ": {
+    "rows": {
+     "proposed": {
+      "n_queries": 480,
+      "P@5": 0.533,
+      "P@10": 0.713,
+      "mAP": 0.66,
+      "nDCG": 0.644,
+      "spurious@10": 0.0,
+      "mismatch@10": null
+     },
+     "coverage_blind": {
+      "n_queries": 480,
+      "P@5": 0.533,
+      "P@10": 0.713,
+      "mAP": 0.66,
+      "nDCG": 0.644,
+      "spurious@10": 0.0,
+      "mismatch@10": null
+     },
+     "imputed_absent": {
+      "n_queries": 480,
+      "P@5": 0.921,
+      "P@10": 0.845,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": null
+     }
+    },
+    "delta_obs": {
+     "(iii)": {
+      "n_common": 480,
+      "delta": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "p_raw": 1.0,
+      "p_holm": 1.0
+     },
+     "(iii')": {
+      "n_common": 480,
+      "delta": -0.34,
+      "ci95": [
+       -0.358,
+       -0.321
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0002
+     }
+    }
+   }
+  },
+  "void_fix": {
+   "(a) within-dataset control": {
+    "per_dataset": {
+     "kits": {
+      "proposed": {
+       "n_queries": 35,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 0.994,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "coverage_blind": {
+       "n_queries": 35,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 0.994,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "imputed_absent": {
+       "n_queries": 35,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 0.994,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "rankings_identical": {
+       "proposed": true,
+       "coverage_blind": true,
+       "imputed_absent": true
+      }
+     },
+     "lits": {
+      "proposed": {
+       "n_queries": 21,
+       "P@5": 1.0,
+       "P@10": 0.933,
+       "mAP": 0.977,
+       "nDCG": 0.977,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "coverage_blind": {
+       "n_queries": 21,
+       "P@5": 1.0,
+       "P@10": 0.933,
+       "mAP": 0.977,
+       "nDCG": 0.977,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "imputed_absent": {
+       "n_queries": 21,
+       "P@5": 1.0,
+       "P@10": 0.933,
+       "mAP": 0.977,
+       "nDCG": 0.977,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "rankings_identical": {
+       "proposed": true,
+       "coverage_blind": true,
+       "imputed_absent": true
+      }
+     },
+     "msd": {
+      "proposed": {
+       "n_queries": 53,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "coverage_blind": {
+       "n_queries": 53,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "imputed_absent": {
+       "n_queries": 53,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "rankings_identical": {
+       "proposed": true,
+       "coverage_blind": true,
+       "imputed_absent": true
+      }
+     }
+    },
+    "pooled": {
+     "proposed": {
+      "n_queries": 109,
+      "P@5": 1.0,
+      "P@10": 0.987,
+      "mAP": 0.994,
+      "nDCG": 0.996,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "coverage_blind": {
+      "n_queries": 109,
+      "P@5": 1.0,
+      "P@10": 0.987,
+      "mAP": 0.994,
+      "nDCG": 0.996,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "imputed_absent": {
+      "n_queries": 109,
+      "P@5": 1.0,
+      "P@10": 0.987,
+      "mAP": 0.994,
+      "nDCG": 0.996,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     }
+    },
+    "identity_check_passed": true,
+    "note": "identity check, no p-value"
+   },
+   "(b) single-organ -> FLARE23": {
+    "rows": {
+     "proposed": {
+      "n_queries": 109,
+      "P@5": 1.0,
+      "P@10": 0.995,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "coverage_blind": {
+      "n_queries": 109,
+      "P@5": 1.0,
+      "P@10": 0.995,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "imputed_absent": {
+      "n_queries": 109,
+      "P@5": 1.0,
+      "P@10": 0.995,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     }
+    },
+    "delta_obs": {
+     "(iii)": {
+      "n_common": 109,
+      "delta": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "p_raw": 1.0,
+      "p_holm": 1.0
+     },
+     "(iii')": {
+      "n_common": 109,
+      "delta": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "p_raw": 1.0,
+      "p_holm": 1.0
+     }
+    }
+   },
+   "(c) FLARE23 -> single-organ": {
+    "rows": {
+     "proposed": {
+      "n_queries": 480,
+      "P@5": 0.533,
+      "P@10": 0.713,
+      "mAP": 0.66,
+      "nDCG": 0.644,
+      "spurious@10": 0.0,
+      "mismatch@10": null
+     },
+     "coverage_blind": {
+      "n_queries": 480,
+      "P@5": 0.533,
+      "P@10": 0.713,
+      "mAP": 0.66,
+      "nDCG": 0.644,
+      "spurious@10": 0.0,
+      "mismatch@10": null
+     },
+     "imputed_absent": {
+      "n_queries": 480,
+      "P@5": 0.921,
+      "P@10": 0.845,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": null
+     }
+    },
+    "delta_obs": {
+     "(iii)": {
+      "n_common": 480,
+      "delta": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "p_raw": 1.0,
+      "p_holm": 1.0
+     },
+     "(iii')": {
+      "n_common": 480,
+      "delta": -0.34,
+      "ci95": [
+       -0.358,
+       -0.321
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0002
+     }
+    }
+   }
+  },
+  "subsite_corpus": {
+   "(a) within-dataset control": {
+    "per_dataset": {
+     "kits": {
+      "proposed": {
+       "n_queries": 35,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "coverage_blind": {
+       "n_queries": 35,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "imputed_absent": {
+       "n_queries": 35,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "rankings_identical": {
+       "proposed": true,
+       "coverage_blind": true,
+       "imputed_absent": true
+      }
+     },
+     "lits": {
+      "proposed": {
+       "n_queries": 21,
+       "P@5": 0.99,
+       "P@10": 0.886,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "coverage_blind": {
+       "n_queries": 21,
+       "P@5": 0.99,
+       "P@10": 0.886,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "imputed_absent": {
+       "n_queries": 21,
+       "P@5": 0.99,
+       "P@10": 0.886,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "rankings_identical": {
+       "proposed": true,
+       "coverage_blind": true,
+       "imputed_absent": true
+      }
+     },
+     "msd": {
+      "proposed": {
+       "n_queries": 53,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "coverage_blind": {
+       "n_queries": 53,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "imputed_absent": {
+       "n_queries": 53,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "rankings_identical": {
+       "proposed": true,
+       "coverage_blind": true,
+       "imputed_absent": true
+      }
+     }
+    },
+    "pooled": {
+     "proposed": {
+      "n_queries": 109,
+      "P@5": 0.998,
+      "P@10": 0.978,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "coverage_blind": {
+      "n_queries": 109,
+      "P@5": 0.998,
+      "P@10": 0.978,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "imputed_absent": {
+      "n_queries": 109,
+      "P@5": 0.998,
+      "P@10": 0.978,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     }
+    },
+    "identity_check_passed": true,
+    "note": "identity check, no p-value"
+   },
+   "(b) single-organ -> FLARE23": {
+    "rows": {
+     "proposed": {
+      "n_queries": 109,
+      "P@5": 1.0,
+      "P@10": 0.995,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "coverage_blind": {
+      "n_queries": 109,
+      "P@5": 1.0,
+      "P@10": 0.995,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "imputed_absent": {
+      "n_queries": 109,
+      "P@5": 1.0,
+      "P@10": 0.995,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     }
+    },
+    "delta_obs": {
+     "(iii)": {
+      "n_common": 109,
+      "delta": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "p_raw": 1.0,
+      "p_holm": 1.0
+     },
+     "(iii')": {
+      "n_common": 109,
+      "delta": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "p_raw": 1.0,
+      "p_holm": 1.0
+     }
+    }
+   },
+   "(c) FLARE23 -> single-organ": {
+    "rows": {
+     "proposed": {
+      "n_queries": 480,
+      "P@5": 0.45,
+      "P@10": 0.666,
+      "mAP": 0.612,
+      "nDCG": 0.603,
+      "spurious@10": 0.0,
+      "mismatch@10": null
+     },
+     "coverage_blind": {
+      "n_queries": 480,
+      "P@5": 0.45,
+      "P@10": 0.666,
+      "mAP": 0.612,
+      "nDCG": 0.603,
+      "spurious@10": 0.0,
+      "mismatch@10": null
+     },
+     "imputed_absent": {
+      "n_queries": 480,
+      "P@5": 0.746,
+      "P@10": 0.752,
+      "mAP": 0.886,
+      "nDCG": 0.857,
+      "spurious@10": 0.0,
+      "mismatch@10": null
+     }
+    },
+    "delta_obs": {
+     "(iii)": {
+      "n_common": 480,
+      "delta": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "p_raw": 1.0,
+      "p_holm": 1.0
+     },
+     "(iii')": {
+      "n_common": 480,
+      "delta": -0.273,
+      "ci95": [
+       -0.297,
+       -0.248
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0002
+     }
+    }
+   }
+  },
+  "subsite_resolved": {
+   "(a) within-dataset control": {
+    "per_dataset": {
+     "kits": {
+      "proposed": {
+       "n_queries": 35,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "coverage_blind": {
+       "n_queries": 35,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "imputed_absent": {
+       "n_queries": 35,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "rankings_identical": {
+       "proposed": true,
+       "coverage_blind": true,
+       "imputed_absent": true
+      }
+     },
+     "lits": {
+      "proposed": {
+       "n_queries": 21,
+       "P@5": 0.99,
+       "P@10": 0.886,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "coverage_blind": {
+       "n_queries": 21,
+       "P@5": 0.99,
+       "P@10": 0.886,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "imputed_absent": {
+       "n_queries": 21,
+       "P@5": 0.99,
+       "P@10": 0.886,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "rankings_identical": {
+       "proposed": true,
+       "coverage_blind": true,
+       "imputed_absent": true
+      }
+     },
+     "msd": {
+      "proposed": {
+       "n_queries": 53,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 0.996,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "coverage_blind": {
+       "n_queries": 53,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 0.996,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "imputed_absent": {
+       "n_queries": 53,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 0.996,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "rankings_identical": {
+       "proposed": true,
+       "coverage_blind": true,
+       "imputed_absent": true
+      }
+     }
+    },
+    "pooled": {
+     "proposed": {
+      "n_queries": 109,
+      "P@5": 0.998,
+      "P@10": 0.978,
+      "mAP": 0.998,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "coverage_blind": {
+      "n_queries": 109,
+      "P@5": 0.998,
+      "P@10": 0.978,
+      "mAP": 0.998,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "imputed_absent": {
+      "n_queries": 109,
+      "P@5": 0.998,
+      "P@10": 0.978,
+      "mAP": 0.998,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     }
+    },
+    "identity_check_passed": true,
+    "note": "identity check, no p-value"
+   },
+   "(b) single-organ -> FLARE23": {
+    "rows": {
+     "proposed": {
+      "n_queries": 109,
+      "P@5": 1.0,
+      "P@10": 0.995,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "coverage_blind": {
+      "n_queries": 109,
+      "P@5": 1.0,
+      "P@10": 0.995,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "imputed_absent": {
+      "n_queries": 109,
+      "P@5": 1.0,
+      "P@10": 0.995,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     }
+    },
+    "delta_obs": {
+     "(iii)": {
+      "n_common": 109,
+      "delta": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "p_raw": 1.0,
+      "p_holm": 1.0
+     },
+     "(iii')": {
+      "n_common": 109,
+      "delta": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "p_raw": 1.0,
+      "p_holm": 1.0
+     }
+    }
+   },
+   "(c) FLARE23 -> single-organ": {
+    "rows": {
+     "proposed": {
+      "n_queries": 480,
+      "P@5": 0.533,
+      "P@10": 0.543,
+      "mAP": 0.583,
+      "nDCG": 0.527,
+      "spurious@10": 0.0,
+      "mismatch@10": null
+     },
+     "coverage_blind": {
+      "n_queries": 480,
+      "P@5": 0.533,
+      "P@10": 0.543,
+      "mAP": 0.583,
+      "nDCG": 0.527,
+      "spurious@10": 0.0,
+      "mismatch@10": null
+     },
+     "imputed_absent": {
+      "n_queries": 480,
+      "P@5": 0.828,
+      "P@10": 0.629,
+      "mAP": 0.882,
+      "nDCG": 0.836,
+      "spurious@10": 0.0,
+      "mismatch@10": null
+     }
+    },
+    "delta_obs": {
+     "(iii)": {
+      "n_common": 480,
+      "delta": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "p_raw": 1.0,
+      "p_holm": 1.0
+     },
+     "(iii')": {
+      "n_common": 480,
+      "delta": -0.298,
+      "ci95": [
+       -0.32,
+       -0.276
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0002
+     }
+    }
+   }
+  },
+  "corpus_voidfix": {
+   "(a) within-dataset control": {
+    "per_dataset": {
+     "kits": {
+      "proposed": {
+       "n_queries": 35,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "coverage_blind": {
+       "n_queries": 35,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "imputed_absent": {
+       "n_queries": 35,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "rankings_identical": {
+       "proposed": true,
+       "coverage_blind": true,
+       "imputed_absent": true
+      }
+     },
+     "lits": {
+      "proposed": {
+       "n_queries": 21,
+       "P@5": 0.99,
+       "P@10": 0.886,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "coverage_blind": {
+       "n_queries": 21,
+       "P@5": 0.99,
+       "P@10": 0.886,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "imputed_absent": {
+       "n_queries": 21,
+       "P@5": 0.99,
+       "P@10": 0.886,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "rankings_identical": {
+       "proposed": true,
+       "coverage_blind": true,
+       "imputed_absent": true
+      }
+     },
+     "msd": {
+      "proposed": {
+       "n_queries": 53,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "coverage_blind": {
+       "n_queries": 53,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "imputed_absent": {
+       "n_queries": 53,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "rankings_identical": {
+       "proposed": true,
+       "coverage_blind": true,
+       "imputed_absent": true
+      }
+     }
+    },
+    "pooled": {
+     "proposed": {
+      "n_queries": 109,
+      "P@5": 0.998,
+      "P@10": 0.978,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "coverage_blind": {
+      "n_queries": 109,
+      "P@5": 0.998,
+      "P@10": 0.978,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "imputed_absent": {
+      "n_queries": 109,
+      "P@5": 0.998,
+      "P@10": 0.978,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     }
+    },
+    "identity_check_passed": true,
+    "note": "identity check, no p-value"
+   },
+   "(b) single-organ -> FLARE23": {
+    "rows": {
+     "proposed": {
+      "n_queries": 109,
+      "P@5": 1.0,
+      "P@10": 0.995,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "coverage_blind": {
+      "n_queries": 109,
+      "P@5": 1.0,
+      "P@10": 0.995,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "imputed_absent": {
+      "n_queries": 109,
+      "P@5": 1.0,
+      "P@10": 0.995,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     }
+    },
+    "delta_obs": {
+     "(iii)": {
+      "n_common": 109,
+      "delta": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "p_raw": 1.0,
+      "p_holm": 1.0
+     },
+     "(iii')": {
+      "n_common": 109,
+      "delta": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "p_raw": 1.0,
+      "p_holm": 1.0
+     }
+    }
+   },
+   "(c) FLARE23 -> single-organ": {
+    "rows": {
+     "proposed": {
+      "n_queries": 480,
+      "P@5": 0.533,
+      "P@10": 0.713,
+      "mAP": 0.66,
+      "nDCG": 0.644,
+      "spurious@10": 0.0,
+      "mismatch@10": null
+     },
+     "coverage_blind": {
+      "n_queries": 480,
+      "P@5": 0.533,
+      "P@10": 0.713,
+      "mAP": 0.66,
+      "nDCG": 0.644,
+      "spurious@10": 0.0,
+      "mismatch@10": null
+     },
+     "imputed_absent": {
+      "n_queries": 480,
+      "P@5": 0.921,
+      "P@10": 0.845,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": null
+     }
+    },
+    "delta_obs": {
+     "(iii)": {
+      "n_common": 480,
+      "delta": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "p_raw": 1.0,
+      "p_holm": 1.0
+     },
+     "(iii')": {
+      "n_common": 480,
+      "delta": -0.34,
+      "ci95": [
+       -0.358,
+       -0.321
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0002
+     }
+    }
+   }
+  },
+  "corrected": {
+   "(a) within-dataset control": {
+    "per_dataset": {
+     "kits": {
+      "proposed": {
+       "n_queries": 35,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "coverage_blind": {
+       "n_queries": 35,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "imputed_absent": {
+       "n_queries": 35,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "rankings_identical": {
+       "proposed": true,
+       "coverage_blind": true,
+       "imputed_absent": true
+      }
+     },
+     "lits": {
+      "proposed": {
+       "n_queries": 21,
+       "P@5": 0.99,
+       "P@10": 0.886,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "coverage_blind": {
+       "n_queries": 21,
+       "P@5": 0.99,
+       "P@10": 0.886,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "imputed_absent": {
+       "n_queries": 21,
+       "P@5": 0.99,
+       "P@10": 0.886,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "rankings_identical": {
+       "proposed": true,
+       "coverage_blind": true,
+       "imputed_absent": true
+      }
+     },
+     "msd": {
+      "proposed": {
+       "n_queries": 53,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "coverage_blind": {
+       "n_queries": 53,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "imputed_absent": {
+       "n_queries": 53,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 1.0,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "rankings_identical": {
+       "proposed": true,
+       "coverage_blind": true,
+       "imputed_absent": true
+      }
+     }
+    },
+    "pooled": {
+     "proposed": {
+      "n_queries": 109,
+      "P@5": 0.998,
+      "P@10": 0.978,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "coverage_blind": {
+      "n_queries": 109,
+      "P@5": 0.998,
+      "P@10": 0.978,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "imputed_absent": {
+      "n_queries": 109,
+      "P@5": 0.998,
+      "P@10": 0.978,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     }
+    },
+    "identity_check_passed": true,
+    "note": "identity check, no p-value"
+   },
+   "(b) single-organ -> FLARE23": {
+    "rows": {
+     "proposed": {
+      "n_queries": 109,
+      "P@5": 1.0,
+      "P@10": 0.995,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "coverage_blind": {
+      "n_queries": 109,
+      "P@5": 1.0,
+      "P@10": 0.995,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "imputed_absent": {
+      "n_queries": 109,
+      "P@5": 1.0,
+      "P@10": 0.995,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     }
+    },
+    "delta_obs": {
+     "(iii)": {
+      "n_common": 109,
+      "delta": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "p_raw": 1.0,
+      "p_holm": 1.0
+     },
+     "(iii')": {
+      "n_common": 109,
+      "delta": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "p_raw": 1.0,
+      "p_holm": 1.0
+     }
+    }
+   },
+   "(c) FLARE23 -> single-organ": {
+    "rows": {
+     "proposed": {
+      "n_queries": 480,
+      "P@5": 0.533,
+      "P@10": 0.713,
+      "mAP": 0.66,
+      "nDCG": 0.644,
+      "spurious@10": 0.0,
+      "mismatch@10": null
+     },
+     "coverage_blind": {
+      "n_queries": 480,
+      "P@5": 0.533,
+      "P@10": 0.713,
+      "mAP": 0.66,
+      "nDCG": 0.644,
+      "spurious@10": 0.0,
+      "mismatch@10": null
+     },
+     "imputed_absent": {
+      "n_queries": 480,
+      "P@5": 0.921,
+      "P@10": 0.845,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": null
+     }
+    },
+    "delta_obs": {
+     "(iii)": {
+      "n_common": 480,
+      "delta": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "p_raw": 1.0,
+      "p_holm": 1.0
+     },
+     "(iii')": {
+      "n_common": 480,
+      "delta": -0.34,
+      "ci95": [
+       -0.358,
+       -0.321
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0002
+     }
+    }
+   }
+  },
+  "subsite_msd_only": {
+   "(a) within-dataset control": {
+    "per_dataset": {
+     "kits": {
+      "proposed": {
+       "n_queries": 35,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 0.994,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "coverage_blind": {
+       "n_queries": 35,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 0.994,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "imputed_absent": {
+       "n_queries": 35,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 0.994,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "rankings_identical": {
+       "proposed": true,
+       "coverage_blind": true,
+       "imputed_absent": true
+      }
+     },
+     "lits": {
+      "proposed": {
+       "n_queries": 21,
+       "P@5": 1.0,
+       "P@10": 0.933,
+       "mAP": 0.977,
+       "nDCG": 0.977,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "coverage_blind": {
+       "n_queries": 21,
+       "P@5": 1.0,
+       "P@10": 0.933,
+       "mAP": 0.977,
+       "nDCG": 0.977,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "imputed_absent": {
+       "n_queries": 21,
+       "P@5": 1.0,
+       "P@10": 0.933,
+       "mAP": 0.977,
+       "nDCG": 0.977,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "rankings_identical": {
+       "proposed": true,
+       "coverage_blind": true,
+       "imputed_absent": true
+      }
+     },
+     "msd": {
+      "proposed": {
+       "n_queries": 53,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 0.996,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "coverage_blind": {
+       "n_queries": 53,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 0.996,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "imputed_absent": {
+       "n_queries": 53,
+       "P@5": 1.0,
+       "P@10": 1.0,
+       "mAP": 0.996,
+       "nDCG": 1.0,
+       "spurious@10": 0.0,
+       "mismatch@10": 0.0
+      },
+      "rankings_identical": {
+       "proposed": true,
+       "coverage_blind": true,
+       "imputed_absent": true
+      }
+     }
+    },
+    "pooled": {
+     "proposed": {
+      "n_queries": 109,
+      "P@5": 1.0,
+      "P@10": 0.987,
+      "mAP": 0.992,
+      "nDCG": 0.996,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "coverage_blind": {
+      "n_queries": 109,
+      "P@5": 1.0,
+      "P@10": 0.987,
+      "mAP": 0.992,
+      "nDCG": 0.996,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "imputed_absent": {
+      "n_queries": 109,
+      "P@5": 1.0,
+      "P@10": 0.987,
+      "mAP": 0.992,
+      "nDCG": 0.996,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     }
+    },
+    "identity_check_passed": true,
+    "note": "identity check, no p-value"
+   },
+   "(b) single-organ -> FLARE23": {
+    "rows": {
+     "proposed": {
+      "n_queries": 109,
+      "P@5": 1.0,
+      "P@10": 0.995,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "coverage_blind": {
+      "n_queries": 109,
+      "P@5": 1.0,
+      "P@10": 0.995,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "imputed_absent": {
+      "n_queries": 109,
+      "P@5": 1.0,
+      "P@10": 0.995,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     }
+    },
+    "delta_obs": {
+     "(iii)": {
+      "n_common": 109,
+      "delta": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "p_raw": 1.0,
+      "p_holm": 1.0
+     },
+     "(iii')": {
+      "n_common": 109,
+      "delta": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "p_raw": 1.0,
+      "p_holm": 1.0
+     }
+    }
+   },
+   "(c) FLARE23 -> single-organ": {
+    "rows": {
+     "proposed": {
+      "n_queries": 480,
+      "P@5": 0.533,
+      "P@10": 0.713,
+      "mAP": 0.66,
+      "nDCG": 0.644,
+      "spurious@10": 0.0,
+      "mismatch@10": null
+     },
+     "coverage_blind": {
+      "n_queries": 480,
+      "P@5": 0.533,
+      "P@10": 0.713,
+      "mAP": 0.66,
+      "nDCG": 0.644,
+      "spurious@10": 0.0,
+      "mismatch@10": null
+     },
+     "imputed_absent": {
+      "n_queries": 480,
+      "P@5": 0.921,
+      "P@10": 0.845,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": null
+     }
+    },
+    "delta_obs": {
+     "(iii)": {
+      "n_common": 480,
+      "delta": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "p_raw": 1.0,
+      "p_holm": 1.0
+     },
+     "(iii')": {
+      "n_common": 480,
+      "delta": -0.34,
+      "ci95": [
+       -0.358,
+       -0.321
+      ],
+      "p_raw": 4.999750012499375e-05,
+      "p_holm": 0.0002
+     }
+    }
+   }
+  }
+ },
+ "tab:cross-examples": {
+  "published": {
+   "pool_size": 1311,
+   "queries": [
+    {
+     "title": "Pancreas -> FLARE23, contained tumor",
+     "query": "pancreas_041",
+     "organ": "pancreas",
+     "query_phenotype": {
+      "burden_cat": "medium",
+      "multiplicity": "solitary",
+      "containment": "contained",
+      "anatomic_location": "tail"
+     },
+     "proposed": {
+      "first_flare23_rank": 40,
+      "first_relevant_flare23_rank": 40,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 39,
+      "n_relevant_flare23_candidates": 92,
+      "n_ranked": 1252,
+      "tie_width_at_reported_rank": 103
+     },
+     "coverage_blind": {
+      "first_flare23_rank": 53,
+      "first_relevant_flare23_rank": 53,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 52,
+      "n_relevant_flare23_candidates": 92,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 1
+     },
+     "imputed_absent": {
+      "first_flare23_rank": 3,
+      "first_relevant_flare23_rank": 3,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 2,
+      "n_relevant_flare23_candidates": 92,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 91
+     }
+    },
+    {
+     "title": "LiTS -> FLARE23, multifocal liver",
+     "query": "volume-101",
+     "organ": "liver",
+     "query_phenotype": {
+      "burden_cat": "high",
+      "multiplicity": "multifocal",
+      "containment": "boundary",
+      "anatomic_location": "body"
+     },
+     "proposed": {
+      "first_flare23_rank": 16,
+      "first_relevant_flare23_rank": 16,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 15,
+      "n_relevant_flare23_candidates": 42,
+      "n_ranked": 1217,
+      "tie_width_at_reported_rank": 53
+     },
+     "coverage_blind": {
+      "first_flare23_rank": 20,
+      "first_relevant_flare23_rank": 20,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 19,
+      "n_relevant_flare23_candidates": 42,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 1
+     },
+     "imputed_absent": {
+      "first_flare23_rank": 5,
+      "first_relevant_flare23_rank": 5,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 4,
+      "n_relevant_flare23_candidates": 42,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 41
+     }
+    },
+    {
+     "title": "Pancreas -> FLARE23, high burden",
+     "query": "pancreas_015",
+     "organ": "pancreas",
+     "query_phenotype": {
+      "burden_cat": "high",
+      "multiplicity": "solitary",
+      "containment": "boundary",
+      "anatomic_location": "body"
+     },
+     "proposed": {
+      "first_flare23_rank": 45,
+      "first_relevant_flare23_rank": 45,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 44,
+      "n_relevant_flare23_candidates": 25,
+      "n_ranked": 1252,
+      "tie_width_at_reported_rank": 30
+     },
+     "coverage_blind": {
+      "first_flare23_rank": 53,
+      "first_relevant_flare23_rank": 53,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 52,
+      "n_relevant_flare23_candidates": 25,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 25
+     },
+     "imputed_absent": {
+      "first_flare23_rank": 17,
+      "first_relevant_flare23_rank": 17,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 16,
+      "n_relevant_flare23_candidates": 25,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 25
+     }
+    }
+   ]
+  },
+  "void_fix": {
+   "pool_size": 1311,
+   "queries": [
+    {
+     "title": "Pancreas -> FLARE23, contained tumor",
+     "query": "pancreas_041",
+     "organ": "pancreas",
+     "query_phenotype": {
+      "burden_cat": "medium",
+      "multiplicity": "solitary",
+      "containment": "contained",
+      "anatomic_location": "tail"
+     },
+     "proposed": {
+      "first_flare23_rank": 29,
+      "first_relevant_flare23_rank": 29,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 28,
+      "n_relevant_flare23_candidates": 92,
+      "n_ranked": 1252,
+      "tie_width_at_reported_rank": 106
+     },
+     "coverage_blind": {
+      "first_flare23_rank": 53,
+      "first_relevant_flare23_rank": 53,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 52,
+      "n_relevant_flare23_candidates": 92,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 1
+     },
+     "imputed_absent": {
+      "first_flare23_rank": 3,
+      "first_relevant_flare23_rank": 3,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 2,
+      "n_relevant_flare23_candidates": 92,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 93
+     }
+    },
+    {
+     "title": "LiTS -> FLARE23, multifocal liver",
+     "query": "volume-101",
+     "organ": "liver",
+     "query_phenotype": {
+      "burden_cat": "high",
+      "multiplicity": "multifocal",
+      "containment": "boundary",
+      "anatomic_location": "body"
+     },
+     "proposed": {
+      "first_flare23_rank": 16,
+      "first_relevant_flare23_rank": 16,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 15,
+      "n_relevant_flare23_candidates": 42,
+      "n_ranked": 1217,
+      "tie_width_at_reported_rank": 53
+     },
+     "coverage_blind": {
+      "first_flare23_rank": 20,
+      "first_relevant_flare23_rank": 20,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 19,
+      "n_relevant_flare23_candidates": 42,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 1
+     },
+     "imputed_absent": {
+      "first_flare23_rank": 5,
+      "first_relevant_flare23_rank": 5,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 4,
+      "n_relevant_flare23_candidates": 42,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 41
+     }
+    },
+    {
+     "title": "Pancreas -> FLARE23, high burden",
+     "query": "pancreas_015",
+     "organ": "pancreas",
+     "query_phenotype": {
+      "burden_cat": "high",
+      "multiplicity": "solitary",
+      "containment": "boundary",
+      "anatomic_location": "body"
+     },
+     "proposed": {
+      "first_flare23_rank": 40,
+      "first_relevant_flare23_rank": 40,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 39,
+      "n_relevant_flare23_candidates": 25,
+      "n_ranked": 1252,
+      "tie_width_at_reported_rank": 44
+     },
+     "coverage_blind": {
+      "first_flare23_rank": 53,
+      "first_relevant_flare23_rank": 53,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 52,
+      "n_relevant_flare23_candidates": 25,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 25
+     },
+     "imputed_absent": {
+      "first_flare23_rank": 17,
+      "first_relevant_flare23_rank": 17,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 16,
+      "n_relevant_flare23_candidates": 25,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 33
+     }
+    }
+   ]
+  },
+  "subsite_corpus": {
+   "pool_size": 1311,
+   "queries": [
+    {
+     "title": "Pancreas -> FLARE23, contained tumor",
+     "query": "pancreas_041",
+     "organ": "pancreas",
+     "query_phenotype": {
+      "burden_cat": "medium",
+      "multiplicity": "solitary",
+      "containment": "contained",
+      "anatomic_location": "head"
+     },
+     "proposed": {
+      "first_flare23_rank": 52,
+      "first_relevant_flare23_rank": 52,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 51,
+      "n_relevant_flare23_candidates": 92,
+      "n_ranked": 1252,
+      "tie_width_at_reported_rank": 115
+     },
+     "coverage_blind": {
+      "first_flare23_rank": 53,
+      "first_relevant_flare23_rank": 53,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 52,
+      "n_relevant_flare23_candidates": 92,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 1
+     },
+     "imputed_absent": {
+      "first_flare23_rank": 3,
+      "first_relevant_flare23_rank": 3,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 2,
+      "n_relevant_flare23_candidates": 92,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 91
+     }
+    },
+    {
+     "title": "LiTS -> FLARE23, multifocal liver",
+     "query": "volume-101",
+     "organ": "liver",
+     "query_phenotype": {
+      "burden_cat": "high",
+      "multiplicity": "multifocal",
+      "containment": "boundary",
+      "anatomic_location": "na"
+     },
+     "proposed": {
+      "first_flare23_rank": 16,
+      "first_relevant_flare23_rank": 16,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 15,
+      "n_relevant_flare23_candidates": 42,
+      "n_ranked": 1217,
+      "tie_width_at_reported_rank": 53
+     },
+     "coverage_blind": {
+      "first_flare23_rank": 20,
+      "first_relevant_flare23_rank": 20,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 19,
+      "n_relevant_flare23_candidates": 42,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 1
+     },
+     "imputed_absent": {
+      "first_flare23_rank": 5,
+      "first_relevant_flare23_rank": 5,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 4,
+      "n_relevant_flare23_candidates": 42,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 41
+     }
+    },
+    {
+     "title": "Pancreas -> FLARE23, high burden",
+     "query": "pancreas_015",
+     "organ": "pancreas",
+     "query_phenotype": {
+      "burden_cat": "high",
+      "multiplicity": "solitary",
+      "containment": "boundary",
+      "anatomic_location": "head"
+     },
+     "proposed": {
+      "first_flare23_rank": 49,
+      "first_relevant_flare23_rank": 49,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 48,
+      "n_relevant_flare23_candidates": 25,
+      "n_ranked": 1252,
+      "tie_width_at_reported_rank": 34
+     },
+     "coverage_blind": {
+      "first_flare23_rank": 53,
+      "first_relevant_flare23_rank": 53,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 52,
+      "n_relevant_flare23_candidates": 25,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 25
+     },
+     "imputed_absent": {
+      "first_flare23_rank": 17,
+      "first_relevant_flare23_rank": 17,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 16,
+      "n_relevant_flare23_candidates": 25,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 25
+     }
+    }
+   ]
+  },
+  "subsite_resolved": {
+   "pool_size": 1311,
+   "queries": [
+    {
+     "title": "Pancreas -> FLARE23, contained tumor",
+     "query": "pancreas_041",
+     "organ": "pancreas",
+     "query_phenotype": {
+      "burden_cat": "medium",
+      "multiplicity": "solitary",
+      "containment": "contained",
+      "anatomic_location": "head"
+     },
+     "proposed": {
+      "first_flare23_rank": 49,
+      "first_relevant_flare23_rank": 49,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 48,
+      "n_relevant_flare23_candidates": 92,
+      "n_ranked": 1252,
+      "tie_width_at_reported_rank": 116
+     },
+     "coverage_blind": {
+      "first_flare23_rank": 56,
+      "first_relevant_flare23_rank": 56,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 55,
+      "n_relevant_flare23_candidates": 92,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 3
+     },
+     "imputed_absent": {
+      "first_flare23_rank": 3,
+      "first_relevant_flare23_rank": 3,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 2,
+      "n_relevant_flare23_candidates": 92,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 91
+     }
+    },
+    {
+     "title": "LiTS -> FLARE23, multifocal liver",
+     "query": "volume-101",
+     "organ": "liver",
+     "query_phenotype": {
+      "burden_cat": "high",
+      "multiplicity": "multifocal",
+      "containment": "boundary",
+      "anatomic_location": "na"
+     },
+     "proposed": {
+      "first_flare23_rank": 16,
+      "first_relevant_flare23_rank": 16,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 15,
+      "n_relevant_flare23_candidates": 42,
+      "n_ranked": 1217,
+      "tie_width_at_reported_rank": 53
+     },
+     "coverage_blind": {
+      "first_flare23_rank": 20,
+      "first_relevant_flare23_rank": 20,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 19,
+      "n_relevant_flare23_candidates": 42,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 1
+     },
+     "imputed_absent": {
+      "first_flare23_rank": 5,
+      "first_relevant_flare23_rank": 5,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 4,
+      "n_relevant_flare23_candidates": 42,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 41
+     }
+    },
+    {
+     "title": "Pancreas -> FLARE23, high burden",
+     "query": "pancreas_015",
+     "organ": "pancreas",
+     "query_phenotype": {
+      "burden_cat": "high",
+      "multiplicity": "solitary",
+      "containment": "boundary",
+      "anatomic_location": "head"
+     },
+     "proposed": {
+      "first_flare23_rank": 46,
+      "first_relevant_flare23_rank": 46,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 45,
+      "n_relevant_flare23_candidates": 25,
+      "n_ranked": 1252,
+      "tie_width_at_reported_rank": 34
+     },
+     "coverage_blind": {
+      "first_flare23_rank": 56,
+      "first_relevant_flare23_rank": 56,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 55,
+      "n_relevant_flare23_candidates": 25,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 25
+     },
+     "imputed_absent": {
+      "first_flare23_rank": 15,
+      "first_relevant_flare23_rank": 15,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 14,
+      "n_relevant_flare23_candidates": 25,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 25
+     }
+    }
+   ]
+  },
+  "corpus_voidfix": {
+   "pool_size": 1311,
+   "queries": [
+    {
+     "title": "Pancreas -> FLARE23, contained tumor",
+     "query": "pancreas_041",
+     "organ": "pancreas",
+     "query_phenotype": {
+      "burden_cat": "medium",
+      "multiplicity": "solitary",
+      "containment": "contained",
+      "anatomic_location": "head"
+     },
+     "proposed": {
+      "first_flare23_rank": 29,
+      "first_relevant_flare23_rank": 29,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 28,
+      "n_relevant_flare23_candidates": 92,
+      "n_ranked": 1252,
+      "tie_width_at_reported_rank": 99
+     },
+     "coverage_blind": {
+      "first_flare23_rank": 53,
+      "first_relevant_flare23_rank": 53,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 52,
+      "n_relevant_flare23_candidates": 92,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 1
+     },
+     "imputed_absent": {
+      "first_flare23_rank": 3,
+      "first_relevant_flare23_rank": 3,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 2,
+      "n_relevant_flare23_candidates": 92,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 92
+     }
+    },
+    {
+     "title": "LiTS -> FLARE23, multifocal liver",
+     "query": "volume-101",
+     "organ": "liver",
+     "query_phenotype": {
+      "burden_cat": "high",
+      "multiplicity": "multifocal",
+      "containment": "boundary",
+      "anatomic_location": "na"
+     },
+     "proposed": {
+      "first_flare23_rank": 16,
+      "first_relevant_flare23_rank": 16,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 15,
+      "n_relevant_flare23_candidates": 42,
+      "n_ranked": 1217,
+      "tie_width_at_reported_rank": 53
+     },
+     "coverage_blind": {
+      "first_flare23_rank": 20,
+      "first_relevant_flare23_rank": 20,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 19,
+      "n_relevant_flare23_candidates": 42,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 1
+     },
+     "imputed_absent": {
+      "first_flare23_rank": 5,
+      "first_relevant_flare23_rank": 5,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 4,
+      "n_relevant_flare23_candidates": 42,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 41
+     }
+    },
+    {
+     "title": "Pancreas -> FLARE23, high burden",
+     "query": "pancreas_015",
+     "organ": "pancreas",
+     "query_phenotype": {
+      "burden_cat": "high",
+      "multiplicity": "solitary",
+      "containment": "boundary",
+      "anatomic_location": "head"
+     },
+     "proposed": {
+      "first_flare23_rank": 40,
+      "first_relevant_flare23_rank": 40,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 39,
+      "n_relevant_flare23_candidates": 25,
+      "n_ranked": 1252,
+      "tie_width_at_reported_rank": 30
+     },
+     "coverage_blind": {
+      "first_flare23_rank": 53,
+      "first_relevant_flare23_rank": 53,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 52,
+      "n_relevant_flare23_candidates": 25,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 25
+     },
+     "imputed_absent": {
+      "first_flare23_rank": 17,
+      "first_relevant_flare23_rank": 17,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 16,
+      "n_relevant_flare23_candidates": 25,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 25
+     }
+    }
+   ]
+  },
+  "corrected": {
+   "pool_size": 1311,
+   "queries": [
+    {
+     "title": "Pancreas -> FLARE23, contained tumor",
+     "query": "pancreas_041",
+     "organ": "pancreas",
+     "query_phenotype": {
+      "burden_cat": "medium",
+      "multiplicity": "solitary",
+      "containment": "contained",
+      "anatomic_location": "head"
+     },
+     "proposed": {
+      "first_flare23_rank": 29,
+      "first_relevant_flare23_rank": 29,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 28,
+      "n_relevant_flare23_candidates": 92,
+      "n_ranked": 1252,
+      "tie_width_at_reported_rank": 104
+     },
+     "coverage_blind": {
+      "first_flare23_rank": 54,
+      "first_relevant_flare23_rank": 54,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 53,
+      "n_relevant_flare23_candidates": 92,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 1
+     },
+     "imputed_absent": {
+      "first_flare23_rank": 3,
+      "first_relevant_flare23_rank": 3,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 2,
+      "n_relevant_flare23_candidates": 92,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 92
+     }
+    },
+    {
+     "title": "LiTS -> FLARE23, multifocal liver",
+     "query": "volume-101",
+     "organ": "liver",
+     "query_phenotype": {
+      "burden_cat": "high",
+      "multiplicity": "multifocal",
+      "containment": "boundary",
+      "anatomic_location": "na"
+     },
+     "proposed": {
+      "first_flare23_rank": 16,
+      "first_relevant_flare23_rank": 16,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 15,
+      "n_relevant_flare23_candidates": 42,
+      "n_ranked": 1217,
+      "tie_width_at_reported_rank": 53
+     },
+     "coverage_blind": {
+      "first_flare23_rank": 20,
+      "first_relevant_flare23_rank": 20,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 19,
+      "n_relevant_flare23_candidates": 42,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 1
+     },
+     "imputed_absent": {
+      "first_flare23_rank": 5,
+      "first_relevant_flare23_rank": 5,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 4,
+      "n_relevant_flare23_candidates": 42,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 41
+     }
+    },
+    {
+     "title": "Pancreas -> FLARE23, high burden",
+     "query": "pancreas_015",
+     "organ": "pancreas",
+     "query_phenotype": {
+      "burden_cat": "high",
+      "multiplicity": "solitary",
+      "containment": "boundary",
+      "anatomic_location": "head"
+     },
+     "proposed": {
+      "first_flare23_rank": 40,
+      "first_relevant_flare23_rank": 40,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 39,
+      "n_relevant_flare23_candidates": 25,
+      "n_ranked": 1252,
+      "tie_width_at_reported_rank": 33
+     },
+     "coverage_blind": {
+      "first_flare23_rank": 56,
+      "first_relevant_flare23_rank": 56,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 55,
+      "n_relevant_flare23_candidates": 25,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 27
+     },
+     "imputed_absent": {
+      "first_flare23_rank": 17,
+      "first_relevant_flare23_rank": 17,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 16,
+      "n_relevant_flare23_candidates": 25,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 25
+     }
+    }
+   ]
+  },
+  "subsite_msd_only": {
+   "pool_size": 1311,
+   "queries": [
+    {
+     "title": "Pancreas -> FLARE23, contained tumor",
+     "query": "pancreas_041",
+     "organ": "pancreas",
+     "query_phenotype": {
+      "burden_cat": "medium",
+      "multiplicity": "solitary",
+      "containment": "contained",
+      "anatomic_location": "head"
+     },
+     "proposed": {
+      "first_flare23_rank": 49,
+      "first_relevant_flare23_rank": 49,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 48,
+      "n_relevant_flare23_candidates": 92,
+      "n_ranked": 1252,
+      "tie_width_at_reported_rank": 116
+     },
+     "coverage_blind": {
+      "first_flare23_rank": 56,
+      "first_relevant_flare23_rank": 56,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 55,
+      "n_relevant_flare23_candidates": 92,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 3
+     },
+     "imputed_absent": {
+      "first_flare23_rank": 3,
+      "first_relevant_flare23_rank": 3,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 2,
+      "n_relevant_flare23_candidates": 92,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 91
+     }
+    },
+    {
+     "title": "LiTS -> FLARE23, multifocal liver",
+     "query": "volume-101",
+     "organ": "liver",
+     "query_phenotype": {
+      "burden_cat": "high",
+      "multiplicity": "multifocal",
+      "containment": "boundary",
+      "anatomic_location": "body"
+     },
+     "proposed": {
+      "first_flare23_rank": 16,
+      "first_relevant_flare23_rank": 16,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 15,
+      "n_relevant_flare23_candidates": 42,
+      "n_ranked": 1217,
+      "tie_width_at_reported_rank": 53
+     },
+     "coverage_blind": {
+      "first_flare23_rank": 20,
+      "first_relevant_flare23_rank": 20,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 19,
+      "n_relevant_flare23_candidates": 42,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 1
+     },
+     "imputed_absent": {
+      "first_flare23_rank": 5,
+      "first_relevant_flare23_rank": 5,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 4,
+      "n_relevant_flare23_candidates": 42,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 41
+     }
+    },
+    {
+     "title": "Pancreas -> FLARE23, high burden",
+     "query": "pancreas_015",
+     "organ": "pancreas",
+     "query_phenotype": {
+      "burden_cat": "high",
+      "multiplicity": "solitary",
+      "containment": "boundary",
+      "anatomic_location": "head"
+     },
+     "proposed": {
+      "first_flare23_rank": 46,
+      "first_relevant_flare23_rank": 46,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 45,
+      "n_relevant_flare23_candidates": 25,
+      "n_ranked": 1252,
+      "tie_width_at_reported_rank": 34
+     },
+     "coverage_blind": {
+      "first_flare23_rank": 56,
+      "first_relevant_flare23_rank": 56,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 55,
+      "n_relevant_flare23_candidates": 25,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 25
+     },
+     "imputed_absent": {
+      "first_flare23_rank": 15,
+      "first_relevant_flare23_rank": 15,
+      "rank_within_flare23_only": 1,
+      "single_organ_candidates_above": 14,
+      "n_relevant_flare23_candidates": 25,
+      "n_ranked": 1310,
+      "tie_width_at_reported_rank": 25
+     }
+    }
+   ]
+  }
+ },
+ "effects_separately": {
+  "configuration": "(ii) proposed, gamma_min=1",
+  "k": 10,
+  "pool_size": 1311,
+  "arms": {
+   "void_fix": {
+    "single_organ": {
+     "n_queries": 113,
+     "top10_set_changed": 0,
+     "top10_order_changed": 0,
+     "by_dataset_set_changed": {},
+     "mean_S1_delta": 0.0,
+     "distinct_cases_entering_a_top10": 0,
+     "distinct_cases_leaving_a_top10": 0,
+     "cases_entering_most_top10s": [],
+     "cases_leaving_most_top10s": [],
+     "example_moved": [],
+     "seconds": 0.3
+    },
+    "flare23": {
+     "n_queries": 1198,
+     "top10_set_changed": 973,
+     "top10_order_changed": 973,
+     "by_dataset_set_changed": {
+      "flare23": 973
+     },
+     "mean_S1_delta": 0.0,
+     "distinct_cases_entering_a_top10": 3,
+     "distinct_cases_leaving_a_top10": 45,
+     "cases_entering_most_top10s": [
+      {
+       "case_id": "pancreas_084",
+       "dataset": "msd",
+       "n_top10s_entered": 973,
+       "pancreas_site_before": "na",
+       "pancreas_site_after": "na"
+      },
+      {
+       "case_id": "pancreas_242",
+       "dataset": "msd",
+       "n_top10s_entered": 973,
+       "pancreas_site_before": "na",
+       "pancreas_site_after": "na"
+      },
+      {
+       "case_id": "pancreas_346",
+       "dataset": "msd",
+       "n_top10s_entered": 973,
+       "pancreas_site_before": "na",
+       "pancreas_site_after": "na"
+      }
+     ],
+     "cases_leaving_most_top10s": [
+      {
+       "case_id": "flare23_FLARE23_0015",
+       "dataset": "flare23",
+       "n_top10s_left": 702
+      },
+      {
+       "case_id": "flare23_FLARE23_0019",
+       "dataset": "flare23",
+       "n_top10s_left": 702
+      },
+      {
+       "case_id": "flare23_FLARE23_0014",
+       "dataset": "flare23",
+       "n_top10s_left": 696
+      },
+      {
+       "case_id": "flare23_FLARE23_0325",
+       "dataset": "flare23",
+       "n_top10s_left": 65
+      },
+      {
+       "case_id": "flare23_FLARE23_0357",
+       "dataset": "flare23",
+       "n_top10s_left": 65
+      },
+      {
+       "case_id": "flare23_FLARE23_0307",
+       "dataset": "flare23",
+       "n_top10s_left": 58
+      },
+      {
+       "case_id": "flare23_FLARE23_1021",
+       "dataset": "flare23",
+       "n_top10s_left": 50
+      },
+      {
+       "case_id": "flare23_FLARE23_0700",
+       "dataset": "flare23",
+       "n_top10s_left": 41
+      },
+      {
+       "case_id": "flare23_FLARE23_0729",
+       "dataset": "flare23",
+       "n_top10s_left": 41
+      },
+      {
+       "case_id": "flare23_FLARE23_0449",
+       "dataset": "flare23",
+       "n_top10s_left": 40
+      }
+     ],
+     "example_moved": [
+      "flare23_FLARE23_0001",
+      "flare23_FLARE23_0003",
+      "flare23_FLARE23_0004",
+      "flare23_FLARE23_0006",
+      "flare23_FLARE23_0008"
+     ],
+     "seconds": 3.0
+    }
+   },
+   "subsite_corpus": {
+    "single_organ": {
+     "n_queries": 113,
+     "top10_set_changed": 45,
+     "top10_order_changed": 53,
+     "by_dataset_set_changed": {
+      "msd": 45
+     },
+     "mean_S1_delta": 0.0,
+     "distinct_cases_entering_a_top10": 26,
+     "distinct_cases_leaving_a_top10": 28,
+     "cases_entering_most_top10s": [
+      {
+       "case_id": "pancreas_096",
+       "dataset": "msd",
+       "n_top10s_entered": 9,
+       "pancreas_site_before": "body",
+       "pancreas_site_after": "head"
+      },
+      {
+       "case_id": "pancreas_119",
+       "dataset": "msd",
+       "n_top10s_entered": 9,
+       "pancreas_site_before": "body",
+       "pancreas_site_after": "head"
+      },
+      {
+       "case_id": "pancreas_122",
+       "dataset": "msd",
+       "n_top10s_entered": 9,
+       "pancreas_site_before": "body",
+       "pancreas_site_after": "head"
+      },
+      {
+       "case_id": "pancreas_125",
+       "dataset": "msd",
+       "n_top10s_entered": 9,
+       "pancreas_site_before": "tail",
+       "pancreas_site_after": "head"
+      },
+      {
+       "case_id": "pancreas_369",
+       "dataset": "msd",
+       "n_top10s_entered": 9,
+       "pancreas_site_before": "body",
+       "pancreas_site_after": "head"
+      },
+      {
+       "case_id": "pancreas_127",
+       "dataset": "msd",
+       "n_top10s_entered": 8,
+       "pancreas_site_before": "body",
+       "pancreas_site_after": "head"
+      },
+      {
+       "case_id": "pancreas_149",
+       "dataset": "msd",
+       "n_top10s_entered": 7,
+       "pancreas_site_before": "tail",
+       "pancreas_site_after": "head"
+      },
+      {
+       "case_id": "pancreas_015",
+       "dataset": "msd",
+       "n_top10s_entered": 5,
+       "pancreas_site_before": "body",
+       "pancreas_site_after": "head"
+      },
+      {
+       "case_id": "pancreas_048",
+       "dataset": "msd",
+       "n_top10s_entered": 5,
+       "pancreas_site_before": "body",
+       "pancreas_site_after": "head"
+      },
+      {
+       "case_id": "pancreas_019",
+       "dataset": "msd",
+       "n_top10s_entered": 4,
+       "pancreas_site_before": "tail",
+       "pancreas_site_after": "head"
+      }
+     ],
+     "cases_leaving_most_top10s": [
+      {
+       "case_id": "pancreas_045",
+       "dataset": "msd",
+       "n_top10s_left": 14
+      },
+      {
+       "case_id": "pancreas_191",
+       "dataset": "msd",
+       "n_top10s_left": 8
+      },
+      {
+       "case_id": "pancreas_241",
+       "dataset": "msd",
+       "n_top10s_left": 8
+      },
+      {
+       "case_id": "pancreas_275",
+       "dataset": "msd",
+       "n_top10s_left": 8
+      },
+      {
+       "case_id": "pancreas_289",
+       "dataset": "msd",
+       "n_top10s_left": 8
+      },
+      {
+       "case_id": "pancreas_330",
+       "dataset": "msd",
+       "n_top10s_left": 8
+      },
+      {
+       "case_id": "pancreas_377",
+       "dataset": "msd",
+       "n_top10s_left": 7
+      },
+      {
+       "case_id": "pancreas_149",
+       "dataset": "msd",
+       "n_top10s_left": 5
+      },
+      {
+       "case_id": "pancreas_239",
+       "dataset": "msd",
+       "n_top10s_left": 4
+      },
+      {
+       "case_id": "pancreas_064",
+       "dataset": "msd",
+       "n_top10s_left": 3
+      }
+     ],
+     "example_moved": [
+      "pancreas_015",
+      "pancreas_019",
+      "pancreas_041",
+      "pancreas_048",
+      "pancreas_049"
+     ],
+     "seconds": 0.2
+    },
+    "flare23": {
+     "n_queries": 1198,
+     "top10_set_changed": 973,
+     "top10_order_changed": 973,
+     "by_dataset_set_changed": {
+      "flare23": 973
+     },
+     "mean_S1_delta": 0.0,
+     "distinct_cases_entering_a_top10": 3,
+     "distinct_cases_leaving_a_top10": 45,
+     "cases_entering_most_top10s": [
+      {
+       "case_id": "pancreas_084",
+       "dataset": "msd",
+       "n_top10s_entered": 973,
+       "pancreas_site_before": "na",
+       "pancreas_site_after": "na"
+      },
+      {
+       "case_id": "pancreas_242",
+       "dataset": "msd",
+       "n_top10s_entered": 973,
+       "pancreas_site_before": "na",
+       "pancreas_site_after": "na"
+      },
+      {
+       "case_id": "pancreas_346",
+       "dataset": "msd",
+       "n_top10s_entered": 973,
+       "pancreas_site_before": "na",
+       "pancreas_site_after": "na"
+      }
+     ],
+     "cases_leaving_most_top10s": [
+      {
+       "case_id": "flare23_FLARE23_0015",
+       "dataset": "flare23",
+       "n_top10s_left": 702
+      },
+      {
+       "case_id": "flare23_FLARE23_0019",
+       "dataset": "flare23",
+       "n_top10s_left": 702
+      },
+      {
+       "case_id": "flare23_FLARE23_0014",
+       "dataset": "flare23",
+       "n_top10s_left": 696
+      },
+      {
+       "case_id": "flare23_FLARE23_0325",
+       "dataset": "flare23",
+       "n_top10s_left": 65
+      },
+      {
+       "case_id": "flare23_FLARE23_0357",
+       "dataset": "flare23",
+       "n_top10s_left": 65
+      },
+      {
+       "case_id": "flare23_FLARE23_0307",
+       "dataset": "flare23",
+       "n_top10s_left": 58
+      },
+      {
+       "case_id": "flare23_FLARE23_1021",
+       "dataset": "flare23",
+       "n_top10s_left": 50
+      },
+      {
+       "case_id": "flare23_FLARE23_0700",
+       "dataset": "flare23",
+       "n_top10s_left": 41
+      },
+      {
+       "case_id": "flare23_FLARE23_0729",
+       "dataset": "flare23",
+       "n_top10s_left": 41
+      },
+      {
+       "case_id": "flare23_FLARE23_0449",
+       "dataset": "flare23",
+       "n_top10s_left": 40
+      }
+     ],
+     "example_moved": [
+      "flare23_FLARE23_0001",
+      "flare23_FLARE23_0003",
+      "flare23_FLARE23_0004",
+      "flare23_FLARE23_0006",
+      "flare23_FLARE23_0008"
+     ],
+     "seconds": 3.0
+    }
+   },
+   "subsite_resolved": {
+    "single_organ": {
+     "n_queries": 113,
+     "top10_set_changed": 51,
+     "top10_order_changed": 53,
+     "by_dataset_set_changed": {
+      "msd": 51
+     },
+     "mean_S1_delta": -0.00295,
+     "distinct_cases_entering_a_top10": 34,
+     "distinct_cases_leaving_a_top10": 35,
+     "cases_entering_most_top10s": [
+      {
+       "case_id": "pancreas_096",
+       "dataset": "msd",
+       "n_top10s_entered": 9,
+       "pancreas_site_before": "body",
+       "pancreas_site_after": "head"
+      },
+      {
+       "case_id": "pancreas_125",
+       "dataset": "msd",
+       "n_top10s_entered": 9,
+       "pancreas_site_before": "tail",
+       "pancreas_site_after": "head"
+      },
+      {
+       "case_id": "pancreas_127",
+       "dataset": "msd",
+       "n_top10s_entered": 9,
+       "pancreas_site_before": "body",
+       "pancreas_site_after": "head"
+      },
+      {
+       "case_id": "pancreas_191",
+       "dataset": "msd",
+       "n_top10s_entered": 8,
+       "pancreas_site_before": "body",
+       "pancreas_site_after": "head"
+      },
+      {
+       "case_id": "pancreas_256",
+       "dataset": "msd",
+       "n_top10s_entered": 8,
+       "pancreas_site_before": "head",
+       "pancreas_site_after": "tail"
+      },
+      {
+       "case_id": "pancreas_149",
+       "dataset": "msd",
+       "n_top10s_entered": 7,
+       "pancreas_site_before": "tail",
+       "pancreas_site_after": "head"
+      },
+      {
+       "case_id": "pancreas_369",
+       "dataset": "msd",
+       "n_top10s_entered": 7,
+       "pancreas_site_before": "body",
+       "pancreas_site_after": "head"
+      },
+      {
+       "case_id": "pancreas_356",
+       "dataset": "msd",
+       "n_top10s_entered": 6,
+       "pancreas_site_before": "tail",
+       "pancreas_site_after": "head"
+      },
+      {
+       "case_id": "pancreas_015",
+       "dataset": "msd",
+       "n_top10s_entered": 5,
+       "pancreas_site_before": "body",
+       "pancreas_site_after": "head"
+      },
+      {
+       "case_id": "pancreas_048",
+       "dataset": "msd",
+       "n_top10s_entered": 4,
+       "pancreas_site_before": "body",
+       "pancreas_site_after": "head"
+      }
+     ],
+     "cases_leaving_most_top10s": [
+      {
+       "case_id": "pancreas_101",
+       "dataset": "msd",
+       "n_top10s_left": 15
+      },
+      {
+       "case_id": "pancreas_137",
+       "dataset": "msd",
+       "n_top10s_left": 14
+      },
+      {
+       "case_id": "pancreas_275",
+       "dataset": "msd",
+       "n_top10s_left": 8
+      },
+      {
+       "case_id": "pancreas_289",
+       "dataset": "msd",
+       "n_top10s_left": 8
+      },
+      {
+       "case_id": "pancreas_330",
+       "dataset": "msd",
+       "n_top10s_left": 8
+      },
+      {
+       "case_id": "pancreas_348",
+       "dataset": "msd",
+       "n_top10s_left": 8
+      },
+      {
+       "case_id": "pancreas_119",
+       "dataset": "msd",
+       "n_top10s_left": 7
+      },
+      {
+       "case_id": "pancreas_122",
+       "dataset": "msd",
+       "n_top10s_left": 7
+      },
+      {
+       "case_id": "pancreas_377",
+       "dataset": "msd",
+       "n_top10s_left": 7
+      },
+      {
+       "case_id": "pancreas_239",
+       "dataset": "msd",
+       "n_top10s_left": 4
+      }
+     ],
+     "example_moved": [
+      "pancreas_015",
+      "pancreas_019",
+      "pancreas_041",
+      "pancreas_045",
+      "pancreas_048"
+     ],
+     "seconds": 0.2
+    },
+    "flare23": {
+     "n_queries": 1198,
+     "top10_set_changed": 0,
+     "top10_order_changed": 0,
+     "by_dataset_set_changed": {},
+     "mean_S1_delta": 0.0,
+     "distinct_cases_entering_a_top10": 0,
+     "distinct_cases_leaving_a_top10": 0,
+     "cases_entering_most_top10s": [],
+     "cases_leaving_most_top10s": [],
+     "example_moved": [],
+     "seconds": 2.9
+    }
+   },
+   "corrected": {
+    "single_organ": {
+     "n_queries": 113,
+     "top10_set_changed": 49,
+     "top10_order_changed": 56,
+     "by_dataset_set_changed": {
+      "msd": 49
+     },
+     "mean_S1_delta": 0.00147,
+     "distinct_cases_entering_a_top10": 30,
+     "distinct_cases_leaving_a_top10": 33,
+     "cases_entering_most_top10s": [
+      {
+       "case_id": "pancreas_096",
+       "dataset": "msd",
+       "n_top10s_entered": 9,
+       "pancreas_site_before": "body",
+       "pancreas_site_after": "head"
+      },
+      {
+       "case_id": "pancreas_125",
+       "dataset": "msd",
+       "n_top10s_entered": 9,
+       "pancreas_site_before": "tail",
+       "pancreas_site_after": "head"
+      },
+      {
+       "case_id": "pancreas_127",
+       "dataset": "msd",
+       "n_top10s_entered": 9,
+       "pancreas_site_before": "body",
+       "pancreas_site_after": "head"
+      },
+      {
+       "case_id": "pancreas_119",
+       "dataset": "msd",
+       "n_top10s_entered": 8,
+       "pancreas_site_before": "body",
+       "pancreas_site_after": "na"
+      },
+      {
+       "case_id": "pancreas_122",
+       "dataset": "msd",
+       "n_top10s_entered": 8,
+       "pancreas_site_before": "body",
+       "pancreas_site_after": "na"
+      },
+      {
+       "case_id": "pancreas_149",
+       "dataset": "msd",
+       "n_top10s_entered": 7,
+       "pancreas_site_before": "tail",
+       "pancreas_site_after": "head"
+      },
+      {
+       "case_id": "pancreas_369",
+       "dataset": "msd",
+       "n_top10s_entered": 7,
+       "pancreas_site_before": "body",
+       "pancreas_site_after": "head"
+      },
+      {
+       "case_id": "pancreas_015",
+       "dataset": "msd",
+       "n_top10s_entered": 6,
+       "pancreas_site_before": "body",
+       "pancreas_site_after": "head"
+      },
+      {
+       "case_id": "pancreas_048",
+       "dataset": "msd",
+       "n_top10s_entered": 5,
+       "pancreas_site_before": "body",
+       "pancreas_site_after": "head"
+      },
+      {
+       "case_id": "pancreas_019",
+       "dataset": "msd",
+       "n_top10s_entered": 4,
+       "pancreas_site_before": "tail",
+       "pancreas_site_after": "head"
+      }
+     ],
+     "cases_leaving_most_top10s": [
+      {
+       "case_id": "pancreas_045",
+       "dataset": "msd",
+       "n_top10s_left": 11
+      },
+      {
+       "case_id": "pancreas_191",
+       "dataset": "msd",
+       "n_top10s_left": 8
+      },
+      {
+       "case_id": "pancreas_241",
+       "dataset": "msd",
+       "n_top10s_left": 8
+      },
+      {
+       "case_id": "pancreas_275",
+       "dataset": "msd",
+       "n_top10s_left": 8
+      },
+      {
+       "case_id": "pancreas_289",
+       "dataset": "msd",
+       "n_top10s_left": 8
+      },
+      {
+       "case_id": "pancreas_330",
+       "dataset": "msd",
+       "n_top10s_left": 8
+      },
+      {
+       "case_id": "pancreas_377",
+       "dataset": "msd",
+       "n_top10s_left": 7
+      },
+      {
+       "case_id": "pancreas_149",
+       "dataset": "msd",
+       "n_top10s_left": 4
+      },
+      {
+       "case_id": "pancreas_239",
+       "dataset": "msd",
+       "n_top10s_left": 4
+      },
+      {
+       "case_id": "pancreas_056",
+       "dataset": "msd",
+       "n_top10s_left": 3
+      }
+     ],
+     "example_moved": [
+      "pancreas_015",
+      "pancreas_019",
+      "pancreas_041",
+      "pancreas_048",
+      "pancreas_049"
+     ],
+     "seconds": 0.2
+    },
+    "flare23": {
+     "n_queries": 1198,
+     "top10_set_changed": 973,
+     "top10_order_changed": 973,
+     "by_dataset_set_changed": {
+      "flare23": 973
+     },
+     "mean_S1_delta": 0.0,
+     "distinct_cases_entering_a_top10": 3,
+     "distinct_cases_leaving_a_top10": 45,
+     "cases_entering_most_top10s": [
+      {
+       "case_id": "pancreas_084",
+       "dataset": "msd",
+       "n_top10s_entered": 973,
+       "pancreas_site_before": "na",
+       "pancreas_site_after": "body"
+      },
+      {
+       "case_id": "pancreas_242",
+       "dataset": "msd",
+       "n_top10s_entered": 973,
+       "pancreas_site_before": "na",
+       "pancreas_site_after": "body"
+      },
+      {
+       "case_id": "pancreas_346",
+       "dataset": "msd",
+       "n_top10s_entered": 973,
+       "pancreas_site_before": "na",
+       "pancreas_site_after": "head"
+      }
+     ],
+     "cases_leaving_most_top10s": [
+      {
+       "case_id": "flare23_FLARE23_0015",
+       "dataset": "flare23",
+       "n_top10s_left": 702
+      },
+      {
+       "case_id": "flare23_FLARE23_0019",
+       "dataset": "flare23",
+       "n_top10s_left": 702
+      },
+      {
+       "case_id": "flare23_FLARE23_0014",
+       "dataset": "flare23",
+       "n_top10s_left": 696
+      },
+      {
+       "case_id": "flare23_FLARE23_0325",
+       "dataset": "flare23",
+       "n_top10s_left": 65
+      },
+      {
+       "case_id": "flare23_FLARE23_0357",
+       "dataset": "flare23",
+       "n_top10s_left": 65
+      },
+      {
+       "case_id": "flare23_FLARE23_0307",
+       "dataset": "flare23",
+       "n_top10s_left": 58
+      },
+      {
+       "case_id": "flare23_FLARE23_1021",
+       "dataset": "flare23",
+       "n_top10s_left": 50
+      },
+      {
+       "case_id": "flare23_FLARE23_0700",
+       "dataset": "flare23",
+       "n_top10s_left": 41
+      },
+      {
+       "case_id": "flare23_FLARE23_0729",
+       "dataset": "flare23",
+       "n_top10s_left": 41
+      },
+      {
+       "case_id": "flare23_FLARE23_0449",
+       "dataset": "flare23",
+       "n_top10s_left": 40
+      }
+     ],
+     "example_moved": [
+      "flare23_FLARE23_0001",
+      "flare23_FLARE23_0003",
+      "flare23_FLARE23_0004",
+      "flare23_FLARE23_0006",
+      "flare23_FLARE23_0008"
+     ],
+     "seconds": 2.9
+    }
+   }
+  }
+ },
+ "ranking_vs_relevance": {
+  "note": "similarity() compares anatomic_location on the pancreas only; relevant() reads it on every shared organ, so a sub-site change on a kidney or a liver moves the gold standard without moving any score",
+  "primary": {
+   "rank=published | relevance=D": {
+    "n_queries": 113,
+    "P@5": 1.0,
+    "P@10": 0.992,
+    "mAP": 0.972,
+    "nDCG": 0.996,
+    "spurious@10": 0.0,
+    "mismatch@10": 0.0
+   },
+   "rank=published | relevance=P": {
+    "n_queries": 113,
+    "P@5": 1.0,
+    "P@10": 0.979,
+    "mAP": 0.967,
+    "nDCG": 0.99,
+    "spurious@10": 0.0,
+    "mismatch@10": 0.0
+   },
+   "rank=corrected | relevance=D": {
+    "n_queries": 113,
+    "P@5": 1.0,
+    "P@10": 0.992,
+    "mAP": 0.972,
+    "nDCG": 0.996,
+    "spurious@10": 0.0,
+    "mismatch@10": 0.0
+   },
+   "rank=corrected | relevance=P": {
+    "n_queries": 113,
+    "P@5": 1.0,
+    "P@10": 0.979,
+    "mAP": 0.967,
+    "nDCG": 0.99,
+    "spurious@10": 0.0,
+    "mismatch@10": 0.0
+   }
+  },
+  "stress": {
+   "rank=published | relevance=published": {
+    "n_queries": 109,
+    "P@5": 1.0,
+    "P@10": 1.0,
+    "mAP": 0.999,
+    "nDCG": 1.0,
+    "spurious@10": 0.0,
+    "mismatch@10": 0.0
+   },
+   "rank=published | relevance=corrected": {
+    "n_queries": 109,
+    "P@5": 1.0,
+    "P@10": 1.0,
+    "mAP": 0.989,
+    "nDCG": 1.0,
+    "spurious@10": 0.0,
+    "mismatch@10": 0.0
+   },
+   "rank=corrected | relevance=published": {
+    "n_queries": 109,
+    "P@5": 1.0,
+    "P@10": 1.0,
+    "mAP": 0.998,
+    "nDCG": 1.0,
+    "spurious@10": 0.0,
+    "mismatch@10": 0.0
+   },
+   "rank=corrected | relevance=corrected": {
+    "n_queries": 109,
+    "P@5": 1.0,
+    "P@10": 1.0,
+    "mAP": 1.0,
+    "nDCG": 1.0,
+    "spurious@10": 0.0,
+    "mismatch@10": 0.0
+   }
+  },
+  "by_dataset": {
+   "rank=published | relevance=D": {
+    "kits": {
+     "n_queries": 36,
+     "P@5": 1.0,
+     "P@10": 0.997,
+     "mAP": 0.932,
+     "nDCG": 0.998,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0
+    },
+    "lits": {
+     "n_queries": 21,
+     "P@5": 1.0,
+     "P@10": 0.962,
+     "mAP": 0.966,
+     "nDCG": 0.98,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0
+    },
+    "msd": {
+     "n_queries": 56,
+     "P@5": 1.0,
+     "P@10": 1.0,
+     "mAP": 1.0,
+     "nDCG": 1.0,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0
+    }
+   },
+   "rank=published | relevance=P": {
+    "kits": {
+     "n_queries": 36,
+     "P@5": 1.0,
+     "P@10": 0.992,
+     "mAP": 0.924,
+     "nDCG": 0.994,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0
+    },
+    "lits": {
+     "n_queries": 21,
+     "P@5": 1.0,
+     "P@10": 0.9,
+     "mAP": 0.953,
+     "nDCG": 0.954,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0
+    },
+    "msd": {
+     "n_queries": 56,
+     "P@5": 1.0,
+     "P@10": 1.0,
+     "mAP": 1.0,
+     "nDCG": 1.0,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0
+    }
+   },
+   "rank=corrected | relevance=D": {
+    "kits": {
+     "n_queries": 36,
+     "P@5": 1.0,
+     "P@10": 0.997,
+     "mAP": 0.932,
+     "nDCG": 0.998,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0
+    },
+    "lits": {
+     "n_queries": 21,
+     "P@5": 1.0,
+     "P@10": 0.962,
+     "mAP": 0.966,
+     "nDCG": 0.98,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0
+    },
+    "msd": {
+     "n_queries": 56,
+     "P@5": 1.0,
+     "P@10": 1.0,
+     "mAP": 1.0,
+     "nDCG": 1.0,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0
+    }
+   },
+   "rank=corrected | relevance=P": {
+    "kits": {
+     "n_queries": 36,
+     "P@5": 1.0,
+     "P@10": 0.992,
+     "mAP": 0.924,
+     "nDCG": 0.994,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0
+    },
+    "lits": {
+     "n_queries": 21,
+     "P@5": 1.0,
+     "P@10": 0.9,
+     "mAP": 0.953,
+     "nDCG": 0.954,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0
+    },
+    "msd": {
+     "n_queries": 56,
+     "P@5": 1.0,
+     "P@10": 1.0,
+     "mAP": 1.0,
+     "nDCG": 1.0,
+     "spurious@10": 0.0,
+     "mismatch@10": 0.0
+    }
+   }
+  },
+  "relevance_label_flips": {
+   "primary_pairs_checked": 12656,
+   "primary_labels_flipped": 146,
+   "by_dataset": {
+    "kits": {
+     "pairs": 4032,
+     "flipped": 76,
+     "to_relevant": 0,
+     "to_irrelevant": 76
+    },
+    "lits": {
+     "pairs": 2352,
+     "flipped": 70,
+     "to_relevant": 0,
+     "to_irrelevant": 70
+    },
+    "msd": {
+     "pairs": 6272,
+     "flipped": 0,
+     "to_relevant": 0,
+     "to_irrelevant": 0
+    }
+   }
+  }
+ },
+ "ladder": {
+  "configuration": "(ii) proposed, gamma_min=1",
+  "steps": [
+   {
+    "step": "1. as published",
+    "pool": 1425,
+    "what_changed": "the manuscript's own pool, corpora and scorer, recomputed",
+    "primary_mAP": 0.972,
+    "primary_P@10": 0.992,
+    "stress_mAP": 0.999,
+    "stress_P@10": 1.0,
+    "stress_n_q": 109
+   },
+   {
+    "step": "2. de-duplicated pool",
+    "pool": 1311,
+    "what_changed": "114 FLARE23 twins of the query set removed; records, scorer and sub-site words unchanged",
+    "primary_mAP": 0.972,
+    "primary_P@10": 0.992,
+    "stress_mAP": 0.999,
+    "stress_P@10": 1.0,
+    "stress_n_q": 109
+   },
+   {
+    "step": "3. + void fix",
+    "pool": 1311,
+    "what_changed": "a void sub-site axis dropped from the organ mean",
+    "primary_mAP": 0.972,
+    "primary_P@10": 0.992,
+    "stress_mAP": 0.999,
+    "stress_P@10": 1.0,
+    "stress_n_q": 109
+   },
+   {
+    "step": "4. + corrected sub-sites (shipped)",
+    "pool": 1311,
+    "what_changed": "precedence-resolved sub-site on both sides",
+    "primary_mAP": 0.967,
+    "primary_P@10": 0.979,
+    "stress_mAP": 1.0,
+    "stress_P@10": 1.0,
+    "stress_n_q": 109
+   }
+  ]
+ },
+ "circularity": {
+  "note": "relevant() derives the gold standard from the same four fields similarity() ranks on, so the benchmark tests whether the ranker behaves as designed and cannot test whether the phenotypes are correct",
+  "random_order_floor": {
+   "primary (113 x 112, reference-derived relevance)": {
+    "n_queries_scored": 113,
+    "mean_relevance_prevalence": 0.866,
+    "mAP_random_order": 0.8803,
+    "mAP_proposed": 0.967,
+    "headroom_above_chance": 0.0867
+   },
+   "stress (113 x 1,311, construction-defined relevance)": {
+    "n_queries_scored": 109,
+    "mean_relevance_prevalence": 0.0699,
+    "mAP_random_order": 0.0751,
+    "mAP_proposed": 1.0,
+    "headroom_above_chance": 0.9249
+   }
+  },
+  "held_out_axis_relevance": {
+   "definition": "relevance = agreement on ONE axis on a shared organ (the delivered rule needs >=2 agreements over all four); the ranker still scores all four axes, so this weakens rather than removes the dependence - the only fully disjoint variant would also have to withhold the axis from the score, which changes the system under test",
+   "rows": {
+    "burden_cat": {
+     "primary": {
+      "n_queries": 113,
+      "P@5": 0.896,
+      "P@10": 0.812,
+      "mAP": 0.827,
+      "nDCG": 0.874,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "stress": {
+      "n_queries": 109,
+      "P@5": 0.965,
+      "P@10": 0.878,
+      "mAP": 0.72,
+      "nDCG": 0.911,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     }
+    },
+    "multiplicity": {
+     "primary": {
+      "n_queries": 113,
+      "P@5": 0.874,
+      "P@10": 0.858,
+      "mAP": 0.88,
+      "nDCG": 0.883,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "stress": {
+      "n_queries": 109,
+      "P@5": 0.978,
+      "P@10": 0.975,
+      "mAP": 0.963,
+      "nDCG": 0.977,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     }
+    },
+    "containment": {
+     "primary": {
+      "n_queries": 113,
+      "P@5": 1.0,
+      "P@10": 1.0,
+      "mAP": 1.0,
+      "nDCG": 1.0,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "stress": {
+      "n_queries": 108,
+      "P@5": 0.956,
+      "P@10": 0.939,
+      "mAP": 0.907,
+      "nDCG": 0.948,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     }
+    },
+    "anatomic_location": {
+     "primary": {
+      "n_queries": 49,
+      "P@5": 0.731,
+      "P@10": 0.659,
+      "mAP": 0.72,
+      "nDCG": 0.706,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     },
+     "stress": {
+      "n_queries": 49,
+      "P@5": 0.694,
+      "P@10": 0.622,
+      "mAP": 0.585,
+      "nDCG": 0.668,
+      "spurious@10": 0.0,
+      "mismatch@10": 0.0
+     }
+    }
+   }
+  },
+  "subsite_perturbation": {
+   "MSD sub-sites only (the published perturbation), delivered void (V0)": {
+    "from": "published",
+    "to": "subsite_msd_only",
+    "primary_mAP": [
+     0.972,
+     0.972
+    ],
+    "primary_dmAP": 0.0,
+    "stress_mAP": [
+     0.999,
+     0.997
+    ],
+    "stress_dmAP": -0.002
+   },
+   "full sub-site correction, delivered void (V0)": {
+    "from": "published",
+    "to": "subsite_resolved",
+    "primary_mAP": [
+     0.972,
+     0.967
+    ],
+    "primary_dmAP": -0.005,
+    "stress_mAP": [
+     0.999,
+     1.0
+    ],
+    "stress_dmAP": 0.001
+   },
+   "full sub-site correction, void fix (V1)": {
+    "from": "void_fix",
+    "to": "corrected",
+    "primary_mAP": [
+     0.972,
+     0.967
+    ],
+    "primary_dmAP": -0.005,
+    "stress_mAP": [
+     0.999,
+     1.0
+    ],
+    "stress_dmAP": 0.001
+   }
+  },
+  "external_relevance_unavailable": {
+   "census": "flare23_twin_census_complete_2026-10-03.json",
+   "n_pairs_in_census": 521,
+   "flare23_side_in_pool": 356,
+   "usable_pairs_in_pool": 0,
+   "why": "scan identity is the one relevance signal in hand that is independent of the ranked fields, and the pool has none left: de-duplication removed exactly the FLARE23 twins of the query set, so no twin pair has both members in the 1,311 pool"
+  },
+  "cannot_produce": [
+   "a clinician-adjudicated relevance set: none exists for these 1,311 cases",
+   "a scan-identity (twin) relevance set: 0 of the 521 census pairs have both members in the de-duplicated pool",
+   "a relevance definition fully disjoint from the score: every field the records carry that relevance could be built from is a field the score already reads; withholding one from the score changes the system under test rather than the evaluation of it"
+  ]
+ },
+ "cell_diff_vs_manuscript": [
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(i)",
+   "metric": "P@10",
+   "published": 0.996,
+   "new_1311": 0.993,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(i)",
+   "metric": "mAP",
+   "published": 0.992,
+   "new_1311": 1.0,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(i)",
+   "metric": "nDCG",
+   "published": 0.999,
+   "new_1311": 1.0,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(i)",
+   "metric": "Mism.@10",
+   "published": 0.0,
+   "new_1311": 0.0,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(i)",
+   "metric": "dmAP",
+   "published": 0.02,
+   "new_1311": 0.033,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(ii)",
+   "metric": "P@10",
+   "published": 0.992,
+   "new_1311": 0.979,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(ii)",
+   "metric": "mAP",
+   "published": 0.972,
+   "new_1311": 0.967,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(ii)",
+   "metric": "nDCG",
+   "published": 0.996,
+   "new_1311": 0.99,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(ii)",
+   "metric": "Mism.@10",
+   "published": 0.0,
+   "new_1311": 0.0,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(ii)",
+   "metric": "dmAP",
+   "published": null,
+   "new_1311": null,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(iii)",
+   "metric": "P@10",
+   "published": 0.969,
+   "new_1311": 0.978,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(iii)",
+   "metric": "mAP",
+   "published": 0.933,
+   "new_1311": 0.961,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(iii)",
+   "metric": "nDCG",
+   "published": 0.977,
+   "new_1311": 0.989,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(iii)",
+   "metric": "Mism.@10",
+   "published": 0.02,
+   "new_1311": 0.002,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(iii)",
+   "metric": "dmAP",
+   "published": -0.039,
+   "new_1311": -0.006,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(iii')",
+   "metric": "P@10",
+   "published": "TBD",
+   "new_1311": 0.943,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(iii')",
+   "metric": "mAP",
+   "published": 0.911,
+   "new_1311": 0.928,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(iii')",
+   "metric": "nDCG",
+   "published": "TBD",
+   "new_1311": 0.957,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(iii')",
+   "metric": "Mism.@10",
+   "published": "TBD",
+   "new_1311": 0.042,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(iii')",
+   "metric": "dmAP",
+   "published": -0.061,
+   "new_1311": -0.039,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(iv)",
+   "metric": "P@10",
+   "published": 0.436,
+   "new_1311": 0.435,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(iv)",
+   "metric": "mAP",
+   "published": 0.493,
+   "new_1311": 0.503,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(iv)",
+   "metric": "nDCG",
+   "published": 0.439,
+   "new_1311": 0.439,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(iv)",
+   "metric": "Mism.@10",
+   "published": 0.55,
+   "new_1311": 0.549,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(iv)",
+   "metric": "dmAP",
+   "published": -0.479,
+   "new_1311": -0.464,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(v)",
+   "metric": "P@10",
+   "published": 0.804,
+   "new_1311": "not recomputed",
+   "moves": true,
+   "note": "radiomics / embedding baseline: needs CT features, not on disk"
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(v)",
+   "metric": "mAP",
+   "published": 0.715,
+   "new_1311": "not recomputed",
+   "moves": true,
+   "note": "radiomics / embedding baseline: needs CT features, not on disk"
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(v)",
+   "metric": "nDCG",
+   "published": 0.819,
+   "new_1311": "not recomputed",
+   "moves": true,
+   "note": "radiomics / embedding baseline: needs CT features, not on disk"
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(v)",
+   "metric": "Mism.@10",
+   "published": 0.14,
+   "new_1311": "not recomputed",
+   "moves": true,
+   "note": "radiomics / embedding baseline: needs CT features, not on disk"
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(v)",
+   "metric": "dmAP",
+   "published": -0.257,
+   "new_1311": "not recomputed",
+   "moves": true,
+   "note": "radiomics / embedding baseline: needs CT features, not on disk"
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(vi)",
+   "metric": "P@10",
+   "published": 0.953,
+   "new_1311": "not recomputed",
+   "moves": true,
+   "note": "radiomics / embedding baseline: needs CT features, not on disk"
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(vi)",
+   "metric": "mAP",
+   "published": 0.954,
+   "new_1311": "not recomputed",
+   "moves": true,
+   "note": "radiomics / embedding baseline: needs CT features, not on disk"
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(vi)",
+   "metric": "nDCG",
+   "published": 0.951,
+   "new_1311": "not recomputed",
+   "moves": true,
+   "note": "radiomics / embedding baseline: needs CT features, not on disk"
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(vi)",
+   "metric": "Mism.@10",
+   "published": 0.0,
+   "new_1311": "not recomputed",
+   "moves": true,
+   "note": "radiomics / embedding baseline: needs CT features, not on disk"
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(vi)",
+   "metric": "dmAP",
+   "published": -0.018,
+   "new_1311": "not recomputed",
+   "moves": true,
+   "note": "radiomics / embedding baseline: needs CT features, not on disk"
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(vii)",
+   "metric": "P@10",
+   "published": 0.84,
+   "new_1311": "not recomputed",
+   "moves": true,
+   "note": "radiomics / embedding baseline: needs CT features, not on disk"
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(vii)",
+   "metric": "mAP",
+   "published": 0.709,
+   "new_1311": "not recomputed",
+   "moves": true,
+   "note": "radiomics / embedding baseline: needs CT features, not on disk"
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(vii)",
+   "metric": "nDCG",
+   "published": 0.855,
+   "new_1311": "not recomputed",
+   "moves": true,
+   "note": "radiomics / embedding baseline: needs CT features, not on disk"
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(vii)",
+   "metric": "Mism.@10",
+   "published": 0.06,
+   "new_1311": "not recomputed",
+   "moves": true,
+   "note": "radiomics / embedding baseline: needs CT features, not on disk"
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(vii)",
+   "metric": "dmAP",
+   "published": -0.262,
+   "new_1311": "not recomputed",
+   "moves": true,
+   "note": "radiomics / embedding baseline: needs CT features, not on disk"
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(vii')",
+   "metric": "P@10",
+   "published": 0.913,
+   "new_1311": "not recomputed",
+   "moves": true,
+   "note": "radiomics / embedding baseline: needs CT features, not on disk"
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(vii')",
+   "metric": "mAP",
+   "published": 0.925,
+   "new_1311": "not recomputed",
+   "moves": true,
+   "note": "radiomics / embedding baseline: needs CT features, not on disk"
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(vii')",
+   "metric": "nDCG",
+   "published": 0.914,
+   "new_1311": "not recomputed",
+   "moves": true,
+   "note": "radiomics / embedding baseline: needs CT features, not on disk"
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(vii')",
+   "metric": "Mism.@10",
+   "published": 0.0,
+   "new_1311": "not recomputed",
+   "moves": true,
+   "note": "radiomics / embedding baseline: needs CT features, not on disk"
+  },
+  {
+   "table": "tab:retrieval-primary",
+   "row": "(vii')",
+   "metric": "dmAP",
+   "published": -0.047,
+   "new_1311": "not recomputed",
+   "moves": true,
+   "note": "radiomics / embedding baseline: needs CT features, not on disk"
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(i)",
+   "metric": "P@5",
+   "published": 1.0,
+   "new_1311": "not recomputed",
+   "moves": true,
+   "note": "no reference record exists for a FLARE23 pool member"
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(i)",
+   "metric": "P@10",
+   "published": 1.0,
+   "new_1311": "not recomputed",
+   "moves": true,
+   "note": "no reference record exists for a FLARE23 pool member"
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(i)",
+   "metric": "mAP",
+   "published": 0.998,
+   "new_1311": "not recomputed",
+   "moves": true,
+   "note": "no reference record exists for a FLARE23 pool member"
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(i)",
+   "metric": "nDCG",
+   "published": 1.0,
+   "new_1311": "not recomputed",
+   "moves": true,
+   "note": "no reference record exists for a FLARE23 pool member"
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(i)",
+   "metric": "Spur.@10",
+   "published": 0.0,
+   "new_1311": "not recomputed",
+   "moves": true,
+   "note": "no reference record exists for a FLARE23 pool member"
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(i)",
+   "metric": "Mism.@10",
+   "published": 0.0,
+   "new_1311": "not recomputed",
+   "moves": true,
+   "note": "no reference record exists for a FLARE23 pool member"
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(i)",
+   "metric": "dmAP",
+   "published": -0.001,
+   "new_1311": "not recomputed",
+   "moves": true,
+   "note": "no reference record exists for a FLARE23 pool member"
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(ii)",
+   "metric": "P@5",
+   "published": 1.0,
+   "new_1311": 1.0,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(ii)",
+   "metric": "P@10",
+   "published": 1.0,
+   "new_1311": 1.0,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(ii)",
+   "metric": "mAP",
+   "published": 0.999,
+   "new_1311": 1.0,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(ii)",
+   "metric": "nDCG",
+   "published": 1.0,
+   "new_1311": 1.0,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(ii)",
+   "metric": "Spur.@10",
+   "published": 0.0,
+   "new_1311": 0.0,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(ii)",
+   "metric": "Mism.@10",
+   "published": 0.0,
+   "new_1311": 0.0,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(ii)",
+   "metric": "dmAP",
+   "published": null,
+   "new_1311": null,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(iii)",
+   "metric": "P@5",
+   "published": 1.0,
+   "new_1311": 0.998,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(iii)",
+   "metric": "P@10",
+   "published": 0.989,
+   "new_1311": 0.98,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(iii)",
+   "metric": "mAP",
+   "published": 0.938,
+   "new_1311": 0.916,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(iii)",
+   "metric": "nDCG",
+   "published": 0.993,
+   "new_1311": 0.986,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(iii)",
+   "metric": "Spur.@10",
+   "published": 0.0,
+   "new_1311": 0.0,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(iii)",
+   "metric": "Mism.@10",
+   "published": 0.0,
+   "new_1311": 0.0,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(iii)",
+   "metric": "dmAP",
+   "published": -0.061,
+   "new_1311": -0.084,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(iii')",
+   "metric": "P@5",
+   "published": "TBD",
+   "new_1311": 1.0,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(iii')",
+   "metric": "P@10",
+   "published": "TBD",
+   "new_1311": 0.995,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(iii')",
+   "metric": "mAP",
+   "published": 0.757,
+   "new_1311": 0.749,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(iii')",
+   "metric": "nDCG",
+   "published": "TBD",
+   "new_1311": 0.997,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(iii')",
+   "metric": "Spur.@10",
+   "published": "TBD",
+   "new_1311": 0.0,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(iii')",
+   "metric": "Mism.@10",
+   "published": "TBD",
+   "new_1311": 0.0,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(iii')",
+   "metric": "dmAP",
+   "published": -0.242,
+   "new_1311": -0.251,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(iv)",
+   "metric": "P@5",
+   "published": 0.481,
+   "new_1311": 0.481,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(iv)",
+   "metric": "P@10",
+   "published": 0.44,
+   "new_1311": 0.44,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(iv)",
+   "metric": "mAP",
+   "published": 0.327,
+   "new_1311": 0.334,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(iv)",
+   "metric": "nDCG",
+   "published": 0.444,
+   "new_1311": 0.444,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(iv)",
+   "metric": "Spur.@10",
+   "published": 0.557,
+   "new_1311": 0.557,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(iv)",
+   "metric": "Mism.@10",
+   "published": 0.56,
+   "new_1311": 0.56,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval",
+   "row": "(iv)",
+   "metric": "dmAP",
+   "published": -0.672,
+   "new_1311": -0.666,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(a) Proposed",
+   "metric": "n_q",
+   "published": 109,
+   "new_1311": 109,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(a) Proposed",
+   "metric": "P@10",
+   "published": 0.987,
+   "new_1311": 0.978,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(a) Proposed",
+   "metric": "mAP",
+   "published": 0.994,
+   "new_1311": 1.0,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(a) Proposed",
+   "metric": "Mism.@10",
+   "published": 0.0,
+   "new_1311": 0.0,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(a) (iii)",
+   "metric": "n_q",
+   "published": 109,
+   "new_1311": 109,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(a) (iii)",
+   "metric": "P@10",
+   "published": 0.987,
+   "new_1311": 0.978,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(a) (iii)",
+   "metric": "mAP",
+   "published": 0.994,
+   "new_1311": 1.0,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(a) (iii)",
+   "metric": "Mism.@10",
+   "published": 0.0,
+   "new_1311": 0.0,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(a) (iii')",
+   "metric": "n_q",
+   "published": 109,
+   "new_1311": 109,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(a) (iii')",
+   "metric": "P@10",
+   "published": 0.987,
+   "new_1311": 0.978,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(a) (iii')",
+   "metric": "mAP",
+   "published": 0.994,
+   "new_1311": 1.0,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(a) (iii')",
+   "metric": "Mism.@10",
+   "published": 0.0,
+   "new_1311": 0.0,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(b) Proposed",
+   "metric": "n_q",
+   "published": 109,
+   "new_1311": 109,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(b) Proposed",
+   "metric": "P@10",
+   "published": 0.997,
+   "new_1311": 0.995,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(b) Proposed",
+   "metric": "mAP",
+   "published": 1.0,
+   "new_1311": 1.0,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(b) Proposed",
+   "metric": "Mism.@10",
+   "published": 0.0,
+   "new_1311": 0.0,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(b) (iii)",
+   "metric": "n_q",
+   "published": 109,
+   "new_1311": 109,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(b) (iii)",
+   "metric": "P@10",
+   "published": 0.997,
+   "new_1311": 0.995,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(b) (iii)",
+   "metric": "mAP",
+   "published": 1.0,
+   "new_1311": 1.0,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(b) (iii)",
+   "metric": "Mism.@10",
+   "published": 0.0,
+   "new_1311": 0.0,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(b) (iii')",
+   "metric": "n_q",
+   "published": 109,
+   "new_1311": 109,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(b) (iii')",
+   "metric": "P@10",
+   "published": "TBD",
+   "new_1311": 0.995,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(b) (iii')",
+   "metric": "mAP",
+   "published": 1.0,
+   "new_1311": 1.0,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(b) (iii')",
+   "metric": "Mism.@10",
+   "published": "TBD",
+   "new_1311": 0.0,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(c) Proposed",
+   "metric": "n_q",
+   "published": 592,
+   "new_1311": 480,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(c) Proposed",
+   "metric": "P@10",
+   "published": 0.71,
+   "new_1311": 0.713,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(c) Proposed",
+   "metric": "mAP",
+   "published": 0.66,
+   "new_1311": 0.66,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(c) Proposed",
+   "metric": "Mism.@10",
+   "published": "n/a",
+   "new_1311": "n/a",
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(c) (iii)",
+   "metric": "n_q",
+   "published": 592,
+   "new_1311": 480,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(c) (iii)",
+   "metric": "P@10",
+   "published": 0.71,
+   "new_1311": 0.713,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(c) (iii)",
+   "metric": "mAP",
+   "published": 0.66,
+   "new_1311": 0.66,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(c) (iii)",
+   "metric": "Mism.@10",
+   "published": "n/a",
+   "new_1311": "n/a",
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(c) (iii')",
+   "metric": "n_q",
+   "published": 592,
+   "new_1311": 480,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(c) (iii')",
+   "metric": "P@10",
+   "published": "TBD",
+   "new_1311": 0.845,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(c) (iii')",
+   "metric": "mAP",
+   "published": 1.0,
+   "new_1311": 1.0,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:retrieval-strata",
+   "row": "(c) (iii')",
+   "metric": "Mism.@10",
+   "published": "n/a",
+   "new_1311": "n/a",
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:cross-examples",
+   "row": "pancreas_041",
+   "metric": "Rank (proposed)",
+   "published": 40,
+   "new_1311": 29,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:cross-examples",
+   "row": "pancreas_041",
+   "metric": "Rank (blind)",
+   "published": 53,
+   "new_1311": 54,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:cross-examples",
+   "row": "volume-101",
+   "metric": "Rank (proposed)",
+   "published": 16,
+   "new_1311": 16,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:cross-examples",
+   "row": "volume-101",
+   "metric": "Rank (blind)",
+   "published": 20,
+   "new_1311": 20,
+   "moves": false,
+   "note": ""
+  },
+  {
+   "table": "tab:cross-examples",
+   "row": "pancreas_015",
+   "metric": "Rank (proposed)",
+   "published": 45,
+   "new_1311": 40,
+   "moves": true,
+   "note": ""
+  },
+  {
+   "table": "tab:cross-examples",
+   "row": "pancreas_015",
+   "metric": "Rank (blind)",
+   "published": 53,
+   "new_1311": 56,
+   "moves": true,
+   "note": ""
+  }
+ ]
+}

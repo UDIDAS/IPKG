@@ -1,0 +1,533 @@
+{
+ "url": "https://<app-host>",
+ "when": "2026-10-11T21:21:47",
+ "drawers": [
+  "Query verdicts",
+  "Other questions",
+  "Full report",
+  "Knowledge graph",
+  "Graph query",
+  "Scan quality",
+  "Rigid spatial alignment",
+  "Ask a question"
+ ],
+ "counts": {
+  "pass": 32,
+  "fail": 0,
+  "blocked": 0,
+  "not_applicable": 12,
+  "exercised": 32,
+  "total": 44
+ },
+ "results": [
+  {
+   "case": "volume-76",
+   "assertion": "A1 semi-oracle disclosure on the rater page",
+   "state": "PASS",
+   "why": "",
+   "evidence": [
+    "heading: BEFORE YOU JUDGE THESE CONTOURS How these contours were made: an interactive segmentation model was given a box around each structure's reference outli",
+    "clause: How these contours were made: an interactive segmentation model was",
+    "clause: given a box around each structure's reference outline on each slice and asked to fill it in,",
+    "clause: the starting boxes are the reference's. They show what the model can do when a",
+    "clause: not what it would produce unaided on a new scan. On this study that is 2 outlined struc",
+    "recount: not what it would produce unaided on a new scan. On this study that is 2 outlined structures, drawn on 130 of the 133 slices where the reference marks them and on no other slice. How this segmentation was produced"
+   ]
+  },
+  {
+   "case": "volume-76",
+   "assertion": "A2 corrected sub-site shown with its provenance",
+   "state": "PASS",
+   "why": "",
+   "evidence": [
+    "withdrawn, as it should be: ed as withdrawn: SNOMED CT 40133006 (Structure of body of pancreas) — withdrawn - no replacement concept; the delivered concept names a pancreatic sub-site"
+   ]
+  },
+  {
+   "case": "volume-76",
+   "assertion": "A3 no sub-site noun phrase presented as a bare fact",
+   "state": "PASS",
+   "why": "",
+   "evidence": [
+    "'Body of pancreas' carries corrected/withdrawn/does not apply/confirmed by the pipeline team's re-issue -- ed as withdrawn: SNOMED CT 40133006 (Structure of body of pancreas) — withdrawn - no replacement concept; the delivered concept names a pancreatic sub-site"
+   ]
+  },
+  {
+   "case": "volume-76",
+   "assertion": "A3b retrieval surfaces report this study's sub-site corrected",
+   "state": "N/A",
+   "why": "this assertion is live on pancreas_125 only, where the corrected word has somewhere to appear",
+   "evidence": [
+    "no retrieval surface on this page prints a sub-site, so no cell was judged"
+   ]
+  },
+  {
+   "case": "volume-76",
+   "assertion": "A3c a withheld pancreatic sub-site is not reported as absent",
+   "state": "N/A",
+   "why": "no withheld sub-site on this page to test the rule against",
+   "evidence": [
+    "20 numbered neighbour card(s), 0 of them with a pancreas record",
+    "the rule withdrew none of their pancreatic sub-sites, so there is nothing withheld on this page to test"
+   ]
+  },
+  {
+   "case": "volume-76",
+   "assertion": "A4 no Dice or accuracy score on the rater page",
+   "state": "PASS",
+   "why": "",
+   "evidence": [
+    "none of 11 metric patterns and none of the 19 audit figures appear in 59821 characters of page text",
+    "the only four-decimal figures are retrieval similarity, e.g. Similarity S 1.0000 on 1 shared organ"
+   ]
+  },
+  {
+   "case": "volume-76",
+   "assertion": "A5 burden line does not present a self-referential cut-point as a finding",
+   "state": "PASS",
+   "why": "",
+   "evidence": [
+    "basis: Lesion burden high lesion-size tercile within LiTS (by voxel count; high ≥ 31,097 voxels) Multiplicity multifocal connected components, no size gate Observed organs liver the record’s scope Source IPKG record delivered · containment v2 · verbatim HOW"
+   ]
+  },
+  {
+   "case": "volume-76",
+   "assertion": "A7 every pool size on the page is the live one",
+   "state": "PASS",
+   "why": "",
+   "evidence": [
+    "the live pool is 1,311 (ipkg_final_cases.pool_size(), which is len(pool_records()) on every access and types nothing)",
+    "pool statement reads 1,311: -break — ranked on the frozen IPKG record (configuration ii) over the 1,311-case de-duplicated pool Mixed regime. This query is round-1 semi-ora",
+    "pool statement reads 1,311: s agree Ranked on the frozen IPKG record (configuration ii) over the 1,311-case de-duplicated pool. The phenotype shown for this study is conta",
+    "pool statement reads 1,311: a diameter. The rows below ran on the axes that are measured. Pool: 1,311 (de-duplicated). Ranked on the frozen predicted record; the phenotyp",
+    "pool statement reads 1,311: finding. IPKG survey build corrected-2026-10-08 · 2026-09-21 · pool 1,311 · ontology mappings b9808e93 ===== component frames (not part of th",
+    "the 'comparable studies' tile reads 1,311, drawn from pool_metrics() behind @st.cache_resource and not from any caption"
+   ]
+  },
+  {
+   "case": "volume-76",
+   "assertion": "A8 a withheld lesion claim does not render as a negative finding",
+   "state": "N/A",
+   "why": "no withheld claim on this page to test the rule against",
+   "evidence": [
+    "legend: erve (not observed, so not assessed). N not asserted — the lesion claim the question rests on was withheld by the claim clean-up, so the answe",
+    "legend: swer is withdrawn rather than answered; withheld is not negative, and N never says the organ is clear. Q4a / Q4b use hepatic tumor volume > 65.4 cm³, the",
+    "legend: swered; withheld is not negative, and N never says the organ is clear. Q4a / Q4b use hepatic tumor volume > 65.4 cm³, the volume of a 5 cm sphere; no diameter",
+    "verdict tally on this page: T 4 / F 0 / U 12 / N 0",
+    "the legend is present and correct; no answer on this page is withheld, so the half of the assertion that matters - that a withheld claim answers N and not F - was not exercised",
+    "the same assertion against the artefact IS failing: ipkg_validate V11.3/claims, FLARE23_0405, nine questions resting on a withheld organ claim answered F"
+   ]
+  },
+  {
+   "case": "volume-76",
+   "assertion": "A9 no raw diagnostic on a rater's screen",
+   "state": "PASS",
+   "why": "",
+   "evidence": [
+    "none of the 6 diagnostic patterns appear in 59821 characters of page and component-frame text"
+   ]
+  },
+  {
+   "case": "volume-76",
+   "assertion": "A6 neighbour panel and index case labelled symmetrically",
+   "state": "PASS",
+   "why": "",
+   "evidence": [
+    "index case names itself a model output: The three planes — what the model found in them, or the images alone. Outcome Patient data 2 FINDINGS Th",
+    "index case names itself a model output: those slices only. The contours are the model's, the starting boxes are the reference's. They show what the",
+    "Expert outline (reference) (x3): -101 Liver collection Close Expert outline (reference) — every contour in this panel was drawn by a person. It is the collection's own expert outline for this study",
+    "every contour in this panel was drawn by a person (x1): Expert outline (reference) — every contour in this panel was drawn by a person. It is the collection's own expert outline for this study, and nothing in it is a model output. It is also th",
+    "is a MODEL OUTPUT (x2): this study, and nothing in it is a model output. It is also the WHOLE outline: every structure the collection labelled on this study is in this panel, not on",
+    "How these contours were made (x2): FORE YOU JUDGE THESE CONTOURS How these contours were made: an interactive segmentation model was given a box around each structure's reference outline on each slice an",
+    "the reference provenance appears 3 times: strip, slice half and 3-D half"
+   ]
+  },
+  {
+   "case": "case_00067",
+   "assertion": "A1 semi-oracle disclosure on the rater page",
+   "state": "PASS",
+   "why": "",
+   "evidence": [
+    "heading: BEFORE YOU JUDGE THESE CONTOURS How these contours were made: an interactive segmentation model was given a box around each structure's reference outli",
+    "clause: How these contours were made: an interactive segmentation model was",
+    "clause: given a box around each structure's reference outline on each slice and asked to fill it in,",
+    "clause: the starting boxes are the reference's. They show what the model can do when a",
+    "clause: not what it would produce unaided on a new scan. On this study that is 2 outlined struc",
+    "recount: not what it would produce unaided on a new scan. On this study that is 2 outlined structures, drawn on 271 of the 297 slices where the reference marks them and on no other slice. How this segmentation was produced"
+   ]
+  },
+  {
+   "case": "case_00067",
+   "assertion": "A2 corrected sub-site shown with its provenance",
+   "state": "PASS",
+   "why": "",
+   "evidence": [
+    "withdrawn, as it should be: . Coded as withdrawn: SNOMED CT 362201006 (Entire head of pancreas) — withdrawn - no replacement concept; the delivered concept names a pancreatic sub-site"
+   ]
+  },
+  {
+   "case": "case_00067",
+   "assertion": "A3 no sub-site noun phrase presented as a bare fact",
+   "state": "PASS",
+   "why": "",
+   "evidence": [
+    "'Head of pancreas' carries corrected/withdrawn/does not apply/confirmed by the pipeline team's re-issue -- . Coded as withdrawn: SNOMED CT 362201006 (Entire head of pancreas) — withdrawn - no replacement concept; the delivered concept names a pancreatic sub-site"
+   ]
+  },
+  {
+   "case": "case_00067",
+   "assertion": "A3b retrieval surfaces report this study's sub-site corrected",
+   "state": "N/A",
+   "why": "this assertion is live on pancreas_125 only, where the corrected word has somewhere to appear",
+   "evidence": [
+    "no retrieval surface on this page prints a sub-site, so no cell was judged"
+   ]
+  },
+  {
+   "case": "case_00067",
+   "assertion": "A3c a withheld pancreatic sub-site is not reported as absent",
+   "state": "N/A",
+   "why": "no withheld sub-site on this page to test the rule against",
+   "evidence": [
+    "20 numbered neighbour card(s), 0 of them with a pancreas record",
+    "the rule withdrew none of their pancreatic sub-sites, so there is nothing withheld on this page to test"
+   ]
+  },
+  {
+   "case": "case_00067",
+   "assertion": "A4 no Dice or accuracy score on the rater page",
+   "state": "PASS",
+   "why": "",
+   "evidence": [
+    "none of 11 metric patterns and none of the 19 audit figures appear in 58776 characters of page text",
+    "the only four-decimal figures are retrieval similarity, e.g. Similarity S 1.0000 on 1 shared organ"
+   ]
+  },
+  {
+   "case": "case_00067",
+   "assertion": "A5 burden line does not present a self-referential cut-point as a finding",
+   "state": "PASS",
+   "why": "",
+   "evidence": [
+    "basis: Lesion burden high lesion-size tercile within KiTS23 (by voxel count; high ≥ 46,696 voxels) Multiplicity solitary connected components, no size gate Observed organs kidney the record’s scope Source IPKG record delivered · containment v2 · verbatim HOW T"
+   ]
+  },
+  {
+   "case": "case_00067",
+   "assertion": "A7 every pool size on the page is the live one",
+   "state": "PASS",
+   "why": "",
+   "evidence": [
+    "the live pool is 1,311 (ipkg_final_cases.pool_size(), which is len(pool_records()) on every access and types nothing)",
+    "pool statement reads 1,311: -break — ranked on the frozen IPKG record (configuration ii) over the 1,311-case de-duplicated pool Mixed regime. This query is round-1 semi-ora",
+    "pool statement reads 1,311: s agree Ranked on the frozen IPKG record (configuration ii) over the 1,311-case de-duplicated pool. The phenotype shown for this study is conta",
+    "pool statement reads 1,311: a diameter. The rows below ran on the axes that are measured. Pool: 1,311 (de-duplicated). Ranked on the frozen predicted record; the phenotyp",
+    "pool statement reads 1,311: finding. IPKG survey build corrected-2026-10-08 · 2026-09-21 · pool 1,311 · ontology mappings b9808e93 ===== component frames (not part of th",
+    "the 'comparable studies' tile reads 1,311, drawn from pool_metrics() behind @st.cache_resource and not from any caption"
+   ]
+  },
+  {
+   "case": "case_00067",
+   "assertion": "A8 a withheld lesion claim does not render as a negative finding",
+   "state": "N/A",
+   "why": "no withheld claim on this page to test the rule against",
+   "evidence": [
+    "legend: erve (not observed, so not assessed). N not asserted — the lesion claim the question rests on was withheld by the claim clean-up, so the answe",
+    "legend: swer is withdrawn rather than answered; withheld is not negative, and N never says the organ is clear. Q4a / Q4b use hepatic tumor volume > 65.4 cm³, the",
+    "legend: swered; withheld is not negative, and N never says the organ is clear. Q4a / Q4b use hepatic tumor volume > 65.4 cm³, the volume of a 5 cm sphere; no diameter",
+    "verdict tally on this page: T 3 / F 1 / U 12 / N 0",
+    "the legend is present and correct; no answer on this page is withheld, so the half of the assertion that matters - that a withheld claim answers N and not F - was not exercised",
+    "the same assertion against the artefact IS failing: ipkg_validate V11.3/claims, FLARE23_0405, nine questions resting on a withheld organ claim answered F"
+   ]
+  },
+  {
+   "case": "case_00067",
+   "assertion": "A9 no raw diagnostic on a rater's screen",
+   "state": "PASS",
+   "why": "",
+   "evidence": [
+    "none of the 6 diagnostic patterns appear in 58776 characters of page and component-frame text"
+   ]
+  },
+  {
+   "case": "case_00067",
+   "assertion": "A6 neighbour panel and index case labelled symmetrically",
+   "state": "PASS",
+   "why": "",
+   "evidence": [
+    "index case names itself a model output: The three planes — what the model found in them, or the images alone. Outcome Patient data 2 FINDINGS Th",
+    "index case names itself a model output: those slices only. The contours are the model's, the starting boxes are the reference's. They show what the",
+    "Expert outline (reference) (x3): 042 Kidney collection Close Expert outline (reference) — every contour in this panel was drawn by a person. It is the collection's own expert outline for this study",
+    "every contour in this panel was drawn by a person (x1): Expert outline (reference) — every contour in this panel was drawn by a person. It is the collection's own expert outline for this study, and nothing in it is a model output. It is also th",
+    "is a MODEL OUTPUT (x2): this study, and nothing in it is a model output. It is also the WHOLE outline: every structure the collection labelled on this study is in this panel, not on",
+    "How these contours were made (x2): FORE YOU JUDGE THESE CONTOURS How these contours were made: an interactive segmentation model was given a box around each structure's reference outline on each slice an",
+    "the reference provenance appears 3 times: strip, slice half and 3-D half"
+   ]
+  },
+  {
+   "case": "pancreas_125",
+   "assertion": "A1 semi-oracle disclosure on the rater page",
+   "state": "PASS",
+   "why": "",
+   "evidence": [
+    "heading: BEFORE YOU JUDGE THESE CONTOURS How these contours were made: an interactive segmentation model was given a box around each structure's reference outli",
+    "clause: How these contours were made: an interactive segmentation model was",
+    "clause: given a box around each structure's reference outline on each slice and asked to fill it in,",
+    "clause: the starting boxes are the reference's. They show what the model can do when a",
+    "clause: not what it would produce unaided on a new scan. On this study that is 2 outlined struc",
+    "recount: not what it would produce unaided on a new scan. On this study that is 2 outlined structures, drawn on 45 of the 45 slices where the reference marks them and on no other slice. How this segmentation was produced"
+   ]
+  },
+  {
+   "case": "pancreas_125",
+   "assertion": "A2 corrected sub-site shown with its provenance",
+   "state": "PASS",
+   "why": "",
+   "evidence": [
+    "the corrected word: l, so it carries nothing. Corrected here Sub-site head of pancreas, corrected by IPKG audit 2026-09-29, confirmed by the pipeline team's re-issue 2026-10-01 — the delivere",
+    "a correction marker: , validation or test pool, so it carries nothing. Corrected here Sub-site head of pancreas, corrected by IPKG audit 2026-09-29, confirmed by the pipeline team's re-",
+    "the audit's labelled sentence: othing. Corrected here Sub-site head of pancreas, corrected by IPKG audit 2026-09-29, confirmed by the pipeline team's re-issue 2026-10-01 — the delivered record says “tail”. Coded as withdrawn: SNOMED CT 362201006 (Entire head",
+    "the delivered value beside it: 26-09-29, confirmed by the pipeline team's re-issue 2026-10-01 — the delivered record says “tail”. Coded as withdrawn: SNOMED CT 362201006 (Entire head of pancreas) — unchanged - t",
+    "delivered value quoted verbatim: 26-09-29, confirmed by the pipeline team's re-issue 2026-10-01 — the delivered record says “tail”. Coded as withdrawn: SNOMED CT 362201006 (Entire head of pancreas) — unchanged - the cor"
+   ]
+  },
+  {
+   "case": "pancreas_125",
+   "assertion": "A3 no sub-site noun phrase presented as a bare fact",
+   "state": "PASS",
+   "why": "",
+   "evidence": [
+    "'Head of pancreas' carries corrected/withdrawn/the delivered record says/confirmed by the pipeline team's re-issue -- l, so it carries nothing. Corrected here Sub-site head of pancreas, corrected by IPKG audit 2026-09-29, confirmed by the pipeline team's re-issue 2026-10-01 — the delivere",
+    "'Head of pancreas' carries corrected/withdrawn/the delivered record says/confirmed by the pipeline team's re-issue -- . Coded as withdrawn: SNOMED CT 362201006 (Entire head of pancreas) — unchanged - the corrected word is the delivered word Step 1 ORGAN SEGMENTATION Not aut",
+    "'Head of pancreas' carries corrected/the delivered record says/confirmed by the pipeline team's re-issue -- ECORD Organ Pancreas per the IPKG record Sub-site Head of pancreasCORRECTED corrected by IPKG audit 2026-09-29, confirmed by the pipeline team's re-issue 2026-10-01 — the",
+    "'Head of pancreas' carries pending re-issue -- ary (local concept) Case → Lesion → sits in the → head of pancreas → coded as → Entire head of pancreas (SNOMED CT 362201006; sub-site pending re-issue — IP",
+    "'Head of pancreas' carries pending re-issue -- its in the → head of pancreas → coded as → Entire head of pancreas (SNOMED CT 362201006; sub-site pending re-issue — IPKG audit 2026-09-29) S = 1.0000 |O∩|",
+    "'Head of pancreas' carries pending re-issue -- ary (local concept) Case → Lesion → sits in the → head of pancreas → coded as → Entire head of pancreas (SNOMED CT 362201006; sub-site pending re-issue — IP",
+    "'Head of pancreas' carries pending re-issue -- its in the → head of pancreas → coded as → Entire head of pancreas (SNOMED CT 362201006; sub-site pending re-issue — IPKG audit 2026-09-29) S = 1.0000 |O∩|",
+    "'Head of pancreas' carries pending re-issue -- ary (local concept) Case → Lesion → sits in the → head of pancreas → coded as → Entire head of pancreas (SNOMED CT 362201006; sub-site pending re-issue — IP",
+    "'Head of pancreas' carries pending re-issue -- its in the → head of pancreas → coded as → Entire head of pancreas (SNOMED CT 362201006; sub-site pending re-issue — IPKG audit 2026-09-29) S = 1.0000 |O∩|",
+    "... and 17 more row(s) of the same shape",
+    "... and 17 more row(s) of the same shape"
+   ]
+  },
+  {
+   "case": "pancreas_125",
+   "assertion": "A3b retrieval surfaces report this study's sub-site corrected",
+   "state": "PASS",
+   "why": "",
+   "evidence": [
+    "comparison row: boundary boundary ✓ pancreas pancreatic sub-site head head ✓ 6 reasoning paths Case → shows → panc",
+    "comparison row: boundary boundary ✓ pancreas pancreatic sub-site head head ✓ 6 reasoning paths Case → shows → panc",
+    "comparison row: boundary boundary ✓ pancreas pancreatic sub-site head head ✓ 6 reasoning paths Case → shows → panc",
+    "9 retrieved-study description line(s) print a pancreatic sub-site; they are other patients and are not failed on here. Which record supplied each word is NOT readable from the DOM and is not claimed - see A3c",
+    "... and 6 more row(s) of the same shape"
+   ]
+  },
+  {
+   "case": "pancreas_125",
+   "assertion": "A3c a withheld pancreatic sub-site is not reported as absent",
+   "state": "PASS",
+   "why": "",
+   "evidence": [
+    "20 numbered neighbour card(s), 20 of them with a pancreas record",
+    "the rule WITHDREW the pancreatic sub-site on 1 of them: pancreas_122 (delivered 'head', withdrawal)",
+    "the page says 'WITHHELD, not absent' 1 time(s) and reports an absent sub-site 0 time(s)"
+   ]
+  },
+  {
+   "case": "pancreas_125",
+   "assertion": "A4 no Dice or accuracy score on the rater page",
+   "state": "PASS",
+   "why": "",
+   "evidence": [
+    "none of 11 metric patterns and none of the 19 audit figures appear in 64604 characters of page text",
+    "the only four-decimal figures are retrieval similarity, e.g. Similarity S 1.0000 on 1 shared organ"
+   ]
+  },
+  {
+   "case": "pancreas_125",
+   "assertion": "A5 burden line does not present a self-referential cut-point as a finding",
+   "state": "PASS",
+   "why": "",
+   "evidence": [
+    "basis: Lesion burden high lesion-size tercile within MSD Pancreas, by voxel count. The cut-point for “high” in this collection is 3,496 voxels, which is this lesion’s own count: the word puts it at the bottom edge of the top third and is not an independent finding",
+    "qualifier: SD Pancreas, by voxel count. The cut-point for “high” in this collection is 3,496 voxels, which is this lesion’s own count: the word puts it at the bottom edge of",
+    "qualifier: hich is this lesion’s own count: the word puts it at the bottom edge of the top third and is not an independent finding about its size. Multiplicity solitary c"
+   ]
+  },
+  {
+   "case": "pancreas_125",
+   "assertion": "A7 every pool size on the page is the live one",
+   "state": "PASS",
+   "why": "",
+   "evidence": [
+    "the live pool is 1,311 (ipkg_final_cases.pool_size(), which is len(pool_records()) on every access and types nothing)",
+    "pool statement reads 1,311: b-site — ranked on the frozen IPKG record (configuration ii) over the 1,311-case de-duplicated pool Mixed regime. This query is round-1 semi-ora",
+    "pool statement reads 1,311: s agree Ranked on the frozen IPKG record (configuration ii) over the 1,311-case de-duplicated pool. The phenotype shown for this study is conta",
+    "pool statement reads 1,311: a diameter. The rows below ran on the axes that are measured. Pool: 1,311 (de-duplicated). Ranked on the frozen predicted record; the phenotyp",
+    "pool statement reads 1,311: finding. IPKG survey build corrected-2026-10-08 · 2026-09-21 · pool 1,311 · ontology mappings b9808e93 ===== component frames (not part of th",
+    "the 'comparable studies' tile reads 1,311, drawn from pool_metrics() behind @st.cache_resource and not from any caption"
+   ]
+  },
+  {
+   "case": "pancreas_125",
+   "assertion": "A8 a withheld lesion claim does not render as a negative finding",
+   "state": "N/A",
+   "why": "no withheld claim on this page to test the rule against",
+   "evidence": [
+    "legend: erve (not observed, so not assessed). N not asserted — the lesion claim the question rests on was withheld by the claim clean-up, so the answe",
+    "legend: swer is withdrawn rather than answered; withheld is not negative, and N never says the organ is clear. Q4a / Q4b use hepatic tumor volume > 65.4 cm³, the",
+    "legend: swered; withheld is not negative, and N never says the organ is clear. Q4a / Q4b use hepatic tumor volume > 65.4 cm³, the volume of a 5 cm sphere; no diameter",
+    "verdict tally on this page: T 3 / F 1 / U 12 / N 0",
+    "the legend is present and correct; no answer on this page is withheld, so the half of the assertion that matters - that a withheld claim answers N and not F - was not exercised",
+    "the same assertion against the artefact IS failing: ipkg_validate V11.3/claims, FLARE23_0405, nine questions resting on a withheld organ claim answered F"
+   ]
+  },
+  {
+   "case": "pancreas_125",
+   "assertion": "A9 no raw diagnostic on a rater's screen",
+   "state": "PASS",
+   "why": "",
+   "evidence": [
+    "none of the 6 diagnostic patterns appear in 64604 characters of page and component-frame text"
+   ]
+  },
+  {
+   "case": "pancreas_125",
+   "assertion": "A6 neighbour panel and index case labelled symmetrically",
+   "state": "PASS",
+   "why": "",
+   "evidence": [
+    "index case names itself a model output: The three planes — what the model found in them, or the images alone. Outcome Patient data 2 FINDINGS Th",
+    "index case names itself a model output: those slices only. The contours are the model's, the starting boxes are the reference's. They show what the",
+    "Expert outline (reference) (x3): 9 Pancreas collection Close Expert outline (reference) — every contour in this panel was drawn by a person. It is the collection's own expert outline for this study",
+    "every contour in this panel was drawn by a person (x1): Expert outline (reference) — every contour in this panel was drawn by a person. It is the collection's own expert outline for this study, and nothing in it is a model output. It is also th",
+    "is a MODEL OUTPUT (x2): this study, and nothing in it is a model output. It is also the WHOLE outline: every structure the collection labelled on this study is in this panel, not on",
+    "How these contours were made (x2): FORE YOU JUDGE THESE CONTOURS How these contours were made: an interactive segmentation model was given a box around each structure's reference outline on each slice an",
+    "the reference provenance appears 3 times: strip, slice half and 3-D half"
+   ]
+  },
+  {
+   "case": "FLARE23_0405",
+   "assertion": "A1 semi-oracle disclosure on the rater page",
+   "state": "PASS",
+   "why": "",
+   "evidence": [
+    "heading: BEFORE YOU JUDGE THESE CONTOURS How these contours were made: an interactive segmentation model was given a box around each structure's reference outli",
+    "clause: How these contours were made: an interactive segmentation model was",
+    "clause: given a box around each structure's reference outline on each slice and asked to fill it in,",
+    "clause: the starting boxes are the reference's. They show what the model can do when a",
+    "clause: not what it would produce unaided on a new scan. On this study that is 6 outlined struc",
+    "recount: not what it would produce unaided on a new scan. On this study that is 6 outlined structures, drawn on 814 of the 844 slices where the reference marks them and on no other slice. How this segmentation was produced"
+   ]
+  },
+  {
+   "case": "FLARE23_0405",
+   "assertion": "A2 corrected sub-site shown with its provenance",
+   "state": "N/A",
+   "why": "the surface this assertion is about is not on this page; it is tested on volume-76, case_00067 and pancreas_125, where the word does appear",
+   "evidence": [
+    "no pancreatic sub-site word is published on this page, so there was no occurrence to judge"
+   ]
+  },
+  {
+   "case": "FLARE23_0405",
+   "assertion": "A3 no sub-site noun phrase presented as a bare fact",
+   "state": "N/A",
+   "why": "the surface this assertion is about is not on this page",
+   "evidence": [
+    "no sub-site noun phrase on this page, so there was no occurrence to judge"
+   ]
+  },
+  {
+   "case": "FLARE23_0405",
+   "assertion": "A3b retrieval surfaces report this study's sub-site corrected",
+   "state": "N/A",
+   "why": "this assertion is live on pancreas_125 only, where the corrected word has somewhere to appear",
+   "evidence": [
+    "no retrieval surface on this page prints a sub-site, so no cell was judged"
+   ]
+  },
+  {
+   "case": "FLARE23_0405",
+   "assertion": "A3c a withheld pancreatic sub-site is not reported as absent",
+   "state": "N/A",
+   "why": "no withheld sub-site on this page to test the rule against",
+   "evidence": [
+    "20 numbered neighbour card(s), 0 of them with a pancreas record",
+    "the rule withdrew none of their pancreatic sub-sites, so there is nothing withheld on this page to test"
+   ]
+  },
+  {
+   "case": "FLARE23_0405",
+   "assertion": "A4 no Dice or accuracy score on the rater page",
+   "state": "PASS",
+   "why": "",
+   "evidence": [
+    "none of 11 metric patterns and none of the 19 audit figures appear in 64818 characters of page text",
+    "the only four-decimal figures are retrieval similarity, e.g. Similarity S 1.0000 on 1 shared organ"
+   ]
+  },
+  {
+   "case": "FLARE23_0405",
+   "assertion": "A5 burden line does not present a self-referential cut-point as a finding",
+   "state": "PASS",
+   "why": "",
+   "evidence": [
+    "basis: Lesion burden high lesion-burden tercile within FLARE23 (by volume; high ≥ 19.2 cm³) Multiplicity solitary connected components, no size gate Observed organs kidney, liver, pancreas, spleen the record’s scope Source IPKG record delivered · containment v2 ·"
+   ]
+  },
+  {
+   "case": "FLARE23_0405",
+   "assertion": "A7 every pool size on the page is the live one",
+   "state": "PASS",
+   "why": "",
+   "evidence": [
+    "the live pool is 1,311 (ipkg_final_cases.pool_size(), which is len(pool_records()) on every access and types nothing)",
+    "pool statement reads 1,311: -break — ranked on the frozen IPKG record (configuration ii) over the 1,311-case de-duplicated pool Mixed regime. This query is reference-derive",
+    "pool statement reads 1,311: s agree Ranked on the frozen IPKG record (configuration ii) over the 1,311-case de-duplicated pool. The phenotype shown for this study is conta",
+    "pool statement reads 1,311: a diameter. The rows below ran on the axes that are measured. Pool: 1,311 (de-duplicated). Ranked on the frozen predicted record; the phenotyp",
+    "pool statement reads 1,311: finding. IPKG survey build corrected-2026-10-08 · 2026-09-21 · pool 1,311 · ontology mappings b9808e93 ===== component frames (not part of th",
+    "the 'comparable studies' tile reads 1,311, drawn from pool_metrics() behind @st.cache_resource and not from any caption"
+   ]
+  },
+  {
+   "case": "FLARE23_0405",
+   "assertion": "A8 a withheld lesion claim does not render as a negative finding",
+   "state": "N/A",
+   "why": "no withheld claim on this page to test the rule against",
+   "evidence": [
+    "legend: erve (not observed, so not assessed). N not asserted — the lesion claim the question rests on was withheld by the claim clean-up, so the answe",
+    "legend: swer is withdrawn rather than answered; withheld is not negative, and N never says the organ is clear. Q4a / Q4b use hepatic tumor volume > 65.4 cm³, the",
+    "legend: swered; withheld is not negative, and N never says the organ is clear. Q4a / Q4b use hepatic tumor volume > 65.4 cm³, the volume of a 5 cm sphere; no diameter",
+    "verdict tally on this page: T 3 / F 13 / U 0 / N 0",
+    "the legend is present and correct; no answer on this page is withheld, so the half of the assertion that matters - that a withheld claim answers N and not F - was not exercised",
+    "the same assertion against the artefact IS failing: ipkg_validate V11.3/claims, FLARE23_0405, nine questions resting on a withheld organ claim answered F"
+   ]
+  },
+  {
+   "case": "FLARE23_0405",
+   "assertion": "A9 no raw diagnostic on a rater's screen",
+   "state": "PASS",
+   "why": "",
+   "evidence": [
+    "none of the 6 diagnostic patterns appear in 64818 characters of page and component-frame text"
+   ]
+  },
+  {
+   "case": "FLARE23_0405",
+   "assertion": "A6 neighbour panel and index case labelled symmetrically",
+   "state": "PASS",
+   "why": "",
+   "evidence": [
+    "index case names itself a model output: The three planes — what the model found in them, or the images alone. Outcome Patient data 2 FINDINGS Th",
+    "index case names itself a model output: those slices only. The contours are the model's, the starting boxes are the reference's. They show what the",
+    "Expert outline (reference) (x3): 008 Kidney collection Close Expert outline (reference) — every contour in this panel was drawn by a person. It is the collection's own expert outline for this study",
+    "every contour in this panel was drawn by a person (x1): Expert outline (reference) — every contour in this panel was drawn by a person. It is the collection's own expert outline for this study, and nothing in it is a model output. It is also th",
+    "is a MODEL OUTPUT (x2): this study, and nothing in it is a model output. It is also the WHOLE outline: every structure the collection labelled on this study is in this panel, not on",
+    "How these contours were made (x2): FORE YOU JUDGE THESE CONTOURS How these contours were made: an interactive segmentation model was given a box around each structure's reference outline on each slice an",
+    "the reference provenance appears 3 times: strip, slice half and 3-D half"
+   ]
+  }
+ ]
+}

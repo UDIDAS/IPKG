@@ -1,0 +1,57 @@
+{
+ "note": "Table E.3 (statement-level factual consistency of the generated reports, n = 113) assembled from committed\nartifacts, with the all-statements total.\n\nRows and sources:\n  organ present, tumor present in organ, burden category, lesion multiplicity\n      results/summarization/summarization_metrics.json (per_type_statement_precision; frozen summ_metrics.py run)\n  containment, closed rule (Section 3.2)\n      results/kg/containment_reextraction_113_predicted.json (table11_containment_precision_v2); per-dataset\n      KiTS23 / LiTS / MSD hit counts recovered from their precisions and summed\n  anatomic site, pancreatic sub-site, MSD only\n      recomputed here from the delivered corpora: corpora/corpus_predicted_msd.json vs corpora/corpus_gt_msd.json,\n      one statement per MSD case whose predicted record asserts a tumor and names a sub-site (the delivered\n      agreement; the sub-site words written onto liver and kidney records are void and not scored)\n\nWhere an artifact stores precision and n but not the hit count, the count is the unique integer h with\nround(h / n, 3) == precision; the script refuses to write if any count is not unique.\n\n  python scripts/summarization/statement_precision_table_e3.py\n-> results/summarization/statement_precision_table_e3.json",
+ "rows": [
+  {
+   "row": "Organ present",
+   "n": 113,
+   "hits": 113,
+   "source": "results/summarization/summarization_metrics.json",
+   "precision": 1.0
+  },
+  {
+   "row": "Tumor present in organ",
+   "n": 113,
+   "hits": 109,
+   "source": "results/summarization/summarization_metrics.json",
+   "precision": 0.965
+  },
+  {
+   "row": "Burden category",
+   "n": 109,
+   "hits": 104,
+   "source": "results/summarization/summarization_metrics.json",
+   "precision": 0.954
+  },
+  {
+   "row": "Lesion multiplicity",
+   "n": 109,
+   "hits": 101,
+   "source": "results/summarization/summarization_metrics.json",
+   "precision": 0.927
+  },
+  {
+   "row": "Anatomic site (pancreatic sub-site, MSD only)",
+   "n": 53,
+   "hits": 51,
+   "source": "corpora/corpus_predicted_msd.json vs corpora/corpus_gt_msd.json (delivered corpora)",
+   "precision": 0.962
+  },
+  {
+   "row": "Containment (closed rule)",
+   "n": 109,
+   "hits": 95,
+   "per_dataset_hits": {
+    "kits": 32,
+    "lits": 19,
+    "msd": 44
+   },
+   "source": "results/kg/containment_reextraction_113_predicted.json",
+   "precision": 0.872
+  }
+ ],
+ "all_statements": {
+  "n": 606,
+  "hits": 573,
+  "precision": 0.946
+ }
+}

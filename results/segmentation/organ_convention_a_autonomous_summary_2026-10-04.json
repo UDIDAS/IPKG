@@ -1,0 +1,4661 @@
+{
+ "version": "build_cohort_columns/1.0",
+ "generated": "2026-10-04T02:24:56",
+ "vs_published_round2": {
+  "LiTS": {
+   "n_published": 21,
+   "n_ours": 21,
+   "published_tumour_excluded": 0.9347,
+   "our_parenchyma_dice": 0.9383,
+   "comparable": true,
+   "published_organ_with_mass_CONVENTION_B": 0.953,
+   "our_organ_dice_CONVENTION_A": 0.956,
+   "same_reference": {
+    "n": 21,
+    "n_identical_to_0.01_cm3": 21,
+    "mean_diff_cm3": 0.0
+   },
+   "same_prediction": {
+    "n": 21,
+    "n_identical_to_0.01_cm3": 0,
+    "mean_diff_cm3": 132.195
+   },
+   "B_and_A_are_not_comparable": "convention B unions the PREDICTED tumour into the prediction; convention A does not. The two columns are printed side by side only so a reader who has the round-2 number in hand can find the one that replaces it."
+  },
+  "MSD Pancreas": {
+   "n_published": 56,
+   "n_ours": 56,
+   "published_tumour_excluded": 0.6867,
+   "our_parenchyma_dice": 0.7291,
+   "comparable": true,
+   "published_organ_with_mass_CONVENTION_B": 0.765,
+   "our_organ_dice_CONVENTION_A": 0.7672,
+   "same_reference": {
+    "n": 56,
+    "n_identical_to_0.01_cm3": 56,
+    "mean_diff_cm3": -0.0
+   },
+   "same_prediction": {
+    "n": 56,
+    "n_identical_to_0.01_cm3": 0,
+    "mean_diff_cm3": 11.735
+   },
+   "B_and_A_are_not_comparable": "convention B unions the PREDICTED tumour into the prediction; convention A does not. The two columns are printed side by side only so a reader who has the round-2 number in hand can find the one that replaces it."
+  },
+  "KiTS23": {
+   "n_published": 36,
+   "n_ours": 36,
+   "published_tumour_excluded": 0.8748,
+   "our_parenchyma_dice": 0.8356,
+   "comparable": true,
+   "published_organ_with_mass_CONVENTION_B": 0.9192,
+   "our_organ_dice_CONVENTION_A": 0.8592,
+   "same_reference": {
+    "n": 36,
+    "n_identical_to_0.01_cm3": 36,
+    "mean_diff_cm3": 0.0
+   },
+   "same_prediction": {
+    "n": 36,
+    "n_identical_to_0.01_cm3": 0,
+    "mean_diff_cm3": 74.259
+   },
+   "B_and_A_are_not_comparable": "convention B unions the PREDICTED tumour into the prediction; convention A does not. The two columns are printed side by side only so a reader who has the round-2 number in hand can find the one that replaces it.",
+   "n_cyst_bearing": 16,
+   "n_laterality_repair_fired": 35,
+   "pooled_vs_per_side": {
+    "cohort": {
+     "n": 36,
+     "pooled_organ_dice": 0.8592,
+     "per_side_mean_organ_dice": 0.8638,
+     "pooled_parenchyma_dice": 0.8356,
+     "per_side_mean_parenchyma_dice": 0.8263
+    },
+    "full_collection": {
+     "n": 489,
+     "pooled_organ_dice": 0.8623,
+     "per_side_mean_organ_dice": 0.8612,
+     "pooled_parenchyma_dice": 0.8372,
+     "per_side_mean_parenchyma_dice": 0.8286
+    }
+   }
+  },
+  "FLARE23": {
+   "n_published": 54,
+   "published_tumour_excluded": null,
+   "published_organ_with_mass_CONVENTION_B": null,
+   "note": "round 2 published no FLARE23 organ cell at all; this is the first one.",
+   "our_organ_dice_CONVENTION_A": 0.8948
+  },
+  "_not_only_the_convention_moved": "The organ MASKS are not the same masks. The reference is: on LiTS and MSD the per-case reference organ volume agrees with round 2's to better than 0.01 cm3 on every case. The PREDICTION is not: it differs on every case, and ours is systematically the larger. The two arms are two different TotalSegmentator invocations - the masks scored here were written by src/eval/baseline.py's run_totalsegmentator, which runs ts_runner in a clean subprocess with task 'total', fast=True and NO roi_subset, on the local 1080 Ti, and remaps to the unified space at write time; the pipeline team round 3 section 10 records his as the Python API with fast=True, ml=True and roi_subset of seven classes. So the movement between round 2's organ cell and this one is NOT a pure convention change and must never be presented as one. What this table legitimately claims is that THE AUTONOMOUS ORGAN COLUMN NOW HAS A STATED CONVENTION and travels with its parenchyma pair - not that convention A raised or lowered a number by the difference shown.",
+  "_why_kits_moves": "Measured, not assumed, and the first thing the measurement did was refute the explanation we expected to give. (1) THE REFERENCE DID NOT MOVE. Our pooled parenchyma reference matches round 2's tumour-excluded reference to better than 0.01 cm3 on all 36 cohort cases. The laterality repair fires on 35 of them - it is not a no-op - but what it restores is exactly the dataset's own whole kidney, which is what round 2 scored against too. The 5,000-voxel splitter defect was a defect of the PER-SIDE reference, and this table does not use a per-side reference. (2) THE PREDICTION DID MOVE, and that is the whole of the parenchyma gap: 0.8356 against round 2's 0.8748 with an identical reference means a different organ mask, and ours is larger by 74.3 cm3 on average - a different TotalSegmentator invocation, not a different convention. (3) THE CYST RULING MOVES THE CONVENTION-A COLUMN ONLY, and on this cohort it is material: 16 of the 36 KiTS cohort cases carry a reference cyst, and on each of those the ruling adds the cyst to the organ-with-mass reference while leaving the parenchyma reference alone. It cannot explain any part of the parenchyma difference, and it is not offered as doing so."
+ },
+ "convention": "ipkg_organ_convention/2",
+ "convention_A": "CONVENTION A. prediction = the organ model ALONE; reference = the organ label UNION the mass components attributed to that organ by host attribution. The prediction is never unioned with a predicted tumour and never carved by one: an organ score measures the organ model. Emitted as organ_dice and, under its older name, dice_organ_with_mass - the same number.",
+ "parenchyma": "parenchyma_dice is Dice against the organ label with the mass removed; parenchyma_recall is |P and parenchyma| / |parenchyma|. Published with every organ_with_mass figure: at case_00067's left-kidney mass fraction of 0.888 a prediction of the mass alone scores 0.941 organ-with-mass while recovering zero parenchyma, and only the recall separates the two.",
+ "mass_coverage": "|P and host mass| / |host mass|, where the host mass is the part of the organ-with-mass reference that is mass. How much of the reference mass the ORGAN prediction actually covers. With parenchyma_recall it separates 'the model found the organ' from 'the model found the tumour and called it the organ': the degenerate mass-alone prediction scores coverage 1.000 and recall 0.000. None, not zero, when the organ hosts no mass - there is nothing to cover.",
+ "cyst_ruling": "KiTS23 cyst (native class 3, unified 15) is counted INTO the kidney: it is part of the organ-with-mass reference exactly as the tumour is, it is excluded from the parenchyma reference exactly as the tumour is, and it is one of the 'host mass' voxels that mass_coverage measures and that the lesion-as-ignore-region reading drops. Advisor decision, 2026-10-03. Every artefact that scores KiTS reports the cyst-bearing count of its own sample, because this ruling moves every case that has one and no case that has not.",
+ "arm": "autonomous: organ = TotalSegmentator v2 --fast (3 mm), unified label space; the organ model's own mask, never unioned with or carved by a predicted tumour",
+ "run_was_partial_when_summarised": false,
+ "semi_oracle_cannot_follow": "The cohort SEMI-ORACLE organ row cannot be moved to convention A. the pipeline team round 3 item 3: the single-organ cohort's semi-oracle masks did not survive the 18/19 September wipe - the masks behind the frozen records were never retained, the 09-17 regenerations were on the wiped scratch disk, and the organ test-set masks behind the organ tables were never saved, only their metrics. Convention A needs the MASK (it changes the reference, not the arithmetic on a stored Dice), so the semi-oracle single-organ cohort row stays TUMOUR-EXCLUDED and must be labelled as such. Only FLARE23's 576 semi-oracle masks survive; the pipeline team has offered to re-score that one collection under convention A, and to re-run the three single-organ lists on the surviving organ checkpoints at about 1 GPU-hour.",
+ "n_cases_on_disk": 1850,
+ "n_masks_on_disk": 1850,
+ "n_scored_ok": 1850,
+ "memory_throttle": {
+  "floor_gb": 8.0,
+  "n_cases_that_waited": 166,
+  "total_wait_seconds": 1190.5,
+  "n_cases_that_needed_a_retry": 2
+ },
+ "not_scored": [],
+ "cohort_coverage": {
+  "LiTS": {
+   "n_wanted": 21,
+   "n_missing": 0,
+   "missing": []
+  },
+  "MSD Pancreas": {
+   "n_wanted": 56,
+   "n_missing": 0,
+   "missing": []
+  },
+  "KiTS23": {
+   "n_wanted": 36,
+   "n_missing": 0,
+   "missing": []
+  },
+  "FLARE23": {
+   "n_wanted": 54,
+   "n_missing": 0,
+   "missing": []
+  }
+ },
+ "cohorts": {
+  "full_collection": {
+   "LiTS": {
+    "n_cases": 131,
+    "n_records": 131,
+    "n_records_with_no_annotated_organ": 0,
+    "n_cases_with_a_hosted_mass": 118,
+    "case_mean": {
+     "organ_dice": {
+      "n": 131,
+      "mean": 0.9538,
+      "ci95": [
+       0.9502,
+       0.9567
+      ],
+      "median": 0.9589
+     },
+     "parenchyma_dice": {
+      "n": 131,
+      "mean": 0.9355,
+      "ci95": [
+       0.9287,
+       0.9414
+      ],
+      "median": 0.947
+     },
+     "parenchyma_recall": {
+      "n": 131,
+      "mean": 0.9627,
+      "ci95": [
+       0.9568,
+       0.9672
+      ],
+      "median": 0.9682
+     }
+    },
+    "per_organ": {
+     "liver": {
+      "n_structures": 131,
+      "n_hosting_mass": 118,
+      "organ_dice": {
+       "n": 131,
+       "mean": 0.9538,
+       "ci95": [
+        0.9502,
+        0.9567
+       ],
+       "median": 0.9589
+      },
+      "parenchyma_dice": {
+       "n": 131,
+       "mean": 0.9355,
+       "ci95": [
+        0.9287,
+        0.9414
+       ],
+       "median": 0.947
+      },
+      "parenchyma_recall": {
+       "n": 131,
+       "mean": 0.9627,
+       "ci95": [
+        0.9568,
+        0.9672
+       ],
+       "median": 0.9682
+      },
+      "mass_coverage": {
+       "n": 118,
+       "mean": 0.9198,
+       "ci95": [
+        0.8865,
+        0.9475
+       ],
+       "median": 0.9896
+      }
+     }
+    }
+   },
+   "KiTS23": {
+    "n_cases": 489,
+    "n_records": 489,
+    "n_records_with_no_annotated_organ": 0,
+    "n_cases_with_a_hosted_mass": 489,
+    "case_mean": {
+     "organ_dice": {
+      "n": 489,
+      "mean": 0.8623,
+      "ci95": [
+       0.8505,
+       0.8735
+      ],
+      "median": 0.905
+     },
+     "parenchyma_dice": {
+      "n": 489,
+      "mean": 0.8372,
+      "ci95": [
+       0.8274,
+       0.8455
+      ],
+      "median": 0.8738
+     },
+     "parenchyma_recall": {
+      "n": 489,
+      "mean": 0.8352,
+      "ci95": [
+       0.8283,
+       0.8411
+      ],
+      "median": 0.8469
+     }
+    },
+    "per_organ": {
+     "kidney (pooled)": {
+      "n_structures": 489,
+      "n_hosting_mass": 489,
+      "organ_dice": {
+       "n": 489,
+       "mean": 0.8623,
+       "ci95": [
+        0.8505,
+        0.8735
+       ],
+       "median": 0.905
+      },
+      "parenchyma_dice": {
+       "n": 489,
+       "mean": 0.8372,
+       "ci95": [
+        0.8274,
+        0.8455
+       ],
+       "median": 0.8738
+      },
+      "parenchyma_recall": {
+       "n": 489,
+       "mean": 0.8352,
+       "ci95": [
+        0.8283,
+        0.8411
+       ],
+       "median": 0.8469
+      },
+      "mass_coverage": {
+       "n": 489,
+       "mean": 0.6783,
+       "ci95": [
+        0.6539,
+        0.7025
+       ],
+       "median": 0.7846
+      }
+     },
+     "left kidney": {
+      "n_structures": 489,
+      "n_hosting_mass": 347,
+      "organ_dice": {
+       "n": 489,
+       "mean": 0.8501,
+       "ci95": [
+        0.834,
+        0.8654
+       ],
+       "median": 0.9073
+      },
+      "parenchyma_dice": {
+       "n": 489,
+       "mean": 0.8222,
+       "ci95": [
+        0.8055,
+        0.8384
+       ],
+       "median": 0.8962
+      },
+      "parenchyma_recall": {
+       "n": 489,
+       "mean": 0.818,
+       "ci95": [
+        0.8052,
+        0.8303
+       ],
+       "median": 0.8503
+      },
+      "mass_coverage": {
+       "n": 347,
+       "mean": 0.6306,
+       "ci95": [
+        0.597,
+        0.6635
+       ],
+       "median": 0.7372
+      }
+     },
+     "right kidney": {
+      "n_structures": 489,
+      "n_hosting_mass": 330,
+      "organ_dice": {
+       "n": 489,
+       "mean": 0.8722,
+       "ci95": [
+        0.8584,
+        0.8844
+       ],
+       "median": 0.9086
+      },
+      "parenchyma_dice": {
+       "n": 489,
+       "mean": 0.835,
+       "ci95": [
+        0.8201,
+        0.8482
+       ],
+       "median": 0.8978
+      },
+      "parenchyma_recall": {
+       "n": 489,
+       "mean": 0.8292,
+       "ci95": [
+        0.818,
+        0.8393
+       ],
+       "median": 0.8492
+      },
+      "mass_coverage": {
+       "n": 330,
+       "mean": 0.7085,
+       "ci95": [
+        0.6789,
+        0.7362
+       ],
+       "median": 0.8134
+      }
+     }
+    }
+   },
+   "MSD Pancreas": {
+    "n_cases": 281,
+    "n_records": 281,
+    "n_records_with_no_annotated_organ": 0,
+    "n_cases_with_a_hosted_mass": 281,
+    "case_mean": {
+     "organ_dice": {
+      "n": 281,
+      "mean": 0.762,
+      "ci95": [
+       0.7483,
+       0.7745
+      ],
+      "median": 0.7925
+     },
+     "parenchyma_dice": {
+      "n": 281,
+      "mean": 0.7285,
+      "ci95": [
+       0.7161,
+       0.7398
+      ],
+      "median": 0.755
+     },
+     "parenchyma_recall": {
+      "n": 281,
+      "mean": 0.713,
+      "ci95": [
+       0.6957,
+       0.7317
+      ],
+      "median": 0.7433
+     }
+    },
+    "per_organ": {
+     "pancreas": {
+      "n_structures": 281,
+      "n_hosting_mass": 281,
+      "organ_dice": {
+       "n": 281,
+       "mean": 0.762,
+       "ci95": [
+        0.7483,
+        0.7745
+       ],
+       "median": 0.7925
+      },
+      "parenchyma_dice": {
+       "n": 281,
+       "mean": 0.7285,
+       "ci95": [
+        0.7161,
+        0.7398
+       ],
+       "median": 0.755
+      },
+      "parenchyma_recall": {
+       "n": 281,
+       "mean": 0.713,
+       "ci95": [
+        0.6957,
+        0.7317
+       ],
+       "median": 0.7433
+      },
+      "mass_coverage": {
+       "n": 281,
+       "mean": 0.7777,
+       "ci95": [
+        0.7436,
+        0.8103
+       ],
+       "median": 0.9276
+      }
+     }
+    }
+   },
+   "FLARE23 tumour-positive": {
+    "n_cases": 270,
+    "n_records": 644,
+    "n_records_with_no_annotated_organ": 374,
+    "n_cases_with_a_hosted_mass": 270,
+    "case_mean": {
+     "organ_dice": {
+      "n": 270,
+      "mean": 0.8947,
+      "ci95": [
+       0.8888,
+       0.8998
+      ],
+      "median": 0.908
+     },
+     "parenchyma_dice": {
+      "n": 270,
+      "mean": 0.8868,
+      "ci95": [
+       0.8814,
+       0.8916
+      ],
+      "median": 0.8988
+     },
+     "parenchyma_recall": {
+      "n": 270,
+      "mean": 0.8754,
+      "ci95": [
+       0.8694,
+       0.8808
+      ],
+      "median": 0.888
+     }
+    },
+    "per_organ": {
+     "left kidney": {
+      "n_structures": 266,
+      "n_hosting_mass": 51,
+      "organ_dice": {
+       "n": 266,
+       "mean": 0.8894,
+       "ci95": [
+        0.8757,
+        0.9004
+       ],
+       "median": 0.9157
+      },
+      "parenchyma_dice": {
+       "n": 266,
+       "mean": 0.8843,
+       "ci95": [
+        0.8714,
+        0.8947
+       ],
+       "median": 0.9144
+      },
+      "parenchyma_recall": {
+       "n": 266,
+       "mean": 0.8488,
+       "ci95": [
+        0.8371,
+        0.8586
+       ],
+       "median": 0.8681
+      },
+      "mass_coverage": {
+       "n": 51,
+       "mean": 0.6433,
+       "ci95": [
+        0.56,
+        0.7246
+       ],
+       "median": 0.7982
+      }
+     },
+     "liver": {
+      "n_structures": 270,
+      "n_hosting_mass": 45,
+      "organ_dice": {
+       "n": 270,
+       "mean": 0.9622,
+       "ci95": [
+        0.961,
+        0.9633
+       ],
+       "median": 0.9649
+      },
+      "parenchyma_dice": {
+       "n": 270,
+       "mean": 0.9575,
+       "ci95": [
+        0.9544,
+        0.96
+       ],
+       "median": 0.9643
+      },
+      "parenchyma_recall": {
+       "n": 270,
+       "mean": 0.9765,
+       "ci95": [
+        0.9747,
+        0.9781
+       ],
+       "median": 0.9798
+      },
+      "mass_coverage": {
+       "n": 45,
+       "mean": 0.9432,
+       "ci95": [
+        0.904,
+        0.9708
+       ],
+       "median": 0.9887
+      }
+     },
+     "pancreas": {
+      "n_structures": 270,
+      "n_hosting_mass": 126,
+      "organ_dice": {
+       "n": 270,
+       "mean": 0.7804,
+       "ci95": [
+        0.767,
+        0.7933
+       ],
+       "median": 0.8104
+      },
+      "parenchyma_dice": {
+       "n": 270,
+       "mean": 0.7664,
+       "ci95": [
+        0.7537,
+        0.7793
+       ],
+       "median": 0.793
+      },
+      "parenchyma_recall": {
+       "n": 270,
+       "mean": 0.7524,
+       "ci95": [
+        0.7357,
+        0.7686
+       ],
+       "median": 0.7936
+      },
+      "mass_coverage": {
+       "n": 126,
+       "mean": 0.7537,
+       "ci95": [
+        0.6962,
+        0.8075
+       ],
+       "median": 0.9353
+      }
+     },
+     "right kidney": {
+      "n_structures": 268,
+      "n_hosting_mass": 52,
+      "organ_dice": {
+       "n": 268,
+       "mean": 0.8979,
+       "ci95": [
+        0.8863,
+        0.9068
+       ],
+       "median": 0.9176
+      },
+      "parenchyma_dice": {
+       "n": 268,
+       "mean": 0.8821,
+       "ci95": [
+        0.8677,
+        0.894
+       ],
+       "median": 0.9156
+      },
+      "parenchyma_recall": {
+       "n": 268,
+       "mean": 0.8503,
+       "ci95": [
+        0.8377,
+        0.8606
+       ],
+       "median": 0.8714
+      },
+      "mass_coverage": {
+       "n": 52,
+       "mean": 0.7148,
+       "ci95": [
+        0.6476,
+        0.7793
+       ],
+       "median": 0.8099
+      }
+     },
+     "spleen": {
+      "n_structures": 268,
+      "n_hosting_mass": 0,
+      "organ_dice": {
+       "n": 268,
+       "mean": 0.9444,
+       "ci95": [
+        0.9353,
+        0.9513
+       ],
+       "median": 0.9547
+      },
+      "parenchyma_dice": {
+       "n": 268,
+       "mean": 0.9444,
+       "ci95": [
+        0.9353,
+        0.9513
+       ],
+       "median": 0.9547
+      },
+      "parenchyma_recall": {
+       "n": 268,
+       "mean": 0.9496,
+       "ci95": [
+        0.9407,
+        0.9563
+       ],
+       "median": 0.9564
+      },
+      "mass_coverage": null
+     }
+    }
+   },
+   "FLARE23 tumour-free": {
+    "n_cases": 305,
+    "n_records": 305,
+    "n_records_with_no_annotated_organ": 0,
+    "n_cases_with_a_hosted_mass": 0,
+    "case_mean": {
+     "organ_dice": {
+      "n": 305,
+      "mean": 0.8653,
+      "ci95": [
+       0.8581,
+       0.872
+      ],
+      "median": 0.8895
+     },
+     "parenchyma_dice": {
+      "n": 305,
+      "mean": 0.8653,
+      "ci95": [
+       0.8581,
+       0.872
+      ],
+      "median": 0.8895
+     },
+     "parenchyma_recall": {
+      "n": 305,
+      "mean": 0.847,
+      "ci95": [
+       0.8397,
+       0.8539
+      ],
+      "median": 0.8624
+     }
+    },
+    "per_organ": {
+     "aorta": {
+      "n_structures": 114,
+      "n_hosting_mass": 0,
+      "organ_dice": {
+       "n": 114,
+       "mean": 0.7059,
+       "ci95": [
+        0.6943,
+        0.7166
+       ],
+       "median": 0.7184
+      },
+      "parenchyma_dice": {
+       "n": 114,
+       "mean": 0.7059,
+       "ci95": [
+        0.6943,
+        0.7166
+       ],
+       "median": 0.7184
+      },
+      "parenchyma_recall": {
+       "n": 114,
+       "mean": 0.9067,
+       "ci95": [
+        0.9041,
+        0.9095
+       ],
+       "median": 0.9076
+      },
+      "mass_coverage": null
+     },
+     "duodenum": {
+      "n_structures": 113,
+      "n_hosting_mass": 0,
+      "organ_dice": {
+       "n": 113,
+       "mean": 0.6967,
+       "ci95": [
+        0.6776,
+        0.7159
+       ],
+       "median": 0.7237
+      },
+      "parenchyma_dice": {
+       "n": 113,
+       "mean": 0.6967,
+       "ci95": [
+        0.6776,
+        0.7159
+       ],
+       "median": 0.7237
+      },
+      "parenchyma_recall": {
+       "n": 113,
+       "mean": 0.6197,
+       "ci95": [
+        0.5978,
+        0.6417
+       ],
+       "median": 0.6484
+      },
+      "mass_coverage": null
+     },
+     "gallbladder": {
+      "n_structures": 100,
+      "n_hosting_mass": 0,
+      "organ_dice": {
+       "n": 100,
+       "mean": 0.8083,
+       "ci95": [
+        0.7878,
+        0.828
+       ],
+       "median": 0.8356
+      },
+      "parenchyma_dice": {
+       "n": 100,
+       "mean": 0.8083,
+       "ci95": [
+        0.7878,
+        0.828
+       ],
+       "median": 0.8356
+      },
+      "parenchyma_recall": {
+       "n": 100,
+       "mean": 0.7568,
+       "ci95": [
+        0.7303,
+        0.7819
+       ],
+       "median": 0.7916
+      },
+      "mass_coverage": null
+     },
+     "inferior vena cava": {
+      "n_structures": 114,
+      "n_hosting_mass": 0,
+      "organ_dice": {
+       "n": 114,
+       "mean": 0.8591,
+       "ci95": [
+        0.8531,
+        0.865
+       ],
+       "median": 0.8667
+      },
+      "parenchyma_dice": {
+       "n": 114,
+       "mean": 0.8591,
+       "ci95": [
+        0.8531,
+        0.865
+       ],
+       "median": 0.8667
+      },
+      "parenchyma_recall": {
+       "n": 114,
+       "mean": 0.8637,
+       "ci95": [
+        0.8564,
+        0.8709
+       ],
+       "median": 0.8698
+      },
+      "mass_coverage": null
+     },
+     "left adrenal gland": {
+      "n_structures": 113,
+      "n_hosting_mass": 0,
+      "organ_dice": {
+       "n": 113,
+       "mean": 0.6731,
+       "ci95": [
+        0.6529,
+        0.6913
+       ],
+       "median": 0.6933
+      },
+      "parenchyma_dice": {
+       "n": 113,
+       "mean": 0.6731,
+       "ci95": [
+        0.6529,
+        0.6913
+       ],
+       "median": 0.6933
+      },
+      "parenchyma_recall": {
+       "n": 113,
+       "mean": 0.6213,
+       "ci95": [
+        0.5987,
+        0.6423
+       ],
+       "median": 0.641
+      },
+      "mass_coverage": null
+     },
+     "left kidney": {
+      "n_structures": 301,
+      "n_hosting_mass": 0,
+      "organ_dice": {
+       "n": 301,
+       "mean": 0.8934,
+       "ci95": [
+        0.8799,
+        0.9041
+       ],
+       "median": 0.9142
+      },
+      "parenchyma_dice": {
+       "n": 301,
+       "mean": 0.8934,
+       "ci95": [
+        0.8799,
+        0.9041
+       ],
+       "median": 0.9142
+      },
+      "parenchyma_recall": {
+       "n": 301,
+       "mean": 0.846,
+       "ci95": [
+        0.8314,
+        0.8581
+       ],
+       "median": 0.8683
+      },
+      "mass_coverage": null
+     },
+     "liver": {
+      "n_structures": 305,
+      "n_hosting_mass": 0,
+      "organ_dice": {
+       "n": 305,
+       "mean": 0.9583,
+       "ci95": [
+        0.9565,
+        0.9597
+       ],
+       "median": 0.9604
+      },
+      "parenchyma_dice": {
+       "n": 305,
+       "mean": 0.9583,
+       "ci95": [
+        0.9565,
+        0.9597
+       ],
+       "median": 0.9604
+      },
+      "parenchyma_recall": {
+       "n": 305,
+       "mean": 0.9742,
+       "ci95": [
+        0.9715,
+        0.9763
+       ],
+       "median": 0.9792
+      },
+      "mass_coverage": null
+     },
+     "oesophagus": {
+      "n_structures": 114,
+      "n_hosting_mass": 0,
+      "organ_dice": {
+       "n": 114,
+       "mean": 0.7053,
+       "ci95": [
+        0.6877,
+        0.7217
+       ],
+       "median": 0.7217
+      },
+      "parenchyma_dice": {
+       "n": 114,
+       "mean": 0.7053,
+       "ci95": [
+        0.6877,
+        0.7217
+       ],
+       "median": 0.7217
+      },
+      "parenchyma_recall": {
+       "n": 114,
+       "mean": 0.6936,
+       "ci95": [
+        0.6799,
+        0.7066
+       ],
+       "median": 0.6955
+      },
+      "mass_coverage": null
+     },
+     "pancreas": {
+      "n_structures": 305,
+      "n_hosting_mass": 0,
+      "organ_dice": {
+       "n": 305,
+       "mean": 0.802,
+       "ci95": [
+        0.792,
+        0.8115
+       ],
+       "median": 0.823
+      },
+      "parenchyma_dice": {
+       "n": 305,
+       "mean": 0.802,
+       "ci95": [
+        0.792,
+        0.8115
+       ],
+       "median": 0.823
+      },
+      "parenchyma_recall": {
+       "n": 305,
+       "mean": 0.7723,
+       "ci95": [
+        0.7596,
+        0.7848
+       ],
+       "median": 0.7946
+      },
+      "mass_coverage": null
+     },
+     "right adrenal gland": {
+      "n_structures": 114,
+      "n_hosting_mass": 0,
+      "organ_dice": {
+       "n": 114,
+       "mean": 0.6728,
+       "ci95": [
+        0.6607,
+        0.6851
+       ],
+       "median": 0.6722
+      },
+      "parenchyma_dice": {
+       "n": 114,
+       "mean": 0.6728,
+       "ci95": [
+        0.6607,
+        0.6851
+       ],
+       "median": 0.6722
+      },
+      "parenchyma_recall": {
+       "n": 114,
+       "mean": 0.5998,
+       "ci95": [
+        0.5827,
+        0.6169
+       ],
+       "median": 0.6085
+      },
+      "mass_coverage": null
+     },
+     "right kidney": {
+      "n_structures": 303,
+      "n_hosting_mass": 0,
+      "organ_dice": {
+       "n": 303,
+       "mean": 0.9011,
+       "ci95": [
+        0.8897,
+        0.9104
+       ],
+       "median": 0.9137
+      },
+      "parenchyma_dice": {
+       "n": 303,
+       "mean": 0.9011,
+       "ci95": [
+        0.8897,
+        0.9104
+       ],
+       "median": 0.9137
+      },
+      "parenchyma_recall": {
+       "n": 303,
+       "mean": 0.8567,
+       "ci95": [
+        0.8448,
+        0.8662
+       ],
+       "median": 0.8683
+      },
+      "mass_coverage": null
+     },
+     "spleen": {
+      "n_structures": 302,
+      "n_hosting_mass": 0,
+      "organ_dice": {
+       "n": 302,
+       "mean": 0.9454,
+       "ci95": [
+        0.9415,
+        0.9484
+       ],
+       "median": 0.9509
+      },
+      "parenchyma_dice": {
+       "n": 302,
+       "mean": 0.9454,
+       "ci95": [
+        0.9415,
+        0.9484
+       ],
+       "median": 0.9509
+      },
+      "parenchyma_recall": {
+       "n": 302,
+       "mean": 0.9459,
+       "ci95": [
+        0.9429,
+        0.9485
+       ],
+       "median": 0.9492
+      },
+      "mass_coverage": null
+     },
+     "stomach": {
+      "n_structures": 114,
+      "n_hosting_mass": 0,
+      "organ_dice": {
+       "n": 114,
+       "mean": 0.8991,
+       "ci95": [
+        0.8796,
+        0.9155
+       ],
+       "median": 0.9246
+      },
+      "parenchyma_dice": {
+       "n": 114,
+       "mean": 0.8991,
+       "ci95": [
+        0.8796,
+        0.9155
+       ],
+       "median": 0.9246
+      },
+      "parenchyma_recall": {
+       "n": 114,
+       "mean": 0.8805,
+       "ci95": [
+        0.8575,
+        0.9001
+       ],
+       "median": 0.9143
+      },
+      "mass_coverage": null
+     }
+    }
+   },
+   "ALL": {
+    "n_cases": 1171,
+    "n_records": 1545,
+    "n_records_with_no_annotated_organ": 374,
+    "n_cases_with_a_hosted_mass": 1158,
+    "case_mean": {
+     "organ_dice": {
+      "n": 1171,
+      "mean": 0.8559,
+      "ci95": [
+       0.8494,
+       0.8626
+      ],
+      "median": 0.8974
+     },
+     "parenchyma_dice": {
+      "n": 1171,
+      "mean": 0.8336,
+      "ci95": [
+       0.8275,
+       0.84
+      ],
+      "median": 0.8678
+     },
+     "parenchyma_recall": {
+      "n": 1171,
+      "mean": 0.8294,
+      "ci95": [
+       0.823,
+       0.8361
+      ],
+      "median": 0.8556
+     }
+    },
+    "per_organ": {
+     "kidney (pooled)": {
+      "n_structures": 489,
+      "n_hosting_mass": 489,
+      "organ_dice": {
+       "n": 489,
+       "mean": 0.8623,
+       "ci95": [
+        0.8505,
+        0.8735
+       ],
+       "median": 0.905
+      },
+      "parenchyma_dice": {
+       "n": 489,
+       "mean": 0.8372,
+       "ci95": [
+        0.8274,
+        0.8455
+       ],
+       "median": 0.8738
+      },
+      "parenchyma_recall": {
+       "n": 489,
+       "mean": 0.8352,
+       "ci95": [
+        0.8283,
+        0.8411
+       ],
+       "median": 0.8469
+      },
+      "mass_coverage": {
+       "n": 489,
+       "mean": 0.6783,
+       "ci95": [
+        0.6539,
+        0.7025
+       ],
+       "median": 0.7846
+      }
+     },
+     "left kidney": {
+      "n_structures": 755,
+      "n_hosting_mass": 398,
+      "organ_dice": {
+       "n": 755,
+       "mean": 0.864,
+       "ci95": [
+        0.8525,
+        0.8745
+       ],
+       "median": 0.9106
+      },
+      "parenchyma_dice": {
+       "n": 755,
+       "mean": 0.8441,
+       "ci95": [
+        0.8327,
+        0.8551
+       ],
+       "median": 0.9012
+      },
+      "parenchyma_recall": {
+       "n": 755,
+       "mean": 0.8289,
+       "ci95": [
+        0.8199,
+        0.8374
+       ],
+       "median": 0.8565
+      },
+      "mass_coverage": {
+       "n": 398,
+       "mean": 0.6322,
+       "ci95": [
+        0.6029,
+        0.6621
+       ],
+       "median": 0.7444
+      }
+     },
+     "liver": {
+      "n_structures": 401,
+      "n_hosting_mass": 163,
+      "organ_dice": {
+       "n": 401,
+       "mean": 0.9595,
+       "ci95": [
+        0.958,
+        0.9607
+       ],
+       "median": 0.9629
+      },
+      "parenchyma_dice": {
+       "n": 401,
+       "mean": 0.9503,
+       "ci95": [
+        0.9474,
+        0.953
+       ],
+       "median": 0.9611
+      },
+      "parenchyma_recall": {
+       "n": 401,
+       "mean": 0.972,
+       "ci95": [
+        0.9699,
+        0.9739
+       ],
+       "median": 0.978
+      },
+      "mass_coverage": {
+       "n": 163,
+       "mean": 0.9263,
+       "ci95": [
+        0.9004,
+        0.9498
+       ],
+       "median": 0.9895
+      }
+     },
+     "pancreas": {
+      "n_structures": 551,
+      "n_hosting_mass": 407,
+      "organ_dice": {
+       "n": 551,
+       "mean": 0.771,
+       "ci95": [
+        0.7611,
+        0.7805
+       ],
+       "median": 0.8024
+      },
+      "parenchyma_dice": {
+       "n": 551,
+       "mean": 0.7471,
+       "ci95": [
+        0.738,
+        0.7559
+       ],
+       "median": 0.7717
+      },
+      "parenchyma_recall": {
+       "n": 551,
+       "mean": 0.7323,
+       "ci95": [
+        0.7204,
+        0.7447
+       ],
+       "median": 0.7698
+      },
+      "mass_coverage": {
+       "n": 407,
+       "mean": 0.7703,
+       "ci95": [
+        0.7399,
+        0.8002
+       ],
+       "median": 0.9294
+      }
+     },
+     "right kidney": {
+      "n_structures": 757,
+      "n_hosting_mass": 382,
+      "organ_dice": {
+       "n": 757,
+       "mean": 0.8813,
+       "ci95": [
+        0.8723,
+        0.8898
+       ],
+       "median": 0.912
+      },
+      "parenchyma_dice": {
+       "n": 757,
+       "mean": 0.8517,
+       "ci95": [
+        0.8411,
+        0.8611
+       ],
+       "median": 0.9033
+      },
+      "parenchyma_recall": {
+       "n": 757,
+       "mean": 0.8367,
+       "ci95": [
+        0.8282,
+        0.8441
+       ],
+       "median": 0.8573
+      },
+      "mass_coverage": {
+       "n": 382,
+       "mean": 0.7094,
+       "ci95": [
+        0.6834,
+        0.7358
+       ],
+       "median": 0.8123
+      }
+     },
+     "spleen": {
+      "n_structures": 268,
+      "n_hosting_mass": 0,
+      "organ_dice": {
+       "n": 268,
+       "mean": 0.9444,
+       "ci95": [
+        0.9353,
+        0.9513
+       ],
+       "median": 0.9547
+      },
+      "parenchyma_dice": {
+       "n": 268,
+       "mean": 0.9444,
+       "ci95": [
+        0.9353,
+        0.9513
+       ],
+       "median": 0.9547
+      },
+      "parenchyma_recall": {
+       "n": 268,
+       "mean": 0.9496,
+       "ci95": [
+        0.9407,
+        0.9563
+       ],
+       "median": 0.9564
+      },
+      "mass_coverage": null
+     }
+    }
+   },
+   "_arm_unresolved": [],
+   "ALL_note": "the pooled row excludes the FLARE23 tumour-free arm, which has no mass to attribute and would make convention A and parenchyma agree by construction on 305 of the scans"
+  },
+  "cohort_167_all_no_dedup": {
+   "ALL": {
+    "n_cases": 167,
+    "n_records": 167,
+    "n_records_with_no_annotated_organ": 0,
+    "n_cases_with_a_hosted_mass": 167,
+    "case_mean": {
+     "organ_dice": {
+      "n": 167,
+      "mean": 0.852,
+      "ci95": [
+       0.8341,
+       0.87
+      ],
+      "median": 0.8966
+     },
+     "parenchyma_dice": {
+      "n": 167,
+      "mean": 0.8297,
+      "ci95": [
+       0.8123,
+       0.8473
+      ],
+      "median": 0.8753
+     },
+     "parenchyma_recall": {
+      "n": 167,
+      "mean": 0.8227,
+      "ci95": [
+       0.802,
+       0.8432
+      ],
+      "median": 0.8578
+     }
+    },
+    "per_organ": {
+     "kidney (pooled)": {
+      "n_structures": 36,
+      "n_hosting_mass": 36,
+      "organ_dice": {
+       "n": 36,
+       "mean": 0.8592,
+       "ci95": [
+        0.8023,
+        0.9023
+       ],
+       "median": 0.9091
+      },
+      "parenchyma_dice": {
+       "n": 36,
+       "mean": 0.8356,
+       "ci95": [
+        0.7945,
+        0.8689
+       ],
+       "median": 0.8861
+      },
+      "parenchyma_recall": {
+       "n": 36,
+       "mean": 0.8383,
+       "ci95": [
+        0.8132,
+        0.8567
+       ],
+       "median": 0.8518
+      },
+      "mass_coverage": {
+       "n": 36,
+       "mean": 0.7141,
+       "ci95": [
+        0.6302,
+        0.793
+       ],
+       "median": 0.8189
+      }
+     },
+     "left kidney": {
+      "n_structures": 89,
+      "n_hosting_mass": 37,
+      "organ_dice": {
+       "n": 89,
+       "mean": 0.8611,
+       "ci95": [
+        0.8216,
+        0.8949
+       ],
+       "median": 0.9157
+      },
+      "parenchyma_dice": {
+       "n": 89,
+       "mean": 0.8533,
+       "ci95": [
+        0.8146,
+        0.8837
+       ],
+       "median": 0.9133
+      },
+      "parenchyma_recall": {
+       "n": 89,
+       "mean": 0.8353,
+       "ci95": [
+        0.8032,
+        0.8596
+       ],
+       "median": 0.8721
+      },
+      "mass_coverage": {
+       "n": 37,
+       "mean": 0.5867,
+       "ci95": [
+        0.4887,
+        0.6804
+       ],
+       "median": 0.6859
+      }
+     },
+     "liver": {
+      "n_structures": 75,
+      "n_hosting_mass": 32,
+      "organ_dice": {
+       "n": 75,
+       "mean": 0.9601,
+       "ci95": [
+        0.9576,
+        0.9623
+       ],
+       "median": 0.9621
+      },
+      "parenchyma_dice": {
+       "n": 75,
+       "mean": 0.9522,
+       "ci95": [
+        0.9474,
+        0.9566
+       ],
+       "median": 0.9604
+      },
+      "parenchyma_recall": {
+       "n": 75,
+       "mean": 0.9731,
+       "ci95": [
+        0.9694,
+        0.9766
+       ],
+       "median": 0.9788
+      },
+      "mass_coverage": {
+       "n": 32,
+       "mean": 0.9716,
+       "ci95": [
+        0.9521,
+        0.9872
+       ],
+       "median": 0.9912
+      }
+     },
+     "pancreas": {
+      "n_structures": 110,
+      "n_hosting_mass": 82,
+      "organ_dice": {
+       "n": 110,
+       "mean": 0.7723,
+       "ci95": [
+        0.753,
+        0.7911
+       ],
+       "median": 0.8051
+      },
+      "parenchyma_dice": {
+       "n": 110,
+       "mean": 0.7437,
+       "ci95": [
+        0.7228,
+        0.7633
+       ],
+       "median": 0.7703
+      },
+      "parenchyma_recall": {
+       "n": 110,
+       "mean": 0.7263,
+       "ci95": [
+        0.699,
+        0.7553
+       ],
+       "median": 0.7684
+      },
+      "mass_coverage": {
+       "n": 82,
+       "mean": 0.7585,
+       "ci95": [
+        0.6943,
+        0.8222
+       ],
+       "median": 0.9233
+      }
+     },
+     "right kidney": {
+      "n_structures": 90,
+      "n_hosting_mass": 29,
+      "organ_dice": {
+       "n": 90,
+       "mean": 0.9078,
+       "ci95": [
+        0.8976,
+        0.9158
+       ],
+       "median": 0.9179
+      },
+      "parenchyma_dice": {
+       "n": 90,
+       "mean": 0.8782,
+       "ci95": [
+        0.8539,
+        0.8977
+       ],
+       "median": 0.9103
+      },
+      "parenchyma_recall": {
+       "n": 90,
+       "mean": 0.8604,
+       "ci95": [
+        0.8478,
+        0.8716
+       ],
+       "median": 0.8719
+      },
+      "mass_coverage": {
+       "n": 29,
+       "mean": 0.7504,
+       "ci95": [
+        0.6605,
+        0.8281
+       ],
+       "median": 0.8305
+      }
+     },
+     "spleen": {
+      "n_structures": 54,
+      "n_hosting_mass": 0,
+      "organ_dice": {
+       "n": 54,
+       "mean": 0.9375,
+       "ci95": [
+        0.9047,
+        0.9557
+       ],
+       "median": 0.9541
+      },
+      "parenchyma_dice": {
+       "n": 54,
+       "mean": 0.9375,
+       "ci95": [
+        0.9047,
+        0.9557
+       ],
+       "median": 0.9541
+      },
+      "parenchyma_recall": {
+       "n": 54,
+       "mean": 0.9398,
+       "ci95": [
+        0.9101,
+        0.9576
+       ],
+       "median": 0.9555
+      },
+      "mass_coverage": null
+     }
+    }
+   },
+   "LiTS": {
+    "n_cases": 21,
+    "n_records": 21,
+    "n_records_with_no_annotated_organ": 0,
+    "n_cases_with_a_hosted_mass": 21,
+    "case_mean": {
+     "organ_dice": {
+      "n": 21,
+      "mean": 0.956,
+      "ci95": [
+       0.9519,
+       0.96
+      ],
+      "median": 0.9548
+     },
+     "parenchyma_dice": {
+      "n": 21,
+      "mean": 0.9383,
+      "ci95": [
+       0.9286,
+       0.9468
+      ],
+      "median": 0.9454
+     },
+     "parenchyma_recall": {
+      "n": 21,
+      "mean": 0.9645,
+      "ci95": [
+       0.9566,
+       0.9718
+      ],
+      "median": 0.9639
+     }
+    },
+    "per_organ": {
+     "liver": {
+      "n_structures": 21,
+      "n_hosting_mass": 21,
+      "organ_dice": {
+       "n": 21,
+       "mean": 0.956,
+       "ci95": [
+        0.9519,
+        0.96
+       ],
+       "median": 0.9548
+      },
+      "parenchyma_dice": {
+       "n": 21,
+       "mean": 0.9383,
+       "ci95": [
+        0.9286,
+        0.9468
+       ],
+       "median": 0.9454
+      },
+      "parenchyma_recall": {
+       "n": 21,
+       "mean": 0.9645,
+       "ci95": [
+        0.9566,
+        0.9718
+       ],
+       "median": 0.9639
+      },
+      "mass_coverage": {
+       "n": 21,
+       "mean": 0.969,
+       "ci95": [
+        0.9449,
+        0.9887
+       ],
+       "median": 0.99
+      }
+     }
+    }
+   },
+   "MSD Pancreas": {
+    "n_cases": 56,
+    "n_records": 56,
+    "n_records_with_no_annotated_organ": 0,
+    "n_cases_with_a_hosted_mass": 56,
+    "case_mean": {
+     "organ_dice": {
+      "n": 56,
+      "mean": 0.7672,
+      "ci95": [
+       0.7437,
+       0.7905
+      ],
+      "median": 0.7885
+     },
+     "parenchyma_dice": {
+      "n": 56,
+      "mean": 0.7291,
+      "ci95": [
+       0.702,
+       0.753
+      ],
+      "median": 0.753
+     },
+     "parenchyma_recall": {
+      "n": 56,
+      "mean": 0.706,
+      "ci95": [
+       0.6674,
+       0.7457
+      ],
+      "median": 0.7259
+     }
+    },
+    "per_organ": {
+     "pancreas": {
+      "n_structures": 56,
+      "n_hosting_mass": 56,
+      "organ_dice": {
+       "n": 56,
+       "mean": 0.7672,
+       "ci95": [
+        0.7437,
+        0.7905
+       ],
+       "median": 0.7885
+      },
+      "parenchyma_dice": {
+       "n": 56,
+       "mean": 0.7291,
+       "ci95": [
+        0.702,
+        0.753
+       ],
+       "median": 0.753
+      },
+      "parenchyma_recall": {
+       "n": 56,
+       "mean": 0.706,
+       "ci95": [
+        0.6674,
+        0.7457
+       ],
+       "median": 0.7259
+      },
+      "mass_coverage": {
+       "n": 56,
+       "mean": 0.7619,
+       "ci95": [
+        0.68,
+        0.839
+       ],
+       "median": 0.9233
+      }
+     }
+    }
+   },
+   "KiTS23": {
+    "n_cases": 36,
+    "n_records": 36,
+    "n_records_with_no_annotated_organ": 0,
+    "n_cases_with_a_hosted_mass": 36,
+    "case_mean": {
+     "organ_dice": {
+      "n": 36,
+      "mean": 0.8592,
+      "ci95": [
+       0.8023,
+       0.9023
+      ],
+      "median": 0.9091
+     },
+     "parenchyma_dice": {
+      "n": 36,
+      "mean": 0.8356,
+      "ci95": [
+       0.7945,
+       0.8689
+      ],
+      "median": 0.8861
+     },
+     "parenchyma_recall": {
+      "n": 36,
+      "mean": 0.8383,
+      "ci95": [
+       0.8132,
+       0.8567
+      ],
+      "median": 0.8518
+     }
+    },
+    "per_organ": {
+     "kidney (pooled)": {
+      "n_structures": 36,
+      "n_hosting_mass": 36,
+      "organ_dice": {
+       "n": 36,
+       "mean": 0.8592,
+       "ci95": [
+        0.8023,
+        0.9023
+       ],
+       "median": 0.9091
+      },
+      "parenchyma_dice": {
+       "n": 36,
+       "mean": 0.8356,
+       "ci95": [
+        0.7945,
+        0.8689
+       ],
+       "median": 0.8861
+      },
+      "parenchyma_recall": {
+       "n": 36,
+       "mean": 0.8383,
+       "ci95": [
+        0.8132,
+        0.8567
+       ],
+       "median": 0.8518
+      },
+      "mass_coverage": {
+       "n": 36,
+       "mean": 0.7141,
+       "ci95": [
+        0.6302,
+        0.793
+       ],
+       "median": 0.8189
+      }
+     },
+     "left kidney": {
+      "n_structures": 36,
+      "n_hosting_mass": 27,
+      "organ_dice": {
+       "n": 36,
+       "mean": 0.8256,
+       "ci95": [
+        0.7385,
+        0.893
+       ],
+       "median": 0.9128
+      },
+      "parenchyma_dice": {
+       "n": 36,
+       "mean": 0.82,
+       "ci95": [
+        0.7401,
+        0.8825
+       ],
+       "median": 0.9011
+      },
+      "parenchyma_recall": {
+       "n": 36,
+       "mean": 0.8011,
+       "ci95": [
+        0.7301,
+        0.8557
+       ],
+       "median": 0.8606
+      },
+      "mass_coverage": {
+       "n": 27,
+       "mean": 0.5842,
+       "ci95": [
+        0.4676,
+        0.6939
+       ],
+       "median": 0.695
+      }
+     },
+     "right kidney": {
+      "n_structures": 36,
+      "n_hosting_mass": 22,
+      "organ_dice": {
+       "n": 36,
+       "mean": 0.9021,
+       "ci95": [
+        0.883,
+        0.9153
+       ],
+       "median": 0.9082
+      },
+      "parenchyma_dice": {
+       "n": 36,
+       "mean": 0.8325,
+       "ci95": [
+        0.7815,
+        0.8762
+       ],
+       "median": 0.8975
+      },
+      "parenchyma_recall": {
+       "n": 36,
+       "mean": 0.8478,
+       "ci95": [
+        0.8324,
+        0.8629
+       ],
+       "median": 0.8435
+      },
+      "mass_coverage": {
+       "n": 22,
+       "mean": 0.7856,
+       "ci95": [
+        0.6941,
+        0.8593
+       ],
+       "median": 0.8506
+      }
+     }
+    }
+   },
+   "FLARE23": {
+    "n_cases": 54,
+    "n_records": 54,
+    "n_records_with_no_annotated_organ": 0,
+    "n_cases_with_a_hosted_mass": 54,
+    "case_mean": {
+     "organ_dice": {
+      "n": 54,
+      "mean": 0.8948,
+      "ci95": [
+       0.8756,
+       0.9081
+      ],
+      "median": 0.9122
+     },
+     "parenchyma_dice": {
+      "n": 54,
+      "mean": 0.8878,
+      "ci95": [
+       0.8722,
+       0.8993
+      ],
+      "median": 0.9019
+     },
+     "parenchyma_recall": {
+      "n": 54,
+      "mean": 0.8783,
+      "ci95": [
+       0.8622,
+       0.8913
+      ],
+      "median": 0.8976
+     }
+    },
+    "per_organ": {
+     "left kidney": {
+      "n_structures": 53,
+      "n_hosting_mass": 10,
+      "organ_dice": {
+       "n": 53,
+       "mean": 0.8852,
+       "ci95": [
+        0.8488,
+        0.9126
+       ],
+       "median": 0.9187
+      },
+      "parenchyma_dice": {
+       "n": 53,
+       "mean": 0.8759,
+       "ci95": [
+        0.8449,
+        0.9004
+       ],
+       "median": 0.9187
+      },
+      "parenchyma_recall": {
+       "n": 53,
+       "mean": 0.8585,
+       "ci95": [
+        0.8376,
+        0.8761
+       ],
+       "median": 0.8826
+      },
+      "mass_coverage": {
+       "n": 10,
+       "mean": 0.5934,
+       "ci95": [
+        0.3858,
+        0.7628
+       ],
+       "median": 0.6806
+      }
+     },
+     "liver": {
+      "n_structures": 54,
+      "n_hosting_mass": 11,
+      "organ_dice": {
+       "n": 54,
+       "mean": 0.9617,
+       "ci95": [
+        0.9589,
+        0.9641
+       ],
+       "median": 0.9632
+      },
+      "parenchyma_dice": {
+       "n": 54,
+       "mean": 0.9576,
+       "ci95": [
+        0.9527,
+        0.9617
+       ],
+       "median": 0.9629
+      },
+      "parenchyma_recall": {
+       "n": 54,
+       "mean": 0.9764,
+       "ci95": [
+        0.9725,
+        0.9798
+       ],
+       "median": 0.9794
+      },
+      "mass_coverage": {
+       "n": 11,
+       "mean": 0.9767,
+       "ci95": [
+        0.9472,
+        0.995
+       ],
+       "median": 0.994
+      }
+     },
+     "pancreas": {
+      "n_structures": 54,
+      "n_hosting_mass": 26,
+      "organ_dice": {
+       "n": 54,
+       "mean": 0.7775,
+       "ci95": [
+        0.7443,
+        0.8063
+       ],
+       "median": 0.8287
+      },
+      "parenchyma_dice": {
+       "n": 54,
+       "mean": 0.7588,
+       "ci95": [
+        0.7246,
+        0.7883
+       ],
+       "median": 0.7942
+      },
+      "parenchyma_recall": {
+       "n": 54,
+       "mean": 0.7474,
+       "ci95": [
+        0.7072,
+        0.7853
+       ],
+       "median": 0.8024
+      },
+      "mass_coverage": {
+       "n": 26,
+       "mean": 0.7511,
+       "ci95": [
+        0.628,
+        0.8608
+       ],
+       "median": 0.9287
+      }
+     },
+     "right kidney": {
+      "n_structures": 54,
+      "n_hosting_mass": 7,
+      "organ_dice": {
+       "n": 54,
+       "mean": 0.9115,
+       "ci95": [
+        0.8997,
+        0.9201
+       ],
+       "median": 0.9189
+      },
+      "parenchyma_dice": {
+       "n": 54,
+       "mean": 0.9087,
+       "ci95": [
+        0.8959,
+        0.9182
+       ],
+       "median": 0.9184
+      },
+      "parenchyma_recall": {
+       "n": 54,
+       "mean": 0.8688,
+       "ci95": [
+        0.8503,
+        0.8832
+       ],
+       "median": 0.8763
+      },
+      "mass_coverage": {
+       "n": 7,
+       "mean": 0.6397,
+       "ci95": [
+        0.4072,
+        0.8361
+       ],
+       "median": 0.7916
+      }
+     },
+     "spleen": {
+      "n_structures": 54,
+      "n_hosting_mass": 0,
+      "organ_dice": {
+       "n": 54,
+       "mean": 0.9375,
+       "ci95": [
+        0.9047,
+        0.9557
+       ],
+       "median": 0.9541
+      },
+      "parenchyma_dice": {
+       "n": 54,
+       "mean": 0.9375,
+       "ci95": [
+        0.9047,
+        0.9557
+       ],
+       "median": 0.9541
+      },
+      "parenchyma_recall": {
+       "n": 54,
+       "mean": 0.9398,
+       "ci95": [
+        0.9101,
+        0.9576
+       ],
+       "median": 0.9555
+      },
+      "mass_coverage": null
+     }
+    }
+   },
+   "_arms": [
+    "FLARE23 tumour-positive",
+    "KiTS23",
+    "LiTS",
+    "MSD Pancreas"
+   ]
+  },
+  "cohort_157_all_dedup": {
+   "ALL": {
+    "n_cases": 157,
+    "n_records": 157,
+    "n_records_with_no_annotated_organ": 0,
+    "n_cases_with_a_hosted_mass": 157,
+    "case_mean": {
+     "organ_dice": {
+      "n": 157,
+      "mean": 0.8484,
+      "ci95": [
+       0.8296,
+       0.8663
+      ],
+      "median": 0.8931
+     },
+     "parenchyma_dice": {
+      "n": 157,
+      "mean": 0.8249,
+      "ci95": [
+       0.8061,
+       0.8432
+      ],
+      "median": 0.8647
+     },
+     "parenchyma_recall": {
+      "n": 157,
+      "mean": 0.8188,
+      "ci95": [
+       0.7969,
+       0.8398
+      ],
+      "median": 0.8548
+     }
+    },
+    "per_organ": {
+     "kidney (pooled)": {
+      "n_structures": 36,
+      "n_hosting_mass": 36,
+      "organ_dice": {
+       "n": 36,
+       "mean": 0.8592,
+       "ci95": [
+        0.8023,
+        0.9023
+       ],
+       "median": 0.9091
+      },
+      "parenchyma_dice": {
+       "n": 36,
+       "mean": 0.8356,
+       "ci95": [
+        0.7945,
+        0.8689
+       ],
+       "median": 0.8861
+      },
+      "parenchyma_recall": {
+       "n": 36,
+       "mean": 0.8383,
+       "ci95": [
+        0.8132,
+        0.8567
+       ],
+       "median": 0.8518
+      },
+      "mass_coverage": {
+       "n": 36,
+       "mean": 0.7141,
+       "ci95": [
+        0.6302,
+        0.793
+       ],
+       "median": 0.8189
+      }
+     },
+     "left kidney": {
+      "n_structures": 79,
+      "n_hosting_mass": 35,
+      "organ_dice": {
+       "n": 79,
+       "mean": 0.8554,
+       "ci95": [
+        0.8109,
+        0.8961
+       ],
+       "median": 0.9177
+      },
+      "parenchyma_dice": {
+       "n": 79,
+       "mean": 0.8472,
+       "ci95": [
+        0.8061,
+        0.8819
+       ],
+       "median": 0.9133
+      },
+      "parenchyma_recall": {
+       "n": 79,
+       "mean": 0.8327,
+       "ci95": [
+        0.7979,
+        0.8617
+       ],
+       "median": 0.8721
+      },
+      "mass_coverage": {
+       "n": 35,
+       "mean": 0.5769,
+       "ci95": [
+        0.4747,
+        0.6734
+       ],
+       "median": 0.6859
+      }
+     },
+     "liver": {
+      "n_structures": 65,
+      "n_hosting_mass": 29,
+      "organ_dice": {
+       "n": 65,
+       "mean": 0.9601,
+       "ci95": [
+        0.9572,
+        0.9624
+       ],
+       "median": 0.9629
+      },
+      "parenchyma_dice": {
+       "n": 65,
+       "mean": 0.9525,
+       "ci95": [
+        0.9476,
+        0.957
+       ],
+       "median": 0.9602
+      },
+      "parenchyma_recall": {
+       "n": 65,
+       "mean": 0.9728,
+       "ci95": [
+        0.9687,
+        0.9764
+       ],
+       "median": 0.9771
+      },
+      "mass_coverage": {
+       "n": 29,
+       "mean": 0.9712,
+       "ci95": [
+        0.9517,
+        0.9876
+       ],
+       "median": 0.9915
+      }
+     },
+     "pancreas": {
+      "n_structures": 100,
+      "n_hosting_mass": 78,
+      "organ_dice": {
+       "n": 100,
+       "mean": 0.7676,
+       "ci95": [
+        0.7458,
+        0.7887
+       ],
+       "median": 0.7977
+      },
+      "parenchyma_dice": {
+       "n": 100,
+       "mean": 0.7371,
+       "ci95": [
+        0.7142,
+        0.7586
+       ],
+       "median": 0.7631
+      },
+      "parenchyma_recall": {
+       "n": 100,
+       "mean": 0.721,
+       "ci95": [
+        0.6899,
+        0.7509
+       ],
+       "median": 0.7618
+      },
+      "mass_coverage": {
+       "n": 78,
+       "mean": 0.7586,
+       "ci95": [
+        0.6884,
+        0.8252
+       ],
+       "median": 0.9323
+      }
+     },
+     "right kidney": {
+      "n_structures": 80,
+      "n_hosting_mass": 28,
+      "organ_dice": {
+       "n": 80,
+       "mean": 0.9074,
+       "ci95": [
+        0.896,
+        0.9159
+       ],
+       "median": 0.9184
+      },
+      "parenchyma_dice": {
+       "n": 80,
+       "mean": 0.8744,
+       "ci95": [
+        0.8483,
+        0.8964
+       ],
+       "median": 0.9106
+      },
+      "parenchyma_recall": {
+       "n": 80,
+       "mean": 0.8607,
+       "ci95": [
+        0.8462,
+        0.8721
+       ],
+       "median": 0.8725
+      },
+      "mass_coverage": {
+       "n": 28,
+       "mean": 0.7489,
+       "ci95": [
+        0.6549,
+        0.8337
+       ],
+       "median": 0.836
+      }
+     },
+     "spleen": {
+      "n_structures": 44,
+      "n_hosting_mass": 0,
+      "organ_dice": {
+       "n": 44,
+       "mean": 0.9337,
+       "ci95": [
+        0.8926,
+        0.9557
+       ],
+       "median": 0.9541
+      },
+      "parenchyma_dice": {
+       "n": 44,
+       "mean": 0.9337,
+       "ci95": [
+        0.8926,
+        0.9557
+       ],
+       "median": 0.9541
+      },
+      "parenchyma_recall": {
+       "n": 44,
+       "mean": 0.9365,
+       "ci95": [
+        0.8986,
+        0.9581
+       ],
+       "median": 0.9555
+      },
+      "mass_coverage": null
+     }
+    }
+   },
+   "LiTS": {
+    "n_cases": 21,
+    "n_records": 21,
+    "n_records_with_no_annotated_organ": 0,
+    "n_cases_with_a_hosted_mass": 21,
+    "case_mean": {
+     "organ_dice": {
+      "n": 21,
+      "mean": 0.956,
+      "ci95": [
+       0.9519,
+       0.96
+      ],
+      "median": 0.9548
+     },
+     "parenchyma_dice": {
+      "n": 21,
+      "mean": 0.9383,
+      "ci95": [
+       0.9286,
+       0.9468
+      ],
+      "median": 0.9454
+     },
+     "parenchyma_recall": {
+      "n": 21,
+      "mean": 0.9645,
+      "ci95": [
+       0.9566,
+       0.9718
+      ],
+      "median": 0.9639
+     }
+    },
+    "per_organ": {
+     "liver": {
+      "n_structures": 21,
+      "n_hosting_mass": 21,
+      "organ_dice": {
+       "n": 21,
+       "mean": 0.956,
+       "ci95": [
+        0.9519,
+        0.96
+       ],
+       "median": 0.9548
+      },
+      "parenchyma_dice": {
+       "n": 21,
+       "mean": 0.9383,
+       "ci95": [
+        0.9286,
+        0.9468
+       ],
+       "median": 0.9454
+      },
+      "parenchyma_recall": {
+       "n": 21,
+       "mean": 0.9645,
+       "ci95": [
+        0.9566,
+        0.9718
+       ],
+       "median": 0.9639
+      },
+      "mass_coverage": {
+       "n": 21,
+       "mean": 0.969,
+       "ci95": [
+        0.9449,
+        0.9887
+       ],
+       "median": 0.99
+      }
+     }
+    }
+   },
+   "MSD Pancreas": {
+    "n_cases": 56,
+    "n_records": 56,
+    "n_records_with_no_annotated_organ": 0,
+    "n_cases_with_a_hosted_mass": 56,
+    "case_mean": {
+     "organ_dice": {
+      "n": 56,
+      "mean": 0.7672,
+      "ci95": [
+       0.7437,
+       0.7905
+      ],
+      "median": 0.7885
+     },
+     "parenchyma_dice": {
+      "n": 56,
+      "mean": 0.7291,
+      "ci95": [
+       0.702,
+       0.753
+      ],
+      "median": 0.753
+     },
+     "parenchyma_recall": {
+      "n": 56,
+      "mean": 0.706,
+      "ci95": [
+       0.6674,
+       0.7457
+      ],
+      "median": 0.7259
+     }
+    },
+    "per_organ": {
+     "pancreas": {
+      "n_structures": 56,
+      "n_hosting_mass": 56,
+      "organ_dice": {
+       "n": 56,
+       "mean": 0.7672,
+       "ci95": [
+        0.7437,
+        0.7905
+       ],
+       "median": 0.7885
+      },
+      "parenchyma_dice": {
+       "n": 56,
+       "mean": 0.7291,
+       "ci95": [
+        0.702,
+        0.753
+       ],
+       "median": 0.753
+      },
+      "parenchyma_recall": {
+       "n": 56,
+       "mean": 0.706,
+       "ci95": [
+        0.6674,
+        0.7457
+       ],
+       "median": 0.7259
+      },
+      "mass_coverage": {
+       "n": 56,
+       "mean": 0.7619,
+       "ci95": [
+        0.68,
+        0.839
+       ],
+       "median": 0.9233
+      }
+     }
+    }
+   },
+   "KiTS23": {
+    "n_cases": 36,
+    "n_records": 36,
+    "n_records_with_no_annotated_organ": 0,
+    "n_cases_with_a_hosted_mass": 36,
+    "case_mean": {
+     "organ_dice": {
+      "n": 36,
+      "mean": 0.8592,
+      "ci95": [
+       0.8023,
+       0.9023
+      ],
+      "median": 0.9091
+     },
+     "parenchyma_dice": {
+      "n": 36,
+      "mean": 0.8356,
+      "ci95": [
+       0.7945,
+       0.8689
+      ],
+      "median": 0.8861
+     },
+     "parenchyma_recall": {
+      "n": 36,
+      "mean": 0.8383,
+      "ci95": [
+       0.8132,
+       0.8567
+      ],
+      "median": 0.8518
+     }
+    },
+    "per_organ": {
+     "kidney (pooled)": {
+      "n_structures": 36,
+      "n_hosting_mass": 36,
+      "organ_dice": {
+       "n": 36,
+       "mean": 0.8592,
+       "ci95": [
+        0.8023,
+        0.9023
+       ],
+       "median": 0.9091
+      },
+      "parenchyma_dice": {
+       "n": 36,
+       "mean": 0.8356,
+       "ci95": [
+        0.7945,
+        0.8689
+       ],
+       "median": 0.8861
+      },
+      "parenchyma_recall": {
+       "n": 36,
+       "mean": 0.8383,
+       "ci95": [
+        0.8132,
+        0.8567
+       ],
+       "median": 0.8518
+      },
+      "mass_coverage": {
+       "n": 36,
+       "mean": 0.7141,
+       "ci95": [
+        0.6302,
+        0.793
+       ],
+       "median": 0.8189
+      }
+     },
+     "left kidney": {
+      "n_structures": 36,
+      "n_hosting_mass": 27,
+      "organ_dice": {
+       "n": 36,
+       "mean": 0.8256,
+       "ci95": [
+        0.7385,
+        0.893
+       ],
+       "median": 0.9128
+      },
+      "parenchyma_dice": {
+       "n": 36,
+       "mean": 0.82,
+       "ci95": [
+        0.7401,
+        0.8825
+       ],
+       "median": 0.9011
+      },
+      "parenchyma_recall": {
+       "n": 36,
+       "mean": 0.8011,
+       "ci95": [
+        0.7301,
+        0.8557
+       ],
+       "median": 0.8606
+      },
+      "mass_coverage": {
+       "n": 27,
+       "mean": 0.5842,
+       "ci95": [
+        0.4676,
+        0.6939
+       ],
+       "median": 0.695
+      }
+     },
+     "right kidney": {
+      "n_structures": 36,
+      "n_hosting_mass": 22,
+      "organ_dice": {
+       "n": 36,
+       "mean": 0.9021,
+       "ci95": [
+        0.883,
+        0.9153
+       ],
+       "median": 0.9082
+      },
+      "parenchyma_dice": {
+       "n": 36,
+       "mean": 0.8325,
+       "ci95": [
+        0.7815,
+        0.8762
+       ],
+       "median": 0.8975
+      },
+      "parenchyma_recall": {
+       "n": 36,
+       "mean": 0.8478,
+       "ci95": [
+        0.8324,
+        0.8629
+       ],
+       "median": 0.8435
+      },
+      "mass_coverage": {
+       "n": 22,
+       "mean": 0.7856,
+       "ci95": [
+        0.6941,
+        0.8593
+       ],
+       "median": 0.8506
+      }
+     }
+    }
+   },
+   "FLARE23": {
+    "n_cases": 44,
+    "n_records": 44,
+    "n_records_with_no_annotated_organ": 0,
+    "n_cases_with_a_hosted_mass": 44,
+    "case_mean": {
+     "organ_dice": {
+      "n": 44,
+      "mean": 0.8913,
+      "ci95": [
+       0.8673,
+       0.9078
+      ],
+      "median": 0.9111
+     },
+     "parenchyma_dice": {
+      "n": 44,
+      "mean": 0.884,
+      "ci95": [
+       0.865,
+       0.8978
+      ],
+      "median": 0.8996
+     },
+     "parenchyma_recall": {
+      "n": 44,
+      "mean": 0.877,
+      "ci95": [
+       0.8556,
+       0.8928
+      ],
+      "median": 0.8979
+     }
+    },
+    "per_organ": {
+     "left kidney": {
+      "n_structures": 43,
+      "n_hosting_mass": 8,
+      "organ_dice": {
+       "n": 43,
+       "mean": 0.8804,
+       "ci95": [
+        0.8303,
+        0.9144
+       ],
+       "median": 0.9194
+      },
+      "parenchyma_dice": {
+       "n": 43,
+       "mean": 0.87,
+       "ci95": [
+        0.8315,
+        0.9004
+       ],
+       "median": 0.9194
+      },
+      "parenchyma_recall": {
+       "n": 43,
+       "mean": 0.8592,
+       "ci95": [
+        0.8325,
+        0.8801
+       ],
+       "median": 0.8832
+      },
+      "mass_coverage": {
+       "n": 8,
+       "mean": 0.552,
+       "ci95": [
+        0.3257,
+        0.7498
+       ],
+       "median": 0.6806
+      }
+     },
+     "liver": {
+      "n_structures": 44,
+      "n_hosting_mass": 8,
+      "organ_dice": {
+       "n": 44,
+       "mean": 0.9621,
+       "ci95": [
+        0.9584,
+        0.9646
+       ],
+       "median": 0.9647
+      },
+      "parenchyma_dice": {
+       "n": 44,
+       "mean": 0.9593,
+       "ci95": [
+        0.9549,
+        0.963
+       ],
+       "median": 0.9635
+      },
+      "parenchyma_recall": {
+       "n": 44,
+       "mean": 0.9767,
+       "ci95": [
+        0.9722,
+        0.9801
+       ],
+       "median": 0.979
+      },
+      "mass_coverage": {
+       "n": 8,
+       "mean": 0.9771,
+       "ci95": [
+        0.938,
+        0.9981
+       ],
+       "median": 0.9958
+      }
+     },
+     "pancreas": {
+      "n_structures": 44,
+      "n_hosting_mass": 22,
+      "organ_dice": {
+       "n": 44,
+       "mean": 0.7681,
+       "ci95": [
+        0.7255,
+        0.8042
+       ],
+       "median": 0.8133
+      },
+      "parenchyma_dice": {
+       "n": 44,
+       "mean": 0.7474,
+       "ci95": [
+        0.7078,
+        0.7824
+       ],
+       "median": 0.7755
+      },
+      "parenchyma_recall": {
+       "n": 44,
+       "mean": 0.7402,
+       "ci95": [
+        0.6921,
+        0.7885
+       ],
+       "median": 0.7962
+      },
+      "mass_coverage": {
+       "n": 22,
+       "mean": 0.7501,
+       "ci95": [
+        0.6138,
+        0.8705
+       ],
+       "median": 0.9489
+      }
+     },
+     "right kidney": {
+      "n_structures": 44,
+      "n_hosting_mass": 6,
+      "organ_dice": {
+       "n": 44,
+       "mean": 0.9118,
+       "ci95": [
+        0.8978,
+        0.9215
+       ],
+       "median": 0.9199
+      },
+      "parenchyma_dice": {
+       "n": 44,
+       "mean": 0.9087,
+       "ci95": [
+        0.8941,
+        0.9198
+       ],
+       "median": 0.9187
+      },
+      "parenchyma_recall": {
+       "n": 44,
+       "mean": 0.8712,
+       "ci95": [
+        0.85,
+        0.8874
+       ],
+       "median": 0.8778
+      },
+      "mass_coverage": {
+       "n": 6,
+       "mean": 0.6144,
+       "ci95": [
+        0.3705,
+        0.8405
+       ],
+       "median": 0.794
+      }
+     },
+     "spleen": {
+      "n_structures": 44,
+      "n_hosting_mass": 0,
+      "organ_dice": {
+       "n": 44,
+       "mean": 0.9337,
+       "ci95": [
+        0.8926,
+        0.9557
+       ],
+       "median": 0.9541
+      },
+      "parenchyma_dice": {
+       "n": 44,
+       "mean": 0.9337,
+       "ci95": [
+        0.8926,
+        0.9557
+       ],
+       "median": 0.9541
+      },
+      "parenchyma_recall": {
+       "n": 44,
+       "mean": 0.9365,
+       "ci95": [
+        0.8986,
+        0.9581
+       ],
+       "median": 0.9555
+      },
+      "mass_coverage": null
+     }
+    }
+   },
+   "_arms": [
+    "FLARE23 tumour-positive",
+    "KiTS23",
+    "LiTS",
+    "MSD Pancreas"
+   ]
+  },
+  "cohort_157_all_dedup_keep_flare23": {
+   "ALL": {
+    "n_cases": 157,
+    "n_records": 157,
+    "n_records_with_no_annotated_organ": 0,
+    "n_cases_with_a_hosted_mass": 157,
+    "case_mean": {
+     "organ_dice": {
+      "n": 157,
+      "mean": 0.8508,
+      "ci95": [
+       0.8301,
+       0.8686
+      ],
+      "median": 0.8966
+     },
+     "parenchyma_dice": {
+      "n": 157,
+      "mean": 0.8285,
+      "ci95": [
+       0.809,
+       0.8455
+      ],
+      "median": 0.8738
+     },
+     "parenchyma_recall": {
+      "n": 157,
+      "mean": 0.8219,
+      "ci95": [
+       0.7999,
+       0.8423
+      ],
+      "median": 0.8593
+     }
+    },
+    "per_organ": {
+     "kidney (pooled)": {
+      "n_structures": 33,
+      "n_hosting_mass": 33,
+      "organ_dice": {
+       "n": 33,
+       "mean": 0.8552,
+       "ci95": [
+        0.7963,
+        0.9026
+       ],
+       "median": 0.9092
+      },
+      "parenchyma_dice": {
+       "n": 33,
+       "mean": 0.8303,
+       "ci95": [
+        0.7896,
+        0.8668
+       ],
+       "median": 0.8811
+      },
+      "parenchyma_recall": {
+       "n": 33,
+       "mean": 0.8372,
+       "ci95": [
+        0.812,
+        0.8578
+       ],
+       "median": 0.8517
+      },
+      "mass_coverage": {
+       "n": 33,
+       "mean": 0.711,
+       "ci95": [
+        0.6162,
+        0.7923
+       ],
+       "median": 0.8199
+      }
+     },
+     "left kidney": {
+      "n_structures": 86,
+      "n_hosting_mass": 34,
+      "organ_dice": {
+       "n": 86,
+       "mean": 0.8597,
+       "ci95": [
+        0.817,
+        0.8942
+       ],
+       "median": 0.9176
+      },
+      "parenchyma_dice": {
+       "n": 86,
+       "mean": 0.8521,
+       "ci95": [
+        0.8127,
+        0.885
+       ],
+       "median": 0.9139
+      },
+      "parenchyma_recall": {
+       "n": 86,
+       "mean": 0.8347,
+       "ci95": [
+        0.8015,
+        0.8602
+       ],
+       "median": 0.8725
+      },
+      "mass_coverage": {
+       "n": 34,
+       "mean": 0.5873,
+       "ci95": [
+        0.4805,
+        0.6904
+       ],
+       "median": 0.6905
+      }
+     },
+     "liver": {
+      "n_structures": 72,
+      "n_hosting_mass": 29,
+      "organ_dice": {
+       "n": 72,
+       "mean": 0.9604,
+       "ci95": [
+        0.9579,
+        0.9626
+       ],
+       "median": 0.9628
+      },
+      "parenchyma_dice": {
+       "n": 72,
+       "mean": 0.9536,
+       "ci95": [
+        0.9492,
+        0.9577
+       ],
+       "median": 0.9609
+      },
+      "parenchyma_recall": {
+       "n": 72,
+       "mean": 0.9736,
+       "ci95": [
+        0.9701,
+        0.9772
+       ],
+       "median": 0.9788
+      },
+      "mass_coverage": {
+       "n": 29,
+       "mean": 0.9712,
+       "ci95": [
+        0.9521,
+        0.9878
+       ],
+       "median": 0.9915
+      }
+     },
+     "pancreas": {
+      "n_structures": 106,
+      "n_hosting_mass": 78,
+      "organ_dice": {
+       "n": 106,
+       "mean": 0.7718,
+       "ci95": [
+        0.7501,
+        0.791
+       ],
+       "median": 0.8051
+      },
+      "parenchyma_dice": {
+       "n": 106,
+       "mean": 0.7431,
+       "ci95": [
+        0.7213,
+        0.7642
+       ],
+       "median": 0.7703
+      },
+      "parenchyma_recall": {
+       "n": 106,
+       "mean": 0.7261,
+       "ci95": [
+        0.696,
+        0.7541
+       ],
+       "median": 0.7684
+      },
+      "mass_coverage": {
+       "n": 78,
+       "mean": 0.7586,
+       "ci95": [
+        0.6859,
+        0.8237
+       ],
+       "median": 0.9323
+      }
+     },
+     "right kidney": {
+      "n_structures": 87,
+      "n_hosting_mass": 27,
+      "organ_dice": {
+       "n": 87,
+       "mean": 0.9077,
+       "ci95": [
+        0.8967,
+        0.9156
+       ],
+       "median": 0.9186
+      },
+      "parenchyma_dice": {
+       "n": 87,
+       "mean": 0.8774,
+       "ci95": [
+        0.8547,
+        0.8962
+       ],
+       "median": 0.9105
+      },
+      "parenchyma_recall": {
+       "n": 87,
+       "mean": 0.8608,
+       "ci95": [
+        0.8471,
+        0.8714
+       ],
+       "median": 0.8728
+      },
+      "mass_coverage": {
+       "n": 27,
+       "mean": 0.7661,
+       "ci95": [
+        0.6749,
+        0.8416
+       ],
+       "median": 0.8416
+      }
+     },
+     "spleen": {
+      "n_structures": 54,
+      "n_hosting_mass": 0,
+      "organ_dice": {
+       "n": 54,
+       "mean": 0.9375,
+       "ci95": [
+        0.9047,
+        0.9557
+       ],
+       "median": 0.9541
+      },
+      "parenchyma_dice": {
+       "n": 54,
+       "mean": 0.9375,
+       "ci95": [
+        0.9047,
+        0.9557
+       ],
+       "median": 0.9541
+      },
+      "parenchyma_recall": {
+       "n": 54,
+       "mean": 0.9398,
+       "ci95": [
+        0.9101,
+        0.9576
+       ],
+       "median": 0.9555
+      },
+      "mass_coverage": null
+     }
+    }
+   },
+   "LiTS": {
+    "n_cases": 18,
+    "n_records": 18,
+    "n_records_with_no_annotated_organ": 0,
+    "n_cases_with_a_hosted_mass": 18,
+    "case_mean": {
+     "organ_dice": {
+      "n": 18,
+      "mean": 0.9565,
+      "ci95": [
+       0.9521,
+       0.961
+      ],
+      "median": 0.9565
+     },
+     "parenchyma_dice": {
+      "n": 18,
+      "mean": 0.9417,
+      "ci95": [
+       0.9332,
+       0.9495
+      ],
+      "median": 0.946
+     },
+     "parenchyma_recall": {
+      "n": 18,
+      "mean": 0.9652,
+      "ci95": [
+       0.957,
+       0.9732
+      ],
+      "median": 0.9645
+     }
+    },
+    "per_organ": {
+     "liver": {
+      "n_structures": 18,
+      "n_hosting_mass": 18,
+      "organ_dice": {
+       "n": 18,
+       "mean": 0.9565,
+       "ci95": [
+        0.9521,
+        0.961
+       ],
+       "median": 0.9565
+      },
+      "parenchyma_dice": {
+       "n": 18,
+       "mean": 0.9417,
+       "ci95": [
+        0.9332,
+        0.9495
+       ],
+       "median": 0.946
+      },
+      "parenchyma_recall": {
+       "n": 18,
+       "mean": 0.9652,
+       "ci95": [
+        0.957,
+        0.9732
+       ],
+       "median": 0.9645
+      },
+      "mass_coverage": {
+       "n": 18,
+       "mean": 0.9678,
+       "ci95": [
+        0.9401,
+        0.9909
+       ],
+       "median": 0.9913
+      }
+     }
+    }
+   },
+   "MSD Pancreas": {
+    "n_cases": 52,
+    "n_records": 52,
+    "n_records_with_no_annotated_organ": 0,
+    "n_cases_with_a_hosted_mass": 52,
+    "case_mean": {
+     "organ_dice": {
+      "n": 52,
+      "mean": 0.7658,
+      "ci95": [
+       0.7405,
+       0.7895
+      ],
+      "median": 0.7885
+     },
+     "parenchyma_dice": {
+      "n": 52,
+      "mean": 0.7267,
+      "ci95": [
+       0.7002,
+       0.752
+      ],
+      "median": 0.753
+     },
+     "parenchyma_recall": {
+      "n": 52,
+      "mean": 0.7041,
+      "ci95": [
+       0.664,
+       0.7461
+      ],
+      "median": 0.7259
+     }
+    },
+    "per_organ": {
+     "pancreas": {
+      "n_structures": 52,
+      "n_hosting_mass": 52,
+      "organ_dice": {
+       "n": 52,
+       "mean": 0.7658,
+       "ci95": [
+        0.7405,
+        0.7895
+       ],
+       "median": 0.7885
+      },
+      "parenchyma_dice": {
+       "n": 52,
+       "mean": 0.7267,
+       "ci95": [
+        0.7002,
+        0.752
+       ],
+       "median": 0.753
+      },
+      "parenchyma_recall": {
+       "n": 52,
+       "mean": 0.7041,
+       "ci95": [
+        0.664,
+        0.7461
+       ],
+       "median": 0.7259
+      },
+      "mass_coverage": {
+       "n": 52,
+       "mean": 0.7623,
+       "ci95": [
+        0.6812,
+        0.8427
+       ],
+       "median": 0.9323
+      }
+     }
+    }
+   },
+   "KiTS23": {
+    "n_cases": 33,
+    "n_records": 33,
+    "n_records_with_no_annotated_organ": 0,
+    "n_cases_with_a_hosted_mass": 33,
+    "case_mean": {
+     "organ_dice": {
+      "n": 33,
+      "mean": 0.8552,
+      "ci95": [
+       0.7963,
+       0.9026
+      ],
+      "median": 0.9092
+     },
+     "parenchyma_dice": {
+      "n": 33,
+      "mean": 0.8303,
+      "ci95": [
+       0.7896,
+       0.8668
+      ],
+      "median": 0.8811
+     },
+     "parenchyma_recall": {
+      "n": 33,
+      "mean": 0.8372,
+      "ci95": [
+       0.812,
+       0.8578
+      ],
+      "median": 0.8517
+     }
+    },
+    "per_organ": {
+     "kidney (pooled)": {
+      "n_structures": 33,
+      "n_hosting_mass": 33,
+      "organ_dice": {
+       "n": 33,
+       "mean": 0.8552,
+       "ci95": [
+        0.7963,
+        0.9026
+       ],
+       "median": 0.9092
+      },
+      "parenchyma_dice": {
+       "n": 33,
+       "mean": 0.8303,
+       "ci95": [
+        0.7896,
+        0.8668
+       ],
+       "median": 0.8811
+      },
+      "parenchyma_recall": {
+       "n": 33,
+       "mean": 0.8372,
+       "ci95": [
+        0.812,
+        0.8578
+       ],
+       "median": 0.8517
+      },
+      "mass_coverage": {
+       "n": 33,
+       "mean": 0.711,
+       "ci95": [
+        0.6162,
+        0.7923
+       ],
+       "median": 0.8199
+      }
+     },
+     "left kidney": {
+      "n_structures": 33,
+      "n_hosting_mass": 24,
+      "organ_dice": {
+       "n": 33,
+       "mean": 0.8188,
+       "ci95": [
+        0.7249,
+        0.8934
+       ],
+       "median": 0.9145
+      },
+      "parenchyma_dice": {
+       "n": 33,
+       "mean": 0.814,
+       "ci95": [
+        0.7289,
+        0.8825
+       ],
+       "median": 0.902
+      },
+      "parenchyma_recall": {
+       "n": 33,
+       "mean": 0.7967,
+       "ci95": [
+        0.7221,
+        0.854
+       ],
+       "median": 0.864
+      },
+      "mass_coverage": {
+       "n": 24,
+       "mean": 0.5848,
+       "ci95": [
+        0.4617,
+        0.7034
+       ],
+       "median": 0.7236
+      }
+     },
+     "right kidney": {
+      "n_structures": 33,
+      "n_hosting_mass": 20,
+      "organ_dice": {
+       "n": 33,
+       "mean": 0.9015,
+       "ci95": [
+        0.8828,
+        0.9161
+       ],
+       "median": 0.909
+      },
+      "parenchyma_dice": {
+       "n": 33,
+       "mean": 0.8262,
+       "ci95": [
+        0.7734,
+        0.8733
+       ],
+       "median": 0.8972
+      },
+      "parenchyma_recall": {
+       "n": 33,
+       "mean": 0.8477,
+       "ci95": [
+        0.8314,
+        0.8632
+       ],
+       "median": 0.8431
+      },
+      "mass_coverage": {
+       "n": 20,
+       "mean": 0.8103,
+       "ci95": [
+        0.7337,
+        0.8733
+       ],
+       "median": 0.8563
+      }
+     }
+    }
+   },
+   "FLARE23": {
+    "n_cases": 54,
+    "n_records": 54,
+    "n_records_with_no_annotated_organ": 0,
+    "n_cases_with_a_hosted_mass": 54,
+    "case_mean": {
+     "organ_dice": {
+      "n": 54,
+      "mean": 0.8948,
+      "ci95": [
+       0.8756,
+       0.9081
+      ],
+      "median": 0.9122
+     },
+     "parenchyma_dice": {
+      "n": 54,
+      "mean": 0.8878,
+      "ci95": [
+       0.8722,
+       0.8993
+      ],
+      "median": 0.9019
+     },
+     "parenchyma_recall": {
+      "n": 54,
+      "mean": 0.8783,
+      "ci95": [
+       0.8622,
+       0.8913
+      ],
+      "median": 0.8976
+     }
+    },
+    "per_organ": {
+     "left kidney": {
+      "n_structures": 53,
+      "n_hosting_mass": 10,
+      "organ_dice": {
+       "n": 53,
+       "mean": 0.8852,
+       "ci95": [
+        0.8488,
+        0.9126
+       ],
+       "median": 0.9187
+      },
+      "parenchyma_dice": {
+       "n": 53,
+       "mean": 0.8759,
+       "ci95": [
+        0.8449,
+        0.9004
+       ],
+       "median": 0.9187
+      },
+      "parenchyma_recall": {
+       "n": 53,
+       "mean": 0.8585,
+       "ci95": [
+        0.8376,
+        0.8761
+       ],
+       "median": 0.8826
+      },
+      "mass_coverage": {
+       "n": 10,
+       "mean": 0.5934,
+       "ci95": [
+        0.3858,
+        0.7628
+       ],
+       "median": 0.6806
+      }
+     },
+     "liver": {
+      "n_structures": 54,
+      "n_hosting_mass": 11,
+      "organ_dice": {
+       "n": 54,
+       "mean": 0.9617,
+       "ci95": [
+        0.9589,
+        0.9641
+       ],
+       "median": 0.9632
+      },
+      "parenchyma_dice": {
+       "n": 54,
+       "mean": 0.9576,
+       "ci95": [
+        0.9527,
+        0.9617
+       ],
+       "median": 0.9629
+      },
+      "parenchyma_recall": {
+       "n": 54,
+       "mean": 0.9764,
+       "ci95": [
+        0.9725,
+        0.9798
+       ],
+       "median": 0.9794
+      },
+      "mass_coverage": {
+       "n": 11,
+       "mean": 0.9767,
+       "ci95": [
+        0.9472,
+        0.995
+       ],
+       "median": 0.994
+      }
+     },
+     "pancreas": {
+      "n_structures": 54,
+      "n_hosting_mass": 26,
+      "organ_dice": {
+       "n": 54,
+       "mean": 0.7775,
+       "ci95": [
+        0.7443,
+        0.8063
+       ],
+       "median": 0.8287
+      },
+      "parenchyma_dice": {
+       "n": 54,
+       "mean": 0.7588,
+       "ci95": [
+        0.7246,
+        0.7883
+       ],
+       "median": 0.7942
+      },
+      "parenchyma_recall": {
+       "n": 54,
+       "mean": 0.7474,
+       "ci95": [
+        0.7072,
+        0.7853
+       ],
+       "median": 0.8024
+      },
+      "mass_coverage": {
+       "n": 26,
+       "mean": 0.7511,
+       "ci95": [
+        0.628,
+        0.8608
+       ],
+       "median": 0.9287
+      }
+     },
+     "right kidney": {
+      "n_structures": 54,
+      "n_hosting_mass": 7,
+      "organ_dice": {
+       "n": 54,
+       "mean": 0.9115,
+       "ci95": [
+        0.8997,
+        0.9201
+       ],
+       "median": 0.9189
+      },
+      "parenchyma_dice": {
+       "n": 54,
+       "mean": 0.9087,
+       "ci95": [
+        0.8959,
+        0.9182
+       ],
+       "median": 0.9184
+      },
+      "parenchyma_recall": {
+       "n": 54,
+       "mean": 0.8688,
+       "ci95": [
+        0.8503,
+        0.8832
+       ],
+       "median": 0.8763
+      },
+      "mass_coverage": {
+       "n": 7,
+       "mean": 0.6397,
+       "ci95": [
+        0.4072,
+        0.8361
+       ],
+       "median": 0.7916
+      }
+     },
+     "spleen": {
+      "n_structures": 54,
+      "n_hosting_mass": 0,
+      "organ_dice": {
+       "n": 54,
+       "mean": 0.9375,
+       "ci95": [
+        0.9047,
+        0.9557
+       ],
+       "median": 0.9541
+      },
+      "parenchyma_dice": {
+       "n": 54,
+       "mean": 0.9375,
+       "ci95": [
+        0.9047,
+        0.9557
+       ],
+       "median": 0.9541
+      },
+      "parenchyma_recall": {
+       "n": 54,
+       "mean": 0.9398,
+       "ci95": [
+        0.9101,
+        0.9576
+       ],
+       "median": 0.9555
+      },
+      "mass_coverage": null
+     }
+    }
+   },
+   "_arms": [
+    "FLARE23 tumour-positive",
+    "KiTS23",
+    "LiTS",
+    "MSD Pancreas"
+   ]
+  },
+  "cohort_76_twin_clean_dedup": {
+   "ALL": {
+    "n_cases": 76,
+    "n_records": 76,
+    "n_records_with_no_annotated_organ": 0,
+    "n_cases_with_a_hosted_mass": 76,
+    "case_mean": {
+     "organ_dice": {
+      "n": 76,
+      "mean": 0.8307,
+      "ci95": [
+       0.7995,
+       0.8602
+      ],
+      "median": 0.8586
+     },
+     "parenchyma_dice": {
+      "n": 76,
+      "mean": 0.8092,
+      "ci95": [
+       0.7828,
+       0.8343
+      ],
+      "median": 0.8213
+     },
+     "parenchyma_recall": {
+      "n": 76,
+      "mean": 0.796,
+      "ci95": [
+       0.761,
+       0.829
+      ],
+      "median": 0.8351
+     }
+    },
+    "per_organ": {
+     "kidney (pooled)": {
+      "n_structures": 19,
+      "n_hosting_mass": 19,
+      "organ_dice": {
+       "n": 19,
+       "mean": 0.8372,
+       "ci95": [
+        0.7423,
+        0.9144
+       ],
+       "median": 0.9103
+      },
+      "parenchyma_dice": {
+       "n": 19,
+       "mean": 0.8411,
+       "ci95": [
+        0.7827,
+        0.8805
+       ],
+       "median": 0.8811
+      },
+      "parenchyma_recall": {
+       "n": 19,
+       "mean": 0.8306,
+       "ci95": [
+        0.7867,
+        0.8624
+       ],
+       "median": 0.8548
+      },
+      "mass_coverage": {
+       "n": 19,
+       "mean": 0.7012,
+       "ci95": [
+        0.5643,
+        0.817
+       ],
+       "median": 0.8231
+      }
+     },
+     "left kidney": {
+      "n_structures": 22,
+      "n_hosting_mass": 17,
+      "organ_dice": {
+       "n": 22,
+       "mean": 0.8296,
+       "ci95": [
+        0.724,
+        0.9097
+       ],
+       "median": 0.9121
+      },
+      "parenchyma_dice": {
+       "n": 22,
+       "mean": 0.8109,
+       "ci95": [
+        0.7103,
+        0.8822
+       ],
+       "median": 0.8911
+      },
+      "parenchyma_recall": {
+       "n": 22,
+       "mean": 0.8043,
+       "ci95": [
+        0.7186,
+        0.8617
+       ],
+       "median": 0.8589
+      },
+      "mass_coverage": {
+       "n": 17,
+       "mean": 0.5917,
+       "ci95": [
+        0.4469,
+        0.7254
+       ],
+       "median": 0.695
+      }
+     },
+     "liver": {
+      "n_structures": 18,
+      "n_hosting_mass": 15,
+      "organ_dice": {
+       "n": 18,
+       "mean": 0.9571,
+       "ci95": [
+        0.9527,
+        0.961
+       ],
+       "median": 0.9592
+      },
+      "parenchyma_dice": {
+       "n": 18,
+       "mean": 0.9437,
+       "ci95": [
+        0.9333,
+        0.9528
+       ],
+       "median": 0.9481
+      },
+      "parenchyma_recall": {
+       "n": 18,
+       "mean": 0.9679,
+       "ci95": [
+        0.9591,
+        0.9759
+       ],
+       "median": 0.9739
+      },
+      "mass_coverage": {
+       "n": 15,
+       "mean": 0.971,
+       "ci95": [
+        0.947,
+        0.9894
+       ],
+       "median": 0.9887
+      }
+     },
+     "pancreas": {
+      "n_structures": 43,
+      "n_hosting_mass": 39,
+      "organ_dice": {
+       "n": 43,
+       "mean": 0.7788,
+       "ci95": [
+        0.7526,
+        0.8033
+       ],
+       "median": 0.8165
+      },
+      "parenchyma_dice": {
+       "n": 43,
+       "mean": 0.7462,
+       "ci95": [
+        0.7212,
+        0.7713
+       ],
+       "median": 0.7686
+      },
+      "parenchyma_recall": {
+       "n": 43,
+       "mean": 0.7153,
+       "ci95": [
+        0.6738,
+        0.7551
+       ],
+       "median": 0.7479
+      },
+      "mass_coverage": {
+       "n": 39,
+       "mean": 0.7854,
+       "ci95": [
+        0.6852,
+        0.8695
+       ],
+       "median": 0.9515
+      }
+     },
+     "right kidney": {
+      "n_structures": 23,
+      "n_hosting_mass": 9,
+      "organ_dice": {
+       "n": 23,
+       "mean": 0.9117,
+       "ci95": [
+        0.9045,
+        0.9188
+       ],
+       "median": 0.9068
+      },
+      "parenchyma_dice": {
+       "n": 23,
+       "mean": 0.8804,
+       "ci95": [
+        0.8495,
+        0.9047
+       ],
+       "median": 0.8978
+      },
+      "parenchyma_recall": {
+       "n": 23,
+       "mean": 0.8514,
+       "ci95": [
+        0.8373,
+        0.8665
+       ],
+       "median": 0.8421
+      },
+      "mass_coverage": {
+       "n": 9,
+       "mean": 0.7032,
+       "ci95": [
+        0.4931,
+        0.8828
+       ],
+       "median": 0.8547
+      }
+     },
+     "spleen": {
+      "n_structures": 4,
+      "n_hosting_mass": 0,
+      "organ_dice": {
+       "n": 4,
+       "mean": 0.9517,
+       "ci95": [
+        0.9462,
+        0.9562
+       ],
+       "median": 0.9532
+      },
+      "parenchyma_dice": {
+       "n": 4,
+       "mean": 0.9517,
+       "ci95": [
+        0.9462,
+        0.9562
+       ],
+       "median": 0.9532
+      },
+      "parenchyma_recall": {
+       "n": 4,
+       "mean": 0.9628,
+       "ci95": [
+        0.947,
+        0.9784
+       ],
+       "median": 0.9629
+      },
+      "mass_coverage": null
+     }
+    }
+   },
+   "LiTS": {
+    "n_cases": 14,
+    "n_records": 14,
+    "n_records_with_no_annotated_organ": 0,
+    "n_cases_with_a_hosted_mass": 14,
+    "case_mean": {
+     "organ_dice": {
+      "n": 14,
+      "mean": 0.9559,
+      "ci95": [
+       0.9514,
+       0.9606
+      ],
+      "median": 0.9568
+     },
+     "parenchyma_dice": {
+      "n": 14,
+      "mean": 0.9387,
+      "ci95": [
+       0.9269,
+       0.9492
+      ],
+      "median": 0.9419
+     },
+     "parenchyma_recall": {
+      "n": 14,
+      "mean": 0.9634,
+      "ci95": [
+       0.9539,
+       0.9725
+      ],
+      "median": 0.9614
+     }
+    },
+    "per_organ": {
+     "liver": {
+      "n_structures": 14,
+      "n_hosting_mass": 14,
+      "organ_dice": {
+       "n": 14,
+       "mean": 0.9559,
+       "ci95": [
+        0.9514,
+        0.9606
+       ],
+       "median": 0.9568
+      },
+      "parenchyma_dice": {
+       "n": 14,
+       "mean": 0.9387,
+       "ci95": [
+        0.9269,
+        0.9492
+       ],
+       "median": 0.9419
+      },
+      "parenchyma_recall": {
+       "n": 14,
+       "mean": 0.9634,
+       "ci95": [
+        0.9539,
+        0.9725
+       ],
+       "median": 0.9614
+      },
+      "mass_coverage": {
+       "n": 14,
+       "mean": 0.9693,
+       "ci95": [
+        0.9443,
+        0.9886
+       ],
+       "median": 0.985
+      }
+     }
+    }
+   },
+   "MSD Pancreas": {
+    "n_cases": 39,
+    "n_records": 39,
+    "n_records_with_no_annotated_organ": 0,
+    "n_cases_with_a_hosted_mass": 39,
+    "case_mean": {
+     "organ_dice": {
+      "n": 39,
+      "mean": 0.775,
+      "ci95": [
+       0.7468,
+       0.8004
+      ],
+      "median": 0.7965
+     },
+     "parenchyma_dice": {
+      "n": 39,
+      "mean": 0.7391,
+      "ci95": [
+       0.7135,
+       0.7649
+      ],
+      "median": 0.7492
+     },
+     "parenchyma_recall": {
+      "n": 39,
+      "mean": 0.7108,
+      "ci95": [
+       0.6667,
+       0.7537
+      ],
+      "median": 0.7405
+     }
+    },
+    "per_organ": {
+     "pancreas": {
+      "n_structures": 39,
+      "n_hosting_mass": 39,
+      "organ_dice": {
+       "n": 39,
+       "mean": 0.775,
+       "ci95": [
+        0.7468,
+        0.8004
+       ],
+       "median": 0.7965
+      },
+      "parenchyma_dice": {
+       "n": 39,
+       "mean": 0.7391,
+       "ci95": [
+        0.7135,
+        0.7649
+       ],
+       "median": 0.7492
+      },
+      "parenchyma_recall": {
+       "n": 39,
+       "mean": 0.7108,
+       "ci95": [
+        0.6667,
+        0.7537
+       ],
+       "median": 0.7405
+      },
+      "mass_coverage": {
+       "n": 39,
+       "mean": 0.7854,
+       "ci95": [
+        0.6852,
+        0.8695
+       ],
+       "median": 0.9515
+      }
+     }
+    }
+   },
+   "KiTS23": {
+    "n_cases": 19,
+    "n_records": 19,
+    "n_records_with_no_annotated_organ": 0,
+    "n_cases_with_a_hosted_mass": 19,
+    "case_mean": {
+     "organ_dice": {
+      "n": 19,
+      "mean": 0.8372,
+      "ci95": [
+       0.7423,
+       0.9144
+      ],
+      "median": 0.9103
+     },
+     "parenchyma_dice": {
+      "n": 19,
+      "mean": 0.8411,
+      "ci95": [
+       0.7827,
+       0.8805
+      ],
+      "median": 0.8811
+     },
+     "parenchyma_recall": {
+      "n": 19,
+      "mean": 0.8306,
+      "ci95": [
+       0.7867,
+       0.8624
+      ],
+      "median": 0.8548
+     }
+    },
+    "per_organ": {
+     "kidney (pooled)": {
+      "n_structures": 19,
+      "n_hosting_mass": 19,
+      "organ_dice": {
+       "n": 19,
+       "mean": 0.8372,
+       "ci95": [
+        0.7423,
+        0.9144
+       ],
+       "median": 0.9103
+      },
+      "parenchyma_dice": {
+       "n": 19,
+       "mean": 0.8411,
+       "ci95": [
+        0.7827,
+        0.8805
+       ],
+       "median": 0.8811
+      },
+      "parenchyma_recall": {
+       "n": 19,
+       "mean": 0.8306,
+       "ci95": [
+        0.7867,
+        0.8624
+       ],
+       "median": 0.8548
+      },
+      "mass_coverage": {
+       "n": 19,
+       "mean": 0.7012,
+       "ci95": [
+        0.5643,
+        0.817
+       ],
+       "median": 0.8231
+      }
+     },
+     "left kidney": {
+      "n_structures": 19,
+      "n_hosting_mass": 15,
+      "organ_dice": {
+       "n": 19,
+       "mean": 0.82,
+       "ci95": [
+        0.7056,
+        0.9143
+       ],
+       "median": 0.9125
+      },
+      "parenchyma_dice": {
+       "n": 19,
+       "mean": 0.8158,
+       "ci95": [
+        0.7087,
+        0.889
+       ],
+       "median": 0.8925
+      },
+      "parenchyma_recall": {
+       "n": 19,
+       "mean": 0.8015,
+       "ci95": [
+        0.7059,
+        0.8678
+       ],
+       "median": 0.86
+      },
+      "mass_coverage": {
+       "n": 15,
+       "mean": 0.5868,
+       "ci95": [
+        0.4308,
+        0.7322
+       ],
+       "median": 0.695
+      }
+     },
+     "right kidney": {
+      "n_structures": 19,
+      "n_hosting_mass": 8,
+      "organ_dice": {
+       "n": 19,
+       "mean": 0.9144,
+       "ci95": [
+        0.907,
+        0.9216
+       ],
+       "median": 0.9131
+      },
+      "parenchyma_dice": {
+       "n": 19,
+       "mean": 0.8762,
+       "ci95": [
+        0.8389,
+        0.9052
+       ],
+       "median": 0.9027
+      },
+      "parenchyma_recall": {
+       "n": 19,
+       "mean": 0.855,
+       "ci95": [
+        0.84,
+        0.8705
+       ],
+       "median": 0.8431
+      },
+      "mass_coverage": {
+       "n": 8,
+       "mean": 0.7764,
+       "ci95": [
+        0.5973,
+        0.9074
+       ],
+       "median": 0.8766
+      }
+     }
+    }
+   },
+   "FLARE23": {
+    "n_cases": 4,
+    "n_records": 4,
+    "n_records_with_no_annotated_organ": 0,
+    "n_cases_with_a_hosted_mass": 4,
+    "case_mean": {
+     "organ_dice": {
+      "n": 4,
+      "mean": 0.9046,
+      "ci95": [
+       0.8849,
+       0.9209
+      ],
+      "median": 0.9081
+     },
+     "parenchyma_dice": {
+      "n": 4,
+      "mean": 0.8883,
+      "ci95": [
+       0.8566,
+       0.9201
+      ],
+      "median": 0.8944
+     },
+     "parenchyma_recall": {
+      "n": 4,
+      "mean": 0.8763,
+      "ci95": [
+       0.8498,
+       0.9023
+      ],
+      "median": 0.8846
+     }
+    },
+    "per_organ": {
+     "left kidney": {
+      "n_structures": 3,
+      "n_hosting_mass": 2,
+      "organ_dice": {
+       "n": 3,
+       "mean": 0.8903,
+       "ci95": [
+        0.8506,
+        0.9284
+       ],
+       "median": 0.8919
+      },
+      "parenchyma_dice": {
+       "n": 3,
+       "mean": 0.7799,
+       "ci95": [
+        0.5215,
+        0.9284
+       ],
+       "median": 0.8897
+      },
+      "parenchyma_recall": {
+       "n": 3,
+       "mean": 0.8218,
+       "ci95": [
+        0.7404,
+        0.8976
+       ],
+       "median": 0.8275
+      },
+      "mass_coverage": {
+       "n": 2,
+       "mean": 0.6284,
+       "ci95": [
+        0.5126,
+        0.7442
+       ],
+       "median": 0.6284
+      }
+     },
+     "liver": {
+      "n_structures": 4,
+      "n_hosting_mass": 1,
+      "organ_dice": {
+       "n": 4,
+       "mean": 0.9612,
+       "ci95": [
+        0.953,
+        0.9677
+       ],
+       "median": 0.9645
+      },
+      "parenchyma_dice": {
+       "n": 4,
+       "mean": 0.9612,
+       "ci95": [
+        0.953,
+        0.9677
+       ],
+       "median": 0.9645
+      },
+      "parenchyma_recall": {
+       "n": 4,
+       "mean": 0.9837,
+       "ci95": [
+        0.9791,
+        0.9883
+       ],
+       "median": 0.984
+      },
+      "mass_coverage": {
+       "n": 1,
+       "mean": 0.9949,
+       "ci95": [
+        0.9949,
+        0.9949
+       ],
+       "median": 0.9949
+      }
+     },
+     "pancreas": {
+      "n_structures": 4,
+      "n_hosting_mass": 0,
+      "organ_dice": {
+       "n": 4,
+       "mean": 0.8153,
+       "ci95": [
+        0.7344,
+        0.8591
+       ],
+       "median": 0.8529
+      },
+      "parenchyma_dice": {
+       "n": 4,
+       "mean": 0.8153,
+       "ci95": [
+        0.7344,
+        0.8591
+       ],
+       "median": 0.8529
+      },
+      "parenchyma_recall": {
+       "n": 4,
+       "mean": 0.7588,
+       "ci95": [
+        0.6573,
+        0.827
+       ],
+       "median": 0.7944
+      },
+      "mass_coverage": null
+     },
+     "right kidney": {
+      "n_structures": 4,
+      "n_hosting_mass": 1,
+      "organ_dice": {
+       "n": 4,
+       "mean": 0.8991,
+       "ci95": [
+        0.8861,
+        0.9206
+       ],
+       "median": 0.8902
+      },
+      "parenchyma_dice": {
+       "n": 4,
+       "mean": 0.9001,
+       "ci95": [
+        0.8861,
+        0.9206
+       ],
+       "median": 0.8922
+      },
+      "parenchyma_recall": {
+       "n": 4,
+       "mean": 0.8343,
+       "ci95": [
+        0.805,
+        0.881
+       ],
+       "median": 0.8168
+      },
+      "mass_coverage": {
+       "n": 1,
+       "mean": 0.118,
+       "ci95": [
+        0.118,
+        0.118
+       ],
+       "median": 0.118
+      }
+     },
+     "spleen": {
+      "n_structures": 4,
+      "n_hosting_mass": 0,
+      "organ_dice": {
+       "n": 4,
+       "mean": 0.9517,
+       "ci95": [
+        0.9462,
+        0.9562
+       ],
+       "median": 0.9532
+      },
+      "parenchyma_dice": {
+       "n": 4,
+       "mean": 0.9517,
+       "ci95": [
+        0.9462,
+        0.9562
+       ],
+       "median": 0.9532
+      },
+      "parenchyma_recall": {
+       "n": 4,
+       "mean": 0.9628,
+       "ci95": [
+        0.947,
+        0.9784
+       ],
+       "median": 0.9629
+      },
+      "mass_coverage": null
+     }
+    }
+   },
+   "_arms": [
+    "FLARE23 tumour-positive",
+    "KiTS23",
+    "LiTS",
+    "MSD Pancreas"
+   ]
+  }
+ }
+}

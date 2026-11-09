@@ -1,0 +1,168 @@
+collection,patient_id,pipeline_role_global_split,pipeline_role_filtered_split,pipeline_sam3_organ_model_role_round1,pipeline_twins,app_census_twins,twins_pipeline_missed,twins_pipeline_claimed_that_app_refuted,twin_roles_global_split,app_voxel_verdicts,twin_collection,pipeline_exposed_via_twin,app_exposed_via_twin,app_exposing_twin,duplicate_of_another_test_patient,pipeline_twin_clean,app_twin_clean,app_primary_cohort,showcase_case
+LiTS,volume-101,test,test,absent,FLARE23_2100,,,,FLARE23_2100=not in tumor pools,FLARE23_2100=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+LiTS,volume-11,test,test,train,FLARE23_0416,FLARE23_0416,,,FLARE23_0416=flare/train,FLARE23_0416=IDENTICAL,FLARE23,yes,yes,FLARE23_0416,,no,no,no,no
+LiTS,volume-110,test,test,absent,FLARE23_1524,,,,FLARE23_1524=not in tumor pools,FLARE23_1524=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+LiTS,volume-113,test,train,absent,FLARE23_2145,FLARE23_2145,,,FLARE23_2145=flare/train,FLARE23_2145=IDENTICAL,FLARE23,yes,yes,FLARE23_2145,,no,no,no,no
+LiTS,volume-116,test,val,absent,FLARE23_0101,FLARE23_0101,,,FLARE23_0101=flare/train,FLARE23_0101=IDENTICAL,FLARE23,yes,yes,FLARE23_0101,,no,no,no,no
+LiTS,volume-19,test,train,train,FLARE23_1791,FLARE23_1791,,,FLARE23_1791=flare/train,FLARE23_1791=IDENTICAL,FLARE23,yes,yes,FLARE23_1791,,no,no,no,no
+LiTS,volume-21,test,train,train,FLARE23_0120,FLARE23_0120,,,FLARE23_0120=flare/test,FLARE23_0120=not voxel-checked,FLARE23,no,no,,FLARE23_0120,yes,yes,no,no
+LiTS,volume-24,test,train,train,FLARE23_1786,,,,FLARE23_1786=not in tumor pools,FLARE23_1786=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+LiTS,volume-37,test,train,absent,FLARE23_0119,,,,FLARE23_0119=not in tumor pools,FLARE23_0119=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+LiTS,volume-43,test,train,absent,FLARE23_1930,,,,FLARE23_1930=not in tumor pools,FLARE23_1930=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+LiTS,volume-44,test,test,absent,FLARE23_1960,FLARE23_1960,,,FLARE23_1960=flare/train,FLARE23_1960=IDENTICAL,FLARE23,yes,yes,FLARE23_1960,,no,no,no,no
+LiTS,volume-49,test,train,absent,FLARE23_0129,,,,FLARE23_0129=not in tumor pools,FLARE23_0129=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+LiTS,volume-54,test,train,absent,FLARE23_0917,,,,FLARE23_0917=not in tumor pools,FLARE23_0917=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+LiTS,volume-68,test,test,absent,FLARE23_1438,FLARE23_1438,,,FLARE23_1438=flare/train,FLARE23_1438=IDENTICAL,FLARE23,yes,yes,FLARE23_1438,,no,no,no,no
+LiTS,volume-70,test,train,absent,FLARE23_0037,FLARE23_0037,,,FLARE23_0037=flare/test,FLARE23_0037=IDENTICAL,FLARE23,no,no,,FLARE23_0037,yes,yes,no,no
+LiTS,volume-75,test,train,absent,FLARE23_0051,FLARE23_0051,,,FLARE23_0051=flare/train,FLARE23_0051=IDENTICAL,FLARE23,yes,yes,FLARE23_0051,,no,no,no,no
+LiTS,volume-76,test,train,absent,FLARE23_1027,FLARE23_1027,,,FLARE23_1027=flare/test,FLARE23_1027=IDENTICAL,FLARE23,no,no,,FLARE23_1027,yes,yes,no,yes
+LiTS,volume-80,test,train,absent,FLARE23_1622,,,,FLARE23_1622=not in tumor pools,FLARE23_1622=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+LiTS,volume-82,test,train,absent,FLARE23_1854,,,,FLARE23_1854=not in tumor pools,FLARE23_1854=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+LiTS,volume-93,test,train,absent,FLARE23_1575,,,,FLARE23_1575=not in tumor pools,FLARE23_1575=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+LiTS,volume-99,test,train,absent,FLARE23_1530,,,,FLARE23_1530=not in tumor pools,FLARE23_1530=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_015,test,test,train,FLARE23_0284,,,,FLARE23_0284=not in tumor pools,FLARE23_0284=LOAD_ERROR,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_019,test,test,test,FLARE23_1639,FLARE23_1639,,,FLARE23_1639=flare/train,FLARE23_1639=IDENTICAL,FLARE23,yes,yes,FLARE23_1639,,no,no,no,no
+MSD Pancreas,pancreas_041,test,test,test,FLARE23_2125,FLARE23_2125,,,FLARE23_2125=flare/train,FLARE23_2125=IDENTICAL,FLARE23,yes,yes,FLARE23_2125,,no,no,no,no
+MSD Pancreas,pancreas_045,test,test,val,FLARE23_0040,,,,FLARE23_0040=not in tumor pools,FLARE23_0040=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_048,test,test,test,FLARE23_1309,,,,FLARE23_1309=not in tumor pools,FLARE23_1309=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_049,test,test,train,FLARE23_0951,,,,FLARE23_0951=not in tumor pools,FLARE23_0951=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_056,test,test,test,FLARE23_0350,,,,FLARE23_0350=not in tumor pools,FLARE23_0350=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_064,test,test,train,FLARE23_0191,,,,FLARE23_0191=not in tumor pools,FLARE23_0191=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_078,test,test,val,FLARE23_2015,FLARE23_2015,,,FLARE23_2015=flare/train,FLARE23_2015=IDENTICAL,FLARE23,yes,yes,FLARE23_2015,,no,no,no,no
+MSD Pancreas,pancreas_083,test,test,val,FLARE23_2119,,,,FLARE23_2119=not in tumor pools,FLARE23_2119=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_084,test,test,train,FLARE23_0593,FLARE23_0593,,,FLARE23_0593=flare/train,FLARE23_0593=IDENTICAL,FLARE23,yes,yes,FLARE23_0593,,no,no,no,no
+MSD Pancreas,pancreas_096,test,test,test,FLARE23_0624,,,,FLARE23_0624=not in tumor pools,FLARE23_0624=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_101,test,test,test,FLARE23_1039,,,,FLARE23_1039=not in tumor pools,FLARE23_1039=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_107,test,test,test,FLARE23_0819;FLARE23_1774,,,,FLARE23_0819=not in tumor pools;FLARE23_1774=not in tumor pools,FLARE23_0819=not voxel-checked;FLARE23_1774=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_110,test,test,train,FLARE23_0096,,,,FLARE23_0096=not in tumor pools,FLARE23_0096=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_119,test,test,train,FLARE23_0674,FLARE23_0674,,,FLARE23_0674=flare/train,FLARE23_0674=IDENTICAL,FLARE23,yes,yes,FLARE23_0674,,no,no,no,no
+MSD Pancreas,pancreas_122,test,test,test,FLARE23_0042;FLARE23_1144,,,FLARE23_0042,FLARE23_0042=flare/train;FLARE23_1144=not in tumor pools,FLARE23_0042=SHAPE_MISMATCH;FLARE23_1144=not voxel-checked,FLARE23,yes,no,,,no,yes,yes,no
+MSD Pancreas,pancreas_125,test,test,train,FLARE23_1312,,,,FLARE23_1312=not in tumor pools,FLARE23_1312=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,yes
+MSD Pancreas,pancreas_127,test,test,train,FLARE23_0346,,,,FLARE23_0346=not in tumor pools,FLARE23_0346=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_137,test,test,val,FLARE23_0156,FLARE23_0156,,,FLARE23_0156=flare/test,FLARE23_0156=not voxel-checked,FLARE23,no,no,,FLARE23_0156,yes,yes,no,no
+MSD Pancreas,pancreas_149,test,test,train,FLARE23_1014,,,,FLARE23_1014=not in tumor pools,FLARE23_1014=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_157,test,test,train,FLARE23_0889,FLARE23_0889,,,FLARE23_0889=flare/train,FLARE23_0889=IDENTICAL,FLARE23,yes,yes,FLARE23_0889,,no,no,no,no
+MSD Pancreas,pancreas_172,test,test,test,FLARE23_1723,,,,FLARE23_1723=not in tumor pools,FLARE23_1723=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_191,test,test,train,FLARE23_0971,,,,FLARE23_0971=not in tumor pools,FLARE23_0971=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_200,test,test,train,FLARE23_1826,FLARE23_1826,,,FLARE23_1826=flare/train,FLARE23_1826=IDENTICAL,FLARE23,yes,yes,FLARE23_1826,,no,no,no,no
+MSD Pancreas,pancreas_201,test,test,train,FLARE23_1764,,,,FLARE23_1764=not in tumor pools,FLARE23_1764=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_210,test,test,train,FLARE23_1842,,,,FLARE23_1842=not in tumor pools,FLARE23_1842=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_218,test,test,test,FLARE23_0751,FLARE23_0751,,,FLARE23_0751=flare/train,FLARE23_0751=IDENTICAL,FLARE23,yes,yes,FLARE23_0751,,no,no,no,no
+MSD Pancreas,pancreas_226,test,test,train,FLARE23_0332,FLARE23_0332,,,FLARE23_0332=flare/val,FLARE23_0332=IDENTICAL,FLARE23,yes,yes,FLARE23_0332,,no,no,no,no
+MSD Pancreas,pancreas_235,test,test,train,FLARE23_1236,FLARE23_1236,,,FLARE23_1236=flare/train,FLARE23_1236=IDENTICAL,FLARE23,yes,yes,FLARE23_1236,,no,no,no,no
+MSD Pancreas,pancreas_239,test,test,train,FLARE23_1552,,,,FLARE23_1552=not in tumor pools,FLARE23_1552=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_241,test,test,train,FLARE23_0312,,,,FLARE23_0312=not in tumor pools,FLARE23_0312=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_242,test,test,train,FLARE23_1081,,,,FLARE23_1081=not in tumor pools,FLARE23_1081=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_256,test,test,train,FLARE23_0521,,,,FLARE23_0521=not in tumor pools,FLARE23_0521=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_258,test,test,test,FLARE23_1638,,,,FLARE23_1638=not in tumor pools,FLARE23_1638=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_259,test,test,train,FLARE23_0698,,,,FLARE23_0698=not in tumor pools,FLARE23_0698=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_275,test,test,absent,FLARE23_0592,,,,FLARE23_0592=not in tumor pools,FLARE23_0592=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_285,test,test,absent,FLARE23_1629,,,,FLARE23_1629=not in tumor pools,FLARE23_1629=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_289,test,test,absent,FLARE23_0641,,,,FLARE23_0641=not in tumor pools,FLARE23_0641=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_301,test,test,absent,FLARE23_1651,,,,FLARE23_1651=not in tumor pools,FLARE23_1651=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_315,test,test,absent,FLARE23_1867,FLARE23_1867,,,FLARE23_1867=flare/test,FLARE23_1867=not voxel-checked,FLARE23,no,no,,FLARE23_1867,yes,yes,no,no
+MSD Pancreas,pancreas_327,test,test,absent,FLARE23_0283,FLARE23_0283,,,FLARE23_0283=flare/test,FLARE23_0283=not voxel-checked,FLARE23,no,no,,FLARE23_0283,yes,yes,no,no
+MSD Pancreas,pancreas_330,test,test,absent,FLARE23_0612,FLARE23_0612,,,FLARE23_0612=flare/train,FLARE23_0612=IDENTICAL,FLARE23,yes,yes,FLARE23_0612,,no,no,no,no
+MSD Pancreas,pancreas_336,test,test,absent,FLARE23_0151,,,,FLARE23_0151=not in tumor pools,FLARE23_0151=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_339,test,test,absent,FLARE23_0070,FLARE23_0070,,,FLARE23_0070=flare/train,FLARE23_0070=IDENTICAL,FLARE23,yes,yes,FLARE23_0070,,no,no,no,no
+MSD Pancreas,pancreas_346,test,test,absent,FLARE23_1215,,,,FLARE23_1215=not in tumor pools,FLARE23_1215=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_348,test,test,absent,FLARE23_1327,,,,FLARE23_1327=not in tumor pools,FLARE23_1327=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_356,test,test,absent,FLARE23_0448,FLARE23_0448,,,FLARE23_0448=flare/train,FLARE23_0448=IDENTICAL,FLARE23,yes,yes,FLARE23_0448,,no,no,no,no
+MSD Pancreas,pancreas_366,test,test,absent,FLARE23_0071,,,,FLARE23_0071=not in tumor pools,FLARE23_0071=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_369,test,test,absent,FLARE23_0285,FLARE23_0285,,,FLARE23_0285=flare/train,FLARE23_0285=IDENTICAL,FLARE23,yes,yes,FLARE23_0285,,no,no,no,no
+MSD Pancreas,pancreas_377,test,test,absent,FLARE23_0054,FLARE23_0054,,,FLARE23_0054=flare/val,FLARE23_0054=IDENTICAL,FLARE23,yes,yes,FLARE23_0054,,no,no,no,no
+MSD Pancreas,pancreas_378,test,test,absent,FLARE23_0860,,,,FLARE23_0860=not in tumor pools,FLARE23_0860=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+MSD Pancreas,pancreas_393,test,test,absent,FLARE23_1256,FLARE23_1256,,,FLARE23_1256=flare/train,FLARE23_1256=IDENTICAL,FLARE23,yes,yes,FLARE23_1256,,no,no,no,no
+MSD Pancreas,pancreas_399,test,test,absent,FLARE23_2051,FLARE23_2051,,,FLARE23_2051=flare/val,FLARE23_2051=IDENTICAL,FLARE23,yes,yes,FLARE23_2051,,no,no,no,no
+MSD Pancreas,pancreas_404,test,test,absent,FLARE23_1643,FLARE23_1643,,,FLARE23_1643=flare/test,FLARE23_1643=not voxel-checked,FLARE23,no,no,,FLARE23_1643,yes,yes,no,no
+MSD Pancreas,pancreas_418,test,test,absent,FLARE23_0237,,,,FLARE23_0237=not in tumor pools,FLARE23_0237=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+KiTS23,case_00006,test,train,train,FLARE23_1816,,,,FLARE23_1816=not in tumor pools,FLARE23_1816=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+KiTS23,case_00008,test,train,train,FLARE23_0883,FLARE23_0883,,,FLARE23_0883=flare/train,FLARE23_0883=IDENTICAL,FLARE23,yes,yes,FLARE23_0883,,no,no,no,no
+KiTS23,case_00017,test,train,train,FLARE23_1051,FLARE23_1051,,,FLARE23_1051=flare/train,FLARE23_1051=IDENTICAL,FLARE23,yes,yes,FLARE23_1051,,no,no,no,no
+KiTS23,case_00018,test,test,test,FLARE23_1125,,,,FLARE23_1125=not in tumor pools,FLARE23_1125=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+KiTS23,case_00021,test,train,train,FLARE23_1274,FLARE23_1274,,,FLARE23_1274=flare/test,FLARE23_1274=not voxel-checked,FLARE23,no,no,,FLARE23_1274,yes,yes,no,no
+KiTS23,case_00024,test,test,train,FLARE23_0802,FLARE23_0802,,,FLARE23_0802=flare/train,FLARE23_0802=IDENTICAL,FLARE23,yes,yes,FLARE23_0802,,no,no,no,no
+KiTS23,case_00030,test,test,test,FLARE23_2068,,,,FLARE23_2068=not in tumor pools,FLARE23_2068=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+KiTS23,case_00035,test,train,train,FLARE23_2116,,,,FLARE23_2116=not in tumor pools,FLARE23_2116=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+KiTS23,case_00039,test,train,test,FLARE23_0886,FLARE23_0886,,,FLARE23_0886=flare/test,FLARE23_0886=not voxel-checked,FLARE23,no,no,,FLARE23_0886,yes,yes,no,no
+KiTS23,case_00042,test,test,val,FLARE23_1158,,,,FLARE23_1158=not in tumor pools,FLARE23_1158=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+KiTS23,case_00043,test,train,train,FLARE23_0922,FLARE23_0922,,,FLARE23_0922=flare/train,FLARE23_0922=IDENTICAL,FLARE23,yes,yes,FLARE23_0922,,no,no,no,no
+KiTS23,case_00057,test,train,train,FLARE23_0628,,,,FLARE23_0628=not in tumor pools,FLARE23_0628=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+KiTS23,case_00060,test,test,train,FLARE23_1630,FLARE23_1630,,,FLARE23_1630=flare/train,FLARE23_1630=IDENTICAL,FLARE23,yes,yes,FLARE23_1630,,no,no,no,no
+KiTS23,case_00067,test,val,train,FLARE23_0286,FLARE23_0286,,,FLARE23_0286=flare/train,FLARE23_0286=IDENTICAL,FLARE23,yes,yes,FLARE23_0286,,no,no,no,yes
+KiTS23,case_00075,test,train,train,FLARE23_0910,FLARE23_0910,,,FLARE23_0910=flare/train,FLARE23_0910=IDENTICAL,FLARE23,yes,yes,FLARE23_0910,,no,no,no,no
+KiTS23,case_00079,test,train,train,FLARE23_0439,,,,FLARE23_0439=not in tumor pools,FLARE23_0439=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+KiTS23,case_00083,test,train,test,FLARE23_1512,FLARE23_1512,,,FLARE23_1512=flare/train,FLARE23_1512=IDENTICAL,FLARE23,yes,yes,FLARE23_1512,,no,no,no,no
+KiTS23,case_00086,test,train,train,FLARE23_1298,,,,FLARE23_1298=not in tumor pools,FLARE23_1298=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+KiTS23,case_00087,test,train,train,FLARE23_0998,FLARE23_0998,,,FLARE23_0998=flare/train,FLARE23_0998=IDENTICAL,FLARE23,yes,yes,FLARE23_0998,,no,no,no,no
+KiTS23,case_00090,test,val,test,FLARE23_0126,FLARE23_0126,,,FLARE23_0126=flare/train,FLARE23_0126=IDENTICAL,FLARE23,yes,yes,FLARE23_0126,,no,no,no,no
+KiTS23,case_00092,test,train,train,FLARE23_0617,FLARE23_0617,,,FLARE23_0617=flare/train,FLARE23_0617=IDENTICAL,FLARE23,yes,yes,FLARE23_0617,,no,no,no,no
+KiTS23,case_00095,test,train,train,FLARE23_1609,,,,FLARE23_1609=not in tumor pools,FLARE23_1609=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+KiTS23,case_00103,test,train,absent,FLARE23_0740,,,,FLARE23_0740=not in tumor pools,FLARE23_0740=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+KiTS23,case_00105,test,train,absent,FLARE23_0118,FLARE23_0118,,,FLARE23_0118=flare/val,FLARE23_0118=IDENTICAL,FLARE23,yes,yes,FLARE23_0118,,no,no,no,no
+KiTS23,case_00120,test,test,absent,FLARE23_0146,FLARE23_0146,,,FLARE23_0146=flare/train,FLARE23_0146=IDENTICAL,FLARE23,yes,yes,FLARE23_0146,,no,no,no,no
+KiTS23,case_00124,test,val,absent,FLARE23_1589,FLARE23_1589,,,FLARE23_1589=flare/train,FLARE23_1589=IDENTICAL,FLARE23,yes,yes,FLARE23_1589,,no,no,no,no
+KiTS23,case_00128,test,train,absent,FLARE23_0097,FLARE23_0097,,,FLARE23_0097=flare/test,FLARE23_0097=not voxel-checked,FLARE23,no,no,,FLARE23_0097,yes,yes,no,no
+KiTS23,case_00146,test,train,absent,,,,,,,,no,no,,,yes,yes,yes,no
+KiTS23,case_00148,test,test,absent,FLARE23_0470,FLARE23_0470,,,FLARE23_0470=flare/val,FLARE23_0470=IDENTICAL,FLARE23,yes,yes,FLARE23_0470,,no,no,no,no
+KiTS23,case_00149,test,train,absent,FLARE23_1464,,,,FLARE23_1464=not in tumor pools,FLARE23_1464=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+KiTS23,case_00152,test,train,absent,FLARE23_0062,,,,FLARE23_0062=not in tumor pools,FLARE23_0062=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+KiTS23,case_00154,test,train,absent,FLARE23_2033,,,,FLARE23_2033=not in tumor pools,FLARE23_2033=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+KiTS23,case_00160,test,train,absent,FLARE23_0141,,,,FLARE23_0141=not in tumor pools,FLARE23_0141=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+KiTS23,case_00162,test,train,absent,FLARE23_1364,,,,FLARE23_1364=not in tumor pools,FLARE23_1364=not voxel-checked,FLARE23,no,no,,,yes,yes,yes,no
+KiTS23,case_00165,test,train,absent,FLARE23_0444,FLARE23_0444,,,FLARE23_0444=flare/train,FLARE23_0444=IDENTICAL,FLARE23,yes,yes,FLARE23_0444,,no,no,no,no
+KiTS23,case_00175,test,train,absent,FLARE23_0939;FLARE23_2196,FLARE23_2196,,,FLARE23_0939=not in tumor pools;FLARE23_2196=flare/train,FLARE23_0939=not voxel-checked;FLARE23_2196=IDENTICAL,FLARE23,yes,yes,FLARE23_2196,,no,no,no,no
+FLARE23,FLARE23_0037,test,train,train,volume-70,volume-70,,,volume-70=lits/test,volume-70=IDENTICAL,LiTS,no,no,,volume-70,yes,yes,yes,no
+FLARE23,FLARE23_0097,test,val,train,case_00128,case_00128,,,case_00128=kits/test,case_00128=not voxel-checked,KiTS23,no,no,,case_00128,yes,yes,yes,no
+FLARE23,FLARE23_0120,test,train,test,volume-21,volume-21,,,volume-21=lits/test,volume-21=not voxel-checked,LiTS,no,no,,volume-21,yes,yes,yes,no
+FLARE23,FLARE23_0156,test,test,train,pancreas_137,pancreas_137,,,pancreas_137=pancreas/test,pancreas_137=not voxel-checked,MSD Pancreas,no,no,,pancreas_137,yes,yes,yes,no
+FLARE23,FLARE23_0236,test,test,test,,case_00032,case_00032,,case_00032=kits/train,case_00032=IDENTICAL,KiTS23,no,yes,case_00032,,yes,no,no,no
+FLARE23,FLARE23_0239,test,train,train,,case_00186,case_00186,,case_00186=not in tumor pools,case_00186=not voxel-checked,KiTS23,no,no,,,yes,yes,yes,no
+FLARE23,FLARE23_0262,test,test,train,,pancreas_180,pancreas_180,,pancreas_180=pancreas/train,pancreas_180=IDENTICAL,MSD Pancreas,no,yes,pancreas_180,,yes,no,no,no
+FLARE23,FLARE23_0283,test,train,test,pancreas_327,pancreas_327,,,pancreas_327=pancreas/test,pancreas_327=not voxel-checked,MSD Pancreas,no,no,,pancreas_327,yes,yes,yes,no
+FLARE23,FLARE23_0357,test,train,train,,case_00007,case_00007,,case_00007=kits/train,case_00007=not voxel-checked,KiTS23,no,yes,case_00007,,yes,no,no,no
+FLARE23,FLARE23_0405,test,train,train,case_00078,case_00078,,,case_00078=kits/val,case_00078=IDENTICAL,KiTS23,yes,yes,case_00078,,no,no,no,yes
+FLARE23,FLARE23_0431,test,train,train,,pancreas_074,pancreas_074,,pancreas_074=pancreas/train,pancreas_074=not voxel-checked,MSD Pancreas,no,yes,pancreas_074,,yes,no,no,no
+FLARE23,FLARE23_0466,test,val,train,,pancreas_376,pancreas_376,,pancreas_376=pancreas/train,pancreas_376=not voxel-checked,MSD Pancreas,no,yes,pancreas_376,,yes,no,no,no
+FLARE23,FLARE23_0536,test,test,train,,pancreas_287,pancreas_287,,pancreas_287=pancreas/train,pancreas_287=not voxel-checked,MSD Pancreas,no,yes,pancreas_287,,yes,no,no,no
+FLARE23,FLARE23_0572,test,train,train,,pancreas_052,pancreas_052,,pancreas_052=pancreas/train,pancreas_052=not voxel-checked,MSD Pancreas,no,yes,pancreas_052,,yes,no,no,no
+FLARE23,FLARE23_0680,test,train,train,volume-128,volume-128,,,volume-128=lits/val,volume-128=IDENTICAL,LiTS,yes,yes,volume-128,,no,no,no,no
+FLARE23,FLARE23_0766,test,val,test,,pancreas_213,pancreas_213,,pancreas_213=pancreas/train,pancreas_213=not voxel-checked,MSD Pancreas,no,yes,pancreas_213,,yes,no,no,no
+FLARE23,FLARE23_0775,test,train,train,,pancreas_075,pancreas_075,,pancreas_075=pancreas/train,pancreas_075=IDENTICAL,MSD Pancreas,no,yes,pancreas_075,,yes,no,no,no
+FLARE23,FLARE23_0797,test,test,train,,pancreas_254,pancreas_254,,pancreas_254=pancreas/train,pancreas_254=not voxel-checked,MSD Pancreas,no,yes,pancreas_254,,yes,no,no,no
+FLARE23,FLARE23_0853,test,train,train,,case_00194,case_00194,,case_00194=not in tumor pools,case_00194=not voxel-checked,KiTS23,no,no,,,yes,yes,yes,no
+FLARE23,FLARE23_0886,test,val,train,case_00039,case_00039,,,case_00039=kits/test,case_00039=not voxel-checked,KiTS23,no,no,,case_00039,yes,yes,yes,no
+FLARE23,FLARE23_0896,test,train,test,,pancreas_166,pancreas_166,,pancreas_166=pancreas/val,pancreas_166=IDENTICAL,MSD Pancreas,no,yes,pancreas_166,,yes,no,no,no
+FLARE23,FLARE23_0927,test,test,test,,pancreas_343,pancreas_343,,pancreas_343=pancreas/train,pancreas_343=not voxel-checked,MSD Pancreas,no,yes,pancreas_343,,yes,no,no,no
+FLARE23,FLARE23_1027,test,test,train,volume-76,volume-76,,,volume-76=lits/test,volume-76=IDENTICAL,LiTS,no,no,,volume-76,yes,yes,yes,no
+FLARE23,FLARE23_1087,test,train,train,,case_00084,case_00084,,case_00084=kits/train,case_00084=not voxel-checked,KiTS23,no,yes,case_00084,,yes,no,no,no
+FLARE23,FLARE23_1199,test,train,test,,volume-84,volume-84,,volume-84=lits/train,volume-84=IDENTICAL,LiTS,no,yes,volume-84,,yes,no,no,no
+FLARE23,FLARE23_1233,test,train,train,volume-14,volume-14,,,volume-14=lits/train,volume-14=IDENTICAL,LiTS,yes,yes,volume-14,,no,no,no,no
+FLARE23,FLARE23_1250,test,val,train,,pancreas_087,pancreas_087,,pancreas_087=pancreas/train,pancreas_087=not voxel-checked,MSD Pancreas,no,yes,pancreas_087,,yes,no,no,no
+FLARE23,FLARE23_1274,test,train,train,case_00021,case_00021,,,case_00021=kits/test,case_00021=not voxel-checked,KiTS23,no,no,,case_00021,yes,yes,yes,no
+FLARE23,FLARE23_1313,test,train,train,,case_00145,case_00145,,case_00145=kits/train,case_00145=not voxel-checked,KiTS23,no,yes,case_00145,,yes,no,no,no
+FLARE23,FLARE23_1334,test,test,train,,case_00203,case_00203,,case_00203=not in tumor pools,case_00203=not voxel-checked,KiTS23,no,no,,,yes,yes,yes,no
+FLARE23,FLARE23_1347,test,train,test,volume-112,volume-112,,,volume-112=not in tumor pools,volume-112=not voxel-checked,LiTS,no,no,,,yes,yes,yes,no
+FLARE23,FLARE23_1363,test,train,train,,pancreas_299,pancreas_299,,pancreas_299=pancreas/train,pancreas_299=not voxel-checked,MSD Pancreas,no,yes,pancreas_299,,yes,no,no,no
+FLARE23,FLARE23_1373,test,train,test,,case_00088,case_00088,,case_00088=kits/train,case_00088=not voxel-checked,KiTS23,no,yes,case_00088,,yes,no,no,no
+FLARE23,FLARE23_1448,test,train,train,,pancreas_412,pancreas_412,,pancreas_412=pancreas/train,pancreas_412=not voxel-checked,MSD Pancreas,no,yes,pancreas_412,,yes,no,no,no
+FLARE23,FLARE23_1454,test,train,train,,pancreas_386,pancreas_386,,pancreas_386=pancreas/train,pancreas_386=not voxel-checked,MSD Pancreas,no,yes,pancreas_386,,yes,no,no,no
+FLARE23,FLARE23_1466,test,train,test,,pancreas_261,pancreas_261,,pancreas_261=pancreas/train,pancreas_261=not voxel-checked,MSD Pancreas,no,yes,pancreas_261,,yes,no,no,no
+FLARE23,FLARE23_1564,test,train,val,,pancreas_229,pancreas_229,,pancreas_229=pancreas/train,pancreas_229=not voxel-checked,MSD Pancreas,no,yes,pancreas_229,,yes,no,no,no
+FLARE23,FLARE23_1618,test,train,train,,case_00102,case_00102,,case_00102=kits/train,case_00102=IDENTICAL,KiTS23,no,yes,case_00102,,yes,no,no,no
+FLARE23,FLARE23_1643,test,val,train,pancreas_404,pancreas_404,,,pancreas_404=pancreas/test,pancreas_404=not voxel-checked,MSD Pancreas,no,no,,pancreas_404,yes,yes,yes,no
+FLARE23,FLARE23_1686,test,train,test,,case_00000,case_00000,,case_00000=kits/train,case_00000=IDENTICAL,KiTS23,no,yes,case_00000,,yes,no,no,no
+FLARE23,FLARE23_1722,test,test,absent,,pancreas_103,pancreas_103,,pancreas_103=pancreas/train,pancreas_103=not voxel-checked,MSD Pancreas,no,yes,pancreas_103,,yes,no,no,no
+FLARE23,FLARE23_1741,test,train,absent,,case_00068,case_00068,,case_00068=kits/train,case_00068=not voxel-checked,KiTS23,no,yes,case_00068,,yes,no,no,no
+FLARE23,FLARE23_1867,test,val,absent,pancreas_315,pancreas_315,,,pancreas_315=pancreas/test,pancreas_315=not voxel-checked,MSD Pancreas,no,no,,pancreas_315,yes,yes,yes,no
+FLARE23,FLARE23_1899,test,test,absent,,pancreas_089,pancreas_089,,pancreas_089=pancreas/train,pancreas_089=not voxel-checked,MSD Pancreas,no,yes,pancreas_089,,yes,no,no,no
+FLARE23,FLARE23_1965,test,train,absent,,pancreas_199,pancreas_199,,pancreas_199=pancreas/train,pancreas_199=not voxel-checked,MSD Pancreas,no,yes,pancreas_199,,yes,no,no,no
+FLARE23,FLARE23_1998,test,train,absent,volume-9,volume-9,,,volume-9=lits/train,volume-9=IDENTICAL,LiTS,yes,yes,volume-9,,no,no,no,no
+FLARE23,FLARE23_2003,test,test,absent,volume-81,volume-81,,,volume-81=lits/train,volume-81=IDENTICAL,LiTS,yes,yes,volume-81,,no,no,no,no
+FLARE23,FLARE23_2009,test,train,absent,,pancreas_109,pancreas_109,,pancreas_109=pancreas/val,pancreas_109=not voxel-checked,MSD Pancreas,no,yes,pancreas_109,,yes,no,no,no
+FLARE23,FLARE23_2065,test,test,absent,,pancreas_270,pancreas_270,,pancreas_270=pancreas/train,pancreas_270=not voxel-checked,MSD Pancreas,no,yes,pancreas_270,,yes,no,no,no
+FLARE23,FLARE23_2111,test,train,absent,volume-23,volume-23,,,volume-23=lits/train,volume-23=IDENTICAL,LiTS,yes,yes,volume-23,,no,no,no,no
+FLARE23,FLARE23_2117,test,train,absent,,case_00049,case_00049,,case_00049=kits/train,case_00049=not voxel-checked,KiTS23,no,yes,case_00049,,yes,no,no,no
+FLARE23,FLARE23_2135,test,train,absent,volume-122,volume-122,,,volume-122=lits/train,volume-122=IDENTICAL,LiTS,yes,yes,volume-122,,no,no,no,no
+FLARE23,FLARE23_2177,test,test,absent,,case_00108,case_00108,,case_00108=kits/train,case_00108=not voxel-checked,KiTS23,no,yes,case_00108,,yes,no,no,no
+FLARE23,FLARE23_2185,test,train,absent,,pancreas_120,pancreas_120,,pancreas_120=pancreas/train,pancreas_120=IDENTICAL,MSD Pancreas,no,yes,pancreas_120,,yes,no,no,no
