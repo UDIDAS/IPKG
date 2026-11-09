@@ -1,0 +1,998 @@
+{
+ "note": "Closed-world false negatives on restricted views of the 576 semi-oracle FLARE23 predicted graphs.\n\nQuestion: when a multi-organ case is seen the way a single-organ collection sees it (LiTS: liver only; KiTS23: kidneys\nonly; MSD: pancreas only), how many reference-true answers does a closed-world evaluator turn into false negatives,\nand what does the three-valued evaluator return instead?\n\nViews. From each predicted FLARE23 record (corpora/corpus_predicted_flare23.json, the graphs behind Table E.4) three\nrestricted views are built: liver-only, kidney-only, pancreas-only. A view keeps the one organ's phenotype record\nunchanged, sets observed_organs to that organ, and drops every other organ, which is exactly how a LiTS / KiTS23 / MSD\nrecord is carried. A case enters a view only if its predicted record observes that organ (liver 575, kidney 576,\npancreas 575 of 576). Phenotypes, burden categories (the FLARE23 cut-points already in the records) and the 65.4 cm3\nhepatic threshold are those of the shipped records; nothing is re-derived and no step is stochastic.\n\nEvaluators, on the same view:\n  IPKG (three-valued)  the verdict functions of queries/query_suite_eval.py, unchanged: T / F over observed anatomy,\n                       U where the condition touches an organ the view does not observe.\n  closed-world         every organ the view does not observe is filled with an absent-negative record (no lesion,\n                       burden \"none\", multiplicity \"none\", volume 0) and the same verdict functions are applied, so\n                       every unsupported constraint is scored F. The script asserts that this equals mapping each\n                       IPKG U to F, verdict by verdict.\n\nReference: the verdict on the full four-organ reference record of the same case (corpora/corpus_flare23_kg.json),\nscored by the same functions. Reference-indeterminate instantiations (spleen on the 5 records without a spleen\nannotation) are counted separately and excluded from P/R/F1 and from the false-negative count.\n\nFamilies: Q2, Q3, Q7b instantiated per organ over liver, kidney, pancreas, spleen and pooled (as in Table E.4), and\nalso split into the observed-organ instantiation and the hidden-organ instantiations; Q4a, Q4b, Q5 once per case.\n\nOutputs per family x restricted organ:\n  IPKG: N_T, N_F, N_U, precision / recall / F1 over determinate pairs, false negatives (reference T, IPKG F),\n        reference-T answered U\n  closed-world: N_T, N_F, precision / recall / F1, false negatives (reference T, closed-world F)\n\n  python queries/query_suite_restricted_views.py\n-> results/queries/restricted_views_closed_world.json, results/queries/restricted_views_closed_world_table.tex",
+ "n_cases": 576,
+ "reference_tumor_bearing_organ_records": 270,
+ "views": {
+  "liver": {
+   "label": "liver-only (as LiTS)",
+   "n_cases": 575,
+   "families": {
+    "Q2": {
+     "family": "Organ-specific lookup (pooled)",
+     "n_cases": 575,
+     "pooled": {
+      "reference": {
+       "T": 270,
+       "U": 5
+      },
+      "ipkg": {
+       "N_T": 46,
+       "N_F": 529,
+       "N_U": 1725,
+       "precision": 0.957,
+       "recall": 0.898,
+       "F1": 0.926,
+       "indet_pct": 75.0,
+       "false_negatives": 5,
+       "ref_T_answered_U": 221
+      },
+      "closed_world": {
+       "N_T": 46,
+       "N_F": 2254,
+       "precision": 0.957,
+       "recall": 0.163,
+       "F1": 0.278,
+       "false_negatives": 226
+      }
+     },
+     "observed_organ": {
+      "reference": {
+       "T": 49,
+       "U": 0
+      },
+      "ipkg": {
+       "N_T": 46,
+       "N_F": 529,
+       "N_U": 0,
+       "precision": 0.957,
+       "recall": 0.898,
+       "F1": 0.926,
+       "indet_pct": 0.0,
+       "false_negatives": 5,
+       "ref_T_answered_U": 0
+      },
+      "closed_world": {
+       "N_T": 46,
+       "N_F": 529,
+       "precision": 0.957,
+       "recall": 0.898,
+       "F1": 0.926,
+       "false_negatives": 5
+      }
+     },
+     "hidden_organs": {
+      "reference": {
+       "T": 221,
+       "U": 5
+      },
+      "ipkg": {
+       "N_T": 0,
+       "N_F": 0,
+       "N_U": 1725,
+       "precision": null,
+       "recall": null,
+       "F1": null,
+       "indet_pct": 100.0,
+       "false_negatives": 0,
+       "ref_T_answered_U": 221
+      },
+      "closed_world": {
+       "N_T": 0,
+       "N_F": 1725,
+       "precision": null,
+       "recall": 0.0,
+       "F1": null,
+       "false_negatives": 221
+      }
+     }
+    },
+    "Q3": {
+     "family": "Largest burden tercile in organ o (pooled)",
+     "n_cases": 575,
+     "pooled": {
+      "reference": {
+       "T": 91,
+       "U": 5
+      },
+      "ipkg": {
+       "N_T": 24,
+       "N_F": 551,
+       "N_U": 1725,
+       "precision": 1.0,
+       "recall": 0.923,
+       "F1": 0.96,
+       "indet_pct": 75.0,
+       "false_negatives": 2,
+       "ref_T_answered_U": 65
+      },
+      "closed_world": {
+       "N_T": 24,
+       "N_F": 2276,
+       "precision": 1.0,
+       "recall": 0.264,
+       "F1": 0.417,
+       "false_negatives": 67
+      }
+     },
+     "observed_organ": {
+      "reference": {
+       "T": 26,
+       "U": 0
+      },
+      "ipkg": {
+       "N_T": 24,
+       "N_F": 551,
+       "N_U": 0,
+       "precision": 1.0,
+       "recall": 0.923,
+       "F1": 0.96,
+       "indet_pct": 0.0,
+       "false_negatives": 2,
+       "ref_T_answered_U": 0
+      },
+      "closed_world": {
+       "N_T": 24,
+       "N_F": 551,
+       "precision": 1.0,
+       "recall": 0.923,
+       "F1": 0.96,
+       "false_negatives": 2
+      }
+     },
+     "hidden_organs": {
+      "reference": {
+       "T": 65,
+       "U": 5
+      },
+      "ipkg": {
+       "N_T": 0,
+       "N_F": 0,
+       "N_U": 1725,
+       "precision": null,
+       "recall": null,
+       "F1": null,
+       "indet_pct": 100.0,
+       "false_negatives": 0,
+       "ref_T_answered_U": 65
+      },
+      "closed_world": {
+       "N_T": 0,
+       "N_F": 1725,
+       "precision": null,
+       "recall": 0.0,
+       "F1": null,
+       "false_negatives": 65
+      }
+     }
+    },
+    "Q4a": {
+     "family": "Hepatic volume > 65.4 cm3 AND renal lesion",
+     "n_cases": 575,
+     "pooled": {
+      "reference": {
+       "T": 0,
+       "U": 0
+      },
+      "ipkg": {
+       "N_T": 0,
+       "N_F": 556,
+       "N_U": 19,
+       "precision": null,
+       "recall": null,
+       "F1": null,
+       "indet_pct": 3.3,
+       "false_negatives": 0,
+       "ref_T_answered_U": 0
+      },
+      "closed_world": {
+       "N_T": 0,
+       "N_F": 575,
+       "precision": null,
+       "recall": null,
+       "F1": null,
+       "false_negatives": 0
+      }
+     }
+    },
+    "Q4b": {
+     "family": "Hepatic volume > 65.4 cm3 AND splenic lesion",
+     "n_cases": 575,
+     "pooled": {
+      "reference": {
+       "T": 0,
+       "U": 1
+      },
+      "ipkg": {
+       "N_T": 0,
+       "N_F": 556,
+       "N_U": 19,
+       "precision": null,
+       "recall": null,
+       "F1": null,
+       "indet_pct": 3.3,
+       "false_negatives": 0,
+       "ref_T_answered_U": 0
+      },
+      "closed_world": {
+       "N_T": 0,
+       "N_F": 575,
+       "precision": null,
+       "recall": null,
+       "F1": null,
+       "false_negatives": 0
+      }
+     }
+    },
+    "Q5": {
+     "family": "Cross-organ involvement",
+     "n_cases": 575,
+     "pooled": {
+      "reference": {
+       "T": 0,
+       "U": 0
+      },
+      "ipkg": {
+       "N_T": 0,
+       "N_F": 0,
+       "N_U": 575,
+       "precision": null,
+       "recall": null,
+       "F1": null,
+       "indet_pct": 100.0,
+       "false_negatives": 0,
+       "ref_T_answered_U": 0
+      },
+      "closed_world": {
+       "N_T": 0,
+       "N_F": 575,
+       "precision": null,
+       "recall": null,
+       "F1": null,
+       "false_negatives": 0
+      }
+     }
+    },
+    "Q7b": {
+     "family": "Multifocal disease in one organ (pooled)",
+     "n_cases": 575,
+     "pooled": {
+      "reference": {
+       "T": 67,
+       "U": 5
+      },
+      "ipkg": {
+       "N_T": 32,
+       "N_F": 543,
+       "N_U": 1725,
+       "precision": 0.969,
+       "recall": 0.775,
+       "F1": 0.861,
+       "indet_pct": 75.0,
+       "false_negatives": 9,
+       "ref_T_answered_U": 27
+      },
+      "closed_world": {
+       "N_T": 32,
+       "N_F": 2268,
+       "precision": 0.969,
+       "recall": 0.463,
+       "F1": 0.626,
+       "false_negatives": 36
+      }
+     },
+     "observed_organ": {
+      "reference": {
+       "T": 40,
+       "U": 0
+      },
+      "ipkg": {
+       "N_T": 32,
+       "N_F": 543,
+       "N_U": 0,
+       "precision": 0.969,
+       "recall": 0.775,
+       "F1": 0.861,
+       "indet_pct": 0.0,
+       "false_negatives": 9,
+       "ref_T_answered_U": 0
+      },
+      "closed_world": {
+       "N_T": 32,
+       "N_F": 543,
+       "precision": 0.969,
+       "recall": 0.775,
+       "F1": 0.861,
+       "false_negatives": 9
+      }
+     },
+     "hidden_organs": {
+      "reference": {
+       "T": 27,
+       "U": 5
+      },
+      "ipkg": {
+       "N_T": 0,
+       "N_F": 0,
+       "N_U": 1725,
+       "precision": null,
+       "recall": null,
+       "F1": null,
+       "indet_pct": 100.0,
+       "false_negatives": 0,
+       "ref_T_answered_U": 27
+      },
+      "closed_world": {
+       "N_T": 0,
+       "N_F": 1725,
+       "precision": null,
+       "recall": 0.0,
+       "F1": null,
+       "false_negatives": 27
+      }
+     }
+    }
+   }
+  },
+  "kidney": {
+   "label": "kidney-only (as KiTS23)",
+   "n_cases": 576,
+   "families": {
+    "Q2": {
+     "family": "Organ-specific lookup (pooled)",
+     "n_cases": 576,
+     "pooled": {
+      "reference": {
+       "T": 270,
+       "U": 8
+      },
+      "ipkg": {
+       "N_T": 96,
+       "N_F": 480,
+       "N_U": 1728,
+       "precision": 0.979,
+       "recall": 0.989,
+       "F1": 0.984,
+       "indet_pct": 75.0,
+       "false_negatives": 1,
+       "ref_T_answered_U": 175
+      },
+      "closed_world": {
+       "N_T": 96,
+       "N_F": 2208,
+       "precision": 0.979,
+       "recall": 0.348,
+       "F1": 0.514,
+       "false_negatives": 176
+      }
+     },
+     "observed_organ": {
+      "reference": {
+       "T": 95,
+       "U": 0
+      },
+      "ipkg": {
+       "N_T": 96,
+       "N_F": 480,
+       "N_U": 0,
+       "precision": 0.979,
+       "recall": 0.989,
+       "F1": 0.984,
+       "indet_pct": 0.0,
+       "false_negatives": 1,
+       "ref_T_answered_U": 0
+      },
+      "closed_world": {
+       "N_T": 96,
+       "N_F": 480,
+       "precision": 0.979,
+       "recall": 0.989,
+       "F1": 0.984,
+       "false_negatives": 1
+      }
+     },
+     "hidden_organs": {
+      "reference": {
+       "T": 175,
+       "U": 8
+      },
+      "ipkg": {
+       "N_T": 0,
+       "N_F": 0,
+       "N_U": 1728,
+       "precision": null,
+       "recall": null,
+       "F1": null,
+       "indet_pct": 100.0,
+       "false_negatives": 0,
+       "ref_T_answered_U": 175
+      },
+      "closed_world": {
+       "N_T": 0,
+       "N_F": 1728,
+       "precision": null,
+       "recall": 0.0,
+       "F1": null,
+       "false_negatives": 175
+      }
+     }
+    },
+    "Q3": {
+     "family": "Largest burden tercile in organ o (pooled)",
+     "n_cases": 576,
+     "pooled": {
+      "reference": {
+       "T": 91,
+       "U": 8
+      },
+      "ipkg": {
+       "N_T": 57,
+       "N_F": 519,
+       "N_U": 1728,
+       "precision": 0.965,
+       "recall": 1.0,
+       "F1": 0.982,
+       "indet_pct": 75.0,
+       "false_negatives": 0,
+       "ref_T_answered_U": 36
+      },
+      "closed_world": {
+       "N_T": 57,
+       "N_F": 2247,
+       "precision": 0.965,
+       "recall": 0.604,
+       "F1": 0.743,
+       "false_negatives": 36
+      }
+     },
+     "observed_organ": {
+      "reference": {
+       "T": 55,
+       "U": 0
+      },
+      "ipkg": {
+       "N_T": 57,
+       "N_F": 519,
+       "N_U": 0,
+       "precision": 0.965,
+       "recall": 1.0,
+       "F1": 0.982,
+       "indet_pct": 0.0,
+       "false_negatives": 0,
+       "ref_T_answered_U": 0
+      },
+      "closed_world": {
+       "N_T": 57,
+       "N_F": 519,
+       "precision": 0.965,
+       "recall": 1.0,
+       "F1": 0.982,
+       "false_negatives": 0
+      }
+     },
+     "hidden_organs": {
+      "reference": {
+       "T": 36,
+       "U": 8
+      },
+      "ipkg": {
+       "N_T": 0,
+       "N_F": 0,
+       "N_U": 1728,
+       "precision": null,
+       "recall": null,
+       "F1": null,
+       "indet_pct": 100.0,
+       "false_negatives": 0,
+       "ref_T_answered_U": 36
+      },
+      "closed_world": {
+       "N_T": 0,
+       "N_F": 1728,
+       "precision": null,
+       "recall": 0.0,
+       "F1": null,
+       "false_negatives": 36
+      }
+     }
+    },
+    "Q4a": {
+     "family": "Hepatic volume > 65.4 cm3 AND renal lesion",
+     "n_cases": 576,
+     "pooled": {
+      "reference": {
+       "T": 0,
+       "U": 0
+      },
+      "ipkg": {
+       "N_T": 0,
+       "N_F": 480,
+       "N_U": 96,
+       "precision": null,
+       "recall": null,
+       "F1": null,
+       "indet_pct": 16.7,
+       "false_negatives": 0,
+       "ref_T_answered_U": 0
+      },
+      "closed_world": {
+       "N_T": 0,
+       "N_F": 576,
+       "precision": null,
+       "recall": null,
+       "F1": null,
+       "false_negatives": 0
+      }
+     }
+    },
+    "Q4b": {
+     "family": "Hepatic volume > 65.4 cm3 AND splenic lesion",
+     "n_cases": 576,
+     "pooled": {
+      "reference": {
+       "T": 0,
+       "U": 2
+      },
+      "ipkg": {
+       "N_T": 0,
+       "N_F": 0,
+       "N_U": 576,
+       "precision": null,
+       "recall": null,
+       "F1": null,
+       "indet_pct": 100.0,
+       "false_negatives": 0,
+       "ref_T_answered_U": 0
+      },
+      "closed_world": {
+       "N_T": 0,
+       "N_F": 576,
+       "precision": null,
+       "recall": null,
+       "F1": null,
+       "false_negatives": 0
+      }
+     }
+    },
+    "Q5": {
+     "family": "Cross-organ involvement",
+     "n_cases": 576,
+     "pooled": {
+      "reference": {
+       "T": 0,
+       "U": 1
+      },
+      "ipkg": {
+       "N_T": 0,
+       "N_F": 0,
+       "N_U": 576,
+       "precision": null,
+       "recall": null,
+       "F1": null,
+       "indet_pct": 100.0,
+       "false_negatives": 0,
+       "ref_T_answered_U": 0
+      },
+      "closed_world": {
+       "N_T": 0,
+       "N_F": 576,
+       "precision": null,
+       "recall": null,
+       "F1": null,
+       "false_negatives": 0
+      }
+     }
+    },
+    "Q7b": {
+     "family": "Multifocal disease in one organ (pooled)",
+     "n_cases": 576,
+     "pooled": {
+      "reference": {
+       "T": 67,
+       "U": 8
+      },
+      "ipkg": {
+       "N_T": 7,
+       "N_F": 569,
+       "N_U": 1728,
+       "precision": 0.714,
+       "recall": 0.192,
+       "F1": 0.303,
+       "indet_pct": 75.0,
+       "false_negatives": 21,
+       "ref_T_answered_U": 41
+      },
+      "closed_world": {
+       "N_T": 7,
+       "N_F": 2297,
+       "precision": 0.714,
+       "recall": 0.075,
+       "F1": 0.135,
+       "false_negatives": 62
+      }
+     },
+     "observed_organ": {
+      "reference": {
+       "T": 26,
+       "U": 0
+      },
+      "ipkg": {
+       "N_T": 7,
+       "N_F": 569,
+       "N_U": 0,
+       "precision": 0.714,
+       "recall": 0.192,
+       "F1": 0.303,
+       "indet_pct": 0.0,
+       "false_negatives": 21,
+       "ref_T_answered_U": 0
+      },
+      "closed_world": {
+       "N_T": 7,
+       "N_F": 569,
+       "precision": 0.714,
+       "recall": 0.192,
+       "F1": 0.303,
+       "false_negatives": 21
+      }
+     },
+     "hidden_organs": {
+      "reference": {
+       "T": 41,
+       "U": 8
+      },
+      "ipkg": {
+       "N_T": 0,
+       "N_F": 0,
+       "N_U": 1728,
+       "precision": null,
+       "recall": null,
+       "F1": null,
+       "indet_pct": 100.0,
+       "false_negatives": 0,
+       "ref_T_answered_U": 41
+      },
+      "closed_world": {
+       "N_T": 0,
+       "N_F": 1728,
+       "precision": null,
+       "recall": 0.0,
+       "F1": null,
+       "false_negatives": 41
+      }
+     }
+    }
+   }
+  },
+  "pancreas": {
+   "label": "pancreas-only (as MSD)",
+   "n_cases": 575,
+   "families": {
+    "Q2": {
+     "family": "Organ-specific lookup (pooled)",
+     "n_cases": 575,
+     "pooled": {
+      "reference": {
+       "T": 270,
+       "U": 5
+      },
+      "ipkg": {
+       "N_T": 118,
+       "N_F": 457,
+       "N_U": 1725,
+       "precision": 0.992,
+       "recall": 0.929,
+       "F1": 0.959,
+       "indet_pct": 75.0,
+       "false_negatives": 9,
+       "ref_T_answered_U": 144
+      },
+      "closed_world": {
+       "N_T": 118,
+       "N_F": 2182,
+       "precision": 0.992,
+       "recall": 0.433,
+       "F1": 0.603,
+       "false_negatives": 153
+      }
+     },
+     "observed_organ": {
+      "reference": {
+       "T": 126,
+       "U": 0
+      },
+      "ipkg": {
+       "N_T": 118,
+       "N_F": 457,
+       "N_U": 0,
+       "precision": 0.992,
+       "recall": 0.929,
+       "F1": 0.959,
+       "indet_pct": 0.0,
+       "false_negatives": 9,
+       "ref_T_answered_U": 0
+      },
+      "closed_world": {
+       "N_T": 118,
+       "N_F": 457,
+       "precision": 0.992,
+       "recall": 0.929,
+       "F1": 0.959,
+       "false_negatives": 9
+      }
+     },
+     "hidden_organs": {
+      "reference": {
+       "T": 144,
+       "U": 5
+      },
+      "ipkg": {
+       "N_T": 0,
+       "N_F": 0,
+       "N_U": 1725,
+       "precision": null,
+       "recall": null,
+       "F1": null,
+       "indet_pct": 100.0,
+       "false_negatives": 0,
+       "ref_T_answered_U": 144
+      },
+      "closed_world": {
+       "N_T": 0,
+       "N_F": 1725,
+       "precision": null,
+       "recall": 0.0,
+       "F1": null,
+       "false_negatives": 144
+      }
+     }
+    },
+    "Q3": {
+     "family": "Largest burden tercile in organ o (pooled)",
+     "n_cases": 575,
+     "pooled": {
+      "reference": {
+       "T": 91,
+       "U": 5
+      },
+      "ipkg": {
+       "N_T": 11,
+       "N_F": 564,
+       "N_U": 1725,
+       "precision": 0.909,
+       "recall": 1.0,
+       "F1": 0.952,
+       "indet_pct": 75.0,
+       "false_negatives": 0,
+       "ref_T_answered_U": 81
+      },
+      "closed_world": {
+       "N_T": 11,
+       "N_F": 2289,
+       "precision": 0.909,
+       "recall": 0.11,
+       "F1": 0.196,
+       "false_negatives": 81
+      }
+     },
+     "observed_organ": {
+      "reference": {
+       "T": 10,
+       "U": 0
+      },
+      "ipkg": {
+       "N_T": 11,
+       "N_F": 564,
+       "N_U": 0,
+       "precision": 0.909,
+       "recall": 1.0,
+       "F1": 0.952,
+       "indet_pct": 0.0,
+       "false_negatives": 0,
+       "ref_T_answered_U": 0
+      },
+      "closed_world": {
+       "N_T": 11,
+       "N_F": 564,
+       "precision": 0.909,
+       "recall": 1.0,
+       "F1": 0.952,
+       "false_negatives": 0
+      }
+     },
+     "hidden_organs": {
+      "reference": {
+       "T": 81,
+       "U": 5
+      },
+      "ipkg": {
+       "N_T": 0,
+       "N_F": 0,
+       "N_U": 1725,
+       "precision": null,
+       "recall": null,
+       "F1": null,
+       "indet_pct": 100.0,
+       "false_negatives": 0,
+       "ref_T_answered_U": 81
+      },
+      "closed_world": {
+       "N_T": 0,
+       "N_F": 1725,
+       "precision": null,
+       "recall": 0.0,
+       "F1": null,
+       "false_negatives": 81
+      }
+     }
+    },
+    "Q4a": {
+     "family": "Hepatic volume > 65.4 cm3 AND renal lesion",
+     "n_cases": 575,
+     "pooled": {
+      "reference": {
+       "T": 0,
+       "U": 0
+      },
+      "ipkg": {
+       "N_T": 0,
+       "N_F": 0,
+       "N_U": 575,
+       "precision": null,
+       "recall": null,
+       "F1": null,
+       "indet_pct": 100.0,
+       "false_negatives": 0,
+       "ref_T_answered_U": 0
+      },
+      "closed_world": {
+       "N_T": 0,
+       "N_F": 575,
+       "precision": null,
+       "recall": null,
+       "F1": null,
+       "false_negatives": 0
+      }
+     }
+    },
+    "Q4b": {
+     "family": "Hepatic volume > 65.4 cm3 AND splenic lesion",
+     "n_cases": 575,
+     "pooled": {
+      "reference": {
+       "T": 0,
+       "U": 1
+      },
+      "ipkg": {
+       "N_T": 0,
+       "N_F": 0,
+       "N_U": 575,
+       "precision": null,
+       "recall": null,
+       "F1": null,
+       "indet_pct": 100.0,
+       "false_negatives": 0,
+       "ref_T_answered_U": 0
+      },
+      "closed_world": {
+       "N_T": 0,
+       "N_F": 575,
+       "precision": null,
+       "recall": null,
+       "F1": null,
+       "false_negatives": 0
+      }
+     }
+    },
+    "Q5": {
+     "family": "Cross-organ involvement",
+     "n_cases": 575,
+     "pooled": {
+      "reference": {
+       "T": 0,
+       "U": 0
+      },
+      "ipkg": {
+       "N_T": 0,
+       "N_F": 0,
+       "N_U": 575,
+       "precision": null,
+       "recall": null,
+       "F1": null,
+       "indet_pct": 100.0,
+       "false_negatives": 0,
+       "ref_T_answered_U": 0
+      },
+      "closed_world": {
+       "N_T": 0,
+       "N_F": 575,
+       "precision": null,
+       "recall": null,
+       "F1": null,
+       "false_negatives": 0
+      }
+     }
+    },
+    "Q7b": {
+     "family": "Multifocal disease in one organ (pooled)",
+     "n_cases": 575,
+     "pooled": {
+      "reference": {
+       "T": 67,
+       "U": 5
+      },
+      "ipkg": {
+       "N_T": 3,
+       "N_F": 572,
+       "N_U": 1725,
+       "precision": 0.333,
+       "recall": 1.0,
+       "F1": 0.5,
+       "indet_pct": 75.0,
+       "false_negatives": 0,
+       "ref_T_answered_U": 66
+      },
+      "closed_world": {
+       "N_T": 3,
+       "N_F": 2297,
+       "precision": 0.333,
+       "recall": 0.015,
+       "F1": 0.029,
+       "false_negatives": 66
+      }
+     },
+     "observed_organ": {
+      "reference": {
+       "T": 1,
+       "U": 0
+      },
+      "ipkg": {
+       "N_T": 3,
+       "N_F": 572,
+       "N_U": 0,
+       "precision": 0.333,
+       "recall": 1.0,
+       "F1": 0.5,
+       "indet_pct": 0.0,
+       "false_negatives": 0,
+       "ref_T_answered_U": 0
+      },
+      "closed_world": {
+       "N_T": 3,
+       "N_F": 572,
+       "precision": 0.333,
+       "recall": 1.0,
+       "F1": 0.5,
+       "false_negatives": 0
+      }
+     },
+     "hidden_organs": {
+      "reference": {
+       "T": 66,
+       "U": 5
+      },
+      "ipkg": {
+       "N_T": 0,
+       "N_F": 0,
+       "N_U": 1725,
+       "precision": null,
+       "recall": null,
+       "F1": null,
+       "indet_pct": 100.0,
+       "false_negatives": 0,
+       "ref_T_answered_U": 66
+      },
+      "closed_world": {
+       "N_T": 0,
+       "N_F": 1725,
+       "precision": null,
+       "recall": 0.0,
+       "F1": null,
+       "false_negatives": 66
+      }
+     }
+    }
+   }
+  }
+ },
+ "closed_world_equals_U_to_F_checked_verdicts": 25890
+}

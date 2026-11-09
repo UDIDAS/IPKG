@@ -37,6 +37,7 @@ python scripts/kg/export_ontology_mappings.py                              # 13/
 ```bash
 python queries/query_suite_eval.py        # 113 cohort; SPARQL latency section is hardware-bound
 python queries/query_suite_flare23.py     # 576 predicted FLARE23 graphs
+python queries/query_suite_restricted_views.py   # the same 576 graphs restricted to one organ; closed-world vs three-valued
 ```
 
 **A4. Summarization (Table E.3):**

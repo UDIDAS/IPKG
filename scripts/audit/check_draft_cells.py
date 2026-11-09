@@ -724,6 +724,26 @@ def table_i2():
     return out
 
 
+# ---------------------------------------------------------------- revision analyses (not in the submitted manuscript)
+# Checked only when their caption is present in the PDF; the caption name is provisional until the table is placed.
+OPTIONAL["Table E.5"] = "closed-world false negatives on restricted views (revision run 1)"
+
+
+@table("Table E.5")
+def table_e5():
+    src = "results/queries/restricted_views_closed_world.json"
+    d = J(src)
+    out = []
+    for organ, V in d["views"].items():
+        for fid, x in V["families"].items():
+            i, c = x["pooled"]["ipkg"], x["pooled"]["closed_world"]
+            cells = [thou(i["N_T"]), thou(i["N_F"]), thou(i["N_U"])]
+            cells += [f(v) for v in (i["precision"], i["recall"], i["F1"]) if v is not None]
+            cells += [rnd(i["indet_pct"], 1), thou(c["N_T"]), thou(c["N_F"]), thou(c["false_negatives"])]
+            out.append((f"{organ}-only {fid}", [str(v) for v in cells], src))
+    return out
+
+
 # ---------------------------------------------------------------- driver
 def main():
     ap = argparse.ArgumentParser()

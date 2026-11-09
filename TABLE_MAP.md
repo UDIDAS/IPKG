@@ -42,6 +42,12 @@ The `p_holm` fields inside `retrieval_tables_1311_2026-10-07.json` predate the s
 not cited: the full-pool rows of Table 5 report raw p, F1 Holm values are in `final_rows_2026-10-08.json`, and
 both F2 contrasts have raw p = 1.0.
 
+## Analyses added after submission (not in the submitted manuscript)
+
+| Analysis | Content | Producing script | Result file(s) | Reproduce |
+|:--|:--|:--|:--|:--|
+| Closed-world false negatives on restricted views (provisional table name "Table E.5" in the checker) | The 576 semi-oracle FLARE23 predicted graphs of Table E.4 restricted to one organ each (liver-only, kidney-only, pancreas-only, as LiTS / KiTS23 / MSD records carry them); Q2, Q3, Q4a, Q4b, Q5, Q7b under the three-valued evaluator and a closed-world evaluator that scores every unsupported constraint F, both against the full four-organ reference verdict; per family and restricted organ: IPKG N_T / N_F / N_U, closed-world N_T / N_F and closed-world false negatives (reference T, closed-world F); Q2, Q3, Q7b also split into observed-organ and hidden-organ instantiations | `queries/query_suite_restricted_views.py` | `results/queries/restricted_views_closed_world.json`, `restricted_views_closed_world_table.tex` (Table 3 format) | A3 |
+
 ## Audit instruments (Supplementary Appendix C) and supporting artifacts
 
 | Item | Source file(s) | Producer |

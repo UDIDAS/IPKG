@@ -1,0 +1,24 @@
+% Restricted views of the 576 semi-oracle FLARE23 predicted graphs; reference = full four-organ reference verdict.
+% Emitted by queries/query_suite_restricted_views.py from results/queries/restricted_views_closed_world.json.
+% Columns: ID & Family & IPKG N_T & N_F & N_U & Precision & Recall & F1 & Indet. (%) & closed-world N_T & N_F & closed-world FN (reference T, closed-world F) & reference T
+\multicolumn{13}{l}{\emph{liver-only (as LiTS); 575 cases}} \\
+ Q2 & Organ-specific lookup (pooled) & 46 & 529 & 1,725 & 0.957 & 0.898 & 0.926 & 75.0 & 46 & 2,254 & 226 & 270 \\
+ Q3 & Largest burden tercile in organ o (pooled) & 24 & 551 & 1,725 & 1.000 & 0.923 & 0.960 & 75.0 & 24 & 2,276 & 67 & 91 \\
+ Q4a & Hepatic volume $>$ 65.4 cm$^3$ $\wedge$ renal lesion & 0 & 556 & 19 & --- & --- & --- & 3.3 & 0 & 575 & 0 & 0 \\
+ Q4b & Hepatic volume $>$ 65.4 cm$^3$ $\wedge$ splenic lesion & 0 & 556 & 19 & --- & --- & --- & 3.3 & 0 & 575 & 0 & 0 \\
+ Q5 & Cross-organ involvement & 0 & 0 & 575 & --- & --- & --- & 100.0 & 0 & 575 & 0 & 0 \\
+ Q7b & Multifocal disease in one organ (pooled) & 32 & 543 & 1,725 & 0.969 & 0.775 & 0.861 & 75.0 & 32 & 2,268 & 36 & 67 \\
+\multicolumn{13}{l}{\emph{kidney-only (as KiTS23); 576 cases}} \\
+ Q2 & Organ-specific lookup (pooled) & 96 & 480 & 1,728 & 0.979 & 0.989 & 0.984 & 75.0 & 96 & 2,208 & 176 & 270 \\
+ Q3 & Largest burden tercile in organ o (pooled) & 57 & 519 & 1,728 & 0.965 & 1.000 & 0.982 & 75.0 & 57 & 2,247 & 36 & 91 \\
+ Q4a & Hepatic volume $>$ 65.4 cm$^3$ $\wedge$ renal lesion & 0 & 480 & 96 & --- & --- & --- & 16.7 & 0 & 576 & 0 & 0 \\
+ Q4b & Hepatic volume $>$ 65.4 cm$^3$ $\wedge$ splenic lesion & 0 & 0 & 576 & --- & --- & --- & 100.0 & 0 & 576 & 0 & 0 \\
+ Q5 & Cross-organ involvement & 0 & 0 & 576 & --- & --- & --- & 100.0 & 0 & 576 & 0 & 0 \\
+ Q7b & Multifocal disease in one organ (pooled) & 7 & 569 & 1,728 & 0.714 & 0.192 & 0.303 & 75.0 & 7 & 2,297 & 62 & 67 \\
+\multicolumn{13}{l}{\emph{pancreas-only (as MSD); 575 cases}} \\
+ Q2 & Organ-specific lookup (pooled) & 118 & 457 & 1,725 & 0.992 & 0.929 & 0.959 & 75.0 & 118 & 2,182 & 153 & 270 \\
+ Q3 & Largest burden tercile in organ o (pooled) & 11 & 564 & 1,725 & 0.909 & 1.000 & 0.952 & 75.0 & 11 & 2,289 & 81 & 91 \\
+ Q4a & Hepatic volume $>$ 65.4 cm$^3$ $\wedge$ renal lesion & 0 & 0 & 575 & --- & --- & --- & 100.0 & 0 & 575 & 0 & 0 \\
+ Q4b & Hepatic volume $>$ 65.4 cm$^3$ $\wedge$ splenic lesion & 0 & 0 & 575 & --- & --- & --- & 100.0 & 0 & 575 & 0 & 0 \\
+ Q5 & Cross-organ involvement & 0 & 0 & 575 & --- & --- & --- & 100.0 & 0 & 575 & 0 & 0 \\
+ Q7b & Multifocal disease in one organ (pooled) & 3 & 572 & 1,725 & 0.333 & 1.000 & 0.500 & 75.0 & 3 & 2,297 & 66 & 67 \\
