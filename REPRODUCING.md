@@ -8,7 +8,8 @@ Environment: Python ≥ 3.10, `pip install -r requirements.txt`. GPU stages addi
 `torch`/`torchvision`/`transformers` with CUDA and (for segmentation) access to the gated
 `facebook/sam3` checkpoint on Hugging Face.
 
-Determinism: all statistics are seeded (bootstrap B=5,000 / permutation B=20,000, seed 12345).
+Determinism: all statistics are seeded (bootstrap B=5,000 / permutation B=20,000; seed 20261003 for the
+final Table 6 / Table 7 CT sub-pool contrasts, 20260920 for the Table 9(c) CIs, 12345 elsewhere).
 Feature-based baselines are architecture-deterministic but can wobble ±0.001 on paired-Δ third
 decimals across GPU hardware (documented in TABLE_MAP; the shipped JSONs are canonical).
 

@@ -79,8 +79,11 @@ release together with the graded results and the design document.
 
 ## Determinism notes
 
-Retrieval/statistics are seeded (query bootstrap B=5,000, sign-flip permutation B=20,000,
-seed 12345; study-set instantiation seed 12345). Two historical nondeterminism sources were
+Retrieval/statistics are seeded (query bootstrap B=5,000, sign-flip permutation B=20,000): seed
+20261003 for the final Table 6 and Table 7 CT sub-pool contrasts (`baselines_corrected_labels.py`,
+`baselines_subpool_1311.py`), seed 20260920 for the Table 9 stratum (c) CIs (`tab9c_metric_cis.py`),
+and seed 12345 elsewhere (other retrieval and closed-loop statistics, F5 analysis, study-set
+instantiation). Two historical nondeterminism sources were
 found and fixed and are documented in the scripts: a `PYTHONHASHSEED`-dependent tie-break in
 the host-rule check, and a corpus-glob hazard (see `corpora/containment_v2/README.md`).
 
