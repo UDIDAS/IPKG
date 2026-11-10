@@ -30,6 +30,7 @@ Files under `ipkg-v2/` are the application-side instruments; see [`ipkg-v2/READM
 | Table E.2 | Lesion-node fidelity (256 of 274 matched nodes) | `scripts/kg/lesion_node_fidelity_flare23.py` | `results/kg/lesion_node_fidelity_flare23.json` | C (released masks) |
 | Table E.3 | Statement-level report consistency (573 of 606 statements) | `scripts/summarization/statement_precision_table_e3.py` (rows from `summ_metrics.py` and `containment_reextraction_113_predicted.py`) | `results/summarization/statement_precision_table_e3.json` | A4 |
 | Table E.4 | Reasoning suite, 576 FLARE23 predicted graphs | `queries/query_suite_flare23.py` | `results/queries/query_suite_flare23.json` | A3 |
+| Table E.5 | Closed-world false negatives on restricted views: the 576 FLARE23 predicted graphs of Table E.4 restricted to one organ (liver-, kidney-, pancreas-only, as LiTS / KiTS23 / MSD records carry them); Q2, Q3, Q4a, Q4b, Q5, Q7b under the three-valued evaluator and a closed-world evaluator, against the full four-organ reference verdict; the table prints false negatives, closed-world / IPKG, for Q2, Q3, Q7b (the JSON also carries N_T / N_F / N_U, P / R / F1 and the observed- vs hidden-organ split) | `queries/query_suite_restricted_views.py` | `results/queries/restricted_views_closed_world.json`, `restricted_views_closed_world_table.tex` | A3 |
 | Table G.1 | Retrieval stratified by observability, 1,311 pool, corrected arm (Holm over F2) | `ipkg-v2/build_retrieval_tables.py` | `results/retrieval/dedup/retrieval_tables_1311_2026-10-07.json` (`tab:retrieval-strata` → `corrected`; its `delta_obs` is (ii) minus the ablation, the table prints the ablation minus (ii)) | C |
 | Table G.2 | Rank of the intended FLARE23 target, 1,311 pool, corrected arm | `ipkg-v2/build_retrieval_tables.py` | `retrieval_tables_1311_2026-10-07.json` (`tab:cross-examples` → `corrected`) | C |
 | Table G.3 | Validator response to controlled perturbation | `scripts/repair/validator_perturbation_tab11.py` | `results/repair/validator_perturbation_tab11.json` | C |
@@ -41,12 +42,6 @@ Files under `ipkg-v2/` are the application-side instruments; see [`ipkg-v2/READM
 The `p_holm` fields inside `retrieval_tables_1311_2026-10-07.json` predate the step-down correction and are
 not cited: the full-pool rows of Table 5 report raw p, F1 Holm values are in `final_rows_2026-10-08.json`, and
 both F2 contrasts have raw p = 1.0.
-
-## Analyses added after submission (not in the submitted manuscript)
-
-| Analysis | Content | Producing script | Result file(s) | Reproduce |
-|:--|:--|:--|:--|:--|
-| Closed-world false negatives on restricted views (provisional table name "Table E.5" in the checker) | The 576 semi-oracle FLARE23 predicted graphs of Table E.4 restricted to one organ each (liver-only, kidney-only, pancreas-only, as LiTS / KiTS23 / MSD records carry them); Q2, Q3, Q4a, Q4b, Q5, Q7b under the three-valued evaluator and a closed-world evaluator that scores every unsupported constraint F, both against the full four-organ reference verdict; per family and restricted organ: IPKG N_T / N_F / N_U, closed-world N_T / N_F and closed-world false negatives (reference T, closed-world F); Q2, Q3, Q7b also split into observed-organ and hidden-organ instantiations | `queries/query_suite_restricted_views.py` | `results/queries/restricted_views_closed_world.json`, `restricted_views_closed_world_table.tex` (Table 3 format) | A3 |
 
 ## Audit instruments (Supplementary Appendix C) and supporting artifacts
 

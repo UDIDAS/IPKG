@@ -724,23 +724,25 @@ def table_i2():
     return out
 
 
-# ---------------------------------------------------------------- revision analyses (not in the submitted manuscript)
-# Checked only when their caption is present in the PDF; the caption name is provisional until the table is placed.
-OPTIONAL["Table E.5"] = "closed-world false negatives on restricted views (revision run 1)"
+# ---------------------------------------------------------------- Table E.5 (closed-world false negatives, restricted views)
 
 
 @table("Table E.5")
 def table_e5():
+    """Per restricted view: false negatives, closed-world / IPKG, for Q2, Q3, Q7b (pooled over organs). Q4a, Q4b, Q5
+    have no reference positives on any view; that is checked here rather than printed."""
     src = "results/queries/restricted_views_closed_world.json"
     d = J(src)
     out = []
     for organ, V in d["views"].items():
-        for fid, x in V["families"].items():
-            i, c = x["pooled"]["ipkg"], x["pooled"]["closed_world"]
-            cells = [thou(i["N_T"]), thou(i["N_F"]), thou(i["N_U"])]
-            cells += [f(v) for v in (i["precision"], i["recall"], i["F1"]) if v is not None]
-            cells += [rnd(i["indet_pct"], 1), thou(c["N_T"]), thou(c["N_F"]), thou(c["false_negatives"])]
-            out.append((f"{organ}-only {fid}", [str(v) for v in cells], src))
+        F = V["families"]
+        for fid in ("Q4a", "Q4b", "Q5"):
+            assert F[fid]["pooled"]["reference"]["T"] == 0, (organ, fid)
+        cells = []
+        for fid in ("Q2", "Q3", "Q7b"):
+            x = F[fid]["pooled"]
+            cells += [thou(x["closed_world"]["false_negatives"]), thou(x["ipkg"]["false_negatives"])]
+        out.append((f"{organ}-only", cells, src))
     return out
 
 

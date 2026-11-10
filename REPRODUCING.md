@@ -33,7 +33,7 @@ python scripts/kg/kg_build_graph.py corpora/corpus_flare23_kg_dedup.json   # reb
 python scripts/kg/export_ontology_mappings.py                              # 13/15 coverage
 ```
 
-**A3. Query suite (Tables E.1, 3, E.4):**
+**A3. Query suite (Tables E.1, 3, E.4, E.5):**
 ```bash
 python queries/query_suite_eval.py        # 113 cohort; SPARQL latency section is hardware-bound
 python queries/query_suite_flare23.py     # 576 predicted FLARE23 graphs
